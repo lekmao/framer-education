@@ -4979,7 +4979,7 @@
         "heightType" : 0,
         "id" : "TPFs625P0",
         "isTarget" : false,
-        "left" : -239,
+        "left" : -251,
         "locked" : false,
         "name" : null,
         "opacity" : 1,
@@ -5049,7 +5049,7 @@
 
           }
         },
-        "top" : -464,
+        "top" : -359,
         "visible" : true,
         "width" : 855,
         "widthType" : 0
@@ -5429,7 +5429,7 @@
         "heightType" : 0,
         "id" : "DPT4ZV1Zn",
         "isTarget" : false,
-        "left" : -239,
+        "left" : -251,
         "locked" : false,
         "name" : null,
         "opacity" : 1,
@@ -5499,7 +5499,7 @@
 
           }
         },
-        "top" : -512,
+        "top" : -407,
         "visible" : true,
         "width" : 176,
         "widthType" : 0
@@ -5515,11 +5515,11 @@
         "exportOptions" : [
 
         ],
-        "height" : 90,
+        "height" : 38,
         "heightType" : 0,
         "id" : "N1wRsyeoi",
         "isTarget" : false,
-        "left" : -239,
+        "left" : -251,
         "locked" : false,
         "name" : null,
         "opacity" : 1,
@@ -5589,9 +5589,9 @@
 
           }
         },
-        "top" : -346,
+        "top" : -243,
         "visible" : true,
-        "width" : 1054,
+        "width" : 701,
         "widthType" : 0
       },
       {
@@ -5605,11 +5605,11 @@
         "exportOptions" : [
 
         ],
-        "height" : 225,
+        "height" : 330,
         "heightType" : 0,
         "id" : "aMGNmOOQD",
         "isTarget" : false,
-        "left" : -239,
+        "left" : -251,
         "locked" : false,
         "name" : null,
         "opacity" : 1,
@@ -5624,10 +5624,10 @@
               "data" : {
                 "emptyStyle" : [
                   "LETTERSPACING:0",
-                  "LINEHEIGHT:1.2",
                   "FONT:HelveticaNeue-Bold",
                   "SIZE:24",
-                  "COLOR:rgba(0, 153, 255, 1.00)"
+                  "COLOR:rgba(0, 153, 255, 1.00)",
+                  "LINEHEIGHT:1.5"
                 ]
               },
               "depth" : 0,
@@ -5643,11 +5643,6 @@
                 {
                   "length" : 35,
                   "offset" : 0,
-                  "style" : "LINEHEIGHT:1.2"
-                },
-                {
-                  "length" : 35,
-                  "offset" : 0,
                   "style" : "FONT:HelveticaNeue-Bold"
                 },
                 {
@@ -5659,6 +5654,11 @@
                   "length" : 35,
                   "offset" : 0,
                   "style" : "COLOR:rgba(0, 153, 255, 1.00)"
+                },
+                {
+                  "length" : 35,
+                  "offset" : 0,
+                  "style" : "LINEHEIGHT:1.5"
                 }
               ],
               "key" : "2bhfc",
@@ -5669,10 +5669,10 @@
               "data" : {
                 "emptyStyle" : [
                   "LETTERSPACING:0",
-                  "LINEHEIGHT:1.2",
                   "FONT:HelveticaNeue-Bold",
                   "SIZE:24",
-                  "COLOR:rgba(0, 153, 255, 1.00)"
+                  "COLOR:rgba(0, 153, 255, 1.00)",
+                  "LINEHEIGHT:1.5"
                 ]
               },
               "depth" : 0,
@@ -5690,10 +5690,10 @@
               "data" : {
                 "emptyStyle" : [
                   "LETTERSPACING:0",
-                  "LINEHEIGHT:1.2",
                   "FONT:HelveticaNeue-Bold",
                   "SIZE:24",
-                  "COLOR:rgba(0, 153, 255, 1.00)"
+                  "COLOR:rgba(0, 153, 255, 1.00)",
+                  "LINEHEIGHT:1.5"
                 ]
               },
               "depth" : 0,
@@ -5705,11 +5705,6 @@
                   "length" : 81,
                   "offset" : 0,
                   "style" : "LETTERSPACING:0"
-                },
-                {
-                  "length" : 81,
-                  "offset" : 0,
-                  "style" : "LINEHEIGHT:1.2"
                 },
                 {
                   "length" : 6,
@@ -5745,6 +5740,11 @@
                   "length" : 45,
                   "offset" : 36,
                   "style" : "COLOR:rgba(0, 153, 255, 1.00)"
+                },
+                {
+                  "length" : 81,
+                  "offset" : 0,
+                  "style" : "LINEHEIGHT:1.5"
                 },
                 {
                   "length" : 5,
@@ -5775,10 +5775,10 @@
               "data" : {
                 "emptyStyle" : [
                   "LETTERSPACING:0",
-                  "LINEHEIGHT:1.2",
                   "FONT:HelveticaNeue-Bold",
                   "SIZE:24",
-                  "COLOR:rgba(0, 153, 255, 1.00)"
+                  "COLOR:rgba(0, 153, 255, 1.00)",
+                  "LINEHEIGHT:1.5"
                 ]
               },
               "depth" : 0,
@@ -5790,11 +5790,6 @@
                   "length" : 51,
                   "offset" : 0,
                   "style" : "LETTERSPACING:0"
-                },
-                {
-                  "length" : 51,
-                  "offset" : 0,
-                  "style" : "LINEHEIGHT:1.2"
                 },
                 {
                   "length" : 6,
@@ -5820,6 +5815,11 @@
                   "length" : 33,
                   "offset" : 18,
                   "style" : "COLOR:rgba(0, 153, 255, 1.00)"
+                },
+                {
+                  "length" : 51,
+                  "offset" : 0,
+                  "style" : "LINEHEIGHT:1.5"
                 },
                 {
                   "length" : 12,
@@ -5840,10 +5840,10 @@
               "data" : {
                 "emptyStyle" : [
                   "LETTERSPACING:0",
-                  "LINEHEIGHT:1.2",
                   "FONT:HelveticaNeue-Bold",
                   "SIZE:24",
-                  "COLOR:rgba(0, 153, 255, 1.00)"
+                  "COLOR:rgba(0, 153, 255, 1.00)",
+                  "LINEHEIGHT:1.5"
                 ]
               },
               "depth" : 0,
@@ -5855,11 +5855,6 @@
                   "length" : 74,
                   "offset" : 0,
                   "style" : "LETTERSPACING:0"
-                },
-                {
-                  "length" : 74,
-                  "offset" : 0,
-                  "style" : "LINEHEIGHT:1.2"
                 },
                 {
                   "length" : 6,
@@ -5885,6 +5880,11 @@
                   "length" : 59,
                   "offset" : 15,
                   "style" : "COLOR:rgba(0, 153, 255, 1.00)"
+                },
+                {
+                  "length" : 74,
+                  "offset" : 0,
+                  "style" : "LINEHEIGHT:1.5"
                 },
                 {
                   "length" : 9,
@@ -5905,10 +5905,95 @@
               "data" : {
                 "emptyStyle" : [
                   "LETTERSPACING:0",
-                  "LINEHEIGHT:1.2",
                   "FONT:HelveticaNeue-Bold",
                   "SIZE:24",
-                  "COLOR:rgba(0, 153, 255, 1.00)"
+                  "COLOR:rgba(0, 153, 255, 1.00)",
+                  "LINEHEIGHT:1.5"
+                ]
+              },
+              "depth" : 0,
+              "entityRanges" : [
+
+              ],
+              "inlineStyleRanges" : [
+                {
+                  "length" : 50,
+                  "offset" : 0,
+                  "style" : "LETTERSPACING:0"
+                },
+                {
+                  "length" : 6,
+                  "offset" : 0,
+                  "style" : "FONT:HelveticaNeue-Bold"
+                },
+                {
+                  "length" : 5,
+                  "offset" : 10,
+                  "style" : "FONT:HelveticaNeue-Bold"
+                },
+                {
+                  "length" : 29,
+                  "offset" : 21,
+                  "style" : "FONT:HelveticaNeue-Bold"
+                },
+                {
+                  "length" : 50,
+                  "offset" : 0,
+                  "style" : "SIZE:24"
+                },
+                {
+                  "length" : 6,
+                  "offset" : 0,
+                  "style" : "COLOR:rgba(0, 153, 255, 1.00)"
+                },
+                {
+                  "length" : 5,
+                  "offset" : 10,
+                  "style" : "COLOR:rgba(0, 153, 255, 1.00)"
+                },
+                {
+                  "length" : 29,
+                  "offset" : 21,
+                  "style" : "COLOR:rgba(0, 153, 255, 1.00)"
+                },
+                {
+                  "length" : 50,
+                  "offset" : 0,
+                  "style" : "LINEHEIGHT:1.5"
+                },
+                {
+                  "length" : 4,
+                  "offset" : 6,
+                  "style" : "COLOR:#55CCFF"
+                },
+                {
+                  "length" : 6,
+                  "offset" : 15,
+                  "style" : "COLOR:#55CCFF"
+                },
+                {
+                  "length" : 4,
+                  "offset" : 6,
+                  "style" : "FONT:Menlo-Bold"
+                },
+                {
+                  "length" : 6,
+                  "offset" : 15,
+                  "style" : "FONT:Menlo-Bold"
+                }
+              ],
+              "key" : "330bv",
+              "text" : "  • a tint and accent property for setting colours",
+              "type" : "unstyled"
+            },
+            {
+              "data" : {
+                "emptyStyle" : [
+                  "LETTERSPACING:0",
+                  "FONT:HelveticaNeue-Bold",
+                  "SIZE:24",
+                  "COLOR:rgba(0, 153, 255, 1.00)",
+                  "LINEHEIGHT:1.5"
                 ]
               },
               "depth" : 0,
@@ -5920,11 +6005,6 @@
                   "length" : 25,
                   "offset" : 0,
                   "style" : "LETTERSPACING:0"
-                },
-                {
-                  "length" : 25,
-                  "offset" : 0,
-                  "style" : "LINEHEIGHT:1.2"
                 },
                 {
                   "length" : 13,
@@ -5940,6 +6020,11 @@
                   "length" : 13,
                   "offset" : 0,
                   "style" : "COLOR:rgba(0, 153, 255, 1.00)"
+                },
+                {
+                  "length" : 25,
+                  "offset" : 0,
+                  "style" : "LINEHEIGHT:1.5"
                 },
                 {
                   "length" : 12,
@@ -5960,10 +6045,10 @@
               "data" : {
                 "emptyStyle" : [
                   "LETTERSPACING:0",
-                  "LINEHEIGHT:1.2",
                   "FONT:HelveticaNeue-Bold",
                   "SIZE:24",
-                  "COLOR:rgba(0, 153, 255, 1.00)"
+                  "COLOR:rgba(0, 153, 255, 1.00)",
+                  "LINEHEIGHT:1.5"
                 ]
               },
               "depth" : 0,
@@ -5975,11 +6060,6 @@
                   "length" : 29,
                   "offset" : 0,
                   "style" : "LETTERSPACING:0"
-                },
-                {
-                  "length" : 29,
-                  "offset" : 0,
-                  "style" : "LINEHEIGHT:1.2"
                 },
                 {
                   "length" : 13,
@@ -5997,6 +6077,11 @@
                   "style" : "COLOR:rgba(0, 153, 255, 1.00)"
                 },
                 {
+                  "length" : 29,
+                  "offset" : 0,
+                  "style" : "LINEHEIGHT:1.5"
+                },
+                {
                   "length" : 16,
                   "offset" : 13,
                   "style" : "COLOR:#55CCFF"
@@ -6010,13 +6095,34 @@
               "key" : "1soqb",
               "text" : "  • a set of propertyControls",
               "type" : "unstyled"
+            },
+            {
+              "data" : {
+                "emptyStyle" : [
+                  "LETTERSPACING:0",
+                  "SIZE:24",
+                  "COLOR:#55CCFF",
+                  "FONT:Menlo-Bold",
+                  "LINEHEIGHT:1.5"
+                ]
+              },
+              "depth" : 0,
+              "entityRanges" : [
+
+              ],
+              "inlineStyleRanges" : [
+
+              ],
+              "key" : "b7dsv",
+              "text" : "",
+              "type" : "unstyled"
             }
           ],
           "entityMap" : {
 
           }
         },
-        "top" : -236,
+        "top" : -133,
         "visible" : true,
         "width" : 1296,
         "widthType" : 0
