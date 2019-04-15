@@ -190,6 +190,9 @@ export function Segment(props: Partial<Props>) {
 
     return (
         <Frame
+            // Pass in container props when using this component in code
+            {...props as any}
+            // Constants
             size="100%"
             borderRadius={4}
             overflow="hidden"

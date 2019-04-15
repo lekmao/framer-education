@@ -1,6 +1,7 @@
 import { Override, Data } from "framer"
 
-// Override Docs: https://framer.com/docs/overrides
+// Example components
+// @steveruizok
 
 const data = Data({
     name: "",

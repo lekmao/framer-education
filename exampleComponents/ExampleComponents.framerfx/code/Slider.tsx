@@ -113,6 +113,9 @@ export function Slider(props: Partial<Props>) {
 
     return (
         <Frame
+            // Pass in container props when using this component in code
+            {...props as any}
+            // Constants
             center
             height={railHeight}
             width={width - knobSize}

@@ -16,7 +16,7 @@ type Props = {
  * Switch
  * @param props
  */
-export function Switch(props: Partial<Props>) {
+export function Radio(props: Partial<Props>) {
     // Grab the properties we want to use from props (note that we're
     // renaming value to avoid conflicting with the state's value
     // property
@@ -125,7 +125,7 @@ export function Switch(props: Partial<Props>) {
             {...props as any}
             // Constants
             size="100%"
-            borderRadius={height / 2}
+            borderRadius="100%"
             color={accent}
             opacity={disabled ? 0.3 : 1}
             border={`2px solid ${tint}`}
@@ -153,11 +153,11 @@ export function Switch(props: Partial<Props>) {
                 size={height - 10}
                 borderRadius="100%"
                 background={accent}
-                top={3}
-                left={2}
-                initial={{ x: value ? width - height : 2 }}
-                animate={{ x: value ? width - height : 2 }}
+                opacity={value ? 1 : 0}
+                scale={value ? 1 : 0.8}
+                center
                 transition={{
+                    type: "tween",
                     duration: 0.15,
                 }}
             />
@@ -166,11 +166,11 @@ export function Switch(props: Partial<Props>) {
 }
 
 // Set the component's default properties
-Switch.defaultProps = {
+Radio.defaultProps = {
     value: false,
     disabled: false,
-    height: 50,
-    width: 80,
+    height: 32,
+    width: 32,
     tint: "#027aff",
     accent: "#FFFFFF",
     validation: () => true,
@@ -178,7 +178,7 @@ Switch.defaultProps = {
 }
 
 // Set the component's property controls
-addPropertyControls(Switch, {
+addPropertyControls(Radio, {
     value: {
         type: ControlType.Boolean,
         title: "On",

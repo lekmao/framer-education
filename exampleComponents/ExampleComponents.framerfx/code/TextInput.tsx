@@ -86,7 +86,7 @@ export function TextInput(props: Partial<Props>) {
     // Define some variants
     const variants = {
         initial: {
-            border: `2px solid ${tint}`,
+            border: `2px solid ${tintColor.toValue()}`,
         },
         hovered: {
             border: `2px solid ${Color.brighten(tintColor, 10).toValue()}`,
@@ -112,6 +112,9 @@ export function TextInput(props: Partial<Props>) {
 
     return (
         <Frame
+            // Pass in container props when using this component in code
+            {...props as any}
+            // Constants
             size="100%"
             background={value ? tint : "none"}
             borderRadius={4}

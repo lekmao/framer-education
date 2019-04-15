@@ -117,6 +117,8 @@ export function Button(props: Partial<Props>) {
 
     return (
         <Frame
+            // Pass in container props when using this component in code
+            {...props as any}
             // Constant props
             size="100%"
             borderRadius={height / 2}
