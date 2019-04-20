@@ -10,9 +10,6 @@ type Props = {
     tint: string
     accent: string
     validation: (value: string) => boolean
-    onBlur: (value: string, valid: boolean) => any
-    onFocus: (value: string, valid: boolean) => any
-    onInputStart: () => any
     onValueChange: (value: string, valid: boolean) => any
 }
 
@@ -33,20 +30,15 @@ export function TextInput(props: Partial<Props>) {
         tint,
         accent,
         validation,
-        onInputStart,
         onValueChange,
     } = props
 
     /* ---------------------------------- State --------------------------------- */
 
-    // Store the input's last value in a ref
-    const inputValue = React.useRef(initialValue)
-
     // Initialize state with props values
     const [state, setState] = React.useState({
         value: initialValue,
         valid: validation(initialValue),
-        typing: false,
         focused: false,
         hovered: false,
         active: false,
@@ -54,9 +46,6 @@ export function TextInput(props: Partial<Props>) {
 
     // When the hook receives new props values, overwrite the state
     React.useEffect(() => {
-        // Sync inputValue ref with initialValue
-        inputValue.current = initialValue
-
         setState({
             ...state,
             value: initialValue,
@@ -67,15 +56,7 @@ export function TextInput(props: Partial<Props>) {
     /* ----------------------------- Event Handlers ----------------------------- */
 
     // Set the focus state when the user clicks in or out of the input
-    const setFocus = (focused: boolean) => {
-        if (focused) {
-            props.onFocus(state.value, state.valid)
-        } else {
-            props.onBlur(state.value, state.valid)
-        }
-
-        setState({ ...state, focused })
-    }
+    const setFocus = (focused: boolean) => setState({ ...state, focused })
 
     // Set the hovered state when the user mouses in or out
     const setHover = (hovered: boolean) =>
@@ -89,27 +70,9 @@ export function TextInput(props: Partial<Props>) {
         if (disabled) return
 
         const { value } = event.target
-
-        // Store the value in the inputValue ref
-        inputValue.current = value
-
-        // If we're not already typing, run props.onInputStart()
-        if (!state.typing) {
-            onInputStart()
-        }
-
-        // Set value and typing states
-        setState({ ...state, value, typing: true })
-
-        // After .5 seconds, check whether inputValue is still the same
-        setTimeout(() => {
-            // And if it is, run onValueChange and update state
-            if (value === inputValue.current) {
-                const valid = validation(value)
-                onValueChange(value, valid)
-                setState({ ...state, typing: false, value, valid })
-            }
-        }, 500)
+        const valid = validation(value)
+        onValueChange(value, valid)
+        setState({ ...state, value, valid })
     }
 
     /* ------------------------------ Presentation ------------------------------ */
@@ -119,13 +82,11 @@ export function TextInput(props: Partial<Props>) {
 
     const tintColor = Color(tint)
     const accentColor = Color(accent)
-    const tc = tintColor.toValue()
-    const ac = accentColor.toValue()
 
     // Define some variants
     const variants = {
         initial: {
-            border: `2px solid ${tc}`,
+            border: `2px solid ${tintColor.toValue()}`,
         },
         hovered: {
             border: `2px solid ${Color.brighten(tintColor, 10).toValue()}`,
@@ -151,13 +112,15 @@ export function TextInput(props: Partial<Props>) {
 
     return (
         <Frame
+            // Pass in container props when using this component in code
+            {...props as any}
+            // Constants
             size="100%"
-            background={focused || value ? tc : "rgba(0,0,0,0)"}
+            background={value ? tint : "none"}
             borderRadius={4}
-            color={ac}
+            color={accent}
             opacity={disabled ? 0.3 : 1}
             shadow={valid ? "none" : "0 2px 0px 0px #8855ff"}
-            // {...props as any}
             // Variants
             variants={variants}
             initial={currentVariant}
@@ -165,8 +128,8 @@ export function TextInput(props: Partial<Props>) {
         >
             <input
                 type={password ? "password" : "text"}
-                value={value || ""}
-                placeholder={placeholder || ""}
+                value={value}
+                placeholder={placeholder}
                 disabled={disabled}
                 readOnly={readOnly}
                 style={{
@@ -179,7 +142,7 @@ export function TextInput(props: Partial<Props>) {
                     borderRadius: 4,
                     outline: "none",
                     border: "none",
-                    color: ac,
+                    color: accent,
                 }}
                 // Events
                 onFocus={() => setFocus(true)}
@@ -196,14 +159,11 @@ export function TextInput(props: Partial<Props>) {
 
 // Set the component's default properties
 TextInput.defaultProps = {
-    value: undefined,
-    placeholder: undefined,
+    value: "",
+    placeholder: "",
     disabled: false,
     readOnly: false,
-    onFocus: () => null,
-    onBlur: () => null,
     validation: () => true,
-    onInputStart: () => null,
     onValueChange: () => null,
     height: 50,
     width: 200,
