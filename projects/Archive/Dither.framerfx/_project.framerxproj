@@ -1,24 +1,32 @@
 {
   "files" : {
-    ".backups/2019-05-07 16.33.25.zip" : {
-      "sha1" : "rUoCk3XYuh/b4ApH6YPKx5NLhtY=",
-      "size" : 63949
+    ".backups/2019-05-07 17.19.31.zip" : {
+      "sha1" : "4UzzIVuJWXi5AjZGuyKoW9vt0sw=",
+      "size" : 64100
+    },
+    ".backups/2019-05-07 17.20.31.zip" : {
+      "sha1" : "flrozga96HkN6U/5dxtoDFYADLI=",
+      "size" : 64172
+    },
+    ".backups/2019-05-07 17.21.31.zip" : {
+      "sha1" : "LuBNdxHleQw+Cw7GMEpAW5opfUM=",
+      "size" : 64191
+    },
+    ".backups/2019-05-07 17.22.31.zip" : {
+      "sha1" : "cZZCE6IL1yRJVx+OcYlSkGR3RAk=",
+      "size" : 64225
     },
     "build/index.js" : {
-      "sha1" : "tNaweTrgUNeIFtd2uHDF84Pr620=",
-      "size" : 136760
+      "sha1" : "f1L5dPOXp+qSggSoBDzX/zVUuT8=",
+      "size" : 6865
+    },
+    "code/Test.tsx" : {
+      "sha1" : "rfjL6G74Pvw1D/MBQy8JtWRnV38=",
+      "size" : 1225
     },
     "design/document.json" : {
-      "sha1" : "yJJKLdP9rsSGJQ3GrL7ZyJo9IPY=",
-      "size" : 1149721
-    },
-    "package.json" : {
-      "sha1" : "i/Pqag/hOlx4OKKmXByJzH1oC8w=",
-      "size" : 51
-    },
-    "yarn.lock" : {
-      "sha1" : "94rtWQwrRSHMXyRXLSVsKgXA9uM=",
-      "size" : 966
+      "sha1" : "dVxTyT+o5kGRX/YqGT5tloRUeyo=",
+      "size" : 1150984
     }
   },
   "uuid" : "A5FDAABD-FD53-4154-AD62-FA2227566F92"
