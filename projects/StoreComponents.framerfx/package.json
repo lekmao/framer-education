@@ -1,0 +1,21 @@
+{
+	"main": "dist/index.js",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/react": "^16.8",
+		"@types/react-dom": "^16.8"
+	},
+	"peerDependencies": {
+		"framer": "^1.0 || ^0.10",
+		"react": "^16.8",
+		"react-dom": "^16.8"
+	},
+	"framer": {
+		"id": "7668635d-a905-469e-ace4-623b6d8ffb30",
+		"displayName": "Education"
+	},
+	"author": "Steve Ruiz",
+	"dependencies": {},
+	"name": "@framer/steveframer.education",
+	"version": "1.8.0"
+}
