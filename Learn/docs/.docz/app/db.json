@@ -41,13 +41,68 @@
         }
       ]
     },
+    "src/style/Colors.mdx": {
+      "name": "Colors",
+      "id": "fdfac9ba1ec3c1b8f403104acbaf59d5",
+      "filepath": "src/style/Colors.mdx",
+      "link": null,
+      "slug": "src-style-colors",
+      "route": "/src-style-colors",
+      "order": 0,
+      "menu": null,
+      "headings": []
+    },
+    "src/style/Image.mdx": {
+      "id": "eb3fbffd8a7650243a884a987f79c9a7",
+      "filepath": "src/style/Image.mdx",
+      "link": null,
+      "slug": "src-style-image",
+      "route": "/src-style-image",
+      "name": "Image",
+      "order": 0,
+      "menu": null,
+      "headings": []
+    },
+    "src/style/Interactive.mdx": {
+      "name": "Interactive",
+      "id": "dd06282b3b875503f94f323eee1d35d5",
+      "filepath": "src/style/Interactive.mdx",
+      "link": null,
+      "slug": "src-style-interactive",
+      "route": "/src-style-interactive",
+      "order": 0,
+      "menu": null,
+      "headings": []
+    },
+    "src/style/List.mdx": {
+      "name": "List",
+      "id": "ba0ec0d5c2de514b4c1ebc4e0a0cd147",
+      "filepath": "src/style/List.mdx",
+      "link": null,
+      "slug": "src-style-list",
+      "route": "/src-style-list",
+      "order": 0,
+      "menu": null,
+      "headings": []
+    },
+    "src/style/Text.mdx": {
+      "name": "Text",
+      "id": "a03f9cacc672df93b1e877b2a95cf5c6",
+      "filepath": "src/style/Text.mdx",
+      "link": null,
+      "slug": "src-style-text",
+      "route": "/src-style-text",
+      "order": 0,
+      "menu": null,
+      "headings": []
+    },
     "src/components/Button.mdx": {
       "name": "Button",
+      "route": "/button",
       "id": "94c04b4e4bd29ffbdeec8755c1a4c04f",
       "filepath": "src/components/Button.mdx",
       "link": null,
       "slug": "src-components-button",
-      "route": "/src-components-button",
       "order": 0,
       "menu": null,
       "headings": [
@@ -116,11 +171,11 @@
     },
     "src/components/Checkbox.mdx": {
       "name": "Checkbox",
+      "route": "/checkbox",
       "id": "d28c54e24763436b5a762bfe6d19ed21",
       "filepath": "src/components/Checkbox.mdx",
       "link": null,
       "slug": "src-components-checkbox",
-      "route": "/src-components-checkbox",
       "order": 0,
       "menu": null,
       "headings": [
@@ -177,17 +232,6 @@
       "menu": null,
       "headings": []
     },
-    "src/components/Container.mdx": {
-      "name": "Container",
-      "id": "2e5bc2a2cd68ab9f0f8d3df1f4d34462",
-      "filepath": "src/components/Container.mdx",
-      "link": null,
-      "slug": "src-components-container",
-      "route": "/src-components-container",
-      "order": 0,
-      "menu": null,
-      "headings": []
-    },
     "src/components/Icon.mdx": {
       "name": "Icon",
       "id": "2f3defaac1d10a0e3c0eb9992e471003",
@@ -195,6 +239,17 @@
       "link": null,
       "slug": "src-components-icon",
       "route": "/src-components-icon",
+      "order": 0,
+      "menu": null,
+      "headings": []
+    },
+    "src/components/Container.mdx": {
+      "name": "Container",
+      "id": "2e5bc2a2cd68ab9f0f8d3df1f4d34462",
+      "filepath": "src/components/Container.mdx",
+      "link": null,
+      "slug": "src-components-container",
+      "route": "/src-components-container",
       "order": 0,
       "menu": null,
       "headings": []
@@ -210,17 +265,6 @@
       "menu": null,
       "headings": []
     },
-    "src/components/Radio.mdx": {
-      "name": "Radio",
-      "id": "c07d9a5dcf6e36af41e23845f9e00ac8",
-      "filepath": "src/components/Radio.mdx",
-      "link": null,
-      "slug": "src-components-radio",
-      "route": "/src-components-radio",
-      "order": 0,
-      "menu": null,
-      "headings": []
-    },
     "src/components/RadioGroup.mdx": {
       "name": "RadioGroup",
       "id": "6d81730391ce5c991a20c1e2cdafad09",
@@ -228,6 +272,17 @@
       "link": null,
       "slug": "src-components-radio-group",
       "route": "/src-components-radio-group",
+      "order": 0,
+      "menu": null,
+      "headings": []
+    },
+    "src/components/Radio.mdx": {
+      "name": "Radio",
+      "id": "c07d9a5dcf6e36af41e23845f9e00ac8",
+      "filepath": "src/components/Radio.mdx",
+      "link": null,
+      "slug": "src-components-radio",
+      "route": "/src-components-radio",
       "order": 0,
       "menu": null,
       "headings": []
@@ -283,61 +338,6 @@
       "link": null,
       "slug": "src-components-text-input",
       "route": "/src-components-text-input",
-      "order": 0,
-      "menu": null,
-      "headings": []
-    },
-    "src/style/Colors.mdx": {
-      "name": "Colors",
-      "id": "fdfac9ba1ec3c1b8f403104acbaf59d5",
-      "filepath": "src/style/Colors.mdx",
-      "link": null,
-      "slug": "src-style-colors",
-      "route": "/src-style-colors",
-      "order": 0,
-      "menu": null,
-      "headings": []
-    },
-    "src/style/Image.mdx": {
-      "id": "eb3fbffd8a7650243a884a987f79c9a7",
-      "filepath": "src/style/Image.mdx",
-      "link": null,
-      "slug": "src-style-image",
-      "route": "/src-style-image",
-      "name": "Image",
-      "order": 0,
-      "menu": null,
-      "headings": []
-    },
-    "src/style/Interactive.mdx": {
-      "name": "Interactive",
-      "id": "dd06282b3b875503f94f323eee1d35d5",
-      "filepath": "src/style/Interactive.mdx",
-      "link": null,
-      "slug": "src-style-interactive",
-      "route": "/src-style-interactive",
-      "order": 0,
-      "menu": null,
-      "headings": []
-    },
-    "src/style/List.mdx": {
-      "name": "List",
-      "id": "ba0ec0d5c2de514b4c1ebc4e0a0cd147",
-      "filepath": "src/style/List.mdx",
-      "link": null,
-      "slug": "src-style-list",
-      "route": "/src-style-list",
-      "order": 0,
-      "menu": null,
-      "headings": []
-    },
-    "src/style/Text.mdx": {
-      "name": "Text",
-      "id": "a03f9cacc672df93b1e877b2a95cf5c6",
-      "filepath": "src/style/Text.mdx",
-      "link": null,
-      "slug": "src-style-text",
-      "route": "/src-style-text",
       "order": 0,
       "menu": null,
       "headings": []

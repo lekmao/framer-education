@@ -1,5 +1,4 @@
-Starter set of components for demo projects.
-
+Docs for the project’s components are available [here](https://framer-learn-docs.netlify.com/). They’re also embedded in the **Docs** component.
 
 ### Changelog:
 
