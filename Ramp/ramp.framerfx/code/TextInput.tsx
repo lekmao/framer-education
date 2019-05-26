@@ -1,5 +1,13 @@
 import * as React from "react"
 import { Frame, Color, addPropertyControls, ControlType } from "framer"
+import { Interactive } from "./Interactive"
+import {
+    colors,
+    TextInput_Default,
+    TextInput_Focused,
+    TextInput_Warn,
+    TextInput_Clear,
+} from "./canvas"
 
 type Props = {
     value: string
@@ -7,8 +15,7 @@ type Props = {
     disabled: boolean
     readOnly: boolean
     password: boolean
-    tint: string
-    accent: string
+    message: string
     validation: (value: string) => boolean
     onBlur: (value: string, valid: boolean) => any
     onFocus: (value: string, valid: boolean) => any
@@ -30,11 +37,10 @@ export function TextInput(props: Partial<Props>) {
         disabled,
         readOnly,
         password,
-        tint,
-        accent,
         validation,
         onInputStart,
         onValueChange,
+        message,
     } = props
 
     /* ---------------------------------- State --------------------------------- */
@@ -48,8 +54,6 @@ export function TextInput(props: Partial<Props>) {
         valid: validation(initialValue),
         typing: false,
         focused: false,
-        hovered: false,
-        active: false,
     })
 
     // When the hook receives new props values, overwrite the state
@@ -62,7 +66,7 @@ export function TextInput(props: Partial<Props>) {
             value: initialValue,
             valid: validation(initialValue),
         })
-    }, [initialValue])
+    }, [initialValue, validation])
 
     /* ----------------------------- Event Handlers ----------------------------- */
 
@@ -77,17 +81,9 @@ export function TextInput(props: Partial<Props>) {
         setState({ ...state, focused })
     }
 
-    // Set the hovered state when the user mouses in or out
-    const setHover = (hovered: boolean) =>
-        setState({ ...state, hovered, active: hovered ? state.active : false })
-
-    // Set the active state when the user mouses down or up
-    const setActive = (active: boolean) => setState({ ...state, active })
-
     // When the content of the input changes, run onValueChange and update state
     const handleInput = event => {
         if (disabled) return
-        console.log("hello")
 
         const { value } = event.target
 
@@ -113,57 +109,62 @@ export function TextInput(props: Partial<Props>) {
         }, 500)
     }
 
+    // Clear input
+    const handleClear = event => {
+        if (disabled || readOnly) return
+
+        setState({ ...state, value: undefined })
+    }
+
     /* ------------------------------ Presentation ------------------------------ */
 
     // Grab the properties we want to use from state
-    const { value, valid, focused, hovered, active } = state
-
-    const tintColor = Color(tint)
-    const accentColor = Color(accent)
-    const tc = tintColor.toValue()
-    const ac = accentColor.toValue()
-
-    // Define some variants
-    const variants = {
-        initial: {
-            border: `2px solid ${tc}`,
-        },
-        hovered: {
-            border: `2px solid ${Color.brighten(tintColor, 10).toValue()}`,
-        },
-        active: {
-            border: `2px solid ${Color.brighten(tintColor, 15).toValue()}`,
-        },
-        focused: {
-            border: `2px solid ${Color.brighten(tintColor, 20).toValue()}`,
-        },
-    }
-
-    // Decide which variant to use
-    const currentVariant = disabled
-        ? "initial"
-        : active
-        ? "active"
-        : focused
-        ? "focused"
-        : hovered
-        ? "hovered"
-        : "initial"
+    const { value, valid, focused } = state
 
     return (
-        <Frame
-            size="100%"
-            background={focused || value ? tc : "rgba(0,0,0,0)"}
-            borderRadius={4}
-            color={ac}
-            opacity={disabled ? 0.3 : 1}
-            shadow={valid ? "none" : "0 2px 0px 0px #8855ff"}
+        <Interactive
+            disabled={disabled}
+            width="100%"
+            height={50}
+            active={false}
+            overflow={"hidden"}
             // {...props as any}
-            // Variants
-            variants={variants}
-            initial={currentVariant}
-            animate={currentVariant}
         >
+            <TextInput_Default width="100%" height={50} />
+            <TextInput_Focused
+                width="100%"
+                height={50}
+                variants={{
+                    on: {
+                        opacity: 1,
+                    },
+                    off: {
+                        opacity: 0,
+                    },
+                }}
+                transition={{
+                    duration: 0.15,
+                }}
+                initial={focused ? "on" : "off"}
+                animate={focused ? "on" : "off"}
+            />
+            <TextInput_Warn
+                width="100%"
+                height={50}
+                variants={{
+                    on: {
+                        opacity: 1,
+                    },
+                    off: {
+                        opacity: 0,
+                    },
+                }}
+                transition={{
+                    duration: 0.15,
+                }}
+                initial={valid ? "off" : "on"}
+                animate={valid ? "off" : "on"}
+            />
             <input
                 type={password ? "password" : "text"}
                 value={value || ""}
@@ -171,27 +172,43 @@ export function TextInput(props: Partial<Props>) {
                 disabled={disabled}
                 readOnly={readOnly}
                 style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
                     padding: "0px 12px",
                     fontSize: 14,
                     fontWeight: 600,
                     width: "100%",
-                    height: "100%",
+                    height: 50,
                     background: "none",
                     borderRadius: 4,
                     outline: "none",
                     border: "none",
-                    color: ac,
+                    color: valid ? colors.Dark : colors.Warn,
                 }}
                 // Events
                 onFocus={() => setFocus(true)}
                 onBlur={() => setFocus(false)}
-                onMouseEnter={() => setHover(true)}
-                onMouseLeave={() => setHover(false)}
-                onMouseDown={() => setActive(true)}
-                onMouseUp={() => setActive(false)}
                 onChange={handleInput}
             />
-        </Frame>
+            {value && (
+                <TextInput_Clear right={0} center="y" onTap={handleClear} />
+            )}
+            <div
+                style={{
+                    width: "100%",
+                    position: "absolute",
+                    top: 50,
+                    left: 0,
+                    padding: 8,
+                    fontFamily: "Helvetica Neue",
+                    color: valid ? colors.Dark : colors.Warn,
+                    fontSize: 12,
+                }}
+            >
+                {message}
+            </div>
+        </Interactive>
     )
 }
 
@@ -222,29 +239,24 @@ addPropertyControls(TextInput, {
         defaultValue: "",
         title: "Placeholder",
     },
-    readOnly: {
-        type: ControlType.Boolean,
-        defaultValue: false,
-        title: "Read Only",
-    },
     password: {
         type: ControlType.Boolean,
         defaultValue: false,
         title: "Password",
+    },
+    readOnly: {
+        type: ControlType.Boolean,
+        defaultValue: false,
+        title: "Read Only",
     },
     disabled: {
         type: ControlType.Boolean,
         defaultValue: false,
         title: "Disabled",
     },
-    tint: {
-        type: ControlType.Color,
-        defaultValue: "#027aff",
-        title: "Tint",
-    },
-    accent: {
-        type: ControlType.Color,
-        defaultValue: "#FFFFFF",
-        title: "Accent",
+    message: {
+        type: ControlType.String,
+        defaultValue: "",
+        title: "Message",
     },
 })
