@@ -3,26 +3,6 @@ export const imports = {
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-index" */ 'src/index.mdx'
     ),
-  'src/style/Colors.mdx': () =>
-    import(
-      /* webpackPrefetch: true, webpackChunkName: "src-style-colors" */ 'src/style/Colors.mdx'
-    ),
-  'src/style/Image.mdx': () =>
-    import(
-      /* webpackPrefetch: true, webpackChunkName: "src-style-image" */ 'src/style/Image.mdx'
-    ),
-  'src/style/Interactive.mdx': () =>
-    import(
-      /* webpackPrefetch: true, webpackChunkName: "src-style-interactive" */ 'src/style/Interactive.mdx'
-    ),
-  'src/style/List.mdx': () =>
-    import(
-      /* webpackPrefetch: true, webpackChunkName: "src-style-list" */ 'src/style/List.mdx'
-    ),
-  'src/style/Text.mdx': () =>
-    import(
-      /* webpackPrefetch: true, webpackChunkName: "src-style-text" */ 'src/style/Text.mdx'
-    ),
   'src/components/Button.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-components-button" */ 'src/components/Button.mdx'
@@ -78,5 +58,25 @@ export const imports = {
   'src/components/TextInput.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-components-text-input" */ 'src/components/TextInput.mdx'
+    ),
+  'src/style/Colors.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "src-style-colors" */ 'src/style/Colors.mdx'
+    ),
+  'src/style/Image.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "src-style-image" */ 'src/style/Image.mdx'
+    ),
+  'src/style/Interactive.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "src-style-interactive" */ 'src/style/Interactive.mdx'
+    ),
+  'src/style/List.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "src-style-list" */ 'src/style/List.mdx'
+    ),
+  'src/style/Text.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "src-style-text" */ 'src/style/Text.mdx'
     ),
 }

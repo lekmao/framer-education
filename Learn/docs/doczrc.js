@@ -1,7 +1,7 @@
-import doczPluginNetlify from 'docz-plugin-netlify'
+import doczPluginNetlify from "docz-plugin-netlify"
 export default {
-	title: 'Framer Controller Docs',
-	description: 'Create Control state in Framer X with reusable controllers.',
+	title: "Learn Docs",
+	description: "Docs for the Framer X Learn components.",
 	themeConfig: {},
 	plugins: [doczPluginNetlify()],
 }
