@@ -1778,7 +1778,7 @@
         "isExternalMaster" : null,
         "isMaster" : true,
         "isTarget" : false,
-        "left" : 4290,
+        "left" : 2470,
         "locked" : false,
         "name" : "iOS\/StatusBar",
         "navigationTarget" : null,
@@ -1799,7 +1799,7 @@
         "replicaInfo" : null,
         "right" : null,
         "rotation" : 0,
-        "top" : 1293,
+        "top" : 1100,
         "visible" : true,
         "width" : 375,
         "widthType" : 0
@@ -1853,7 +1853,7 @@
         "isExternalMaster" : null,
         "isMaster" : true,
         "isTarget" : false,
-        "left" : 4290,
+        "left" : 2470,
         "locked" : false,
         "name" : "iOS\/TabBar",
         "navigationTarget" : null,
@@ -1874,7 +1874,7 @@
         "replicaInfo" : null,
         "right" : null,
         "rotation" : 0,
-        "top" : 1078,
+        "top" : 885,
         "visible" : true,
         "width" : 375,
         "widthType" : 0
@@ -13781,9 +13781,9 @@
                 "os" : "10_14",
                 "size" : {
                   "height" : 19,
-                  "width" : 336
+                  "width" : 304
                 },
-                "width" : 335
+                "width" : 303
               },
               "entityMap" : {
 
@@ -14015,9 +14015,9 @@
                 "os" : "10_14",
                 "size" : {
                   "height" : 19,
-                  "width" : 336
+                  "width" : 304
                 },
-                "width" : 335
+                "width" : 303
               },
               "entityMap" : {
 
@@ -14967,7 +14967,7 @@
         "isExternalMaster" : null,
         "isMaster" : true,
         "isTarget" : false,
-        "left" : 4290,
+        "left" : 2470,
         "locked" : false,
         "name" : "Templates\/iPhoneX",
         "navigationTarget" : null,
@@ -14988,7 +14988,7 @@
         "replicaInfo" : null,
         "right" : null,
         "rotation" : 0,
-        "top" : 1553,
+        "top" : 1360,
         "visible" : true,
         "width" : 375,
         "widthType" : 0
@@ -19842,7 +19842,7 @@
         "isExternalMaster" : null,
         "isMaster" : false,
         "isTarget" : false,
-        "left" : 4290,
+        "left" : 2470,
         "locked" : false,
         "name" : "iOS\/TabBar",
         "navigationTarget" : null,
@@ -19869,15 +19869,15 @@
               "centerAnchorY" : 0.27709359605911332,
               "fillColor" : "var(--token-c4108478-04be-43e8-b06c-e5db6cfe4ed9, rgb(255, 255, 255)) \/* {\"name\":\"Light\"} *\/",
               "fillEnabled" : true,
-              "left" : 4290,
+              "left" : 2470,
               "right" : null,
-              "top" : 1396
+              "top" : 1203
             }
           }
         },
         "right" : null,
         "rotation" : 0,
-        "top" : 1396,
+        "top" : 1203,
         "visible" : true,
         "width" : 375,
         "widthType" : 0
@@ -20455,85 +20455,6 @@
         "widthType" : 0
       },
       {
-        "__class" : "CodeComponentNode",
-        "aspectRatio" : null,
-        "bottom" : null,
-        "centerAnchorX" : 1.03,
-        "centerAnchorY" : 1.1000000000000001,
-        "children" : [
-
-        ],
-        "clip" : true,
-        "codeComponentIdentifier" : ".\/Component.tsx_Component",
-        "codeComponentProps" : {
-          "data" : false,
-          "methods" : [
-
-          ],
-          "name" : "Component",
-          "props" : [
-            {
-              "enabled" : true,
-              "type" : "string",
-              "value" : "background"
-            },
-            {
-              "enabled" : true,
-              "type" : "string",
-              "value" : "borderRadius"
-            }
-          ],
-          "state" : [
-
-          ]
-        },
-        "codeOverrideEnabled" : false,
-        "constraintsLocked" : false,
-        "deviceType" : null,
-        "exportOptions" : [
-
-        ],
-        "fillColor" : "rgba(255,255,255,1)",
-        "fillEnabled" : false,
-        "fillGradient" : {
-          "__class" : "LinearGradient",
-          "alpha" : 1,
-          "angle" : 0,
-          "end" : "rgba(0,0,0,0)",
-          "start" : "black"
-        },
-        "fillImage" : null,
-        "fillImagePixelHeight" : null,
-        "fillImagePixelWidth" : null,
-        "fillImageResize" : "fill",
-        "fillType" : "color",
-        "height" : 200,
-        "heightType" : 0,
-        "id" : "gm4uA46KI",
-        "intrinsicHeight" : null,
-        "intrinsicWidth" : null,
-        "left" : 3467,
-        "locked" : false,
-        "name" : null,
-        "opacity" : 1,
-        "originalid" : null,
-        "parentid" : "NUXTU4rYC",
-        "previewSettings" : null,
-        "radius" : 0,
-        "radiusBottomLeft" : 0,
-        "radiusBottomRight" : 0,
-        "radiusIsRelative" : false,
-        "radiusPerCorner" : false,
-        "radiusTopLeft" : 0,
-        "radiusTopRight" : 0,
-        "right" : null,
-        "rotation" : 0,
-        "top" : -1244,
-        "visible" : true,
-        "width" : 200,
-        "widthType" : 0
-      },
-      {
         "__class" : "FrameNode",
         "aspectRatio" : null,
         "blendingEnabled" : 0,
@@ -20641,7 +20562,7 @@
         "isExternalMaster" : null,
         "isMaster" : true,
         "isTarget" : false,
-        "left" : 4290,
+        "left" : 2470,
         "locked" : false,
         "name" : "iOS\/HomeBar",
         "navigationTarget" : null,
@@ -20662,7 +20583,7 @@
         "replicaInfo" : null,
         "right" : null,
         "rotation" : 0,
-        "top" : 1207,
+        "top" : 1014,
         "visible" : true,
         "width" : 136,
         "widthType" : 0
@@ -24535,6 +24456,85 @@
         "right" : null,
         "rotation" : 0,
         "top" : -96,
+        "visible" : true,
+        "width" : 200,
+        "widthType" : 0
+      },
+      {
+        "__class" : "CodeComponentNode",
+        "aspectRatio" : null,
+        "bottom" : null,
+        "centerAnchorX" : 0.14999999999999999,
+        "centerAnchorY" : 1.1166666666666667,
+        "children" : [
+
+        ],
+        "clip" : true,
+        "codeComponentIdentifier" : ".\/Component.tsx_Component",
+        "codeComponentProps" : {
+          "data" : false,
+          "methods" : [
+
+          ],
+          "name" : "Component",
+          "props" : [
+            {
+              "enabled" : true,
+              "type" : "string",
+              "value" : "background"
+            },
+            {
+              "enabled" : true,
+              "type" : "string",
+              "value" : "borderRadius"
+            }
+          ],
+          "state" : [
+
+          ]
+        },
+        "codeOverrideEnabled" : false,
+        "constraintsLocked" : false,
+        "deviceType" : null,
+        "exportOptions" : [
+
+        ],
+        "fillColor" : "rgba(255,255,255,1)",
+        "fillEnabled" : false,
+        "fillGradient" : {
+          "__class" : "LinearGradient",
+          "alpha" : 1,
+          "angle" : 0,
+          "end" : "rgba(0,0,0,0)",
+          "start" : "black"
+        },
+        "fillImage" : null,
+        "fillImagePixelHeight" : null,
+        "fillImagePixelWidth" : null,
+        "fillImageResize" : "fill",
+        "fillType" : "color",
+        "height" : 200,
+        "heightType" : 0,
+        "id" : "gm4uA46KI",
+        "intrinsicHeight" : null,
+        "intrinsicWidth" : null,
+        "left" : 2438,
+        "locked" : false,
+        "name" : null,
+        "opacity" : 1,
+        "originalid" : null,
+        "parentid" : "NUXTU4rYC",
+        "previewSettings" : null,
+        "radius" : 0,
+        "radiusBottomLeft" : 0,
+        "radiusBottomRight" : 0,
+        "radiusIsRelative" : false,
+        "radiusPerCorner" : false,
+        "radiusTopLeft" : 0,
+        "radiusTopRight" : 0,
+        "right" : null,
+        "rotation" : 0,
+        "top" : -917,
         "visible" : true,
         "width" : 200,
         "widthType" : 0

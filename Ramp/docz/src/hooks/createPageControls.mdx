@@ -1,0 +1,345 @@
+---
+name: createPageControls
+route: /createPageControls
+---
+
+# createPageControls
+
+The `createPageControls` function returns a hook, `usePageControls`, that you
+can use to control a page component. This hook provides an **alternative** to
+PageController.
+
+Follow the steps below to get started. The `usePageControls` section documents
+the `usePageControls` hook in more detail. At the end of this page, you'll find
+a complete example that uses each method.
+
+## Usage
+
+### **1.** Create the hook
+
+In an overrides file, import `createPageControls` from the `framer-controller`
+library as shown below. Next, call `createPageControls` and store the returned
+hook under the name `usePageControls`.
+
+```tsx
+import { Override } from 'framer'
+import { createPageControls } from 'framer-controller'
+
+const usePageControls = createPageControls()
+```
+
+If you wish, you can also pass `createPageControls` an object of (optional)
+options.
+
+```tsx
+const usePageControls = createPageControls({
+	loop: true,
+	currentPage: 2,
+	history: [1, 2, 5, 2],
+})
+```
+
+### **2.** Connect a Page component
+
+Next, override the page component you wish to control. Call `usePageControls`
+inside of the override and pass the returned values `currentPage` and
+`onChangePage` to the component.
+
+```tsx
+export function PageComponent(props): Override {
+	const { currentPage, onChangePage } = usePageControls(props)
+
+	return {
+		currentPage,
+		onChangePage,
+	}
+}
+```
+
+### **3.** Control the Page component
+
+From here on, you can control the Page component in any other override by
+calling the `usePageControls` hook from your override and using the properties
+and methods that it returns.
+
+```tsx
+export function NextButton(props): Override {
+	const { snapToNextPage } = usePageControls()
+
+	return {
+		onTap: () => snapToNextPage(),
+	}
+}
+```
+
+# usePageControls
+
+Once you've created a `usePageControls` hook (using `createPageControls`), you
+can call `usePageControls` from inside of an override. Doing do will return a
+collection of **properties**, **event handlers** and **methods** for controlling
+the Page component or interpreting its state.
+
+## Usage
+
+At minimum, you should call this hook from your Page component's override as
+shown below. This will connect your Page component's `currentPage` to the hook's
+`currentPage`, as well as guarantee that these stay in sync as the user swipes
+between pages.
+
+```tsx
+export function PageComponent(props): Override {
+	const { currentPage, onChangePage } = usePageControls(props)
+
+	return {
+		currentPage,
+		onChangePage,
+	}
+}
+```
+
+Note that in the example above, we're calling the `usePageControls` hook with
+the `props` of the Page component. You only have to do this with the Page
+component's props. In the other examples, we call this hook without any
+argument.
+
+## Properties
+
+### 🍊 currentPage `number`
+
+The component's current page (as determined by the hook).
+
+```tsx
+export function PageNumber(props): Override {
+	const { currentPage } = usePageControls()
+
+	return {
+		text: currentPage,
+	}
+}
+```
+
+## Event Handlers
+
+### 🍊 onChangePage `(currentPage: number) => void`
+
+Updates the hook when the user changes the Page component's current page.
+
+```tsx
+export function PageComponent(props): Override {
+	const { currentPage, onChangePage } = usePageControls(props)
+
+	return {
+		currentPage,
+		onChangePage,
+	}
+}
+```
+
+Though you can pass this property directly to your Page component's
+`onChangePage` prop, you mmight want to do other things in your component's
+`onChangePage` event, too. In that case, you can also call this method like
+this:
+
+```tsx
+export function PageComponent(props): Override {
+	const { currentPage, onChangePage } = usePageControls(props)
+
+	return {
+		currentPage,
+		onChangePage: (currentPage) => {
+			// other stuff
+			onChangePage(currentPage)
+		},
+	}
+}
+```
+
+## Methods
+
+### 🍊 snapToPage `(index: number = 0) => void`
+
+Snaps the page component to the page at the provided index. Defaults to `0`.
+
+```tsx
+export function Page2Button(props): Override {
+	const { snapToPage, nextPage } = usePageControls()
+
+	return {
+		onTap: () => snapToPage(2),
+	}
+}
+```
+
+### 🍊 snapToNextPage `(direction: 'right' | 'left' = 'right') => void`
+
+Snaps the page component to the next page in a given direction, either `"right"`
+or `"left"`. Defaults to `"right"`.
+
+```tsx
+export function RightButton(props): Override {
+	const { snapToNextPage } = usePageControls()
+
+	return {
+		onTap: () => snapToNextPage(),
+	}
+}
+
+export function LeftButton(props): Override {
+	const { snapToNextPage } = usePageControls()
+
+	return {
+		onTap: () => snapToNextPage('left'),
+	}
+}
+```
+
+### 🍊 snapToPreviousPage `() => void`
+
+Snaps the page component to the previous page in the hook's "history" of visited
+pages.
+
+```tsx
+export function PrevButton(props): Override {
+	const { snapToPreviousPage } = usePageControls()
+
+	return {
+		onTap: () => snapToPreviousPage(),
+	}
+}
+```
+
+### 🍊 snapToProgress `(progress: number) => void`
+
+Snaps the page component to the nearest page to a given "progress" value, where
+`0` is the Page component's first page and `1` is the last.
+
+```tsx
+export function MiddleButton(props): Override {
+	const { snapToProgress } = usePageControls()
+
+	return {
+		onTap: () => snapToProgress(0.5),
+	}
+}
+```
+
+### 🍊 nextPage `(direction: 'right' | 'left' = 'right') => number | null`
+
+Returns the index of the next page in the given direction, or else `null` if no
+page exists in that direction.
+
+```tsx
+export function NextIndicator(props): Override {
+	const { nextPage } = usePageControls()
+
+	return {
+		opacity: nextPage() === null ? 0.5 : 1,
+	}
+}
+```
+
+### 🍊 previousPage `() => number | null`
+
+Returns the index of the previous page in the hook's "history" of visited pages,
+or else `null` if no page exists.
+
+```tsx
+export function BackIndicator(props): Override {
+	const { previousPage } = usePageControls()
+
+	return {
+		opacity: previousPage() === null ? 0.5 : 1,
+	}
+}
+```
+
+# Example
+
+```tsx
+import { Override } from 'framer'
+import { createPageControls } from 'framer-controller'
+
+const usePageControls = createPageControls()
+
+// Sync the component with the usePageControls hook
+export function PageComponent(props): Override {
+	const { currentPage, onChangePage } = usePageControls(props)
+
+	return {
+		currentPage,
+		onChangePage,
+	}
+}
+
+// Move to the next page (right)
+export function NextButton(props): Override {
+	const { snapToNextPage, nextPage } = usePageControls()
+
+	return {
+		opacity: nextPage('right') === null ? 0.3 : 1,
+		onTap: () => snapToNextPage(),
+	}
+}
+
+// Move to the next page (left)
+export function PrevButton(props): Override {
+	const { snapToNextPage, nextPage } = usePageControls()
+
+	return {
+		opacity: nextPage('left') === null ? 0.3 : 1,
+		onTap: () => snapToNextPage('left'),
+	}
+}
+
+// Show the current page number
+export function PageNumber(props): Override {
+	const { currentPage, nextPage } = usePageControls()
+
+	return {
+		text: currentPage + 1,
+	}
+}
+
+// Jump to start (progress 0)
+export function ToStart(props): Override {
+	const { snapToProgress } = usePageControls()
+
+	return {
+		onTap: () => snapToProgress(0),
+	}
+}
+
+// Jump to end (progress 1)
+export function ToEnd(props): Override {
+	const { snapToProgress } = usePageControls()
+
+	return {
+		onTap: () => snapToProgress(1),
+	}
+}
+
+// Show the previous page (in history)
+export function Undo(props): Override {
+	const { snapToPreviousPage, previousPage } = usePageControls()
+
+	return {
+		opacity: previousPage() === null ? 0.3 : 1,
+		onTap: () => snapToPreviousPage(),
+	}
+}
+
+// Show a progress bar
+export function ProgressBar(props): Override {
+	const { progress, currentPage, pages } = usePageControls()
+
+	const background =
+		pages[currentPage] && pages[currentPage].props.background.initialValue
+
+	return {
+		animate: {
+			background,
+			width: props.width * progress,
+		},
+	}
+}
+```
