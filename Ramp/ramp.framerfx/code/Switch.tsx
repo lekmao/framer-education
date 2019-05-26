@@ -6,7 +6,7 @@ import {
     Switch_Knob,
     Switch_Container_On,
     Switch_Container_Off,
-} from "./Canvas"
+} from "./canvas"
 
 type Props = {
     height: number | string

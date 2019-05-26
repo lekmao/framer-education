@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Frame, Color, addPropertyControls, ControlType } from "framer"
 import { Interactive } from "./Interactive"
-import { colors, Links_Primary, Links_Secondary, Links_Warn } from "./Canvas"
+import { colors, Links_Primary, Links_Secondary, Links_Warn } from "./canvas"
 
 const Components = {
     primary: Links_Primary,

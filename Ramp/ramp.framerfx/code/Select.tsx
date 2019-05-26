@@ -31,7 +31,6 @@ export const Select = props => {
         <Frame size="100%" background="none" center>
             <ReactSelect
                 theme={theme => {
-                    console.log(theme)
                     return {
                         ...theme,
                         borderRadius: 8,

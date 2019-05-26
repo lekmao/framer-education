@@ -7,7 +7,7 @@ import {
     Checkbox_Off,
     Checkbox_Default,
     Checkbox_Warn,
-} from "./Canvas"
+} from "./canvas"
 
 type Props = {
     height: number

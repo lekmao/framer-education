@@ -1,14 +1,9 @@
-Starter set of components for Education demo projects.
+Starter set of components for demo projects.
 
-The design should:
-
-- complement Framer’s design system
-- avoid competing with or be confused for site elements
-- sit separate from body copy 
-- sit well beside code snippets.
 
 ### Changelog:
 
+- 1.0.7 - Adds select, palette
 - 1.0.6 - Adds icon, button icon
 - 1.0.5 - Reworks many components
 - 1.0.4 - Adds component component, bumps version

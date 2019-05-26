@@ -7,7 +7,7 @@ import {
     Buttons_Ghost,
     Buttons_Secondary,
     Buttons_Warn,
-} from "./Canvas"
+} from "./canvas"
 import { iconNames, iconTitles } from "./Utils"
 import { Icon } from "./Icon"
 

@@ -7,7 +7,7 @@ import {
     Radio_Off,
     Radio_Default,
     Radio_Warn,
-} from "./Canvas"
+} from "./canvas"
 
 type Props = {
     height: number
