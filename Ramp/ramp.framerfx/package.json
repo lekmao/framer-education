@@ -16,7 +16,6 @@
 	},
 	"author": "Steve Ruiz",
 	"dependencies": {
-		"material-icons-react": "^1.0.4",
 		"react-select": "^2.4.3",
 		"styled-components": "^4.2.0"
 	},

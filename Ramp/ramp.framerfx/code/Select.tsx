@@ -5,8 +5,8 @@ import {
     ControlType,
     addPropertyControls,
 } from "framer"
+import { colors } from "./canvas"
 import ReactSelect from "react-select"
-// import makeAnimated from "react-select/lib/animated"
 
 export const Select = props => {
     let computed = { ...props }
@@ -29,13 +29,31 @@ export const Select = props => {
 
     return (
         <Frame size="100%" background="none" center>
-            <ReactSelect {...computed} />
+            <ReactSelect
+                theme={theme => {
+                    console.log(theme)
+                    return {
+                        ...theme,
+                        borderRadius: 8,
+                        spacing: {
+                            baseUnit: 4,
+                            menuGutter: 8,
+                            controlHeight: 50,
+                        },
+                        colors: {
+                            ...theme.colors,
+                            primary: colors.Primary,
+                        },
+                    }
+                }}
+                {...computed}
+            />
         </Frame>
     )
 }
 
 Select.defaultProps = {
-    height: 40,
+    height: 50,
     width: 200,
     cOptions: ["London", "Paris", "Hong Kong", "New York"],
     cInitial: "London",
