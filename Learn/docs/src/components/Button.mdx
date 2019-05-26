@@ -2,4 +2,136 @@
 name: Button
 ---
 
-...
+# Button
+
+A button displays either text or an icon. It can be tapped and will run an `onTap` callback when tapped. It may optionally be toggled with each tap.
+
+## Props
+
+| Prop     | Type     | Default           | Notes                                                                   |
+| :------- | :------- | :---------------- | :---------------------------------------------------------------------- |
+| text     | string   | "Get Started!"    |
+| icon     | string   | "none"            | The name of the icon to display. Will hide text, unless `"none"`.       |
+| toggle   | boolean  | false             | Whether this button should toggle.                                      |
+| toggled  | boolean  | false             | Whether the button is or isn't toggled. Requires `toggle` to be `true`. |
+| disabled | boolean  | false             |
+| type     | string   | "primary"         | See below.                                                              |
+| disabled | boolean  | false             |
+| onTap    | function | (toggled) => void | The callback to fire when tapped.                                       |
+
+### Types
+
+Valid types: `"primary"`, `"secondary"`, `"ghost"`, `"warn"`.
+
+### Icons
+
+The name of any Material Design Icon (See `Icon` for the full list).
+
+## Examples
+
+### Override
+
+```tsx
+import { Override } from "framer"
+
+export function ContinueButton(): Override {
+	return {
+		onTap: () => console.log("Continuing..."),
+	}
+}
+
+export function CancelButton(): Override {
+	return {
+		onTap: () => console.log("Cancelling..."),
+	}
+}
+```
+
+#### Toggle
+
+```tsx
+import { Override } from "framer"
+
+export const OnOffButton: Override = props => {
+	return {
+		toggle: true,
+		onTap: toggled => {
+			if (toggled) {
+				console.log("Toggled on!")
+			} else {
+				console.log("Toggled off!")
+			}
+		},
+	}
+}
+```
+
+### Code Component
+
+#### Basic
+
+```tsx
+import * as React from "react"
+import { Stack, Frame } from "framer"
+import * as Learn from "@framer/steveruizok.education/dist/index"
+const Button = Learn.__framer__.sourceModules["./Button.tsx"]().Button
+
+export const ButtonTest = props => {
+	const handleContinue = () => {
+		console.log("Continuing...")
+	}
+
+	const handleCancel = () => {
+		console.log("Cancelling...")
+	}
+
+	return (
+		<Stack width="100%" height="100%" direction="vertical">
+			<Button
+				width="100%"
+				type="primary"
+				text="Continue"
+				onTap={handleContinue}
+			/>
+			<Button
+				width="100%"
+				type="secondary"
+				text="Cancel"
+				onTap={handleCancel}
+			/>
+		</Stack>
+	)
+}
+```
+
+#### Toggle
+
+```tsx
+import * as React from "react"
+import { Stack, Frame } from "framer"
+import * as Learn from "@framer/steveruizok.education/dist/index"
+const Button = Learn.__framer__.sourceModules["./Button.tsx"]().Button
+
+export const ButtonTest = props => {
+	const [state, setState] = React.useState({
+		toggled: true,
+	})
+
+	const handleTap = isToggled => {
+		setState({ toggled: isToggled })
+	}
+
+	return (
+		<Stack width="100%" height="100%" direction="vertical">
+			<Button
+				width="100%"
+				type="primary"
+				text="Toggle"
+				toggle={true}
+				toggled={state.toggled}
+				onTap={handleTap}
+			/>
+		</Stack>
+	)
+}
+```

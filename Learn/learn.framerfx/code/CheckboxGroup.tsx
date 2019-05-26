@@ -12,7 +12,7 @@ type Props = {
     value: string
     selectedIndices: string
     disabled: boolean
-    onValueChange: (value: string[], indices: boolean[], valid: boolean) => void
+    onValueChange: (value: string[], valid: boolean) => void
     validation: (value: string[]) => boolean
 }
 
@@ -76,7 +76,7 @@ export function CheckboxGroup(props: Partial<Props>) {
 
         const valid = validation(value)
 
-        onValueChange(value, selectedIndices, valid)
+        onValueChange(value, valid)
 
         setState({
             ...state,

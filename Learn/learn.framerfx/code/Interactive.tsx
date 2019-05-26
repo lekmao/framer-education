@@ -71,7 +71,7 @@ export function Interactive(props: Partial<Props>) {
             opacity: 1,
             filter: `brightness(0.9)`,
         },
-        toggled: {
+        pressed: {
             opacity: 1,
             filter: `brightness(0.85)`,
         },

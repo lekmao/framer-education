@@ -3,6 +3,7 @@ Starter set of components for demo projects.
 
 ### Changelog:
 
+- 1.0.8 - Fixes toggle bug on Button
 - 1.0.7 - Adds select, palette
 - 1.0.6 - Adds icon, button icon
 - 1.0.5 - Reworks many components

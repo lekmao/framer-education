@@ -41,6 +41,61 @@
         }
       ]
     },
+    "src/style/Colors.mdx": {
+      "name": "Colors",
+      "id": "fdfac9ba1ec3c1b8f403104acbaf59d5",
+      "filepath": "src/style/Colors.mdx",
+      "link": null,
+      "slug": "src-style-colors",
+      "route": "/src-style-colors",
+      "order": 0,
+      "menu": null,
+      "headings": []
+    },
+    "src/style/Image.mdx": {
+      "id": "eb3fbffd8a7650243a884a987f79c9a7",
+      "filepath": "src/style/Image.mdx",
+      "link": null,
+      "slug": "src-style-image",
+      "route": "/src-style-image",
+      "name": "Image",
+      "order": 0,
+      "menu": null,
+      "headings": []
+    },
+    "src/style/Interactive.mdx": {
+      "name": "Interactive",
+      "id": "dd06282b3b875503f94f323eee1d35d5",
+      "filepath": "src/style/Interactive.mdx",
+      "link": null,
+      "slug": "src-style-interactive",
+      "route": "/src-style-interactive",
+      "order": 0,
+      "menu": null,
+      "headings": []
+    },
+    "src/style/List.mdx": {
+      "name": "List",
+      "id": "ba0ec0d5c2de514b4c1ebc4e0a0cd147",
+      "filepath": "src/style/List.mdx",
+      "link": null,
+      "slug": "src-style-list",
+      "route": "/src-style-list",
+      "order": 0,
+      "menu": null,
+      "headings": []
+    },
+    "src/style/Text.mdx": {
+      "name": "Text",
+      "id": "a03f9cacc672df93b1e877b2a95cf5c6",
+      "filepath": "src/style/Text.mdx",
+      "link": null,
+      "slug": "src-style-text",
+      "route": "/src-style-text",
+      "order": 0,
+      "menu": null,
+      "headings": []
+    },
     "src/components/Button.mdx": {
       "name": "Button",
       "id": "94c04b4e4bd29ffbdeec8755c1a4c04f",
@@ -50,7 +105,58 @@
       "route": "/src-components-button",
       "order": 0,
       "menu": null,
-      "headings": []
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "button",
+          "value": "Button"
+        },
+        {
+          "depth": 2,
+          "slug": "props",
+          "value": "Props"
+        },
+        {
+          "depth": 3,
+          "slug": "types",
+          "value": "Types"
+        },
+        {
+          "depth": 3,
+          "slug": "icons",
+          "value": "Icons"
+        },
+        {
+          "depth": 2,
+          "slug": "examples",
+          "value": "Examples"
+        },
+        {
+          "depth": 3,
+          "slug": "override",
+          "value": "Override"
+        },
+        {
+          "depth": 4,
+          "slug": "toggle",
+          "value": "Toggle"
+        },
+        {
+          "depth": 3,
+          "slug": "code-component",
+          "value": "Code Component"
+        },
+        {
+          "depth": 4,
+          "slug": "basic",
+          "value": "Basic"
+        },
+        {
+          "depth": 4,
+          "slug": "toggle-1",
+          "value": "Toggle"
+        }
+      ]
     },
     "src/components/Card.mdx": {
       "name": "Card",
@@ -72,7 +178,48 @@
       "route": "/src-components-checkbox",
       "order": 0,
       "menu": null,
-      "headings": []
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "checkbox",
+          "value": "Checkbox"
+        },
+        {
+          "depth": 2,
+          "slug": "props",
+          "value": "Props"
+        },
+        {
+          "depth": 2,
+          "slug": "examples",
+          "value": "Examples"
+        },
+        {
+          "depth": 3,
+          "slug": "override",
+          "value": "Override"
+        },
+        {
+          "depth": 4,
+          "slug": "validation",
+          "value": "Validation"
+        },
+        {
+          "depth": 3,
+          "slug": "code-component",
+          "value": "Code Component"
+        },
+        {
+          "depth": 4,
+          "slug": "basic",
+          "value": "Basic"
+        },
+        {
+          "depth": 4,
+          "slug": "validation-1",
+          "value": "Validation"
+        }
+      ]
     },
     "src/components/CheckboxGroup.mdx": {
       "name": "CheckboxGroup",
@@ -191,61 +338,6 @@
       "link": null,
       "slug": "src-components-text-input",
       "route": "/src-components-text-input",
-      "order": 0,
-      "menu": null,
-      "headings": []
-    },
-    "src/style/Colors.mdx": {
-      "name": "Colors",
-      "id": "fdfac9ba1ec3c1b8f403104acbaf59d5",
-      "filepath": "src/style/Colors.mdx",
-      "link": null,
-      "slug": "src-style-colors",
-      "route": "/src-style-colors",
-      "order": 0,
-      "menu": null,
-      "headings": []
-    },
-    "src/style/Image.mdx": {
-      "id": "eb3fbffd8a7650243a884a987f79c9a7",
-      "filepath": "src/style/Image.mdx",
-      "link": null,
-      "slug": "src-style-image",
-      "route": "/src-style-image",
-      "name": "Image",
-      "order": 0,
-      "menu": null,
-      "headings": []
-    },
-    "src/style/Interactive.mdx": {
-      "name": "Interactive",
-      "id": "dd06282b3b875503f94f323eee1d35d5",
-      "filepath": "src/style/Interactive.mdx",
-      "link": null,
-      "slug": "src-style-interactive",
-      "route": "/src-style-interactive",
-      "order": 0,
-      "menu": null,
-      "headings": []
-    },
-    "src/style/List.mdx": {
-      "name": "List",
-      "id": "ba0ec0d5c2de514b4c1ebc4e0a0cd147",
-      "filepath": "src/style/List.mdx",
-      "link": null,
-      "slug": "src-style-list",
-      "route": "/src-style-list",
-      "order": 0,
-      "menu": null,
-      "headings": []
-    },
-    "src/style/Text.mdx": {
-      "name": "Text",
-      "id": "a03f9cacc672df93b1e877b2a95cf5c6",
-      "filepath": "src/style/Text.mdx",
-      "link": null,
-      "slug": "src-style-text",
-      "route": "/src-style-text",
       "order": 0,
       "menu": null,
       "headings": []
