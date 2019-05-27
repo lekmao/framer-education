@@ -109,11 +109,10 @@ export function Interactive(props: Partial<Props>) {
                 ease: "easeInOut",
                 duration: 0.12,
             }}
-            style={
-                doHover && {
-                    cursor: "pointer",
-                }
-            }
+            style={{
+                ...props.style,
+                cursor: doHover ? "pointer" : null,
+            }}
             // Events
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}

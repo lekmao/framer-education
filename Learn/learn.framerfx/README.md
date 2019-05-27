@@ -1,7 +1,11 @@
-Docs for the project’s components are available [here](https://framer-learn-docs.netlify.com/). They’re also embedded in the **Docs** component.
+Docs for the project’s components are in progress [here](https://framer-learn-docs.netlify.com/). They’re also embedded in the **Docs** component.
 
 ### Changelog:
 
+- 1.0.12 - Updates template.
+- 1.0.11 - Adds tabs, nerfs docs.
+- 1.0.10 - Updates text position in Links.
+- 1.0.9 - Adds docs component.
 - 1.0.8 - Fixes toggle bug on Button
 - 1.0.7 - Adds select, palette
 - 1.0.6 - Adds icon, button icon
