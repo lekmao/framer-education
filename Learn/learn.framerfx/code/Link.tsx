@@ -51,8 +51,6 @@ export function Link(props: Partial<Props>) {
             <Component
                 // Constant props
                 size="100%"
-                // Events
-                onClick={handleTap}
                 text={text}
             />
         </Interactive>

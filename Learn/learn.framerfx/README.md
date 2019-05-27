@@ -2,6 +2,7 @@ Docs for the project’s components are in progress [here](https://framer-learn-
 
 ### Changelog:
 
+- 1.0.13 - Fixes tap event.
 - 1.0.12 - Updates template.
 - 1.0.11 - Adds tabs, nerfs docs.
 - 1.0.10 - Updates text position in Links.
