@@ -27,8 +27,8 @@ export function Icon(props) {
     return (
         <Interactive
             {...props as any}
-            height="100%"
-            width="100%"
+            height={height}
+            width={width}
             active={interactive}
             hover={interactive}
             disabled={disabled}

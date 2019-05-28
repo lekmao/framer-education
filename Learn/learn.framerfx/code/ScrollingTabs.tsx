@@ -7,7 +7,7 @@ import { Link } from "./Link"
 // API Reference: https://www.framer.com/api
 
 export function ScrollingTabs(props) {
-    const { selectedIndex, options } = props
+    const { selectedIndex, options, height, width } = props
 
     const [state, setState] = React.useState({
         index: selectedIndex,
@@ -22,7 +22,7 @@ export function ScrollingTabs(props) {
     }, [selectedIndex])
 
     return (
-        <div style={{ width: "100%", height: "100%" }}>
+        <div style={{ width, height }}>
             <Scroll
                 direction="horizontal"
                 width={"100%"}

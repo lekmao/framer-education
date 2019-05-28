@@ -9,6 +9,8 @@ import {
 
 // Define a type for our props
 interface Props extends FrameProps {
+    height: any
+    width: any
     disabled: boolean
     pressed: boolean
     active: boolean
@@ -28,10 +30,11 @@ export function Interactive(props: Partial<Props>) {
         active: doActive,
         hover: doHover,
         children,
-        height,
         disabled,
         pressed,
         type,
+        height,
+        width,
     } = props
 
     /* ---------------------------------- State --------------------------------- */
@@ -96,10 +99,11 @@ export function Interactive(props: Partial<Props>) {
 
     return (
         <Frame
-            // Constant props
-            height="100%"
-            width="100%"
+            {...props as any}
             background={null}
+            height={height}
+            width={width}
+            // Constant props
             // Variant props
             variants={variants}
             initial={current}
@@ -119,7 +123,6 @@ export function Interactive(props: Partial<Props>) {
             onMouseDown={() => setActive(true)}
             onMouseUp={() => setActive(false)}
             // Pass in container props when using this component in code
-            {...props as any}
         >
             {children}
         </Frame>

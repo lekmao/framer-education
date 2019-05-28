@@ -6,8 +6,8 @@ import { Checkbox } from "./Checkbox"
 
 type Props = {
     id: string
-    width: number | string
-    height: number | string
+    width: any
+    height: any
     options: string[]
     value: string
     selectedIndices: string
@@ -27,6 +27,7 @@ export function CheckboxGroup(props: Partial<Props>) {
     const {
         value: initial,
         options,
+        height,
         width,
         disabled,
         validation,
@@ -90,7 +91,8 @@ export function CheckboxGroup(props: Partial<Props>) {
 
     return (
         <Stack
-            size="100%"
+            height={height}
+            width={width}
             direction="vertical"
             alignment="center"
             gap={1}

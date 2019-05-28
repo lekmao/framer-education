@@ -3,9 +3,9 @@ import { Frame, addPropertyControls, ControlType } from "framer"
 import { Icon } from "./Icon"
 
 export function Docs(props) {
-    const { page } = props
+    const { page, height, width } = props
     return (
-        <Frame size="100%" background="#FFFFFF">
+        <Frame height={height} width={width} background="#FFFFFF">
             {
                 //     <iframe
                 //     title="Learn Docs"

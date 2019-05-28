@@ -11,7 +11,8 @@ const Components = {
 
 // Define a type for our props
 type Props = {
-    height: number
+    height: any
+    width: any
     text: string
     disabled: boolean
     toggle: boolean
@@ -29,7 +30,7 @@ export function Link(props: Partial<Props>) {
     // Grab the properties we want to use from props (note that we're
     // renaming toggled to avoid conflicting with the state's toggled
     // property
-    const { height, disabled, onTap, text, type } = props
+    const { height, width, disabled, onTap, text, type } = props
 
     /* ----------------------------- Event Handlers ----------------------------- */
 
@@ -47,7 +48,13 @@ export function Link(props: Partial<Props>) {
 
     return (
         // Pass in container props when using this component in code
-        <Interactive disabled={disabled} {...props as any}>
+        <Interactive
+            {...props as any}
+            height={height}
+            width={width}
+            disabled={disabled}
+            onTap={handleTap}
+        >
             <Component
                 // Constant props
                 size="100%"

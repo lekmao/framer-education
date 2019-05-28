@@ -16,6 +16,9 @@ type Props = {
     readOnly: boolean
     password: boolean
     message: string
+    height: any
+    width: any
+    delay: number
     validation: (value: string) => boolean
     onBlur: (value: string, valid: boolean) => any
     onFocus: (value: string, valid: boolean) => any
@@ -41,11 +44,13 @@ export function TextInput(props: Partial<Props>) {
         onInputStart,
         onValueChange,
         message,
+        delay,
     } = props
 
     /* ---------------------------------- State --------------------------------- */
 
     // Store the input's last value in a ref
+    const input = React.useRef<HTMLInputElement>()
     const inputValue = React.useRef(initialValue)
 
     // Initialize state with props values
@@ -106,7 +111,7 @@ export function TextInput(props: Partial<Props>) {
                 onValueChange(value, valid)
                 setState({ ...state, typing: false, value, valid })
             }
-        }, 500)
+        }, delay)
     }
 
     // Clear input
@@ -124,11 +129,11 @@ export function TextInput(props: Partial<Props>) {
     return (
         <Interactive
             disabled={disabled}
-            width="100%"
-            height={50}
+            width={props.width}
+            height={props.height}
             active={false}
             overflow={"hidden"}
-            // {...props as any}
+            {...props as any}
         >
             <TextInput_Default width="100%" height={50} />
             <TextInput_Focused
@@ -166,6 +171,7 @@ export function TextInput(props: Partial<Props>) {
                 animate={valid ? "off" : "on"}
             />
             <input
+                ref={input}
                 type={password ? "password" : "text"}
                 value={value || ""}
                 placeholder={placeholder || ""}
@@ -191,9 +197,11 @@ export function TextInput(props: Partial<Props>) {
                 onBlur={() => setFocus(false)}
                 onChange={handleInput}
             />
-            {value && (
-                <TextInput_Clear right={0} center="y" onTap={handleClear} />
-            )}
+            {
+                //value && !readOnly && (
+                //<TextInput_Clear right={0} center="y" onTap={handleClear} />
+                //)
+            }
             <div
                 style={{
                     width: "100%",
@@ -223,6 +231,7 @@ TextInput.defaultProps = {
     validation: () => true,
     onInputStart: () => null,
     onValueChange: () => null,
+    delay: 250,
     height: 50,
     width: 200,
 }

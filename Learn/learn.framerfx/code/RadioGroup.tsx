@@ -28,10 +28,11 @@ export function RadioGroup(props: Partial<Props>) {
         value: initial,
         selectedIndex: initialIndex,
         options,
-        width,
         disabled,
         validation,
         onValueChange,
+        height,
+        width,
     } = props
 
     /* ---------------------------------- State --------------------------------- */
@@ -89,7 +90,8 @@ export function RadioGroup(props: Partial<Props>) {
 
     return (
         <Stack
-            size="100%"
+            height={height}
+            width={width}
             direction="vertical"
             alignment="center"
             gap={1}
