@@ -47,6 +47,12 @@ node_modules/@framer/steveruizok.education/code/CheckboxGroup.tsx
 node_modules/@framer/steveruizok.education/code/Checkbox.tsx
 node_modules/@framer/steveruizok.education/code/Button.tsx
 node_modules/@framer/steveruizok.education/README.md
+node_modules/@framer/framer.device-skin-apple-iphone-xs-spacegrey/yarn.lock
+node_modules/@framer/framer.device-skin-apple-iphone-xs-spacegrey/package.json
+node_modules/@framer/framer.device-skin-apple-iphone-xs-spacegrey/index.ts
+node_modules/@framer/framer.device-skin-apple-iphone-xs-spacegrey/device.png
+node_modules/@framer/framer.device-skin-apple-iphone-xs-spacegrey/build/index.js.map
+node_modules/@framer/framer.device-skin-apple-iphone-xs-spacegrey/build/index.js
 index.html
 images/cursors/touch@2x.png
 images/cursors/touch.png
