@@ -7,13 +7,13 @@ export const imports = {
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-components-alert" */ 'src/components/Alert.mdx'
     ),
-  'src/components/Card.mdx': () =>
-    import(
-      /* webpackPrefetch: true, webpackChunkName: "src-components-card" */ 'src/components/Card.mdx'
-    ),
   'src/components/Button.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-components-button" */ 'src/components/Button.mdx'
+    ),
+  'src/components/Card.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "src-components-card" */ 'src/components/Card.mdx'
     ),
   'src/components/Checkbox.mdx': () =>
     import(
