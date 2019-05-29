@@ -3,17 +3,25 @@ export const imports = {
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-index" */ 'src/index.mdx'
     ),
-  'src/components/Button.mdx': () =>
+  'src/components/Alert.mdx': () =>
     import(
-      /* webpackPrefetch: true, webpackChunkName: "src-components-button" */ 'src/components/Button.mdx'
+      /* webpackPrefetch: true, webpackChunkName: "src-components-alert" */ 'src/components/Alert.mdx'
     ),
   'src/components/Card.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-components-card" */ 'src/components/Card.mdx'
     ),
+  'src/components/Button.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "src-components-button" */ 'src/components/Button.mdx'
+    ),
   'src/components/Checkbox.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-components-checkbox" */ 'src/components/Checkbox.mdx'
+    ),
+  'src/components/CheckboxGroup.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "src-components-checkbox-group" */ 'src/components/CheckboxGroup.mdx'
     ),
   'src/components/Container.mdx': () =>
     import(
@@ -22,10 +30,6 @@ export const imports = {
   'src/components/Icon.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-components-icon" */ 'src/components/Icon.mdx'
-    ),
-  'src/components/CheckboxGroup.mdx': () =>
-    import(
-      /* webpackPrefetch: true, webpackChunkName: "src-components-checkbox-group" */ 'src/components/CheckboxGroup.mdx'
     ),
   'src/components/Link.mdx': () =>
     import(
@@ -39,6 +43,10 @@ export const imports = {
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-components-radio-group" */ 'src/components/RadioGroup.mdx'
     ),
+  'src/components/Segment.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "src-components-segment" */ 'src/components/Segment.mdx'
+    ),
   'src/components/Select.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-components-select" */ 'src/components/Select.mdx'
@@ -51,10 +59,6 @@ export const imports = {
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-components-switch" */ 'src/components/Switch.mdx'
     ),
-  'src/components/Segment.mdx': () =>
-    import(
-      /* webpackPrefetch: true, webpackChunkName: "src-components-segment" */ 'src/components/Segment.mdx'
-    ),
   'src/components/TextInput.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-components-text-input" */ 'src/components/TextInput.mdx'
@@ -63,10 +67,6 @@ export const imports = {
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-style-colors" */ 'src/style/Colors.mdx'
     ),
-  'src/style/List.mdx': () =>
-    import(
-      /* webpackPrefetch: true, webpackChunkName: "src-style-list" */ 'src/style/List.mdx'
-    ),
   'src/style/Image.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-style-image" */ 'src/style/Image.mdx'
@@ -74,6 +74,10 @@ export const imports = {
   'src/style/Interactive.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-style-interactive" */ 'src/style/Interactive.mdx'
+    ),
+  'src/style/List.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "src-style-list" */ 'src/style/List.mdx'
     ),
   'src/style/Text.mdx': () =>
     import(

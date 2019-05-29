@@ -1,346 +1,503 @@
 {
   "config": {
-    "title": "Learn Docs",
-    "description": "Docs for the Framer X Learn components.",
+    "title": "Docz Typescript",
+    "description": "My awesome app using docz",
     "menu": [],
-    "ordering": "descending",
-    "version": "0.0.1",
+    "version": "1.2.0",
     "repository": null,
     "native": false,
-    "codeSandbox": true,
+    "codeSandbox": false,
     "themeConfig": {},
-    "plugins": [
-      {}
-    ]
+    "separator": "-",
+    "typescript": true
   },
-  "entries": {
-    "src/index.mdx": {
-      "name": "Get Started",
-      "route": "/",
-      "id": "6576455a124f9aaefd860597f03a8fe4",
-      "filepath": "src/index.mdx",
-      "link": null,
-      "slug": "src-index",
-      "order": 0,
-      "menu": null,
-      "headings": [
+  "props": [
+    {
+      "key": "src/components/Alert.tsx",
+      "value": [
         {
-          "depth": 1,
-          "slug": "learn",
-          "value": "Learn"
-        },
-        {
-          "depth": 2,
-          "slug": "introduction",
-          "value": "Introduction"
-        },
-        {
-          "depth": 2,
-          "slug": "installation",
-          "value": "Installation"
+          "description": "",
+          "displayName": "Alert",
+          "methods": [],
+          "props": {
+            "kind": {
+              "defaultValue": {
+                "value": "info"
+              },
+              "description": "Set this to change alert kind",
+              "name": "kind",
+              "parent": {
+                "fileName": "src/components/Alert.tsx",
+                "name": "AlertProps"
+              },
+              "required": true,
+              "type": {
+                "name": "\"info\" | \"positive\" | \"negative\" | \"warning\""
+              }
+            }
+          }
         }
       ]
     },
-    "src/style/Colors.mdx": {
-      "name": "Colors",
-      "id": "fdfac9ba1ec3c1b8f403104acbaf59d5",
-      "filepath": "src/style/Colors.mdx",
-      "link": null,
-      "slug": "src-style-colors",
-      "route": "/src-style-colors",
-      "order": 0,
-      "menu": null,
-      "headings": []
-    },
-    "src/style/Image.mdx": {
-      "id": "eb3fbffd8a7650243a884a987f79c9a7",
-      "filepath": "src/style/Image.mdx",
-      "link": null,
-      "slug": "src-style-image",
-      "route": "/src-style-image",
-      "name": "Image",
-      "order": 0,
-      "menu": null,
-      "headings": []
-    },
-    "src/style/Interactive.mdx": {
-      "name": "Interactive",
-      "id": "dd06282b3b875503f94f323eee1d35d5",
-      "filepath": "src/style/Interactive.mdx",
-      "link": null,
-      "slug": "src-style-interactive",
-      "route": "/src-style-interactive",
-      "order": 0,
-      "menu": null,
-      "headings": []
-    },
-    "src/style/List.mdx": {
-      "name": "List",
-      "id": "ba0ec0d5c2de514b4c1ebc4e0a0cd147",
-      "filepath": "src/style/List.mdx",
-      "link": null,
-      "slug": "src-style-list",
-      "route": "/src-style-list",
-      "order": 0,
-      "menu": null,
-      "headings": []
-    },
-    "src/style/Text.mdx": {
-      "name": "Text",
-      "id": "a03f9cacc672df93b1e877b2a95cf5c6",
-      "filepath": "src/style/Text.mdx",
-      "link": null,
-      "slug": "src-style-text",
-      "route": "/src-style-text",
-      "order": 0,
-      "menu": null,
-      "headings": []
-    },
-    "src/components/Button.mdx": {
-      "name": "Button",
-      "route": "/button",
-      "id": "94c04b4e4bd29ffbdeec8755c1a4c04f",
-      "filepath": "src/components/Button.mdx",
-      "link": null,
-      "slug": "src-components-button",
-      "order": 0,
-      "menu": null,
-      "headings": [
+    {
+      "key": "src/components/Button.tsx",
+      "value": [
         {
-          "depth": 1,
-          "slug": "button",
-          "value": "Button"
-        },
-        {
-          "depth": 2,
-          "slug": "props",
-          "value": "Props"
-        },
-        {
-          "depth": 3,
-          "slug": "types",
-          "value": "Types"
-        },
-        {
-          "depth": 3,
-          "slug": "icons",
-          "value": "Icons"
-        },
-        {
-          "depth": 2,
-          "slug": "examples",
-          "value": "Examples"
-        },
-        {
-          "depth": 3,
-          "slug": "override",
-          "value": "Override"
-        },
-        {
-          "depth": 4,
-          "slug": "toggle",
-          "value": "Toggle"
-        },
-        {
-          "depth": 3,
-          "slug": "code-component",
-          "value": "Code Component"
-        },
-        {
-          "depth": 4,
-          "slug": "basic",
-          "value": "Basic"
-        },
-        {
-          "depth": 4,
-          "slug": "toggle-1",
-          "value": "Toggle"
+          "description": "",
+          "displayName": "Button",
+          "methods": [],
+          "props": {
+            "scale": {
+              "defaultValue": null,
+              "description": "",
+              "name": "scale",
+              "parent": {
+                "fileName": "src/components/Button.tsx",
+                "name": "ButtonProps"
+              },
+              "required": true,
+              "type": {
+                "name": "\"small\" | \"normal\" | \"big\""
+              }
+            },
+            "kind": {
+              "defaultValue": null,
+              "description": "",
+              "name": "kind",
+              "parent": {
+                "fileName": "src/components/Button.tsx",
+                "name": "ButtonProps"
+              },
+              "required": true,
+              "type": {
+                "name": "\"primary\" | \"secondary\" | \"cancel\" | \"dark\" | \"gray\""
+              }
+            },
+            "outline": {
+              "defaultValue": null,
+              "description": "",
+              "name": "outline",
+              "parent": {
+                "fileName": "src/components/Button.tsx",
+                "name": "ButtonProps"
+              },
+              "required": true,
+              "type": {
+                "name": "boolean"
+              }
+            }
+          }
         }
       ]
-    },
-    "src/components/Card.mdx": {
-      "name": "Card",
-      "id": "32865528793b856e164f6e0f8e9ee31b",
-      "filepath": "src/components/Card.mdx",
-      "link": null,
-      "slug": "src-components-card",
-      "route": "/src-components-card",
-      "order": 0,
-      "menu": null,
-      "headings": []
-    },
-    "src/components/Checkbox.mdx": {
-      "name": "Checkbox",
-      "route": "/checkbox",
-      "id": "d28c54e24763436b5a762bfe6d19ed21",
-      "filepath": "src/components/Checkbox.mdx",
-      "link": null,
-      "slug": "src-components-checkbox",
-      "order": 0,
-      "menu": null,
-      "headings": [
-        {
-          "depth": 1,
-          "slug": "checkbox",
-          "value": "Checkbox"
-        },
-        {
-          "depth": 2,
-          "slug": "props",
-          "value": "Props"
-        },
-        {
-          "depth": 2,
-          "slug": "examples",
-          "value": "Examples"
-        },
-        {
-          "depth": 3,
-          "slug": "override",
-          "value": "Override"
-        },
-        {
-          "depth": 4,
-          "slug": "validation",
-          "value": "Validation"
-        },
-        {
-          "depth": 3,
-          "slug": "code-component",
-          "value": "Code Component"
-        },
-        {
-          "depth": 4,
-          "slug": "basic",
-          "value": "Basic"
-        },
-        {
-          "depth": 4,
-          "slug": "validation-1",
-          "value": "Validation"
-        }
-      ]
-    },
-    "src/components/CheckboxGroup.mdx": {
-      "name": "CheckboxGroup",
-      "id": "9d340a2ea2a562e9d97cb594c0bb8985",
-      "filepath": "src/components/CheckboxGroup.mdx",
-      "link": null,
-      "slug": "src-components-checkbox-group",
-      "route": "/src-components-checkbox-group",
-      "order": 0,
-      "menu": null,
-      "headings": []
-    },
-    "src/components/Icon.mdx": {
-      "name": "Icon",
-      "id": "2f3defaac1d10a0e3c0eb9992e471003",
-      "filepath": "src/components/Icon.mdx",
-      "link": null,
-      "slug": "src-components-icon",
-      "route": "/src-components-icon",
-      "order": 0,
-      "menu": null,
-      "headings": []
-    },
-    "src/components/Container.mdx": {
-      "name": "Container",
-      "id": "2e5bc2a2cd68ab9f0f8d3df1f4d34462",
-      "filepath": "src/components/Container.mdx",
-      "link": null,
-      "slug": "src-components-container",
-      "route": "/src-components-container",
-      "order": 0,
-      "menu": null,
-      "headings": []
-    },
-    "src/components/Link.mdx": {
-      "name": "Link",
-      "id": "57d08361e0d1727d294a52c5e5530c6e",
-      "filepath": "src/components/Link.mdx",
-      "link": null,
-      "slug": "src-components-link",
-      "route": "/src-components-link",
-      "order": 0,
-      "menu": null,
-      "headings": []
-    },
-    "src/components/RadioGroup.mdx": {
-      "name": "RadioGroup",
-      "id": "6d81730391ce5c991a20c1e2cdafad09",
-      "filepath": "src/components/RadioGroup.mdx",
-      "link": null,
-      "slug": "src-components-radio-group",
-      "route": "/src-components-radio-group",
-      "order": 0,
-      "menu": null,
-      "headings": []
-    },
-    "src/components/Radio.mdx": {
-      "name": "Radio",
-      "id": "c07d9a5dcf6e36af41e23845f9e00ac8",
-      "filepath": "src/components/Radio.mdx",
-      "link": null,
-      "slug": "src-components-radio",
-      "route": "/src-components-radio",
-      "order": 0,
-      "menu": null,
-      "headings": []
-    },
-    "src/components/Segment.mdx": {
-      "name": "Segment",
-      "id": "7f56609aca6e2949ac81aab6b7703583",
-      "filepath": "src/components/Segment.mdx",
-      "link": null,
-      "slug": "src-components-segment",
-      "route": "/src-components-segment",
-      "order": 0,
-      "menu": null,
-      "headings": []
-    },
-    "src/components/Select.mdx": {
-      "name": "Select",
-      "id": "05b370959a2781521272ccf4222c5ec3",
-      "filepath": "src/components/Select.mdx",
-      "link": null,
-      "slug": "src-components-select",
-      "route": "/src-components-select",
-      "order": 0,
-      "menu": null,
-      "headings": []
-    },
-    "src/components/Slider.mdx": {
-      "name": "Slider",
-      "id": "7364fc8337331a00bee1e0d3d18d1bfc",
-      "filepath": "src/components/Slider.mdx",
-      "link": null,
-      "slug": "src-components-slider",
-      "route": "/src-components-slider",
-      "order": 0,
-      "menu": null,
-      "headings": []
-    },
-    "src/components/Switch.mdx": {
-      "name": "Switch",
-      "id": "570d67ddb13fb91b5ba579e14fb48f88",
-      "filepath": "src/components/Switch.mdx",
-      "link": null,
-      "slug": "src-components-switch",
-      "route": "/src-components-switch",
-      "order": 0,
-      "menu": null,
-      "headings": []
-    },
-    "src/components/TextInput.mdx": {
-      "name": "TextInput",
-      "id": "1a4f26e636c4bd6b79ccd96dbefb7f53",
-      "filepath": "src/components/TextInput.mdx",
-      "link": null,
-      "slug": "src-components-text-input",
-      "route": "/src-components-text-input",
-      "order": 0,
-      "menu": null,
-      "headings": []
     }
-  }
+  ],
+  "entries": [
+    {
+      "key": "src/index.mdx",
+      "value": {
+        "name": "Get Started",
+        "route": "/",
+        "id": "6576455a124f9aaefd860597f03a8fe4",
+        "filepath": "src/index.mdx",
+        "link": "",
+        "slug": "src-index",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "learn",
+            "depth": 1,
+            "value": "Learn"
+          },
+          {
+            "slug": "introduction",
+            "depth": 2,
+            "value": "Introduction"
+          },
+          {
+            "slug": "installation",
+            "depth": 2,
+            "value": "Installation"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/components/Alert.mdx",
+      "value": {
+        "name": "Alert",
+        "menu": "Components",
+        "id": "411d2842c3d65e6ee7d3ec119ed4c5a0",
+        "filepath": "src/components/Alert.mdx",
+        "link": "",
+        "slug": "src-components-alert",
+        "route": "/src-components-alert",
+        "headings": [
+          {
+            "slug": "alert",
+            "depth": 1,
+            "value": "Alert"
+          },
+          {
+            "slug": "properties",
+            "depth": 2,
+            "value": "Properties"
+          },
+          {
+            "slug": "basic-usage",
+            "depth": 2,
+            "value": "Basic usage"
+          },
+          {
+            "slug": "using-different-kinds",
+            "depth": 2,
+            "value": "Using different kinds"
+          },
+          {
+            "slug": "use-with-children-as-a-function",
+            "depth": 2,
+            "value": "Use with children as a function"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/components/Card.mdx",
+      "value": {
+        "name": "Card",
+        "id": "32865528793b856e164f6e0f8e9ee31b",
+        "filepath": "src/components/Card.mdx",
+        "link": "",
+        "slug": "src-components-card",
+        "route": "/src-components-card",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/components/Button.mdx",
+      "value": {
+        "name": "Button",
+        "route": "/button",
+        "id": "94c04b4e4bd29ffbdeec8755c1a4c04f",
+        "filepath": "src/components/Button.mdx",
+        "link": "",
+        "slug": "src-components-button",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "button",
+            "depth": 1,
+            "value": "Button"
+          },
+          {
+            "slug": "props",
+            "depth": 2,
+            "value": "Props"
+          },
+          {
+            "slug": "types",
+            "depth": 3,
+            "value": "Types"
+          },
+          {
+            "slug": "icons",
+            "depth": 3,
+            "value": "Icons"
+          },
+          {
+            "slug": "examples",
+            "depth": 2,
+            "value": "Examples"
+          },
+          {
+            "slug": "override",
+            "depth": 3,
+            "value": "Override"
+          },
+          {
+            "slug": "toggle",
+            "depth": 4,
+            "value": "Toggle"
+          },
+          {
+            "slug": "code-component",
+            "depth": 3,
+            "value": "Code Component"
+          },
+          {
+            "slug": "basic",
+            "depth": 4,
+            "value": "Basic"
+          },
+          {
+            "slug": "toggle-1",
+            "depth": 4,
+            "value": "Toggle"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/components/Checkbox.mdx",
+      "value": {
+        "name": "Checkbox",
+        "route": "/checkbox",
+        "id": "d28c54e24763436b5a762bfe6d19ed21",
+        "filepath": "src/components/Checkbox.mdx",
+        "link": "",
+        "slug": "src-components-checkbox",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "checkbox",
+            "depth": 1,
+            "value": "Checkbox"
+          },
+          {
+            "slug": "props",
+            "depth": 2,
+            "value": "Props"
+          },
+          {
+            "slug": "examples",
+            "depth": 2,
+            "value": "Examples"
+          },
+          {
+            "slug": "override",
+            "depth": 3,
+            "value": "Override"
+          },
+          {
+            "slug": "validation",
+            "depth": 4,
+            "value": "Validation"
+          },
+          {
+            "slug": "code-component",
+            "depth": 3,
+            "value": "Code Component"
+          },
+          {
+            "slug": "basic",
+            "depth": 4,
+            "value": "Basic"
+          },
+          {
+            "slug": "validation-1",
+            "depth": 4,
+            "value": "Validation"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/components/CheckboxGroup.mdx",
+      "value": {
+        "name": "CheckboxGroup",
+        "id": "9d340a2ea2a562e9d97cb594c0bb8985",
+        "filepath": "src/components/CheckboxGroup.mdx",
+        "link": "",
+        "slug": "src-components-checkbox-group",
+        "route": "/src-components-checkbox-group",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/components/Container.mdx",
+      "value": {
+        "name": "Container",
+        "id": "2e5bc2a2cd68ab9f0f8d3df1f4d34462",
+        "filepath": "src/components/Container.mdx",
+        "link": "",
+        "slug": "src-components-container",
+        "route": "/src-components-container",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/components/Icon.mdx",
+      "value": {
+        "name": "Icon",
+        "id": "2f3defaac1d10a0e3c0eb9992e471003",
+        "filepath": "src/components/Icon.mdx",
+        "link": "",
+        "slug": "src-components-icon",
+        "route": "/src-components-icon",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/components/Link.mdx",
+      "value": {
+        "name": "Link",
+        "id": "57d08361e0d1727d294a52c5e5530c6e",
+        "filepath": "src/components/Link.mdx",
+        "link": "",
+        "slug": "src-components-link",
+        "route": "/src-components-link",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/components/Radio.mdx",
+      "value": {
+        "name": "Radio",
+        "id": "c07d9a5dcf6e36af41e23845f9e00ac8",
+        "filepath": "src/components/Radio.mdx",
+        "link": "",
+        "slug": "src-components-radio",
+        "route": "/src-components-radio",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/components/RadioGroup.mdx",
+      "value": {
+        "name": "RadioGroup",
+        "id": "6d81730391ce5c991a20c1e2cdafad09",
+        "filepath": "src/components/RadioGroup.mdx",
+        "link": "",
+        "slug": "src-components-radio-group",
+        "route": "/src-components-radio-group",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/components/Segment.mdx",
+      "value": {
+        "name": "Segment",
+        "id": "7f56609aca6e2949ac81aab6b7703583",
+        "filepath": "src/components/Segment.mdx",
+        "link": "",
+        "slug": "src-components-segment",
+        "route": "/src-components-segment",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/components/Select.mdx",
+      "value": {
+        "name": "Select",
+        "id": "05b370959a2781521272ccf4222c5ec3",
+        "filepath": "src/components/Select.mdx",
+        "link": "",
+        "slug": "src-components-select",
+        "route": "/src-components-select",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/components/Slider.mdx",
+      "value": {
+        "name": "Slider",
+        "id": "7364fc8337331a00bee1e0d3d18d1bfc",
+        "filepath": "src/components/Slider.mdx",
+        "link": "",
+        "slug": "src-components-slider",
+        "route": "/src-components-slider",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/components/Switch.mdx",
+      "value": {
+        "name": "Switch",
+        "id": "570d67ddb13fb91b5ba579e14fb48f88",
+        "filepath": "src/components/Switch.mdx",
+        "link": "",
+        "slug": "src-components-switch",
+        "route": "/src-components-switch",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/components/TextInput.mdx",
+      "value": {
+        "name": "TextInput",
+        "id": "1a4f26e636c4bd6b79ccd96dbefb7f53",
+        "filepath": "src/components/TextInput.mdx",
+        "link": "",
+        "slug": "src-components-text-input",
+        "route": "/src-components-text-input",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/style/Colors.mdx",
+      "value": {
+        "name": "Colors",
+        "id": "fdfac9ba1ec3c1b8f403104acbaf59d5",
+        "filepath": "src/style/Colors.mdx",
+        "link": "",
+        "slug": "src-style-colors",
+        "route": "/src-style-colors",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/style/Image.mdx",
+      "value": {
+        "id": "eb3fbffd8a7650243a884a987f79c9a7",
+        "filepath": "src/style/Image.mdx",
+        "link": "",
+        "slug": "src-style-image",
+        "route": "/src-style-image",
+        "name": "Image",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/style/Interactive.mdx",
+      "value": {
+        "name": "Interactive",
+        "id": "dd06282b3b875503f94f323eee1d35d5",
+        "filepath": "src/style/Interactive.mdx",
+        "link": "",
+        "slug": "src-style-interactive",
+        "route": "/src-style-interactive",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/style/List.mdx",
+      "value": {
+        "name": "List",
+        "id": "ba0ec0d5c2de514b4c1ebc4e0a0cd147",
+        "filepath": "src/style/List.mdx",
+        "link": "",
+        "slug": "src-style-list",
+        "route": "/src-style-list",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/style/Text.mdx",
+      "value": {
+        "name": "Text",
+        "id": "a03f9cacc672df93b1e877b2a95cf5c6",
+        "filepath": "src/style/Text.mdx",
+        "link": "",
+        "slug": "src-style-text",
+        "route": "/src-style-text",
+        "menu": "",
+        "headings": []
+      }
+    }
+  ]
 }
