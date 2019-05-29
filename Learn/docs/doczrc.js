@@ -2,7 +2,7 @@ export default {
 	title: "Learn",
 	codeSandbox: false,
 	typescript: true,
-	theme: "docz-default-theme",
+	theme: "docz-theme-default",
 	themeConfig: {
 		colors: {
 			primary: "#005cfe",

@@ -3,6 +3,26 @@ export const imports = {
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-index" */ 'src/index.mdx'
     ),
+  'src/style/Image.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "src-style-image" */ 'src/style/Image.mdx'
+    ),
+  'src/style/Colors.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "src-style-colors" */ 'src/style/Colors.mdx'
+    ),
+  'src/style/Interactive.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "src-style-interactive" */ 'src/style/Interactive.mdx'
+    ),
+  'src/style/List.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "src-style-list" */ 'src/style/List.mdx'
+    ),
+  'src/style/Text.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "src-style-text" */ 'src/style/Text.mdx'
+    ),
   'src/components/Alert.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-components-alert" */ 'src/components/Alert.mdx'
@@ -55,32 +75,12 @@ export const imports = {
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-components-slider" */ 'src/components/Slider.mdx'
     ),
-  'src/components/Switch.mdx': () =>
-    import(
-      /* webpackPrefetch: true, webpackChunkName: "src-components-switch" */ 'src/components/Switch.mdx'
-    ),
   'src/components/TextInput.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-components-text-input" */ 'src/components/TextInput.mdx'
     ),
-  'src/style/Colors.mdx': () =>
+  'src/components/Switch.mdx': () =>
     import(
-      /* webpackPrefetch: true, webpackChunkName: "src-style-colors" */ 'src/style/Colors.mdx'
-    ),
-  'src/style/Image.mdx': () =>
-    import(
-      /* webpackPrefetch: true, webpackChunkName: "src-style-image" */ 'src/style/Image.mdx'
-    ),
-  'src/style/Interactive.mdx': () =>
-    import(
-      /* webpackPrefetch: true, webpackChunkName: "src-style-interactive" */ 'src/style/Interactive.mdx'
-    ),
-  'src/style/List.mdx': () =>
-    import(
-      /* webpackPrefetch: true, webpackChunkName: "src-style-list" */ 'src/style/List.mdx'
-    ),
-  'src/style/Text.mdx': () =>
-    import(
-      /* webpackPrefetch: true, webpackChunkName: "src-style-text" */ 'src/style/Text.mdx'
+      /* webpackPrefetch: true, webpackChunkName: "src-components-switch" */ 'src/components/Switch.mdx'
     ),
 }

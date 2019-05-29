@@ -33,7 +33,7 @@
     },
     "separator": "-",
     "typescript": true,
-    "theme": "docz-default-theme"
+    "theme": "docz-theme-default"
   },
   "props": [
     {
@@ -143,6 +143,71 @@
             "value": "Installation"
           }
         ]
+      }
+    },
+    {
+      "key": "src/style/Image.mdx",
+      "value": {
+        "id": "eb3fbffd8a7650243a884a987f79c9a7",
+        "filepath": "src/style/Image.mdx",
+        "link": "",
+        "slug": "src-style-image",
+        "route": "/src-style-image",
+        "name": "Image",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/style/Colors.mdx",
+      "value": {
+        "name": "Colors",
+        "id": "fdfac9ba1ec3c1b8f403104acbaf59d5",
+        "filepath": "src/style/Colors.mdx",
+        "link": "",
+        "slug": "src-style-colors",
+        "route": "/src-style-colors",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/style/Interactive.mdx",
+      "value": {
+        "name": "Interactive",
+        "id": "dd06282b3b875503f94f323eee1d35d5",
+        "filepath": "src/style/Interactive.mdx",
+        "link": "",
+        "slug": "src-style-interactive",
+        "route": "/src-style-interactive",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/style/List.mdx",
+      "value": {
+        "name": "List",
+        "id": "ba0ec0d5c2de514b4c1ebc4e0a0cd147",
+        "filepath": "src/style/List.mdx",
+        "link": "",
+        "slug": "src-style-list",
+        "route": "/src-style-list",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/style/Text.mdx",
+      "value": {
+        "name": "Text",
+        "id": "a03f9cacc672df93b1e877b2a95cf5c6",
+        "filepath": "src/style/Text.mdx",
+        "link": "",
+        "slug": "src-style-text",
+        "route": "/src-style-text",
+        "menu": "",
+        "headings": []
       }
     },
     {
@@ -433,19 +498,6 @@
       }
     },
     {
-      "key": "src/components/Switch.mdx",
-      "value": {
-        "name": "Switch",
-        "id": "570d67ddb13fb91b5ba579e14fb48f88",
-        "filepath": "src/components/Switch.mdx",
-        "link": "",
-        "slug": "src-components-switch",
-        "route": "/src-components-switch",
-        "menu": "",
-        "headings": []
-      }
-    },
-    {
       "key": "src/components/TextInput.mdx",
       "value": {
         "name": "TextInput",
@@ -459,66 +511,14 @@
       }
     },
     {
-      "key": "src/style/Colors.mdx",
+      "key": "src/components/Switch.mdx",
       "value": {
-        "name": "Colors",
-        "id": "fdfac9ba1ec3c1b8f403104acbaf59d5",
-        "filepath": "src/style/Colors.mdx",
+        "name": "Switch",
+        "id": "570d67ddb13fb91b5ba579e14fb48f88",
+        "filepath": "src/components/Switch.mdx",
         "link": "",
-        "slug": "src-style-colors",
-        "route": "/src-style-colors",
-        "menu": "",
-        "headings": []
-      }
-    },
-    {
-      "key": "src/style/Image.mdx",
-      "value": {
-        "id": "eb3fbffd8a7650243a884a987f79c9a7",
-        "filepath": "src/style/Image.mdx",
-        "link": "",
-        "slug": "src-style-image",
-        "route": "/src-style-image",
-        "name": "Image",
-        "menu": "",
-        "headings": []
-      }
-    },
-    {
-      "key": "src/style/Interactive.mdx",
-      "value": {
-        "name": "Interactive",
-        "id": "dd06282b3b875503f94f323eee1d35d5",
-        "filepath": "src/style/Interactive.mdx",
-        "link": "",
-        "slug": "src-style-interactive",
-        "route": "/src-style-interactive",
-        "menu": "",
-        "headings": []
-      }
-    },
-    {
-      "key": "src/style/List.mdx",
-      "value": {
-        "name": "List",
-        "id": "ba0ec0d5c2de514b4c1ebc4e0a0cd147",
-        "filepath": "src/style/List.mdx",
-        "link": "",
-        "slug": "src-style-list",
-        "route": "/src-style-list",
-        "menu": "",
-        "headings": []
-      }
-    },
-    {
-      "key": "src/style/Text.mdx",
-      "value": {
-        "name": "Text",
-        "id": "a03f9cacc672df93b1e877b2a95cf5c6",
-        "filepath": "src/style/Text.mdx",
-        "link": "",
-        "slug": "src-style-text",
-        "route": "/src-style-text",
+        "slug": "src-components-switch",
+        "route": "/src-components-switch",
         "menu": "",
         "headings": []
       }
