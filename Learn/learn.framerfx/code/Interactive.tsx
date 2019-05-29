@@ -32,9 +32,31 @@ export function Interactive(props: Partial<Props>) {
         children,
         disabled,
         pressed,
-        type,
+        overflow,
+        center,
+        size,
         height,
         width,
+        drag,
+        dragConstraints,
+        dragDirectionLock,
+        onClick,
+        onTap,
+        onTapStart,
+        onTapCancel,
+        onMouseEnter,
+        onMouseLeave,
+        whileTap,
+        whileHover,
+        rotate,
+        onDrag,
+        onDragStart,
+        onDragEnd,
+        borderRadius,
+        top,
+        left,
+        bottom,
+        right,
     } = props
 
     /* ---------------------------------- State --------------------------------- */
@@ -49,12 +71,14 @@ export function Interactive(props: Partial<Props>) {
 
     // Set the hovered state when the user mouses in or out
     const setHover = (hovered: boolean) =>
-        doHover &&
-        setState({ ...state, hovered, active: hovered ? state.active : false })
+        doHover && setState({ ...state, hovered })
 
     // Set the active state when the user mouses down or up
     const setActive = (active: boolean) =>
         doActive && setState({ ...state, active })
+
+    const clearActiveHovered = () =>
+        setState({ ...state, active: false, hovered: false })
 
     /* ------------------------------ Presentation ------------------------------ */
 
@@ -64,23 +88,18 @@ export function Interactive(props: Partial<Props>) {
     const variants = {
         initial: {
             opacity: 1,
-            filter: `brightness(1)`,
         },
         hovered: {
             opacity: 1,
-            filter: `brightness(1.05)`,
         },
         active: {
             opacity: 1,
-            filter: `brightness(0.9)`,
         },
         pressed: {
             opacity: 1,
-            filter: `brightness(0.85)`,
         },
         disabled: {
             opacity: 0.3,
-            filter: `brightness(1)`,
         },
     }
 
@@ -99,10 +118,34 @@ export function Interactive(props: Partial<Props>) {
 
     return (
         <Frame
-            {...props as any}
+            {...{
+                size,
+                height,
+                width,
+                center,
+                top,
+                left,
+                bottom,
+                right,
+                borderRadius,
+                overflow,
+                rotate,
+                onClick,
+                onTap,
+                onTapStart,
+                onTapCancel,
+                onMouseEnter,
+                onMouseLeave,
+                onDrag,
+                onDragStart,
+                onDragEnd,
+                whileTap,
+                whileHover,
+                drag,
+                dragConstraints,
+                dragDirectionLock,
+            }}
             background={null}
-            height={height}
-            width={width}
             // Constant props
             // Variant props
             variants={variants}
@@ -115,16 +158,17 @@ export function Interactive(props: Partial<Props>) {
             }}
             style={{
                 ...props.style,
-                cursor: doHover ? "pointer" : null,
+                cursor: doHover || doActive || onTap ? "pointer" : undefined,
             }}
             // Events
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
             onMouseDown={() => setActive(true)}
             onMouseUp={() => setActive(false)}
+            onTapCancel={() => clearActiveHovered()}
             // Pass in container props when using this component in code
         >
-            {children}
+            {typeof children === "function" ? children(current) : children}
         </Frame>
     )
 }

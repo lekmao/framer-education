@@ -1,13 +1,8 @@
 import * as React from "react"
 import { Frame, Color, addPropertyControls, ControlType } from "framer"
 import { Interactive } from "./Interactive"
-import {
-    colors,
-    TextInput_Default,
-    TextInput_Focused,
-    TextInput_Warn,
-    TextInput_Clear,
-} from "./canvas"
+import { Icon } from "./Icon"
+import { colors } from "./canvas"
 
 type Props = {
     value: string
@@ -19,6 +14,7 @@ type Props = {
     height: any
     width: any
     delay: number
+    clearable: boolean
     validation: (value: string) => boolean
     onBlur: (value: string, valid: boolean) => any
     onFocus: (value: string, valid: boolean) => any
@@ -45,6 +41,7 @@ export function TextInput(props: Partial<Props>) {
         onValueChange,
         message,
         delay,
+        clearable,
     } = props
 
     /* ---------------------------------- State --------------------------------- */
@@ -125,97 +122,108 @@ export function TextInput(props: Partial<Props>) {
 
     // Grab the properties we want to use from state
     const { value, valid, focused } = state
+    const { height } = props
+
+    const variants = {
+        initial: {
+            border: `1px solid ${colors.Neutral}`,
+        },
+        hovered: {
+            border: `1px solid ${colors.Border}`,
+        },
+        active: {
+            border: `1px solid ${colors.Dark}`,
+        },
+        focused: {
+            border: `1px solid ${colors.Dark}`,
+        },
+        warn: {
+            border: `1px solid ${colors.Warn}`,
+        },
+    }
 
     return (
-        <Interactive
-            disabled={disabled}
-            width={props.width}
-            height={props.height}
-            active={false}
-            overflow={"hidden"}
-            {...props as any}
-        >
-            <TextInput_Default width="100%" height={50} />
-            <TextInput_Focused
-                width="100%"
-                height={50}
-                variants={{
-                    on: {
-                        opacity: 1,
-                    },
-                    off: {
-                        opacity: 0,
-                    },
-                }}
-                transition={{
-                    duration: 0.15,
-                }}
-                initial={focused ? "on" : "off"}
-                animate={focused ? "on" : "off"}
-            />
-            <TextInput_Warn
-                width="100%"
-                height={50}
-                variants={{
-                    on: {
-                        opacity: 1,
-                    },
-                    off: {
-                        opacity: 0,
-                    },
-                }}
-                transition={{
-                    duration: 0.15,
-                }}
-                initial={valid ? "off" : "on"}
-                animate={valid ? "off" : "on"}
-            />
-            <input
-                ref={input}
-                type={password ? "password" : "text"}
-                value={value || ""}
-                placeholder={placeholder || ""}
-                disabled={disabled}
-                readOnly={readOnly}
-                style={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    padding: "0px 12px",
-                    fontSize: 14,
-                    fontWeight: 600,
-                    width: "100%",
-                    height: 50,
-                    background: "none",
-                    borderRadius: 4,
-                    outline: "none",
-                    border: "none",
-                    color: valid ? colors.Dark : colors.Warn,
-                }}
-                // Events
-                onFocus={() => setFocus(true)}
-                onBlur={() => setFocus(false)}
-                onChange={handleInput}
-            />
-            {
-                //value && !readOnly && (
-                //<TextInput_Clear right={0} center="y" onTap={handleClear} />
-                //)
-            }
-            <div
-                style={{
-                    width: "100%",
-                    position: "absolute",
-                    top: 50,
-                    left: 0,
-                    padding: 8,
-                    fontFamily: "Helvetica Neue",
-                    color: valid ? colors.Dark : colors.Warn,
-                    fontSize: 12,
-                }}
-            >
-                {message}
-            </div>
+        <Interactive {...props as any} active={false} overflow={"hidden"}>
+            {current => (
+                <>
+                    <Frame
+                        width="100%"
+                        height={50}
+                        background={colors.Light}
+                        borderRadius={8}
+                        {...variants[
+                            valid ? (focused ? "focused" : current) : "warn"
+                        ]}
+                    />
+                    <input
+                        ref={input}
+                        type={password ? "password" : "text"}
+                        value={value || ""}
+                        placeholder={placeholder || ""}
+                        disabled={disabled}
+                        readOnly={readOnly}
+                        style={{
+                            position: "absolute",
+                            top: 0,
+                            left: 0,
+                            padding: "0px 12px",
+                            fontSize: 14,
+                            fontWeight: 600,
+                            width: "100%",
+                            height: 50,
+                            background: "none",
+                            borderRadius: 4,
+                            outline: "none",
+                            border: "none",
+                            color: valid ? colors.Dark : colors.Warn,
+                        }}
+                        // Events
+                        onFocus={() => setFocus(true)}
+                        onBlur={() => setFocus(false)}
+                        onChange={handleInput}
+                    />
+                    {clearable && value && !readOnly && (
+                        <Interactive
+                            height={height}
+                            width={40}
+                            right={0}
+                            top={0}
+                            onTap={handleClear}
+                        >
+                            <Frame
+                                center
+                                height={16}
+                                width={16}
+                                background={colors.Neutral}
+                                borderRadius="100%"
+                            >
+                                <Icon
+                                    icon={"close"}
+                                    center
+                                    height={12}
+                                    width={12}
+                                    size={12}
+                                    color={colors.Light}
+                                />
+                            </Frame>
+                        </Interactive>
+                    )}
+                    <div
+                        style={{
+                            width: "100%",
+                            position: "absolute",
+                            top: 50,
+                            left: 0,
+                            padding: 8,
+                            fontFamily: "Helvetica Neue",
+                            color: valid ? colors.Dark : colors.Warn,
+                            fontSize: 12,
+                        }}
+                    >
+                        {message}
+                    </div>
+                </>
+            )}
         </Interactive>
     )
 }
@@ -262,6 +270,11 @@ addPropertyControls(TextInput, {
         type: ControlType.Boolean,
         defaultValue: false,
         title: "Disabled",
+    },
+    clearable: {
+        type: ControlType.Boolean,
+        defaultValue: true,
+        title: "Clearable",
     },
     message: {
         type: ControlType.String,

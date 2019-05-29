@@ -7,14 +7,7 @@ import {
     useMotionValue,
     useTransform,
 } from "framer"
-import {
-    colors,
-    Slider_Fill,
-    Slider_Knob,
-    Slider_Rail,
-    Slider_Warn,
-    Slider_KnobWarn,
-} from "./canvas"
+import { colors } from "./canvas"
 import { Interactive } from "./Interactive"
 
 type Props = {
@@ -72,7 +65,10 @@ export function Slider(props: Partial<Props>) {
     const valid = useTransform(knobX, v =>
         validation(v, toStep(min + (v / railWidth) * (max - min)))
     )
-    const warnOpacity = useTransform(valid, v => (v ? 0 : 1))
+
+    const containerBorder = useTransform(valid, v =>
+        v ? `1px solid ${colors.Neutral}` : `1px solid ${colors.Warn}`
+    )
 
     // When the hook receives new props values, overwrite the state
     React.useEffect(() => {
@@ -93,44 +89,80 @@ export function Slider(props: Partial<Props>) {
     // Get the properties we want from state
     const { onDragStart, onDragEnd, onDrag } = props
 
+    const variants = {
+        initial: {
+            border: `1px solid ${colors.Neutral}`,
+        },
+        hovered: {
+            border: `1px solid ${colors.Border}`,
+        },
+        active: {
+            border: `1px solid ${colors.Active}`,
+        },
+        warn: {
+            border: `1px solid ${colors.Warn}`,
+        },
+    }
+
     return (
         <Interactive
             // Constants
-            center
+            {...props as any}
             height={40}
-            disabled={disabled}
-            width={width}
-            active={false}
             background="none"
+            drag={false}
+            onDrag={undefined}
+            onDragStart={undefined}
+            onDragEnd={undefined}
         >
-            <Slider_Rail center="y" width={railWidth} left={knobSize / 2} />
-            <Slider_Warn
-                center="y"
-                width={railWidth}
-                left={knobSize / 2}
-                opacity={warnOpacity}
-            />
-            <Slider_Fill center="y" width={knobX} left={knobSize / 2} />
-            <Frame size={40} x={knobX} center="y" background="none">
-                <Slider_Knob center />
-                <Slider_KnobWarn center opacity={warnOpacity} />
-            </Frame>
-            <Frame
-                size={40}
-                center="y"
-                background="none"
-                x={dragX}
-                drag={disabled ? false : "x"}
-                dragMomentum={false}
-                dragElastic={false}
-                dragConstraints={{
-                    left: 0,
-                    right: width - knobSize,
-                }}
-                onDrag={onDrag}
-                onDragStart={onDragStart}
-                onDragEnd={onDragEnd}
-            />
+            {current => (
+                <>
+                    <Frame
+                        height={8}
+                        borderRadius={4}
+                        center="y"
+                        width={railWidth}
+                        left={knobSize / 2}
+                        background={colors.Neutral}
+                        border={containerBorder}
+                    />
+                    <Frame
+                        height={8}
+                        borderRadius={4}
+                        background={colors.Primary}
+                        center="y"
+                        width={knobX}
+                        left={knobSize / 2}
+                    />
+                    <Frame size={40} x={knobX} center="y" background="none">
+                        <Frame
+                            background={colors.Light}
+                            height={36}
+                            width={36}
+                            borderRadius="100%"
+                            shadow={`0px 2px 5px ${colors.Shadow}`}
+                            center
+                            {...variants[valid ? current : "warn"]}
+                        />
+                    </Frame>
+                    <Frame
+                        size={40}
+                        center="y"
+                        background="none"
+                        x={dragX}
+                        drag={disabled ? false : "x"}
+                        dragMomentum={false}
+                        dragElastic={false}
+                        dragConstraints={{
+                            left: 0,
+                            right: width - knobSize,
+                        }}
+                        onDrag={onDrag}
+                        onDragStart={onDragStart}
+                        onDragEnd={onDragEnd}
+                    />
+                </>
+            )}
         </Interactive>
     )
 }

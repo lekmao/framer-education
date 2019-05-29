@@ -1,7 +1,8 @@
 import * as React from "react"
 import { Frame, Color, addPropertyControls, ControlType, Stack } from "framer"
-import { colors, Segment_Default, Segment_Focused } from "./canvas"
+import { colors } from "./canvas"
 import { Interactive } from "./Interactive"
+import { Text } from "./Text"
 
 type Props = {
     id: string
@@ -87,40 +88,72 @@ export function Segment(props: Partial<Props>) {
     // Get the properties we want from state
     const { value, selectedIndex, valid } = state
 
-    return (
-        <Stack
-            height={height}
-            width={width}
-            direction="horizontal"
-            alignment="center"
-            gap={1}
-            borderRadius={12}
-            overflow="hidden"
-            border={`1px solid ${valid ? colors.Border : colors.Warn}`}
-            background={
-                disabled ? colors.Light : valid ? colors.Border : colors.Warn
-            }
-        >
-            {options.map((option, index) => {
-                // An option is selected if its index matches the state's selectedIndex
-                const Component =
-                    index === selectedIndex ? Segment_Focused : Segment_Default
+    const variants = {
+        disabled: {
+            background: colors.Light,
+            border: `1px solid ${colors.Neutral}`,
+        },
+        initial: {
+            background: colors.Border,
+            border: `1px solid ${colors.Border}`,
+        },
+        hovered: {
+            background: colors.Border,
+            border: `1px solid ${colors.Neutral}`,
+        },
+        active: {
+            background: colors.Border,
+            border: `1px solid ${colors.Active}`,
+        },
+        warn: {
+            background: colors.Warn,
+            border: `1px solid ${colors.Warn}`,
+        },
+    }
 
-                return (
-                    <Interactive
-                        // Constant props
-                        key={`${props.id}_option_${index}`}
-                        width="1fr"
-                        height="100%"
-                        disabled={disabled}
-                        // Events
-                        onClick={() => setSelectedIndex(index)}
-                    >
-                        <Component size="100%" text={option} />
-                    </Interactive>
-                )
-            })}
-        </Stack>
+    return (
+        <Interactive {...props as any}>
+            {current => (
+                <Stack
+                    height={height}
+                    width={width}
+                    direction="horizontal"
+                    alignment="center"
+                    gap={1}
+                    borderRadius={12}
+                    overflow="hidden"
+                    {...variants[valid ? current : "warn"]}
+                >
+                    {options.map((option, index) => {
+                        // An option is selected if its index matches the state's selectedIndex
+                        const focused = index === selectedIndex
+
+                        return (
+                            <Interactive
+                                // Constant props
+                                key={`${props.id}_option_${index}`}
+                                width="1fr"
+                                height="100%"
+                                disabled={disabled}
+                                // Events
+                                onClick={() => setSelectedIndex(index)}
+                            >
+                                <Text
+                                    size="100%"
+                                    type="link"
+                                    color={focused ? colors.Light : colors.Dark}
+                                    background={
+                                        focused ? colors.Primary : colors.Light
+                                    }
+                                >
+                                    {option}
+                                </Text>
+                            </Interactive>
+                        )
+                    })}
+                </Stack>
+            )}
+        </Interactive>
     )
 }
 

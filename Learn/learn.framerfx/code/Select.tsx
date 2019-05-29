@@ -28,12 +28,7 @@ export const Select = props => {
     }
 
     return (
-        <Frame
-            height={props.height}
-            width={props.width}
-            background="none"
-            center
-        >
+        <Frame height={props.height} width={props.width} background="none">
             <ReactSelect
                 theme={theme => {
                     return {

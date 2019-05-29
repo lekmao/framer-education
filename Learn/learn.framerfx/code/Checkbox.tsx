@@ -1,12 +1,7 @@
 import * as React from "react"
-import { addPropertyControls, ControlType } from "framer"
+import { Frame, addPropertyControls, ControlType } from "framer"
 import { Interactive } from "./Interactive"
-import {
-    Checkbox_On,
-    Checkbox_Off,
-    Checkbox_Default,
-    Checkbox_Warn,
-} from "./canvas"
+import { colors } from "./canvas"
 
 type Props = {
     height: any
@@ -77,37 +72,56 @@ export function Checkbox(props: Partial<Props>) {
     // Grab the properties we want to use from state
     const { value, valid } = state
 
-    const Container = valid ? Checkbox_Default : Checkbox_Warn
-    const Fill = value ? Checkbox_On : Checkbox_Off
+    const variants = {
+        initial: {
+            border: `1px solid ${colors.Neutral}`,
+        },
+        hovered: {
+            border: `1px solid ${colors.Border}`,
+        },
+        active: {
+            border: `1px solid ${colors.Active}`,
+        },
+        warn: {
+            border: `1px solid ${colors.Warn}`,
+        },
+    }
 
     return (
-        <Interactive
-            height={50}
-            width={50}
-            disabled={disabled}
-            onClick={handleTap}
-            {...props as any}
-        >
-            <Container center height={50} width={50} />
-            <Checkbox_Off center height={50} width={50} />
-            <Checkbox_On
-                center
-                height={50}
-                width={50}
-                variants={{
-                    on: {
-                        opacity: 1,
-                    },
-                    off: {
-                        opacity: 0,
-                    },
-                }}
-                transition={{
-                    duration: 0.15,
-                }}
-                initial={value ? "on" : "off"}
-                animate={value ? "on" : "off"}
-            />
+        <Interactive {...props as any} height={50} width={50} onTap={handleTap}>
+            {current => (
+                <>
+                    <Frame
+                        center
+                        height={28}
+                        width={28}
+                        borderRadius={8}
+                        background={colors.Light}
+                        {...variants[valid ? current : "warn"]}
+                    />
+                    <Frame
+                        center
+                        borderRadius={6}
+                        height={20}
+                        width={20}
+                        variants={{
+                            on: {
+                                background: colors.Primary,
+                                border: `0px solid ${colors.Neutral}`,
+                            },
+                            off: {
+                                background: colors.Bg,
+                                border: `1px solid ${colors.Neutral}`,
+                            },
+                        }}
+                        transition={{
+                            duration: 0.15,
+                        }}
+                        initial={value ? "on" : "off"}
+                        animate={value ? "on" : "off"}
+                    />
+                </>
+            )}
         </Interactive>
     )
 }

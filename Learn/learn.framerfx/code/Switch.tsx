@@ -1,12 +1,7 @@
 import * as React from "react"
 import { Frame, Color, addPropertyControls, ControlType } from "framer"
 import { Interactive } from "./Interactive"
-import {
-    colors,
-    Switch_Knob,
-    Switch_Container_On,
-    Switch_Container_Off,
-} from "./canvas"
+import { colors } from "./canvas"
 
 type Props = {
     height: number | string
@@ -81,47 +76,75 @@ export function Switch(props: Partial<Props>) {
     // Grab the properties we want to use from state
     const { value, valid } = state
 
+    const variants = {
+        initial: {
+            border: `1px solid ${colors.Neutral}`,
+        },
+        hovered: {
+            border: `1px solid ${colors.Border}`,
+        },
+        active: {
+            border: `1px solid ${colors.Active}`,
+        },
+        warn: {
+            border: `1px solid ${colors.Warn}`,
+        },
+    }
+
     return (
-        <Interactive
-            height={height}
-            width={width}
-            disabled={disabled}
-            // {...props as any}
-            onClick={handleTap}
-        >
-            <Switch_Container_Off center="y" />
-            <Switch_Container_On
-                center="y"
-                variants={{
-                    on: {
-                        opacity: 1,
-                    },
-                    off: {
-                        opacity: 0,
-                    },
-                }}
-                transition={{
-                    duration: 0.15,
-                }}
-                initial={value ? "on" : "off"}
-                animate={value ? "on" : "off"}
-            />
-            <Switch_Knob
-                center="y"
-                variants={{
-                    on: {
-                        x: 24,
-                    },
-                    off: {
-                        x: 0,
-                    },
-                }}
-                transition={{
-                    duration: 0.15,
-                }}
-                initial={value ? "on" : "off"}
-                animate={value ? "on" : "off"}
-            />
+        <Interactive {...props as any} onTap={handleTap}>
+            {current => {
+                return (
+                    <>
+                        <Frame
+                            center="y"
+                            height={40}
+                            width={64}
+                            borderRadius={25}
+                            variants={{
+                                on: {
+                                    background: colors.Primary,
+                                },
+                                off: {
+                                    background: colors.Neutral,
+                                },
+                            }}
+                            transition={{
+                                duration: 0.15,
+                            }}
+                            initial={value ? "on" : "off"}
+                            animate={value ? "on" : "off"}
+                        >
+                            <Frame
+                                center="y"
+                                height={36}
+                                width={36}
+                                background="none"
+                                variants={{
+                                    on: {
+                                        x: 26,
+                                    },
+                                    off: {
+                                        x: 2,
+                                    },
+                                }}
+                                transition={{
+                                    duration: 0.15,
+                                }}
+                            >
+                                <Frame
+                                    height="100%"
+                                    width="100%"
+                                    borderRadius="100%"
+                                    background={colors.Light}
+                                    shadow={`0px 2px 5px ${colors.Shadow}`}
+                                    {...variants[valid ? current : "warn"]}
+                                />
+                            </Frame>
+                        </Frame>
+                    </>
+                )
+            }}
         </Interactive>
     )
 }

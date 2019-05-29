@@ -25,3 +25,9 @@ export function Text(): Override {
         },
     }
 }
+
+export function Text2(): Override {
+    return {
+        text: "hello",
+    }
+}

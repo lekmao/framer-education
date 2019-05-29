@@ -1,13 +1,8 @@
 import * as React from "react"
 import { Frame, Color, addPropertyControls, ControlType } from "framer"
 import { Interactive } from "./Interactive"
-import { colors, Links_Primary, Links_Secondary, Links_Warn } from "./canvas"
-
-const Components = {
-    primary: Links_Primary,
-    secondary: Links_Secondary,
-    warn: Links_Warn,
-}
+import { Text } from "./Text"
+import { colors } from "./canvas"
 
 // Define a type for our props
 type Props = {
@@ -44,22 +39,36 @@ export function Link(props: Partial<Props>) {
 
     /* ------------------------------ Presentation ------------------------------ */
 
-    const Component = Components[type]
+    const theme = {
+        primary: {
+            foreground: colors.Primary,
+        },
+        secondary: {
+            foreground: colors.Dark,
+        },
+        ghost: {
+            foreground: colors.Light,
+        },
+        warn: {
+            foreground: colors.Warn,
+        },
+    }
 
     return (
         // Pass in container props when using this component in code
         <Interactive
             {...props as any}
-            height={height}
-            width={width}
-            disabled={disabled}
+            // Events
             onTap={handleTap}
         >
-            <Component
+            <Text
                 // Constant props
                 size="100%"
-                text={text}
-            />
+                type="link"
+                color={theme[type].foreground}
+            >
+                {text}
+            </Text>
         </Interactive>
     )
 }
@@ -90,8 +99,8 @@ addPropertyControls(Link, {
     },
     type: {
         type: ControlType.Enum,
-        options: ["primary", "secondary", "warn"],
-        optionTitles: ["Primary", "Secondary", "Warn"],
+        options: ["primary", "secondary", "ghost", "warn"],
+        optionTitles: ["Primary", "Secondary", "Ghost", "Warn"],
         defaultValue: "primary",
     },
 })
