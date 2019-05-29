@@ -498,19 +498,6 @@
       }
     },
     {
-      "key": "src/components/TextInput.mdx",
-      "value": {
-        "name": "TextInput",
-        "id": "1a4f26e636c4bd6b79ccd96dbefb7f53",
-        "filepath": "src/components/TextInput.mdx",
-        "link": "",
-        "slug": "src-components-text-input",
-        "route": "/src-components-text-input",
-        "menu": "",
-        "headings": []
-      }
-    },
-    {
       "key": "src/components/Switch.mdx",
       "value": {
         "name": "Switch",
@@ -519,6 +506,19 @@
         "link": "",
         "slug": "src-components-switch",
         "route": "/src-components-switch",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/components/TextInput.mdx",
+      "value": {
+        "name": "TextInput",
+        "id": "1a4f26e636c4bd6b79ccd96dbefb7f53",
+        "filepath": "src/components/TextInput.mdx",
+        "link": "",
+        "slug": "src-components-text-input",
+        "route": "/src-components-text-input",
         "menu": "",
         "headings": []
       }

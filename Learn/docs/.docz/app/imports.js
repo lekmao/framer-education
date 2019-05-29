@@ -75,12 +75,12 @@ export const imports = {
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-components-slider" */ 'src/components/Slider.mdx'
     ),
-  'src/components/TextInput.mdx': () =>
-    import(
-      /* webpackPrefetch: true, webpackChunkName: "src-components-text-input" */ 'src/components/TextInput.mdx'
-    ),
   'src/components/Switch.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-components-switch" */ 'src/components/Switch.mdx'
+    ),
+  'src/components/TextInput.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "src-components-text-input" */ 'src/components/TextInput.mdx'
     ),
 }
