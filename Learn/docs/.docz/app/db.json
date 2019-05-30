@@ -7,114 +7,11 @@
     "repository": null,
     "native": false,
     "codeSandbox": false,
-    "themeConfig": {
-      "colors": {
-        "primary": "#005cfe",
-        "secondary": "#03afe8",
-        "gray": "#d9d9ed"
-      },
-      "styles": {
-        "body": "\n\t\t\t\tfont-family: Helvetica Neue;\n\t\t\t\tfont-size: 16px;\n\t\t\t\tline-height: 1.3;\n\t\t\t",
-        "h1": "\n\t\t\t\tmargin: 40px 0 20px;\n\t\t\t\tfont-size: 40px;\n\t\t\t\tfont-weight: bold;\n\t\t\t\tletter-spacing: -1;\n\t\t\t",
-        "h2": "\n\t\t\t\tmargin: 30px 0 20px;\n\t\t\t\tfont-weight: bold;\n\t\t\t\tfont-size: 28px;\n\t\t\t\tletter-spacing: -0.02em;\n\t\t\t",
-        "h3": "\n\t\t\t\tmargin: 25px 0 10px;\n\t\t\t\tfont-size: 20px;\n\t\t\t\tfont-weight: bold;\n\t\t\t",
-        "h4": "\n\t\t\t\tmargin: 25px 0 10px;\n\t\t\t\tfont-size: 16px;\n\t\t\t\tfont-weight: bold;\n\t\t\t",
-        "h5": "\n\t\t\t\tmargin: 20px 0 10px;\n\t\t\t\tfont-size: 16px;\n\t\t\t\tfont-weight: bold;\n\t\t\t",
-        "h6": "\n\t\t\t\tmargin: 20px 0 10px;\n\t\t\t\tfont-size: 16px;\n\t\t\t\tfont-weight: bold;\n\t\t\t\ttext-transform: uppercase;\n\t\t\t",
-        "ol": "\n\t\t\t\tpadding: 0;\n\t\t\t\tmargin: 10px 0 10px;\n\t\t\t",
-        "ul": "\n\t\t\t\tpadding: 0;\n\t\t\t\tmargin: 10px 0 10px;\n\t\t\t",
-        "playground": "\n\t\t\t\tpadding: 40px;\n\t\t\t",
-        "code": "\n\t\t\t\tmargin: 0 3px;\n\t\t\t\tborder-radius: 3px;\n\t\t\t\tfont-family: Menlo;\n\t\t\t\tpadding: 2px 5px;\n\t\t\t\tfont-size: 0.8em;\n\t\t\t\tborder: '1px solid rgba(0, 0, 0, 0.02)';\n\t\t\t",
-        "pre": "\n\t\t\t\tfont-family: Menlo;\n\t\t\t\tfont-size: 14px;\n\t\t\t\tline-height: 1.8;\n\t\t\t",
-        "paragraph": "\n\t\t\t\tmargin: 10px 0 20px 0;\n\t\t\t",
-        "table": "\n\t\t\t\toverflow-y: hidden;\n\t\t\t\twidth: 100%;\n\t\t\t\tfont-family: Menlo;\n\t\t\t\tfont-size: 14px;\n\t\t\t\toverflow-x: initial;\n\t\t\t\tdisplay: block;\n\t\t\t",
-        "blockquote": "\n\t\t\t\tmargin: 25px 0;\n\t\t\t\tpadding: 20px;\n\t\t\t\tfont-style: italic;\n\t\t\t\tfont-size: 16px;\n\t\t\t"
-      }
-    },
+    "themeConfig": {},
     "separator": "-",
-    "typescript": true,
-    "theme": "docz-theme-default"
+    "typescript": true
   },
-  "props": [
-    {
-      "key": "src/components/Alert.tsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Alert",
-          "methods": [],
-          "props": {
-            "kind": {
-              "defaultValue": {
-                "value": "info"
-              },
-              "description": "Set this to change alert kind",
-              "name": "kind",
-              "parent": {
-                "fileName": "src/components/Alert.tsx",
-                "name": "AlertProps"
-              },
-              "required": true,
-              "type": {
-                "name": "\"info\" | \"positive\" | \"negative\" | \"warning\""
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/components/Button.tsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Button",
-          "methods": [],
-          "props": {
-            "scale": {
-              "defaultValue": null,
-              "description": "",
-              "name": "scale",
-              "parent": {
-                "fileName": "src/components/Button.tsx",
-                "name": "ButtonProps"
-              },
-              "required": true,
-              "type": {
-                "name": "\"small\" | \"normal\" | \"big\""
-              }
-            },
-            "kind": {
-              "defaultValue": null,
-              "description": "",
-              "name": "kind",
-              "parent": {
-                "fileName": "src/components/Button.tsx",
-                "name": "ButtonProps"
-              },
-              "required": true,
-              "type": {
-                "name": "\"primary\" | \"secondary\" | \"cancel\" | \"dark\" | \"gray\""
-              }
-            },
-            "outline": {
-              "defaultValue": null,
-              "description": "",
-              "name": "outline",
-              "parent": {
-                "fileName": "src/components/Button.tsx",
-                "name": "ButtonProps"
-              },
-              "required": true,
-              "type": {
-                "name": "boolean"
-              }
-            }
-          }
-        }
-      ]
-    }
-  ],
+  "props": [],
   "entries": [
     {
       "key": "src/index.mdx",
@@ -146,19 +43,6 @@
       }
     },
     {
-      "key": "src/style/Image.mdx",
-      "value": {
-        "id": "eb3fbffd8a7650243a884a987f79c9a7",
-        "filepath": "src/style/Image.mdx",
-        "link": "",
-        "slug": "src-style-image",
-        "route": "/src-style-image",
-        "name": "Image",
-        "menu": "",
-        "headings": []
-      }
-    },
-    {
       "key": "src/style/Colors.mdx",
       "value": {
         "name": "Colors",
@@ -180,6 +64,19 @@
         "link": "",
         "slug": "src-style-interactive",
         "route": "/src-style-interactive",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/style/Image.mdx",
+      "value": {
+        "id": "eb3fbffd8a7650243a884a987f79c9a7",
+        "filepath": "src/style/Image.mdx",
+        "link": "",
+        "slug": "src-style-image",
+        "route": "/src-style-image",
+        "name": "Image",
         "menu": "",
         "headings": []
       }
@@ -208,45 +105,6 @@
         "route": "/src-style-text",
         "menu": "",
         "headings": []
-      }
-    },
-    {
-      "key": "src/components/Alert.mdx",
-      "value": {
-        "name": "Alert",
-        "menu": "Components",
-        "id": "411d2842c3d65e6ee7d3ec119ed4c5a0",
-        "filepath": "src/components/Alert.mdx",
-        "link": "",
-        "slug": "src-components-alert",
-        "route": "/src-components-alert",
-        "headings": [
-          {
-            "slug": "alert",
-            "depth": 1,
-            "value": "Alert"
-          },
-          {
-            "slug": "properties",
-            "depth": 2,
-            "value": "Properties"
-          },
-          {
-            "slug": "basic-usage",
-            "depth": 2,
-            "value": "Basic usage"
-          },
-          {
-            "slug": "using-different-kinds",
-            "depth": 2,
-            "value": "Using different kinds"
-          },
-          {
-            "slug": "use-with-children-as-a-function",
-            "depth": 2,
-            "value": "Use with children as a function"
-          }
-        ]
       }
     },
     {
@@ -327,6 +185,32 @@
       }
     },
     {
+      "key": "src/components/CheckboxGroup.mdx",
+      "value": {
+        "name": "CheckboxGroup",
+        "id": "9d340a2ea2a562e9d97cb594c0bb8985",
+        "filepath": "src/components/CheckboxGroup.mdx",
+        "link": "",
+        "slug": "src-components-checkbox-group",
+        "route": "/src-components-checkbox-group",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/components/Container.mdx",
+      "value": {
+        "name": "Container",
+        "id": "2e5bc2a2cd68ab9f0f8d3df1f4d34462",
+        "filepath": "src/components/Container.mdx",
+        "link": "",
+        "slug": "src-components-container",
+        "route": "/src-components-container",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
       "key": "src/components/Checkbox.mdx",
       "value": {
         "name": "Checkbox",
@@ -378,32 +262,6 @@
             "value": "Validation"
           }
         ]
-      }
-    },
-    {
-      "key": "src/components/CheckboxGroup.mdx",
-      "value": {
-        "name": "CheckboxGroup",
-        "id": "9d340a2ea2a562e9d97cb594c0bb8985",
-        "filepath": "src/components/CheckboxGroup.mdx",
-        "link": "",
-        "slug": "src-components-checkbox-group",
-        "route": "/src-components-checkbox-group",
-        "menu": "",
-        "headings": []
-      }
-    },
-    {
-      "key": "src/components/Container.mdx",
-      "value": {
-        "name": "Container",
-        "id": "2e5bc2a2cd68ab9f0f8d3df1f4d34462",
-        "filepath": "src/components/Container.mdx",
-        "link": "",
-        "slug": "src-components-container",
-        "route": "/src-components-container",
-        "menu": "",
-        "headings": []
       }
     },
     {

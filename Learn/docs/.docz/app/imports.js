@@ -3,10 +3,6 @@ export const imports = {
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-index" */ 'src/index.mdx'
     ),
-  'src/style/Image.mdx': () =>
-    import(
-      /* webpackPrefetch: true, webpackChunkName: "src-style-image" */ 'src/style/Image.mdx'
-    ),
   'src/style/Colors.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-style-colors" */ 'src/style/Colors.mdx'
@@ -14,6 +10,10 @@ export const imports = {
   'src/style/Interactive.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-style-interactive" */ 'src/style/Interactive.mdx'
+    ),
+  'src/style/Image.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "src-style-image" */ 'src/style/Image.mdx'
     ),
   'src/style/List.mdx': () =>
     import(
@@ -23,10 +23,6 @@ export const imports = {
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-style-text" */ 'src/style/Text.mdx'
     ),
-  'src/components/Alert.mdx': () =>
-    import(
-      /* webpackPrefetch: true, webpackChunkName: "src-components-alert" */ 'src/components/Alert.mdx'
-    ),
   'src/components/Button.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-components-button" */ 'src/components/Button.mdx'
@@ -35,10 +31,6 @@ export const imports = {
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-components-card" */ 'src/components/Card.mdx'
     ),
-  'src/components/Checkbox.mdx': () =>
-    import(
-      /* webpackPrefetch: true, webpackChunkName: "src-components-checkbox" */ 'src/components/Checkbox.mdx'
-    ),
   'src/components/CheckboxGroup.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-components-checkbox-group" */ 'src/components/CheckboxGroup.mdx'
@@ -46,6 +38,10 @@ export const imports = {
   'src/components/Container.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-components-container" */ 'src/components/Container.mdx'
+    ),
+  'src/components/Checkbox.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "src-components-checkbox" */ 'src/components/Checkbox.mdx'
     ),
   'src/components/Icon.mdx': () =>
     import(
