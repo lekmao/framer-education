@@ -2,7 +2,9 @@ import * as React from "react"
 import { Frame, Color, addPropertyControls, ControlType } from "framer"
 import { Interactive } from "./Interactive"
 import { Text } from "./Text"
+import { Icon } from "./Icon"
 import { colors } from "./canvas"
+import { iconNames, iconTitles } from "./Utils"
 
 // Define a type for our props
 type Props = {
@@ -10,10 +12,11 @@ type Props = {
     width: any
     text: string
     disabled: boolean
-    toggle: boolean
-    toggled: boolean
     type: string
     color: string
+    icon: string
+    resize: string | boolean
+    onResize: (width: number, height: number) => void
     onTap: () => void
 }
 
@@ -22,19 +25,33 @@ type Props = {
  * @param props
  */
 export function Link(props: Partial<Props>) {
-    // Grab the properties we want to use from props (note that we're
-    // renaming toggled to avoid conflicting with the state's toggled
-    // property
-    const { height, width, disabled, onTap, text, type } = props
+    // Grab the properties we want to use from props
+    const { height, width, disabled, onTap, text, icon, type, resize } = props
+
+    const [state, setState] = React.useState({
+        width,
+        height,
+    })
 
     /* ----------------------------- Event Handlers ----------------------------- */
 
-    // When the user taps on the button, run onTap and update toggled
+    // When the user taps on the button, run onTap
     const handleTap = () => {
-        if (disabled) return
-
         // Call onTap with the toggled state
         onTap()
+    }
+
+    const handleResize = (width, height) => {
+        if (resize) {
+            if (resize === "width") {
+                setState({ ...state, width })
+            } else if (resize === "height") {
+                setState({ ...state, height })
+            } else {
+                setState({ width, height })
+            }
+            props.onResize(width, height)
+        }
     }
 
     /* ------------------------------ Presentation ------------------------------ */
@@ -44,6 +61,12 @@ export function Link(props: Partial<Props>) {
             foreground: colors.Primary,
         },
         secondary: {
+            foreground: colors.Secondary,
+        },
+        accent: {
+            foreground: colors.Accent,
+        },
+        neutral: {
             foreground: colors.Dark,
         },
         ghost: {
@@ -58,17 +81,35 @@ export function Link(props: Partial<Props>) {
         // Pass in container props when using this component in code
         <Interactive
             {...props as any}
+            {...state}
             // Events
-            onTap={handleTap}
+            onTap={() => {
+                !disabled && handleTap()
+            }}
         >
-            <Text
-                // Constant props
-                size="100%"
-                type="link"
-                color={theme[type].foreground}
-            >
-                {text}
-            </Text>
+            {current => {
+                const content =
+                    icon === "none" ? (
+                        <Text
+                            // Constant props
+                            height="100%"
+                            width="100%"
+                            type="link"
+                            color={theme[type].foreground}
+                            resize
+                            onResize={handleResize}
+                            text={text}
+                        />
+                    ) : (
+                        <Icon
+                            center
+                            icon={icon}
+                            color={theme[type].foreground}
+                        />
+                    )
+
+                return content
+            }}
         </Interactive>
     )
 }
@@ -83,6 +124,9 @@ Link.defaultProps = {
     color: "red",
     primary: true,
     onTap: () => null,
+    icon: "none",
+    resize: false,
+    onResize: (width, height) => null,
 }
 
 // Set the component's property controls
@@ -92,15 +136,29 @@ addPropertyControls(Link, {
         title: "Text",
         defaultValue: "Get Started!",
     },
+    type: {
+        type: ControlType.Enum,
+        options: ["primary", "secondary", "accent", "warn", "neutral", "ghost"],
+        optionTitles: [
+            "Primary",
+            "Secondary",
+            "Accent",
+            "Warn",
+            "Neutral",
+            "Ghost",
+        ],
+        defaultValue: "primary",
+    },
+    icon: {
+        title: "Icon",
+        type: ControlType.Enum,
+        options: ["none", ...iconNames],
+        optionTitles: ["None", ...iconTitles],
+        defaultValue: "none",
+    },
     disabled: {
         type: ControlType.Boolean,
         title: "Disabled",
         defaultValue: false,
-    },
-    type: {
-        type: ControlType.Enum,
-        options: ["primary", "secondary", "ghost", "warn"],
-        optionTitles: ["Primary", "Secondary", "Ghost", "Warn"],
-        defaultValue: "primary",
     },
 })

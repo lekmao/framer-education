@@ -50,7 +50,7 @@ export function Radio(props: Partial<Props>) {
 
     // When the user taps on the switch, run onValueChange and flip the isOn state
     const handleTap = () => {
-        if (disabled || state.value) return
+        if (state.value) return
 
         setState(state => {
             const value = true
@@ -88,7 +88,12 @@ export function Radio(props: Partial<Props>) {
     }
 
     return (
-        <Interactive {...props as any} height={50} width={50} onTap={handleTap}>
+        <Interactive
+            {...props as any}
+            height={50}
+            width={50}
+            onTap={!disabled && handleTap}
+        >
             {current => (
                 <>
                     <Frame

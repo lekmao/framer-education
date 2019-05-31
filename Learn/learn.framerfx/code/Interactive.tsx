@@ -168,7 +168,9 @@ export function Interactive(props: Partial<Props>) {
             onTapCancel={() => clearActiveHovered()}
             // Pass in container props when using this component in code
         >
-            {typeof children === "function" ? children(current) : children}
+            {children && typeof children === "function"
+                ? children(current)
+                : children}
         </Frame>
     )
 }

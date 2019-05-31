@@ -2,15 +2,15 @@ import * as React from "react"
 import { Frame, Color, addPropertyControls, ControlType, Stack } from "framer"
 import { colors } from "./canvas"
 import { Interactive } from "./Interactive"
-import { Text } from "./Text"
+import { Link } from "./Link"
+import { Button } from "./Button"
 
 type Props = {
     id: string
     width: number | string
     height: number | string
-    options: string[]
     value: string
-    selectedIndex: number
+    options: string[]
     disabled: boolean
     onValueChange: (value: string, index: number, valid: boolean) => void
     validation: (value: string) => boolean
@@ -26,7 +26,6 @@ export function Segment(props: Partial<Props>) {
     // state's `value` and `selectedIndex` properties.
     const {
         value: initial,
-        selectedIndex: initialIndex,
         options,
         disabled,
         validation,
@@ -38,7 +37,7 @@ export function Segment(props: Partial<Props>) {
     /* ---------------------------------- State --------------------------------- */
 
     // Set the initial value
-    const initialValue = initial ? initial : options[initialIndex]
+    const initialValue = initial
 
     // Initialize state with props values
     const [state, setState] = React.useState({
@@ -50,8 +49,6 @@ export function Segment(props: Partial<Props>) {
     // When the hook receives new props values, overwrite the state
     React.useEffect(() => {
         const selectedValue = initialValue
-            ? initialValue
-            : options[initialIndex]
 
         setState({
             ...state,
@@ -59,7 +56,7 @@ export function Segment(props: Partial<Props>) {
             selectedIndex: options.indexOf(selectedValue),
             valid: validation(selectedValue || null),
         })
-    }, [initialIndex, initialValue, options, validation])
+    }, [initialValue, options, validation])
 
     /* ----------------------------- Event Handlers ----------------------------- */
 
@@ -94,15 +91,15 @@ export function Segment(props: Partial<Props>) {
             border: `1px solid ${colors.Neutral}`,
         },
         initial: {
-            background: colors.Border,
+            background: colors.Light,
             border: `1px solid ${colors.Border}`,
         },
         hovered: {
-            background: colors.Border,
+            background: colors.Light,
             border: `1px solid ${colors.Neutral}`,
         },
         active: {
-            background: colors.Border,
+            background: colors.Light,
             border: `1px solid ${colors.Active}`,
         },
         warn: {
@@ -128,27 +125,28 @@ export function Segment(props: Partial<Props>) {
                         // An option is selected if its index matches the state's selectedIndex
                         const focused = index === selectedIndex
 
-                        return (
-                            <Interactive
-                                // Constant props
+                        return focused ? (
+                            <Button
+                                key={`${props.id}_option_${index}`}
+                                width={"1fr"}
+                                text={option}
+                                type="primary"
+                                disabled={disabled}
+                                onTap={() =>
+                                    !disabled && setSelectedIndex(index)
+                                }
+                            />
+                        ) : (
+                            <Link
                                 key={`${props.id}_option_${index}`}
                                 width="1fr"
-                                height="100%"
+                                text={option}
+                                type="primary"
                                 disabled={disabled}
-                                // Events
-                                onClick={() => setSelectedIndex(index)}
-                            >
-                                <Text
-                                    size="100%"
-                                    type="link"
-                                    color={focused ? colors.Light : colors.Dark}
-                                    background={
-                                        focused ? colors.Primary : colors.Light
-                                    }
-                                >
-                                    {option}
-                                </Text>
-                            </Interactive>
+                                onTap={() =>
+                                    !disabled && setSelectedIndex(index)
+                                }
+                            />
                         )
                     })}
                 </Stack>
@@ -159,33 +157,31 @@ export function Segment(props: Partial<Props>) {
 
 // Set the component's default properties
 Segment.defaultProps = {
-    selectedIndex: 0,
-    options: ["Red", "Blue", "Green"],
     height: 50,
-    width: 200,
+    width: 320,
     disabled: false,
     tint: "#027aff",
     textTint: "#FFFFFF",
+    value: "Paris",
+    options: ["Paris", "New York", "London"],
     onValueChange: () => null,
     validation: () => true,
 }
 
 // Set the component's property controls
 addPropertyControls(Segment, {
-    selectedIndex: {
-        type: ControlType.Number,
-        step: 1,
-        min: -1,
-        max: 10,
-        displayStepper: true,
-        defaultValue: 0,
+    value: {
+        type: ControlType.String,
+        defaultValue: "Paris",
+        title: "Value",
     },
     options: {
         type: ControlType.Array,
         propertyControl: {
             type: ControlType.String,
         },
-        defaultValue: ["Red", "Green", "Blue"],
+        defaultValue: ["Paris", "New York", "London"],
+        title: "Options",
     },
     disabled: {
         type: ControlType.Boolean,

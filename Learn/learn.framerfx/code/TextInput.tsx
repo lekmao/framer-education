@@ -85,8 +85,6 @@ export function TextInput(props: Partial<Props>) {
 
     // When the content of the input changes, run onValueChange and update state
     const handleInput = event => {
-        if (disabled) return
-
         const { value } = event.target
 
         // Store the value in the inputValue ref
@@ -113,7 +111,7 @@ export function TextInput(props: Partial<Props>) {
 
     // Clear input
     const handleClear = event => {
-        if (disabled || readOnly) return
+        if (readOnly) return
 
         setState({ ...state, value: undefined })
     }
@@ -241,7 +239,7 @@ TextInput.defaultProps = {
     onValueChange: () => null,
     delay: 250,
     height: 50,
-    width: 200,
+    width: 320,
 }
 
 // Set the component's property controls

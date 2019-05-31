@@ -2,7 +2,7 @@ import * as React from "react"
 import { Frame, Color, addPropertyControls, ControlType, Stack } from "framer"
 import { colors } from "./canvas"
 import { Interactive } from "./Interactive"
-import { Radio } from "./Radio"
+import { RowItem } from "./RowItem"
 
 type Props = {
     id: string
@@ -10,7 +10,6 @@ type Props = {
     height: number | string
     options: string[]
     value: string
-    selectedIndex: number
     disabled: boolean
     onValueChange: (value: string, index: number, valid: boolean) => void
     validation: (value: string) => boolean
@@ -26,7 +25,6 @@ export function RadioGroup(props: Partial<Props>) {
     // state's `value` and `selectedIndex` properties.
     const {
         value: initial,
-        selectedIndex: initialIndex,
         options,
         disabled,
         validation,
@@ -38,7 +36,7 @@ export function RadioGroup(props: Partial<Props>) {
     /* ---------------------------------- State --------------------------------- */
 
     // Set the initial value
-    const initialValue = initial ? initial : options[initialIndex]
+    const initialValue = initial
 
     // Initialize state with props values
     const [state, setState] = React.useState({
@@ -50,8 +48,6 @@ export function RadioGroup(props: Partial<Props>) {
     // When the hook receives new props values, overwrite the state
     React.useEffect(() => {
         const selectedValue = initialValue
-            ? initialValue
-            : options[initialIndex]
 
         setState({
             ...state,
@@ -59,7 +55,7 @@ export function RadioGroup(props: Partial<Props>) {
             selectedIndex: options.indexOf(selectedValue),
             valid: validation(selectedValue || null),
         })
-    }, [initialIndex, initialValue, options])
+    }, [initialValue, options])
 
     /* ----------------------------- Event Handlers ----------------------------- */
 
@@ -103,31 +99,16 @@ export function RadioGroup(props: Partial<Props>) {
             {options.map((option, index) => {
                 // An option is selected if its index matches the state's selectedIndex
                 return (
-                    <Stack
-                        // Constant props
+                    <RowItem
                         key={`${props.id}_option_${index}`}
-                        width="1fr"
-                        height={50}
-                        alignment="center"
-                        distribution="space-between"
-                        direction="horizontal"
-                        paddingLeft={20}
-                        style={{
-                            fontFamily: "Helvetica Neue",
-                            color: valid ? colors.Dark : colors.Warn,
-                            fontWeight: "bold",
-                            fontSize: 16,
-                        }}
-                        background={colors.Light}
-                    >
-                        <span>{option}</span>
-                        <Radio
-                            disabled={disabled}
-                            value={index === selectedIndex}
-                            validation={() => valid}
-                            onValueChange={() => setSelectedIndex(index)}
-                        />
-                    </Stack>
+                        text={option}
+                        component="radio"
+                        width="100%"
+                        disabled={disabled}
+                        value={index === selectedIndex}
+                        validation={() => valid}
+                        onTap={() => !disabled && setSelectedIndex(index)}
+                    />
                 )
             })}
         </Stack>
@@ -136,33 +117,29 @@ export function RadioGroup(props: Partial<Props>) {
 
 // Set the component's default properties
 RadioGroup.defaultProps = {
-    selectedIndex: 0,
-    options: ["Red", "Blue", "Green"],
-    height: 154,
-    width: 200,
+    value: "Paris",
+    options: ["Paris", "New York", "London", "Hong Kong"],
+    height: 200,
+    width: 320,
     disabled: false,
-    tint: "#027aff",
-    textTint: "#FFFFFF",
     onValueChange: () => null,
     validation: () => true,
 }
 
 // Set the component's property controls
 addPropertyControls(RadioGroup, {
-    selectedIndex: {
-        type: ControlType.Number,
-        step: 1,
-        min: -1,
-        max: 10,
-        displayStepper: true,
-        defaultValue: 0,
+    value: {
+        type: ControlType.String,
+        defaultValue: "Paris",
+        title: "Value",
     },
     options: {
         type: ControlType.Array,
         propertyControl: {
             type: ControlType.String,
         },
-        defaultValue: ["Red", "Green", "Blue"],
+        defaultValue: ["Paris", "New York", "London", "Hong Kong"],
+        title: "Options",
     },
     disabled: {
         type: ControlType.Boolean,

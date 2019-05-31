@@ -1,75 +1,4 @@
-import * as React from "react"
-import { Frame, Stack, addPropertyControls, ControlType } from "framer"
-import { colors } from "./canvas"
-import { Interactive } from "./Interactive"
-import { Icon } from "./Icon"
-import { Switch } from "./Switch"
-import { Checkbox } from "./Checkbox"
-import { Text } from "./Text"
-
-// Open Preview (CMD + P)
-// API Reference: https://www.framer.com/api
-
-export function TableRow(props) {
-    const { text, right, icon, isOn, disabled, onValueChange } = props
-
-    const rightItem =
-        right === "icon" ? (
-            <Interactive height={40} width={40} right={0} top={0}>
-                <Icon icon={icon} />
-            </Interactive>
-        ) : right === "switch" ? (
-            <Switch
-                value={isOn}
-                disabled={disabled}
-                onValueChange={onValueChange}
-            />
-        ) : right === "checkbox" ? (
-            <Checkbox
-                value={isOn}
-                disabled={disabled}
-                onValueChange={onValueChange}
-            />
-        ) : null
-
-    return (
-        <Interactive {...props as any} height={50} active={false} hover={false}>
-            <Stack
-                direction="horizontal"
-                alignment="center"
-                distribution="start"
-                height={50}
-                paddingRight={8}
-                width={"100%"}
-                background={colors.Light}
-            >
-                <Text
-                    type="body"
-                    textAlign="left"
-                    fontWeight="normal"
-                    width="1fr"
-                    paddingPerSide
-                    paddingLeft={16}
-                >
-                    {text}
-                </Text>
-                {rightItem}
-            </Stack>
-        </Interactive>
-    )
-}
-
-TableRow.defaultProps = {
-    height: 50,
-    width: 250,
-    text: "Row Item",
-    right: "none",
-    icon: "none",
-    isOn: false,
-    onValueChange: () => null,
-}
-
-const iconNames = [
+export const iconNames = [
     "3d_rotation",
     "ac_unit",
     "access_alarm",
@@ -1004,7 +933,7 @@ const iconNames = [
     "zoom_out_map",
 ]
 
-const iconTitles = iconNames.map(name =>
+export const iconTitles = iconNames.map(name =>
     name
         .replace(/(_)/g, " ")
         .replace(/([A-Z])/g, " $1")
@@ -1012,26 +941,3 @@ const iconTitles = iconNames.map(name =>
         .map(w => w.charAt(0).toUpperCase() + w.slice(1))
         .join(" ")
 )
-
-addPropertyControls(TableRow, {
-    text: {
-        title: "Left",
-        type: ControlType.String,
-        defaultValue: "Row Item",
-    },
-    right: {
-        title: "Right",
-        type: ControlType.Enum,
-        options: ["none", "checkbox", "switch", "icon"],
-        optionTitles: ["None", "Checkbox", "Switch", "Icon"],
-        defaultValue: "none",
-    },
-    icon: {
-        title: "Icon",
-        type: ControlType.Enum,
-        options: iconNames,
-        optionTitles: iconTitles,
-        defaultValue: "chevron-right",
-        hidden: ({ right }) => right !== "icon",
-    },
-})

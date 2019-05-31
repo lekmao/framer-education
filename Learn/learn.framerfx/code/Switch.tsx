@@ -54,8 +54,6 @@ export function Switch(props: Partial<Props>) {
 
     // When the user taps on the switch, run onValueChange and flip the isOn state
     const handleTap = () => {
-        if (disabled) return
-
         setState(state => {
             const value = !state.value
 
@@ -92,7 +90,7 @@ export function Switch(props: Partial<Props>) {
     }
 
     return (
-        <Interactive {...props as any} onTap={handleTap}>
+        <Interactive {...props as any} onTap={!disabled && handleTap}>
             {current => {
                 return (
                     <>

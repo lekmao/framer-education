@@ -9,6 +9,7 @@ import { colors } from "./canvas"
 import ReactSelect from "react-select"
 
 export const Select = props => {
+    const { disabled } = props
     let computed = { ...props }
 
     if (props.cOptions) {
@@ -30,6 +31,7 @@ export const Select = props => {
     return (
         <Frame height={props.height} width={props.width} background="none">
             <ReactSelect
+                disabled={disabled}
                 theme={theme => {
                     return {
                         ...theme,
@@ -53,7 +55,7 @@ export const Select = props => {
 
 Select.defaultProps = {
     height: 50,
-    width: 200,
+    width: 320,
     cOptions: ["London", "Paris", "Hong Kong", "New York"],
     cInitial: "London",
     isMulti: false,

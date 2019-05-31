@@ -22,6 +22,9 @@ import { colors } from "@framer/steveruizok.education/code/canvas”
 
 # Changelog
 
+- Fixes Text
+- Adds Tabs
+- Reworks CheckboxGroup, RadioGroup, adds colors to buttons and links, adds RowItem
 - Fixes bug on icon buttons / Text with children
 - Adds Active color for active state borders, improves interactive states. 
 - All code components that previously imported design components no longer do so. (This should fix some import bugs).

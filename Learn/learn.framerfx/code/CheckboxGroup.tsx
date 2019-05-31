@@ -3,17 +3,17 @@ import { Frame, Color, addPropertyControls, ControlType, Stack } from "framer"
 import { colors } from "./canvas"
 import { Interactive } from "./Interactive"
 import { Checkbox } from "./Checkbox"
+import { RowItem } from "./RowItem"
 
 type Props = {
     id: string
     width: any
     height: any
+    value: string[]
     options: string[]
-    value: string
-    selectedIndices: string
     disabled: boolean
-    onValueChange: (value: string[], valid: boolean) => void
     validation: (value: string[]) => boolean
+    onValueChange: (value: string[], valid: boolean) => void
 }
 
 /**
@@ -25,10 +25,10 @@ export function CheckboxGroup(props: Partial<Props>) {
     // renaming the value and selectedIndex, to avoid conflicting with the
     // state's `value` and `selectedIndex` properties.
     const {
+        width,
+        height,
         value: initial,
         options,
-        height,
-        width,
         disabled,
         validation,
         onValueChange,
@@ -38,7 +38,7 @@ export function CheckboxGroup(props: Partial<Props>) {
 
     const initialIndices = (options || []).map(o => false)
 
-    for (let option of initial.split(", ")) {
+    for (let option of initial) {
         const index = options.indexOf(option)
         initialIndices[index] = true
     }
@@ -104,33 +104,19 @@ export function CheckboxGroup(props: Partial<Props>) {
             {options.map((option, index) => {
                 // An option is selected if its index matches the state's selectedIndex
                 return (
-                    <Stack
-                        // Constant props
+                    <RowItem
                         key={`${props.id}_option_${index}`}
-                        width="1fr"
-                        height={50}
-                        alignment="center"
-                        distribution="space-between"
-                        direction="horizontal"
-                        paddingLeft={20}
-                        style={{
-                            fontFamily: "Helvetica Neue",
-                            color: valid ? colors.Dark : colors.Warn,
-                            fontWeight: "bold",
-                            fontSize: 16,
-                        }}
-                        background={colors.Light}
-                    >
-                        <span>{option}</span>
-                        <Checkbox
-                            disabled={disabled}
-                            value={selectedIndices[index]}
-                            validation={() => valid}
-                            onValueChange={value =>
-                                setSelectedIndex(index, value)
-                            }
-                        />
-                    </Stack>
+                        text={option}
+                        component="checkbox"
+                        width="100%"
+                        disabled={disabled}
+                        value={selectedIndices[index]}
+                        validation={() => valid}
+                        onTap={() =>
+                            !disabled &&
+                            setSelectedIndex(index, !selectedIndices[index])
+                        }
+                    />
                 )
             })}
         </Stack>
@@ -139,11 +125,10 @@ export function CheckboxGroup(props: Partial<Props>) {
 
 // Set the component's default properties
 CheckboxGroup.defaultProps = {
-    selectedIndex: 0,
-    value: "",
-    options: ["Red", "Blue", "Green"],
-    height: 154,
-    width: 200,
+    value: ["Paris"],
+    options: ["Paris", "New York", "London", "Hong Kong"],
+    height: 200,
+    width: 320,
     disabled: false,
     onValueChange: () => null,
     validation: () => true,
@@ -152,8 +137,11 @@ CheckboxGroup.defaultProps = {
 // Set the component's property controls
 addPropertyControls(CheckboxGroup, {
     value: {
-        type: ControlType.String,
-        defaultValue: "",
+        type: ControlType.Array,
+        propertyControl: {
+            type: ControlType.String,
+        },
+        defaultValue: ["Paris"],
         title: "Value",
     },
     options: {
@@ -161,7 +149,8 @@ addPropertyControls(CheckboxGroup, {
         propertyControl: {
             type: ControlType.String,
         },
-        defaultValue: ["Red", "Green", "Blue"],
+        defaultValue: ["Paris", "New York", "London", "Hong Kong"],
+        title: "Options",
     },
     disabled: {
         type: ControlType.Boolean,

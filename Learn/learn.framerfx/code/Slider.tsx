@@ -170,7 +170,7 @@ export function Slider(props: Partial<Props>) {
 // Set the component's default properties
 Slider.defaultProps = {
     height: 40,
-    width: 200,
+    width: 320,
     knobSize: 40,
     railHeight: 8,
     step: 0.01,
