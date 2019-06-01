@@ -17,6 +17,9 @@
 	"author": "Steve Ruiz",
 	"dependencies": {
 		"@framer/steveruizok.framespy": "^1.2.0",
+		"@mapbox/geo-viewport": "^0.4.0",
+		"geojson-extent": "^0.3.2",
+		"mapbox-gl": "^1.0.0",
 		"react-select": "^2.4.3",
 		"styled-components": "^4.2.0"
 	},
