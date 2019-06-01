@@ -37,12 +37,15 @@ export function Segment(props: Partial<Props>) {
     /* ---------------------------------- State --------------------------------- */
 
     // Set the initial value
-    const initialValue = initial
+    const initialSelectedIndex =
+        typeof initial === "number" ? initial : options.indexOf(initial)
+    const initialValue =
+        typeof initial === "number" ? options[initialSelectedIndex] : initial
 
     // Initialize state with props values
     const [state, setState] = React.useState({
-        value: initialValue || null,
-        selectedIndex: options.indexOf(initialValue),
+        value: initialValue,
+        selectedIndex: initialSelectedIndex,
         valid: validation(initialValue || null),
     })
 

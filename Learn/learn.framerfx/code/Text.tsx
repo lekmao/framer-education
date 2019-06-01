@@ -11,7 +11,6 @@ export function Text(props) {
         text,
         fontWeight,
         color,
-        children,
         align,
         textAlign,
         type,

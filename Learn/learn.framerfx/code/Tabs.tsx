@@ -3,19 +3,31 @@ import { Stack, Scroll, Frame, addPropertyControls, ControlType } from "framer"
 import { Link } from "./Link"
 import { colors } from "./canvas"
 
-// Open Preview (CMD + P)
-// API Reference: https://www.framer.com/api
-
 export function Tabs(props) {
-    const { id, height, width, options, value, scroll } = props
+    const { id, height, width, tabs, currentTab, onChangeTab } = props
 
-    const initialSelectedIndex = options.indexOf(value) || 0
+    const containerRef = React.useRef<HTMLDivElement>()
+
+    const initialSelectedIndex =
+        typeof currentTab === "number"
+            ? currentTab
+            : tabs.indexOf(currentTab) || 0
 
     // Set an initial state
     const [state, setState] = React.useState({
+        containerWidth: 320,
         selectedIndex: initialSelectedIndex,
-        tabWidths: options.map(a => -1),
+        tabWidths: tabs.map(a => -1),
     })
+
+    React.useEffect(() => {
+        if (!containerRef.current) return
+        const { offsetWidth } = containerRef.current
+        setState({
+            ...state,
+            containerWidth: offsetWidth,
+        })
+    }, [width, state.tabWidths, tabs])
 
     // Update selected index when value changes
     React.useEffect(() => {
@@ -23,7 +35,7 @@ export function Tabs(props) {
             ...state,
             selectedIndex: initialSelectedIndex,
         })
-    }, [value])
+    }, [currentTab])
 
     // When the links resize, update the tabwidths
     const handleResize = (width, height, index) => {
@@ -38,6 +50,7 @@ export function Tabs(props) {
 
     // When the user taps on a tab, update the state
     const setSelectedIndex = selectedIndex => {
+        onChangeTab(tabs[selectedIndex], selectedIndex)
         setState({
             ...state,
             selectedIndex,
@@ -75,16 +88,23 @@ export function Tabs(props) {
     const indicatorX = buttonX
     const indicatorWidth = state.tabWidths[state.selectedIndex]
 
+    const willDrag = contentWidth > state.containerWidth
+
     return (
-        <Frame background="none" height={height} width={width}>
+        <Frame
+            ref={containerRef}
+            background="none"
+            height={height}
+            width={width}
+        >
             <Scroll
                 height={60}
                 width={width}
                 contentWidth={contentWidth}
                 direction="horizontal"
-                dragEnabled={contentWidth > width}
+                dragEnabled={willDrag}
                 scrollAnimate={{
-                    x: offsetX,
+                    x: willDrag ? offsetX : 0,
                 }}
             >
                 <Frame background="none" width={contentWidth} height={height}>
@@ -95,12 +115,12 @@ export function Tabs(props) {
                         gap={32}
                         paddingLeft={16}
                         height={50}
-                        width={options.length * 100}
+                        width={"100%"}
                     >
-                        {options.map((option, index) => (
+                        {tabs.map((tab, index) => (
                             <Link
-                                key={`${id}_tab_${index}`}
-                                text={option}
+                                key={`${id}_tab_${tab}`}
+                                text={tab}
                                 height={50}
                                 resize="width"
                                 type={
@@ -140,18 +160,19 @@ Tabs.defaultProps = {
     id: "tabs",
     width: 320,
     height: 60,
-    value: "Paris",
-    options: ["Paris", "New York", "London", "Hong Kong"],
+    tabs: ["Paris", "New York", "London", "Hong Kong"],
+    currentTab: "Paris",
+    onChangeTab: (currentTab: string, index) => null,
 }
 
 // Set the component's property controls
 addPropertyControls(Tabs, {
-    value: {
+    currentTab: {
         type: ControlType.String,
         defaultValue: "Paris",
         title: "Value",
     },
-    options: {
+    tabs: {
         type: ControlType.Array,
         propertyControl: {
             type: ControlType.String,

@@ -16,9 +16,10 @@
 	},
 	"author": "Steve Ruiz",
 	"dependencies": {
+		"@framer/steveruizok.framespy": "^1.2.0",
 		"react-select": "^2.4.3",
 		"styled-components": "^4.2.0"
 	},
 	"name": "@framer/steveruizok.education",
-	"version": "1.40.0"
+	"version": "1.48.0"
 }

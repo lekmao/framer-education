@@ -39,7 +39,9 @@ export function CheckboxGroup(props: Partial<Props>) {
     const initialIndices = (options || []).map(o => false)
 
     for (let option of initial) {
-        const index = options.indexOf(option)
+        const index =
+            typeof option === "number" ? option : options.indexOf(option)
+
         initialIndices[index] = true
     }
 
