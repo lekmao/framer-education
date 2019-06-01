@@ -11,10 +11,10 @@ export const Elements_Colors = createDesignComponent<{parentSize?:{width:number|
 export const Elements_Logo = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_OOVp9H_CU", {}, 50,50);
 export const Elements_Text = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_T6QtGhQiI", {}, 375,812);
 export const Image = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string,Image?:string}>(canvas, "id_BsjvAnJma", {Image:"image"}, 375,220);
-export const Stickersheet = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string,Heading?:string,Heading?:string}>(canvas, "id_cX2BGT0FA", {Heading:"string",Heading:"string"}, 1623,1773);
-export const Template = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string,Heading?:string}>(canvas, "id_XREstntDl", {Heading:"string"}, 375,812);
-export const Templates_Tabs = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string,Heading?:string}>(canvas, "id_hMCzrRmLr", {Heading:"string"}, 375,812);
-export const Templates_Title = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string,Heading?:string}>(canvas, "id_PeXYyIRny", {Heading:"string"}, 375,812);
+export const Stickersheet = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_cX2BGT0FA", {}, 1623,1773);
+export const Template = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_XREstntDl", {}, 375,812);
+export const Templates_Tabs = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_hMCzrRmLr", {}, 375,812);
+export const Templates_Title = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_PeXYyIRny", {}, 375,812);
 
 export const colors = Object.freeze({
     /** #005CFE */

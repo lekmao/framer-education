@@ -26,12 +26,22 @@ export function Text(props) {
 
     const resizeRef = React.createRef<HTMLDivElement>()
 
+    const [state, setState] = React.useState({
+        width,
+    })
+
     React.useEffect(() => {
         if (!resizeRef.current) return
 
         const { offsetWidth, offsetHeight } = resizeRef.current
 
         onResize(offsetWidth, offsetHeight)
+
+        if (resize) {
+            setState({
+                width: offsetWidth + 1,
+            })
+        }
     }, [text])
 
     const sharedStyles = {
@@ -125,7 +135,7 @@ export function Text(props) {
         <Frame
             // Constant props
             height={height}
-            width={width}
+            width={state.width}
             size={size}
             background="none"
         >
@@ -144,7 +154,7 @@ export function Text(props) {
                         ...sharedStyles,
                         ...typeStyles[type],
                         color,
-                        width: resize ? "auto" : "100%",
+                        width: resize ? "fit-content" : "100%",
                         textAlign: horizontalAlign[textAlign],
                         ...paddings,
                     }}

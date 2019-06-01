@@ -122,7 +122,7 @@ export function Tabs(props) {
                                 key={`${id}_tab_${tab}`}
                                 text={tab}
                                 height={50}
-                                resize="width"
+                                resize
                                 type={
                                     state.selectedIndex === index
                                         ? "primary"
@@ -170,7 +170,7 @@ addPropertyControls(Tabs, {
     currentTab: {
         type: ControlType.String,
         defaultValue: "Paris",
-        title: "Value",
+        title: "CurrentTab",
     },
     tabs: {
         type: ControlType.Array,
@@ -178,6 +178,6 @@ addPropertyControls(Tabs, {
             type: ControlType.String,
         },
         defaultValue: ["Paris", "New York", "London", "Hong Kong"],
-        title: "Options",
+        title: "Tabs",
     },
 })

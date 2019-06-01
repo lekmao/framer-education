@@ -57,6 +57,7 @@ export function Interactive(props: Partial<Props>) {
         left,
         bottom,
         right,
+        background,
     } = props
 
     /* ---------------------------------- State --------------------------------- */
@@ -127,6 +128,7 @@ export function Interactive(props: Partial<Props>) {
                 left,
                 bottom,
                 right,
+                background,
                 borderRadius,
                 overflow,
                 rotate,
@@ -145,7 +147,6 @@ export function Interactive(props: Partial<Props>) {
                 dragConstraints,
                 dragDirectionLock,
             }}
-            background={null}
             // Constant props
             // Variant props
             variants={variants}
@@ -182,6 +183,7 @@ Interactive.defaultProps = {
     disabled: false,
     active: true,
     hover: true,
+    background: null,
     onTap: () => null,
 }
 

@@ -94,7 +94,7 @@ export function Segment(props: Partial<Props>) {
             border: `1px solid ${colors.Neutral}`,
         },
         initial: {
-            background: colors.Light,
+            background: colors.Border,
             border: `1px solid ${colors.Border}`,
         },
         hovered: {
@@ -146,6 +146,7 @@ export function Segment(props: Partial<Props>) {
                                 text={option}
                                 type="primary"
                                 disabled={disabled}
+                                background={colors.Light}
                                 onTap={() =>
                                     !disabled && setSelectedIndex(index)
                                 }

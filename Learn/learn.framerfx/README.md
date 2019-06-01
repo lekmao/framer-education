@@ -1,8 +1,25 @@
 # Learn
 
-Learn is a design system for Framer X. You can find docs for the project’s components [here](https://framer-learn-docs.netlify.com/). If you’re getting advanced with Framer X, these components are a great place to pull from and explore.
+Learn is a design system for Framer X. Both the docs and this package are in progress, so expect some changes!
 
-Both the docs and this package are in progress, so expect some changes!
+- Shared Colors
+- Icon
+- Text
+- Link
+- Switch
+- Button
+- Checkbox
+- Radio
+- CheckboxGroup
+- RadioGroup
+- Slider
+- TextInput
+- Select
+- Segment
+- Tabs
+- Tab Bar
+- Navigation Bar
+- Map
 
 # Usage
 
@@ -22,6 +39,7 @@ import { colors } from "@framer/steveruizok.education/code/canvas”
 
 # Changelog
 
+- Adds Navigation, TabBar, Map
 - Fixes Text
 - Adds Tabs
 - Reworks CheckboxGroup, RadioGroup, adds colors to buttons and links, adds RowItem

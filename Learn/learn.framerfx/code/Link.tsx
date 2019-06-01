@@ -14,8 +14,9 @@ type Props = {
     disabled: boolean
     type: string
     color: string
+    background: string
     icon: string
-    resize: string | boolean
+    resize: boolean
     onResize: (width: number, height: number) => void
     onTap: () => void
 }
@@ -30,7 +31,6 @@ export function Link(props: Partial<Props>) {
 
     const [state, setState] = React.useState({
         width,
-        height,
     })
 
     /* ----------------------------- Event Handlers ----------------------------- */
@@ -41,15 +41,9 @@ export function Link(props: Partial<Props>) {
         onTap()
     }
 
-    const handleResize = (width, height) => {
+    const handleResize = width => {
         if (resize) {
-            if (resize === "width") {
-                setState({ ...state, width })
-            } else if (resize === "height") {
-                setState({ ...state, height })
-            } else {
-                setState({ width, height })
-            }
+            setState({ ...state, width })
             props.onResize(width, height)
         }
     }
@@ -96,7 +90,7 @@ export function Link(props: Partial<Props>) {
                             width="100%"
                             type="link"
                             color={theme[type].foreground}
-                            resize
+                            resize={resize}
                             onResize={handleResize}
                             text={text}
                         />
@@ -126,6 +120,7 @@ Link.defaultProps = {
     onTap: () => null,
     icon: "none",
     resize: false,
+    background: "none",
     onResize: (width, height) => null,
 }
 
