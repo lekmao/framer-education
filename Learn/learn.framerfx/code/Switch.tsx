@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Frame, Color, addPropertyControls, ControlType } from "framer"
+import { Frame, addPropertyControls, ControlType } from "framer"
 import { Interactive } from "./Interactive"
 import { colors } from "./canvas"
 

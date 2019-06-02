@@ -1,19 +1,26 @@
 import * as React from "react"
-import { Frame, Stack, addPropertyControls, ControlType } from "framer"
-import { colors } from "./canvas"
+import { Stack, addPropertyControls, ControlType, FrameProps } from "framer"
 import { Interactive } from "./Interactive"
-import { Link } from "./Link"
 import { Icon } from "./Icon"
 import { Switch } from "./Switch"
 import { Checkbox } from "./Checkbox"
 import { Radio } from "./Radio"
 import { Text } from "./Text"
 import { iconNames, iconTitles } from "./Utils"
+import { colors } from "./canvas"
 
-// Open Preview (CMD + P)
-// API Reference: https://www.framer.com/api
+interface Props extends FrameProps {
+    text: string
+    component: string
+    icon: string
+    value: boolean
+    validation: (value: boolean) => boolean
+    disabled: boolean
+    onValueChange: (value: boolean) => void
+    color: string
+}
 
-export function RowItem(props) {
+export function RowItem(props: Partial<Props>) {
     const {
         text,
         component,

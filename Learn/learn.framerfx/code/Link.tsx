@@ -1,159 +1,151 @@
 import * as React from "react"
-import { Frame, Color, addPropertyControls, ControlType } from "framer"
+import {
+	Frame,
+	Color,
+	addPropertyControls,
+	ControlType,
+	FrameProps,
+} from "framer"
 import { Interactive } from "./Interactive"
 import { Text } from "./Text"
 import { Icon } from "./Icon"
-import { colors } from "./canvas"
 import { iconNames, iconTitles } from "./Utils"
+import { colors } from "./canvas"
 
 // Define a type for our props
-type Props = {
-    height: any
-    width: any
-    text: string
-    disabled: boolean
-    type: string
-    color: string
-    background: string
-    icon: string
-    resize: boolean
-    onResize: (width: number, height: number) => void
-    onTap: () => void
+interface Props extends FrameProps {
+	text: string
+	disabled: boolean
+	type: string
+	icon: string
+	resize: boolean
+	onResize: (width: any, height: any) => void
+	onTap: (event: any, info: any) => void
 }
 
-/**
- * Button
- * @param props
- */
 export function Link(props: Partial<Props>) {
-    // Grab the properties we want to use from props
-    const { height, width, disabled, onTap, text, icon, type, resize } = props
+	// Grab the properties we want to use from props
+	const { height, width, disabled, onTap, text, icon, type, resize } = props
 
-    const [state, setState] = React.useState({
-        width,
-    })
+	const [state, setState] = React.useState({
+		width,
+	})
 
-    /* ----------------------------- Event Handlers ----------------------------- */
+	/* ----------------------------- Event Handlers ----------------------------- */
 
-    // When the user taps on the button, run onTap
-    const handleTap = () => {
-        // Call onTap with the toggled state
-        onTap()
-    }
+	// When the user taps on the button, run onTap
+	const handleTap = (event, info) => {
+		// Call onTap with the toggled state
+		onTap(event, info)
+	}
 
-    const handleResize = width => {
-        if (resize) {
-            setState({ ...state, width })
-            props.onResize(width, height)
-        }
-    }
+	const handleResize = width => {
+		if (resize) {
+			setState({ ...state, width })
+			props.onResize(width, height)
+		}
+	}
 
-    /* ------------------------------ Presentation ------------------------------ */
+	/* ------------------------------ Presentation ------------------------------ */
 
-    const theme = {
-        primary: {
-            foreground: colors.Primary,
-        },
-        secondary: {
-            foreground: colors.Secondary,
-        },
-        accent: {
-            foreground: colors.Accent,
-        },
-        neutral: {
-            foreground: colors.Dark,
-        },
-        ghost: {
-            foreground: colors.Light,
-        },
-        warn: {
-            foreground: colors.Warn,
-        },
-    }
+	const theme = {
+		primary: {
+			foreground: colors.Primary,
+		},
+		secondary: {
+			foreground: colors.Secondary,
+		},
+		accent: {
+			foreground: colors.Accent,
+		},
+		neutral: {
+			foreground: colors.Dark,
+		},
+		ghost: {
+			foreground: colors.Light,
+		},
+		warn: {
+			foreground: colors.Warn,
+		},
+	}
 
-    return (
-        // Pass in container props when using this component in code
-        <Interactive
-            {...props as any}
-            {...state}
-            // Events
-            onTap={() => {
-                !disabled && handleTap()
-            }}
-        >
-            {current => {
-                const content =
-                    icon === "none" ? (
-                        <Text
-                            // Constant props
-                            height="100%"
-                            width="100%"
-                            type="link"
-                            color={theme[type].foreground}
-                            resize={resize}
-                            onResize={handleResize}
-                            text={text}
-                        />
-                    ) : (
-                        <Icon
-                            center
-                            icon={icon}
-                            color={theme[type].foreground}
-                        />
-                    )
+	return (
+		// Pass in container props when using this component in code
+		<Interactive
+			{...props as any}
+			{...state}
+			// Events
+			onTap={!disabled && handleTap}
+		>
+			{current => {
+				const content =
+					icon === "none" ? (
+						<Text
+							// Constant props
+							height="100%"
+							width="100%"
+							type="link"
+							color={theme[type].foreground}
+							resize={resize}
+							onResize={handleResize}
+							text={text}
+						/>
+					) : (
+						<Icon center icon={icon} color={theme[type].foreground} />
+					)
 
-                return content
-            }}
-        </Interactive>
-    )
+				return content
+			}}
+		</Interactive>
+	)
 }
 
 // Set the component's default properties
 Link.defaultProps = {
-    height: 60,
-    width: 200,
-    disabled: false,
-    text: "Get Started!",
-    type: "primary",
-    color: "red",
-    primary: true,
-    onTap: () => null,
-    icon: "none",
-    resize: false,
-    background: "none",
-    onResize: (width, height) => null,
+	height: 60,
+	width: 200,
+	disabled: false,
+	text: "Get Started!",
+	type: "primary",
+	color: "red",
+	primary: true,
+	onTap: () => null,
+	icon: "none",
+	resize: false,
+	background: "none",
+	onResize: (width, height) => null,
 }
 
 // Set the component's property controls
 addPropertyControls(Link, {
-    text: {
-        type: ControlType.String,
-        title: "Text",
-        defaultValue: "Get Started!",
-    },
-    type: {
-        type: ControlType.Enum,
-        options: ["primary", "secondary", "accent", "warn", "neutral", "ghost"],
-        optionTitles: [
-            "Primary",
-            "Secondary",
-            "Accent",
-            "Warn",
-            "Neutral",
-            "Ghost",
-        ],
-        defaultValue: "primary",
-    },
-    icon: {
-        title: "Icon",
-        type: ControlType.Enum,
-        options: ["none", ...iconNames],
-        optionTitles: ["None", ...iconTitles],
-        defaultValue: "none",
-    },
-    disabled: {
-        type: ControlType.Boolean,
-        title: "Disabled",
-        defaultValue: false,
-    },
+	text: {
+		type: ControlType.String,
+		title: "Text",
+		defaultValue: "Get Started!",
+	},
+	type: {
+		type: ControlType.Enum,
+		options: ["primary", "secondary", "accent", "warn", "neutral", "ghost"],
+		optionTitles: [
+			"Primary",
+			"Secondary",
+			"Accent",
+			"Warn",
+			"Neutral",
+			"Ghost",
+		],
+		defaultValue: "primary",
+	},
+	icon: {
+		title: "Icon",
+		type: ControlType.Enum,
+		options: ["none", ...iconNames],
+		optionTitles: ["None", ...iconTitles],
+		defaultValue: "none",
+	},
+	disabled: {
+		type: ControlType.Boolean,
+		title: "Disabled",
+		defaultValue: false,
+	},
 })

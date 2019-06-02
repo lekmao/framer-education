@@ -5,6 +5,8 @@ Learn is a design system for Framer X. Both the docs and this package are in pro
 - Shared Colors
 - Icon
 - Text
+- Image
+- Favorite
 - Link
 - Switch
 - Button
@@ -19,6 +21,7 @@ Learn is a design system for Framer X. Both the docs and this package are in pro
 - Tabs
 - Tab Bar
 - Navigation Bar
+- Card
 - Map
 
 # Usage
@@ -39,6 +42,7 @@ import { colors } from "@framer/steveruizok.education/code/canvas”
 
 # Changelog
 
+- Adds Card
 - Adds Navigation, TabBar, Map
 - Fixes Text
 - Adds Tabs

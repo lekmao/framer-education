@@ -3,8 +3,8 @@ import { Frame, addPropertyControls, ControlType } from "framer"
 import { Interactive } from "./Interactive"
 import { Icon } from "./Icon"
 import { Text } from "./Text"
-import { colors } from "./canvas"
 import { iconNames, iconTitles } from "./Utils"
+import { colors } from "./canvas"
 
 // Define a type for our props
 type Props = {
@@ -16,7 +16,7 @@ type Props = {
     toggled: boolean
     type: string
     icon: string
-    onTap: (toggled: boolean | null) => void
+    onTap: (event, info, toggled: boolean | null) => void
 }
 
 /**
@@ -57,11 +57,11 @@ export function Button(props: Partial<Props>) {
     /* ----------------------------- Event Handlers ----------------------------- */
 
     // When the user taps on the button, run onTap and update toggled
-    const handleTap = () => {
+    const handleTap = (event, info) => {
         const next = !state.toggled
 
         // Call onTap with the toggled state
-        onTap(next)
+        onTap(event, info, next)
 
         // If this button should toggle, flip the toggle state
         if (toggle) {

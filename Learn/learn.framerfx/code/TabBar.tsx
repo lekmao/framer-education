@@ -6,24 +6,23 @@ import {
     addPropertyControls,
     ControlType,
 } from "framer"
-import { colors } from "./canvas"
 import { Icon } from "./Icon"
 import { Text } from "./Text"
 import { Interactive } from "./Interactive"
+import { colors } from "./canvas"
 
-type Tab = {
+type TabObject = {
     icon: string
-    text: string
+    title: string
 }
 
+type Tab = string | TabObject
+
 interface Props extends FrameProps {
-    id: string
-    width: any
-    height: any
-    currentTab: string
-    onChangeTab: (tab: string, index: number) => void
+    currentTab: number | string
+    onChangeTab: (index: number, tab: string) => void
     tabs: Tab[]
-    showLabels: boolean
+    showTitles: boolean
 }
 
 export function TabBar(props: Partial<Props>) {
@@ -31,40 +30,48 @@ export function TabBar(props: Partial<Props>) {
         id,
         width,
         height,
-        currentTab,
         tabs,
+        currentTab,
         onChangeTab,
-        showLabels,
+        showTitles,
     } = props
 
-    const [state, setState] = React.useState({
-        currentTab,
-    })
-
-    const handleTap = (text, index) => {
-        if (text === state.currentTab) {
-            return
-        }
-
-        onChangeTab(text, index)
-
-        setState({
-            currentTab: text,
-        })
-    }
-
-    // Presentation
-
-    const tabObjects: Tab[] = tabs.map(t => {
+    const tabObjects: TabObject[] = tabs.map(t => {
         if (typeof t === "string") {
             return {
                 icon: (t as any).toLowerCase(),
-                text: t,
+                title: t,
             }
         } else {
             return t
         }
     })
+
+    const tabLabels = tabObjects.map(t => t.title)
+
+    const initialSelectedIndex =
+        typeof currentTab === "number"
+            ? currentTab
+            : tabObjects.indexOf(
+                  tabObjects.find(t => t.title === currentTab)
+              ) || 0
+
+    const [state, setState] = React.useState({
+        selectedIndex: initialSelectedIndex,
+    })
+
+    const handleTap = (selectedIndex: number) => {
+        if (selectedIndex === state.selectedIndex) return
+
+        onChangeTab(selectedIndex, tabLabels[selectedIndex])
+
+        setState({
+            ...state,
+            selectedIndex,
+        })
+    }
+
+    // Presentation
 
     return (
         <Stack
@@ -79,22 +86,25 @@ export function TabBar(props: Partial<Props>) {
             background={colors.Bg}
         >
             {tabObjects.map((tabObject, index) => {
-                const color = state.currentTab
-                    ? state.currentTab === tabObject.text
-                        ? colors.Primary
-                        : colors.Dark
-                    : colors.Primary
+                const isSelected = state.selectedIndex === index
+
+                const color =
+                    state.selectedIndex >= 0
+                        ? isSelected
+                            ? colors.Primary
+                            : colors.Dark
+                        : colors.Primary
                 return (
                     <Interactive
+                        key={`${id}_tab_${tabObject.title}_${index}`}
                         width={48}
                         height={49}
-                        onTap={() => handleTap(tabObject.text, index)}
+                        onTap={() => handleTap(index)}
                     >
                         {current => (
                             <Stack
                                 width="100%"
                                 height="100%"
-                                key={`${id}_tab_${tabObject.icon}_${index}`}
                                 distribution="center"
                                 alignment="center"
                                 gap={-2}
@@ -105,7 +115,7 @@ export function TabBar(props: Partial<Props>) {
                                     color={color}
                                     size={32}
                                 />
-                                {showLabels && (
+                                {showTitles && (
                                     <Text
                                         type="caption"
                                         color={color}
@@ -114,7 +124,7 @@ export function TabBar(props: Partial<Props>) {
                                         align="center"
                                         textAlign="center"
                                         resize
-                                        text={tabObject.text}
+                                        text={tabObject.title}
                                     />
                                 )}
                             </Stack>
@@ -131,20 +141,20 @@ TabBar.defaultProps = {
     height: 84,
     width: 320,
     currentTab: "Home",
-    onChangeTab: (currentTab: string, index) => null,
+    onChangeTab: (index, currentTab) => null,
     showLabels: false,
     tabs: [
         {
             icon: "home",
-            text: "Home",
+            title: "Home",
         },
         {
-            icon: "camera",
-            text: "Camera",
+            icon: "person",
+            title: "Profile",
         },
         {
             icon: "settings",
-            text: "Settings",
+            title: "Settings",
         },
     ],
 }
@@ -163,8 +173,8 @@ addPropertyControls(TabBar, {
         },
         defaultValue: ["Home", "Camera", "Settings"],
     },
-    showLabels: {
-        title: "Labels",
+    showTitles: {
+        title: "Show Titles",
         type: ControlType.Boolean,
         defaultValue: false,
     },

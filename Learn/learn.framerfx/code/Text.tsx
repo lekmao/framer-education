@@ -27,10 +27,10 @@ export function Text(props) {
     const resizeRef = React.createRef<HTMLDivElement>()
 
     const [state, setState] = React.useState({
-        width,
+        width: size || width,
     })
 
-    React.useEffect(() => {
+    React.useLayoutEffect(() => {
         if (!resizeRef.current) return
 
         const { offsetWidth, offsetHeight } = resizeRef.current
@@ -42,11 +42,11 @@ export function Text(props) {
                 width: offsetWidth + 1,
             })
         }
-    }, [text])
+    }, [text, resize])
 
     const sharedStyles = {
         fontFamily: "Helvetica Neue",
-        fontWeight: "normal",
+        fontWeight: 500,
         lineSpacing: 1.2,
     }
 
@@ -54,20 +54,20 @@ export function Text(props) {
         display: {
             fontSize: 64,
             letterSpacing: -1,
-            fontWeight: "bold",
+            fontWeight: 600,
         },
         h1: {
             fontSize: 40,
             letterSpacing: -1,
-            fontWeight: "bold",
+            fontWeight: 600,
         },
         h2: {
             fontSize: 24,
-            fontWeight: "bold",
+            fontWeight: 600,
         },
         h3: {
             fontSize: 16,
-            fontWeight: "bold",
+            fontWeight: 600,
         },
         lead: {
             fontSize: 20,
@@ -78,18 +78,18 @@ export function Text(props) {
         },
         link: {
             fontSize: 16,
-            fontWeight: "bold",
+            fontWeight: 600,
         },
         label: {
             fontSize: 13,
             letterSpacing: 0.5,
             lineSpacing: 1.2,
-            fontWeight: "bold",
+            fontWeight: 600,
             textTransform: "uppercase",
         },
         caption: {
             fontSize: 12,
-            fontWeight: "normal",
+            fontWeight: 500,
         },
     }
 
@@ -134,9 +134,8 @@ export function Text(props) {
     return (
         <Frame
             // Constant props
-            height={height}
+            height={size || height}
             width={state.width}
-            size={size}
             background="none"
         >
             <div
@@ -144,6 +143,7 @@ export function Text(props) {
                     width: "100%",
                     height: "100%",
                     display: "flex",
+                    flexDirection: "row",
                     alignItems: verticalAlign[align],
                     justifyContent: horizontalFlexAlign[textAlign],
                 }}
@@ -221,14 +221,14 @@ addPropertyControls(Text, {
         type: ControlType.SegmentedEnum,
         options: ["left", "center", "right"],
         optionTitles: ["Left", "Center", "Right"],
-        defaultValue: "center",
+        defaultValue: "left",
     },
     align: {
         title: "Vertical",
         type: ControlType.SegmentedEnum,
         options: ["top", "center", "bottom"],
         optionTitles: ["Top", "Center", "Bottom"],
-        defaultValue: "center",
+        defaultValue: "top",
     },
     padding: {
         title: "Padding",

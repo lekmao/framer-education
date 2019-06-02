@@ -16,7 +16,6 @@
 	},
 	"author": "Steve Ruiz",
 	"dependencies": {
-		"@framer/steveruizok.framespy": "^1.2.0",
 		"@mapbox/geo-viewport": "^0.4.0",
 		"geojson-extent": "^0.3.2",
 		"mapbox-gl": "^1.0.0",
@@ -24,5 +23,5 @@
 		"styled-components": "^4.2.0"
 	},
 	"name": "@framer/steveruizok.education",
-	"version": "1.52.0"
+	"version": "1.53.0"
 }

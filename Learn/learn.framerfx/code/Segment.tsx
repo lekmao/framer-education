@@ -1,9 +1,9 @@
 import * as React from "react"
-import { Frame, Color, addPropertyControls, ControlType, Stack } from "framer"
-import { colors } from "./canvas"
+import { addPropertyControls, ControlType, Stack } from "framer"
 import { Interactive } from "./Interactive"
 import { Link } from "./Link"
 import { Button } from "./Button"
+import { colors } from "./canvas"
 
 type Props = {
     id: string
@@ -16,10 +16,6 @@ type Props = {
     validation: (value: string) => boolean
 }
 
-/**
- * Segment
- * @param props
- */
 export function Segment(props: Partial<Props>) {
     // Grab the properties we want to use from props (note that we're
     // renaming the value and selectedIndex, to avoid conflicting with the
@@ -30,8 +26,7 @@ export function Segment(props: Partial<Props>) {
         disabled,
         validation,
         onValueChange,
-        height,
-        width,
+        ...rest
     } = props
 
     /* ---------------------------------- State --------------------------------- */
@@ -112,17 +107,17 @@ export function Segment(props: Partial<Props>) {
     }
 
     return (
-        <Interactive {...props as any}>
+        <Interactive {...rest}>
             {current => (
                 <Stack
-                    height={height}
-                    width={width}
+                    height={"100%"}
+                    width={"100%"}
                     direction="horizontal"
                     alignment="center"
                     gap={1}
                     borderRadius={12}
                     overflow="hidden"
-                    {...variants[valid ? current : "warn"]}
+                    // {...variants[valid ? current : "warn"]}
                 >
                     {options.map((option, index) => {
                         // An option is selected if its index matches the state's selectedIndex

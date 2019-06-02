@@ -1,14 +1,13 @@
 import * as React from "react"
 import {
     Frame,
-    Color,
     addPropertyControls,
     ControlType,
     useMotionValue,
     useTransform,
 } from "framer"
-import { colors } from "./canvas"
 import { Interactive } from "./Interactive"
+import { colors } from "./canvas"
 
 type Props = {
     width: number

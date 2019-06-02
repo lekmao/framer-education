@@ -1,8 +1,8 @@
 import * as React from "react"
 import { Stack, addPropertyControls, ControlType } from "framer"
-import { colors } from "./canvas"
-import styled, { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from "styled-components"
 import { iconNames, iconTitles } from "./Utils"
+import { colors } from "./canvas"
 
 const GlobalStyles = createGlobalStyle`
     @import url('https://fonts.googleapis.com/icon?family=Material+Icons');

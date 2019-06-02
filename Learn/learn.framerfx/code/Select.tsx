@@ -1,38 +1,66 @@
 import * as React from "react"
-import {
-    Frame,
-    PropertyControls,
-    ControlType,
-    addPropertyControls,
-} from "framer"
-import { colors } from "./canvas"
+import { Frame, ControlType, addPropertyControls, FrameProps } from "framer"
 import ReactSelect from "react-select"
+import { colors } from "./canvas"
 
-export const Select = props => {
-    const { disabled } = props
-    let computed = { ...props }
+type Option = {
+    value: string
+    label: string
+}
 
-    if (props.cOptions) {
-        computed.options = props.cOptions.map(option => {
+interface Props extends FrameProps {
+    value: Option
+    defaultValue: any
+    options: Option[]
+    disabled: boolean
+    searchable: boolean
+    clearable: boolean
+    multi: boolean
+    styles: any
+}
+
+export const Select = (props: Props) => {
+    const {
+        width,
+        height,
+        size,
+        options: rawOptions,
+        value: rawValue,
+        defaultValue: rawDefaultValue,
+        ...rest
+    } = props
+
+    const options: Option[] = rawOptions.map(t => {
+        if (typeof (t as any) === "string") {
             return {
-                value: option,
-                label: option,
+                value: t as any,
+                label: t as any,
             }
-        })
-        computed.defaultValue =
-            computed.options.find(o => o.value == props.cDefaultValue) || null
+        } else {
+            return t
+        }
+    })
 
-        computed.value =
-            typeof props.cValue === "string"
-                ? computed.options.find(o => o.value == props.cValue)
-                : props.cValue
-    }
+    const defaultValue: Option =
+        typeof rawDefaultValue === "string"
+            ? {
+                  value: rawDefaultValue,
+                  label: rawDefaultValue,
+              }
+            : rawDefaultValue
+
+    const value: Option =
+        typeof rawValue === "string"
+            ? {
+                  value: rawValue,
+                  label: rawValue,
+              }
+            : rawValue
 
     return (
-        <Frame height={props.height} width={props.width} background="none">
+        <Frame height={50} width={width} background="none">
             <ReactSelect
-                disabled={disabled}
-                theme={theme => {
+                theme={(theme: any) => {
                     return {
                         ...theme,
                         borderRadius: 8,
@@ -47,7 +75,10 @@ export const Select = props => {
                         },
                     }
                 }}
-                {...computed}
+                {...rest}
+                value={value}
+                defaultValue={defaultValue}
+                options={options}
             />
         </Frame>
     )
@@ -56,15 +87,15 @@ export const Select = props => {
 Select.defaultProps = {
     height: 50,
     width: 320,
-    cOptions: ["London", "Paris", "Hong Kong", "New York"],
-    cInitial: "London",
-    isMulti: false,
-    isClearable: true,
+    options: ["London", "Paris", "Hong Kong", "New York"],
+    defaultValue: "London",
+    multi: false,
+    clearable: true,
     styles: undefined,
 }
 
-addPropertyControls(Select, {
-    cOptions: {
+addPropertyControls(Select as any, {
+    options: {
         title: "Options",
         type: ControlType.Array,
         propertyControl: {
@@ -72,27 +103,27 @@ addPropertyControls(Select, {
         },
         defaultValue: ["London", "Paris", "Hong Kong", "New York"],
     },
-    cDefaultValue: {
+    defaultValue: {
         title: "Default",
         type: ControlType.String,
         defaultValue: "London",
     },
-    isMulti: {
+    multi: {
         title: "Multi",
         type: ControlType.Boolean,
         defaultValue: false,
     },
-    isClearable: {
+    clearable: {
         title: "Clearable",
         type: ControlType.Boolean,
         defaultValue: false,
     },
-    isDisabled: {
+    disabled: {
         title: "Disabled",
         type: ControlType.Boolean,
         defaultValue: false,
     },
-    isSearchable: {
+    searchable: {
         title: "Searchable",
         type: ControlType.Boolean,
         defaultValue: false,

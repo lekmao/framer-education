@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Frame, Color, addPropertyControls, ControlType } from "framer"
+import { Frame, addPropertyControls, ControlType } from "framer"
 import { Interactive } from "./Interactive"
 import { Icon } from "./Icon"
 import { colors } from "./canvas"
@@ -182,7 +182,7 @@ export function TextInput(props: Partial<Props>) {
                     />
                     {clearable && value && !readOnly && (
                         <Interactive
-                            height={height}
+                            height={50}
                             width={40}
                             right={0}
                             top={0}

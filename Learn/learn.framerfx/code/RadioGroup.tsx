@@ -1,8 +1,7 @@
 import * as React from "react"
-import { Frame, Color, addPropertyControls, ControlType, Stack } from "framer"
-import { colors } from "./canvas"
-import { Interactive } from "./Interactive"
+import { addPropertyControls, ControlType, Stack } from "framer"
 import { RowItem } from "./RowItem"
+import { colors } from "./canvas"
 
 type Props = {
     id: string

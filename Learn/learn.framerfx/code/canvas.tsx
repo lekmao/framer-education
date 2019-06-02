@@ -1,20 +1,14 @@
 // WARNING: this file is auto generated, any changes will be lost
 import { createDesignComponent, CanvasStore } from "framer"
 const canvas = CanvasStore.shared(); // CANVAS_DATA;
-export const Card = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string,header?:string,footer?:string,Image?:string,header?:string}>(canvas, "id_dxXB8iNxL", {header:"string",footer:"string",Image:"image",header:"string"}, 375,220);
-export const Cards_Detail = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string,header?:string}>(canvas, "id_n0moTgmKK", {header:"string"}, 375,96);
-export const Cards_Footer = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string,footer?:string}>(canvas, "id_E1tlHjDF2", {footer:"string"}, 375,71);
-export const Cards_Header = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string,header?:string}>(canvas, "id_KpJewjuCn", {header:"string"}, 375,59);
 export const Container = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_x678hlcb8", {}, 375,220);
 export const Divider = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_bqsC9adwp", {}, 375,48);
-export const Elements_Colors = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_Et6zmhArx", {}, 375,812);
 export const Elements_Logo = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_OOVp9H_CU", {}, 50,50);
-export const Elements_Text = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_T6QtGhQiI", {}, 375,812);
-export const Image = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string,Image?:string}>(canvas, "id_BsjvAnJma", {Image:"image"}, 375,220);
-export const Stickersheet = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_cX2BGT0FA", {}, 1623,1773);
+export const Helpers_Colors = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_vK6xsDKRe", {}, 375,812);
+export const Helpers_Text = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_T6QtGhQiI", {}, 375,812);
 export const Template = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_XREstntDl", {}, 375,812);
-export const Templates_Tabs = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_hMCzrRmLr", {}, 375,812);
-export const Templates_Title = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_PeXYyIRny", {}, 375,812);
+export const Templates_Navigation = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_hMCzrRmLr", {}, 375,812);
+export const Templates_NavigationLarge = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_PeXYyIRny", {}, 375,812);
 
 export const colors = Object.freeze({
     /** #005CFE */

@@ -1,7 +1,27 @@
 import * as React from "react"
-import { Stack, Scroll, Frame, addPropertyControls, ControlType } from "framer"
+import {
+    Stack,
+    Scroll,
+    Frame,
+    addPropertyControls,
+    ControlType,
+    FrameProps,
+} from "framer"
 import { Link } from "./Link"
 import { colors } from "./canvas"
+
+type TabObject = {
+    icon: string
+    title: string
+}
+
+type Tab = string | TabObject
+
+interface Props extends FrameProps {
+    currentTab: number | string
+    onChangeTab: (index: number, tab: string) => void
+    tabs: Tab[]
+}
 
 export function Tabs(props) {
     const { id, height, width, tabs, currentTab, onChangeTab } = props
@@ -20,7 +40,7 @@ export function Tabs(props) {
         tabWidths: tabs.map(a => -1),
     })
 
-    React.useEffect(() => {
+    React.useLayoutEffect(() => {
         if (!containerRef.current) return
         const { offsetWidth } = containerRef.current
         setState({
@@ -50,7 +70,10 @@ export function Tabs(props) {
 
     // When the user taps on a tab, update the state
     const setSelectedIndex = selectedIndex => {
-        onChangeTab(tabs[selectedIndex], selectedIndex)
+        if (selectedIndex === state.selectedIndex) return
+
+        onChangeTab(selectedIndex, tabs[selectedIndex])
+
         setState({
             ...state,
             selectedIndex,
@@ -162,7 +185,7 @@ Tabs.defaultProps = {
     height: 60,
     tabs: ["Paris", "New York", "London", "Hong Kong"],
     currentTab: "Paris",
-    onChangeTab: (currentTab: string, index) => null,
+    onChangeTab: (index, currentTab: string) => null,
 }
 
 // Set the component's property controls
