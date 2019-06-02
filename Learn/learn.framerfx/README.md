@@ -42,6 +42,7 @@ import { colors } from "@framer/steveruizok.education/code/canvas”
 
 # Changelog
 
+- Add offline icons
 - Adds Card
 - Adds Navigation, TabBar, Map
 - Fixes Text

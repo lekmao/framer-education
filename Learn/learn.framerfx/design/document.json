@@ -9723,10 +9723,11 @@
                 "clip" : true,
                 "codeComponentIdentifier" : ".\/Select.tsx_Select",
                 "codeComponentProps" : {
-                  "clearable" : false,
                   "defaultValue" : "London",
-                  "disabled" : false,
-                  "multi" : false,
+                  "isClearable" : false,
+                  "isDisabled" : false,
+                  "isMulti" : false,
+                  "isSearchable" : false,
                   "options" : [
                     {
                       "enabled" : true,
@@ -9748,8 +9749,7 @@
                       "type" : "string",
                       "value" : "New York"
                     }
-                  ],
-                  "searchable" : false
+                  ]
                 },
                 "codeOverrideEnabled" : false,
                 "constraintsLocked" : false,
@@ -9809,10 +9809,11 @@
                 "clip" : true,
                 "codeComponentIdentifier" : ".\/Select.tsx_Select",
                 "codeComponentProps" : {
-                  "clearable" : false,
                   "defaultValue" : "London",
-                  "disabled" : false,
-                  "multi" : false,
+                  "isClearable" : false,
+                  "isDisabled" : false,
+                  "isMulti" : true,
+                  "isSearchable" : false,
                   "options" : [
                     {
                       "enabled" : true,
@@ -9834,8 +9835,7 @@
                       "type" : "string",
                       "value" : "New York"
                     }
-                  ],
-                  "searchable" : false
+                  ]
                 },
                 "codeOverrideEnabled" : false,
                 "constraintsLocked" : false,
@@ -9895,10 +9895,11 @@
                 "clip" : true,
                 "codeComponentIdentifier" : ".\/Select.tsx_Select",
                 "codeComponentProps" : {
-                  "clearable" : false,
                   "defaultValue" : "London",
-                  "disabled" : false,
-                  "multi" : false,
+                  "isClearable" : true,
+                  "isDisabled" : false,
+                  "isMulti" : false,
+                  "isSearchable" : false,
                   "options" : [
                     {
                       "enabled" : true,
@@ -9920,8 +9921,7 @@
                       "type" : "string",
                       "value" : "New York"
                     }
-                  ],
-                  "searchable" : false
+                  ]
                 },
                 "codeOverrideEnabled" : false,
                 "constraintsLocked" : false,
@@ -9981,10 +9981,11 @@
                 "clip" : true,
                 "codeComponentIdentifier" : ".\/Select.tsx_Select",
                 "codeComponentProps" : {
-                  "clearable" : false,
                   "defaultValue" : "London",
-                  "disabled" : false,
-                  "multi" : false,
+                  "isClearable" : false,
+                  "isDisabled" : true,
+                  "isMulti" : false,
+                  "isSearchable" : false,
                   "options" : [
                     {
                       "enabled" : true,
@@ -10006,8 +10007,7 @@
                       "type" : "string",
                       "value" : "New York"
                     }
-                  ],
-                  "searchable" : false
+                  ]
                 },
                 "codeOverrideEnabled" : false,
                 "constraintsLocked" : false,
@@ -10067,10 +10067,11 @@
                 "clip" : true,
                 "codeComponentIdentifier" : ".\/Select.tsx_Select",
                 "codeComponentProps" : {
-                  "clearable" : false,
                   "defaultValue" : "London",
-                  "disabled" : false,
-                  "multi" : false,
+                  "isClearable" : false,
+                  "isDisabled" : false,
+                  "isMulti" : false,
+                  "isSearchable" : true,
                   "options" : [
                     {
                       "enabled" : true,
@@ -10092,8 +10093,7 @@
                       "type" : "string",
                       "value" : "New York"
                     }
-                  ],
-                  "searchable" : false
+                  ]
                 },
                 "codeOverrideEnabled" : false,
                 "constraintsLocked" : false,
@@ -22220,10 +22220,11 @@
         "clip" : true,
         "codeComponentIdentifier" : ".\/Select.tsx_Select",
         "codeComponentProps" : {
-          "clearable" : false,
           "defaultValue" : "London",
-          "disabled" : false,
-          "multi" : false,
+          "isClearable" : false,
+          "isDisabled" : false,
+          "isMulti" : false,
+          "isSearchable" : false,
           "options" : [
             {
               "enabled" : true,
@@ -22245,8 +22246,7 @@
               "type" : "string",
               "value" : "New York"
             }
-          ],
-          "searchable" : false
+          ]
         },
         "codeOverrideEnabled" : false,
         "constraintsLocked" : false,

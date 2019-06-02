@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Frame, addPropertyControls, ControlType } from "framer"
+import { Frame, addPropertyControls, ControlType, FrameProps } from "framer"
 import { Interactive } from "./Interactive"
 import { Icon } from "./Icon"
 import { Text } from "./Text"
@@ -7,23 +7,24 @@ import { iconNames, iconTitles } from "./Utils"
 import { colors } from "./canvas"
 
 // Define a type for our props
-type Props = {
-    height: any
-    width: any
+interface Props extends FrameProps {
     text: string
     disabled: boolean
     toggle: boolean
     toggled: boolean
     type: string
     icon: string
-    onTap: (event, info, toggled: boolean | null) => void
 }
 
 /**
  * Button
  * @param props
  */
-export function Button(props: Partial<Props>) {
+export function Button(
+    props: Partial<Props> & {
+        onTap?: (event, info, toggled: boolean | null) => void
+    }
+) {
     // Grab the properties we want to use from props (note that we're
     // renaming toggled to avoid conflicting with the state's toggled
     // property

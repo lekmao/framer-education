@@ -108,22 +108,22 @@ addPropertyControls(Select as any, {
         type: ControlType.String,
         defaultValue: "London",
     },
-    multi: {
+    isMulti: {
         title: "Multi",
         type: ControlType.Boolean,
         defaultValue: false,
     },
-    clearable: {
+    isClearable: {
         title: "Clearable",
         type: ControlType.Boolean,
         defaultValue: false,
     },
-    disabled: {
+    isDisabled: {
         title: "Disabled",
         type: ControlType.Boolean,
         defaultValue: false,
     },
-    searchable: {
+    isSearchable: {
         title: "Searchable",
         type: ControlType.Boolean,
         defaultValue: false,

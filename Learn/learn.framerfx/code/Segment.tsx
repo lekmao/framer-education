@@ -107,7 +107,7 @@ export function Segment(props: Partial<Props>) {
     }
 
     return (
-        <Interactive {...rest}>
+        <Interactive disabled={disabled} {...rest}>
             {current => (
                 <Stack
                     height={"100%"}
@@ -117,7 +117,7 @@ export function Segment(props: Partial<Props>) {
                     gap={1}
                     borderRadius={12}
                     overflow="hidden"
-                    // {...variants[valid ? current : "warn"]}
+                    {...variants[valid ? current : "warn"]}
                 >
                     {options.map((option, index) => {
                         // An option is selected if its index matches the state's selectedIndex
