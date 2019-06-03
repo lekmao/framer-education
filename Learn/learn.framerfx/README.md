@@ -15,6 +15,7 @@ Learn is a design system for Framer X. Both the docs and this package are in pro
 - CheckboxGroup
 - RadioGroup
 - Slider
+- Stepper
 - TextInput
 - Select
 - Segment
@@ -26,22 +27,70 @@ Learn is a design system for Framer X. Both the docs and this package are in pro
 
 # Usage
 
-To use these components inside of your code components, import them from the library like this:
+To use these components inside of your code components, import them from `"@framer/steveruizok.education/code”`.
+
+## Components
 
 ```jsx
 import * as React from "react"
-import { Frame, addPropertyControls, ControlType } from "framer"
-import { Button, Icon } from "@framer/steveruizok.education/code"
+import { Frame } from "framer"
+import { Button, Icon } from "@framer/steveruizok.education/code”
+
+export function MyComponent (props) {
+  return (
+    <Frame size={“100%”}>
+      <Button text=“Click here!”/>
+      <Icon icon=“accessible”/>
+    </Frame>
+  }
+}
 ```
 
-To use the project’s shared colors in your code, you can use this import:
+### Colors
+
+You can use the same import to pull the shared colors:
 
 ```tsx
+import { Override } from “framer"
 import { colors } from "@framer/steveruizok.education/code”
+
+export function ColorOverride: Override () {
+  return {
+    color: colors.Primary
+  }
+}
 ```
 
+### Utils
+
+This package also includes several helper utilities.
+
+```tsx
+import * as React from "react"
+import { Stack, Frame } from "framer"
+import { range } from "@framer/steveruizok.education/code”
+
+export function MyComponent (props) {
+  return (
+    <Stack size={“100%”}>
+      { range(10).map(  i => <Frame/>{i}</Frame>) }
+    </Stack>
+  }
+}
+```
+
+Learn currently includes:
+
+* `range`
+* `rangeFrom`
+* `clamp`
+* `normalize`
+* `pull`
+* `pullAtIndex`
+ 
 # Changelog
 
+- Adds Stepper, removes Styled Components, replaces Icon font with SVG Icons (for offline use)
 - Adds index for easier imports
 - Adds offline icons
 - Adds Card

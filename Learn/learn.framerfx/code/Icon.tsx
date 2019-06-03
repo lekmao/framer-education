@@ -20,24 +20,19 @@ export function Icon(props: Props) {
             alignment="center"
             distribution="center"
         >
-            <div
+            <svg
+                viewBox={`0 0 ${size} ${size}`}
                 style={{
-                    display: "flex",
-                    height: "100%",
-                    width: "100%",
-                    alignItems: "center",
-                    justifyContent: "center",
+                    height: size,
+                    width: size,
+                    alignSelf: "center",
+                    justifySelf: "center",
                 }}
+                height={size}
+                width={size}
             >
-                <svg
-                    viewBox={`0 0 ${size} ${size}`}
-                    style={{ alignSelf: "center", justifySelf: "center" }}
-                    height={size}
-                    width={size}
-                >
-                    <path d={Icons[icon]} fill={color} />
-                </svg>
-            </div>
+                <path d={Icons[icon]} fill={color} />
+            </svg>
         </Stack>
     )
 }

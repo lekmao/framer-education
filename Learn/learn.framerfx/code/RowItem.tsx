@@ -58,7 +58,6 @@ export function RowItem(props: Partial<Props>) {
                     fontWeight="normal"
                     width={"auto"}
                     height="100%"
-                    paddingPerSide
                     paddingLeft={16}
                     text={text}
                 />

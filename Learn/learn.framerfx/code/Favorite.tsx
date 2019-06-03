@@ -35,10 +35,8 @@ export const Favorite = (props: Partial<Props>) => {
 
     return (
         <Link
-            x={-5}
-            y={2}
-            width={40}
-            height={40}
+            width={50}
+            height={50}
             {...rest}
             icon={state.value ? "favorite" : "favorite_border"}
             onTap={handleFavorite}
@@ -47,6 +45,8 @@ export const Favorite = (props: Partial<Props>) => {
 }
 
 Favorite.defaultProps = {
+    height: 50,
+    width: 50,
     value: false,
     onValueChange: value => null,
 }

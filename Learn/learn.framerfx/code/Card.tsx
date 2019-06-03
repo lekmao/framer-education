@@ -124,6 +124,8 @@ export function Card(props: Partial<Props>) {
                     />
                     {favorite && (
                         <Favorite
+                            x={-5}
+                            y={2}
                             value={isFavorite}
                             onValueChange={onFavoriteChange}
                         />
