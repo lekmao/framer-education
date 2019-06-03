@@ -5,11 +5,12 @@ import {
     ControlType,
     useMotionValue,
     useTransform,
+    FrameProps,
 } from "framer"
 import { Interactive } from "./Interactive"
 import { colors } from "./canvas"
 
-type Props = {
+type Props = Partial<FrameProps> & {
     width: number
     min: number
     max: number

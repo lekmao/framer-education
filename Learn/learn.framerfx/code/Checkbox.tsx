@@ -1,11 +1,9 @@
 import * as React from "react"
-import { Frame, addPropertyControls, ControlType } from "framer"
+import { Frame, FrameProps, addPropertyControls, ControlType } from "framer"
 import { Interactive } from "./Interactive"
 import { colors } from "./canvas"
 
-type Props = {
-    height: any
-    width: any
+type Props = Partial<FrameProps> & {
     value: boolean
     disabled: boolean
     validation: (value: boolean) => boolean

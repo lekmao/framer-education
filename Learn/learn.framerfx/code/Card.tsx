@@ -11,10 +11,7 @@ import { Favorite } from "./Favorite"
 import { Image } from "./Image"
 import { colors } from "./canvas"
 
-interface Props extends FrameProps {
-    width: any
-    height: any
-    image: string
+type Props = Partial<FrameProps> & {
     overlay: boolean
     color: string
     title: string
@@ -119,7 +116,7 @@ export function Card(props: Partial<Props>) {
                     <Text
                         resize
                         height={48}
-                        align="center"
+                        verticalAlign="center"
                         textAlign="left"
                         padding={16}
                         type="link"
@@ -183,7 +180,7 @@ export function Card(props: Partial<Props>) {
                                 height={state.titleHeight}
                                 type="h2"
                                 text={title}
-                                align="top"
+                                verticalAlign="top"
                                 textAlign="left"
                                 onResize={(width, height) =>
                                     handleResize("titleHeight", height)
@@ -203,7 +200,7 @@ export function Card(props: Partial<Props>) {
                             height={calculatedBodyHeight}
                             type="body"
                             text={body}
-                            align="top"
+                            verticalAlign="top"
                             textAlign="left"
                             onResize={(width, height) =>
                                 handleResize("bodyHeight", height)
@@ -226,7 +223,7 @@ export function Card(props: Partial<Props>) {
                     <Text
                         width="100%"
                         height={48}
-                        align="center"
+                        verticalAlign="center"
                         textAlign="left"
                         padding={16}
                         type="link"

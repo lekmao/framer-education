@@ -1,15 +1,11 @@
 import * as React from "react"
-import { Frame, addPropertyControls, ControlType } from "framer"
+import { Frame, addPropertyControls, ControlType, FrameProps } from "framer"
 import { Interactive } from "./Interactive"
 import { colors } from "./canvas"
 
-type Props = {
-    height: number | string
-    width: number | string
+type Props = Partial<FrameProps> & {
     value: boolean
     disabled: boolean
-    tint: string
-    accent: string
     validation: (value: boolean) => boolean
     onValueChange: (value: boolean, valid: boolean) => any
 }
@@ -29,8 +25,6 @@ export function Switch(props: Partial<Props>) {
         validation,
         height,
         width,
-        tint,
-        accent,
     } = props
 
     /* ---------------------------------- State --------------------------------- */
@@ -153,8 +147,6 @@ Switch.defaultProps = {
     disabled: false,
     height: 50,
     width: 64,
-    tint: "#027aff",
-    accent: "#FFFFFF",
     validation: () => true,
     onValueChange: () => null,
 }

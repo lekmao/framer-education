@@ -3,7 +3,7 @@ import { Frame, addPropertyControls, ControlType, FrameProps } from "framer"
 import { Link } from "./Link"
 import { colors } from "./canvas"
 
-interface Props extends FrameProps {
+type Props = Partial<FrameProps> & {
     value: boolean
     onValueChange: (value: boolean) => void
 }
@@ -40,7 +40,7 @@ export const Favorite = (props: Partial<Props>) => {
             width={40}
             height={40}
             {...rest}
-            icon={state.value ? "favorite" : "favorite_outline"}
+            icon={state.value ? "favorite" : "favorite_border"}
             onTap={handleFavorite}
         />
     )

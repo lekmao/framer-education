@@ -3,23 +3,18 @@ import { Frame, addPropertyControls, ControlType, FrameProps } from "framer"
 import { Interactive } from "./Interactive"
 import { Icon } from "./Icon"
 import { Text } from "./Text"
-import { iconNames, iconTitles } from "./Utils"
+import { iconNames, iconTitles } from "./Shared"
 import { colors } from "./canvas"
 
-// Define a type for our props
-interface Props extends FrameProps {
+type Props = Partial<FrameProps> & {
     text: string
-    disabled: boolean
+    icon: string
+    type: string
     toggle: boolean
     toggled: boolean
-    type: string
-    icon: string
+    disabled: boolean
 }
 
-/**
- * Button
- * @param props
- */
 export function Button(
     props: Partial<Props> & {
         onTap?: (event, info, toggled: boolean | null) => void
@@ -31,6 +26,7 @@ export function Button(
     const {
         height,
         width,
+        borderRadius,
         type,
         text,
         icon,
@@ -167,7 +163,7 @@ export function Button(
                 return (
                     <Frame
                         size="100%"
-                        borderRadius={8}
+                        borderRadius={borderRadius}
                         background={theme[type].background}
                         {...variant}
                     >
@@ -183,6 +179,7 @@ export function Button(
 Button.defaultProps = {
     height: 60,
     width: 320,
+    borderRadius: 8,
     disabled: false,
     text: "Get Started!",
     icon: "none",

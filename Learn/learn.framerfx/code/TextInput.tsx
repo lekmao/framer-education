@@ -1,25 +1,24 @@
 import * as React from "react"
-import { Frame, addPropertyControls, ControlType } from "framer"
+import { Frame, addPropertyControls, ControlType, FrameProps } from "framer"
 import { Interactive } from "./Interactive"
 import { Icon } from "./Icon"
 import { colors } from "./canvas"
 
-type Props = {
+type Props = Partial<FrameProps> & {
     value: string
-    placeholder: string
     disabled: boolean
+    onValueChange: (value: string, valid: boolean) => any
+    validation: (value: string) => boolean
+} & {
+    placeholder: string
     readOnly: boolean
     password: boolean
     message: string
-    height: any
-    width: any
     delay: number
     clearable: boolean
-    validation: (value: string) => boolean
     onBlur: (value: string, valid: boolean) => any
     onFocus: (value: string, valid: boolean) => any
     onInputStart: () => any
-    onValueChange: (value: string, valid: boolean) => any
 }
 
 /**

@@ -1,12 +1,9 @@
 import * as React from "react"
-import { addPropertyControls, ControlType, Stack } from "framer"
+import { addPropertyControls, ControlType, Stack, FrameProps } from "framer"
 import { RowItem } from "./RowItem"
 import { colors } from "./canvas"
 
-type Props = {
-    id: string
-    width: any
-    height: any
+type Props = Partial<FrameProps> & {
     value: string[]
     options: string[]
     disabled: boolean

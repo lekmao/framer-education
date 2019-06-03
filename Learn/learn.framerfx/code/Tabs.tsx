@@ -17,7 +17,7 @@ type TabObject = {
 
 type Tab = string | TabObject
 
-interface Props extends FrameProps {
+type Props = Partial<FrameProps> & {
     currentTab: number | string
     onChangeTab: (index: number, tab: string) => void
     tabs: Tab[]

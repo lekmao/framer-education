@@ -6,10 +6,10 @@ import { Switch } from "./Switch"
 import { Checkbox } from "./Checkbox"
 import { Radio } from "./Radio"
 import { Text } from "./Text"
-import { iconNames, iconTitles } from "./Utils"
+import { iconNames, iconTitles } from "./Shared"
 import { colors } from "./canvas"
 
-interface Props extends FrameProps {
+type Props = Partial<FrameProps> & {
     text: string
     component: string
     icon: string

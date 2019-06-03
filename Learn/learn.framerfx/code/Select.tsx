@@ -8,7 +8,7 @@ type Option = {
     label: string
 }
 
-interface Props extends FrameProps {
+type Props = Partial<FrameProps> & {
     value: Option
     defaultValue: any
     options: Option[]

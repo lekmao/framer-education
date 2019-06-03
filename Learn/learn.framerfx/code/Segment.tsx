@@ -1,14 +1,11 @@
 import * as React from "react"
-import { addPropertyControls, ControlType, Stack } from "framer"
+import { addPropertyControls, ControlType, Stack, FrameProps } from "framer"
 import { Interactive } from "./Interactive"
 import { Link } from "./Link"
 import { Button } from "./Button"
 import { colors } from "./canvas"
 
-type Props = {
-    id: string
-    width: number | string
-    height: number | string
+type Props = Partial<FrameProps> & {
     value: string
     options: string[]
     disabled: boolean

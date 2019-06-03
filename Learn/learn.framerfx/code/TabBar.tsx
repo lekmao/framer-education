@@ -18,7 +18,7 @@ type TabObject = {
 
 type Tab = string | TabObject
 
-interface Props extends FrameProps {
+type Props = Partial<FrameProps> & {
     currentTab: number | string
     onChangeTab: (index: number, tab: string) => void
     tabs: Tab[]
@@ -121,7 +121,7 @@ export function TabBar(props: Partial<Props>) {
                                         color={color}
                                         height={12}
                                         width={56}
-                                        align="center"
+                                        verticalAlign="center"
                                         textAlign="center"
                                         resize
                                         text={tabObject.title}

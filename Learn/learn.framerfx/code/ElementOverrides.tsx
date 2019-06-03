@@ -1,10 +1,53 @@
-import { Override } from "framer"
+import { Override, Data } from "framer"
 
 // Override Docs: https://framer.com/docs/overrides
 
-export function Invalid(): Override {
+const state = Data({
+    values: [0, 0, 0],
+    prices: [0.25, 0.5, 1.2],
+})
+
+export function StepperA(): Override {
     return {
-        validation: v => false,
+        value: state.values[0],
+        onValueChange: v => {
+            const values = state.values
+            values[0] = v
+            state.values = values
+        },
+    }
+}
+
+export function StepperB(): Override {
+    return {
+        value: state.values[1],
+        onValueChange: v => {
+            const values = state.values
+            values[1] = v
+            state.values = values
+        },
+    }
+}
+
+export function StepperC(): Override {
+    return {
+        value: state.values[2],
+        onValueChange: v => {
+            const values = state.values
+            values[2] = v
+            state.values = values
+        },
+    }
+}
+
+export function Total(): Override {
+    console.log(state.values)
+    return {
+        text:
+            "$" +
+            state.values
+                .reduce((a, c, i) => a + c * state.prices[i])
+                .toFixed(2),
     }
 }
 

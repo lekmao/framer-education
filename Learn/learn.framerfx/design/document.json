@@ -2021,12 +2021,12 @@
                 "clip" : true,
                 "codeComponentIdentifier" : ".\/Text.tsx_Text",
                 "codeComponentProps" : {
-                  "align" : "top",
                   "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(59, 59, 104))",
                   "paddingPerSide" : false,
                   "text" : "Display",
                   "textAlign" : "left",
-                  "type" : "display"
+                  "type" : "display",
+                  "verticalAlign" : "top"
                 },
                 "codeOverrideEnabled" : true,
                 "codeOverrideFile" : ".\/Debugging.tsx",
@@ -2089,12 +2089,12 @@
                 "clip" : true,
                 "codeComponentIdentifier" : ".\/Text.tsx_Text",
                 "codeComponentProps" : {
-                  "align" : "top",
                   "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(59, 59, 104))",
                   "paddingPerSide" : false,
                   "text" : "Heading 1",
                   "textAlign" : "left",
-                  "type" : "h1"
+                  "type" : "h1",
+                  "verticalAlign" : "top"
                 },
                 "codeOverrideEnabled" : true,
                 "codeOverrideFile" : ".\/Debugging.tsx",
@@ -2157,12 +2157,12 @@
                 "clip" : true,
                 "codeComponentIdentifier" : ".\/Text.tsx_Text",
                 "codeComponentProps" : {
-                  "align" : "top",
                   "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(59, 59, 104))",
                   "paddingPerSide" : false,
                   "text" : "Heading 2",
                   "textAlign" : "left",
-                  "type" : "h2"
+                  "type" : "h2",
+                  "verticalAlign" : "top"
                 },
                 "codeOverrideEnabled" : true,
                 "codeOverrideFile" : ".\/Debugging.tsx",
@@ -2225,12 +2225,12 @@
                 "clip" : true,
                 "codeComponentIdentifier" : ".\/Text.tsx_Text",
                 "codeComponentProps" : {
-                  "align" : "top",
                   "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(59, 59, 104))",
                   "paddingPerSide" : false,
                   "text" : "Heading 3",
                   "textAlign" : "left",
-                  "type" : "h3"
+                  "type" : "h3",
+                  "verticalAlign" : "top"
                 },
                 "codeOverrideEnabled" : true,
                 "codeOverrideFile" : ".\/Debugging.tsx",
@@ -2293,12 +2293,12 @@
                 "clip" : true,
                 "codeComponentIdentifier" : ".\/Text.tsx_Text",
                 "codeComponentProps" : {
-                  "align" : "top",
                   "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(59, 59, 104))",
                   "paddingPerSide" : false,
                   "text" : "Lead",
                   "textAlign" : "left",
-                  "type" : "lead"
+                  "type" : "lead",
+                  "verticalAlign" : "top"
                 },
                 "codeOverrideEnabled" : true,
                 "codeOverrideFile" : ".\/Debugging.tsx",
@@ -2361,12 +2361,12 @@
                 "clip" : true,
                 "codeComponentIdentifier" : ".\/Text.tsx_Text",
                 "codeComponentProps" : {
-                  "align" : "top",
                   "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(59, 59, 104))",
                   "paddingPerSide" : false,
                   "text" : "Link",
                   "textAlign" : "left",
-                  "type" : "link"
+                  "type" : "link",
+                  "verticalAlign" : "top"
                 },
                 "codeOverrideEnabled" : true,
                 "codeOverrideFile" : ".\/Debugging.tsx",
@@ -2429,12 +2429,12 @@
                 "clip" : true,
                 "codeComponentIdentifier" : ".\/Text.tsx_Text",
                 "codeComponentProps" : {
-                  "align" : "top",
                   "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(59, 59, 104))",
                   "paddingPerSide" : false,
                   "text" : "Body",
                   "textAlign" : "left",
-                  "type" : "body"
+                  "type" : "body",
+                  "verticalAlign" : "top"
                 },
                 "codeOverrideEnabled" : true,
                 "codeOverrideFile" : ".\/Debugging.tsx",
@@ -2497,12 +2497,12 @@
                 "clip" : true,
                 "codeComponentIdentifier" : ".\/Text.tsx_Text",
                 "codeComponentProps" : {
-                  "align" : "top",
                   "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(59, 59, 104))",
                   "paddingPerSide" : false,
                   "text" : "Label",
                   "textAlign" : "left",
-                  "type" : "label"
+                  "type" : "label",
+                  "verticalAlign" : "top"
                 },
                 "codeOverrideEnabled" : true,
                 "codeOverrideFile" : ".\/Debugging.tsx",
@@ -2565,12 +2565,12 @@
                 "clip" : true,
                 "codeComponentIdentifier" : ".\/Text.tsx_Text",
                 "codeComponentProps" : {
-                  "align" : "top",
                   "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(59, 59, 104))",
                   "paddingPerSide" : false,
                   "text" : "Caption",
                   "textAlign" : "left",
-                  "type" : "caption"
+                  "type" : "caption",
+                  "verticalAlign" : "top"
                 },
                 "codeOverrideEnabled" : true,
                 "codeOverrideFile" : ".\/Debugging.tsx",
@@ -2850,7 +2850,7 @@
                 "aspectRatio" : null,
                 "bottom" : null,
                 "centerAnchorX" : 0.5,
-                "centerAnchorY" : 0.14369973190348526,
+                "centerAnchorY" : 0.087696335078534027,
                 "children" : [
 
                 ],
@@ -2861,8 +2861,8 @@
                   "body" : "Body",
                   "color" : "var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {\"name\":\"Primary\"} *\/",
                   "favorite" : true,
-                  "footer" : "Footer",
-                  "header" : "Header",
+                  "footer" : "",
+                  "header" : "",
                   "image" : "design\/assets\/small-kitten-walking-towards_127900829_0.jpg",
                   "isFavorite" : false,
                   "overlay" : true,
@@ -2910,6 +2910,75 @@
                 "right" : null,
                 "rotation" : 0,
                 "top" : 68,
+                "visible" : true,
+                "width" : 1,
+                "widthType" : 3
+              },
+              {
+                "__class" : "CodeComponentNode",
+                "aspectRatio" : null,
+                "bottom" : null,
+                "centerAnchorX" : 0.5,
+                "centerAnchorY" : 0.14369973190348526,
+                "children" : [
+
+                ],
+                "clip" : true,
+                "codeComponentIdentifier" : ".\/Card.tsx_Card",
+                "codeComponentProps" : {
+                  "autosize" : true,
+                  "body" : "Body",
+                  "color" : "var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {\"name\":\"Primary\"} *\/",
+                  "favorite" : true,
+                  "footer" : "Footer",
+                  "header" : "Header",
+                  "image" : "design\/assets\/small-kitten-walking-towards_127900829_0.jpg",
+                  "isFavorite" : false,
+                  "overlay" : true,
+                  "title" : "Hello"
+                },
+                "codeOverrideEnabled" : false,
+                "constraintsLocked" : false,
+                "deviceType" : null,
+                "exportOptions" : [
+
+                ],
+                "fillColor" : "rgba(255,255,255,1)",
+                "fillEnabled" : false,
+                "fillGradient" : {
+                  "__class" : "LinearGradient",
+                  "alpha" : 1,
+                  "angle" : 0,
+                  "end" : "rgba(0,0,0,0)",
+                  "start" : "black"
+                },
+                "fillImage" : null,
+                "fillImagePixelHeight" : null,
+                "fillImagePixelWidth" : null,
+                "fillImageResize" : "fill",
+                "fillType" : "color",
+                "height" : 400,
+                "heightType" : 0,
+                "id" : "IwtZMM0D_",
+                "intrinsicHeight" : 200,
+                "intrinsicWidth" : 320,
+                "left" : 0,
+                "locked" : false,
+                "name" : null,
+                "opacity" : 1,
+                "originalid" : null,
+                "parentid" : "Yexn8Wo11",
+                "previewSettings" : null,
+                "radius" : 0,
+                "radiusBottomLeft" : 0,
+                "radiusBottomRight" : 0,
+                "radiusIsRelative" : false,
+                "radiusPerCorner" : false,
+                "radiusTopLeft" : 0,
+                "radiusTopRight" : 0,
+                "right" : null,
+                "rotation" : 0,
+                "top" : 0,
                 "visible" : true,
                 "width" : 1,
                 "widthType" : 3
@@ -5246,7 +5315,6 @@
                 "clip" : true,
                 "codeComponentIdentifier" : ".\/Text.tsx_Text",
                 "codeComponentProps" : {
-                  "align" : "bottom",
                   "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(59, 59, 104))",
                   "padding" : 0,
                   "paddingBottom" : 0,
@@ -5256,7 +5324,8 @@
                   "paddingTop" : 0,
                   "text" : "LABEL",
                   "textAlign" : "left",
-                  "type" : "label"
+                  "type" : "label",
+                  "verticalAlign" : "top"
                 },
                 "codeOverrideEnabled" : false,
                 "constraintsLocked" : false,
@@ -5444,7 +5513,6 @@
                 "clip" : true,
                 "codeComponentIdentifier" : ".\/Text.tsx_Text",
                 "codeComponentProps" : {
-                  "align" : "bottom",
                   "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(59, 59, 104))",
                   "padding" : 0,
                   "paddingBottom" : 0,
@@ -5454,7 +5522,8 @@
                   "paddingTop" : 0,
                   "text" : "LABEL",
                   "textAlign" : "left",
-                  "type" : "label"
+                  "type" : "label",
+                  "verticalAlign" : "top"
                 },
                 "codeOverrideEnabled" : false,
                 "constraintsLocked" : false,
@@ -9115,9 +9184,7 @@
                 "codeComponentIdentifier" : ".\/Icon.tsx_Icon",
                 "codeComponentProps" : {
                   "color" : "var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254))",
-                  "disabled" : false,
                   "icon" : "camera",
-                  "interactive" : false,
                   "size" : 24
                 },
                 "codeOverrideEnabled" : false,
@@ -9179,9 +9246,7 @@
                 "codeComponentIdentifier" : ".\/Icon.tsx_Icon",
                 "codeComponentProps" : {
                   "color" : "var(--token-c56b99fa-6bea-4887-b827-36fa58a3817f, rgb(3, 175, 232)) \/* {\"name\":\"Secondary\"} *\/",
-                  "disabled" : false,
                   "icon" : "camera",
-                  "interactive" : false,
                   "size" : 24
                 },
                 "codeOverrideEnabled" : false,
@@ -9243,9 +9308,7 @@
                 "codeComponentIdentifier" : ".\/Icon.tsx_Icon",
                 "codeComponentProps" : {
                   "color" : "var(--token-b16a7a8a-e2ab-4afa-a205-534e354689de, rgb(255, 171, 87)) \/* {\"name\":\"Accent\"} *\/",
-                  "disabled" : false,
                   "icon" : "camera",
-                  "interactive" : false,
                   "size" : 24
                 },
                 "codeOverrideEnabled" : false,
@@ -9307,9 +9370,7 @@
                 "codeComponentIdentifier" : ".\/Icon.tsx_Icon",
                 "codeComponentProps" : {
                   "color" : "var(--token-99f5b091-583d-4c54-9ed1-c13fe2b565b5, rgb(255, 67, 102)) \/* {\"name\":\"Warn\"} *\/",
-                  "disabled" : false,
                   "icon" : "camera",
-                  "interactive" : false,
                   "size" : 24
                 },
                 "codeOverrideEnabled" : false,
@@ -9371,9 +9432,7 @@
                 "codeComponentIdentifier" : ".\/Icon.tsx_Icon",
                 "codeComponentProps" : {
                   "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(59, 59, 104)) \/* {\"name\":\"Dark\"} *\/",
-                  "disabled" : false,
                   "icon" : "camera",
-                  "interactive" : false,
                   "size" : 24
                 },
                 "codeOverrideEnabled" : false,
@@ -9435,9 +9494,7 @@
                 "codeComponentIdentifier" : ".\/Icon.tsx_Icon",
                 "codeComponentProps" : {
                   "color" : "var(--token-0b9e3e19-2ca6-4163-8b23-40217b78ddb8, rgba(37, 37, 45, 0.09)) \/* {\"name\":\"Shadow\"} *\/",
-                  "disabled" : false,
                   "icon" : "camera",
-                  "interactive" : false,
                   "size" : 24
                 },
                 "codeOverrideEnabled" : false,
@@ -9578,7 +9635,7 @@
         "isExternalMaster" : null,
         "isMaster" : false,
         "isTarget" : false,
-        "left" : 9770,
+        "left" : 10225,
         "locked" : false,
         "name" : "Elements",
         "navigationTarget" : null,
@@ -9599,7 +9656,7 @@
         "replicaInfo" : null,
         "right" : null,
         "rotation" : 0,
-        "top" : -3,
+        "top" : -9,
         "visible" : true,
         "width" : 375,
         "widthType" : 0
@@ -10233,7 +10290,7 @@
         "isExternalMaster" : null,
         "isMaster" : false,
         "isTarget" : false,
-        "left" : 10245,
+        "left" : 10700,
         "locked" : false,
         "name" : "Elements",
         "navigationTarget" : null,
@@ -10254,7 +10311,7 @@
         "replicaInfo" : null,
         "right" : null,
         "rotation" : 0,
-        "top" : -3,
+        "top" : -9,
         "visible" : true,
         "width" : 375,
         "widthType" : 0
@@ -10806,7 +10863,7 @@
         "isExternalMaster" : null,
         "isMaster" : false,
         "isTarget" : false,
-        "left" : 10700,
+        "left" : 11155,
         "locked" : false,
         "name" : "Elements",
         "navigationTarget" : null,
@@ -10827,7 +10884,7 @@
         "replicaInfo" : null,
         "right" : null,
         "rotation" : 0,
-        "top" : 0,
+        "top" : -6,
         "visible" : true,
         "width" : 375,
         "widthType" : 0
@@ -11275,7 +11332,7 @@
         "isExternalMaster" : null,
         "isMaster" : false,
         "isTarget" : false,
-        "left" : 11610,
+        "left" : 12065,
         "locked" : false,
         "name" : "Elements",
         "navigationTarget" : null,
@@ -11296,7 +11353,7 @@
         "replicaInfo" : null,
         "right" : null,
         "rotation" : 0,
-        "top" : 0,
+        "top" : -6,
         "visible" : true,
         "width" : 375,
         "widthType" : 0
@@ -11764,7 +11821,7 @@
         "isExternalMaster" : null,
         "isMaster" : false,
         "isTarget" : false,
-        "left" : 12065,
+        "left" : 12520,
         "locked" : false,
         "name" : "Elements",
         "navigationTarget" : null,
@@ -11785,7 +11842,7 @@
         "replicaInfo" : null,
         "right" : null,
         "rotation" : 0,
-        "top" : 0,
+        "top" : -6,
         "visible" : true,
         "width" : 375,
         "widthType" : 0
@@ -12131,7 +12188,7 @@
         "isExternalMaster" : null,
         "isMaster" : false,
         "isTarget" : false,
-        "left" : 11155,
+        "left" : 11610,
         "locked" : false,
         "name" : "Elements",
         "navigationTarget" : null,
@@ -12152,7 +12209,7 @@
         "replicaInfo" : null,
         "right" : null,
         "rotation" : 0,
-        "top" : 0,
+        "top" : -6,
         "visible" : true,
         "width" : 375,
         "widthType" : 0
@@ -12809,12 +12866,12 @@
                 "clip" : true,
                 "codeComponentIdentifier" : ".\/Text.tsx_Text",
                 "codeComponentProps" : {
-                  "align" : "bottom",
                   "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(59, 59, 104))",
                   "paddingPerSide" : false,
                   "text" : "Text (Code Component)",
                   "textAlign" : "left",
-                  "type" : "lead"
+                  "type" : "lead",
+                  "verticalAlign" : "top"
                 },
                 "codeOverrideEnabled" : true,
                 "codeOverrideFile" : ".\/Debugging.tsx",
@@ -22157,9 +22214,7 @@
         "codeComponentIdentifier" : ".\/Icon.tsx_Icon",
         "codeComponentProps" : {
           "color" : "var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254))",
-          "disabled" : false,
           "icon" : "camera",
-          "interactive" : false,
           "size" : 24
         },
         "codeOverrideEnabled" : false,
@@ -22187,7 +22242,7 @@
         "id" : "OB5s8e0mV",
         "intrinsicHeight" : 40,
         "intrinsicWidth" : 40,
-        "left" : 9770,
+        "left" : 10225,
         "locked" : false,
         "name" : null,
         "opacity" : 1,
@@ -22203,7 +22258,7 @@
         "radiusTopRight" : 0,
         "right" : null,
         "rotation" : 0,
-        "top" : -96,
+        "top" : -102,
         "visible" : true,
         "width" : 40,
         "widthType" : 0
@@ -22273,7 +22328,7 @@
         "id" : "asizSi0oY",
         "intrinsicHeight" : 200,
         "intrinsicWidth" : 200,
-        "left" : 10245,
+        "left" : 10700,
         "locked" : false,
         "name" : null,
         "opacity" : 1,
@@ -22289,7 +22344,7 @@
         "radiusTopRight" : 0,
         "right" : null,
         "rotation" : 0,
-        "top" : -96,
+        "top" : -102,
         "visible" : true,
         "width" : 320,
         "widthType" : 0
@@ -23419,7 +23474,7 @@
         "id" : "VoJzuOyJ5",
         "intrinsicHeight" : 60,
         "intrinsicWidth" : 320,
-        "left" : 10700,
+        "left" : 11155,
         "locked" : false,
         "name" : null,
         "opacity" : 1,
@@ -23435,7 +23490,7 @@
         "radiusTopRight" : 0,
         "right" : null,
         "rotation" : 0,
-        "top" : -106,
+        "top" : -112,
         "visible" : true,
         "width" : 320,
         "widthType" : 0
@@ -23490,7 +23545,7 @@
         "id" : "exr7KnqNq",
         "intrinsicHeight" : 200,
         "intrinsicWidth" : 200,
-        "left" : 11155,
+        "left" : 11610,
         "locked" : false,
         "name" : null,
         "opacity" : 1,
@@ -23506,7 +23561,7 @@
         "radiusTopRight" : 0,
         "right" : null,
         "rotation" : 0,
-        "top" : -246,
+        "top" : -252,
         "visible" : true,
         "width" : 320,
         "widthType" : 0
@@ -23526,7 +23581,7 @@
         "heightType" : 0,
         "id" : "COzUyUBHA",
         "isTarget" : false,
-        "left" : 11155,
+        "left" : 11610,
         "locked" : false,
         "name" : null,
         "opacity" : 1,
@@ -23596,7 +23651,7 @@
 
           }
         },
-        "top" : -300,
+        "top" : -306,
         "visible" : true,
         "width" : 376,
         "widthType" : 0
@@ -23658,7 +23713,7 @@
         "id" : "rTmRYdXZQ",
         "intrinsicHeight" : 84,
         "intrinsicWidth" : 320,
-        "left" : 11610,
+        "left" : 12065,
         "locked" : false,
         "name" : null,
         "opacity" : 1,
@@ -23674,7 +23729,7 @@
         "radiusTopRight" : 0,
         "right" : null,
         "rotation" : 0,
-        "top" : -130,
+        "top" : -136,
         "visible" : true,
         "width" : 359,
         "widthType" : 0
@@ -23724,7 +23779,7 @@
         "id" : "mzsgUF_SU",
         "intrinsicHeight" : 88,
         "intrinsicWidth" : 320,
-        "left" : 12065,
+        "left" : 12520,
         "locked" : false,
         "name" : null,
         "opacity" : 1,
@@ -23740,7 +23795,7 @@
         "radiusTopRight" : 0,
         "right" : null,
         "rotation" : 0,
-        "top" : -132,
+        "top" : -138,
         "visible" : true,
         "width" : 359,
         "widthType" : 0
@@ -23757,12 +23812,12 @@
         "clip" : true,
         "codeComponentIdentifier" : ".\/Text.tsx_Text",
         "codeComponentProps" : {
-          "align" : "top",
           "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(59, 59, 104))",
           "paddingPerSide" : false,
           "text" : "Heading 1",
           "textAlign" : "left",
-          "type" : "h1"
+          "type" : "h1",
+          "verticalAlign" : "top"
         },
         "codeOverrideEnabled" : true,
         "codeOverrideFile" : ".\/Debugging.tsx",
@@ -24076,6 +24131,491 @@
         "top" : -383,
         "visible" : true,
         "width" : 320,
+        "widthType" : 0
+      },
+      {
+        "__class" : "FrameNode",
+        "aspectRatio" : null,
+        "blendingEnabled" : 0,
+        "blendingMode" : "normal",
+        "bottom" : null,
+        "centerAnchorX" : 0.5,
+        "centerAnchorY" : 0.57266009852216748,
+        "children" : [
+          {
+            "__class" : "CodeComponentNode",
+            "aspectRatio" : null,
+            "bottom" : 0,
+            "centerAnchorX" : 0.5,
+            "centerAnchorY" : 0.5,
+            "children" : [
+              {
+                "__class" : "TextNode",
+                "autoSize" : true,
+                "bottom" : null,
+                "centerAnchorX" : 0.112,
+                "centerAnchorY" : 0.041871921182266007,
+                "codeOverrideEnabled" : false,
+                "constraintsLocked" : false,
+                "exportOptions" : [
+
+                ],
+                "height" : 28,
+                "heightType" : 0,
+                "id" : "E2tmN3c4X",
+                "isTarget" : false,
+                "left" : 8,
+                "locked" : false,
+                "name" : null,
+                "opacity" : 1,
+                "originalid" : null,
+                "parentid" : "HpxEfgHAJ",
+                "replicaInfo" : null,
+                "right" : null,
+                "rotation" : 0,
+                "styledText" : {
+                  "__class" : "StyledTextDraft",
+                  "blocks" : [
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2",
+                          "FONT:HelveticaNeue-Bold",
+                          "COLOR:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {\"name\":\"Primary\"} *\/",
+                          "SIZE:24"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+                        {
+                          "length" : 7,
+                          "offset" : 0,
+                          "style" : "LETTERSPACING:0"
+                        },
+                        {
+                          "length" : 7,
+                          "offset" : 0,
+                          "style" : "LINEHEIGHT:1.2"
+                        },
+                        {
+                          "length" : 7,
+                          "offset" : 0,
+                          "style" : "FONT:HelveticaNeue-Bold"
+                        },
+                        {
+                          "length" : 7,
+                          "offset" : 0,
+                          "style" : "COLOR:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {\"name\":\"Primary\"} *\/"
+                        },
+                        {
+                          "length" : 7,
+                          "offset" : 0,
+                          "style" : "SIZE:24"
+                        }
+                      ],
+                      "key" : "739fl",
+                      "text" : "Stepper",
+                      "type" : "unstyled"
+                    }
+                  ],
+                  "cached" : {
+                    "html" : "<div data-offset-key=\"739fl-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"739fl-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Bold&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {&quot;name&quot;:&quot;Primary&quot;} *\/;font-size:24px;letter-spacing:0px;line-height:1.2;font-weight:700\"><span data-text=\"true\">Stepper<\/span><\/span><\/div>",
+                    "os" : "10_14",
+                    "size" : {
+                      "height" : 28,
+                      "width" : 92
+                    },
+                    "width" : 0
+                  },
+                  "entityMap" : {
+
+                  }
+                },
+                "top" : 20,
+                "visible" : true,
+                "width" : 92,
+                "widthType" : 0
+              },
+              {
+                "__class" : "CodeComponentNode",
+                "aspectRatio" : null,
+                "bottom" : null,
+                "centerAnchorX" : 0.28799999999999998,
+                "centerAnchorY" : 0.1145320197044335,
+                "children" : [
+
+                ],
+                "clip" : true,
+                "codeComponentIdentifier" : ".\/Stepper.tsx_Stepper",
+                "codeComponentProps" : {
+                  "clamp" : false,
+                  "disabled" : false,
+                  "max" : 10,
+                  "min" : 0,
+                  "step" : 1,
+                  "value" : 0
+                },
+                "codeOverrideEnabled" : false,
+                "constraintsLocked" : false,
+                "deviceType" : null,
+                "exportOptions" : [
+
+                ],
+                "fillColor" : "rgba(255,255,255,1)",
+                "fillEnabled" : false,
+                "fillGradient" : {
+                  "__class" : "LinearGradient",
+                  "alpha" : 1,
+                  "angle" : 0,
+                  "end" : "rgba(0,0,0,0)",
+                  "start" : "black"
+                },
+                "fillImage" : null,
+                "fillImagePixelHeight" : null,
+                "fillImagePixelWidth" : null,
+                "fillImageResize" : "fill",
+                "fillType" : "color",
+                "height" : 50,
+                "heightType" : 0,
+                "id" : "jpz5YHUB1",
+                "intrinsicHeight" : 50,
+                "intrinsicWidth" : 200,
+                "left" : 8,
+                "locked" : false,
+                "name" : null,
+                "opacity" : 1,
+                "originalid" : null,
+                "parentid" : "HpxEfgHAJ",
+                "previewSettings" : null,
+                "radius" : 0,
+                "radiusBottomLeft" : 0,
+                "radiusBottomRight" : 0,
+                "radiusIsRelative" : false,
+                "radiusPerCorner" : false,
+                "radiusTopLeft" : 0,
+                "radiusTopRight" : 0,
+                "right" : null,
+                "rotation" : 0,
+                "top" : 68,
+                "visible" : true,
+                "width" : 200,
+                "widthType" : 0
+              },
+              {
+                "__class" : "CodeComponentNode",
+                "aspectRatio" : null,
+                "bottom" : null,
+                "centerAnchorX" : 0.28799999999999998,
+                "centerAnchorY" : 0.20073891625615764,
+                "children" : [
+
+                ],
+                "clip" : true,
+                "codeComponentIdentifier" : ".\/Stepper.tsx_Stepper",
+                "codeComponentProps" : {
+                  "clamp" : false,
+                  "disabled" : false,
+                  "max" : 10,
+                  "min" : 0,
+                  "step" : 2,
+                  "value" : 0
+                },
+                "codeOverrideEnabled" : false,
+                "constraintsLocked" : false,
+                "deviceType" : null,
+                "exportOptions" : [
+
+                ],
+                "fillColor" : "rgba(255,255,255,1)",
+                "fillEnabled" : false,
+                "fillGradient" : {
+                  "__class" : "LinearGradient",
+                  "alpha" : 1,
+                  "angle" : 0,
+                  "end" : "rgba(0,0,0,0)",
+                  "start" : "black"
+                },
+                "fillImage" : null,
+                "fillImagePixelHeight" : null,
+                "fillImagePixelWidth" : null,
+                "fillImageResize" : "fill",
+                "fillType" : "color",
+                "height" : 50,
+                "heightType" : 0,
+                "id" : "Dtn_Hdvbq",
+                "intrinsicHeight" : 50,
+                "intrinsicWidth" : 200,
+                "left" : 8,
+                "locked" : false,
+                "name" : null,
+                "opacity" : 1,
+                "originalid" : null,
+                "parentid" : "HpxEfgHAJ",
+                "previewSettings" : null,
+                "radius" : 0,
+                "radiusBottomLeft" : 0,
+                "radiusBottomRight" : 0,
+                "radiusIsRelative" : false,
+                "radiusPerCorner" : false,
+                "radiusTopLeft" : 0,
+                "radiusTopRight" : 0,
+                "right" : null,
+                "rotation" : 0,
+                "top" : 138,
+                "visible" : true,
+                "width" : 200,
+                "widthType" : 0
+              },
+              {
+                "__class" : "CodeComponentNode",
+                "aspectRatio" : null,
+                "bottom" : null,
+                "centerAnchorX" : 0,
+                "centerAnchorY" : 0,
+                "children" : [
+
+                ],
+                "clip" : true,
+                "codeComponentIdentifier" : ".\/Stepper.tsx_Stepper",
+                "codeComponentProps" : {
+                  "clamp" : false,
+                  "disabled" : true,
+                  "max" : 10,
+                  "min" : 0,
+                  "step" : 1,
+                  "value" : 0
+                },
+                "codeOverrideEnabled" : false,
+                "constraintsLocked" : false,
+                "deviceType" : null,
+                "exportOptions" : [
+
+                ],
+                "fillColor" : "rgba(255,255,255,1)",
+                "fillEnabled" : false,
+                "fillGradient" : {
+                  "__class" : "LinearGradient",
+                  "alpha" : 1,
+                  "angle" : 0,
+                  "end" : "rgba(0,0,0,0)",
+                  "start" : "black"
+                },
+                "fillImage" : null,
+                "fillImagePixelHeight" : null,
+                "fillImagePixelWidth" : null,
+                "fillImageResize" : "fill",
+                "fillType" : "color",
+                "height" : 50,
+                "heightType" : 0,
+                "id" : "HjqFfMAYe",
+                "intrinsicHeight" : 50,
+                "intrinsicWidth" : 200,
+                "left" : 0,
+                "locked" : false,
+                "name" : null,
+                "opacity" : 1,
+                "originalid" : null,
+                "parentid" : "HpxEfgHAJ",
+                "previewSettings" : null,
+                "radius" : 0,
+                "radiusBottomLeft" : 0,
+                "radiusBottomRight" : 0,
+                "radiusIsRelative" : false,
+                "radiusPerCorner" : false,
+                "radiusTopLeft" : 0,
+                "radiusTopRight" : 0,
+                "right" : null,
+                "rotation" : 0,
+                "top" : 0,
+                "visible" : true,
+                "width" : 200,
+                "widthType" : 0
+              }
+            ],
+            "clip" : false,
+            "codeComponentIdentifier" : "framer\/Stack",
+            "codeComponentProps" : {
+              "alignment" : "start",
+              "direction" : "vertical",
+              "distribution" : "start",
+              "gap" : 20,
+              "padding" : 8,
+              "paddingBottom" : 20,
+              "paddingLeft" : 8,
+              "paddingPerSide" : true,
+              "paddingRight" : 8,
+              "paddingTop" : 20
+            },
+            "codeOverrideEnabled" : false,
+            "constraintsLocked" : true,
+            "deviceType" : null,
+            "exportOptions" : [
+
+            ],
+            "fillColor" : "rgba(255,255,255,1)",
+            "fillEnabled" : false,
+            "fillGradient" : {
+              "__class" : "LinearGradient",
+              "alpha" : 1,
+              "angle" : 0,
+              "end" : "rgba(0,0,0,0)",
+              "start" : "black"
+            },
+            "fillImage" : null,
+            "fillImagePixelHeight" : null,
+            "fillImagePixelWidth" : null,
+            "fillImageResize" : "fill",
+            "fillType" : "color",
+            "height" : 812,
+            "heightType" : 0,
+            "id" : "HpxEfgHAJ",
+            "intrinsicHeight" : null,
+            "intrinsicWidth" : null,
+            "left" : 0,
+            "locked" : false,
+            "name" : null,
+            "opacity" : 1,
+            "originalid" : null,
+            "parentid" : "O5memj8Pd",
+            "previewSettings" : null,
+            "radius" : 0,
+            "radiusBottomLeft" : 0,
+            "radiusBottomRight" : 0,
+            "radiusIsRelative" : false,
+            "radiusPerCorner" : false,
+            "radiusTopLeft" : 0,
+            "radiusTopRight" : 0,
+            "replicaInfo" : null,
+            "right" : 0,
+            "rotation" : 0,
+            "top" : 0,
+            "visible" : true,
+            "width" : 375,
+            "widthType" : 0
+          }
+        ],
+        "clip" : true,
+        "codeOverrideEnabled" : false,
+        "constraintsLocked" : false,
+        "deviceType" : null,
+        "exportOptions" : [
+
+        ],
+        "fillColor" : "var(--token-570013b9-ccd1-4a4b-8a44-e7ded788d7f2, rgb(235, 243, 255)) \/* {\"name\":\"Light\"} *\/",
+        "fillEnabled" : true,
+        "fillGradient" : {
+          "__class" : "LinearGradient",
+          "alpha" : 1,
+          "angle" : 0,
+          "end" : "rgba(0,0,0,0)",
+          "start" : "black"
+        },
+        "fillImage" : null,
+        "fillImagePixelHeight" : null,
+        "fillImagePixelWidth" : null,
+        "fillImageResize" : "fill",
+        "fillType" : "color",
+        "height" : 812,
+        "heightType" : 0,
+        "id" : "O5memj8Pd",
+        "intrinsicHeight" : null,
+        "intrinsicWidth" : null,
+        "isExternalMaster" : null,
+        "isMaster" : false,
+        "isTarget" : false,
+        "left" : 9750,
+        "locked" : false,
+        "name" : "Elements",
+        "navigationTarget" : null,
+        "navigationTransition" : "push",
+        "navigationTransitionBackdropColor" : "rgba(4,4,15,.4)",
+        "navigationTransitionDirection" : "left",
+        "opacity" : 1,
+        "originalid" : null,
+        "parentid" : "NUXTU4rYC",
+        "previewSettings" : null,
+        "radius" : 0,
+        "radiusBottomLeft" : 0,
+        "radiusBottomRight" : 0,
+        "radiusIsRelative" : false,
+        "radiusPerCorner" : false,
+        "radiusTopLeft" : 0,
+        "radiusTopRight" : 0,
+        "replicaInfo" : null,
+        "right" : null,
+        "rotation" : 0,
+        "top" : -3,
+        "visible" : true,
+        "width" : 375,
+        "widthType" : 0
+      },
+      {
+        "__class" : "CodeComponentNode",
+        "aspectRatio" : null,
+        "bottom" : null,
+        "centerAnchorX" : 0.28799999999999998,
+        "centerAnchorY" : 0.1145320197044335,
+        "children" : [
+
+        ],
+        "clip" : true,
+        "codeComponentIdentifier" : ".\/Stepper.tsx_Stepper",
+        "codeComponentProps" : {
+          "clamp" : false,
+          "disabled" : false,
+          "max" : 10,
+          "min" : 0,
+          "step" : 1,
+          "value" : 0
+        },
+        "codeOverrideEnabled" : false,
+        "constraintsLocked" : false,
+        "deviceType" : null,
+        "exportOptions" : [
+
+        ],
+        "fillColor" : "rgba(255,255,255,1)",
+        "fillEnabled" : false,
+        "fillGradient" : {
+          "__class" : "LinearGradient",
+          "alpha" : 1,
+          "angle" : 0,
+          "end" : "rgba(0,0,0,0)",
+          "start" : "black"
+        },
+        "fillImage" : null,
+        "fillImagePixelHeight" : null,
+        "fillImagePixelWidth" : null,
+        "fillImageResize" : "fill",
+        "fillType" : "color",
+        "height" : 50,
+        "heightType" : 0,
+        "id" : "SSJpxQQHa",
+        "intrinsicHeight" : 50,
+        "intrinsicWidth" : 200,
+        "left" : 9750,
+        "locked" : false,
+        "name" : null,
+        "opacity" : 1,
+        "originalid" : null,
+        "parentid" : "NUXTU4rYC",
+        "previewSettings" : null,
+        "radius" : 0,
+        "radiusBottomLeft" : 0,
+        "radiusBottomRight" : 0,
+        "radiusIsRelative" : false,
+        "radiusPerCorner" : false,
+        "radiusTopLeft" : 0,
+        "radiusTopRight" : 0,
+        "right" : null,
+        "rotation" : 0,
+        "top" : -102,
+        "visible" : true,
+        "width" : 200,
         "widthType" : 0
       }
     ],

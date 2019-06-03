@@ -31,18 +31,19 @@ To use these components inside of your code components, import them from the lib
 ```jsx
 import * as React from "react"
 import { Frame, addPropertyControls, ControlType } from "framer"
-import { Button } from "@framer/steveruizok.education/code/Button"
+import { Button, Icon } from "@framer/steveruizok.education/code"
 ```
 
 To use the project’s shared colors in your code, you can use this import:
 
 ```tsx
-import { colors } from "@framer/steveruizok.education/code/canvas”
+import { colors } from "@framer/steveruizok.education/code”
 ```
 
 # Changelog
 
-- Add offline icons
+- Adds index for easier imports
+- Adds offline icons
 - Adds Card
 - Adds Navigation, TabBar, Map
 - Fixes Text
