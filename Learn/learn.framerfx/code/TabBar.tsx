@@ -36,6 +36,7 @@ export function TabBar(props: Partial<Props>) {
         showTitles,
     } = props
 
+    // Create our tab objects (if we've received strings)
     const tabObjects: TabObject[] = tabs.map(t => {
         if (typeof t === "string") {
             return {
@@ -47,8 +48,10 @@ export function TabBar(props: Partial<Props>) {
         }
     })
 
+    // Get the tab labels
     const tabLabels = tabObjects.map(t => t.title)
 
+    // Calculate initial selected index
     const initialSelectedIndex =
         typeof currentTab === "number"
             ? currentTab
@@ -56,10 +59,19 @@ export function TabBar(props: Partial<Props>) {
                   tabObjects.find(t => t.title === currentTab)
               ) || 0
 
+    // Set the initial selected index
     const [state, setState] = React.useState({
         selectedIndex: initialSelectedIndex,
     })
 
+    // Update state when we get a new selected index
+    React.useEffect(() => {
+        setState({
+            selectedIndex: initialSelectedIndex,
+        })
+    }, [initialSelectedIndex])
+
+    // Update state when the user taps a new tab
     const handleTap = (selectedIndex: number) => {
         if (selectedIndex === state.selectedIndex) return
 
@@ -70,8 +82,6 @@ export function TabBar(props: Partial<Props>) {
             selectedIndex,
         })
     }
-
-    // Presentation
 
     return (
         <Stack

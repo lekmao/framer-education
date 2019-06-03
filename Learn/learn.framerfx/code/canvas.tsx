@@ -3,7 +3,6 @@ import { createDesignComponent, CanvasStore } from "framer"
 const canvas = CanvasStore.shared(); // CANVAS_DATA;
 export const Container = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_x678hlcb8", {}, 375,220);
 export const Divider = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_bqsC9adwp", {}, 375,48);
-export const Elements_Logo = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_OOVp9H_CU", {}, 50,50);
 export const Helpers_Colors = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_vK6xsDKRe", {}, 375,812);
 export const Helpers_Text = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_T6QtGhQiI", {}, 375,812);
 export const Template = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_XREstntDl", {}, 375,812);
@@ -11,8 +10,8 @@ export const Templates_Navigation = createDesignComponent<{parentSize?:{width:nu
 export const Templates_NavigationLarge = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_PeXYyIRny", {}, 375,812);
 
 export const colors = Object.freeze({
-    /** #005CFE */
-    "Primary": "var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254))",
+    /** #0056FE */
+    "Primary": "var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 86, 254))",
     /** #03AFE8 */
     "Secondary": "var(--token-c56b99fa-6bea-4887-b827-36fa58a3817f, rgb(3, 175, 232))",
     /** #FFAB57 */

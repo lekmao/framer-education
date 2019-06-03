@@ -12,6 +12,7 @@ Learn is a design system for Framer X.
 
 The package currently includes:
 
+- Logo
 - Shared Colors
 - Icon
 - Text
@@ -96,6 +97,10 @@ Learn currently includes:
  
 # Changelog
 
+- Updates TabBar to accept new tab index
+- Updates Image
+- Resizing on Icons
+- Text reflow on resize
 - Updates artwork, title
 - Adds Stepper, removes Styled Components, replaces Icon font with SVG Icons (for offline use)
 - Adds index for easier imports

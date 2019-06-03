@@ -21,7 +21,7 @@ export function Icon(props: Props) {
             distribution="center"
         >
             <svg
-                viewBox={`0 0 ${size} ${size}`}
+                viewBox={`0 0 24 24`}
                 style={{
                     height: size,
                     width: size,
