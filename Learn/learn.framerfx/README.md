@@ -1,6 +1,16 @@
-# Learn
+Learn is a design system for Framer X.
 
-Learn is a design system for Framer X. Both the docs and this package are in progress, so expect some changes!
+👉 [Explore the code!](https://github.com/framer/framer-education/tree/master/Learn/learn.framerfx)
+
+👉 [Read the docs!](https://github.com/framer/framer-education/wiki)
+
+👉 [See example projects!](https://github.com/framer/framer-education/tree/master/Projects)
+
+# Usage
+
+## Components 
+
+The package currently includes:
 
 - Shared Colors
 - Icon
@@ -25,11 +35,7 @@ Learn is a design system for Framer X. Both the docs and this package are in pro
 - Card
 - Map
 
-# Usage
-
 To use these components inside of your code components, import them from `"@framer/steveruizok.education/code”`.
-
-## Components
 
 ```jsx
 import * as React from "react"
@@ -46,7 +52,7 @@ export function MyComponent (props) {
 }
 ```
 
-### Colors
+## Colors
 
 You can use the same import to pull the shared colors:
 
@@ -61,7 +67,7 @@ export function ColorOverride: Override () {
 }
 ```
 
-### Utils
+## Utils
 
 This package also includes several helper utilities.
 
@@ -90,6 +96,7 @@ Learn currently includes:
  
 # Changelog
 
+- Updates artwork, title
 - Adds Stepper, removes Styled Components, replaces Icon font with SVG Icons (for offline use)
 - Adds index for easier imports
 - Adds offline icons

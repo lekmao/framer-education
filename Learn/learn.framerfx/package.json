@@ -12,7 +12,7 @@
 	},
 	"framer": {
 		"id": "7668635d-a905-469e-ace4-623b6d8ffb30",
-		"displayName": "Learn"
+		"displayName": "Learn Design System"
 	},
 	"author": "Steve Ruiz",
 	"dependencies": {
@@ -23,5 +23,5 @@
 		"react-select": "^3.0.3"
 	},
 	"name": "@framer/steveruizok.education",
-	"version": "1.58.0"
+	"version": "1.61.0"
 }
