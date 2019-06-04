@@ -8,9 +8,10 @@ import { colors } from "./canvas"
 type Props = Partial<FrameProps> & {
     value: string
     options: string[]
+    required: boolean
     disabled: boolean
     onValueChange: (value: string, index: number, valid: boolean) => void
-    validation: (value: string) => boolean
+    validation: (value: string, index: number) => boolean
 }
 
 export function Segment(props: Partial<Props>) {
@@ -20,6 +21,7 @@ export function Segment(props: Partial<Props>) {
     const {
         value: initial,
         options,
+        required,
         disabled,
         validation,
         onValueChange,
@@ -31,27 +33,40 @@ export function Segment(props: Partial<Props>) {
     // Set the initial value
     const initialSelectedIndex =
         typeof initial === "number" ? initial : options.indexOf(initial)
+
     const initialValue =
         typeof initial === "number" ? options[initialSelectedIndex] : initial
+
+    const validate = (value, index) =>
+        index && index >= 0 ? validation(value, index) : !required
 
     // Initialize state with props values
     const [state, setState] = React.useState({
         value: initialValue,
         selectedIndex: initialSelectedIndex,
-        valid: validation(initialValue || null),
+        valid: validate(initialValue, initialSelectedIndex),
     })
 
     // When the hook receives new props values, overwrite the state
     React.useEffect(() => {
-        const selectedValue = initialValue
+        const selectedValue = initialValue || null
+        const selectedIndex = options.indexOf(selectedValue) || null
 
         setState({
             ...state,
-            value: selectedValue || null,
+            value: selectedValue,
             selectedIndex: options.indexOf(selectedValue),
-            valid: validation(state.value || selectedValue || null),
+            valid: validate(selectedValue, selectedIndex),
         })
-    }, [initialValue, options, validation])
+    }, [initialValue, options])
+
+    // Re-validate when required or validation changes
+    React.useEffect(() => {
+        setState({
+            ...state,
+            valid: validate(state.value, state.selectedIndex),
+        })
+    }, [validation, required])
 
     /* ----------------------------- Event Handlers ----------------------------- */
 
@@ -63,7 +78,7 @@ export function Segment(props: Partial<Props>) {
 
         const value = selectedValue || null
 
-        const valid = validation(value)
+        const valid = validation(value, selectedIndex)
 
         onValueChange(value, selectedIndex, valid)
 
@@ -119,26 +134,16 @@ export function Segment(props: Partial<Props>) {
                     {options.map((option, index) => {
                         // An option is selected if its index matches the state's selectedIndex
                         const focused = index === selectedIndex
-
-                        return focused ? (
-                            <Button
+                        return (
+                            <Link
                                 key={`${props.id}_option_${index}`}
                                 width={"1fr"}
                                 text={option}
-                                type="primary"
-                                disabled={disabled}
-                                onTap={() =>
-                                    !disabled && setSelectedIndex(index)
+                                background={
+                                    focused ? colors.Primary : colors.Light
                                 }
-                            />
-                        ) : (
-                            <Link
-                                key={`${props.id}_option_${index}`}
-                                width="1fr"
-                                text={option}
-                                type="primary"
+                                type={focused ? "ghost" : "primary"}
                                 disabled={disabled}
-                                background={colors.Light}
                                 onTap={() =>
                                     !disabled && setSelectedIndex(index)
                                 }
@@ -158,8 +163,8 @@ Segment.defaultProps = {
     disabled: false,
     tint: "#027aff",
     textTint: "#FFFFFF",
-    value: "Paris",
-    options: ["Paris", "New York", "London"],
+    value: null,
+    options: [],
     onValueChange: () => null,
     validation: () => true,
 }
@@ -178,6 +183,11 @@ addPropertyControls(Segment, {
         },
         defaultValue: ["Paris", "New York", "London"],
         title: "Options",
+    },
+    required: {
+        type: ControlType.Boolean,
+        defaultValue: false,
+        title: "Required",
     },
     disabled: {
         type: ControlType.Boolean,

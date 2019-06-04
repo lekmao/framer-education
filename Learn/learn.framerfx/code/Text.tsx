@@ -23,9 +23,6 @@ type Props = Partial<FrameProps> & {
 
 export function Text(props: Partial<Props>) {
     const {
-        size,
-        height,
-        width,
         fontSize,
         text,
         fontWeight,
@@ -42,8 +39,10 @@ export function Text(props: Partial<Props>) {
         paddingBottom,
         resize,
         onResize,
-        style,
+        ...rest
     } = props
+
+    const { size, height, width, style } = props
 
     const resizeRef = React.createRef<HTMLDivElement>()
 
@@ -171,7 +170,7 @@ export function Text(props: Partial<Props>) {
     return (
         <Frame
             // Constant props
-            height={size || height}
+            {...rest}
             width={state.width}
             background={background}
             style={...style as any}

@@ -19,6 +19,7 @@ type Props = Partial<FrameProps> & {
     max: number
     step: number
     value: number | boolean
+    required: boolean
     pc_number_value: number
     pc_boolean_value: boolean
     validation: (value: boolean | number) => boolean
@@ -75,7 +76,6 @@ export function RowItem(props: Partial<Props>) {
                 height={"100%"}
                 paddingRight={8}
                 width={"100%"}
-                background={colors.Light}
             >
                 <Text
                     type="body"
@@ -93,10 +93,11 @@ export function RowItem(props: Partial<Props>) {
 }
 
 RowItem.defaultProps = {
-    height: 49,
+    height: 50,
     width: 250,
     text: "Row Item",
     component: "stepper",
+    required: false,
     validation: () => true,
     onValueChange: () => null,
     icon: "chevron-right",

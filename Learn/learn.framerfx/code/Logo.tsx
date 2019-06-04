@@ -62,6 +62,7 @@ export function Logo(props) {
                 <g transform="translate(9.834 10.212)">
                     <path
                         d="M 3.734 14.088 C 3.653 13.098 2.204 13.098 2.122 14.088 L 1.38 23.121 C 1.339 23.618 1.485 24.113 1.79 24.508 L 2.122 24.937 C 2.53 25.465 3.327 25.465 3.734 24.937 L 4.066 24.508 C 4.371 24.113 4.518 23.618 4.477 23.121 Z"
+                        transform="translate(0 .8)"
                         fill={flat ? colors.Darker : colors.Accent}
                     />
                     <path

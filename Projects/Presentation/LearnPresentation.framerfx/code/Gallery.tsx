@@ -1,3 +1,4 @@
+import * as React from "react"
 import { Override, useCycle, Data } from "framer"
 
 // Override Docs: https://framer.com/docs/overrides
@@ -7,42 +8,42 @@ const container = {
     height: 472,
 }
 
-const state = Data({
-    canZoom: true,
-    zoomed: false,
-})
-
 export function Scale(props): Override {
-    const [zoomed, cycle] = useCycle(false, true)
-    // const zoomed = state.zoomed === props.id
-
     const zoom = {
         y: -props.top,
         x: -props.left,
     }
 
+    const [state, setState] = React.useState({
+        isZoomed: false,
+        isForward: false,
+    })
+
+    const { isZoomed, isForward } = state
+
     return {
         onTap: () => {
-            cycle()
-            // if (state.zoomed === props.id) {
-            //     state.zoomed = null
-            // } else if (!state.zoomed) {
-            //     state.zoomed = props.id
-            // }
+            setState({
+                isForward: true,
+                isZoomed: !isZoomed,
+            })
         },
         style: {
             ...props.style,
-            zIndex: zoomed ? 999 : 0,
+            zIndex: isForward ? 999 : 0,
         },
         onAnimationComplete: () => {
-            state.canZoom = true
+            setState({
+                ...state,
+                isForward: isZoomed ? true : false,
+            })
         },
         animate: {
-            x: zoomed ? zoom.x : 0,
-            y: zoomed ? zoom.y : 0,
+            x: isZoomed ? zoom.x : 0,
+            y: isZoomed ? zoom.y : 0,
             // z: zoomed ? 999 : 0,
-            width: zoomed ? container.width : props.width,
-            height: zoomed ? container.height : props.height,
+            width: isZoomed ? container.width : props.width,
+            height: isZoomed ? container.height : props.height,
             transition: {
                 type: "tween",
                 easing: "easeOut",

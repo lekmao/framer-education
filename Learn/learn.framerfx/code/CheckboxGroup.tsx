@@ -6,8 +6,9 @@ import { colors } from "./canvas"
 type Props = Partial<FrameProps> & {
     value: string[]
     options: string[]
+    required: boolean
     disabled: boolean
-    validation: (value: string[]) => boolean
+    validation: (value: string[], indices: boolean[]) => boolean
     onValueChange: (value: string[], valid: boolean) => void
 }
 
@@ -20,13 +21,13 @@ export function CheckboxGroup(props: Partial<Props>) {
     // renaming the value and selectedIndex, to avoid conflicting with the
     // state's `value` and `selectedIndex` properties.
     const {
-        width,
-        height,
         value: initial,
         options,
+        required,
         disabled,
         validation,
         onValueChange,
+        ...rest
     } = props
 
     /* ---------------------------------- State --------------------------------- */
@@ -42,11 +43,15 @@ export function CheckboxGroup(props: Partial<Props>) {
 
     const initialValue = options.filter((option, i) => initialIndices[i])
 
+    // Get a valid state for the current value
+    const validate = (value, indices) =>
+        value && value.length > 0 ? validation(value, indices) : !required
+
     // Initialize state with props values
     const [state, setState] = React.useState({
         value: initialValue,
         selectedIndices: initialIndices,
-        valid: validation(initialValue),
+        valid: validation(initialValue, initialIndices),
     })
 
     // When the hook receives new props values, overwrite the state
@@ -55,9 +60,17 @@ export function CheckboxGroup(props: Partial<Props>) {
             ...state,
             value: initialValue,
             selectedIndices: initialIndices,
-            valid: validation(initialValue),
+            valid: validate(initialValue, initialIndices),
         })
-    }, [options, validation, initial])
+    }, [options, initial])
+
+    // Re-validate when required or validation changes
+    React.useEffect(() => {
+        setState({
+            ...state,
+            valid: validate(state.value, state.selectedIndices),
+        })
+    }, [required, validation])
 
     /* ----------------------------- Event Handlers ----------------------------- */
 
@@ -72,7 +85,7 @@ export function CheckboxGroup(props: Partial<Props>) {
 
         const value = options.filter((option, i) => selectedIndices[i])
 
-        const valid = validation(value)
+        const valid = validation(value, selectedIndices)
 
         onValueChange(value, valid)
 
@@ -88,8 +101,8 @@ export function CheckboxGroup(props: Partial<Props>) {
 
     return (
         <Stack
-            height={height}
-            width={width}
+            {...rest}
+            height={options.length * 50}
             direction="vertical"
             alignment="center"
             gap={1}
@@ -103,12 +116,14 @@ export function CheckboxGroup(props: Partial<Props>) {
                 return (
                     <RowItem
                         key={`${props.id}_option_${index}`}
+                        width="100%"
+                        height={49}
                         text={option}
                         component="checkbox"
-                        width="100%"
                         disabled={disabled}
                         value={selectedIndices[index]}
                         validation={() => valid}
+                        background={colors.Light}
                         onTap={() =>
                             !disabled &&
                             setSelectedIndex(index, !selectedIndices[index])
@@ -126,6 +141,7 @@ CheckboxGroup.defaultProps = {
     options: ["Paris", "New York", "London", "Hong Kong"],
     height: 200,
     width: 320,
+    required: false,
     disabled: false,
     onValueChange: () => null,
     validation: () => true,
@@ -148,6 +164,11 @@ addPropertyControls(CheckboxGroup, {
         },
         defaultValue: ["Paris", "New York", "London", "Hong Kong"],
         title: "Options",
+    },
+    required: {
+        type: ControlType.Boolean,
+        defaultValue: false,
+        title: "Required",
     },
     disabled: {
         type: ControlType.Boolean,

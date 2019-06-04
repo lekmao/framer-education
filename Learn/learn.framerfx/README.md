@@ -93,9 +93,15 @@ Learn currently includes:
 * `normalize`
 * `pull`
 * `pullAtIndex`
+* `sleep`
  
 # Changelog
 
+- Fixes disabled on Checkbox.
+- Adds required to inputs, clarifies validation.
+- Fixes spacing in links.
+- Adds titles to Slider
+- Adds sleep utility
 - Removes map (performance issues)
 - Fixes padding on Text
 - Fixes stepper

@@ -119,3 +119,24 @@ export function pullAtIndex(array: any[], ...indexes) {
     pulled.forEach(v => array.push(v))
     return removed
 }
+
+/**
+ * Sleep for a duration. This utility only works in an async function.
+ *
+ * - `duration` - How many seconds to wait.
+ * 
+ * ```
+ async function Example() {
+     console.log("First message")
+     await sleep(1.5)
+     console.log("Second message")
+     await sleep(2)
+     console.log("Third message")
+ }
+ ```
+*/
+export function sleep(duration: number) {
+    return new Promise(resolve => {
+        setTimeout(resolve, duration * 1000)
+    })
+}

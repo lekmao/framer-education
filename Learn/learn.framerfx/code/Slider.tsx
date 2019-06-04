@@ -8,6 +8,7 @@ import {
     FrameProps,
 } from "framer"
 import { Interactive } from "./Interactive"
+import { Text } from "./Text"
 import { colors } from "./canvas"
 
 let i = 0
@@ -19,6 +20,7 @@ type Props = Partial<FrameProps> & {
     value: number
     disabled: boolean
     step: number
+    titles: boolean
     onDrag: any
     onDragStart: any
     onDragEnd: any
@@ -39,16 +41,26 @@ export function Slider(props: Partial<Props>) {
         value: initialValue,
         min,
         max,
-        disabled,
         step,
-        width,
+        titles,
         validation,
         onValueChange,
+        onDragStart,
+        onDragEnd,
+        onDrag,
+        ...rest
     } = props
 
-    /* ---------------------------------- State --------------------------------- */
+    const railWidth = props.width - knobSize
 
-    const railWidth = width - knobSize
+    // Get number of decimal places to add to the title
+    let places
+    let stepString = JSON.stringify(step)
+    places = stepString.includes(".")
+        ? Math.min(stepString.split(".")[1].length, 3)
+        : 0
+
+    /* ------------------------------ Motion Values ----------------------------- */
 
     function toStep(number) {
         return Math.round(number / step) * step
@@ -64,14 +76,18 @@ export function Slider(props: Partial<Props>) {
         toProgress(toStep(min + (v / railWidth) * (max - min)) * railWidth)
     )
 
+    /* ---------------------------------- State --------------------------------- */
+
     const initialValid = React.useRef(
         validation(initialValue, toProgress(initialValue))
     )
 
     const isValid = React.useRef(initialValid.current)
+    const prevValue = React.useRef(initialValue)
 
     const [state, setState] = React.useState({
         valid: initialValid.current,
+        valueTitle: prevValue.current.toFixed(places),
     })
 
     // When the hook receives new props values, overwrite the state
@@ -86,20 +102,41 @@ export function Slider(props: Partial<Props>) {
         const progress = toProgress(value)
         const valid = validation(value, progress)
 
+        // Motion Values change a lot, so we really really don't
+        // want to update state unless we absolutely have to
+
+        let validChange, valueChange
+
+        // Check if valid has changed
         if (valid !== isValid.current) {
             isValid.current = valid
-            setState({ valid })
+            validChange = true
         }
 
-        if (!disabled) {
-            onValueChange(value, progress, valid)
+        // If titles are on, check if value has changed
+        if (value !== prevValue.current) {
+            prevValue.current = value
+            valueChange = true
+
+            // Call onValueChanged, too
+            if (!props.disabled) {
+                onValueChange(value, progress, valid)
+            }
+        }
+
+        // Update state if valid has changed, or if titles are on and value has changed
+        if (validChange || (titles && valueChange)) {
+            setState({
+                valid: isValid.current,
+                valueTitle: prevValue.current.toFixed(places),
+            })
         }
     })
 
     /* ------------------------------ Presentation ------------------------------ */
 
     // Get the properties we want from state
-    const { onDragStart, onDragEnd, onDrag } = props
+    const {} = props
 
     const variants = {
         initial: {
@@ -119,7 +156,7 @@ export function Slider(props: Partial<Props>) {
     return (
         <Interactive
             // Constants
-            {...props as any}
+            {...rest}
             height={40}
             background="none"
             drag={false}
@@ -146,6 +183,29 @@ export function Slider(props: Partial<Props>) {
                         width={knobX}
                         left={knobSize / 2}
                     />
+                    {titles && (
+                        <>
+                            <Text
+                                text={min.toString()}
+                                width={knobSize}
+                                y={16}
+                                height="100%"
+                                type={"caption"}
+                                textAlign="center"
+                                verticalAlign="bottom"
+                            />
+                            <Text
+                                text={max.toString()}
+                                width={knobSize}
+                                y={16}
+                                x={railWidth}
+                                height="100%"
+                                type={"caption"}
+                                textAlign="center"
+                                verticalAlign="bottom"
+                            />
+                        </>
+                    )}
                     <Frame size={40} x={knobX} center="y" background="none">
                         <Frame
                             background={colors.Light}
@@ -156,18 +216,29 @@ export function Slider(props: Partial<Props>) {
                             center
                             {...variants[state.valid ? current : "warn"]}
                         />
+                        {titles && (
+                            <Text
+                                text={state.valueTitle}
+                                y={-16}
+                                center="x"
+                                type={"caption"}
+                                height={12}
+                                textAlign="center"
+                                verticalAlign="bottom"
+                            />
+                        )}
                     </Frame>
                     <Frame
                         size={40}
                         center="y"
                         background="none"
                         x={dragX}
-                        drag={disabled ? false : "x"}
+                        drag={props.disabled ? false : "x"}
                         dragMomentum={false}
                         dragElastic={false}
                         dragConstraints={{
                             left: 0,
-                            right: width - knobSize,
+                            right: props.width - knobSize,
                         }}
                         onDrag={onDrag}
                         onDragStart={onDragStart}
@@ -181,16 +252,14 @@ export function Slider(props: Partial<Props>) {
 
 // Set the component's default properties
 Slider.defaultProps = {
+    center: true,
     height: 40,
     width: 320,
-    knobSize: 40,
-    railHeight: 8,
     step: 0.01,
     value: 62,
     min: 0,
     max: 100,
-    tint: "#027aff",
-    accent: "#FFFFFF",
+    titles: false,
     validation: v => true,
     onValueChange: () => null,
 }
@@ -220,11 +289,17 @@ addPropertyControls(Slider, {
     },
     step: {
         type: ControlType.Number,
-        min: 0.01,
+        min: 0.001,
         max: 100,
-        step: 0.01,
+        step: 0.001,
         defaultValue: 0.01,
+        displayStepper: true,
         title: "Step",
+    },
+    titles: {
+        type: ControlType.Boolean,
+        defaultValue: false,
+        title: "Titles",
     },
     disabled: {
         type: ControlType.Boolean,

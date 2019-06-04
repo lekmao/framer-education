@@ -19,11 +19,16 @@ type Props = Partial<FrameProps> & {
 
 export function Link(props: Partial<Props>) {
     // Grab the properties we want to use from props
-    const { height, width, disabled, onTap, text, icon, type, resize } = props
+    const { onTap, text, icon, type, resize, ...rest } = props
+    const { height, width, disabled } = props
 
     const [state, setState] = React.useState({
         width,
     })
+
+    React.useEffect(() => {
+        setState({ width })
+    }, [width])
 
     /* ----------------------------- Event Handlers ----------------------------- */
 
@@ -66,7 +71,7 @@ export function Link(props: Partial<Props>) {
     return (
         // Pass in container props when using this component in code
         <Interactive
-            {...props as any}
+            {...rest}
             {...state}
             // Events
             onTap={!disabled && handleTap}
@@ -76,7 +81,7 @@ export function Link(props: Partial<Props>) {
                     icon === "none" ? (
                         <Text
                             // Constant props
-                            height="100%"
+                            height={height}
                             width="100%"
                             type="link"
                             color={theme[type].foreground}

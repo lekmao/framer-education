@@ -7,8 +7,9 @@ type Props = Partial<FrameProps> & {
     options: string[]
     value: string
     disabled: boolean
+    required: boolean
     onValueChange: (value: string, index: number, valid: boolean) => void
-    validation: (value: string) => boolean
+    validation: (value: string, index: number) => boolean
 }
 
 /**
@@ -27,6 +28,7 @@ export function RadioGroup(props: Partial<Props>) {
         onValueChange,
         height,
         width,
+        required,
     } = props
 
     /* ---------------------------------- State --------------------------------- */
@@ -34,14 +36,21 @@ export function RadioGroup(props: Partial<Props>) {
     // Set the initial value
     const initialSelectedIndex =
         typeof initial === "number" ? initial : options.indexOf(initial)
+
     const initialValue =
         typeof initial === "number" ? options[initialSelectedIndex] : initial
+
+    // Get a valid state for the current value
+    const validate = (value, index) =>
+        index && index >= 0
+            ? validation(value || initialValue, index || initialSelectedIndex)
+            : !required
 
     // Initialize state with props values
     const [state, setState] = React.useState({
         value: initialValue,
         selectedIndex: initialSelectedIndex,
-        valid: validation(initialValue || null),
+        valid: validate(initialValue, initialSelectedIndex),
     })
 
     // When the hook receives new props values, overwrite the state
@@ -52,9 +61,17 @@ export function RadioGroup(props: Partial<Props>) {
             ...state,
             value: selectedValue || null,
             selectedIndex: options.indexOf(selectedValue),
-            valid: validation(state.value || selectedValue || null),
+            valid: validate(state.value, state.selectedIndex),
         })
     }, [initialValue, validation, options])
+
+    // Re-validate when required or validation changes
+    React.useEffect(() => {
+        setState({
+            ...state,
+            valid: validate(state.value, state.selectedIndex),
+        })
+    }, [required, validation])
 
     /* ----------------------------- Event Handlers ----------------------------- */
 
@@ -66,7 +83,7 @@ export function RadioGroup(props: Partial<Props>) {
 
         const value = selectedValue || null
 
-        const valid = validation(value)
+        const valid = validation(value, selectedIndex)
 
         onValueChange(value, selectedIndex, valid)
 
@@ -78,14 +95,12 @@ export function RadioGroup(props: Partial<Props>) {
         })
     }
 
-    /* ------------------------------- Presntation ------------------------------ */
-
     // Get the properties we want from state
     const { value, selectedIndex, valid } = state
 
     return (
         <Stack
-            height={height}
+            height={options.length * 50}
             width={width}
             direction="vertical"
             alignment="center"
@@ -100,12 +115,14 @@ export function RadioGroup(props: Partial<Props>) {
                 return (
                     <RowItem
                         key={`${props.id}_option_${index}`}
+                        width="100%"
+                        height={49}
                         text={option}
                         component="radio"
-                        width="100%"
                         disabled={disabled}
                         value={index === selectedIndex}
                         validation={() => valid}
+                        background={colors.Light}
                         onTap={() => !disabled && setSelectedIndex(index)}
                     />
                 )
@@ -116,11 +133,12 @@ export function RadioGroup(props: Partial<Props>) {
 
 // Set the component's default properties
 RadioGroup.defaultProps = {
-    value: "Paris",
-    options: ["Paris", "New York", "London", "Hong Kong"],
+    value: null,
+    options: [],
     height: 200,
     width: 320,
     disabled: false,
+    required: false,
     onValueChange: () => null,
     validation: () => true,
 }
@@ -139,6 +157,11 @@ addPropertyControls(RadioGroup, {
         },
         defaultValue: ["Paris", "New York", "London", "Hong Kong"],
         title: "Options",
+    },
+    required: {
+        type: ControlType.Boolean,
+        defaultValue: false,
+        title: "Required",
     },
     disabled: {
         type: ControlType.Boolean,

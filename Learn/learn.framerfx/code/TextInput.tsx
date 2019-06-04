@@ -7,6 +7,7 @@ import { colors } from "./canvas"
 type Props = Partial<FrameProps> & {
     value: string
     disabled: boolean
+    required: boolean
     onValueChange: (value: string, valid: boolean) => any
     validation: (value: string) => boolean
 } & {
@@ -14,17 +15,13 @@ type Props = Partial<FrameProps> & {
     readOnly: boolean
     password: boolean
     message: string
-    delay: number
+    delay: number // seconds
     clearable: boolean
     onBlur: (value: string, valid: boolean) => any
     onFocus: (value: string, valid: boolean) => any
     onInputStart: () => any
 }
 
-/**
- * TextInput
- * @param props
- */
 export function TextInput(props: Partial<Props>) {
     // Grab the properties we want to use from props (note that we're
     // renaming the value to avoid conflicting with the state's `value`
@@ -32,7 +29,6 @@ export function TextInput(props: Partial<Props>) {
     const {
         value: initialValue,
         placeholder,
-        disabled,
         readOnly,
         password,
         validation,
@@ -41,6 +37,8 @@ export function TextInput(props: Partial<Props>) {
         message,
         delay,
         clearable,
+        required,
+        ...rest
     } = props
 
     /* ---------------------------------- State --------------------------------- */
@@ -65,11 +63,25 @@ export function TextInput(props: Partial<Props>) {
         setState({
             ...state,
             value: initialValue,
-            valid: validation(state.value || initialValue),
+            valid: validate(state.value),
         })
-    }, [initialValue, validation])
+    }, [initialValue])
+
+    // Re-validate when required or validation changes
+    React.useEffect(() => {
+        setState({
+            ...state,
+            valid: validate(state.value),
+        })
+    }, [validation, required])
 
     /* ----------------------------- Event Handlers ----------------------------- */
+
+    // Get a valid state for the current value
+    const validate = value =>
+        value && value.length > 0
+            ? validation(value || initialValue)
+            : !required
 
     // Set the focus state when the user clicks in or out of the input
     const setFocus = (focused: boolean) => {
@@ -97,15 +109,24 @@ export function TextInput(props: Partial<Props>) {
         // Set value and typing states
         setState({ ...state, value, typing: true })
 
-        // After .5 seconds, check whether inputValue is still the same
-        setTimeout(() => {
-            // And if it is, run onValueChange and update state
-            if (value === inputValue.current) {
-                const valid = validation(value)
-                onValueChange(value, valid)
-                setState({ ...state, typing: false, value, valid })
-            }
-        }, delay)
+        // Check whether inputValue is still the same
+        delay > 0
+            ? // If we have a delay, use the delay
+              setTimeout(() => updateState(value), delay * 1000)
+            : // Otherwise, check immediately
+              updateState(value)
+    }
+
+    // A shared callback to update state
+    const updateState = value => {
+        // Compare the current value against the inputValue ref,
+        // and bail if there's a disagreement (it means that the user)
+        // has entered new text while the timeout was running
+        if (value === inputValue.current) {
+            const valid = value ? validate(value) : !required
+            onValueChange(value, valid)
+            setState({ ...state, typing: false, value, valid })
+        }
     }
 
     // Clear input
@@ -140,7 +161,7 @@ export function TextInput(props: Partial<Props>) {
     }
 
     return (
-        <Interactive {...props as any} active={false} overflow={"hidden"}>
+        <Interactive {...rest} active={false} overflow={"hidden"}>
             {current => (
                 <>
                     <Frame
@@ -157,7 +178,7 @@ export function TextInput(props: Partial<Props>) {
                         type={password ? "password" : "text"}
                         value={value || ""}
                         placeholder={placeholder || ""}
-                        disabled={disabled}
+                        disabled={props.disabled}
                         readOnly={readOnly}
                         style={{
                             position: "absolute",
@@ -230,13 +251,14 @@ TextInput.defaultProps = {
     value: undefined,
     placeholder: undefined,
     disabled: false,
+    required: false,
     readOnly: false,
     onFocus: () => null,
     onBlur: () => null,
-    validation: () => true,
+    validation: v => true,
     onInputStart: () => null,
     onValueChange: () => null,
-    delay: 250,
+    delay: 0.25,
     height: 50,
     width: 320,
 }
@@ -253,6 +275,11 @@ addPropertyControls(TextInput, {
         defaultValue: "",
         title: "Placeholder",
     },
+    message: {
+        type: ControlType.String,
+        defaultValue: "",
+        title: "Message",
+    },
     password: {
         type: ControlType.Boolean,
         defaultValue: false,
@@ -263,19 +290,19 @@ addPropertyControls(TextInput, {
         defaultValue: false,
         title: "Read Only",
     },
-    disabled: {
-        type: ControlType.Boolean,
-        defaultValue: false,
-        title: "Disabled",
-    },
     clearable: {
         type: ControlType.Boolean,
         defaultValue: true,
         title: "Clearable",
     },
-    message: {
-        type: ControlType.String,
-        defaultValue: "",
-        title: "Message",
+    required: {
+        type: ControlType.Boolean,
+        defaultValue: false,
+        title: "Required",
+    },
+    disabled: {
+        type: ControlType.Boolean,
+        defaultValue: false,
+        title: "Disabled",
     },
 })

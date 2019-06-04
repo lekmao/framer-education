@@ -18,14 +18,9 @@ export function Checkbox(props: Partial<Props>) {
     // Grab the properties we want to use from props (note that we're
     // renaming value to avoid conflicting with the state's value
     // property
-    const {
-        value: initialValue,
-        disabled,
-        onValueChange,
-        validation,
-        height,
-        width,
-    } = props
+    const { value: initialValue, onValueChange, validation, ...rest } = props
+
+    const { disabled } = props
 
     /* ---------------------------------- State --------------------------------- */
 
@@ -85,7 +80,7 @@ export function Checkbox(props: Partial<Props>) {
 
     return (
         <Interactive
-            {...props as any}
+            {...rest}
             height={50}
             width={50}
             onTap={!disabled && handleTap}
