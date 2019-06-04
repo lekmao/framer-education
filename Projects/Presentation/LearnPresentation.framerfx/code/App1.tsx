@@ -1,11 +1,29 @@
-import { Override } from "framer"
+import { Override, Data } from "framer"
 
 // Override Docs: https://framer.com/docs/overrides
 
-export function Scale(): Override {
+const state = Data({
+    disabled: false,
+    warn: false,
+})
+
+export function Input(): Override {
     return {
-        whileTap: {
-            scale: 0.6,
-        },
+        disabled: state.disabled,
+        validation: state.warn ? () => false : () => true,
+    }
+}
+
+export function SetDisabled(): Override {
+    return {
+        value: state.disabled,
+        onValueChange: v => (state.disabled = v),
+    }
+}
+
+export function SetWarn(): Override {
+    return {
+        value: state.warn,
+        onValueChange: v => (state.warn = v),
     }
 }

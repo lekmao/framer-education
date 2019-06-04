@@ -156,7 +156,10 @@ export function Interactive(props: Partial<Props>) {
             }}
             style={{
                 ...props.style,
-                cursor: doHover || doActive || onTap ? "pointer" : undefined,
+                cursor:
+                    !disabled && (doHover || doActive || onTap)
+                        ? "pointer"
+                        : undefined,
             }}
             // Events
             onMouseEnter={() => setHover(true)}

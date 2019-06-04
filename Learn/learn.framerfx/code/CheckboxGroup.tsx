@@ -57,7 +57,7 @@ export function CheckboxGroup(props: Partial<Props>) {
             selectedIndices: initialIndices,
             valid: validation(initialValue),
         })
-    }, [options, initial])
+    }, [options, validation, initial])
 
     /* ----------------------------- Event Handlers ----------------------------- */
 

@@ -30,6 +30,7 @@ export function Text(props: Partial<Props>) {
         text,
         fontWeight,
         color,
+        background,
         verticalAlign,
         textAlign,
         type,
@@ -149,13 +150,22 @@ export function Text(props: Partial<Props>) {
     }
 
     const paddings = paddingPerSide
-        ? { padding }
-        : {
-              padding: paddingPerSide === undefined ? padding : undefined,
+        ? {
               paddingRight,
               paddingBottom,
               paddingLeft,
               paddingTop,
+          }
+        : paddingPerSide === undefined
+        ? {
+              padding,
+              paddingRight,
+              paddingBottom,
+              paddingLeft,
+              paddingTop,
+          }
+        : {
+              padding,
           }
 
     return (
@@ -163,7 +173,7 @@ export function Text(props: Partial<Props>) {
             // Constant props
             height={size || height}
             width={state.width}
-            background="none"
+            background={background}
             style={...style as any}
         >
             <div
@@ -174,6 +184,7 @@ export function Text(props: Partial<Props>) {
                     flexDirection: "row",
                     alignItems: verticalFlexAligns[verticalAlign],
                     justifyContent: horizontalFlexAligns[textAlign],
+                    ...paddings,
                 }}
             >
                 <div
@@ -184,7 +195,7 @@ export function Text(props: Partial<Props>) {
                         color,
                         width: resize ? "fit-content" : "100%",
                         textAlign: textAligns[textAlign],
-                        ...paddings,
+                        overflow: "hidden",
                     }}
                 >
                     {text}
@@ -202,6 +213,7 @@ Text.defaultProps = {
     verticalAlign: "center",
     textAlign: "center",
     color: colors.Dark,
+    background: "none",
     resize: false,
     style: {},
     onResize: (width, height) => null,

@@ -16,12 +16,9 @@
 	},
 	"author": "Steve Ruiz",
 	"dependencies": {
-		"@mapbox/geo-viewport": "^0.4.0",
-		"geojson-extent": "^0.3.2",
-		"mapbox-gl": "^1.0.0",
 		"material-icons-bundle": "github:darosh/material-icons-bundle",
 		"react-select": "^3.0.3"
 	},
 	"name": "@framer/steveruizok.education",
-	"version": "1.67.0"
+	"version": "1.81.0"
 }

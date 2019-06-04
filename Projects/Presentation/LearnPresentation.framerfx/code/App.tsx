@@ -4,7 +4,7 @@ import { Override, Data } from "framer"
 
 export function Scale(): Override {
     return {
-        scale: 0.5,
+        scale: 0.55,
     }
 }
 

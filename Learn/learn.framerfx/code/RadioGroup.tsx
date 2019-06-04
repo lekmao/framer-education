@@ -52,9 +52,9 @@ export function RadioGroup(props: Partial<Props>) {
             ...state,
             value: selectedValue || null,
             selectedIndex: options.indexOf(selectedValue),
-            valid: validation(selectedValue || null),
+            valid: validation(state.value || selectedValue || null),
         })
-    }, [initialValue, options])
+    }, [initialValue, validation, options])
 
     /* ----------------------------- Event Handlers ----------------------------- */
 

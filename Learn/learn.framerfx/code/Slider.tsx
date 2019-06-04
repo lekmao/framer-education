@@ -10,6 +10,8 @@ import {
 import { Interactive } from "./Interactive"
 import { colors } from "./canvas"
 
+let i = 0
+
 type Props = Partial<FrameProps> & {
     width: number
     min: number
@@ -62,13 +64,15 @@ export function Slider(props: Partial<Props>) {
         toProgress(toStep(min + (v / railWidth) * (max - min)) * railWidth)
     )
 
-    const valid = useTransform(knobX, v =>
-        validation(v, toStep(min + (v / railWidth) * (max - min)))
+    const initialValid = React.useRef(
+        validation(initialValue, toProgress(initialValue))
     )
 
-    const containerBorder = useTransform(valid, v =>
-        v ? `1px solid ${colors.Neutral}` : `1px solid ${colors.Warn}`
-    )
+    const isValid = React.useRef(initialValid.current)
+
+    const [state, setState] = React.useState({
+        valid: initialValid.current,
+    })
 
     // When the hook receives new props values, overwrite the state
     React.useEffect(() => {
@@ -79,8 +83,16 @@ export function Slider(props: Partial<Props>) {
 
     knobX.onChange(v => {
         const value = toStep(min + (v / railWidth) * (max - min))
+        const progress = toProgress(value)
+        const valid = validation(value, progress)
+
+        if (valid !== isValid.current) {
+            isValid.current = valid
+            setState({ valid })
+        }
+
         if (!disabled) {
-            onValueChange(value, toProgress(value), valid.get())
+            onValueChange(value, progress, valid)
         }
     })
 
@@ -124,7 +136,7 @@ export function Slider(props: Partial<Props>) {
                         width={railWidth}
                         left={knobSize / 2}
                         background={colors.Neutral}
-                        border={containerBorder}
+                        border={`${state.valid ? 0 : 1}px solid ${colors.Warn}`}
                     />
                     <Frame
                         height={8}
@@ -142,7 +154,7 @@ export function Slider(props: Partial<Props>) {
                             borderRadius="100%"
                             shadow={`0px 2px 5px ${colors.Shadow}`}
                             center
-                            {...variants[valid ? current : "warn"]}
+                            {...variants[state.valid ? current : "warn"]}
                         />
                     </Frame>
                     <Frame
@@ -179,7 +191,7 @@ Slider.defaultProps = {
     max: 100,
     tint: "#027aff",
     accent: "#FFFFFF",
-    validation: () => true,
+    validation: v => true,
     onValueChange: () => null,
 }
 

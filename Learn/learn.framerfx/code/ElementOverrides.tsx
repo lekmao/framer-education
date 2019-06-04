@@ -3,7 +3,7 @@ import { Override, Data } from "framer"
 // Override Docs: https://framer.com/docs/overrides
 
 const state = Data({
-    values: [0, 0, 0],
+    values: [1, 0, 0],
     prices: [0.25, 0.5, 1.2],
 })
 

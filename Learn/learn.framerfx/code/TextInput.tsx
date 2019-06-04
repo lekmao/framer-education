@@ -65,7 +65,7 @@ export function TextInput(props: Partial<Props>) {
         setState({
             ...state,
             value: initialValue,
-            valid: validation(initialValue),
+            valid: validation(state.value || initialValue),
         })
     }, [initialValue, validation])
 

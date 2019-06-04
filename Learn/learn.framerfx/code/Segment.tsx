@@ -49,7 +49,7 @@ export function Segment(props: Partial<Props>) {
             ...state,
             value: selectedValue || null,
             selectedIndex: options.indexOf(selectedValue),
-            valid: validation(selectedValue || null),
+            valid: validation(state.value || selectedValue || null),
         })
     }, [initialValue, options, validation])
 

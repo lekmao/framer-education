@@ -34,6 +34,7 @@ export function Button(
         disabled,
         toggle,
         toggled: initialToggled,
+        ...rest
     } = props
 
     /* ---------------------------------- State --------------------------------- */

@@ -6,6 +6,7 @@ import { Switch } from "./Switch"
 import { Checkbox } from "./Checkbox"
 import { Radio } from "./Radio"
 import { Text } from "./Text"
+import { Stepper } from "./Stepper"
 import { iconNames, iconTitles } from "./Shared"
 import { colors } from "./canvas"
 
@@ -13,41 +14,65 @@ type Props = Partial<FrameProps> & {
     text: string
     component: string
     icon: string
-    value: boolean
-    validation: (value: boolean) => boolean
+    clamp: boolean
+    min: number
+    max: number
+    step: number
+    value: number | boolean
+    pc_number_value: number
+    pc_boolean_value: boolean
+    validation: (value: boolean | number) => boolean
     disabled: boolean
-    onValueChange: (value: boolean) => void
+    onValueChange: (value: boolean | number) => void
     color: string
 }
 
 export function RowItem(props: Partial<Props>) {
     const {
+        height,
         text,
         component,
         icon,
-        value,
+        value: overrideValue,
+        pc_number_value = 0,
+        pc_boolean_value = false,
         validation,
         disabled,
         onValueChange,
         color,
+        clamp,
+        min,
+        max,
+        step,
+        ...rest
     } = props
 
-    const inputProps = { value, disabled, validation, onValueChange }
+    const computedValue =
+        overrideValue === undefined
+            ? component === "stepper"
+                ? pc_number_value
+                : pc_boolean_value
+            : overrideValue
+
+    const inputProps = { disabled, validation, onValueChange }
+
+    const stepperProps = { ...inputProps, clamp, min, max, step }
 
     const components = {
         icon: <Icon icon={icon} color={color} />,
-        switch: <Switch {...inputProps} />,
-        checkbox: <Checkbox {...inputProps} />,
-        radio: <Radio {...inputProps} />,
+        switch: <Switch {...inputProps} value={computedValue as boolean} />,
+        checkbox: <Checkbox {...inputProps} value={computedValue as boolean} />,
+        radio: <Radio {...inputProps} value={computedValue as boolean} />,
+        stepper: <Stepper {...stepperProps} value={computedValue as number} />,
     }
 
     return (
-        <Interactive {...props as any} height={50} active={false} hover={false}>
+        <Interactive {...rest} height={height} active={false} hover={false}>
             <Stack
                 direction="horizontal"
                 alignment="center"
                 distribution="space-between"
-                height={50}
+                height={"100%"}
                 paddingRight={8}
                 width={"100%"}
                 background={colors.Light}
@@ -71,8 +96,7 @@ RowItem.defaultProps = {
     height: 49,
     width: 250,
     text: "Row Item",
-    component: "none",
-    value: false,
+    component: "stepper",
     validation: () => true,
     onValueChange: () => null,
     icon: "chevron-right",
@@ -88,15 +112,31 @@ addPropertyControls(RowItem, {
     component: {
         title: "Right",
         type: ControlType.Enum,
-        options: ["none", "checkbox", "radio", "switch", "icon"],
-        optionTitles: ["None", "Checkbox", "Radio", "Switch", "Icon"],
+        options: ["none", "checkbox", "radio", "switch", "icon", "stepper"],
+        optionTitles: [
+            "None",
+            "Checkbox",
+            "Radio",
+            "Switch",
+            "Icon",
+            "Stepper",
+        ],
         defaultValue: "none",
     },
-    value: {
+    pc_number_value: {
+        title: "Value",
+        type: ControlType.Number,
+        displayStepper: true,
+        defaultValue: 0,
+        min: -Infinity,
+        max: Infinity,
+        hidden: ({ component }) => component !== "stepper",
+    },
+    pc_boolean_value: {
         title: "Value",
         type: ControlType.Boolean,
         defaultValue: false,
-        hidden: ({ right }) => right === "none" || right === "icon",
+        hidden: ({ component }) => component === "stepper",
     },
     icon: {
         title: "Icon",
@@ -104,12 +144,47 @@ addPropertyControls(RowItem, {
         options: iconNames,
         optionTitles: iconTitles,
         defaultValue: "chevron-right",
-        hidden: ({ right }) => right !== "icon",
+        hidden: ({ right, component }) =>
+            component === "stepper" || right !== "icon",
     },
     color: {
         title: "Color",
         type: ControlType.Color,
         defaultValue: colors.Primary,
-        hidden: ({ right }) => right !== "icon",
+        hidden: ({ right, component }) =>
+            component === "stepper" || right !== "icon",
+    },
+    clamp: {
+        title: "Clamp Value",
+        type: ControlType.Boolean,
+        defaultValue: false,
+        hidden: ({ component }) => component !== "stepper",
+    },
+    min: {
+        title: "Min",
+        type: ControlType.Number,
+        displayStepper: true,
+        min: 0,
+        max: Infinity,
+        defaultValue: 0,
+        hidden: ({ clamp, component }) => component !== "stepper" || !clamp,
+    },
+    max: {
+        title: "Max",
+        type: ControlType.Number,
+        displayStepper: true,
+        min: 0,
+        max: Infinity,
+        defaultValue: 10,
+        hidden: ({ clamp, component }) => component !== "stepper" || !clamp,
+    },
+    step: {
+        title: "Step",
+        type: ControlType.Number,
+        displayStepper: true,
+        min: 0,
+        max: Infinity,
+        defaultValue: 1,
+        hidden: ({ component }) => component !== "stepper",
     },
 })

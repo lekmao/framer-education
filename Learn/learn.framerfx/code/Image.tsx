@@ -24,7 +24,7 @@ export function Image(props: Partial<Props>) {
     } = props
 
     return (
-        <Frame {...rest as any} background="#FFFFFF">
+        <Frame {...rest} background="#FFFFFF">
             <Frame
                 width="100%"
                 height="100%"

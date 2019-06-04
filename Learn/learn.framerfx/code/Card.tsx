@@ -118,7 +118,8 @@ export function Card(props: Partial<Props>) {
                         height={48}
                         verticalAlign="center"
                         textAlign="left"
-                        padding={16}
+                        paddingLeft={16}
+                        paddingRight={16}
                         type="link"
                         text={header}
                     />
@@ -227,7 +228,8 @@ export function Card(props: Partial<Props>) {
                         height={48}
                         verticalAlign="center"
                         textAlign="left"
-                        padding={16}
+                        paddingLeft={16}
+                        paddingRight={16}
                         type="link"
                         text={footer}
                     />

@@ -19,7 +19,6 @@ export { RowItem } from "./RowItem"
 export { Interactive } from "./Interactive"
 export { NavigationBar } from "./NavigationBar"
 export { Card } from "./Card"
-export { Map } from "./Map"
 export { Stepper } from "./Stepper"
 
 export { colors } from "./canvas"

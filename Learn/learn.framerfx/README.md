@@ -34,9 +34,8 @@ The package currently includes:
 - Tab Bar
 - Navigation Bar
 - Card
-- Map
 
-To use these components inside of your code components, import them from `"@framer/steveruizok.education/code”`.
+To use these components inside of your code components, import them from `"@framer/steveruizok.education/code"`.
 
 ```jsx
 import * as React from "react"
@@ -75,7 +74,7 @@ This package also includes several helper utilities.
 ```tsx
 import * as React from "react"
 import { Stack, Frame } from "framer"
-import { range } from "@framer/steveruizok.education/code”
+import { range } from "@framer/steveruizok.education/code"
 
 export function MyComponent (props) {
   return (
@@ -97,6 +96,12 @@ Learn currently includes:
  
 # Changelog
 
+- Removes map (performance issues)
+- Fixes padding on Text
+- Fixes stepper
+- Adds stepper to row item
+- Updates valid check for slider
+- Updates validation checks
 - Updates TabBar to accept new tab index
 - Updates Image
 - Resizing on Icons
