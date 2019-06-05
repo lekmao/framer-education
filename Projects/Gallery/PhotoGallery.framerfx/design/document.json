@@ -1938,8 +1938,8 @@
                 "blendingEnabled" : 0,
                 "blendingMode" : "normal",
                 "bottom" : null,
-                "centerAnchorX" : 0.25600000000000001,
-                "centerAnchorY" : 0.12144702842377261,
+                "centerAnchorX" : 0.25066666666666665,
+                "centerAnchorY" : 0.12466843501326259,
                 "children" : [
 
                 ],
@@ -1975,7 +1975,7 @@
                 "isExternalMaster" : null,
                 "isMaster" : false,
                 "isTarget" : false,
-                "left" : 2,
+                "left" : 0,
                 "locked" : false,
                 "name" : "Image1",
                 "navigationTarget" : null,
@@ -2007,8 +2007,8 @@
                 "blendingEnabled" : 0,
                 "blendingMode" : "normal",
                 "bottom" : null,
-                "centerAnchorX" : 0.75466666666666671,
-                "centerAnchorY" : 0.12144702842377261,
+                "centerAnchorX" : 0.7493333333333333,
+                "centerAnchorY" : 0.12466843501326259,
                 "children" : [
 
                 ],
@@ -2044,7 +2044,7 @@
                 "isExternalMaster" : null,
                 "isMaster" : false,
                 "isTarget" : false,
-                "left" : 189,
+                "left" : 187,
                 "locked" : false,
                 "name" : "Image2",
                 "navigationTarget" : null,
@@ -2076,8 +2076,8 @@
                 "blendingEnabled" : 0,
                 "blendingMode" : "normal",
                 "bottom" : null,
-                "centerAnchorX" : 0.25333333333333335,
-                "centerAnchorY" : 0.39058171745152354,
+                "centerAnchorX" : 0.25066666666666665,
+                "centerAnchorY" : 0.37400530503978779,
                 "children" : [
 
                 ],
@@ -2113,7 +2113,7 @@
                 "isExternalMaster" : null,
                 "isMaster" : false,
                 "isTarget" : false,
-                "left" : 1,
+                "left" : 0,
                 "locked" : false,
                 "name" : "Image3",
                 "navigationTarget" : null,
@@ -2145,8 +2145,8 @@
                 "blendingEnabled" : 0,
                 "blendingMode" : "normal",
                 "bottom" : null,
-                "centerAnchorX" : 0.75466666666666671,
-                "centerAnchorY" : 0.39058171745152354,
+                "centerAnchorX" : 0.7493333333333333,
+                "centerAnchorY" : 0.37400530503978779,
                 "children" : [
 
                 ],
@@ -2182,7 +2182,7 @@
                 "isExternalMaster" : null,
                 "isMaster" : false,
                 "isTarget" : false,
-                "left" : 189,
+                "left" : 187,
                 "locked" : false,
                 "name" : "Image4",
                 "navigationTarget" : null,
@@ -2215,7 +2215,7 @@
                 "blendingMode" : "normal",
                 "bottom" : null,
                 "centerAnchorX" : 0.252,
-                "centerAnchorY" : 0.65096952908587258,
+                "centerAnchorY" : 0.62334217506631295,
                 "children" : [
 
                 ],
@@ -2274,7 +2274,7 @@
                 "rotation" : 0,
                 "top" : 376,
                 "visible" : true,
-                "width" : 189,
+                "width" : 188,
                 "widthType" : 0
               },
               {
@@ -2283,8 +2283,8 @@
                 "blendingEnabled" : 0,
                 "blendingMode" : "normal",
                 "bottom" : null,
-                "centerAnchorX" : 0.75466666666666671,
-                "centerAnchorY" : 0.65096952908587258,
+                "centerAnchorX" : 0.7493333333333333,
+                "centerAnchorY" : 0.62334217506631295,
                 "children" : [
 
                 ],
@@ -2320,7 +2320,7 @@
                 "isExternalMaster" : null,
                 "isMaster" : false,
                 "isTarget" : false,
-                "left" : 189,
+                "left" : 187,
                 "locked" : false,
                 "name" : "Image6",
                 "navigationTarget" : null,
@@ -2353,7 +2353,7 @@
                 "blendingMode" : "normal",
                 "bottom" : null,
                 "centerAnchorX" : 0.25066666666666665,
-                "centerAnchorY" : 0.85012919896640826,
+                "centerAnchorY" : 0.87267904509283822,
                 "children" : [
 
                 ],
@@ -2422,7 +2422,7 @@
                 "blendingMode" : "normal",
                 "bottom" : null,
                 "centerAnchorX" : 0.7493333333333333,
-                "centerAnchorY" : 0.85012919896640826,
+                "centerAnchorY" : 0.87267904509283822,
                 "children" : [
 
                 ],
