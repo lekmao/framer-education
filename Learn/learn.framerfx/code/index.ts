@@ -22,4 +22,12 @@ export { Card } from "./Card"
 export { Stepper } from "./Stepper"
 export { colors } from "./canvas"
 export { iconNames, iconTitles } from "./Shared"
-export { range, rangeFrom, clamp, normalize, pull, pullAtIndex } from "./Utils"
+export {
+    range,
+    rangeFrom,
+    clamp,
+    normalize,
+    pull,
+    pullAtIndex,
+    isEmail,
+} from "./Utils"
