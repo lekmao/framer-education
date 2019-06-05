@@ -30,6 +30,8 @@ export const colors = Object.freeze({
     "Darker": "var(--token-30f9a7fa-de7c-4aee-a7b8-79cdd74c6221, rgb(19, 19, 22))",
     /** #CBCBDC */
     "Border": "var(--token-23bce3fd-e7be-45a5-a2c3-53cfc3c53db9, rgb(203, 203, 220))",
+    /** rgba(255, 255, 255, 0.68) */
+    "Glow": "var(--token-dd5568c7-f380-405b-bbfc-805caca247f3, rgba(255, 255, 255, 0.68))",
     /** rgba(37, 37, 45, 0.09) */
     "Shadow": "var(--token-0b9e3e19-2ca6-4163-8b23-40217b78ddb8, rgba(37, 37, 45, 0.09))",
     /** rgba(23, 23, 39, 0.2) */

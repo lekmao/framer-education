@@ -256,6 +256,11 @@ addPropertyControls(Text, {
         type: ControlType.Color,
         defaultValue: colors.Dark,
     },
+    background: {
+        title: "Background",
+        type: ControlType.Color,
+        defaultValue: "none",
+    },
     textAlign: {
         title: "Horizontal",
         type: ControlType.SegmentedEnum,

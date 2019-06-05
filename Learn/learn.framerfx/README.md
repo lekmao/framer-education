@@ -98,6 +98,8 @@ Learn currently includes:
  
 # Changelog
 
+- Adds Glow color.
+- Adds background property control to Text.
 - Fixes text width on tabs
 - Removes left padding from RowItem
 - Adds isEmail utility

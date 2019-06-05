@@ -45,7 +45,9 @@ export function GalleryImage(props): Override {
             }
         },
         // [6]
-        z: isFront ? 999 : 1,
+        style: {
+            zIndex: isFront ? 999 : 1,
+        },
         // [7]
         variants: {
             initial: {
@@ -135,10 +137,10 @@ name prop too. We're using Object.assign to set both
 properties at the same time.
 
 [6]
-The `z` prop is a measure of a Frame's "back-to-front"ness: 
-when frames overlap, whatever item has the higher `z` will
+The `zIndex` style prop is a measure of a Frame's "back-to-front"ness: 
+when frames overlap, whatever item has the higher `zIndex` will
 appear in front of the other. In our case, we want the
-this image to have an arbitrarily high `z` if it's the 
+this image to have an arbitrarily high `zIndex` if it's the 
 front one.
 
 [7]

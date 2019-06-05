@@ -120,6 +120,7 @@
                 "clip" : true,
                 "codeComponentIdentifier" : ".\/Text.tsx_Text",
                 "codeComponentProps" : {
+                  "background" : "none",
                   "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(59, 59, 104))",
                   "padding" : 0,
                   "paddingBottom" : 0,
@@ -193,6 +194,7 @@
                 "clip" : true,
                 "codeComponentIdentifier" : ".\/Text.tsx_Text",
                 "codeComponentProps" : {
+                  "background" : "none",
                   "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(59, 59, 104))",
                   "paddingPerSide" : false,
                   "text" : "Heading 1",
@@ -261,6 +263,7 @@
                 "clip" : true,
                 "codeComponentIdentifier" : ".\/Text.tsx_Text",
                 "codeComponentProps" : {
+                  "background" : "none",
                   "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(59, 59, 104))",
                   "paddingPerSide" : false,
                   "text" : "Heading 2",
@@ -329,6 +332,7 @@
                 "clip" : true,
                 "codeComponentIdentifier" : ".\/Text.tsx_Text",
                 "codeComponentProps" : {
+                  "background" : "none",
                   "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(59, 59, 104))",
                   "paddingPerSide" : false,
                   "text" : "Heading 3",
@@ -397,6 +401,7 @@
                 "clip" : true,
                 "codeComponentIdentifier" : ".\/Text.tsx_Text",
                 "codeComponentProps" : {
+                  "background" : "none",
                   "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(59, 59, 104))",
                   "paddingPerSide" : false,
                   "text" : "Lead",
@@ -465,6 +470,7 @@
                 "clip" : true,
                 "codeComponentIdentifier" : ".\/Text.tsx_Text",
                 "codeComponentProps" : {
+                  "background" : "none",
                   "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(59, 59, 104))",
                   "paddingPerSide" : false,
                   "text" : "Link",
@@ -533,6 +539,7 @@
                 "clip" : true,
                 "codeComponentIdentifier" : ".\/Text.tsx_Text",
                 "codeComponentProps" : {
+                  "background" : "none",
                   "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(59, 59, 104))",
                   "paddingPerSide" : false,
                   "text" : "Body",
@@ -601,6 +608,7 @@
                 "clip" : true,
                 "codeComponentIdentifier" : ".\/Text.tsx_Text",
                 "codeComponentProps" : {
+                  "background" : "none",
                   "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(59, 59, 104))",
                   "paddingPerSide" : false,
                   "text" : "Label",
@@ -669,6 +677,7 @@
                 "clip" : true,
                 "codeComponentIdentifier" : ".\/Text.tsx_Text",
                 "codeComponentProps" : {
+                  "background" : "none",
                   "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(59, 59, 104))",
                   "paddingPerSide" : false,
                   "text" : "Caption",
@@ -17650,6 +17659,7 @@
                 "clip" : true,
                 "codeComponentIdentifier" : ".\/Text.tsx_Text",
                 "codeComponentProps" : {
+                  "background" : "none",
                   "color" : "var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 86, 254)) \/* {\"name\":\"Primary\"} *\/",
                   "paddingPerSide" : false,
                   "text" : "Learn",
@@ -17715,6 +17725,7 @@
                 "clip" : true,
                 "codeComponentIdentifier" : ".\/Text.tsx_Text",
                 "codeComponentProps" : {
+                  "background" : "none",
                   "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(59, 59, 104)) \/* {\"name\":\"Dark\"} *\/",
                   "paddingPerSide" : false,
                   "text" : "Design System",
@@ -19791,6 +19802,7 @@
         "clip" : true,
         "codeComponentIdentifier" : ".\/Text.tsx_Text",
         "codeComponentProps" : {
+          "background" : "rgba(255, 255, 255, 0)",
           "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(59, 59, 104))",
           "paddingPerSide" : false,
           "text" : "Heading 1",
@@ -21919,7 +21931,7 @@
         "clip" : true,
         "codeComponentIdentifier" : ".\/Image.tsx_Image",
         "codeComponentProps" : {
-          "color" : "var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254))",
+          "color" : "var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 86, 254)) \/* {\"name\":\"Primary\"} *\/",
           "favorite" : true,
           "image" : "design\/assets\/small-kitten-walking-towards_127900829_0.jpg",
           "isFavorite" : false,
@@ -24046,6 +24058,72 @@
                 "centerAnchorX" : 0.5,
                 "centerAnchorY" : 0.89367088607594936,
                 "children" : [
+                  {
+                    "__class" : "FrameNode",
+                    "aspectRatio" : null,
+                    "blendingEnabled" : 0,
+                    "blendingMode" : "normal",
+                    "bottom" : null,
+                    "centerAnchorX" : 0.24328358208955222,
+                    "centerAnchorY" : 0.5,
+                    "children" : [
+
+                    ],
+                    "clip" : true,
+                    "codeOverrideEnabled" : false,
+                    "constraintsLocked" : false,
+                    "deviceType" : null,
+                    "exportOptions" : [
+
+                    ],
+                    "fillColor" : "var(--token-dd5568c7-f380-405b-bbfc-805caca247f3, rgba(245, 249, 255, 0.68)) \/* {\"name\":\"Glow\"} *\/",
+                    "fillEnabled" : true,
+                    "fillGradient" : {
+                      "__class" : "LinearGradient",
+                      "alpha" : 1,
+                      "angle" : 0,
+                      "end" : "rgba(0,0,0,0)",
+                      "start" : "black"
+                    },
+                    "fillImage" : null,
+                    "fillImagePixelHeight" : null,
+                    "fillImagePixelWidth" : null,
+                    "fillImageResize" : "fill",
+                    "fillType" : "color",
+                    "height" : 1,
+                    "heightType" : 3,
+                    "id" : "NAv2BC0j5",
+                    "intrinsicHeight" : null,
+                    "intrinsicWidth" : null,
+                    "isExternalMaster" : null,
+                    "isMaster" : false,
+                    "isTarget" : false,
+                    "left" : 0,
+                    "locked" : false,
+                    "name" : null,
+                    "navigationTarget" : null,
+                    "navigationTransition" : "push",
+                    "navigationTransitionBackdropColor" : "rgba(4,4,15,.4)",
+                    "navigationTransitionDirection" : "left",
+                    "opacity" : 1,
+                    "originalid" : null,
+                    "parentid" : "sAntzUOer",
+                    "previewSettings" : null,
+                    "radius" : 12,
+                    "radiusBottomLeft" : 12,
+                    "radiusBottomRight" : 12,
+                    "radiusIsRelative" : false,
+                    "radiusPerCorner" : false,
+                    "radiusTopLeft" : 12,
+                    "radiusTopRight" : 12,
+                    "replicaInfo" : null,
+                    "right" : null,
+                    "rotation" : 0,
+                    "top" : 0,
+                    "visible" : true,
+                    "width" : 1,
+                    "widthType" : 3
+                  },
                   {
                     "__class" : "FrameNode",
                     "aspectRatio" : null,
@@ -29472,6 +29550,12 @@
         "name" : "Light",
         "value" : "rgb(255, 255, 255)"
       },
+      "dd5568c7-f380-405b-bbfc-805caca247f3" : {
+        "__class" : "ColorTokenNode",
+        "id" : "dd5568c7-f380-405b-bbfc-805caca247f3",
+        "name" : "Glow",
+        "value" : "rgba(255, 255, 255, 0.68)"
+      },
       "f69732ff-3858-4d7e-a918-e92879e5d6bf" : {
         "__class" : "ColorTokenNode",
         "id" : "f69732ff-3858-4d7e-a918-e92879e5d6bf",
@@ -29489,6 +29573,7 @@
       "655be689-744d-4b94-af37-d052b01faead",
       "30f9a7fa-de7c-4aee-a7b8-79cdd74c6221",
       "23bce3fd-e7be-45a5-a2c3-53cfc3c53db9",
+      "dd5568c7-f380-405b-bbfc-805caca247f3",
       "0b9e3e19-2ca6-4163-8b23-40217b78ddb8",
       "385efacc-ef57-4c97-b6f0-c789a417631f",
       "570013b9-ccd1-4a4b-8a44-e7ded788d7f2"
