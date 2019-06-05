@@ -1,0 +1,18 @@
+{
+	"main": "dist/index.js",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/react": "^16.8"
+	},
+	"peerDependencies": {
+		"framer": "^1.0",
+		"react": "^16.8"
+	},
+	"framer": {
+		"id": "f946e823-eca8-417e-8f3b-687749cc9a2a"
+	},
+	"author": "Steve Ruiz",
+	"dependencies": {
+		"@framer/steveruizok.education": "^1.88.0"
+	}
+}
