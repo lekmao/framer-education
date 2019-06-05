@@ -16,10 +16,8 @@ const state = Data({
 export function Container(props): Override {
     // [1]
     React.useEffect(() => {
-        state.containerSize = {
-            width: props.width,
-            height: props.height,
-        }
+        state.containerSize.width = props.width
+        state.containerSize.height = props.height
     }, [])
     return {}
 }
@@ -38,10 +36,8 @@ export function GalleryImage(props): Override {
                 state.zoomedImage = null
                 // [5]
             } else {
-                Object.assign(state, {
-                    zoomedImage: props.name,
-                    frontImage: props.name,
-                })
+                state.zoomedImage = props.name
+                state.frontImage = props.name
             }
         },
         // [6]
@@ -69,38 +65,21 @@ export function GalleryImage(props): Override {
         },
         // [9]
         animate: isZoomed ? "zoomed" : "initial",
-        // [10]
-        onAnimationComplete: () => {
-            if (!isZoomed) {
-                state.frontImage = null
-            }
-        },
     }
 }
 
-export function Scrim(props): Override {
+export function Title(props): Override {
     return {
-        variants: {
-            hidden: {
-                opacity: 0,
-            },
-            shown: {
-                opacity: 1,
-            },
+        text: state.frontImage,
+        opacity: 0,
+        animate: {
+            opacity: state.zoomedImage ? 1 : 0,
         },
-        initial: "hidden",
-        animate: state.zoomedImage ? "shown" : "hidden",
         transition: {
             type: "tween",
-            easing: "easeOut",
             duration: 0.2,
+            ease: "easeOut",
         },
-    }
-}
-
-export function ImageTitle(props): Override {
-    return {
-        text: state.zoomedImage,
     }
 }
 
@@ -133,8 +112,7 @@ is, then we want to zoom it out - by clearing the state's
 But if it's not, then we want to do two things: first,
 set the state's `zoomedImage` property with this image's
 name prop. Next, set the `frontImage` to this image's
-name prop too. We're using Object.assign to set both
-properties at the same time.
+name prop too.
 
 [6]
 The `zIndex` style prop is a measure of a Frame's "back-to-front"ness: 
@@ -158,10 +136,4 @@ object's height and width.
 [9]
 Finally, we want to animate between these variants depending
 on whether the image is the zoomed one or not.
-
-[10]
-Even after we've closed the image, we want it to remain in
-front of all of its siblings until after it's done animating
-back to its original position. We use the `onAnimationComplete`
-event to clear the `frontImage` property on the state.
 */

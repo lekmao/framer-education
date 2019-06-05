@@ -101,10 +101,10 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.2.tgz#63985d3d8b02530e0869962f4da09142ee8e200e"
   integrity sha512-n/VQ4mbfr81aqkx/XmVicOLjviMuy02eenSdJY33SVA7S2J42EU0P1H0mOogfYedb3wXA0d/LVtBrgTSm04WEA==
 
-"@framer/steveruizok.education@^1.92.0":
-  version "1.92.0"
-  resolved "https://registry.framer.com/@framer/steveruizok.education/-/@framer/steveruizok.education-1.92.0.tgz#cf7ac71e082405ec028b9f3daf4b22d8ef696289"
-  integrity sha512-B/PhQOWbyU9nXQKZXypsel14tlRaH63f3rj05zpcNkzHblvSfhI9g4gJA1R1k2LVuTNxwupW23O3U5U6lOMpWA==
+"@framer/steveruizok.education@^1.94.0":
+  version "1.94.0"
+  resolved "https://registry.framer.com/@framer/steveruizok.education/-/@framer/steveruizok.education-1.94.0.tgz#9662287289e0bce06c5029b57819199d171230f7"
+  integrity sha512-kMeSkdVCST/QdZk44Ni3ZKGqWgBmDt8QYPiaNIf2Y7RX9hmF7tiIGNO5huuSBkkLgTyqSYH5bVhy9t/+52oWqw==
   dependencies:
     material-icons-bundle "github:darosh/material-icons-bundle"
     react-select "^3.0.3"
