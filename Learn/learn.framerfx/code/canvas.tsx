@@ -7,8 +7,8 @@ export const Helpers_Colors = createDesignComponent<{parentSize?:{width:number|s
 export const Helpers_Text = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_T6QtGhQiI", {}, 375,812);
 export const Templates_Blank = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_XREstntDl", {}, 375,812);
 export const Templates_Navigation = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_fNc61tttc", {}, 375,812);
+export const Templates_NavigationLarge = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_OcoXmDPgh", {}, 375,812);
 export const Templates_NavigationLarge_TabBar = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_PeXYyIRny", {}, 375,812);
-export const Templates_NavigationLarge_TabBar_1 = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_OcoXmDPgh", {}, 375,812);
 export const Templates_Navigation_TabBar = createDesignComponent<{parentSize?:{width:number|string,height:number|string},width?:number|string,height?:number|string}>(canvas, "id_hMCzrRmLr", {}, 375,812);
 
 export const colors = Object.freeze({

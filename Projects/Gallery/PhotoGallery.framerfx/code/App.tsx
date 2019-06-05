@@ -1,10 +1,10 @@
 import * as React from "react"
-import { Override, useCycle, Data } from "framer"
+import { Override, Data } from "framer"
 
 // Gallery
 // @steveruizok
 
-const store = Data({
+const state = Data({
     containerSize: {
         width: 0,
         height: 0,
@@ -16,7 +16,7 @@ const store = Data({
 export function Container(props): Override {
     // [1]
     React.useEffect(() => {
-        store.containerSize = {
+        state.containerSize = {
             width: props.width,
             height: props.height,
         }
@@ -26,19 +26,19 @@ export function Container(props): Override {
 
 export function GalleryImage(props): Override {
     // [2]
-    const isZoomed = store.zoomedImage === props.name
+    const isZoomed = state.zoomedImage === props.name
 
     // [3]
-    const isFront = store.frontImage === props.name
+    const isFront = state.frontImage === props.name
 
     return {
         onTap: () => {
             // [4]
             if (isZoomed) {
-                store.zoomedImage = null
+                state.zoomedImage = null
                 // [5]
             } else {
-                Object.assign(store, {
+                Object.assign(state, {
                     zoomedImage: props.name,
                     frontImage: props.name,
                 })
@@ -57,7 +57,7 @@ export function GalleryImage(props): Override {
             zoomed: {
                 x: -props.left,
                 y: -props.top,
-                ...store.containerSize, // [8]
+                ...state.containerSize, // [8]
             },
         },
         transition: {
@@ -70,7 +70,7 @@ export function GalleryImage(props): Override {
         // [10]
         onAnimationComplete: () => {
             if (!isZoomed) {
-                store.frontImage = null
+                state.frontImage = null
             }
         },
     }
@@ -87,7 +87,7 @@ export function Scrim(props): Override {
             },
         },
         initial: "hidden",
-        animate: store.zoomedImage ? "shown" : "hidden",
+        animate: state.zoomedImage ? "shown" : "hidden",
         transition: {
             type: "tween",
             easing: "easeOut",
@@ -98,7 +98,7 @@ export function Scrim(props): Override {
 
 export function ImageTitle(props): Override {
     return {
-        text: store.zoomedImage,
+        text: state.zoomedImage,
     }
 }
 
@@ -112,7 +112,7 @@ use a `useEffect` hook to make sure this only runs once.
 [2]
 Each time this override runs, we want to know whether
 the gallery image is the zoomed one. We can get this
-by checking to see whether the store's `zoomedImage` 
+by checking to see whether the state's `zoomedImage` 
 property matches this image's name prop. If it does,
 then this image is "zoomed".
 
@@ -124,12 +124,12 @@ against `frontImage`.
 [4]
 When we tap on an image, we want to do different things
 depending on whether the image is already zoomed. If it
-is, then we want to zoom it out - by clearing the store's
+is, then we want to zoom it out - by clearing the state's
 `zoomedImage` property.
 
 [5]
 But if it's not, then we want to do two things: first,
-set the store's `zoomedImage` property with this image's
+set the state's `zoomedImage` property with this image's
 name prop. Next, set the `frontImage` to this image's
 name prop too. We're using Object.assign to set both
 properties at the same time.
@@ -144,13 +144,13 @@ front one.
 [7]
 Each image will have two variants: an `initial` or "unzoomed"
 variant with no transforms at all, and a `zoomed` variant
-that gets the `height` and `width` from the store's 
+that gets the `height` and `width` from the state's 
 `containerSize` property, and calculates an `x` and `y`
 based on the image's starting position within the container.
 
 [8]
 We use the `...` spread operator to say "also, every property 
-from the store.containerSize object," which will insert that
+from the state.containerSize object," which will insert that
 object's height and width.
 
 [9]
@@ -161,5 +161,5 @@ on whether the image is the zoomed one or not.
 Even after we've closed the image, we want it to remain in
 front of all of its siblings until after it's done animating
 back to its original position. We use the `onAnimationComplete`
-event to clear the `frontImage` property on the store.
+event to clear the `frontImage` property on the state.
 */
