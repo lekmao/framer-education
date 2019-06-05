@@ -22,6 +22,7 @@ type Props = Partial<FrameProps> & {
     required: boolean
     pc_number_value: number
     pc_boolean_value: boolean
+    paddingLeft: number
     validation: (value: boolean | number) => boolean
     disabled: boolean
     onValueChange: (value: boolean | number) => void
@@ -37,6 +38,7 @@ export function RowItem(props: Partial<Props>) {
         value: overrideValue,
         pc_number_value = 0,
         pc_boolean_value = false,
+        paddingLeft,
         validation,
         disabled,
         onValueChange,
@@ -74,7 +76,6 @@ export function RowItem(props: Partial<Props>) {
                 alignment="center"
                 distribution="space-between"
                 height={"100%"}
-                paddingRight={8}
                 width={"100%"}
             >
                 <Text
@@ -83,8 +84,8 @@ export function RowItem(props: Partial<Props>) {
                     fontWeight="normal"
                     width={"auto"}
                     height="100%"
-                    paddingLeft={16}
                     text={text}
+                    paddingLeft={paddingLeft}
                 />
                 {components[component]}
             </Stack>

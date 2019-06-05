@@ -123,6 +123,7 @@ export function RadioGroup(props: Partial<Props>) {
                         value={index === selectedIndex}
                         validation={() => valid}
                         background={colors.Light}
+                        paddingLeft={16}
                         onTap={() => !disabled && setSelectedIndex(index)}
                     />
                 )

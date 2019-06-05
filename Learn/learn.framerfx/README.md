@@ -98,6 +98,7 @@ Learn currently includes:
  
 # Changelog
 
+- Removes left padding from RowItem
 - Adds isEmail utility
 - Fixes disabled on Checkbox.
 - Adds required to inputs, clarifies validation.

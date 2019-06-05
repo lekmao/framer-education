@@ -105,9 +105,9 @@ export function CheckboxGroup(props: Partial<Props>) {
             height={options.length * 50}
             direction="vertical"
             alignment="center"
-            gap={1}
             borderRadius={12}
             overflow="hidden"
+            gap={1}
             border={`1px solid ${valid ? colors.Border : colors.Warn}`}
             background={disabled ? colors.Light : colors.Border}
         >
@@ -124,6 +124,7 @@ export function CheckboxGroup(props: Partial<Props>) {
                         value={selectedIndices[index]}
                         validation={() => valid}
                         background={colors.Light}
+                        paddingLeft={16}
                         onTap={() =>
                             !disabled &&
                             setSelectedIndex(index, !selectedIndices[index])
