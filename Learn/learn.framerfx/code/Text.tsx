@@ -68,7 +68,7 @@ export function Text(props: Partial<Props>) {
                 width: offsetWidth + 1,
             })
         }
-    }, [text, resize])
+    }, [text, resize, width])
 
     const sharedStyles = {
         fontFamily: "Helvetica Neue",

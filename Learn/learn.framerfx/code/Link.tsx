@@ -23,11 +23,11 @@ export function Link(props: Partial<Props>) {
     const { height, width, disabled } = props
 
     const [state, setState] = React.useState({
-        width,
+        width: 300,
     })
 
     React.useEffect(() => {
-        setState({ width })
+        setState(state => ({ width: width as number }))
     }, [width])
 
     /* ----------------------------- Event Handlers ----------------------------- */
@@ -38,10 +38,10 @@ export function Link(props: Partial<Props>) {
         onTap(event, info)
     }
 
-    const handleResize = (width: number, height: number) => {
+    const handleResize = (w: number, height: number) => {
         if (resize) {
-            setState({ ...state, width })
-            props.onResize(width, height)
+            setState(state => ({ width: w }))
+            props.onResize(w, height)
         }
     }
 
@@ -82,7 +82,7 @@ export function Link(props: Partial<Props>) {
                         <Text
                             // Constant props
                             height={height}
-                            width="100%"
+                            width={state.width}
                             type="link"
                             color={theme[type].foreground}
                             resize={resize}

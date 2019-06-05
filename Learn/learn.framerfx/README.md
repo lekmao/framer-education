@@ -98,6 +98,7 @@ Learn currently includes:
  
 # Changelog
 
+- Fixes text width on tabs
 - Removes left padding from RowItem
 - Adds isEmail utility
 - Fixes disabled on Checkbox.
