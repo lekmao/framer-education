@@ -94,9 +94,11 @@ Learn currently includes:
 * `pull`
 * `pullAtIndex`
 * `sleep`
+* `isEmail`
  
 # Changelog
 
+- Adds isEmail utility
 - Fixes disabled on Checkbox.
 - Adds required to inputs, clarifies validation.
 - Fixes spacing in links.

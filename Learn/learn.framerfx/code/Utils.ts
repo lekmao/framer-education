@@ -140,3 +140,18 @@ export function sleep(duration: number) {
         setTimeout(resolve, duration * 1000)
     })
 }
+
+/**
+ * Get whether or not a given text string is a valid e-mail.
+ * 
+ * ```
+ isEmail(steve@aol.com) // true
+ isEmail(steveaol.com) // false
+ isEmail(steve@aol) // false
+ ```
+ */
+export function isEmail(text: string) {
+    return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+        text
+    )
+}
