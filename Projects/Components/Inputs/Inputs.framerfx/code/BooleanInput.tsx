@@ -1,6 +1,9 @@
 import * as React from "react"
 import { Frame, FrameProps, addPropertyControls, ControlType } from "framer"
 
+// Boolean Input
+// @steveruizok
+
 type Props = FrameProps & {
     value: boolean
     required: boolean
@@ -51,7 +54,7 @@ export function BooleanInput(props: Partial<Props>) {
             ...state,
             valid: validate(state.value),
         })
-    }, [validation])
+    }, [validation, required])
 
     // ------------------- Event Handlers ----------------------
 

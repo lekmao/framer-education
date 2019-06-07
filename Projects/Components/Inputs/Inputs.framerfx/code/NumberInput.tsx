@@ -7,6 +7,9 @@ import {
     ControlType,
 } from "framer"
 
+// Number Input
+// @steveruizok
+
 type Props = FrameProps & {
     value: number
     required: boolean
@@ -66,7 +69,7 @@ export function NumberInput(props: Partial<Props>) {
             ...state,
             valid: validate(state.value),
         })
-    }, [validation])
+    }, [validation, required])
 
     // ------------------- Event Handlers ----------------------
 

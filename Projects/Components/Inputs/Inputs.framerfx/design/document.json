@@ -26,24 +26,34 @@
         ],
         "fillColor" : "rgba(255,255,255,1)",
         "fillEnabled" : false,
-        "fillGradient" : {
+        "fillImage" : null,
+        "fillImagePixelHeight" : null,
+        "fillImagePixelWidth" : null,
+        "fillImageResize" : "fill",
+        "fillLinearGradient" : {
           "__class" : "LinearGradient",
           "alpha" : 1,
           "angle" : 0,
           "end" : "rgba(0,0,0,0)",
           "start" : "black"
         },
-        "fillImage" : null,
-        "fillImagePixelHeight" : null,
-        "fillImagePixelWidth" : null,
-        "fillImageResize" : "fill",
+        "fillRadialGradient" : {
+          "__class" : "RadialGradient",
+          "alpha" : 1,
+          "centerAnchorX" : 0.5,
+          "centerAnchorY" : 0.5,
+          "end" : "black",
+          "heightFactor" : 0.5,
+          "start" : "rgba(0,0,0,0)",
+          "widthFactor" : 0.5
+        },
         "fillType" : "color",
         "height" : 200,
         "heightType" : 0,
         "id" : "E71rjLnne",
         "intrinsicHeight" : null,
         "intrinsicWidth" : null,
-        "left" : 308,
+        "left" : 40,
         "locked" : false,
         "name" : null,
         "opacity" : 1,
@@ -59,7 +69,7 @@
         "radiusTopRight" : 0,
         "right" : null,
         "rotation" : 0,
-        "top" : -37,
+        "top" : 242,
         "visible" : true,
         "width" : 200,
         "widthType" : 0
@@ -81,12 +91,12 @@
             {
               "enabled" : true,
               "type" : "string",
-              "value" : "North"
+              "value" : "East"
             },
             {
               "enabled" : true,
               "type" : "string",
-              "value" : "East"
+              "value" : "North"
             },
             {
               "enabled" : true,
@@ -99,8 +109,8 @@
               "value" : "West"
             }
           ],
-          "required" : false,
-          "value" : "North"
+          "required" : true,
+          "value" : "South"
         },
         "codeOverrideEnabled" : false,
         "constraintsLocked" : false,
@@ -110,24 +120,34 @@
         ],
         "fillColor" : "rgba(255,255,255,1)",
         "fillEnabled" : false,
-        "fillGradient" : {
+        "fillImage" : null,
+        "fillImagePixelHeight" : null,
+        "fillImagePixelWidth" : null,
+        "fillImageResize" : "fill",
+        "fillLinearGradient" : {
           "__class" : "LinearGradient",
           "alpha" : 1,
           "angle" : 0,
           "end" : "rgba(0,0,0,0)",
           "start" : "black"
         },
-        "fillImage" : null,
-        "fillImagePixelHeight" : null,
-        "fillImagePixelWidth" : null,
-        "fillImageResize" : "fill",
+        "fillRadialGradient" : {
+          "__class" : "RadialGradient",
+          "alpha" : 1,
+          "centerAnchorX" : 0.5,
+          "centerAnchorY" : 0.5,
+          "end" : "black",
+          "heightFactor" : 0.5,
+          "start" : "rgba(0,0,0,0)",
+          "widthFactor" : 0.5
+        },
         "fillType" : "color",
         "height" : 200,
         "heightType" : 0,
         "id" : "X77okvIik",
         "intrinsicHeight" : null,
         "intrinsicWidth" : null,
-        "left" : 337,
+        "left" : 583,
         "locked" : false,
         "name" : null,
         "opacity" : 1,
@@ -143,7 +163,7 @@
         "radiusTopRight" : 0,
         "right" : null,
         "rotation" : 0,
-        "top" : 241,
+        "top" : 242,
         "visible" : true,
         "width" : 200,
         "widthType" : 0
@@ -175,24 +195,34 @@
         ],
         "fillColor" : "rgba(255,255,255,1)",
         "fillEnabled" : false,
-        "fillGradient" : {
+        "fillImage" : null,
+        "fillImagePixelHeight" : null,
+        "fillImagePixelWidth" : null,
+        "fillImageResize" : "fill",
+        "fillLinearGradient" : {
           "__class" : "LinearGradient",
           "alpha" : 1,
           "angle" : 0,
           "end" : "rgba(0,0,0,0)",
           "start" : "black"
         },
-        "fillImage" : null,
-        "fillImagePixelHeight" : null,
-        "fillImagePixelWidth" : null,
-        "fillImageResize" : "fill",
+        "fillRadialGradient" : {
+          "__class" : "RadialGradient",
+          "alpha" : 1,
+          "centerAnchorX" : 0.5,
+          "centerAnchorY" : 0.5,
+          "end" : "black",
+          "heightFactor" : 0.5,
+          "start" : "rgba(0,0,0,0)",
+          "widthFactor" : 0.5
+        },
         "fillType" : "color",
         "height" : 200,
         "heightType" : 0,
         "id" : "HWJQVCx1j",
         "intrinsicHeight" : null,
         "intrinsicWidth" : null,
-        "left" : 325,
+        "left" : 311,
         "locked" : false,
         "name" : null,
         "opacity" : 1,
@@ -208,7 +238,7 @@
         "radiusTopRight" : 0,
         "right" : null,
         "rotation" : 0,
-        "top" : 526,
+        "top" : 242,
         "visible" : true,
         "width" : 200,
         "widthType" : 0
@@ -226,7 +256,9 @@
         "codeComponentIdentifier" : ".\/StringInput.tsx_StringInput",
         "codeComponentProps" : {
           "disabled" : false,
+          "password" : false,
           "placeholder" : "",
+          "readOnly" : false,
           "required" : false,
           "value" : ""
         },
@@ -238,24 +270,34 @@
         ],
         "fillColor" : "rgba(255,255,255,1)",
         "fillEnabled" : false,
-        "fillGradient" : {
+        "fillImage" : null,
+        "fillImagePixelHeight" : null,
+        "fillImagePixelWidth" : null,
+        "fillImageResize" : "fill",
+        "fillLinearGradient" : {
           "__class" : "LinearGradient",
           "alpha" : 1,
           "angle" : 0,
           "end" : "rgba(0,0,0,0)",
           "start" : "black"
         },
-        "fillImage" : null,
-        "fillImagePixelHeight" : null,
-        "fillImagePixelWidth" : null,
-        "fillImageResize" : "fill",
+        "fillRadialGradient" : {
+          "__class" : "RadialGradient",
+          "alpha" : 1,
+          "centerAnchorX" : 0.5,
+          "centerAnchorY" : 0.5,
+          "end" : "black",
+          "heightFactor" : 0.5,
+          "start" : "rgba(0,0,0,0)",
+          "widthFactor" : 0.5
+        },
         "fillType" : "color",
         "height" : 200,
         "heightType" : 0,
         "id" : "Yec3J4ITz",
         "intrinsicHeight" : null,
         "intrinsicWidth" : null,
-        "left" : 581,
+        "left" : 854,
         "locked" : false,
         "name" : null,
         "opacity" : 1,
@@ -271,7 +313,7 @@
         "radiusTopRight" : 0,
         "right" : null,
         "rotation" : 0,
-        "top" : -37,
+        "top" : 242,
         "visible" : true,
         "width" : 200,
         "widthType" : 0
@@ -289,5 +331,5 @@
     ],
     "visible" : false
   },
-  "version" : 50
+  "version" : 51
 }

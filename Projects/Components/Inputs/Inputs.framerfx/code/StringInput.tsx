@@ -7,6 +7,9 @@ import {
     ControlType,
 } from "framer"
 
+// String Input
+// @steveruizok
+
 type Props = FrameProps & {
     value: string
     placeholder: string
@@ -70,7 +73,7 @@ export function StringInput(props: Partial<Props>) {
             ...state,
             valid: validate(state.value),
         })
-    }, [validation])
+    }, [validation, required])
 
     // ------------------- Event Handlers ----------------------
 
@@ -124,6 +127,7 @@ export function StringInput(props: Partial<Props>) {
                 type={password ? "password" : "text"}
                 readOnly={readOnly}
                 disabled={disabled}
+                placeholder={placeholder}
                 onChange={e => handleValueChange(e.target.value)}
                 onFocus={e => onFocus(state.value)}
                 onBlur={e => onBlur(state.value)}
@@ -159,6 +163,16 @@ addPropertyControls(StringInput, {
         title: "Placeholder",
         type: ControlType.String,
         defaultValue: "",
+    },
+    password: {
+        title: "Password",
+        type: ControlType.Boolean,
+        defaultValue: false,
+    },
+    readOnly: {
+        title: "ReadOnly",
+        type: ControlType.Boolean,
+        defaultValue: false,
     },
     required: {
         title: "Required",

@@ -7,6 +7,9 @@ import {
     ControlType,
 } from "framer"
 
+// Enum Input
+// @steveruizok
+
 type Props = FrameProps & {
     value: string
     selectedIndex: number
@@ -84,7 +87,7 @@ export function EnumInput(props: Partial<Props>) {
             ...state,
             valid: validate(state.value, state.selectedIndex),
         })
-    }, [validation])
+    }, [validation, required])
 
     // ------------------- Event Handlers ----------------------
 
