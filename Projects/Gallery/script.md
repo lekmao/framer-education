@@ -34,7 +34,7 @@ Now let's add our first image. In the Tools tab, select the Frame tool. Next, dr
 
 > Open the layers panel.
 
-If we open the layers tab, we'll see that the Frame was automatically added as a child of the template's Content frame. We can select the Frame here or by clicking through to the Frame.
+If we open the layers tab, we'll see that the Frame was automatically added as a child of the template's Content frame. We can select the Frame here on the layers list, or by clicking through to the Frame on the canvas.
 
 Depending on where you've drawn the Frame, the Framer app may have given it different constraints. For now, let's make sure that the only two constraints are top and left.
 
