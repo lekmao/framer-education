@@ -42,6 +42,8 @@ export function Card(props: Partial<Props>) {
 		onFavoriteChange,
 	} = props
 
+	/* ---------------------------------- State --------------------------------- */
+
 	const [state, setState] = React.useState({
 		titleHeight: 29,
 		bodyHeight: 18,
@@ -53,7 +55,6 @@ export function Card(props: Partial<Props>) {
 	// Where should we put the favorite icon?
 	const favoriteWithImage = favorite && !header
 	const favoriteWithTitle = favoriteWithImage && !image
-	const favoriteWithBody = favoriteWithTitle && !title
 
 	// Spacing
 	const padding = 16
@@ -76,6 +77,8 @@ export function Card(props: Partial<Props>) {
 		? state.bodyHeight
 		: padding * 2 - gap - state.titleHeight
 
+	/* ----------------------------- Event Handlers ----------------------------- */
+
 	// When text resizes, update state with the new height
 	const handleResize = (type: 'titleHeight' | 'bodyHeight', height: number) => {
 		setState((state) => {
@@ -85,6 +88,8 @@ export function Card(props: Partial<Props>) {
 			}
 		})
 	}
+
+	/* ------------------------------ Presentation ------------------------------ */
 
 	return (
 		<Stack

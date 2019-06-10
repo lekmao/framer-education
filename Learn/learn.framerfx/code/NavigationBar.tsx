@@ -34,6 +34,8 @@ export function NavigationBar(props: Partial<Props>) {
 		large,
 	} = props
 
+	/* ------------------------------ Presentation ------------------------------ */
+
 	return (
 		<Stack
 			direction="vertical"

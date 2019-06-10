@@ -1,10 +1,10 @@
-import * as React from "react"
-import { Frame, addPropertyControls, ControlType, FrameProps } from "framer"
-import { useInteractionState } from "./Hooks"
-import { Text } from "./Text"
-import { Icon } from "./Icon"
-import { iconNames, iconTitles } from "./Shared"
-import { colors } from "./canvas"
+import * as React from 'react'
+import { Frame, addPropertyControls, ControlType, FrameProps } from 'framer'
+import { useInteractionState } from './Hooks'
+import { Text } from './Text'
+import { Icon } from './Icon'
+import { iconNames, iconTitles } from './Shared'
+import { colors } from './canvas'
 
 // Define a type for our props
 type Props = Partial<FrameProps> & {
@@ -12,23 +12,21 @@ type Props = Partial<FrameProps> & {
 	type: string
 	icon: string
 	disabled: boolean
-	resize: boolean | "width" | "height"
+	resize: boolean | 'width' | 'height'
 	onResize: (width: number, height: number) => void
 	onTap: (event: any, info: any) => void
 }
 
 export function Link(props: Partial<Props>) {
-	// Grab the properties we want to use from props
 	const { text, icon, type, resize, style, onTap, ...rest } = props
-	const { height, width, disabled } = props
+	const { width, disabled } = props
 
-	const [state, setState] = React.useState({
-		width: resize ? 300 : width,
+	/* ---------------------------------- State --------------------------------- */
+
+	const [interactiveState, interactiveProps] = useInteractionState({
+		disabled,
+		style: props.style,
 	})
-
-	React.useEffect(() => {
-		setState(state => ({ width: width as number }))
-	}, [width])
 
 	/* ----------------------------- Event Handlers ----------------------------- */
 
@@ -36,13 +34,6 @@ export function Link(props: Partial<Props>) {
 	const handleTap = (event: any, info: any) => {
 		// Call onTap with the toggled state
 		onTap(event, info)
-	}
-
-	const handleResize = (w: number, height: number) => {
-		if (resize && state.width !== w) {
-			setState(state => ({ width: w }))
-			props.onResize(w, height)
-		}
 	}
 
 	/* ------------------------------ Presentation ------------------------------ */
@@ -68,12 +59,7 @@ export function Link(props: Partial<Props>) {
 		},
 	}
 
-	const [interactiveState, interactiveProps] = useInteractionState({
-		disabled,
-		style: props.style,
-	})
-
-	return !icon || icon === "none" ? (
+	return !icon || icon === 'none' ? (
 		<Text
 			// Constant props
 			{...rest}
@@ -90,7 +76,7 @@ export function Link(props: Partial<Props>) {
 			background="none"
 			{...rest}
 			{...interactiveProps}
-			onTap={!disabled && props.onTap}
+			onTap={!disabled && handleTap}
 		>
 			<Icon center icon={icon} color={theme[type].foreground} />
 		</Frame>
@@ -102,14 +88,14 @@ Link.defaultProps = {
 	height: 60,
 	width: 200,
 	disabled: false,
-	text: "Get Started!",
-	type: "primary",
-	color: "red",
+	text: 'Get Started!',
+	icon: 'none',
+	type: 'primary',
+	color: 'red',
 	primary: true,
-	onTap: () => null,
-	icon: "none",
+	background: 'none',
 	resize: false,
-	background: "none",
+	onTap: () => null,
 	onResize: (width, height) => null,
 }
 
@@ -117,32 +103,32 @@ Link.defaultProps = {
 addPropertyControls(Link, {
 	text: {
 		type: ControlType.String,
-		title: "Text",
-		defaultValue: "Get Started!",
+		title: 'Text',
+		defaultValue: 'Get Started!',
 	},
 	type: {
 		type: ControlType.Enum,
-		options: ["primary", "secondary", "accent", "warn", "neutral", "ghost"],
+		options: ['primary', 'secondary', 'accent', 'warn', 'neutral', 'ghost'],
 		optionTitles: [
-			"Primary",
-			"Secondary",
-			"Accent",
-			"Warn",
-			"Neutral",
-			"Ghost",
+			'Primary',
+			'Secondary',
+			'Accent',
+			'Warn',
+			'Neutral',
+			'Ghost',
 		],
-		defaultValue: "primary",
+		defaultValue: 'primary',
 	},
 	icon: {
-		title: "Icon",
+		title: 'Icon',
 		type: ControlType.Enum,
-		options: ["none", ...iconNames],
-		optionTitles: ["None", ...iconTitles],
-		defaultValue: "none",
+		options: ['none', ...iconNames],
+		optionTitles: ['None', ...iconTitles],
+		defaultValue: 'none',
 	},
 	disabled: {
 		type: ControlType.Boolean,
-		title: "Disabled",
+		title: 'Disabled',
 		defaultValue: false,
 	},
 })

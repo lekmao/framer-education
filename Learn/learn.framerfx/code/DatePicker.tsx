@@ -1,14 +1,9 @@
 import * as React from "react"
 import { Frame, Stack, addPropertyControls, ControlType } from "framer"
 import { Text } from "./Text"
-import { Button } from "./Button"
-import { Link } from "./Link"
 import { Icon } from "./Icon"
 import { range, chunk, isEqual } from "./Utils"
 import { colors } from "./canvas"
-
-// Open Preview (CMD + P)
-// API Reference: https://www.framer.com/api
 
 const dayAbbreviations = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"]
 
@@ -24,7 +19,8 @@ export function DatePicker(props) {
         ...rest
     } = props
 
-    // State ----
+    /* ---------------------------------- State --------------------------------- */
+    
 
     const d = new Date(Date.parse(date))
     const e = new Date(Date.parse(end))
@@ -95,7 +91,8 @@ export function DatePicker(props) {
         })
     }, [end])
 
-    // Events ----
+    /* ----------------------------- Event Handlers ----------------------------- */
+    
 
     // Update state with change in month
     const handleMonthChange = (delta: number) => {
@@ -183,7 +180,7 @@ export function DatePicker(props) {
         }
     }
 
-    // Presentation ----
+    /* ------------------------------ Presentation ------------------------------ */
 
     // Date when currently displayed month begins
     const current = new Date(state.display.year, state.display.month, 1)
