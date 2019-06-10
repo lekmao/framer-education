@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Frame, addPropertyControls, ControlType, FrameProps } from "framer"
-import { Interactive } from "./Interactive"
+import { useInteractionState } from "./Hooks"
 import { colors } from "./canvas"
 
 type Props = Partial<FrameProps> & {
@@ -20,12 +20,14 @@ export function Switch(props: Partial<Props>) {
     // property
     const {
         value: initialValue,
-        disabled,
         onValueChange,
         validation,
-        height,
-        width,
+        disabled,
+        style,
+        ...rest
     } = props
+
+    const { height, width } = props
 
     /* ---------------------------------- State --------------------------------- */
 
@@ -83,61 +85,65 @@ export function Switch(props: Partial<Props>) {
         },
     }
 
+    const [interactionState, interactionProps] = useInteractionState({
+        disabled,
+        style,
+    })
+
     return (
-        <Interactive {...props as any} onTap={!disabled && handleTap}>
-            {current => {
-                return (
-                    <>
-                        <Frame
-                            center="y"
-                            height={40}
-                            width={64}
-                            borderRadius={25}
-                            variants={{
-                                on: {
-                                    background: colors.Primary,
-                                },
-                                off: {
-                                    background: colors.Neutral,
-                                },
-                            }}
-                            transition={{
-                                duration: 0.15,
-                            }}
-                            initial={value ? "on" : "off"}
-                            animate={value ? "on" : "off"}
-                        >
-                            <Frame
-                                center="y"
-                                height={36}
-                                width={36}
-                                background="none"
-                                variants={{
-                                    on: {
-                                        x: 26,
-                                    },
-                                    off: {
-                                        x: 2,
-                                    },
-                                }}
-                                transition={{
-                                    duration: 0.15,
-                                }}
-                            >
-                                <Frame
-                                    height="100%"
-                                    width="100%"
-                                    borderRadius="100%"
-                                    background={colors.Light}
-                                    shadow={`0px 2px 5px ${colors.Shadow}`}
-                                    {...variants[valid ? current : "warn"]}
-                                />
-                            </Frame>
-                        </Frame>
-                    </>
-                )
-            }}
-        </Interactive>
+        <Frame
+            {...rest}
+            {...interactionProps}
+            onTap={!disabled && handleTap}
+            background="none"
+        >
+            <Frame
+                center="y"
+                height={40}
+                width={64}
+                borderRadius={25}
+                variants={{
+                    on: {
+                        background: colors.Primary,
+                    },
+                    off: {
+                        background: colors.Neutral,
+                    },
+                }}
+                transition={{
+                    duration: 0.15,
+                }}
+                initial={value ? "on" : "off"}
+                animate={value ? "on" : "off"}
+            >
+                <Frame
+                    center="y"
+                    height={36}
+                    width={36}
+                    background="none"
+                    variants={{
+                        on: {
+                            x: 26,
+                        },
+                        off: {
+                            x: 2,
+                        },
+                    }}
+                    transition={{
+                        duration: 0.15,
+                    }}
+                >
+                    <Frame
+                        height="100%"
+                        width="100%"
+                        borderRadius="100%"
+                        background={colors.Light}
+                        shadow={`0px 2px 5px ${colors.Shadow}`}
+                        {...variants[valid ? interactionState : "warn"]}
+                    />
+                </Frame>
+            </Frame>
+        </Frame>
     )
 }
 

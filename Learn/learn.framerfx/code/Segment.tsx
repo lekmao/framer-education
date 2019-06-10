@@ -1,9 +1,9 @@
 import * as React from "react"
 import { addPropertyControls, ControlType, Stack, FrameProps } from "framer"
-import { Interactive } from "./Interactive"
 import { Link } from "./Link"
 import { Button } from "./Button"
 import { colors } from "./canvas"
+import { useInteractionState } from "./Hooks"
 
 type Props = Partial<FrameProps> & {
     value: string
@@ -118,41 +118,37 @@ export function Segment(props: Partial<Props>) {
         },
     }
 
+    const [interactiveState, interactiveProps] = useInteractionState({
+        disabled,
+    })
+
     return (
-        <Interactive disabled={disabled} {...rest}>
-            {current => (
-                <Stack
-                    height={"100%"}
-                    width={"100%"}
-                    direction="horizontal"
-                    alignment="center"
-                    gap={1}
-                    borderRadius={12}
-                    overflow="hidden"
-                    {...variants[valid ? current : "warn"]}
-                >
-                    {options.map((option, index) => {
-                        // An option is selected if its index matches the state's selectedIndex
-                        const focused = index === selectedIndex
-                        return (
-                            <Link
-                                key={`${props.id}_option_${index}`}
-                                width={"1fr"}
-                                text={option}
-                                background={
-                                    focused ? colors.Primary : colors.Light
-                                }
-                                type={focused ? "ghost" : "primary"}
-                                disabled={disabled}
-                                onTap={() =>
-                                    !disabled && setSelectedIndex(index)
-                                }
-                            />
-                        )
-                    })}
-                </Stack>
-            )}
-        </Interactive>
+        <Stack
+            {...rest}
+            {...interactiveProps}
+            direction="horizontal"
+            alignment="center"
+            gap={1}
+            borderRadius={12}
+            overflow="hidden"
+            {...variants[valid ? interactiveState : "warn"]}
+        >
+            {options.map((option, index) => {
+                // An option is selected if its index matches the state's selectedIndex
+                const focused = index === selectedIndex
+                return (
+                    <Link
+                        key={`${props.id}_option_${index}`}
+                        width={"1fr"}
+                        text={option}
+                        background={focused ? colors.Primary : colors.Light}
+                        type={focused ? "ghost" : "primary"}
+                        disabled={disabled}
+                        onTap={() => !disabled && setSelectedIndex(index)}
+                    />
+                )
+            })}
+        </Stack>
     )
 }
 

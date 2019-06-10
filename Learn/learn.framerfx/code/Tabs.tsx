@@ -145,7 +145,7 @@ export function Tabs(props) {
                                 key={`${id}_tab_${tab}`}
                                 text={tab}
                                 height={50}
-                                resize
+                                resize="width"
                                 type={
                                     state.selectedIndex === index
                                         ? "primary"

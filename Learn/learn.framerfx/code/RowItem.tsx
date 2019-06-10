@@ -1,6 +1,11 @@
 import * as React from "react"
-import { Stack, addPropertyControls, ControlType, FrameProps } from "framer"
-import { Interactive } from "./Interactive"
+import {
+    Frame,
+    Stack,
+    addPropertyControls,
+    ControlType,
+    FrameProps,
+} from "framer"
 import { Icon } from "./Icon"
 import { Switch } from "./Switch"
 import { Checkbox } from "./Checkbox"
@@ -31,7 +36,6 @@ type Props = Partial<FrameProps> & {
 
 export function RowItem(props: Partial<Props>) {
     const {
-        height,
         text,
         component,
         icon,
@@ -49,6 +53,8 @@ export function RowItem(props: Partial<Props>) {
         step,
         ...rest
     } = props
+
+    const { height } = props
 
     const computedValue =
         overrideValue === undefined
@@ -70,18 +76,23 @@ export function RowItem(props: Partial<Props>) {
     }
 
     return (
-        <Interactive {...rest} height={height} active={false} hover={false}>
+        <Frame
+            background="none"
+            {...rest}
+            style={{ ...props.style, cursor: "pointer" }}
+        >
             <Stack
+                height="100%"
+                width="100%"
                 direction="horizontal"
                 alignment="center"
                 distribution="space-between"
-                height={"100%"}
-                width={"100%"}
+                gap={0}
+                padding={0}
             >
                 <Text
                     type="body"
                     textAlign="left"
-                    fontWeight="normal"
                     width={"auto"}
                     height="100%"
                     text={text}
@@ -89,7 +100,7 @@ export function RowItem(props: Partial<Props>) {
                 />
                 {components[component]}
             </Stack>
-        </Interactive>
+        </Frame>
     )
 }
 

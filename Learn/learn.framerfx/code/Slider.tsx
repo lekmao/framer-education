@@ -7,7 +7,7 @@ import {
     useTransform,
     FrameProps,
 } from "framer"
-import { Interactive } from "./Interactive"
+import { useInteractionState } from "./Hooks"
 import { Text } from "./Text"
 import { colors } from "./canvas"
 
@@ -48,6 +48,9 @@ export function Slider(props: Partial<Props>) {
         onDragStart,
         onDragEnd,
         onDrag,
+        drag,
+        disabled,
+        style,
         ...rest
     } = props
 
@@ -135,9 +138,6 @@ export function Slider(props: Partial<Props>) {
 
     /* ------------------------------ Presentation ------------------------------ */
 
-    // Get the properties we want from state
-    const {} = props
-
     const variants = {
         initial: {
             border: `1px solid ${colors.Neutral}`,
@@ -153,100 +153,98 @@ export function Slider(props: Partial<Props>) {
         },
     }
 
+    const [interactionState, interactionProps] = useInteractionState({
+        disabled,
+        style,
+    })
+
     return (
-        <Interactive
+        <Frame
             // Constants
             {...rest}
+            {...interactionProps}
             height={40}
             background="none"
-            drag={false}
-            onDrag={undefined}
-            onDragStart={undefined}
-            onDragEnd={undefined}
         >
-            {current => (
+            <Frame
+                height={8}
+                borderRadius={4}
+                center="y"
+                width={railWidth}
+                left={knobSize / 2}
+                background={colors.Neutral}
+                border={`${state.valid ? 0 : 1}px solid ${colors.Warn}`}
+            />
+            <Frame
+                height={8}
+                borderRadius={4}
+                background={colors.Primary}
+                center="y"
+                width={knobX}
+                left={knobSize / 2}
+            />
+            {titles && (
                 <>
-                    <Frame
-                        height={8}
-                        borderRadius={4}
-                        center="y"
-                        width={railWidth}
-                        left={knobSize / 2}
-                        background={colors.Neutral}
-                        border={`${state.valid ? 0 : 1}px solid ${colors.Warn}`}
+                    <Text
+                        text={min.toString()}
+                        width={knobSize}
+                        y={16}
+                        height="100%"
+                        type={"caption"}
+                        textAlign="center"
+                        verticalAlign="bottom"
                     />
-                    <Frame
-                        height={8}
-                        borderRadius={4}
-                        background={colors.Primary}
-                        center="y"
-                        width={knobX}
-                        left={knobSize / 2}
-                    />
-                    {titles && (
-                        <>
-                            <Text
-                                text={min.toString()}
-                                width={knobSize}
-                                y={16}
-                                height="100%"
-                                type={"caption"}
-                                textAlign="center"
-                                verticalAlign="bottom"
-                            />
-                            <Text
-                                text={max.toString()}
-                                width={knobSize}
-                                y={16}
-                                x={railWidth}
-                                height="100%"
-                                type={"caption"}
-                                textAlign="center"
-                                verticalAlign="bottom"
-                            />
-                        </>
-                    )}
-                    <Frame size={40} x={knobX} center="y" background="none">
-                        <Frame
-                            background={colors.Light}
-                            height={36}
-                            width={36}
-                            borderRadius="100%"
-                            shadow={`0px 2px 5px ${colors.Shadow}`}
-                            center
-                            {...variants[state.valid ? current : "warn"]}
-                        />
-                        {titles && (
-                            <Text
-                                text={state.valueTitle}
-                                y={-16}
-                                center="x"
-                                type={"caption"}
-                                height={12}
-                                textAlign="center"
-                                verticalAlign="bottom"
-                            />
-                        )}
-                    </Frame>
-                    <Frame
-                        size={40}
-                        center="y"
-                        background="none"
-                        x={dragX}
-                        drag={props.disabled ? false : "x"}
-                        dragMomentum={false}
-                        dragElastic={false}
-                        dragConstraints={{
-                            left: 0,
-                            right: props.width - knobSize,
-                        }}
-                        onDrag={onDrag}
-                        onDragStart={onDragStart}
-                        onDragEnd={onDragEnd}
+                    <Text
+                        text={max.toString()}
+                        width={knobSize}
+                        y={16}
+                        x={railWidth}
+                        height="100%"
+                        type={"caption"}
+                        textAlign="center"
+                        verticalAlign="bottom"
                     />
                 </>
             )}
-        </Interactive>
+            <Frame size={40} x={knobX} center="y" background="none">
+                <Frame
+                    background={colors.Light}
+                    height={36}
+                    width={36}
+                    borderRadius="100%"
+                    shadow={`0px 2px 5px ${colors.Shadow}`}
+                    center
+                    {...variants[state.valid ? interactionState : "warn"]}
+                />
+                {titles && (
+                    <Text
+                        text={state.valueTitle}
+                        y={-16}
+                        center="x"
+                        type={"caption"}
+                        height={12}
+                        textAlign="center"
+                        verticalAlign="bottom"
+                    />
+                )}
+            </Frame>
+            <Frame
+                size={40}
+                center="y"
+                background="none"
+                x={dragX}
+                drag={props.disabled ? false : "x"}
+                dragMomentum={false}
+                dragElastic={false}
+                dragConstraints={{
+                    left: 0,
+                    right: props.width - knobSize,
+                }}
+                onDrag={onDrag}
+                onDragStart={onDragStart}
+                onDragEnd={onDragEnd}
+            />
+        </Frame>
     )
 }
 

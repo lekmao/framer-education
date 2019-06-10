@@ -1,6 +1,6 @@
 import * as React from "react"
-import { addPropertyControls, ControlType, FrameProps } from "framer"
-import { Interactive } from "./Interactive"
+import { Frame, addPropertyControls, ControlType, FrameProps } from "framer"
+import { useInteractionState } from "./Hooks"
 import { Text } from "./Text"
 import { Icon } from "./Icon"
 import { iconNames, iconTitles } from "./Shared"
@@ -12,38 +12,15 @@ type Props = Partial<FrameProps> & {
     type: string
     icon: string
     disabled: boolean
-    resize: boolean
+    resize: boolean | "width" | "height"
     onResize: (width: number, height: number) => void
     onTap: (event: any, info: any) => void
 }
 
 export function Link(props: Partial<Props>) {
     // Grab the properties we want to use from props
-    const { onTap, text, icon, type, resize, ...rest } = props
+    const { text, icon, type, resize, style, ...rest } = props
     const { height, width, disabled } = props
-
-    const [state, setState] = React.useState({
-        width: 300,
-    })
-
-    React.useEffect(() => {
-        setState(state => ({ width: width as number }))
-    }, [width])
-
-    /* ----------------------------- Event Handlers ----------------------------- */
-
-    // When the user taps on the button, run onTap
-    const handleTap = (event: any, info: any) => {
-        // Call onTap with the toggled state
-        onTap(event, info)
-    }
-
-    const handleResize = (w: number, height: number) => {
-        if (resize) {
-            setState(state => ({ width: w }))
-            props.onResize(w, height)
-        }
-    }
 
     /* ------------------------------ Presentation ------------------------------ */
 
@@ -68,38 +45,32 @@ export function Link(props: Partial<Props>) {
         },
     }
 
-    return (
-        // Pass in container props when using this component in code
-        <Interactive
-            {...rest}
-            {...state}
-            // Events
-            onTap={!disabled && handleTap}
-        >
-            {current => {
-                const content =
-                    icon === "none" ? (
-                        <Text
-                            // Constant props
-                            height={height}
-                            width={state.width}
-                            type="link"
-                            color={theme[type].foreground}
-                            resize={resize}
-                            onResize={handleResize}
-                            text={text}
-                        />
-                    ) : (
-                        <Icon
-                            center
-                            icon={icon}
-                            color={theme[type].foreground}
-                        />
-                    )
+    const [interactiveState, interactiveProps] = useInteractionState({
+        disabled,
+        style: props.style,
+    })
 
-                return content
-            }}
-        </Interactive>
+    return !icon || icon === "none" ? (
+        <Text
+            // Constant props
+            {...rest}
+            {...interactiveProps}
+            type="link"
+            color={theme[type].foreground}
+            resize={resize}
+            onResize={props.onResize}
+            text={text}
+            onTap={!disabled && props.onTap}
+        />
+    ) : (
+        <Frame
+            background="none"
+            {...rest}
+            {...interactiveProps}
+            onTap={!disabled && props.onTap}
+        >
+            <Icon center icon={icon} color={theme[type].foreground} />
+        </Frame>
     )
 }
 

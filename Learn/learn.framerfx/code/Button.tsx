@@ -1,9 +1,9 @@
 import * as React from "react"
 import { Frame, addPropertyControls, ControlType, FrameProps } from "framer"
-import { Interactive } from "./Interactive"
 import { Icon } from "./Icon"
 import { Text } from "./Text"
 import { iconNames, iconTitles } from "./Shared"
+import { useInteractionState } from "./Hooks"
 import { colors } from "./canvas"
 
 type Props = Partial<FrameProps> & {
@@ -24,9 +24,6 @@ export function Button(
     // renaming toggled to avoid conflicting with the state's toggled
     // property
     const {
-        height,
-        width,
-        borderRadius,
         type,
         text,
         icon,
@@ -34,21 +31,24 @@ export function Button(
         disabled,
         toggle,
         toggled: initialToggled,
+        style,
         ...rest
     } = props
+
+    const { height, width } = props
 
     /* ---------------------------------- State --------------------------------- */
 
     // Initialize state with props values
     const [state, setState] = React.useState({
-        toggled: toggle ? initialToggled : null,
+        toggled: toggle ? initialToggled || false : null,
     })
 
     // When the hook receives new props, overwrite the state
     React.useEffect(() => {
         setState({
             ...state,
-            toggled: toggle ? initialToggled : null,
+            toggled: toggle ? initialToggled || false : null,
         })
     }, [initialToggled])
 
@@ -115,7 +115,7 @@ export function Button(
             },
             border: `1px solid ${colors.Shadow}`,
         },
-        pressed: {
+        toggled: {
             style: {
                 filter: `brightness(.8)`,
             },
@@ -129,50 +129,39 @@ export function Button(
         },
     }
 
+    const [interactiveState, interactiveProps] = useInteractionState({
+        disabled,
+        toggled,
+        style,
+    })
+
+    const variant =
+        type === "ghost"
+            ? { border: `1px solid ${colors.Primary}` }
+            : variants[interactiveState]
+
     return (
-        // Pass in container props when using this component in code
-        <Interactive
-            {...props as any}
-            // Events
+        <Frame
+            {...rest}
+            {...interactiveProps}
             onTap={!disabled && handleTap}
-            pressed={toggled}
+            borderRadius={8}
+            background={theme[type].background}
+            {...variant}
+            style={{ ...variant.style, ...interactiveProps.style }}
         >
-            {current => {
-                const variant =
-                    type === "ghost"
-                        ? { border: `1px solid ${colors.Primary}` }
-                        : variants[current]
-
-                const content =
-                    icon === "none" ? (
-                        <Text
-                            // Constant props
-                            text={text}
-                            type="link"
-                            height="100%"
-                            width="100%"
-                            color={theme[type].foreground}
-                        />
-                    ) : (
-                        <Icon
-                            center
-                            icon={icon}
-                            color={theme[type].foreground}
-                        />
-                    )
-
-                return (
-                    <Frame
-                        size="100%"
-                        borderRadius={borderRadius}
-                        background={theme[type].background}
-                        {...variant}
-                    >
-                        {content}
-                    </Frame>
-                )
-            }}
-        </Interactive>
+            {icon === "none" ? (
+                <Text
+                    // Constant props
+                    center
+                    type="link"
+                    color={theme[type].foreground}
+                    text={text}
+                />
+            ) : (
+                <Icon center icon={icon} color={theme[type].foreground} />
+            )}
+        </Frame>
     )
 }
 
@@ -186,6 +175,7 @@ Button.defaultProps = {
     icon: "none",
     type: "primary",
     primary: true,
+    toggle: true,
     onTap: () => null,
 }
 
