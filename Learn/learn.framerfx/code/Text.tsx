@@ -53,6 +53,8 @@ export function Text(props: Partial<Props>) {
 
 	const { size, height, width, style } = props
 
+	/* ---------------------------------- State --------------------------------- */
+
 	// Ref for text container
 	const resizeRef = React.createRef<HTMLDivElement>()
 
@@ -81,6 +83,8 @@ export function Text(props: Partial<Props>) {
 		}
 	}, [text, resize, height, width])
 
+	/* ------------------------------ Presentation ------------------------------ */
+
 	// Calculate paddings
 	const paddings = paddingPerSide
 		? {
@@ -100,9 +104,6 @@ export function Text(props: Partial<Props>) {
 		: {
 				padding,
 		  }
-
-	// Determine whether we'll resize width
-	const willResizeWidth = resize === true || resize === "width"
 
 	return (
 		<Interactive

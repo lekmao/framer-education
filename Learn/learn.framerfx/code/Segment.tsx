@@ -68,6 +68,10 @@ export function Segment(props: Partial<Props>) {
 		})
 	}, [validation, required])
 
+	const [interactiveState, interactiveProps] = useInteractionState({
+		disabled,
+	})
+
 	/* ----------------------------- Event Handlers ----------------------------- */
 
 	// When the user selects an option, updatet state and run onValueChange
@@ -117,10 +121,6 @@ export function Segment(props: Partial<Props>) {
 			border: `1px solid ${colors.Warn}`,
 		},
 	}
-
-	const [interactiveState, interactiveProps] = useInteractionState({
-		disabled,
-	})
 
 	return (
 		<Stack

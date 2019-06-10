@@ -138,8 +138,8 @@ export function CheckboxGroup(props: Partial<Props>) {
 
 // Set the component's default properties
 CheckboxGroup.defaultProps = {
-    value: ["Paris"],
-    options: ["Paris", "New York", "London", "Hong Kong"],
+    value: [],
+    options: [],
     height: 200,
     width: 320,
     required: false,
