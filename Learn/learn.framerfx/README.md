@@ -100,6 +100,7 @@ Learn currently includes:
  
 # Changelog
 
+- Reverses last
 - Removes SVG icons and library, replaces with spritesheet
 - Removes stepper as default RowItem component
 - Adds DatePicker / DatePickerModal
