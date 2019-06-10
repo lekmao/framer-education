@@ -100,6 +100,7 @@ Learn currently includes:
  
 # Changelog
 
+- Adds ProgressBar
 - Reverses last
 - Removes SVG icons and library, replaces with spritesheet
 - Removes stepper as default RowItem component
