@@ -208,15 +208,11 @@ export function DatePicker(props) {
     // First weekday in the month
     const firstDayOfMonth = current.getDay()
 
-    // Last weekday in the month
-    const lastDayOfMonth = firstDayOfMonth + daysInMonth
-
     // Weeks / Days 2D Array
 
     const getInRange = date => date >= startDate && date <= endDate
 
     const monthArray = range(6 * 7).map(index => {
-        const week = Math.floor(index / 7)
         const day = index + 1 - firstDayOfMonth
         const hasDay = day > 0 && day <= daysInMonth
 

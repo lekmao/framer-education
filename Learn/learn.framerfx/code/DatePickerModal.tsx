@@ -22,11 +22,11 @@ export function DatePickerModal(props) {
 		...rest
 	} = props
 
-	/* ---------------------------------- State --------------------------------- */
-
 	const d = new Date(Date.parse(date))
 	const e = new Date(Date.parse(end))
 	const s = new Date(Date.parse(start))
+
+	/* ---------------------------------- State --------------------------------- */
 
 	const [state, setState] = React.useState({
 		open,

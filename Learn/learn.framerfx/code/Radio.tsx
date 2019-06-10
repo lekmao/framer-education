@@ -38,7 +38,7 @@ export function Radio(props: Partial<Props>) {
 		})
 	}, [initialValue, validation])
 
-	const [interactiveState, interactiveProps] = useInteractionState({
+	const [interactionState, interactionProps] = useInteractionState({
 		disabled,
 		style,
 	})
@@ -87,7 +87,7 @@ export function Radio(props: Partial<Props>) {
 	return (
 		<Frame
 			{...rest}
-			{...interactiveProps}
+			{...interactionProps}
 			height={50}
 			width={50}
 			background="none"
@@ -99,7 +99,7 @@ export function Radio(props: Partial<Props>) {
 				width={28}
 				borderRadius={'100%'}
 				background={colors.Light}
-				{...variants[valid ? interactiveState : 'warn']}
+				{...variants[valid ? interactionState : 'warn']}
 			/>
 			<Frame
 				center

@@ -1,9 +1,9 @@
-import * as React from "react"
-import { addPropertyControls, ControlType, Stack, FrameProps } from "framer"
-import { Link } from "./Link"
-import { Button } from "./Button"
-import { colors } from "./canvas"
-import { useInteractionState } from "./Hooks"
+import * as React from 'react'
+import { addPropertyControls, ControlType, Stack, FrameProps } from 'framer'
+import { Link } from './Link'
+import { Button } from './Button'
+import { colors } from './canvas'
+import { useInteractionState } from './Hooks'
 
 type Props = Partial<FrameProps> & {
 	value: string
@@ -32,10 +32,10 @@ export function Segment(props: Partial<Props>) {
 
 	// Set the initial value
 	const initialSelectedIndex =
-		typeof initial === "number" ? initial : options.indexOf(initial)
+		typeof initial === 'number' ? initial : options.indexOf(initial)
 
 	const initialValue =
-		typeof initial === "number" ? options[initialSelectedIndex] : initial
+		typeof initial === 'number' ? options[initialSelectedIndex] : initial
 
 	const validate = (value, index) =>
 		index && index >= 0 ? validation(value, index) : !required
@@ -67,6 +67,10 @@ export function Segment(props: Partial<Props>) {
 			valid: validate(state.value, state.selectedIndex),
 		})
 	}, [validation, required])
+
+	const [interactionState, interactionProps] = useInteractionState({
+		disabled,
+	})
 
 	/* ----------------------------- Event Handlers ----------------------------- */
 
@@ -118,20 +122,16 @@ export function Segment(props: Partial<Props>) {
 		},
 	}
 
-	const [interactiveState, interactiveProps] = useInteractionState({
-		disabled,
-	})
-
 	return (
 		<Stack
 			{...rest}
-			{...interactiveProps}
+			{...interactionProps}
 			direction="horizontal"
 			alignment="center"
 			gap={1}
 			borderRadius={12}
 			overflow="hidden"
-			{...variants[valid ? interactiveState : "warn"]}
+			{...variants[valid ? interactionState : 'warn']}
 		>
 			{options.map((option, index) => {
 				// An option is selected if its index matches the state's selectedIndex
@@ -139,10 +139,10 @@ export function Segment(props: Partial<Props>) {
 				return (
 					<Link
 						key={`${props.id}_option_${index}`}
-						width={"1fr"}
+						width={'1fr'}
 						text={option}
 						background={focused ? colors.Primary : colors.Light}
-						type={focused ? "ghost" : "primary"}
+						type={focused ? 'ghost' : 'primary'}
 						disabled={disabled}
 						onTap={() => !disabled && setSelectedIndex(index)}
 					/>
@@ -157,8 +157,8 @@ Segment.defaultProps = {
 	height: 50,
 	width: 320,
 	disabled: false,
-	tint: "#027aff",
-	textTint: "#FFFFFF",
+	tint: '#027aff',
+	textTint: '#FFFFFF',
 	value: null,
 	options: [],
 	onValueChange: () => null,
@@ -169,25 +169,25 @@ Segment.defaultProps = {
 addPropertyControls(Segment, {
 	value: {
 		type: ControlType.String,
-		defaultValue: "Paris",
-		title: "Value",
+		defaultValue: 'Paris',
+		title: 'Value',
 	},
 	options: {
 		type: ControlType.Array,
 		propertyControl: {
 			type: ControlType.String,
 		},
-		defaultValue: ["Paris", "New York", "London"],
-		title: "Options",
+		defaultValue: ['Paris', 'New York', 'London'],
+		title: 'Options',
 	},
 	required: {
 		type: ControlType.Boolean,
 		defaultValue: false,
-		title: "Required",
+		title: 'Required',
 	},
 	disabled: {
 		type: ControlType.Boolean,
 		defaultValue: false,
-		title: "Disabled",
+		title: 'Disabled',
 	},
 })

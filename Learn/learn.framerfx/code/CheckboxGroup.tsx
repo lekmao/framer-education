@@ -66,7 +66,7 @@ export function CheckboxGroup(props: Partial<Props>) {
 
 	/* ----------------------------- Event Handlers ----------------------------- */
 
-	const { value, valid, selectedIndices } = state
+	const { valid, selectedIndices } = state
 
 	// When the user selects an option, updatet state and run onValueChange
 	const setSelectedIndex = (index: number, bool: boolean) => {

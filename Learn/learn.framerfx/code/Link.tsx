@@ -23,7 +23,7 @@ export function Link(props: Partial<Props>) {
 
 	/* ---------------------------------- State --------------------------------- */
 
-	const [interactiveState, interactiveProps] = useInteractionState({
+	const [interactionState, interactionProps] = useInteractionState({
 		disabled,
 		style: props.style,
 	})
@@ -75,7 +75,7 @@ export function Link(props: Partial<Props>) {
 		<Frame
 			background="none"
 			{...rest}
-			{...interactiveProps}
+			{...interactionProps}
 			onTap={!disabled && handleTap}
 		>
 			<Icon center icon={icon} color={theme[type].foreground} />

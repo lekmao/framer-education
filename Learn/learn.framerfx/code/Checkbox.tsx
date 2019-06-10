@@ -38,6 +38,11 @@ export function Checkbox(props: Partial<Props>) {
 		})
 	}, [initialValue, validation])
 
+	const [interactiveState, interactiveProps] = useInteractionState({
+		disabled,
+		style,
+	})
+
 	/* ----------------------------- Event Handlers ----------------------------- */
 
 	// When the user taps on the switch, run onValueChange and flip the isOn state
@@ -76,11 +81,6 @@ export function Checkbox(props: Partial<Props>) {
 			border: `1px solid ${colors.Warn}`,
 		},
 	}
-
-	const [interactiveState, interactiveProps] = useInteractionState({
-		disabled,
-		style,
-	})
 
 	return (
 		<Frame

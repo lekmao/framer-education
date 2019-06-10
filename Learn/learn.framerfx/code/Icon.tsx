@@ -16,12 +16,7 @@ export function Icon(props: Props) {
 	/* ------------------------------ Presentation ------------------------------ */
 
 	return (
-		<Stack
-			{...rest}
-			background={'none'}
-			alignment="center"
-			distribution="center"
-		>
+		<Stack {...rest} background="none" alignment="center" distribution="center">
 			<svg
 				viewBox={`0 0 24 24`}
 				style={{
