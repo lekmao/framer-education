@@ -7,6 +7,7 @@ type Props = Partial<FrameProps> & {
     pressed: boolean
     active: boolean
     hover: boolean
+    interactive: boolean
     type: string
 }
 
@@ -15,44 +16,14 @@ type Props = Partial<FrameProps> & {
  * @param props
  */
 export function Interactive(props: Partial<Props>) {
-    // Grab the properties we want to use from props (note that we're
-    // renaming toggled to avoid conflicting with the state's toggled
-    // property
     const {
-        active: doActive,
-        hover: doHover,
         children,
         disabled,
         pressed,
-        overflow,
-        center,
-        size,
-        height,
-        width,
-        drag,
-        dragConstraints,
-        dragDirectionLock,
-        onClick,
-        onTap,
-        onTapStart,
-        onTapCancel,
-        onMouseEnter,
-        onMouseLeave,
-        whileTap,
-        whileHover,
-        rotate,
-        onDrag,
-        onDragStart,
-        onDragEnd,
-        borderRadius,
-        top,
-        left,
-        bottom,
-        right,
-        x,
-        y,
-        image,
-        background,
+        active: doActive,
+        hover: doHover,
+        interactive,
+        ...rest
     } = props
 
     /* ---------------------------------- State --------------------------------- */
@@ -114,36 +85,7 @@ export function Interactive(props: Partial<Props>) {
 
     return (
         <Frame
-            {...{
-                size,
-                height,
-                width,
-                center,
-                top,
-                left,
-                bottom,
-                right,
-                x,
-                y,
-                background,
-                borderRadius,
-                overflow,
-                rotate,
-                onClick,
-                onTap,
-                onTapStart,
-                onTapCancel,
-                onMouseEnter,
-                onMouseLeave,
-                onDrag,
-                onDragStart,
-                onDragEnd,
-                whileTap,
-                whileHover,
-                drag,
-                dragConstraints,
-                dragDirectionLock,
-            }}
+            {...rest}
             // Constant props
             // Variant props
             variants={variants}
@@ -157,16 +99,18 @@ export function Interactive(props: Partial<Props>) {
             style={{
                 ...props.style,
                 cursor:
-                    !disabled && (doHover || doActive || onTap)
+                    interactive &&
+                    !disabled &&
+                    (doHover || doActive || props.onTap)
                         ? "pointer"
                         : undefined,
             }}
             // Events
-            onMouseEnter={() => setHover(true)}
-            onMouseLeave={() => setHover(false)}
-            onMouseDown={() => setActive(true)}
-            onMouseUp={() => setActive(false)}
-            onTapCancel={() => clearActiveHovered()}
+            onMouseEnter={() => interactive && setHover(true)}
+            onMouseLeave={() => interactive && setHover(false)}
+            onMouseDown={() => interactive && setActive(true)}
+            onMouseUp={() => interactive && setActive(false)}
+            onTapCancel={() => interactive && clearActiveHovered()}
             // Pass in container props when using this component in code
         >
             {children && typeof children === "function"
@@ -183,6 +127,7 @@ Interactive.defaultProps = {
     disabled: false,
     active: true,
     hover: true,
+    interactive: true,
     background: null,
     onTap: () => null,
 }

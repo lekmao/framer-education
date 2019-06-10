@@ -105,14 +105,15 @@ export function Stepper(props: Props) {
             {...rest}
         >
             <Link
-                type={disabled ? "neutral" : "primary"}
+                type={"ghost"}
+                background={colors.Primary}
                 icon="remove"
                 height={"100%"}
                 width={48}
                 disabled={disabled}
                 borderRadius={`8px 0px 0px 8px`}
                 onTap={() => handleValueChange(-1)}
-                background={colors.Light}
+                text=""
             />
             <Text
                 type="link"
@@ -123,14 +124,15 @@ export function Stepper(props: Props) {
                 background={colors.Light}
             />
             <Link
-                type={disabled ? "neutral" : "primary"}
+                type={"ghost"}
+                background={colors.Primary}
                 icon="add"
                 height={"100%"}
                 width={48}
                 disabled={disabled}
                 borderRadius={`0px 8px 8px 0px`}
-                background={colors.Light}
                 onTap={() => handleValueChange(1)}
+                text=""
             />
         </Stack>
     )
