@@ -64,7 +64,6 @@ export function Checkbox(props: Partial<Props>) {
 
 	/* ------------------------------ Presentation ------------------------------ */
 
-	// Grab the properties we want to use from state
 	const { value, valid } = state
 
 	const variants = {
@@ -124,7 +123,6 @@ export function Checkbox(props: Partial<Props>) {
 	)
 }
 
-// Set the component's default properties
 Checkbox.defaultProps = {
 	value: false,
 	disabled: false,
@@ -134,7 +132,6 @@ Checkbox.defaultProps = {
 	onValueChange: () => null,
 }
 
-// Set the component's property controls
 addPropertyControls(Checkbox, {
 	value: {
 		type: ControlType.Boolean,

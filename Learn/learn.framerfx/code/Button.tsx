@@ -159,7 +159,6 @@ export function Button(
 	)
 }
 
-// Set the component's default properties
 Button.defaultProps = {
 	height: 60,
 	width: 320,
@@ -173,7 +172,6 @@ Button.defaultProps = {
 	onTap: () => null,
 }
 
-// Set the component's property controls
 addPropertyControls(Button, {
 	text: {
 		type: ControlType.String,

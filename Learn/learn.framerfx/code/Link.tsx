@@ -1,134 +1,132 @@
-import * as React from 'react'
-import { Frame, addPropertyControls, ControlType, FrameProps } from 'framer'
-import { useInteractionState } from './Hooks'
-import { Text } from './Text'
-import { Icon } from './Icon'
-import { iconNames, iconTitles } from './Shared'
-import { colors } from './canvas'
+import * as React from "react"
+import { Frame, addPropertyControls, ControlType, FrameProps } from "framer"
+import { useInteractionState } from "./Hooks"
+import { Text } from "./Text"
+import { Icon } from "./Icon"
+import { iconNames, iconTitles } from "./Shared"
+import { colors } from "./canvas"
 
 // Define a type for our props
 type Props = Partial<FrameProps> & {
-	text: string
-	type: string
-	icon: string
-	disabled: boolean
-	resize: boolean | 'width' | 'height'
-	onResize: (width: number, height: number) => void
-	onTap: (event: any, info: any) => void
+    text: string
+    type: string
+    icon: string
+    disabled: boolean
+    resize: boolean | "width" | "height"
+    onResize: (width: number, height: number) => void
+    onTap: (event: any, info: any) => void
 }
 
 export function Link(props: Partial<Props>) {
-	const { text, icon, type, resize, style, onTap, ...rest } = props
-	const { width, disabled } = props
+    const { text, icon, type, resize, style, onTap, ...rest } = props
+    const { width, disabled } = props
 
-	/* ---------------------------------- State --------------------------------- */
+    /* ---------------------------------- State --------------------------------- */
 
-	const [interactionState, interactionProps] = useInteractionState({
-		disabled,
-		style: props.style,
-	})
+    const [interactionState, interactionProps] = useInteractionState({
+        disabled,
+        style: props.style,
+    })
 
-	/* ----------------------------- Event Handlers ----------------------------- */
+    /* ----------------------------- Event Handlers ----------------------------- */
 
-	// When the user taps on the button, run onTap
-	const handleTap = (event: any, info: any) => {
-		// Call onTap with the toggled state
-		onTap(event, info)
-	}
+    // When the user taps on the button, run onTap
+    const handleTap = (event: any, info: any) => {
+        // Call onTap with the toggled state
+        onTap(event, info)
+    }
 
-	/* ------------------------------ Presentation ------------------------------ */
+    /* ------------------------------ Presentation ------------------------------ */
 
-	const theme = {
-		primary: {
-			foreground: colors.Primary,
-		},
-		secondary: {
-			foreground: colors.Secondary,
-		},
-		accent: {
-			foreground: colors.Accent,
-		},
-		neutral: {
-			foreground: colors.Dark,
-		},
-		ghost: {
-			foreground: colors.Light,
-		},
-		warn: {
-			foreground: colors.Warn,
-		},
-	}
+    const theme = {
+        primary: {
+            foreground: colors.Primary,
+        },
+        secondary: {
+            foreground: colors.Secondary,
+        },
+        accent: {
+            foreground: colors.Accent,
+        },
+        neutral: {
+            foreground: colors.Dark,
+        },
+        ghost: {
+            foreground: colors.Light,
+        },
+        warn: {
+            foreground: colors.Warn,
+        },
+    }
 
-	return !icon || icon === 'none' ? (
-		<Text
-			// Constant props
-			{...rest}
-			{...interactiveProps}
-			type="link"
-			color={theme[type].foreground}
-			resize={resize}
-			onResize={props.onResize}
-			text={text}
-			onTap={!disabled && handleTap}
-		/>
-	) : (
-		<Frame
-			background="none"
-			{...rest}
-			{...interactionProps}
-			onTap={!disabled && handleTap}
-		>
-			<Icon center icon={icon} color={theme[type].foreground} />
-		</Frame>
-	)
+    return !icon || icon === "none" ? (
+        <Text
+            // Constant props
+            {...rest}
+            {...interactionProps}
+            type="link"
+            color={theme[type].foreground}
+            resize={resize}
+            onResize={props.onResize}
+            text={text}
+            onTap={!disabled && handleTap}
+        />
+    ) : (
+        <Frame
+            background="none"
+            {...rest}
+            {...interactionProps}
+            onTap={!disabled && handleTap}
+        >
+            <Icon center icon={icon} color={theme[type].foreground} />
+        </Frame>
+    )
 }
 
-// Set the component's default properties
 Link.defaultProps = {
-	height: 60,
-	width: 200,
-	disabled: false,
-	text: 'Get Started!',
-	icon: 'none',
-	type: 'primary',
-	color: 'red',
-	primary: true,
-	background: 'none',
-	resize: false,
-	onTap: () => null,
-	onResize: (width, height) => null,
+    height: 60,
+    width: 200,
+    disabled: false,
+    text: "Get Started!",
+    icon: "none",
+    type: "primary",
+    color: "red",
+    primary: true,
+    background: "none",
+    resize: false,
+    onTap: () => null,
+    onResize: (width, height) => null,
 }
 
-// Set the component's property controls
 addPropertyControls(Link, {
-	text: {
-		type: ControlType.String,
-		title: 'Text',
-		defaultValue: 'Get Started!',
-	},
-	type: {
-		type: ControlType.Enum,
-		options: ['primary', 'secondary', 'accent', 'warn', 'neutral', 'ghost'],
-		optionTitles: [
-			'Primary',
-			'Secondary',
-			'Accent',
-			'Warn',
-			'Neutral',
-			'Ghost',
-		],
-		defaultValue: 'primary',
-	},
-	icon: {
-		title: 'Icon',
-		type: ControlType.Enum,
-		options: ['none', ...iconNames],
-		optionTitles: ['None', ...iconTitles],
-		defaultValue: 'none',
-	},
-	disabled: {
-		type: ControlType.Boolean,
-		title: 'Disabled',
-		defaultValue: false,
-	},
+    text: {
+        type: ControlType.String,
+        title: "Text",
+        defaultValue: "Get Started!",
+    },
+    type: {
+        type: ControlType.Enum,
+        options: ["primary", "secondary", "accent", "warn", "neutral", "ghost"],
+        optionTitles: [
+            "Primary",
+            "Secondary",
+            "Accent",
+            "Warn",
+            "Neutral",
+            "Ghost",
+        ],
+        defaultValue: "primary",
+    },
+    icon: {
+        title: "Icon",
+        type: ControlType.Enum,
+        options: ["none", ...iconNames],
+        optionTitles: ["None", ...iconTitles],
+        defaultValue: "none",
+    },
+    disabled: {
+        type: ControlType.Boolean,
+        title: "Disabled",
+        defaultValue: false,
+    },
 })

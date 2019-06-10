@@ -66,7 +66,6 @@ export function Radio(props: Partial<Props>) {
 
 	/* ------------------------------ Presentation ------------------------------ */
 
-	// Grab the properties we want to use from state
 	const { value, valid } = state
 
 	const variants = {
@@ -126,7 +125,6 @@ export function Radio(props: Partial<Props>) {
 	)
 }
 
-// Set the component's default properties
 Radio.defaultProps = {
 	value: false,
 	disabled: false,
@@ -136,7 +134,6 @@ Radio.defaultProps = {
 	onValueChange: () => null,
 }
 
-// Set the component's property controls
 addPropertyControls(Radio, {
 	value: {
 		type: ControlType.Boolean,

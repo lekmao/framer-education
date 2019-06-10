@@ -127,7 +127,6 @@ export function CheckboxGroup(props: Partial<Props>) {
 	)
 }
 
-// Set the component's default properties
 CheckboxGroup.defaultProps = {
 	value: ['Paris'],
 	options: ['Paris', 'New York', 'London', 'Hong Kong'],
@@ -139,7 +138,6 @@ CheckboxGroup.defaultProps = {
 	validation: () => true,
 }
 
-// Set the component's property controls
 addPropertyControls(CheckboxGroup, {
 	value: {
 		type: ControlType.Array,

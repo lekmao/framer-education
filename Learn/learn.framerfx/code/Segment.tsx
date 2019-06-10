@@ -15,9 +15,6 @@ type Props = Partial<FrameProps> & {
 }
 
 export function Segment(props: Partial<Props>) {
-	// Grab the properties we want to use from props (note that we're
-	// renaming the value and selectedIndex, to avoid conflicting with the
-	// state's `value` and `selectedIndex` properties.
 	const {
 		value: initial,
 		options,
@@ -152,7 +149,6 @@ export function Segment(props: Partial<Props>) {
 	)
 }
 
-// Set the component's default properties
 Segment.defaultProps = {
 	height: 50,
 	width: 320,
@@ -165,7 +161,6 @@ Segment.defaultProps = {
 	validation: () => true,
 }
 
-// Set the component's property controls
 addPropertyControls(Segment, {
 	value: {
 		type: ControlType.String,

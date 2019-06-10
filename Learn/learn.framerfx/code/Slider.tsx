@@ -36,7 +36,6 @@ const knobSize = 40,
  * @param props
  */
 export function Slider(props: Partial<Props>) {
-	// Grab the properties we want to use from props
 	const {
 		value: initialValue,
 		min,
@@ -247,7 +246,6 @@ export function Slider(props: Partial<Props>) {
 	)
 }
 
-// Set the component's default properties
 Slider.defaultProps = {
 	center: true,
 	height: 40,
@@ -261,7 +259,6 @@ Slider.defaultProps = {
 	onValueChange: () => null,
 }
 
-// Set the component's property controls
 addPropertyControls(Slider, {
 	value: {
 		type: ControlType.Number,

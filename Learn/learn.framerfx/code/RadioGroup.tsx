@@ -127,7 +127,6 @@ export function RadioGroup(props: Partial<Props>) {
 	)
 }
 
-// Set the component's default properties
 RadioGroup.defaultProps = {
 	value: null,
 	options: [],
@@ -139,7 +138,6 @@ RadioGroup.defaultProps = {
 	validation: () => true,
 }
 
-// Set the component's property controls
 addPropertyControls(RadioGroup, {
 	value: {
 		type: ControlType.String,

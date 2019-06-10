@@ -15,9 +15,6 @@ type Props = Partial<FrameProps> & {
  * @param props
  */
 export function Switch(props: Partial<Props>) {
-	// Grab the properties we want to use from props (note that we're
-	// renaming value to avoid conflicting with the state's value
-	// property
 	const {
 		value: initialValue,
 		onValueChange,
@@ -70,7 +67,6 @@ export function Switch(props: Partial<Props>) {
 
 	/* ------------------------------ Presentation ------------------------------ */
 
-	// Grab the properties we want to use from state
 	const { value, valid } = state
 
 	const variants = {
@@ -145,7 +141,6 @@ export function Switch(props: Partial<Props>) {
 	)
 }
 
-// Set the component's default properties
 Switch.defaultProps = {
 	value: false,
 	disabled: false,
@@ -155,7 +150,6 @@ Switch.defaultProps = {
 	onValueChange: () => null,
 }
 
-// Set the component's property controls
 addPropertyControls(Switch, {
 	value: {
 		type: ControlType.Boolean,
