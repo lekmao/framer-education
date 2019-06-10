@@ -12,13 +12,21 @@ type Props = Partial<FrameProps> & {
     validation: (value: string, index: number) => boolean
 }
 
+/**
+ * Segment
+ * @param props
+ */
 export function RadioGroup(props: Partial<Props>) {
+    // Grab the properties we want to use from props (note that we're
+    // renaming the value and selectedIndex, to avoid conflicting with the
+    // state's `value` and `selectedIndex` properties.
     const {
         value: initial,
         options,
         disabled,
         validation,
         onValueChange,
+        height,
         width,
         required,
     } = props
@@ -87,10 +95,8 @@ export function RadioGroup(props: Partial<Props>) {
         })
     }
 
-    /* ------------------------------ Presentation ------------------------------ */
-
     // Get the properties we want from state
-    const { selectedIndex, valid } = state
+    const { value, selectedIndex, valid } = state
 
     return (
         <Stack
@@ -126,6 +132,7 @@ export function RadioGroup(props: Partial<Props>) {
     )
 }
 
+// Set the component's default properties
 RadioGroup.defaultProps = {
     value: null,
     options: [],
@@ -137,6 +144,7 @@ RadioGroup.defaultProps = {
     validation: () => true,
 }
 
+// Set the component's property controls
 addPropertyControls(RadioGroup, {
     value: {
         type: ControlType.String,

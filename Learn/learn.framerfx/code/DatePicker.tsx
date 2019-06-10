@@ -24,7 +24,7 @@ export function DatePicker(props) {
         ...rest
     } = props
 
-	/* ---------------------------------- State --------------------------------- */
+    // State ----
 
     const d = new Date(Date.parse(date))
     const e = new Date(Date.parse(end))
@@ -53,7 +53,7 @@ export function DatePicker(props) {
         },
     })
 
-    // Update state when date / useRange prop changes
+    // Update state when date prop changes
     React.useEffect(() => {
         setState({
             ...state,
@@ -69,7 +69,6 @@ export function DatePicker(props) {
         })
     }, [date, useRange])
 
-    // Update start when props.start changes
     React.useEffect(() => {
         setState({
             ...state,
@@ -85,7 +84,6 @@ export function DatePicker(props) {
         })
     }, [start])
 
-    // Update end when props.end changes
     React.useEffect(() => {
         setState({
             ...state,
@@ -97,7 +95,7 @@ export function DatePicker(props) {
         })
     }, [end])
 
-    /* ----------------------------- Event Handlers ----------------------------- */
+    // Events ----
 
     // Update state with change in month
     const handleMonthChange = (delta: number) => {
@@ -185,8 +183,8 @@ export function DatePicker(props) {
         }
     }
 
-    /* ------------------------------ Presentation ------------------------------ */
-    
+    // Presentation ----
+
     // Date when currently displayed month begins
     const current = new Date(state.display.year, state.display.month, 1)
 

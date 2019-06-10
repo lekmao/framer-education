@@ -20,14 +20,15 @@ type Props = Partial<FrameProps> & {
 export function Link(props: Partial<Props>) {
 	// Grab the properties we want to use from props
 	const { text, icon, type, resize, style, onTap, ...rest } = props
-	const { disabled } = props
+	const { height, width, disabled } = props
 
-	/* ---------------------------------- State --------------------------------- */
-
-	const [interactiveState, interactiveProps] = useInteractionState({
-		disabled,
-		style: props.style,
+	const [state, setState] = React.useState({
+		width: resize ? 300 : width,
 	})
+
+	React.useEffect(() => {
+		setState(state => ({ width: width as number }))
+	}, [width])
 
 	/* ----------------------------- Event Handlers ----------------------------- */
 
@@ -35,6 +36,13 @@ export function Link(props: Partial<Props>) {
 	const handleTap = (event: any, info: any) => {
 		// Call onTap with the toggled state
 		onTap(event, info)
+	}
+
+	const handleResize = (w: number, height: number) => {
+		if (resize && state.width !== w) {
+			setState(state => ({ width: w }))
+			props.onResize(w, height)
+		}
 	}
 
 	/* ------------------------------ Presentation ------------------------------ */
@@ -60,6 +68,11 @@ export function Link(props: Partial<Props>) {
 		},
 	}
 
+	const [interactiveState, interactiveProps] = useInteractionState({
+		disabled,
+		style: props.style,
+	})
+
 	return !icon || icon === "none" ? (
 		<Text
 			// Constant props
@@ -84,19 +97,23 @@ export function Link(props: Partial<Props>) {
 	)
 }
 
+// Set the component's default properties
 Link.defaultProps = {
 	height: 60,
 	width: 200,
 	disabled: false,
-	type: "primary",
 	text: "Get Started!",
+	type: "primary",
+	color: "red",
+	primary: true,
+	onTap: () => null,
 	icon: "none",
 	resize: false,
 	background: "none",
-	onTap: () => null,
 	onResize: (width, height) => null,
 }
 
+// Set the component's property controls
 addPropertyControls(Link, {
 	text: {
 		type: ControlType.String,
