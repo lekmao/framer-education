@@ -1,5 +1,11 @@
 // ---------------------- Helper Utilities -----------------------
 
+export function isEqual(valueA: any, valueB: any) {
+    return JSON.stringify(valueA) === JSON.stringify(valueB)
+}
+
+// Array
+
 /**
  * Get an array of numbers, starting and ending at given numbers.
  * 
@@ -33,6 +39,26 @@ export const rangeFrom = (start: number, end: number, step = 1) => {
 export function range(length: number) {
     return rangeFrom(0, length - 1, 1)
 }
+
+/**
+ * Get sub-arrays of a given length from an array.
+ * 
+ * - `array` - The array to chunk.
+ * - `length` - The length of each chunk.
+ * 
+ * ```
+ const valueA = range(1) // [0]
+ const valueB = range(3) // [0, 1, 2]
+ const valueC = range(5) // [0, 1, 2, 3, 4]
+ ```
+*/
+export function chunk(array: any[], length: number) {
+    return Array.from({ length: Math.ceil(array.length / length) }, (v, i) =>
+        array.slice(i * length, i * length + length)
+    )
+}
+
+// Numbers
 
 /**
  * Clamp a number between a minimum and a maxiumum.

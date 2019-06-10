@@ -4,6 +4,7 @@ import { Interactive } from "./Interactive"
 import { Link } from "./Link"
 import { Button } from "./Button"
 import { colors } from "./canvas"
+import { Text } from "./Text"
 
 type Props = Partial<FrameProps> & {
     value: string
@@ -135,15 +136,15 @@ export function Segment(props: Partial<Props>) {
                         // An option is selected if its index matches the state's selectedIndex
                         const focused = index === selectedIndex
                         return (
-                            <Link
+                            <Text
                                 key={`${props.id}_option_${index}`}
                                 width={"1fr"}
                                 text={option}
                                 background={
                                     focused ? colors.Primary : colors.Light
                                 }
-                                type={focused ? "ghost" : "primary"}
-                                disabled={disabled}
+                                color={focused ? colors.Light : colors.Primary}
+                                // type={focused ? "primary" : "ghost"}
                                 onTap={() =>
                                     !disabled && setSelectedIndex(index)
                                 }

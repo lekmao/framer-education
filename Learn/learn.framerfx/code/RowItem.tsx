@@ -97,12 +97,13 @@ RowItem.defaultProps = {
     height: 50,
     width: 250,
     text: "Row Item",
-    component: "stepper",
+    component: "none",
     required: false,
     validation: () => true,
     onValueChange: () => null,
     icon: "chevron-right",
     color: colors.Primary,
+    onTap: () => null,
 }
 
 addPropertyControls(RowItem, {

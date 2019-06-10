@@ -4,7 +4,7 @@ import { colors } from "./canvas"
 
 type Props = Partial<FrameProps> & {
     fontSize: number
-    text: string
+    text: string | number
     fontWeight: string | number
     color: string
     verticalAlign: string

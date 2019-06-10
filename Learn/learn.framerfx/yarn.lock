@@ -291,10 +291,6 @@ loose-envify@^1.4.0:
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
 
-"material-icons-bundle@github:darosh/material-icons-bundle":
-  version "1.0.1"
-  resolved "https://codeload.github.com/darosh/material-icons-bundle/tar.gz/e65e595173f70363d364cf8cca8462f2a34a408e"
-
 memoize-one@^5.0.0:
   version "5.0.4"
   resolved "https://registry.yarnpkg.com/memoize-one/-/memoize-one-5.0.4.tgz#005928aced5c43d890a4dfab18ca908b0ec92cbc"

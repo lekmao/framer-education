@@ -28,6 +28,8 @@ The package currently includes:
 - Slider
 - Stepper
 - TextInput
+- DatePicker
+- DatePickerModel
 - Select
 - Segment
 - Tabs
@@ -98,6 +100,9 @@ Learn currently includes:
  
 # Changelog
 
+- Removes SVG icons and library, replaces with spritesheet
+- Removes stepper as default RowItem component
+- Adds DatePicker / DatePickerModal
 - Adds Glow color.
 - Adds background property control to Text.
 - Fixes text width on tabs

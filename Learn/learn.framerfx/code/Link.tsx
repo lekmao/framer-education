@@ -23,7 +23,7 @@ export function Link(props: Partial<Props>) {
     const { height, width, disabled } = props
 
     const [state, setState] = React.useState({
-        width: 300,
+        width: resize ? 300 : width,
     })
 
     React.useEffect(() => {
@@ -39,7 +39,7 @@ export function Link(props: Partial<Props>) {
     }
 
     const handleResize = (w: number, height: number) => {
-        if (resize) {
+        if (resize && state.width !== w) {
             setState(state => ({ width: w }))
             props.onResize(w, height)
         }
