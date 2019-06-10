@@ -1,14 +1,14 @@
-import * as React from "react"
+import * as React from 'react'
 import {
 	Frame,
 	addPropertyControls,
 	ControlType,
 	FrameProps,
 	useMotionValue,
-} from "framer"
-import { useInteractionState } from "./Hooks"
-import { Interactive } from "./Interactive"
-import { colors } from "./canvas"
+} from 'framer'
+import Markdown from 'markdown-to-jsx'
+import { Interactive } from './Interactive'
+import { colors } from './canvas'
 
 // See bottom of file for theme styles
 
@@ -26,7 +26,7 @@ type Props = Partial<FrameProps> & {
 	paddingPerSide: boolean
 	interactive: boolean
 	style: { [key: string]: any }
-	resize: "width" | "height" | boolean
+	resize: 'width' | 'height' | boolean
 	onResize: (width?: number, height?: number) => void
 }
 
@@ -47,7 +47,6 @@ export function Text(props: Partial<Props>) {
 		resize,
 		onResize,
 		interactive,
-		children,
 		...rest
 	} = props
 
@@ -71,12 +70,12 @@ export function Text(props: Partial<Props>) {
 		onResize(offsetWidth, offsetHeight)
 
 		// Set motion value for width if needed
-		if (resize === true || resize === "width") {
+		if (resize === true || resize === 'width') {
 			mvWidth.set(offsetWidth + 1)
 		}
 
 		// Set motion value for height if needed
-		if (resize === true || resize === "height") {
+		if (resize === true || resize === 'height') {
 			mvHeight.set(offsetHeight + 1)
 		}
 	}, [text, resize, height, width])
@@ -102,7 +101,7 @@ export function Text(props: Partial<Props>) {
 		  }
 
 	// Determine whether we'll resize width
-	const willResizeWidth = resize === true || resize === "width"
+	const willResizeWidth = resize === true || resize === 'width'
 
 	return (
 		<Interactive
@@ -115,10 +114,10 @@ export function Text(props: Partial<Props>) {
 		>
 			<div
 				style={{
-					width: "100%",
-					height: "100%",
-					display: "flex",
-					flexDirection: "row",
+					width: '100%',
+					height: '100%',
+					display: 'flex',
+					flexDirection: 'row',
 					alignItems: verticalFlexAligns[verticalAlign], // see end of file
 					justifyContent: horizontalFlexAligns[textAlign], // see end of file
 					...paddings,
@@ -129,13 +128,13 @@ export function Text(props: Partial<Props>) {
 					style={{
 						...sharedStyles, // see end of file
 						...typeStyles[type], // see end of file
-						display: "inline-block",
+						display: 'inline-block',
 						color,
 						textAlign: textAligns[textAlign],
-						overflow: "hidden",
+						overflow: 'hidden',
 					}}
 				>
-					{text}
+					{text && <Markdown>{text}</Markdown>}
 				</div>
 			</div>
 		</Interactive>
@@ -145,13 +144,13 @@ export function Text(props: Partial<Props>) {
 Text.defaultProps = {
 	width: 200,
 	height: 50,
-	text: "Text",
-	type: "link",
-	textAlign: "center",
-	verticalAlign: "center",
+	text: 'Text',
+	type: 'link',
+	textAlign: 'center',
+	verticalAlign: 'center',
 	style: {},
 	color: colors.Dark,
-	background: "none",
+	background: 'none',
 	interactive: false,
 	resize: false,
 	onResize: (width, height) => null,
@@ -159,74 +158,74 @@ Text.defaultProps = {
 
 addPropertyControls(Text, {
 	text: {
-		title: "Text",
+		title: 'Text',
 		type: ControlType.String,
-		defaultValue: "Hello world",
+		defaultValue: 'Hello world',
 	},
 	type: {
-		title: "Type",
+		title: 'Type',
 		type: ControlType.Enum,
 		options: [
-			"display",
-			"h1",
-			"h2",
-			"h3",
-			"lead",
-			"link",
-			"body",
-			"label",
-			"caption",
+			'display',
+			'h1',
+			'h2',
+			'h3',
+			'lead',
+			'link',
+			'body',
+			'label',
+			'caption',
 		],
 		optionTitles: [
-			"Display",
-			"Heading 1",
-			"Heading 2",
-			"Heading 3",
-			"Lead",
-			"Link",
-			"Body",
-			"Label",
-			"Caption",
+			'Display',
+			'Heading 1',
+			'Heading 2',
+			'Heading 3',
+			'Lead',
+			'Link',
+			'Body',
+			'Label',
+			'Caption',
 		],
-		defaultValue: "link",
+		defaultValue: 'link',
 	},
 	color: {
-		title: "Color",
+		title: 'Color',
 		type: ControlType.Color,
 		defaultValue: colors.Dark,
 	},
 	background: {
-		title: "Background",
+		title: 'Background',
 		type: ControlType.Color,
-		defaultValue: "none",
+		defaultValue: 'none',
 	},
 	textAlign: {
-		title: "Horizontal",
+		title: 'Horizontal',
 		type: ControlType.SegmentedEnum,
-		options: ["left", "center", "right"],
-		optionTitles: ["Left", "Center", "Right"],
-		defaultValue: "left",
+		options: ['left', 'center', 'right'],
+		optionTitles: ['Left', 'Center', 'Right'],
+		defaultValue: 'left',
 	},
 	verticalAlign: {
-		title: "Vertical",
+		title: 'Vertical',
 		type: ControlType.SegmentedEnum,
-		options: ["top", "center", "bottom"],
-		optionTitles: ["Top", "Center", "Bottom"],
-		defaultValue: "top",
+		options: ['top', 'center', 'bottom'],
+		optionTitles: ['Top', 'Center', 'Bottom'],
+		defaultValue: 'top',
 	},
 	padding: {
-		title: "Padding",
+		title: 'Padding',
 		type: ControlType.FusedNumber,
-		toggleKey: "paddingPerSide",
-		toggleTitles: ["All Sides", "Per Side"],
-		valueKeys: ["paddingTop", "paddingRight", "paddingBottom", "paddingLeft"],
-		valueLabels: ["T", "R", "B", "L"],
+		toggleKey: 'paddingPerSide',
+		toggleTitles: ['All Sides', 'Per Side'],
+		valueKeys: ['paddingTop', 'paddingRight', 'paddingBottom', 'paddingLeft'],
+		valueLabels: ['T', 'R', 'B', 'L'],
 		min: 0,
 	},
 })
 
 const sharedStyles = {
-	fontFamily: "Helvetica Neue",
+	fontFamily: 'Helvetica Neue',
 	fontWeight: 500,
 	lineSpacing: 1.2,
 }
@@ -266,7 +265,7 @@ const typeStyles = {
 		letterSpacing: 0.5,
 		lineSpacing: 1.2,
 		fontWeight: 600,
-		textTransform: "uppercase",
+		textTransform: 'uppercase',
 	},
 	caption: {
 		fontSize: 12,
@@ -275,30 +274,30 @@ const typeStyles = {
 }
 
 const textAligns = {
-	start: "left",
-	left: "left",
-	middle: "center",
-	center: "center",
-	right: "right",
-	end: "right",
-	justify: "justify",
+	start: 'left',
+	left: 'left',
+	middle: 'center',
+	center: 'center',
+	right: 'right',
+	end: 'right',
+	justify: 'justify',
 }
 
 const horizontalFlexAligns = {
-	start: "flex-start",
-	left: "flex-start",
-	middle: "center",
-	center: "center",
-	right: "flex-right",
-	end: "flex-right",
-	justify: "center",
+	start: 'flex-start',
+	left: 'flex-start',
+	middle: 'center',
+	center: 'center',
+	right: 'flex-right',
+	end: 'flex-right',
+	justify: 'center',
 }
 
 const verticalFlexAligns = {
-	start: "flex-start",
-	top: "flex-start",
-	middle: "center",
-	center: "center",
-	bottom: "flex-end",
-	end: "flex-end",
+	start: 'flex-start',
+	top: 'flex-start',
+	middle: 'center',
+	center: 'center',
+	bottom: 'flex-end',
+	end: 'flex-end',
 }

@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "markdown-to-jsx": "^6.10.2"
+  }
+}
