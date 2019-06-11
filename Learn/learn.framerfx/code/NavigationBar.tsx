@@ -1,10 +1,10 @@
-import * as React from 'react'
-import { Stack, FrameProps, addPropertyControls, ControlType } from 'framer'
-import { colors } from './canvas'
-import { Icon } from './Icon'
-import { Text } from './Text'
-import { Interactive } from './Interactive'
-import { iconNames, iconTitles } from './Shared'
+import * as React from "react"
+import { Stack, FrameProps, addPropertyControls, ControlType } from "framer"
+import { colors } from "./canvas"
+import { Icon } from "./Icon"
+import { Text } from "./Text"
+import { Interactive } from "./Interactive"
+import { iconNames, iconTitles } from "./Shared"
 
 type Props = Partial<FrameProps> & {
 	title: string
@@ -66,9 +66,9 @@ export function NavigationBar(props: Partial<Props>) {
 						direction="horizontal"
 						gap={0}
 						onTap={onLeftTap}
-						paddingLeft={leftIcon && leftIcon !== 'none' ? 0 : 16}
+						paddingLeft={leftIcon && leftIcon !== "none" ? 0 : 16}
 					>
-						{leftIcon && leftIcon !== 'none' && <Icon y={1} icon={leftIcon} />}
+						{leftIcon && leftIcon !== "none" && <Icon y={1} icon={leftIcon} />}
 						{leftLink && leftLink.length > 1 && (
 							<Text
 								width={75}
@@ -104,7 +104,7 @@ export function NavigationBar(props: Partial<Props>) {
 						direction="horizontal"
 						gap={-8}
 						onTap={onRightTap}
-						paddingRight={rightIcon && rightIcon !== 'none' ? 0 : 16}
+						paddingRight={rightIcon && rightIcon !== "none" ? 0 : 16}
 					>
 						{rightLink && rightLink.length > 0 && (
 							<Text
@@ -115,7 +115,7 @@ export function NavigationBar(props: Partial<Props>) {
 								text={rightLink}
 							/>
 						)}
-						{rightIcon && rightIcon !== 'none' && (
+						{rightIcon && rightIcon !== "none" && (
 							<Icon y={1} icon={rightIcon} />
 						)}
 					</Stack>
@@ -139,15 +139,15 @@ export function NavigationBar(props: Partial<Props>) {
 }
 
 NavigationBar.defaultProps = {
-	id: 'Navigation_Bar',
+	id: "Navigation_Bar",
 	height: 88,
 	width: 320,
-	title: 'Home',
+	title: "Home",
 	subtitle: null,
-	leftText: 'Back',
-	leftIcon: 'chevron_left',
+	leftText: "Back",
+	leftIcon: "chevron-left",
 	rightText: null,
-	rightIcon: 'none',
+	rightIcon: "none",
 	onLeftTap: () => null,
 	onRightTap: () => null,
 	large: true,
@@ -155,41 +155,41 @@ NavigationBar.defaultProps = {
 
 addPropertyControls(NavigationBar, {
 	title: {
-		title: 'Title',
+		title: "Title",
 		type: ControlType.String,
-		defaultValue: 'Home',
+		defaultValue: "Home",
 	},
 	subtitle: {
-		title: 'Subtitle',
+		title: "Subtitle",
 		type: ControlType.String,
-		defaultValue: '',
+		defaultValue: "",
 	},
 	leftLink: {
-		title: 'Left Link',
+		title: "Left Link",
 		type: ControlType.String,
-		defaultValue: 'Back',
+		defaultValue: "Back",
 	},
 	leftIcon: {
-		title: 'Left Icon',
+		title: "Left Icon",
 		type: ControlType.Enum,
-		options: ['none', ...iconNames],
-		optionTitles: ['None', ...iconTitles],
-		defaultValue: 'chevron_left',
+		options: ["none", ...iconNames],
+		optionTitles: ["None", ...iconTitles],
+		defaultValue: "chevron-left",
 	},
 	rightLink: {
-		title: 'Right Link',
+		title: "Right Link",
 		type: ControlType.String,
-		defaultValue: '',
+		defaultValue: "",
 	},
 	rightIcon: {
-		title: 'Right Icon',
+		title: "Right Icon",
 		type: ControlType.Enum,
-		options: ['none', ...iconNames],
-		optionTitles: ['None', ...iconTitles],
-		defaultValue: 'none',
+		options: ["none", ...iconNames],
+		optionTitles: ["None", ...iconTitles],
+		defaultValue: "none",
 	},
 	large: {
-		title: 'Large',
+		title: "Large",
 		type: ControlType.Boolean,
 		defaultValue: false,
 	},

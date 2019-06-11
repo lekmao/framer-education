@@ -11,6 +11,8 @@ import Markdown from "markdown-to-jsx"
 import { Interactive } from "./Interactive"
 import { colors } from "./canvas"
 
+console.log(Markdown)
+
 // See bottom of file for theme styles
 
 type Props = Partial<FrameProps> & {
@@ -144,16 +146,17 @@ export function Text(props: Partial<Props>) {
                         ...paddings,
                     }}
                 >
-                    {text && (
-                        <Markdown options={{ forceBlock: false }}>
-                            {text.toString()}
-                        </Markdown>
-                    )}
+                    {text !== undefined && text.toString()}
                 </div>
             </div>
         </Frame>
     )
 }
+
+// (
+//                         <Markdown options={{ forceBlock: false }}>
+//                             {text.toString()}
+//                         </Markdown>
 
 Text.defaultProps = {
     width: 200,

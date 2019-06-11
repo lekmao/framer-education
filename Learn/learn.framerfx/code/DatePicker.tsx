@@ -264,7 +264,7 @@ export function DatePicker(props) {
                     paddingRight={padding}
                 >
                     <Icon
-                        icon="chevron_left"
+                        icon="chevron-left"
                         width={40}
                         height={40}
                         onTap={decrementMonth}
@@ -278,7 +278,7 @@ export function DatePicker(props) {
                         })}
                     />
                     <Icon
-                        icon="chevron_right"
+                        icon="chevron-right"
                         width={40}
                         height={40}
                         onTap={incrementMonth}

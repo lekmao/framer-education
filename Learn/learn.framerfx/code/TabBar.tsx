@@ -1,15 +1,15 @@
-import * as React from 'react'
+import * as React from "react"
 import {
 	Frame,
 	Stack,
 	FrameProps,
 	addPropertyControls,
 	ControlType,
-} from 'framer'
-import { Icon } from './Icon'
-import { Text } from './Text'
-import { Interactive } from './Interactive'
-import { colors } from './canvas'
+} from "framer"
+import { Icon } from "./Icon"
+import { Text } from "./Text"
+import { Interactive } from "./Interactive"
+import { colors } from "./canvas"
 
 type TabObject = {
 	icon: string
@@ -29,8 +29,8 @@ export function TabBar(props: Partial<Props>) {
 	const { id, width, height, tabs, currentTab, onChangeTab, showTitles } = props
 
 	// Create our tab objects (if we've received strings)
-	const tabObjects: TabObject[] = tabs.map((t) => {
-		if (typeof t === 'string') {
+	const tabObjects: TabObject[] = tabs.map(t => {
+		if (typeof t === "string") {
 			return {
 				icon: (t as any).toLowerCase(),
 				title: t,
@@ -41,13 +41,13 @@ export function TabBar(props: Partial<Props>) {
 	})
 
 	// Get the tab labels
-	const tabLabels = tabObjects.map((t) => t.title)
+	const tabLabels = tabObjects.map(t => t.title)
 
 	// Calculate initial selected index
 	const initialSelectedIndex =
-		typeof currentTab === 'number'
+		typeof currentTab === "number"
 			? currentTab
-			: tabObjects.indexOf(tabObjects.find((t) => t.title === currentTab)) || 0
+			: tabObjects.indexOf(tabObjects.find(t => t.title === currentTab)) || 0
 
 	// Set the initial selected index
 	const [state, setState] = React.useState({
@@ -101,7 +101,7 @@ export function TabBar(props: Partial<Props>) {
 						height={49}
 						onTap={() => handleTap(index)}
 					>
-						{(current) => (
+						{current => (
 							<Stack
 								width="100%"
 								height="100%"
@@ -133,44 +133,44 @@ export function TabBar(props: Partial<Props>) {
 }
 
 TabBar.defaultProps = {
-	id: 'tabs',
+	id: "tabs",
 	height: 84,
 	width: 320,
-	currentTab: 'Home',
+	currentTab: "Home",
 	onChangeTab: (index, currentTab) => null,
 	showLabels: false,
 	tabs: [
 		{
-			icon: 'home',
-			title: 'Home',
+			icon: "home",
+			title: "Home",
 		},
 		{
-			icon: 'person',
-			title: 'Profile',
+			icon: "person",
+			title: "Profile",
 		},
 		{
-			icon: 'settings',
-			title: 'Settings',
+			icon: "settings",
+			title: "Settings",
 		},
 	],
 }
 
 addPropertyControls(TabBar, {
 	currentTab: {
-		title: 'CurrentTab',
+		title: "CurrentTab",
 		type: ControlType.String,
-		defaultValue: 'Home',
+		defaultValue: "Home",
 	},
 	tabs: {
-		title: 'Tabs',
+		title: "Tabs",
 		type: ControlType.Array,
 		propertyControl: {
 			type: ControlType.String,
 		},
-		defaultValue: ['Home', 'Camera', 'Settings'],
+		defaultValue: ["Home", "Camera", "Settings"],
 	},
 	showTitles: {
-		title: 'Show Titles',
+		title: "Show Titles",
 		type: ControlType.Boolean,
 		defaultValue: false,
 	},
