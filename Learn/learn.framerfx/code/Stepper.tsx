@@ -107,7 +107,7 @@ export function Stepper(props: Props) {
             <Link
                 type={"ghost"}
                 background={colors.Primary}
-                icon="remove"
+                icon="minus"
                 height={"100%"}
                 width={48}
                 disabled={disabled}
@@ -126,7 +126,7 @@ export function Stepper(props: Props) {
             <Link
                 type={"ghost"}
                 background={colors.Primary}
-                icon="add"
+                icon="plus"
                 height={"100%"}
                 width={48}
                 disabled={disabled}

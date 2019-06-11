@@ -11,8 +11,6 @@ import Markdown from "markdown-to-jsx"
 import { Interactive } from "./Interactive"
 import { colors } from "./canvas"
 
-console.log(Markdown)
-
 // See bottom of file for theme styles
 
 type Props = Partial<FrameProps> & {
@@ -59,18 +57,24 @@ export function Text(props: Partial<Props>) {
     /* ---------------------------------- State --------------------------------- */
 
     // Ref for text container
-    const resizeRef = React.createRef<HTMLDivElement>()
+    const resizeRef = React.useRef<HTMLDivElement>()
+    const containerRef = React.useRef<HTMLDivElement>()
 
     // Motion values track computed width and height
     const mvWidth = useMotionValue(size || width)
     const mvHeight = useMotionValue(size || height)
 
-    // When component mounts, set motion values
     React.useLayoutEffect(() => {
+        mvWidth.set(size || width)
+        mvHeight.set(size || width)
+    }, [text, type, resize, height, width, pc_resizeDirection])
+
+    React.useEffect(() => {
         if (!resizeRef.current) return
 
         // Get offset size from text container
         const { offsetWidth, offsetHeight } = resizeRef.current
+        const { offsetWidth: owC, offsetHeight: ohC } = containerRef.current
 
         // Share these through props.onResize
         onResize(offsetWidth, offsetHeight)
@@ -84,7 +88,7 @@ export function Text(props: Partial<Props>) {
         ) {
             mvWidth.set(offsetWidth + 1)
         } else {
-            mvWidth.set(size || width)
+            mvWidth.set(owC + 1)
         }
 
         // Set motion value for height if needed
@@ -96,9 +100,9 @@ export function Text(props: Partial<Props>) {
         ) {
             mvHeight.set(offsetHeight + 1)
         } else {
-            mvHeight.set(size || height)
+            mvHeight.set(ohC + 1)
         }
-    }, [text, resize, height, width, pc_resizeDirection])
+    }, [text, type, resize, height, width, pc_resizeDirection])
 
     /* ------------------------------ Presentation ------------------------------ */
 
@@ -125,6 +129,7 @@ export function Text(props: Partial<Props>) {
     return (
         <Frame {...rest} width={mvWidth as any} height={mvHeight as any}>
             <div
+                ref={containerRef}
                 style={{
                     width: "100%",
                     height: "100%",
@@ -139,24 +144,23 @@ export function Text(props: Partial<Props>) {
                     style={{
                         ...sharedStyles, // see end of file
                         ...typeStyles[type], // see end of file
-                        display: "block",
                         color,
+                        width: "fit-content",
                         textAlign: textAligns[textAlign],
                         overflow: "hidden",
                         ...paddings,
                     }}
                 >
-                    {text !== undefined && text.toString()}
+                    {text !== undefined && (
+                        <Markdown options={{ forceBlock: false }}>
+                            {text}
+                        </Markdown>
+                    )}
                 </div>
             </div>
         </Frame>
     )
 }
-
-// (
-//                         <Markdown options={{ forceBlock: false }}>
-//                             {text.toString()}
-//                         </Markdown>
 
 Text.defaultProps = {
     width: 200,
@@ -255,6 +259,7 @@ addPropertyControls(Text, {
         options: ["yaxis", "xaxis", "bothaxii"],
         optionTitles: ["vertical", "horizontal", "both"],
         defaultValue: "xaxis",
+        hidden: ({ resize }) => !resize,
     },
 })
 

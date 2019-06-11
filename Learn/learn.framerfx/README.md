@@ -104,6 +104,8 @@ Learn currently includes:
  
 # Changelog
 
+- Fixes text resize on canvas
+- Restores index, renames and adds Stack to blank Template
 - Adds Modal, AlertModal
 - Adds ProgressBar
 - Reverses last

@@ -92,7 +92,7 @@
                   ],
                   "cached" : {
                     "html" : "<div data-offset-key=\"739fl-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"739fl-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Bold&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {&quot;name&quot;:&quot;Primary&quot;} *\/;font-size:24px;letter-spacing:0px;line-height:1.2;font-weight:700\"><span data-text=\"true\">Text<\/span><\/span><\/div>",
-                    "os" : "10_15",
+                    "os" : "10_14",
                     "size" : {
                       "height" : 28,
                       "width" : 49
@@ -1151,7 +1151,7 @@
                   ],
                   "cached" : {
                     "html" : "<div data-offset-key=\"739fl-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"739fl-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Bold&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {&quot;name&quot;:&quot;Primary&quot;} *\/;font-size:24px;letter-spacing:0px;line-height:1.2;font-weight:700\"><span data-text=\"true\">Buttons<\/span><\/span><\/div>",
-                    "os" : "10_15",
+                    "os" : "10_14",
                     "size" : {
                       "height" : 28,
                       "width" : 91
@@ -2149,7 +2149,7 @@
                   ],
                   "cached" : {
                     "html" : "<div data-offset-key=\"739fl-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"739fl-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Bold&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {&quot;name&quot;:&quot;Primary&quot;} *\/;font-size:24px;letter-spacing:0px;line-height:1.2;font-weight:700\"><span data-text=\"true\">Link<\/span><\/span><\/div>",
-                    "os" : "10_15",
+                    "os" : "10_14",
                     "size" : {
                       "height" : 28,
                       "width" : 50
@@ -2983,7 +2983,7 @@
                   ],
                   "cached" : {
                     "html" : "<div data-offset-key=\"739fl-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"739fl-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Bold&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {&quot;name&quot;:&quot;Primary&quot;} *\/;font-size:24px;letter-spacing:0px;line-height:1.2;font-weight:700\"><span data-text=\"true\">Switch<\/span><\/span><\/div>",
-                    "os" : "10_15",
+                    "os" : "10_14",
                     "size" : {
                       "height" : 28,
                       "width" : 79
@@ -3583,7 +3583,7 @@
                   ],
                   "cached" : {
                     "html" : "<div data-offset-key=\"739fl-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"739fl-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Bold&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {&quot;name&quot;:&quot;Primary&quot;} *\/;font-size:24px;letter-spacing:0px;line-height:1.2;font-weight:700\"><span data-text=\"true\">Checkbox<\/span><\/span><\/div>",
-                    "os" : "10_15",
+                    "os" : "10_14",
                     "size" : {
                       "height" : 28,
                       "width" : 117
@@ -4186,7 +4186,7 @@
                   ],
                   "cached" : {
                     "html" : "<div data-offset-key=\"739fl-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"739fl-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Bold&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {&quot;name&quot;:&quot;Primary&quot;} *\/;font-size:24px;letter-spacing:0px;line-height:1.2;font-weight:700\"><span data-text=\"true\">CheckboxGroup<\/span><\/span><\/div>",
-                    "os" : "10_15",
+                    "os" : "10_14",
                     "size" : {
                       "height" : 28,
                       "width" : 188
@@ -4741,7 +4741,7 @@
                   ],
                   "cached" : {
                     "html" : "<div data-offset-key=\"739fl-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"739fl-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Bold&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {&quot;name&quot;:&quot;Primary&quot;} *\/;font-size:24px;letter-spacing:0px;line-height:1.2;font-weight:700\"><span data-text=\"true\">Radio<\/span><\/span><\/div>",
-                    "os" : "10_15",
+                    "os" : "10_14",
                     "size" : {
                       "height" : 28,
                       "width" : 68
@@ -5344,7 +5344,7 @@
                   ],
                   "cached" : {
                     "html" : "<div data-offset-key=\"739fl-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"739fl-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Bold&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {&quot;name&quot;:&quot;Primary&quot;} *\/;font-size:24px;letter-spacing:0px;line-height:1.2;font-weight:700\"><span data-text=\"true\">Favorite<\/span><\/span><\/div>",
-                    "os" : "10_15",
+                    "os" : "10_14",
                     "size" : {
                       "height" : 28,
                       "width" : 94
@@ -5729,7 +5729,7 @@
                   ],
                   "cached" : {
                     "html" : "<div data-offset-key=\"739fl-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"739fl-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Bold&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {&quot;name&quot;:&quot;Primary&quot;} *\/;font-size:24px;letter-spacing:0px;line-height:1.2;font-weight:700\"><span data-text=\"true\">Slider<\/span><\/span><\/div>",
-                    "os" : "10_15",
+                    "os" : "10_14",
                     "size" : {
                       "height" : 28,
                       "width" : 67
@@ -6352,7 +6352,7 @@
                   ],
                   "cached" : {
                     "html" : "<div data-offset-key=\"739fl-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"739fl-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Bold&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {&quot;name&quot;:&quot;Primary&quot;} *\/;font-size:24px;letter-spacing:0px;line-height:1.2;font-weight:700\"><span data-text=\"true\">ProgressBar<\/span><\/span><\/div>",
-                    "os" : "10_15",
+                    "os" : "10_14",
                     "size" : {
                       "height" : 28,
                       "width" : 144
@@ -6885,7 +6885,7 @@
                   ],
                   "cached" : {
                     "html" : "<div data-offset-key=\"739fl-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"739fl-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Bold&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {&quot;name&quot;:&quot;Primary&quot;} *\/;font-size:24px;letter-spacing:0px;line-height:1.2;font-weight:700\"><span data-text=\"true\">Image<\/span><\/span><\/div>",
-                    "os" : "10_15",
+                    "os" : "10_14",
                     "size" : {
                       "height" : 28,
                       "width" : 73
@@ -7500,7 +7500,7 @@
                   ],
                   "cached" : {
                     "html" : "<div data-offset-key=\"739fl-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"739fl-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Bold&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {&quot;name&quot;:&quot;Primary&quot;} *\/;font-size:24px;letter-spacing:0px;line-height:1.2;font-weight:700\"><span data-text=\"true\">Select<\/span><\/span><\/div>",
-                    "os" : "10_15",
+                    "os" : "10_14",
                     "size" : {
                       "height" : 28,
                       "width" : 73
@@ -8225,7 +8225,7 @@
                   ],
                   "cached" : {
                     "html" : "<div data-offset-key=\"739fl-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"739fl-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Bold&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {&quot;name&quot;:&quot;Primary&quot;} *\/;font-size:24px;letter-spacing:0px;line-height:1.2;font-weight:700\"><span data-text=\"true\">Tabs<\/span><\/span><\/div>",
-                    "os" : "10_15",
+                    "os" : "10_14",
                     "size" : {
                       "height" : 28,
                       "width" : 55
@@ -8858,7 +8858,7 @@
                   ],
                   "cached" : {
                     "html" : "<div data-offset-key=\"739fl-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"739fl-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Bold&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {&quot;name&quot;:&quot;Primary&quot;} *\/;font-size:24px;letter-spacing:0px;line-height:1.2;font-weight:700\"><span data-text=\"true\">Tab Bar<\/span><\/span><\/div>",
-                    "os" : "10_15",
+                    "os" : "10_14",
                     "size" : {
                       "height" : 28,
                       "width" : 89
@@ -9073,12 +9073,12 @@
                     {
                       "enabled" : true,
                       "type" : "string",
-                      "value" : "Person"
+                      "value" : "Car"
                     },
                     {
                       "enabled" : true,
                       "type" : "string",
-                      "value" : "Class"
+                      "value" : "Bus"
                     },
                     {
                       "enabled" : true,
@@ -9377,7 +9377,7 @@
                   ],
                   "cached" : {
                     "html" : "<div data-offset-key=\"739fl-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"739fl-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Bold&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {&quot;name&quot;:&quot;Primary&quot;} *\/;font-size:24px;letter-spacing:0px;line-height:1.2;font-weight:700\"><span data-text=\"true\">Navigation Bar<\/span><\/span><\/div>",
-                    "os" : "10_15",
+                    "os" : "10_14",
                     "size" : {
                       "height" : 28,
                       "width" : 170
@@ -9482,7 +9482,7 @@
                 "codeComponentIdentifier" : ".\/NavigationBar.tsx_NavigationBar",
                 "codeComponentProps" : {
                   "large" : false,
-                  "leftIcon" : "chevron_left",
+                  "leftIcon" : "chevron-left",
                   "leftLink" : "Back",
                   "rightIcon" : "none",
                   "rightLink" : "",
@@ -9558,7 +9558,7 @@
                 "codeComponentIdentifier" : ".\/NavigationBar.tsx_NavigationBar",
                 "codeComponentProps" : {
                   "large" : false,
-                  "leftIcon" : "chevron_left",
+                  "leftIcon" : "chevron-left",
                   "leftLink" : "Back",
                   "rightIcon" : "edit",
                   "rightLink" : "",
@@ -9634,7 +9634,7 @@
                 "codeComponentIdentifier" : ".\/NavigationBar.tsx_NavigationBar",
                 "codeComponentProps" : {
                   "large" : true,
-                  "leftIcon" : "chevron_left",
+                  "leftIcon" : "chevron-left",
                   "leftLink" : "Back",
                   "rightIcon" : "edit",
                   "rightLink" : "",
@@ -9926,7 +9926,7 @@
                   ],
                   "cached" : {
                     "html" : "<div data-offset-key=\"739fl-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"739fl-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Bold&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {&quot;name&quot;:&quot;Primary&quot;} *\/;font-size:24px;letter-spacing:0px;line-height:1.2;font-weight:700\"><span data-text=\"true\">TextInput<\/span><\/span><\/div>",
-                    "os" : "10_15",
+                    "os" : "10_14",
                     "size" : {
                       "height" : 28,
                       "width" : 107
@@ -10713,7 +10713,7 @@
                   ],
                   "cached" : {
                     "html" : "<div data-offset-key=\"739fl-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"739fl-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Bold&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {&quot;name&quot;:&quot;Primary&quot;} *\/;font-size:24px;letter-spacing:0px;line-height:1.2;font-weight:700\"><span data-text=\"true\">DatePicker<\/span><\/span><\/div>",
-                    "os" : "10_15",
+                    "os" : "10_14",
                     "size" : {
                       "height" : 28,
                       "width" : 128
@@ -11097,7 +11097,7 @@
               ],
               "cached" : {
                 "html" : "<div data-offset-key=\"739fl-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"739fl-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Bold&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {&quot;name&quot;:&quot;Primary&quot;} *\/;font-size:24px;letter-spacing:0px;line-height:1.2;font-weight:700\"><span data-text=\"true\">DatePickerModal<\/span><\/span><\/div>",
-                "os" : "10_15",
+                "os" : "10_14",
                 "size" : {
                   "height" : 28,
                   "width" : 199
@@ -11337,7 +11337,7 @@
               ],
               "cached" : {
                 "html" : "<div data-offset-key=\"739fl-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"739fl-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Bold&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {&quot;name&quot;:&quot;Primary&quot;} *\/;font-size:24px;letter-spacing:0px;line-height:1.2;font-weight:700\"><span data-text=\"true\">AltertModal<\/span><\/span><\/div>",
-                "os" : "10_15",
+                "os" : "10_14",
                 "size" : {
                   "height" : 28,
                   "width" : 135
@@ -11577,7 +11577,7 @@
               ],
               "cached" : {
                 "html" : "<div data-offset-key=\"739fl-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"739fl-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Bold&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {&quot;name&quot;:&quot;Primary&quot;} *\/;font-size:24px;letter-spacing:0px;line-height:1.2;font-weight:700\"><span data-text=\"true\">Modal<\/span><\/span><\/div>",
-                "os" : "10_15",
+                "os" : "10_14",
                 "size" : {
                   "height" : 28,
                   "width" : 73
@@ -11742,10 +11742,8 @@
         "centerAnchorY" : 0.48448687350835323,
         "children" : [
           {
-            "__class" : "FrameNode",
+            "__class" : "CodeComponentNode",
             "aspectRatio" : null,
-            "blendingEnabled" : 0,
-            "blendingMode" : "normal",
             "bottom" : 0,
             "centerAnchorX" : 0.5,
             "centerAnchorY" : 0.52339901477832518,
@@ -11753,13 +11751,26 @@
 
             ],
             "clip" : false,
+            "codeComponentIdentifier" : "framer\/Stack",
+            "codeComponentProps" : {
+              "alignment" : "center",
+              "direction" : "vertical",
+              "distribution" : "start",
+              "gap" : 16,
+              "padding" : 16,
+              "paddingBottom" : 16,
+              "paddingLeft" : 16,
+              "paddingPerSide" : false,
+              "paddingRight" : 16,
+              "paddingTop" : 16
+            },
             "codeOverrideEnabled" : false,
             "constraintsLocked" : false,
             "deviceType" : null,
             "exportOptions" : [
 
             ],
-            "fillColor" : "rgba(0, 153, 255, 0.5)",
+            "fillColor" : "rgba(255,255,255,1)",
             "fillEnabled" : false,
             "fillImage" : null,
             "fillImagePixelHeight" : null,
@@ -11785,19 +11796,12 @@
             "fillType" : "color",
             "height" : 774,
             "heightType" : 0,
-            "id" : "IELU77Y00",
+            "id" : "IMoJuI2JM",
             "intrinsicHeight" : null,
             "intrinsicWidth" : null,
-            "isExternalMaster" : null,
-            "isMaster" : false,
-            "isTarget" : false,
             "left" : 0,
             "locked" : false,
             "name" : "Content",
-            "navigationTarget" : null,
-            "navigationTransition" : "push",
-            "navigationTransitionBackdropColor" : "rgba(4,4,15,.4)",
-            "navigationTransitionDirection" : "left",
             "opacity" : 1,
             "originalid" : null,
             "parentid" : "XREstntDl",
@@ -11809,7 +11813,6 @@
             "radiusPerCorner" : false,
             "radiusTopLeft" : 0,
             "radiusTopRight" : 0,
-            "replicaInfo" : null,
             "right" : 0,
             "rotation" : 0,
             "top" : 38,
@@ -13675,7 +13678,7 @@
                       ],
                       "cached" : {
                         "html" : "<div class='DraftEditor-alignCenter'><div data-offset-key=\"bd9o5-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"bd9o5-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Medium&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:rgb(0, 0, 0);font-size:15px;letter-spacing:-0.3px;line-height:1.2;font-weight:500\"><span data-text=\"true\">9:41<\/span><\/span><\/div><\/div>",
-                        "os" : "10_15",
+                        "os" : "10_14",
                         "size" : {
                           "height" : 18,
                           "width" : 55
@@ -14052,82 +14055,6 @@
         "centerAnchorX" : 0.46289424860853434,
         "centerAnchorY" : 0.48448687350835323,
         "children" : [
-          {
-            "__class" : "FrameNode",
-            "aspectRatio" : null,
-            "blendingEnabled" : 0,
-            "blendingMode" : "normal",
-            "bottom" : 84,
-            "centerAnchorX" : 0.5,
-            "centerAnchorY" : 0.50246305418719217,
-            "children" : [
-
-            ],
-            "clip" : false,
-            "codeOverrideEnabled" : false,
-            "constraintsLocked" : false,
-            "deviceType" : null,
-            "exportOptions" : [
-
-            ],
-            "fillColor" : "rgba(255,255,255,1)",
-            "fillEnabled" : false,
-            "fillImage" : null,
-            "fillImagePixelHeight" : null,
-            "fillImagePixelWidth" : null,
-            "fillImageResize" : "fill",
-            "fillLinearGradient" : {
-              "__class" : "LinearGradient",
-              "alpha" : 1,
-              "angle" : 0,
-              "end" : "rgba(0,0,0,0)",
-              "start" : "black"
-            },
-            "fillRadialGradient" : {
-              "__class" : "RadialGradient",
-              "alpha" : 1,
-              "centerAnchorX" : 0.5,
-              "centerAnchorY" : 0.5,
-              "end" : "black",
-              "heightFactor" : 0.5,
-              "start" : "rgba(0,0,0,0)",
-              "widthFactor" : 0.5
-            },
-            "fillType" : "color",
-            "height" : 640,
-            "heightType" : 0,
-            "id" : "AR9soIMrg",
-            "intrinsicHeight" : null,
-            "intrinsicWidth" : null,
-            "isExternalMaster" : null,
-            "isMaster" : false,
-            "isTarget" : false,
-            "left" : 0,
-            "locked" : false,
-            "name" : null,
-            "navigationTarget" : null,
-            "navigationTransition" : "push",
-            "navigationTransitionBackdropColor" : "rgba(4,4,15,.4)",
-            "navigationTransitionDirection" : "left",
-            "opacity" : 1,
-            "originalid" : null,
-            "parentid" : "hMCzrRmLr",
-            "previewSettings" : null,
-            "radius" : 0,
-            "radiusBottomLeft" : 0,
-            "radiusBottomRight" : 0,
-            "radiusIsRelative" : false,
-            "radiusPerCorner" : false,
-            "radiusTopLeft" : 0,
-            "radiusTopRight" : 0,
-            "replicaInfo" : null,
-            "right" : 0,
-            "rotation" : 0,
-            "top" : 88,
-            "visible" : true,
-            "width" : 375,
-            "widthType" : 0
-          },
           {
             "__class" : "CodeComponentNode",
             "aspectRatio" : null,
@@ -16304,7 +16231,7 @@
                       ],
                       "cached" : {
                         "html" : "<div class='DraftEditor-alignCenter'><div data-offset-key=\"bd9o5-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"bd9o5-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Medium&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:rgb(0, 0, 0);font-size:15px;letter-spacing:-0.3px;line-height:1.2;font-weight:500\"><span data-text=\"true\">9:41<\/span><\/span><\/div><\/div>",
-                        "os" : "10_15",
+                        "os" : "10_14",
                         "size" : {
                           "height" : 18,
                           "width" : 55
@@ -16451,6 +16378,85 @@
             "visible" : true,
             "width" : 375,
             "widthType" : 0
+          },
+          {
+            "__class" : "CodeComponentNode",
+            "aspectRatio" : null,
+            "bottom" : 84,
+            "centerAnchorX" : 0.5,
+            "centerAnchorY" : 0.50246305418719217,
+            "children" : [
+
+            ],
+            "clip" : false,
+            "codeComponentIdentifier" : "framer\/Stack",
+            "codeComponentProps" : {
+              "alignment" : "center",
+              "direction" : "vertical",
+              "distribution" : "start",
+              "gap" : 16,
+              "padding" : 16,
+              "paddingBottom" : 16,
+              "paddingLeft" : 16,
+              "paddingPerSide" : false,
+              "paddingRight" : 16,
+              "paddingTop" : 16
+            },
+            "codeOverrideEnabled" : false,
+            "constraintsLocked" : false,
+            "deviceType" : null,
+            "exportOptions" : [
+
+            ],
+            "fillColor" : "rgba(255,255,255,1)",
+            "fillEnabled" : false,
+            "fillImage" : null,
+            "fillImagePixelHeight" : null,
+            "fillImagePixelWidth" : null,
+            "fillImageResize" : "fill",
+            "fillLinearGradient" : {
+              "__class" : "LinearGradient",
+              "alpha" : 1,
+              "angle" : 0,
+              "end" : "rgba(0,0,0,0)",
+              "start" : "black"
+            },
+            "fillRadialGradient" : {
+              "__class" : "RadialGradient",
+              "alpha" : 1,
+              "centerAnchorX" : 0.5,
+              "centerAnchorY" : 0.5,
+              "end" : "black",
+              "heightFactor" : 0.5,
+              "start" : "rgba(0,0,0,0)",
+              "widthFactor" : 0.5
+            },
+            "fillType" : "color",
+            "height" : 640,
+            "heightType" : 0,
+            "id" : "gDQwW4QxT",
+            "intrinsicHeight" : null,
+            "intrinsicWidth" : null,
+            "left" : 0,
+            "locked" : false,
+            "name" : "Content",
+            "opacity" : 1,
+            "originalid" : null,
+            "parentid" : "hMCzrRmLr",
+            "previewSettings" : null,
+            "radius" : 0,
+            "radiusBottomLeft" : 0,
+            "radiusBottomRight" : 0,
+            "radiusIsRelative" : false,
+            "radiusPerCorner" : false,
+            "radiusTopLeft" : 0,
+            "radiusTopRight" : 0,
+            "right" : 0,
+            "rotation" : 0,
+            "top" : 88,
+            "visible" : true,
+            "width" : 375,
+            "widthType" : 0
           }
         ],
         "clip" : true,
@@ -16527,82 +16533,6 @@
         "centerAnchorX" : 0.46289424860853434,
         "centerAnchorY" : 0.48448687350835323,
         "children" : [
-          {
-            "__class" : "FrameNode",
-            "aspectRatio" : null,
-            "blendingEnabled" : 0,
-            "blendingMode" : "normal",
-            "bottom" : 0,
-            "centerAnchorX" : 0.5,
-            "centerAnchorY" : 0.55418719211822665,
-            "children" : [
-
-            ],
-            "clip" : false,
-            "codeOverrideEnabled" : false,
-            "constraintsLocked" : false,
-            "deviceType" : null,
-            "exportOptions" : [
-
-            ],
-            "fillColor" : "rgba(255,255,255,1)",
-            "fillEnabled" : false,
-            "fillImage" : null,
-            "fillImagePixelHeight" : null,
-            "fillImagePixelWidth" : null,
-            "fillImageResize" : "fill",
-            "fillLinearGradient" : {
-              "__class" : "LinearGradient",
-              "alpha" : 1,
-              "angle" : 0,
-              "end" : "rgba(0,0,0,0)",
-              "start" : "black"
-            },
-            "fillRadialGradient" : {
-              "__class" : "RadialGradient",
-              "alpha" : 1,
-              "centerAnchorX" : 0.5,
-              "centerAnchorY" : 0.5,
-              "end" : "black",
-              "heightFactor" : 0.5,
-              "start" : "rgba(0,0,0,0)",
-              "widthFactor" : 0.5
-            },
-            "fillType" : "color",
-            "height" : 724,
-            "heightType" : 0,
-            "id" : "fNc61tttcAR9soIMrg",
-            "intrinsicHeight" : null,
-            "intrinsicWidth" : null,
-            "isExternalMaster" : null,
-            "isMaster" : false,
-            "isTarget" : false,
-            "left" : 0,
-            "locked" : false,
-            "name" : null,
-            "navigationTarget" : null,
-            "navigationTransition" : "push",
-            "navigationTransitionBackdropColor" : "rgba(4,4,15,.4)",
-            "navigationTransitionDirection" : "left",
-            "opacity" : 1,
-            "originalid" : null,
-            "parentid" : "fNc61tttc",
-            "previewSettings" : null,
-            "radius" : 0,
-            "radiusBottomLeft" : 0,
-            "radiusBottomRight" : 0,
-            "radiusIsRelative" : false,
-            "radiusPerCorner" : false,
-            "radiusTopLeft" : 0,
-            "radiusTopRight" : 0,
-            "replicaInfo" : null,
-            "right" : 0,
-            "rotation" : 0,
-            "top" : 88,
-            "visible" : true,
-            "width" : 375,
-            "widthType" : 0
-          },
           {
             "__class" : "CodeComponentNode",
             "aspectRatio" : null,
@@ -18692,7 +18622,7 @@
                       ],
                       "cached" : {
                         "html" : "<div class='DraftEditor-alignCenter'><div data-offset-key=\"bd9o5-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"bd9o5-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Medium&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:rgb(0, 0, 0);font-size:15px;letter-spacing:-0.3px;line-height:1.2;font-weight:500\"><span data-text=\"true\">9:41<\/span><\/span><\/div><\/div>",
-                        "os" : "10_15",
+                        "os" : "10_14",
                         "size" : {
                           "height" : 18,
                           "width" : 55
@@ -18839,6 +18769,85 @@
             "visible" : true,
             "width" : 375,
             "widthType" : 0
+          },
+          {
+            "__class" : "CodeComponentNode",
+            "aspectRatio" : null,
+            "bottom" : 0,
+            "centerAnchorX" : 0.5,
+            "centerAnchorY" : 0.55418719211822665,
+            "children" : [
+
+            ],
+            "clip" : false,
+            "codeComponentIdentifier" : "framer\/Stack",
+            "codeComponentProps" : {
+              "alignment" : "center",
+              "direction" : "vertical",
+              "distribution" : "start",
+              "gap" : 16,
+              "padding" : 16,
+              "paddingBottom" : 16,
+              "paddingLeft" : 16,
+              "paddingPerSide" : false,
+              "paddingRight" : 16,
+              "paddingTop" : 16
+            },
+            "codeOverrideEnabled" : false,
+            "constraintsLocked" : false,
+            "deviceType" : null,
+            "exportOptions" : [
+
+            ],
+            "fillColor" : "rgba(255,255,255,1)",
+            "fillEnabled" : false,
+            "fillImage" : null,
+            "fillImagePixelHeight" : null,
+            "fillImagePixelWidth" : null,
+            "fillImageResize" : "fill",
+            "fillLinearGradient" : {
+              "__class" : "LinearGradient",
+              "alpha" : 1,
+              "angle" : 0,
+              "end" : "rgba(0,0,0,0)",
+              "start" : "black"
+            },
+            "fillRadialGradient" : {
+              "__class" : "RadialGradient",
+              "alpha" : 1,
+              "centerAnchorX" : 0.5,
+              "centerAnchorY" : 0.5,
+              "end" : "black",
+              "heightFactor" : 0.5,
+              "start" : "rgba(0,0,0,0)",
+              "widthFactor" : 0.5
+            },
+            "fillType" : "color",
+            "height" : 724,
+            "heightType" : 0,
+            "id" : "VdLVdiukj",
+            "intrinsicHeight" : null,
+            "intrinsicWidth" : null,
+            "left" : 0,
+            "locked" : false,
+            "name" : "Content",
+            "opacity" : 1,
+            "originalid" : null,
+            "parentid" : "fNc61tttc",
+            "previewSettings" : null,
+            "radius" : 0,
+            "radiusBottomLeft" : 0,
+            "radiusBottomRight" : 0,
+            "radiusIsRelative" : false,
+            "radiusPerCorner" : false,
+            "radiusTopLeft" : 0,
+            "radiusTopRight" : 0,
+            "right" : 0,
+            "rotation" : 0,
+            "top" : 88,
+            "visible" : true,
+            "width" : 375,
+            "widthType" : 0
           }
         ],
         "clip" : true,
@@ -18915,82 +18924,6 @@
         "centerAnchorX" : 0.46289424860853434,
         "centerAnchorY" : 0.48448687350835323,
         "children" : [
-          {
-            "__class" : "FrameNode",
-            "aspectRatio" : null,
-            "blendingEnabled" : 0,
-            "blendingMode" : "normal",
-            "bottom" : 72,
-            "centerAnchorX" : 0.5,
-            "centerAnchorY" : 0.54187192118226601,
-            "children" : [
-
-            ],
-            "clip" : false,
-            "codeOverrideEnabled" : false,
-            "constraintsLocked" : false,
-            "deviceType" : null,
-            "exportOptions" : [
-
-            ],
-            "fillColor" : "rgba(255,255,255,1)",
-            "fillEnabled" : false,
-            "fillImage" : null,
-            "fillImagePixelHeight" : null,
-            "fillImagePixelWidth" : null,
-            "fillImageResize" : "fill",
-            "fillLinearGradient" : {
-              "__class" : "LinearGradient",
-              "alpha" : 1,
-              "angle" : 0,
-              "end" : "rgba(0,0,0,0)",
-              "start" : "black"
-            },
-            "fillRadialGradient" : {
-              "__class" : "RadialGradient",
-              "alpha" : 1,
-              "centerAnchorX" : 0.5,
-              "centerAnchorY" : 0.5,
-              "end" : "black",
-              "heightFactor" : 0.5,
-              "start" : "rgba(0,0,0,0)",
-              "widthFactor" : 0.5
-            },
-            "fillType" : "color",
-            "height" : 600,
-            "heightType" : 0,
-            "id" : "ByqaH3YD4",
-            "intrinsicHeight" : null,
-            "intrinsicWidth" : null,
-            "isExternalMaster" : null,
-            "isMaster" : false,
-            "isTarget" : false,
-            "left" : 0,
-            "locked" : false,
-            "name" : null,
-            "navigationTarget" : null,
-            "navigationTransition" : "push",
-            "navigationTransitionBackdropColor" : "rgba(4,4,15,.4)",
-            "navigationTransitionDirection" : "left",
-            "opacity" : 1,
-            "originalid" : null,
-            "parentid" : "PeXYyIRny",
-            "previewSettings" : null,
-            "radius" : 0,
-            "radiusBottomLeft" : 0,
-            "radiusBottomRight" : 0,
-            "radiusIsRelative" : false,
-            "radiusPerCorner" : false,
-            "radiusTopLeft" : 0,
-            "radiusTopRight" : 0,
-            "replicaInfo" : null,
-            "right" : 0,
-            "rotation" : 0,
-            "top" : 140,
-            "visible" : true,
-            "width" : 375,
-            "widthType" : 0
-          },
           {
             "__class" : "CodeComponentNode",
             "aspectRatio" : null,
@@ -21167,7 +21100,7 @@
                       ],
                       "cached" : {
                         "html" : "<div class='DraftEditor-alignCenter'><div data-offset-key=\"bd9o5-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"bd9o5-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Medium&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:rgb(0, 0, 0);font-size:15px;letter-spacing:-0.3px;line-height:1.2;font-weight:500\"><span data-text=\"true\">9:41<\/span><\/span><\/div><\/div>",
-                        "os" : "10_15",
+                        "os" : "10_14",
                         "size" : {
                           "height" : 18,
                           "width" : 55
@@ -21311,6 +21244,85 @@
             "right" : 0,
             "rotation" : 0,
             "top" : 0,
+            "visible" : true,
+            "width" : 375,
+            "widthType" : 0
+          },
+          {
+            "__class" : "CodeComponentNode",
+            "aspectRatio" : null,
+            "bottom" : 86,
+            "centerAnchorX" : 0.5,
+            "centerAnchorY" : 0.53325123152709364,
+            "children" : [
+
+            ],
+            "clip" : false,
+            "codeComponentIdentifier" : "framer\/Stack",
+            "codeComponentProps" : {
+              "alignment" : "center",
+              "direction" : "vertical",
+              "distribution" : "start",
+              "gap" : 16,
+              "padding" : 16,
+              "paddingBottom" : 16,
+              "paddingLeft" : 16,
+              "paddingPerSide" : false,
+              "paddingRight" : 16,
+              "paddingTop" : 16
+            },
+            "codeOverrideEnabled" : false,
+            "constraintsLocked" : false,
+            "deviceType" : null,
+            "exportOptions" : [
+
+            ],
+            "fillColor" : "rgba(255,255,255,1)",
+            "fillEnabled" : false,
+            "fillImage" : null,
+            "fillImagePixelHeight" : null,
+            "fillImagePixelWidth" : null,
+            "fillImageResize" : "fill",
+            "fillLinearGradient" : {
+              "__class" : "LinearGradient",
+              "alpha" : 1,
+              "angle" : 0,
+              "end" : "rgba(0,0,0,0)",
+              "start" : "black"
+            },
+            "fillRadialGradient" : {
+              "__class" : "RadialGradient",
+              "alpha" : 1,
+              "centerAnchorX" : 0.5,
+              "centerAnchorY" : 0.5,
+              "end" : "black",
+              "heightFactor" : 0.5,
+              "start" : "rgba(0,0,0,0)",
+              "widthFactor" : 0.5
+            },
+            "fillType" : "color",
+            "height" : 586,
+            "heightType" : 0,
+            "id" : "e85jRHLHE",
+            "intrinsicHeight" : null,
+            "intrinsicWidth" : null,
+            "left" : 0,
+            "locked" : false,
+            "name" : "Content",
+            "opacity" : 1,
+            "originalid" : null,
+            "parentid" : "PeXYyIRny",
+            "previewSettings" : null,
+            "radius" : 0,
+            "radiusBottomLeft" : 0,
+            "radiusBottomRight" : 0,
+            "radiusIsRelative" : false,
+            "radiusPerCorner" : false,
+            "radiusTopLeft" : 0,
+            "radiusTopRight" : 0,
+            "right" : 0,
+            "rotation" : 0,
+            "top" : 140,
             "visible" : true,
             "width" : 375,
             "widthType" : 0
@@ -23065,7 +23077,7 @@
           ],
           "cached" : {
             "html" : "<div data-offset-key=\"64q8d-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"64q8d-0-0\" style=\"tab-size:4;font-family:&quot;.SFNSText&quot;, &quot;SFProText-Regular&quot;, &quot;SFUIText-Regular&quot;, &quot;.SFUIText&quot;, sans-serif;-webkit-text-fill-color:rgb(0, 0, 0);font-size:16px;letter-spacing:0px;line-height:1.2\"><span data-text=\"true\">L<\/span><\/span><\/div>",
-            "os" : "10_15",
+            "os" : "10_14",
             "size" : {
               "height" : 19,
               "width" : 11
@@ -24088,7 +24100,7 @@
                   ],
                   "cached" : {
                     "html" : "<div data-offset-key=\"739fl-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"739fl-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Bold&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {&quot;name&quot;:&quot;Primary&quot;} *\/;font-size:24px;letter-spacing:0px;line-height:1.2;font-weight:700\"><span data-text=\"true\">Stepper<\/span><\/span><\/div>",
-                    "os" : "10_15",
+                    "os" : "10_14",
                     "size" : {
                       "height" : 28,
                       "width" : 92
@@ -24633,7 +24645,7 @@
                   ],
                   "cached" : {
                     "html" : "<div data-offset-key=\"739fl-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"739fl-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Bold&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {&quot;name&quot;:&quot;Primary&quot;} *\/;font-size:24px;letter-spacing:0px;line-height:1.2;font-weight:700\"><span data-text=\"true\">Card<\/span><\/span><\/div>",
-                    "os" : "10_15",
+                    "os" : "10_14",
                     "size" : {
                       "height" : 28,
                       "width" : 57
@@ -25807,7 +25819,7 @@
                   ],
                   "cached" : {
                     "html" : "<div data-offset-key=\"739fl-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"739fl-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Bold&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {&quot;name&quot;:&quot;Primary&quot;} *\/;font-size:24px;letter-spacing:0px;line-height:1.2;font-weight:700\"><span data-text=\"true\">Segment<\/span><\/span><\/div>",
-                    "os" : "10_15",
+                    "os" : "10_14",
                     "size" : {
                       "height" : 28,
                       "width" : 104
@@ -26487,7 +26499,7 @@
                   ],
                   "cached" : {
                     "html" : "<div class='DraftEditor-alignLeft'><div data-offset-key=\"773l0-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"773l0-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Bold&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(59, 59, 104)) \/* {&quot;name&quot;:&quot;Dark&quot;} *\/;font-size:64px;letter-spacing:-1px;line-height:1.2;font-weight:700\"><span data-text=\"true\">Display<\/span><\/span><\/div><\/div>",
-                    "os" : "10_15",
+                    "os" : "10_14",
                     "size" : {
                       "height" : 76,
                       "width" : 218
@@ -26583,7 +26595,7 @@
                   ],
                   "cached" : {
                     "html" : "<div class='DraftEditor-alignLeft'><div data-offset-key=\"773l0-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"773l0-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Bold&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(59, 59, 104)) \/* {&quot;name&quot;:&quot;Dark&quot;} *\/;font-size:40px;letter-spacing:-1px;line-height:1.2;font-weight:700\"><span data-text=\"true\">Heading 1<\/span><\/span><\/div><\/div>",
-                    "os" : "10_15",
+                    "os" : "10_14",
                     "size" : {
                       "height" : 48,
                       "width" : 184
@@ -26679,7 +26691,7 @@
                   ],
                   "cached" : {
                     "html" : "<div class='DraftEditor-alignLeft'><div data-offset-key=\"773l0-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"773l0-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Bold&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(59, 59, 104)) \/* {&quot;name&quot;:&quot;Dark&quot;} *\/;font-size:24px;letter-spacing:0px;line-height:1.2;font-weight:700\"><span data-text=\"true\">Heading 2<\/span><\/span><\/div><\/div>",
-                    "os" : "10_15",
+                    "os" : "10_14",
                     "size" : {
                       "height" : 28,
                       "width" : 117
@@ -26775,7 +26787,7 @@
                   ],
                   "cached" : {
                     "html" : "<div class='DraftEditor-alignLeft'><div data-offset-key=\"773l0-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"773l0-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Bold&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(59, 59, 104)) \/* {&quot;name&quot;:&quot;Dark&quot;} *\/;font-size:16px;letter-spacing:0px;line-height:1.2;font-weight:700\"><span data-text=\"true\">Heading 3<\/span><\/span><\/div><\/div>",
-                    "os" : "10_15",
+                    "os" : "10_14",
                     "size" : {
                       "height" : 19,
                       "width" : 78
@@ -26871,7 +26883,7 @@
                   ],
                   "cached" : {
                     "html" : "<div class='DraftEditor-alignLeft'><div data-offset-key=\"773l0-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"773l0-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(59, 59, 104)) \/* {&quot;name&quot;:&quot;Dark&quot;} *\/;font-size:20px;letter-spacing:0px;line-height:1.2;font-weight:400\"><span data-text=\"true\">Lead<\/span><\/span><\/div><\/div>",
-                    "os" : "10_15",
+                    "os" : "10_14",
                     "size" : {
                       "height" : 24,
                       "width" : 46
@@ -26967,7 +26979,7 @@
                   ],
                   "cached" : {
                     "html" : "<div class='DraftEditor-alignLeft'><div data-offset-key=\"773l0-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"773l0-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Bold&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {&quot;name&quot;:&quot;Primary&quot;} *\/;font-size:16px;letter-spacing:0px;line-height:1.3;font-weight:700\"><span data-text=\"true\">Link<\/span><\/span><\/div><\/div>",
-                    "os" : "10_15",
+                    "os" : "10_14",
                     "size" : {
                       "height" : 20,
                       "width" : 34
@@ -27063,7 +27075,7 @@
                   ],
                   "cached" : {
                     "html" : "<div class='DraftEditor-alignLeft'><div data-offset-key=\"773l0-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"773l0-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-30f9a7fa-de7c-4aee-a7b8-79cdd74c6221, rgb(19, 19, 22)) \/* {&quot;name&quot;:&quot;Darker&quot;} *\/;font-size:16px;letter-spacing:0px;line-height:1.3;font-weight:400\"><span data-text=\"true\">Body<\/span><\/span><\/div><\/div>",
-                    "os" : "10_15",
+                    "os" : "10_14",
                     "size" : {
                       "height" : 20,
                       "width" : 39
@@ -27159,7 +27171,7 @@
                   ],
                   "cached" : {
                     "html" : "<div class='DraftEditor-alignLeft'><div data-offset-key=\"773l0-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"773l0-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Bold&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(59, 59, 104)) \/* {&quot;name&quot;:&quot;Dark&quot;} *\/;font-size:13px;letter-spacing:0.5px;line-height:1.2;font-weight:700\"><span data-text=\"true\">LABEL<\/span><\/span><\/div><\/div>",
-                    "os" : "10_15",
+                    "os" : "10_14",
                     "size" : {
                       "height" : 15,
                       "width" : 46
@@ -27255,7 +27267,7 @@
                   ],
                   "cached" : {
                     "html" : "<div class='DraftEditor-alignLeft'><div data-offset-key=\"773l0-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"773l0-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Medium&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(59, 59, 104)) \/* {&quot;name&quot;:&quot;Dark&quot;} *\/;font-size:12px;letter-spacing:0px;line-height:1.2;font-weight:500\"><span data-text=\"true\">Caption<\/span><\/span><\/div><\/div>",
-                    "os" : "10_15",
+                    "os" : "10_14",
                     "size" : {
                       "height" : 14,
                       "width" : 45
@@ -27416,7 +27428,7 @@
               ],
               "cached" : {
                 "html" : "<div data-offset-key=\"739fl-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"739fl-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Bold&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {&quot;name&quot;:&quot;Primary&quot;} *\/;font-size:29px;letter-spacing:0px;line-height:1.2;font-weight:700\"><span data-text=\"true\">Text<\/span><\/span><\/div>",
-                "os" : "10_15",
+                "os" : "10_14",
                 "size" : {
                   "height" : 34,
                   "width" : 58
@@ -27673,7 +27685,7 @@
                   ],
                   "cached" : {
                     "html" : "<div data-offset-key=\"739fl-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"739fl-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Bold&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {&quot;name&quot;:&quot;Primary&quot;} *\/;font-size:24px;letter-spacing:0px;line-height:1.2;font-weight:700\"><span data-text=\"true\">Colors<\/span><\/span><\/div>",
-                    "os" : "10_15",
+                    "os" : "10_14",
                     "size" : {
                       "height" : 28,
                       "width" : 77
@@ -29143,7 +29155,7 @@
                   ],
                   "cached" : {
                     "html" : "<div data-offset-key=\"739fl-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"739fl-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Bold&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {&quot;name&quot;:&quot;Primary&quot;} *\/;font-size:24px;letter-spacing:0px;line-height:1.2;font-weight:700\"><span data-text=\"true\">Container<\/span><\/span><\/div>",
-                    "os" : "10_15",
+                    "os" : "10_14",
                     "size" : {
                       "height" : 28,
                       "width" : 114
@@ -29978,7 +29990,7 @@
                   ],
                   "cached" : {
                     "html" : "<div data-offset-key=\"739fl-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"739fl-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Bold&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {&quot;name&quot;:&quot;Primary&quot;} *\/;font-size:24px;letter-spacing:0px;line-height:1.2;font-weight:700\"><span data-text=\"true\">Icon<\/span><\/span><\/div>",
-                    "os" : "10_15",
+                    "os" : "10_14",
                     "size" : {
                       "height" : 28,
                       "width" : 51
@@ -30799,7 +30811,7 @@
                   ],
                   "cached" : {
                     "html" : "<div data-offset-key=\"739fl-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"739fl-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Bold&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {&quot;name&quot;:&quot;Primary&quot;} *\/;font-size:24px;letter-spacing:0px;line-height:1.2;font-weight:700\"><span data-text=\"true\">RadioGroup<\/span><\/span><\/div>",
-                    "os" : "10_15",
+                    "os" : "10_14",
                     "size" : {
                       "height" : 28,
                       "width" : 139
@@ -31326,7 +31338,7 @@
                   ],
                   "cached" : {
                     "html" : "<div data-offset-key=\"739fl-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"739fl-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Bold&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {&quot;name&quot;:&quot;Primary&quot;} *\/;font-size:24px;letter-spacing:0px;line-height:1.2;font-weight:700\"><span data-text=\"true\">Row Item<\/span><\/span><\/div>",
-                    "os" : "10_15",
+                    "os" : "10_14",
                     "size" : {
                       "height" : 28,
                       "width" : 111
@@ -32042,82 +32054,6 @@
         "centerAnchorX" : 0.81466666666666665,
         "centerAnchorY" : 0.5,
         "children" : [
-          {
-            "__class" : "FrameNode",
-            "aspectRatio" : null,
-            "blendingEnabled" : 0,
-            "blendingMode" : "normal",
-            "bottom" : 0,
-            "centerAnchorX" : 0.5,
-            "centerAnchorY" : 0.58620689655172409,
-            "children" : [
-
-            ],
-            "clip" : false,
-            "codeOverrideEnabled" : false,
-            "constraintsLocked" : false,
-            "deviceType" : null,
-            "exportOptions" : [
-
-            ],
-            "fillColor" : "rgba(255,255,255,1)",
-            "fillEnabled" : false,
-            "fillImage" : null,
-            "fillImagePixelHeight" : null,
-            "fillImagePixelWidth" : null,
-            "fillImageResize" : "fill",
-            "fillLinearGradient" : {
-              "__class" : "LinearGradient",
-              "alpha" : 1,
-              "angle" : 0,
-              "end" : "rgba(0,0,0,0)",
-              "start" : "black"
-            },
-            "fillRadialGradient" : {
-              "__class" : "RadialGradient",
-              "alpha" : 1,
-              "centerAnchorX" : 0.5,
-              "centerAnchorY" : 0.5,
-              "end" : "black",
-              "heightFactor" : 0.5,
-              "start" : "rgba(0,0,0,0)",
-              "widthFactor" : 0.5
-            },
-            "fillType" : "color",
-            "height" : 672,
-            "heightType" : 0,
-            "id" : "OcoXmDPghByqaH3YD4",
-            "intrinsicHeight" : null,
-            "intrinsicWidth" : null,
-            "isExternalMaster" : null,
-            "isMaster" : false,
-            "isTarget" : false,
-            "left" : 0,
-            "locked" : false,
-            "name" : null,
-            "navigationTarget" : null,
-            "navigationTransition" : "push",
-            "navigationTransitionBackdropColor" : "rgba(4,4,15,.4)",
-            "navigationTransitionDirection" : "left",
-            "opacity" : 1,
-            "originalid" : null,
-            "parentid" : "OcoXmDPgh",
-            "previewSettings" : null,
-            "radius" : 0,
-            "radiusBottomLeft" : 0,
-            "radiusBottomRight" : 0,
-            "radiusIsRelative" : false,
-            "radiusPerCorner" : false,
-            "radiusTopLeft" : 0,
-            "radiusTopRight" : 0,
-            "replicaInfo" : null,
-            "right" : 0,
-            "rotation" : 0,
-            "top" : 140,
-            "visible" : true,
-            "width" : 375,
-            "widthType" : 0
-          },
           {
             "__class" : "CodeComponentNode",
             "aspectRatio" : null,
@@ -34207,7 +34143,7 @@
                       ],
                       "cached" : {
                         "html" : "<div class='DraftEditor-alignCenter'><div data-offset-key=\"bd9o5-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"bd9o5-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Medium&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:rgb(0, 0, 0);font-size:15px;letter-spacing:-0.3px;line-height:1.2;font-weight:500\"><span data-text=\"true\">9:41<\/span><\/span><\/div><\/div>",
-                        "os" : "10_15",
+                        "os" : "10_14",
                         "size" : {
                           "height" : 18,
                           "width" : 55
@@ -34351,6 +34287,85 @@
             "right" : 0,
             "rotation" : 0,
             "top" : 0,
+            "visible" : true,
+            "width" : 375,
+            "widthType" : 0
+          },
+          {
+            "__class" : "CodeComponentNode",
+            "aspectRatio" : null,
+            "bottom" : 0,
+            "centerAnchorX" : 0.5,
+            "centerAnchorY" : 0.58620689655172409,
+            "children" : [
+
+            ],
+            "clip" : false,
+            "codeComponentIdentifier" : "framer\/Stack",
+            "codeComponentProps" : {
+              "alignment" : "center",
+              "direction" : "vertical",
+              "distribution" : "start",
+              "gap" : 16,
+              "padding" : 16,
+              "paddingBottom" : 16,
+              "paddingLeft" : 16,
+              "paddingPerSide" : false,
+              "paddingRight" : 16,
+              "paddingTop" : 16
+            },
+            "codeOverrideEnabled" : false,
+            "constraintsLocked" : false,
+            "deviceType" : null,
+            "exportOptions" : [
+
+            ],
+            "fillColor" : "rgba(255,255,255,1)",
+            "fillEnabled" : false,
+            "fillImage" : null,
+            "fillImagePixelHeight" : null,
+            "fillImagePixelWidth" : null,
+            "fillImageResize" : "fill",
+            "fillLinearGradient" : {
+              "__class" : "LinearGradient",
+              "alpha" : 1,
+              "angle" : 0,
+              "end" : "rgba(0,0,0,0)",
+              "start" : "black"
+            },
+            "fillRadialGradient" : {
+              "__class" : "RadialGradient",
+              "alpha" : 1,
+              "centerAnchorX" : 0.5,
+              "centerAnchorY" : 0.5,
+              "end" : "black",
+              "heightFactor" : 0.5,
+              "start" : "rgba(0,0,0,0)",
+              "widthFactor" : 0.5
+            },
+            "fillType" : "color",
+            "height" : 672,
+            "heightType" : 0,
+            "id" : "JVNhoYVL2",
+            "intrinsicHeight" : null,
+            "intrinsicWidth" : null,
+            "left" : 0,
+            "locked" : false,
+            "name" : "Content",
+            "opacity" : 1,
+            "originalid" : null,
+            "parentid" : "OcoXmDPgh",
+            "previewSettings" : null,
+            "radius" : 0,
+            "radiusBottomLeft" : 0,
+            "radiusBottomRight" : 0,
+            "radiusIsRelative" : false,
+            "radiusPerCorner" : false,
+            "radiusTopLeft" : 0,
+            "radiusTopRight" : 0,
+            "right" : 0,
+            "rotation" : 0,
+            "top" : 140,
             "visible" : true,
             "width" : 375,
             "widthType" : 0
