@@ -104,6 +104,7 @@ Learn currently includes:
  
 # Changelog
 
+- Removes icons (again)
 - Adds Modal, AlertModal
 - Adds ProgressBar
 - Reverses last

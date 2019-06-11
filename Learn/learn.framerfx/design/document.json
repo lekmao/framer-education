@@ -9073,12 +9073,12 @@
                     {
                       "enabled" : true,
                       "type" : "string",
-                      "value" : "Person"
+                      "value" : "Camera"
                     },
                     {
                       "enabled" : true,
                       "type" : "string",
-                      "value" : "Class"
+                      "value" : "Peace"
                     },
                     {
                       "enabled" : true,
@@ -9482,7 +9482,7 @@
                 "codeComponentIdentifier" : ".\/NavigationBar.tsx_NavigationBar",
                 "codeComponentProps" : {
                   "large" : false,
-                  "leftIcon" : "chevron_left",
+                  "leftIcon" : "chevron-left",
                   "leftLink" : "Back",
                   "rightIcon" : "none",
                   "rightLink" : "",
@@ -9558,7 +9558,7 @@
                 "codeComponentIdentifier" : ".\/NavigationBar.tsx_NavigationBar",
                 "codeComponentProps" : {
                   "large" : false,
-                  "leftIcon" : "chevron_left",
+                  "leftIcon" : "chevron-left",
                   "leftLink" : "Back",
                   "rightIcon" : "edit",
                   "rightLink" : "",
@@ -9634,7 +9634,7 @@
                 "codeComponentIdentifier" : ".\/NavigationBar.tsx_NavigationBar",
                 "codeComponentProps" : {
                   "large" : true,
-                  "leftIcon" : "chevron_left",
+                  "leftIcon" : "chevron-left",
                   "leftLink" : "Back",
                   "rightIcon" : "edit",
                   "rightLink" : "",
