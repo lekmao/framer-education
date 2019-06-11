@@ -8,7 +8,7 @@ Learn is a design system for Framer X.
 
 # Usage
 
-## Components 
+## Components
 
 The package currently includes:
 
@@ -93,18 +93,19 @@ export function MyComponent (props) {
 
 Learn currently includes:
 
-* `range`
-* `rangeFrom`
-* `clamp`
-* `normalize`
-* `pull`
-* `pullAtIndex`
-* `sleep`
-* `isEmail`
- 
+- `range`
+- `rangeFrom`
+- `clamp`
+- `normalize`
+- `pull`
+- `pullAtIndex`
+- `sleep`
+- `isEmail`
+
 # Changelog
 
-- Removes icons (again)
+- Fixes text resize on canvas
+- Restores index, renames and adds Stack to blank Template
 - Adds Modal, AlertModal
 - Adds ProgressBar
 - Reverses last
@@ -141,7 +142,7 @@ Learn currently includes:
 - Adds Tabs
 - Reworks CheckboxGroup, RadioGroup, adds colors to buttons and links, adds RowItem
 - Fixes bug on icon buttons / Text with children
-- Adds Active color for active state borders, improves interactive states. 
+- Adds Active color for active state borders, improves interactive states.
 - All code components that previously imported design components no longer do so. (This should fix some import bugs).
 - Fixes disabled tap event.
 - Fixes sizes when using components in code.
