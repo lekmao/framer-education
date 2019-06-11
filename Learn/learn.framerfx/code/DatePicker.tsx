@@ -20,7 +20,6 @@ export function DatePicker(props) {
     } = props
 
     /* ---------------------------------- State --------------------------------- */
-    
 
     const d = new Date(Date.parse(date))
     const e = new Date(Date.parse(end))
@@ -92,7 +91,6 @@ export function DatePicker(props) {
     }, [end])
 
     /* ----------------------------- Event Handlers ----------------------------- */
-    
 
     // Update state with change in month
     const handleMonthChange = (delta: number) => {
@@ -505,16 +503,16 @@ DatePicker.defaultProps = {
 }
 
 addPropertyControls(DatePicker, {
+    range: {
+        title: "Range",
+        type: ControlType.Boolean,
+        defaultValue: false,
+    },
     date: {
         title: "Date",
         type: ControlType.String,
         defaultValue: "04/20/2019",
         hidden: ({ range }) => range,
-    },
-    range: {
-        title: "Range",
-        type: ControlType.Boolean,
-        defaultValue: false,
     },
     start: {
         title: "Date",

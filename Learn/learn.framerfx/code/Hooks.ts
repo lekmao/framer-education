@@ -1,4 +1,5 @@
 import * as React from "react"
+import { motionValue, MotionValue } from "framer"
 
 export type InteractiveOptions = {
     hover: boolean
@@ -80,3 +81,33 @@ export const useInteractionState: (
         },
     ]
 }
+
+// Not quite ready
+//
+// export const useResize: (
+//     props: any,
+//     ...refs: any[]
+// ) => [MotionValue<number>, MotionValue<number>] = (props, ...refs) => {
+//     const width = motionValue<number>(props.size || props.width)
+//     const height = motionValue<number>(props.size || props.height)
+
+//     React.useLayoutEffect(() => {
+//         console.log("running")
+//         const size = refs.reduce(
+//             (acc, cur) => {
+//                 console.log(cur, cur.current)
+//                 if (cur.current) {
+//                     acc.height += cur.current.offsetHeight
+//                     acc.width += cur.current.offsetWidth
+//                 }
+//                 return acc
+//             },
+//             { height: 0, width: 0 }
+//         )
+
+//         width.set(size.width)
+//         height.set(size.height)
+//     }, [])
+
+//     return [width, height]
+// }

@@ -14,9 +14,10 @@ The package currently includes:
 
 - Logo
 - Shared Colors
-- Icon
+- Modal
 - Text
 - Image
+- Icon
 - Favorite
 - Link
 - Switch
@@ -28,8 +29,11 @@ The package currently includes:
 - Slider
 - Stepper
 - TextInput
+- RowItem
 - DatePicker
 - DatePickerModel
+- AlertModal
+- ProgressBar
 - Select
 - Segment
 - Tabs
@@ -100,6 +104,7 @@ Learn currently includes:
  
 # Changelog
 
+- Adds Modal, AlertModal
 - Adds ProgressBar
 - Reverses last
 - Removes SVG icons and library, replaces with spritesheet

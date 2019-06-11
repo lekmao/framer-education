@@ -61,7 +61,6 @@ export function Link(props: Partial<Props>) {
 
     return !icon || icon === "none" ? (
         <Text
-            // Constant props
             {...rest}
             {...interactionProps}
             type="link"

@@ -128,6 +128,8 @@
                   "paddingPerSide" : true,
                   "paddingRight" : 0,
                   "paddingTop" : 0,
+                  "pc_resizeDirection" : "xaxis",
+                  "resize" : false,
                   "text" : "Display",
                   "textAlign" : "left",
                   "type" : "display",
@@ -207,6 +209,8 @@
                   "background" : "none",
                   "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(59, 59, 104))",
                   "paddingPerSide" : false,
+                  "pc_resizeDirection" : "xaxis",
+                  "resize" : false,
                   "text" : "Heading 1",
                   "textAlign" : "left",
                   "type" : "h1",
@@ -286,6 +290,8 @@
                   "background" : "none",
                   "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(59, 59, 104))",
                   "paddingPerSide" : false,
+                  "pc_resizeDirection" : "xaxis",
+                  "resize" : false,
                   "text" : "Heading 2",
                   "textAlign" : "left",
                   "type" : "h2",
@@ -365,6 +371,8 @@
                   "background" : "none",
                   "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(59, 59, 104))",
                   "paddingPerSide" : false,
+                  "pc_resizeDirection" : "xaxis",
+                  "resize" : false,
                   "text" : "Heading 3",
                   "textAlign" : "left",
                   "type" : "h3",
@@ -444,6 +452,8 @@
                   "background" : "none",
                   "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(59, 59, 104))",
                   "paddingPerSide" : false,
+                  "pc_resizeDirection" : "xaxis",
+                  "resize" : false,
                   "text" : "Lead",
                   "textAlign" : "left",
                   "type" : "lead",
@@ -523,6 +533,8 @@
                   "background" : "none",
                   "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(59, 59, 104))",
                   "paddingPerSide" : false,
+                  "pc_resizeDirection" : "xaxis",
+                  "resize" : false,
                   "text" : "Link",
                   "textAlign" : "left",
                   "type" : "link",
@@ -602,6 +614,8 @@
                   "background" : "none",
                   "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(59, 59, 104))",
                   "paddingPerSide" : false,
+                  "pc_resizeDirection" : "xaxis",
+                  "resize" : false,
                   "text" : "Body",
                   "textAlign" : "left",
                   "type" : "body",
@@ -681,6 +695,8 @@
                   "background" : "none",
                   "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(59, 59, 104))",
                   "paddingPerSide" : false,
+                  "pc_resizeDirection" : "xaxis",
+                  "resize" : false,
                   "text" : "Label",
                   "textAlign" : "left",
                   "type" : "label",
@@ -760,6 +776,8 @@
                   "background" : "none",
                   "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(59, 59, 104))",
                   "paddingPerSide" : false,
+                  "pc_resizeDirection" : "xaxis",
+                  "resize" : false,
                   "text" : "Caption",
                   "textAlign" : "left",
                   "type" : "caption",
@@ -839,6 +857,8 @@
                   "background" : "rgba(255, 255, 255, 0)",
                   "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(59, 59, 104))",
                   "paddingPerSide" : false,
+                  "pc_resizeDirection" : "xaxis",
+                  "resize" : false,
                   "text" : "Text now also supports **Markdown**.",
                   "textAlign" : "left",
                   "type" : "body",
@@ -10713,7 +10733,7 @@
                 "__class" : "CodeComponentNode",
                 "aspectRatio" : null,
                 "bottom" : null,
-                "centerAnchorX" : 0.46933333333333332,
+                "centerAnchorX" : 0.5,
                 "centerAnchorY" : 0.30295566502463056,
                 "children" : [
 
@@ -10761,7 +10781,7 @@
                 "id" : "pnPFG10Uq",
                 "intrinsicHeight" : 356,
                 "intrinsicWidth" : 320,
-                "left" : 16,
+                "left" : null,
                 "locked" : false,
                 "name" : null,
                 "opacity" : 1,
@@ -10775,7 +10795,7 @@
                 "radiusPerCorner" : false,
                 "radiusTopLeft" : 0,
                 "radiusTopRight" : 0,
-                "right" : 39,
+                "right" : null,
                 "rotation" : 0,
                 "top" : 68,
                 "visible" : true,
@@ -11006,7 +11026,7 @@
             "__class" : "TextNode",
             "autoSize" : true,
             "bottom" : null,
-            "centerAnchorX" : 0.18533333333333332,
+            "centerAnchorX" : 0.31733333333333336,
             "centerAnchorY" : 0.041871921182266007,
             "codeOverrideEnabled" : false,
             "constraintsLocked" : false,
@@ -11045,42 +11065,42 @@
                   ],
                   "inlineStyleRanges" : [
                     {
-                      "length" : 16,
+                      "length" : 15,
                       "offset" : 0,
                       "style" : "LETTERSPACING:0"
                     },
                     {
-                      "length" : 16,
+                      "length" : 15,
                       "offset" : 0,
                       "style" : "LINEHEIGHT:1.2"
                     },
                     {
-                      "length" : 16,
+                      "length" : 15,
                       "offset" : 0,
                       "style" : "FONT:HelveticaNeue-Bold"
                     },
                     {
-                      "length" : 16,
+                      "length" : 15,
                       "offset" : 0,
                       "style" : "COLOR:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {\"name\":\"Primary\"} *\/"
                     },
                     {
-                      "length" : 16,
+                      "length" : 15,
                       "offset" : 0,
                       "style" : "SIZE:24"
                     }
                   ],
                   "key" : "739fl",
-                  "text" : "DatePicker Modal",
+                  "text" : "DatePickerModal",
                   "type" : "unstyled"
                 }
               ],
               "cached" : {
-                "html" : "<div data-offset-key=\"739fl-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"739fl-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Bold&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {&quot;name&quot;:&quot;Primary&quot;} *\/;font-size:24px;letter-spacing:0px;line-height:1.2;font-weight:700\"><span data-text=\"true\">DatePicker Modal<\/span><\/span><\/div>",
+                "html" : "<div data-offset-key=\"739fl-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"739fl-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Bold&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {&quot;name&quot;:&quot;Primary&quot;} *\/;font-size:24px;letter-spacing:0px;line-height:1.2;font-weight:700\"><span data-text=\"true\">DatePickerModal<\/span><\/span><\/div>",
                 "os" : "10_14",
                 "size" : {
                   "height" : 28,
-                  "width" : 206
+                  "width" : 199
                 },
                 "width" : 0
               },
@@ -11090,7 +11110,7 @@
             },
             "top" : 20,
             "visible" : true,
-            "width" : 206,
+            "width" : 199,
             "widthType" : 0
           },
           {
@@ -11229,6 +11249,485 @@
         "right" : null,
         "rotation" : 0,
         "top" : 1339,
+        "visible" : true,
+        "width" : 375,
+        "widthType" : 0
+      },
+      {
+        "__class" : "FrameNode",
+        "aspectRatio" : null,
+        "blendingEnabled" : 0,
+        "blendingMode" : "normal",
+        "bottom" : null,
+        "centerAnchorX" : 0,
+        "centerAnchorY" : 0,
+        "children" : [
+          {
+            "__class" : "TextNode",
+            "autoSize" : true,
+            "bottom" : null,
+            "centerAnchorX" : 0.31733333333333336,
+            "centerAnchorY" : 0.041871921182266007,
+            "codeOverrideEnabled" : false,
+            "constraintsLocked" : false,
+            "exportOptions" : [
+
+            ],
+            "height" : 28,
+            "heightType" : 0,
+            "id" : "Sde0hD9zH",
+            "isTarget" : false,
+            "left" : 16,
+            "locked" : false,
+            "name" : null,
+            "opacity" : 1,
+            "originalid" : null,
+            "parentid" : "ec9WtTKfN",
+            "replicaInfo" : null,
+            "right" : null,
+            "rotation" : 0,
+            "styledText" : {
+              "__class" : "StyledTextDraft",
+              "blocks" : [
+                {
+                  "data" : {
+                    "emptyStyle" : [
+                      "LETTERSPACING:0",
+                      "LINEHEIGHT:1.2",
+                      "FONT:HelveticaNeue-Bold",
+                      "COLOR:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {\"name\":\"Primary\"} *\/",
+                      "SIZE:24"
+                    ]
+                  },
+                  "depth" : 0,
+                  "entityRanges" : [
+
+                  ],
+                  "inlineStyleRanges" : [
+                    {
+                      "length" : 11,
+                      "offset" : 0,
+                      "style" : "LETTERSPACING:0"
+                    },
+                    {
+                      "length" : 11,
+                      "offset" : 0,
+                      "style" : "LINEHEIGHT:1.2"
+                    },
+                    {
+                      "length" : 11,
+                      "offset" : 0,
+                      "style" : "FONT:HelveticaNeue-Bold"
+                    },
+                    {
+                      "length" : 11,
+                      "offset" : 0,
+                      "style" : "COLOR:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {\"name\":\"Primary\"} *\/"
+                    },
+                    {
+                      "length" : 11,
+                      "offset" : 0,
+                      "style" : "SIZE:24"
+                    }
+                  ],
+                  "key" : "739fl",
+                  "text" : "AltertModal",
+                  "type" : "unstyled"
+                }
+              ],
+              "cached" : {
+                "html" : "<div data-offset-key=\"739fl-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"739fl-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Bold&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {&quot;name&quot;:&quot;Primary&quot;} *\/;font-size:24px;letter-spacing:0px;line-height:1.2;font-weight:700\"><span data-text=\"true\">AltertModal<\/span><\/span><\/div>",
+                "os" : "10_14",
+                "size" : {
+                  "height" : 28,
+                  "width" : 135
+                },
+                "width" : 0
+              },
+              "entityMap" : {
+
+              }
+            },
+            "top" : 20,
+            "visible" : true,
+            "width" : 135,
+            "widthType" : 0
+          },
+          {
+            "__class" : "CodeComponentNode",
+            "aspectRatio" : null,
+            "bottom" : 0,
+            "centerAnchorX" : 0.5,
+            "centerAnchorY" : 0.5,
+            "children" : [
+
+            ],
+            "clip" : true,
+            "codeComponentIdentifier" : ".\/AlertModal.tsx_AlertModal",
+            "codeComponentProps" : {
+              "body" : "Add your alert message here. asdas dsad sad a adsadas das  asdsad asd a ad s adsadsa d",
+              "cancel" : "Cancel",
+              "confirm" : "Confirm",
+              "open" : true,
+              "title" : "Title"
+            },
+            "codeOverrideEnabled" : false,
+            "constraintsLocked" : false,
+            "deviceType" : null,
+            "exportOptions" : [
+
+            ],
+            "fillColor" : "rgba(255,255,255,1)",
+            "fillEnabled" : false,
+            "fillImage" : null,
+            "fillImagePixelHeight" : null,
+            "fillImagePixelWidth" : null,
+            "fillImageResize" : "fill",
+            "fillLinearGradient" : {
+              "__class" : "LinearGradient",
+              "alpha" : 1,
+              "angle" : 0,
+              "end" : "rgba(0,0,0,0)",
+              "start" : "black"
+            },
+            "fillRadialGradient" : {
+              "__class" : "RadialGradient",
+              "alpha" : 1,
+              "centerAnchorX" : 0.5,
+              "centerAnchorY" : 0.5,
+              "end" : "black",
+              "heightFactor" : 0.5,
+              "start" : "rgba(0,0,0,0)",
+              "widthFactor" : 0.5
+            },
+            "fillType" : "color",
+            "height" : 812,
+            "heightType" : 0,
+            "id" : "qp8qcjPtr",
+            "intrinsicHeight" : 714,
+            "intrinsicWidth" : 375,
+            "left" : 0,
+            "locked" : false,
+            "name" : null,
+            "opacity" : 1,
+            "originalid" : null,
+            "parentid" : "ec9WtTKfN",
+            "previewSettings" : null,
+            "radius" : 0,
+            "radiusBottomLeft" : 0,
+            "radiusBottomRight" : 0,
+            "radiusIsRelative" : false,
+            "radiusPerCorner" : false,
+            "radiusTopLeft" : 0,
+            "radiusTopRight" : 0,
+            "right" : 0,
+            "rotation" : 0,
+            "top" : 0,
+            "visible" : true,
+            "width" : 375,
+            "widthType" : 0
+          }
+        ],
+        "clip" : true,
+        "codeOverrideEnabled" : false,
+        "constraintsLocked" : false,
+        "deviceType" : null,
+        "exportOptions" : [
+
+        ],
+        "fillColor" : "var(--token-570013b9-ccd1-4a4b-8a44-e7ded788d7f2, rgb(235, 243, 255)) \/* {\"name\":\"Light\"} *\/",
+        "fillEnabled" : true,
+        "fillImage" : null,
+        "fillImagePixelHeight" : null,
+        "fillImagePixelWidth" : null,
+        "fillImageResize" : "fill",
+        "fillLinearGradient" : {
+          "__class" : "LinearGradient",
+          "alpha" : 1,
+          "angle" : 0,
+          "end" : "rgba(0,0,0,0)",
+          "start" : "black"
+        },
+        "fillRadialGradient" : {
+          "__class" : "RadialGradient",
+          "alpha" : 1,
+          "centerAnchorX" : 0.5,
+          "centerAnchorY" : 0.5,
+          "end" : "black",
+          "heightFactor" : 0.5,
+          "start" : "rgba(0,0,0,0)",
+          "widthFactor" : 0.5
+        },
+        "fillType" : "color",
+        "height" : 812,
+        "heightType" : 0,
+        "id" : "ec9WtTKfN",
+        "intrinsicHeight" : null,
+        "intrinsicWidth" : null,
+        "isExternalMaster" : null,
+        "isMaster" : false,
+        "isTarget" : false,
+        "left" : 9737,
+        "locked" : false,
+        "name" : "Elements",
+        "navigationTarget" : null,
+        "navigationTransition" : "push",
+        "navigationTransitionBackdropColor" : "rgba(4,4,15,.4)",
+        "navigationTransitionDirection" : "left",
+        "opacity" : 1,
+        "originalid" : null,
+        "parentid" : "NUXTU4rYC",
+        "previewSettings" : null,
+        "radius" : 0,
+        "radiusBottomLeft" : 0,
+        "radiusBottomRight" : 0,
+        "radiusIsRelative" : false,
+        "radiusPerCorner" : false,
+        "radiusTopLeft" : 0,
+        "radiusTopRight" : 0,
+        "replicaInfo" : null,
+        "right" : null,
+        "rotation" : 0,
+        "top" : 1339,
+        "visible" : true,
+        "width" : 375,
+        "widthType" : 0
+      },
+      {
+        "__class" : "FrameNode",
+        "aspectRatio" : null,
+        "blendingEnabled" : 0,
+        "blendingMode" : "normal",
+        "bottom" : null,
+        "centerAnchorX" : 0,
+        "centerAnchorY" : 0,
+        "children" : [
+          {
+            "__class" : "TextNode",
+            "autoSize" : true,
+            "bottom" : null,
+            "centerAnchorX" : 0.18533333333333332,
+            "centerAnchorY" : 0.041871921182266007,
+            "codeOverrideEnabled" : false,
+            "constraintsLocked" : false,
+            "exportOptions" : [
+
+            ],
+            "height" : 28,
+            "heightType" : 0,
+            "id" : "T1EpSPa08",
+            "isTarget" : false,
+            "left" : 16,
+            "locked" : false,
+            "name" : null,
+            "opacity" : 1,
+            "originalid" : null,
+            "parentid" : "J0ZjBntMg",
+            "replicaInfo" : null,
+            "right" : null,
+            "rotation" : 0,
+            "styledText" : {
+              "__class" : "StyledTextDraft",
+              "blocks" : [
+                {
+                  "data" : {
+                    "emptyStyle" : [
+                      "LETTERSPACING:0",
+                      "LINEHEIGHT:1.2",
+                      "FONT:HelveticaNeue-Bold",
+                      "COLOR:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {\"name\":\"Primary\"} *\/",
+                      "SIZE:24"
+                    ]
+                  },
+                  "depth" : 0,
+                  "entityRanges" : [
+
+                  ],
+                  "inlineStyleRanges" : [
+                    {
+                      "length" : 5,
+                      "offset" : 0,
+                      "style" : "LETTERSPACING:0"
+                    },
+                    {
+                      "length" : 5,
+                      "offset" : 0,
+                      "style" : "LINEHEIGHT:1.2"
+                    },
+                    {
+                      "length" : 5,
+                      "offset" : 0,
+                      "style" : "FONT:HelveticaNeue-Bold"
+                    },
+                    {
+                      "length" : 5,
+                      "offset" : 0,
+                      "style" : "COLOR:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {\"name\":\"Primary\"} *\/"
+                    },
+                    {
+                      "length" : 5,
+                      "offset" : 0,
+                      "style" : "SIZE:24"
+                    }
+                  ],
+                  "key" : "739fl",
+                  "text" : "Modal",
+                  "type" : "unstyled"
+                }
+              ],
+              "cached" : {
+                "html" : "<div data-offset-key=\"739fl-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"739fl-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Bold&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {&quot;name&quot;:&quot;Primary&quot;} *\/;font-size:24px;letter-spacing:0px;line-height:1.2;font-weight:700\"><span data-text=\"true\">Modal<\/span><\/span><\/div>",
+                "os" : "10_14",
+                "size" : {
+                  "height" : 28,
+                  "width" : 73
+                },
+                "width" : 0
+              },
+              "entityMap" : {
+
+              }
+            },
+            "top" : 20,
+            "visible" : true,
+            "width" : 73,
+            "widthType" : 0
+          },
+          {
+            "__class" : "CodeComponentNode",
+            "aspectRatio" : null,
+            "bottom" : 0,
+            "centerAnchorX" : 0.5,
+            "centerAnchorY" : 0.5,
+            "children" : [
+
+            ],
+            "clip" : true,
+            "codeComponentIdentifier" : ".\/Modal.tsx_Modal",
+            "codeComponentProps" : {
+              "children" : [
+
+              ],
+              "open" : true
+            },
+            "codeOverrideEnabled" : false,
+            "constraintsLocked" : false,
+            "deviceType" : null,
+            "exportOptions" : [
+
+            ],
+            "fillColor" : "rgba(255,255,255,1)",
+            "fillEnabled" : false,
+            "fillImage" : null,
+            "fillImagePixelHeight" : null,
+            "fillImagePixelWidth" : null,
+            "fillImageResize" : "fill",
+            "fillLinearGradient" : {
+              "__class" : "LinearGradient",
+              "alpha" : 1,
+              "angle" : 0,
+              "end" : "rgba(0,0,0,0)",
+              "start" : "black"
+            },
+            "fillRadialGradient" : {
+              "__class" : "RadialGradient",
+              "alpha" : 1,
+              "centerAnchorX" : 0.5,
+              "centerAnchorY" : 0.5,
+              "end" : "black",
+              "heightFactor" : 0.5,
+              "start" : "rgba(0,0,0,0)",
+              "widthFactor" : 0.5
+            },
+            "fillType" : "color",
+            "height" : 812,
+            "heightType" : 0,
+            "id" : "Khd9NEcIy",
+            "intrinsicHeight" : 714,
+            "intrinsicWidth" : 375,
+            "left" : 0,
+            "locked" : false,
+            "name" : null,
+            "opacity" : 1,
+            "originalid" : null,
+            "parentid" : "J0ZjBntMg",
+            "previewSettings" : null,
+            "radius" : 0,
+            "radiusBottomLeft" : 0,
+            "radiusBottomRight" : 0,
+            "radiusIsRelative" : false,
+            "radiusPerCorner" : false,
+            "radiusTopLeft" : 0,
+            "radiusTopRight" : 0,
+            "right" : 0,
+            "rotation" : 0,
+            "top" : 0,
+            "visible" : true,
+            "width" : 375,
+            "widthType" : 0
+          }
+        ],
+        "clip" : true,
+        "codeOverrideEnabled" : false,
+        "constraintsLocked" : false,
+        "deviceType" : null,
+        "exportOptions" : [
+
+        ],
+        "fillColor" : "var(--token-570013b9-ccd1-4a4b-8a44-e7ded788d7f2, rgb(235, 243, 255)) \/* {\"name\":\"Light\"} *\/",
+        "fillEnabled" : true,
+        "fillImage" : null,
+        "fillImagePixelHeight" : null,
+        "fillImagePixelWidth" : null,
+        "fillImageResize" : "fill",
+        "fillLinearGradient" : {
+          "__class" : "LinearGradient",
+          "alpha" : 1,
+          "angle" : 0,
+          "end" : "rgba(0,0,0,0)",
+          "start" : "black"
+        },
+        "fillRadialGradient" : {
+          "__class" : "RadialGradient",
+          "alpha" : 1,
+          "centerAnchorX" : 0.5,
+          "centerAnchorY" : 0.5,
+          "end" : "black",
+          "heightFactor" : 0.5,
+          "start" : "rgba(0,0,0,0)",
+          "widthFactor" : 0.5
+        },
+        "fillType" : "color",
+        "height" : 812,
+        "heightType" : 0,
+        "id" : "J0ZjBntMg",
+        "intrinsicHeight" : null,
+        "intrinsicWidth" : null,
+        "isExternalMaster" : null,
+        "isMaster" : false,
+        "isTarget" : false,
+        "left" : 1999,
+        "locked" : false,
+        "name" : "Elements",
+        "navigationTarget" : null,
+        "navigationTransition" : "push",
+        "navigationTransitionBackdropColor" : "rgba(4,4,15,.4)",
+        "navigationTransitionDirection" : "left",
+        "opacity" : 1,
+        "originalid" : null,
+        "parentid" : "NUXTU4rYC",
+        "previewSettings" : null,
+        "radius" : 0,
+        "radiusBottomLeft" : 0,
+        "radiusBottomRight" : 0,
+        "radiusIsRelative" : false,
+        "radiusPerCorner" : false,
+        "radiusTopLeft" : 0,
+        "radiusTopRight" : 0,
+        "replicaInfo" : null,
+        "right" : null,
+        "rotation" : 0,
+        "top" : -10,
         "visible" : true,
         "width" : 375,
         "widthType" : 0
@@ -13520,7 +14019,7 @@
         "isTarget" : false,
         "left" : 2454,
         "locked" : false,
-        "name" : "Templates\/Blank",
+        "name" : "Template",
         "navigationTarget" : null,
         "navigationTransition" : "push",
         "navigationTransitionBackdropColor" : "rgba(4,4,15,.4)",
@@ -20985,6 +21484,8 @@
                   "background" : "none",
                   "color" : "var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 86, 254)) \/* {\"name\":\"Primary\"} *\/",
                   "paddingPerSide" : false,
+                  "pc_resizeDirection" : "xaxis",
+                  "resize" : false,
                   "text" : "Learn",
                   "textAlign" : "left",
                   "type" : "display",
@@ -21061,6 +21562,8 @@
                   "background" : "none",
                   "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(59, 59, 104)) \/* {\"name\":\"Dark\"} *\/",
                   "paddingPerSide" : false,
+                  "pc_resizeDirection" : "xaxis",
+                  "resize" : false,
                   "text" : "Design System",
                   "textAlign" : "left",
                   "type" : "h1",
@@ -23428,6 +23931,8 @@
           "background" : "rgba(255, 255, 255, 0)",
           "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(59, 59, 104))",
           "paddingPerSide" : false,
+          "pc_resizeDirection" : "xaxis",
+          "resize" : false,
           "text" : "Heading 1",
           "textAlign" : "left",
           "type" : "h1",
@@ -30204,83 +30709,6 @@
         "widthType" : 0
       },
       {
-        "__class" : "CodeComponentNode",
-        "aspectRatio" : null,
-        "bottom" : null,
-        "centerAnchorX" : 0.3329268292682927,
-        "centerAnchorY" : 0.45161290322580644,
-        "children" : [
-
-        ],
-        "clip" : true,
-        "codeComponentIdentifier" : ".\/Logo.tsx_Logo",
-        "codeComponentProps" : {
-          "flat" : false
-        },
-        "codeOverrideEnabled" : false,
-        "constraintsLocked" : false,
-        "deviceType" : null,
-        "exportOptions" : [
-          {
-            "__class" : "ExportOptions",
-            "enabled" : true,
-            "nameExtension" : "@2x",
-            "nameExtensionMode" : "Suffix",
-            "scale" : 2,
-            "type" : "png"
-          }
-        ],
-        "fillColor" : "rgba(255,255,255,1)",
-        "fillEnabled" : false,
-        "fillImage" : null,
-        "fillImagePixelHeight" : null,
-        "fillImagePixelWidth" : null,
-        "fillImageResize" : "fill",
-        "fillLinearGradient" : {
-          "__class" : "LinearGradient",
-          "alpha" : 1,
-          "angle" : 0,
-          "end" : "rgba(0,0,0,0)",
-          "start" : "black"
-        },
-        "fillRadialGradient" : {
-          "__class" : "RadialGradient",
-          "alpha" : 1,
-          "centerAnchorX" : 0.5,
-          "centerAnchorY" : 0.5,
-          "end" : "black",
-          "heightFactor" : 0.5,
-          "start" : "rgba(0,0,0,0)",
-          "widthFactor" : 0.5
-        },
-        "fillType" : "color",
-        "height" : 130,
-        "heightType" : 0,
-        "id" : "HmjrhuJE_",
-        "intrinsicHeight" : 200,
-        "intrinsicWidth" : 200,
-        "left" : 3523,
-        "locked" : false,
-        "name" : null,
-        "opacity" : 1,
-        "originalid" : null,
-        "parentid" : "NUXTU4rYC",
-        "previewSettings" : null,
-        "radius" : 0,
-        "radiusBottomLeft" : 0,
-        "radiusBottomRight" : 0,
-        "radiusIsRelative" : false,
-        "radiusPerCorner" : false,
-        "radiusTopLeft" : 0,
-        "radiusTopRight" : 0,
-        "right" : null,
-        "rotation" : 0,
-        "top" : -1020,
-        "visible" : true,
-        "width" : 127,
-        "widthType" : 0
-      },
-      {
         "__class" : "FrameNode",
         "aspectRatio" : null,
         "blendingEnabled" : 0,
@@ -34063,6 +34491,83 @@
         "top" : 1251,
         "visible" : true,
         "width" : 320,
+        "widthType" : 0
+      },
+      {
+        "__class" : "CodeComponentNode",
+        "aspectRatio" : null,
+        "bottom" : null,
+        "centerAnchorX" : 0.94687500000000002,
+        "centerAnchorY" : 0.17333333333333334,
+        "children" : [
+
+        ],
+        "clip" : true,
+        "codeComponentIdentifier" : ".\/Logo.tsx_Logo",
+        "codeComponentProps" : {
+          "flat" : false
+        },
+        "codeOverrideEnabled" : false,
+        "constraintsLocked" : false,
+        "deviceType" : null,
+        "exportOptions" : [
+          {
+            "__class" : "ExportOptions",
+            "enabled" : true,
+            "nameExtension" : "@2x",
+            "nameExtensionMode" : "Suffix",
+            "scale" : 2,
+            "type" : "png"
+          }
+        ],
+        "fillColor" : "rgba(255,255,255,1)",
+        "fillEnabled" : false,
+        "fillImage" : null,
+        "fillImagePixelHeight" : null,
+        "fillImagePixelWidth" : null,
+        "fillImageResize" : "fill",
+        "fillLinearGradient" : {
+          "__class" : "LinearGradient",
+          "alpha" : 1,
+          "angle" : 0,
+          "end" : "rgba(0,0,0,0)",
+          "start" : "black"
+        },
+        "fillRadialGradient" : {
+          "__class" : "RadialGradient",
+          "alpha" : 1,
+          "centerAnchorX" : 0.5,
+          "centerAnchorY" : 0.5,
+          "end" : "black",
+          "heightFactor" : 0.5,
+          "start" : "rgba(0,0,0,0)",
+          "widthFactor" : 0.5
+        },
+        "fillType" : "color",
+        "height" : 130,
+        "heightType" : 0,
+        "id" : "HmjrhuJE_",
+        "intrinsicHeight" : 200,
+        "intrinsicWidth" : 200,
+        "left" : 2454,
+        "locked" : false,
+        "name" : null,
+        "opacity" : 1,
+        "originalid" : null,
+        "parentid" : "NUXTU4rYC",
+        "previewSettings" : null,
+        "radius" : 0,
+        "radiusBottomLeft" : 0,
+        "radiusBottomRight" : 0,
+        "radiusIsRelative" : false,
+        "radiusPerCorner" : false,
+        "radiusTopLeft" : 0,
+        "radiusTopRight" : 0,
+        "right" : null,
+        "rotation" : 0,
+        "top" : -1376,
+        "visible" : true,
+        "width" : 127,
         "widthType" : 0
       }
     ],
