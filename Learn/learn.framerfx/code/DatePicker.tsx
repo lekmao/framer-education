@@ -463,7 +463,7 @@ export function DatePicker(props) {
                                                             ? colors.Light
                                                             : colors.Dark
                                                     }
-                                                    text={day}
+                                                    text={day.toString()}
                                                 />
                                             )}
                                             {useRange &&
