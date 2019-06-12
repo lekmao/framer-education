@@ -5,6 +5,7 @@ import { Scroll, Frame, useMotionValue, useTransform } from "framer"
 // API Reference: https://www.framer.com/api
 
 export function StickyHeader() {
+    const activeHeader = 0
     const scrollY = useMotionValue(0)
 
     return (
