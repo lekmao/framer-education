@@ -131,8 +131,9 @@ export function pull(array: any[], ...values) {
  * - `indexes` - One or more indexes to remove.
  * 
  * ```
- const valueA = pull(["a", "b", "c"], 0) // ["b", "c"]
- const valueA = pull(["a", "b", "c"], 0, 1) // ["c"]
+ const valueA = pullAtIndex(["a", "b", "c"], 0) // ["b", "c"]
+ const valueB = pullAtIndex(["a", "b", "c"], 0, 1) // ["c"]
+ const valueC = pullAtIndex(["a", "b", "c"], 0, 1, 3) // []
  ```
 */
 export function pullAtIndex(array: any[], ...indexes) {
