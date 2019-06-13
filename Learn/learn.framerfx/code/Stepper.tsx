@@ -11,12 +11,12 @@ type Props = Partial<FrameProps> & {
     min: number
     max: number
     step: number
-    clamp: boolean // used only for property controls
+    pc_clamp: boolean // used only for property controls
     validation: (value: number) => boolean
     onValueChange: (value: number, valid: boolean) => any
 }
 
-export function Stepper(props: Props) {
+export function Stepper(props: Partial<Props>) {
     const {
         value,
         onValueChange,
@@ -56,29 +56,6 @@ export function Stepper(props: Props) {
     }
 
     const { valid } = state
-
-    const variants = {
-        disabled: {
-            background: colors.Light,
-            border: `1px solid ${colors.Neutral}`,
-        },
-        initial: {
-            background: colors.Light,
-            border: `1px solid ${colors.Border}`,
-        },
-        hovered: {
-            background: colors.Light,
-            border: `1px solid ${colors.Neutral}`,
-        },
-        active: {
-            background: colors.Light,
-            border: `1px solid ${colors.Active}`,
-        },
-        warn: {
-            background: colors.Warn,
-            border: `1px solid ${colors.Warn}`,
-        },
-    }
 
     return (
         <Stack
@@ -159,7 +136,7 @@ addPropertyControls(Stepper, {
         min: -Infinity,
         max: Infinity,
     },
-    clamp: {
+    pc_clamp: {
         title: "Clamp Value",
         type: ControlType.Boolean,
         defaultValue: false,
@@ -171,7 +148,7 @@ addPropertyControls(Stepper, {
         min: 0,
         max: Infinity,
         defaultValue: 0,
-        hidden: ({ clamp }) => !clamp,
+        hidden: ({ pc_clamp }) => !pc_clamp,
     },
     max: {
         title: "Max",
@@ -180,7 +157,7 @@ addPropertyControls(Stepper, {
         min: 0,
         max: Infinity,
         defaultValue: 10,
-        hidden: ({ clamp }) => !clamp,
+        hidden: ({ pc_clamp }) => !pc_clamp,
     },
     step: {
         title: "Step",

@@ -14,11 +14,11 @@ type Props = Partial<FrameProps> & {
 	placeholder: string
 	readOnly: boolean
 	password: boolean
-	message: string
+	message: string | ((value: string, valid: boolean) => string | void)
 	delay: number // in seconds
 	clearable: boolean
-	onBlur: (value: string, valid: boolean) => any
-	onFocus: (value: string, valid: boolean) => any
+	onBlur: (value: string, valid: boolean) => void
+	onFocus: (value: string, valid: boolean) => void
 	onInputStart: () => any
 }
 
@@ -35,6 +35,7 @@ export function TextInput(props: Partial<Props>) {
 		delay,
 		clearable,
 		required,
+		tabIndex,
 		...rest
 	} = props
 
@@ -186,6 +187,7 @@ export function TextInput(props: Partial<Props>) {
 							border: 'none',
 							color: valid ? colors.Dark : colors.Warn,
 						}}
+						tabIndex={tabIndex}
 						onFocus={() => setFocus(true)}
 						onBlur={() => setFocus(false)}
 						onChange={handleInput}
@@ -228,7 +230,9 @@ export function TextInput(props: Partial<Props>) {
 							fontSize: 12,
 						}}
 					>
-						{message}
+						{typeof message === 'string'
+							? message
+							: message(state.value, state.valid) || ''}
 					</div>
 				</>
 			)}
@@ -242,6 +246,7 @@ TextInput.defaultProps = {
 	disabled: false,
 	required: false,
 	readOnly: false,
+	tabIndex: -1,
 	onFocus: () => null,
 	onBlur: () => null,
 	validation: (v) => true,

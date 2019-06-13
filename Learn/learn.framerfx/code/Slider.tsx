@@ -31,10 +31,6 @@ type Props = Partial<FrameProps> & {
 const knobSize = 40,
 	railHeight = 8
 
-/**
- * Slider
- * @param props
- */
 export function Slider(props: Partial<Props>) {
 	const {
 		value: initialValue,
@@ -165,8 +161,8 @@ export function Slider(props: Partial<Props>) {
 			background="none"
 		>
 			<Frame
-				height={8}
-				borderRadius={4}
+				height={railHeight}
+				borderRadius={railHeight / 2}
 				center="y"
 				width={railWidth}
 				left={knobSize / 2}
@@ -174,7 +170,7 @@ export function Slider(props: Partial<Props>) {
 				border={`${state.valid ? 0 : 1}px solid ${colors.Warn}`}
 			/>
 			<Frame
-				height={8}
+				height={railHeight}
 				borderRadius={4}
 				background={colors.Primary}
 				center="y"
@@ -204,11 +200,11 @@ export function Slider(props: Partial<Props>) {
 					/>
 				</>
 			)}
-			<Frame size={40} x={knobX} center="y" background="none">
+			<Frame size={knobSize} x={knobX} center="y" background="none">
 				<Frame
 					background={colors.Light}
-					height={36}
-					width={36}
+					height={knobSize - 4}
+					width={knobSize - 4}
 					borderRadius="100%"
 					shadow={`0px 2px 5px ${colors.Shadow}`}
 					center
@@ -227,7 +223,7 @@ export function Slider(props: Partial<Props>) {
 				)}
 			</Frame>
 			<Frame
-				size={40}
+				size={knobSize}
 				center="y"
 				background="none"
 				x={dragX}

@@ -10,20 +10,13 @@ import {
 import { Link } from './Link'
 import { colors } from './canvas'
 
-type TabObject = {
-	icon: string
-	title: string
-}
-
-type Tab = string | TabObject
-
-type Props = Partial<FrameProps> & {
+type Props = FrameProps & {
 	currentTab: number | string
 	onChangeTab: (index: number, tab: string) => void
-	tabs: Tab[]
+	tabs: string[]
 }
 
-export function Tabs(props) {
+export function Tabs(props: Partial<Props>) {
 	const { id, height, width, tabs, currentTab, onChangeTab } = props
 
 	const containerRef = React.useRef<HTMLDivElement>()
@@ -81,7 +74,7 @@ export function Tabs(props) {
 	// Calculate the scroll Position
 	const contentWidth = state.tabWidths.reduce((a, c) => a + 32 + c, 0)
 
-	const midScreen = width / 2
+	const midScreen = (width as number) / 2
 
 	const buttonX =
 		16 +
@@ -95,7 +88,7 @@ export function Tabs(props) {
 	const maxX = contentWidth - midScreen - buttonMid
 
 	const scrollMin = 0
-	const scrollMax = -(contentWidth - width)
+	const scrollMax = -(contentWidth - (width as number))
 	const scrollMid = -(buttonX - midX)
 
 	const offsetX =

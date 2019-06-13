@@ -2,18 +2,23 @@ import * as React from 'react'
 import { Frame, FrameProps, addPropertyControls, ControlType } from 'framer'
 import { colors } from './canvas'
 
-// Open Preview (CMD + P)
-// API Reference: https://www.framer.com/api
-
 type Props = FrameProps & {
 	value: number
 	duration: number
 	animate: boolean
+	countdown: boolean
 	onAnimationComplete: () => void
 }
 
 export function ProgressBar(props: Partial<Props>) {
-	const { value, duration, animate, ...rest } = props
+	const {
+		value,
+		duration,
+		animate,
+		countdown,
+		onAnimationComplete,
+		...rest
+	} = props
 
 	/* ---------------------------------- State --------------------------------- */
 
@@ -24,6 +29,12 @@ export function ProgressBar(props: Partial<Props>) {
 	React.useEffect(() => {
 		setState({ value })
 	}, [value])
+
+	/* ----------------------------- Event Handlers ----------------------------- */
+
+	const handleAnimationEnd = () => {
+		onAnimationComplete()
+	}
 
 	/* ------------------------------ Presentation ------------------------------ */
 
@@ -46,7 +57,7 @@ export function ProgressBar(props: Partial<Props>) {
 				}}
 				animate={
 					animate && {
-						width: '100%',
+						width: countdown ? '0%' : '100%',
 						transition: {
 							type: 'tween',
 							curve: 'linear',
@@ -54,7 +65,7 @@ export function ProgressBar(props: Partial<Props>) {
 						},
 					}
 				}
-				onAnimationComplete={props.onAnimationComplete}
+				onAnimationComplete={handleAnimationEnd}
 			/>
 		</Frame>
 	)
@@ -66,6 +77,7 @@ ProgressBar.defaultProps = {
 	value: 0.62,
 	duration: 1.5,
 	animate: false,
+	countdown: false,
 	onAnimationComplete: () => null,
 }
 
@@ -82,6 +94,12 @@ addPropertyControls(ProgressBar, {
 		type: ControlType.Boolean,
 		title: 'Animate',
 		defaultValue: false,
+	},
+	countdown: {
+		type: ControlType.Boolean,
+		title: 'Animate',
+		defaultValue: false,
+		hidden: ({ animate }) => !animate,
 	},
 	duration: {
 		type: ControlType.Number,

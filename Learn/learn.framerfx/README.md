@@ -2,7 +2,7 @@ Learn is a design system for Framer X.
 
 👉 [Explore the code!](https://github.com/framer/framer-education/tree/master/Learn/learn.framerfx)
 
-👉 [Read the docs!](https://github.com/framer/framer-education/wiki)
+👉 [Read the docs!](https://framer-learn-docs.netlify.com/)
 
 👉 [See example projects!](https://github.com/framer/framer-education/tree/master/Projects)
 
@@ -10,100 +10,21 @@ Learn is a design system for Framer X.
 
 ## Components
 
-The package currently includes:
+The package includes a number of code components that you can use on the canvas and in your code. To use the package's components in your code, import them from `"@framer/steveruizok.education/code"`.
 
-- Logo
-- Shared Colors
-- Modal
-- Text
-- Image
-- Icon
-- Favorite
-- Link
-- Switch
-- Button
-- Checkbox
-- Radio
-- CheckboxGroup
-- RadioGroup
-- Slider
-- Stepper
-- TextInput
-- RowItem
-- DatePicker
-- DatePickerModel
-- AlertModal
-- ProgressBar
-- Select
-- Segment
-- Tabs
-- Tab Bar
-- Navigation Bar
-- Card
-
-To use these components inside of your code components, import them from `"@framer/steveruizok.education/code"`.
-
-```jsx
-import * as React from "react"
-import { Frame } from "framer"
-import { Button, Icon } from "@framer/steveruizok.education/code”
-
-export function MyComponent (props) {
-  return (
-    <Frame size={“100%”}>
-      <Button text=“Click here!”/>
-      <Icon icon=“accessible”/>
-    </Frame>
-  }
-}
-```
+Learn more and see examples [here](https://framer-learn-docs.netlify.com/).
 
 ## Colors
 
-You can use the same import to pull the shared colors:
-
-```tsx
-import { Override } from “framer"
-import { colors } from "@framer/steveruizok.education/code”
-
-export function ColorOverride: Override () {
-  return {
-    color: colors.Primary
-  }
-}
-```
+You can use the same import to pull the shared colors. Learn more and see examples [here](https://framer-learn-docs.netlify.com/content/Colors/).
 
 ## Utils
 
-This package also includes several helper utilities.
-
-```tsx
-import * as React from "react"
-import { Stack, Frame } from "framer"
-import { range } from "@framer/steveruizok.education/code"
-
-export function MyComponent (props) {
-  return (
-    <Stack size={“100%”}>
-      { range(10).map(  i => <Frame/>{i}</Frame>) }
-    </Stack>
-  }
-}
-```
-
-Learn currently includes:
-
-- `range`
-- `rangeFrom`
-- `clamp`
-- `normalize`
-- `pull`
-- `pullAtIndex`
-- `sleep`
-- `isEmail`
+This package also includes several helper utilities. Learn more and see examples [here](https://framer-learn-docs.netlify.com/content/Utils/).
 
 # Changelog
 
+- Adds link to new docs, adds TabIndex to TextInput, updates Props and exports.
 - Fixes text resize on canvas
 - Restores index, renames and adds Stack to blank Template
 - Adds Modal, AlertModal

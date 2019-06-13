@@ -1,7 +1,7 @@
 // ---------------------- Helper Utilities -----------------------
 
 export function isEqual(valueA: any, valueB: any) {
-    return JSON.stringify(valueA) === JSON.stringify(valueB)
+	return JSON.stringify(valueA) === JSON.stringify(valueB)
 }
 
 // Array
@@ -14,15 +14,15 @@ export function isEqual(valueA: any, valueB: any) {
  * - `step` - The difference between each number. Default is `1`.
  * 
  * ```
- const valueA = range(0, 3) // [0, 1, 2, 3]
- const valueB = clamp(0, 6, 3) // [0, 3, 6]
- const valueC = clamp(0, 1, .5) // [0, .5, 1]
+ const valueA = rangeFrom(0, 3) // [0, 1, 2, 3]
+ const valueB = rangeFrom(0, 6, 3) // [0, 3, 6]
+ const valueC = rangeFrom(0, 1, .5) // [0, .5, 1]
  ```
 */
 export const rangeFrom = (start: number, end: number, step = 1) => {
-    return Array.from({
-        length: Math.ceil((end - start + step) / step),
-    }).map((v, i, arr) => i * step - start)
+	return Array.from({
+		length: Math.ceil((end - start + step) / step),
+	}).map((v, i, arr) => i * step - start)
 }
 
 /**
@@ -37,7 +37,7 @@ export const rangeFrom = (start: number, end: number, step = 1) => {
  ```
 */
 export function range(length: number) {
-    return rangeFrom(0, length - 1, 1)
+	return rangeFrom(0, length - 1, 1)
 }
 
 /**
@@ -47,15 +47,15 @@ export function range(length: number) {
  * - `length` - The length of each chunk.
  * 
  * ```
- const valueA = range(1) // [0]
- const valueB = range(3) // [0, 1, 2]
- const valueC = range(5) // [0, 1, 2, 3, 4]
+ const valueA = chunk([0, 1, 2, 3], 2) // [[0, 1], [2, 3]]
+ const valueB = chunk([0, 1, 2, 3], 3) // [[0, 1, 2], [3]]
+ const valueC = chunk([0, 1, 2, 3], 4) // [[0, 1, 2, 3]]
  ```
 */
 export function chunk(array: any[], length: number) {
-    return Array.from({ length: Math.ceil(array.length / length) }, (v, i) =>
-        array.slice(i * length, i * length + length)
-    )
+	return Array.from({ length: Math.ceil(array.length / length) }, (v, i) =>
+		array.slice(i * length, i * length + length)
+	)
 }
 
 // Numbers
@@ -74,7 +74,7 @@ export function chunk(array: any[], length: number) {
  ```
 */
 export function clamp(value: number, min: number, max: number) {
-    return Math.max(Math.min(value, Math.max(min, max)), Math.min(min, max))
+	return Math.max(Math.min(value, Math.max(min, max)), Math.min(min, max))
 }
 
 const clampAlias = clamp // to avoid naming conflicts
@@ -95,13 +95,13 @@ const clampAlias = clamp // to avoid naming conflicts
  ```
 */
 export function normalize(
-    value: number,
-    min: number,
-    max: number,
-    clamp = true
+	value: number,
+	min: number,
+	max: number,
+	clamp = true
 ) {
-    const result = (value - min) / (max - min)
-    return clamp ? clampAlias(result, 0, 1) : result
+	const result = (value - min) / (max - min)
+	return clamp ? clampAlias(result, 0, 1) : result
 }
 
 /** 
@@ -111,16 +111,17 @@ export function normalize(
  * - `values` - One or more values to remove.
  * 
  * ```
- const valueA = pull(["a", "b", "c"], "a") // ["b", "c"]
- const valueA = pull(["a", "b", "c"], "a", "b") // ["c"]
+  const valueA = pull(['a', 'b', 'c'], 'a') // ["b", "c"]
+  const valueB = pull(['a', 'b', 'c'], 'a', 'b') // ["c"]
+  const valueC = pull(['a', 'b', 'c'], 'a', 'b', 'c') // []
  ```
 */
 export function pull(array: any[], ...values) {
-    let argState = Array.isArray(values[0]) ? values[0] : values
-    let pulled = array.filter((v, i) => !argState.includes(v))
-    array.length = 0
-    pulled.forEach(v => array.push(v))
-    return pulled
+	let argState = Array.isArray(values[0]) ? values[0] : values
+	let pulled = array.filter((v, i) => !argState.includes(v))
+	array.length = 0
+	pulled.forEach((v) => array.push(v))
+	return pulled
 }
 
 /** 
@@ -135,15 +136,15 @@ export function pull(array: any[], ...values) {
  ```
 */
 export function pullAtIndex(array: any[], ...indexes) {
-    // If we've been given an array instead of an argument list, use the array
-    let argState = Array.isArray(indexes[0]) ? indexes[0] : indexes
-    let removed = []
-    let pulled = array
-        .map((v, i) => (argState.includes(i) ? removed.push(v) : v))
-        .filter((v, i) => !argState.includes(i))
-    array.length = 0
-    pulled.forEach(v => array.push(v))
-    return removed
+	// If we've been given an array instead of an argument list, use the array
+	let argState = Array.isArray(indexes[0]) ? indexes[0] : indexes
+	let removed = []
+	let pulled = array
+		.map((v, i) => (argState.includes(i) ? removed.push(v) : v))
+		.filter((v, i) => !argState.includes(i))
+	array.length = 0
+	pulled.forEach((v) => array.push(v))
+	return removed
 }
 
 /**
@@ -162,9 +163,9 @@ export function pullAtIndex(array: any[], ...indexes) {
  ```
 */
 export function sleep(duration: number) {
-    return new Promise(resolve => {
-        setTimeout(resolve, duration * 1000)
-    })
+	return new Promise((resolve) => {
+		setTimeout(resolve, duration * 1000)
+	})
 }
 
 /**
@@ -177,7 +178,7 @@ export function sleep(duration: number) {
  ```
  */
 export function isEmail(text: string) {
-    return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
-        text
-    )
+	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+		text
+	)
 }
