@@ -1,301 +1,363 @@
-import * as React from 'react'
+import * as React from "react"
 import {
-	Frame,
-	addPropertyControls,
-	ControlType,
-	useMotionValue,
-	useTransform,
-	FrameProps,
-} from 'framer'
-import { useInteractionState } from './Hooks'
-import { Text } from './Text'
-import { colors } from './canvas'
+    Frame,
+    motionValue,
+    useMotionValue,
+    MotionValue,
+    useTransform,
+    FrameProps,
+    addPropertyControls,
+    ControlType,
+} from "framer"
+import { useInteractionState } from "./Hooks"
+import { Text } from "./Text"
+import { colors } from "./canvas"
 
-let i = 0
+// This component will update much more often than other components,
+// so we've gone a little heavy on memoization!
 
-type Props = Partial<FrameProps> & {
-	width: number
-	min: number
-	max: number
-	value: number
-	disabled: boolean
-	step: number
-	titles: boolean
-	onDrag: any
-	onDragStart: any
-	onDragEnd: any
-	validation: (value: number, progress: number) => boolean
-	onValueChange: (value: number, progress: number, valid: boolean) => void
+type Props = FrameProps & {
+    value: number | MotionValue<number>
+    disabled: boolean
+    validation: (value: number, progress: number) => boolean
+    onValueChange: (value: number, progress: number, valid: boolean) => void
+    knobSize: number
+    railHeight: number
+    min: number
+    max: number
+    step: number
+    titles: boolean
+    places: number
+    onDrag: any
+    onDragStart: any
+    onDragEnd: any
 }
 
-const knobSize = 40,
-	railHeight = 8
-
 export function Slider(props: Partial<Props>) {
-	const {
-		value: initialValue,
-		min,
-		max,
-		step,
-		titles,
-		validation,
-		onValueChange,
-		onDragStart,
-		onDragEnd,
-		onDrag,
-		drag,
-		disabled,
-		style,
-		...rest
-	} = props
+    const {
+        step,
+        min,
+        max,
+        value: initialValue,
+        validation,
+        knobSize,
+        railHeight,
+        disabled,
+        onValueChange,
+        titles,
+        places,
+        onDrag,
+        onDragStart,
+        onDragEnd,
+        style,
+        ...rest
+    } = props
 
-	const railWidth = props.width - knobSize
+    // Whether the incoming value is a MotionValue or a number
+    const hasMotionValue = React.useMemo(
+        () => (initialValue as any).onChange !== undefined,
+        []
+    )
 
-	// Get number of decimal places to add to the title
-	let places
-	let stepString = JSON.stringify(step)
-	places = stepString.includes('.')
-		? Math.min(stepString.split('.')[1].length, 3)
-		: 0
+    // The number we can use as our initial value
+    const localInitialValue = React.useMemo(
+        () =>
+            hasMotionValue
+                ? (initialValue as MotionValue<number>).get()
+                : (initialValue as number),
+        []
+    )
 
-	/* ------------------------------ Motion Values ----------------------------- */
+    // The number we can use as our initial value
+    const localWidth = React.useMemo(
+        () =>
+            (props.width as any).onChange !== undefined
+                ? (props.width as MotionValue<number>).get()
+                : (props.width as number),
+        []
+    )
 
-	function toStep(number) {
-		return Math.round(number / step) * step
-	}
+    // The width of our slider's rail, based on our width and knobSize
+    const railWidth = React.useMemo(() => localWidth - knobSize, [
+        props.width,
+        knobSize,
+    ])
 
-	function toProgress(value: number) {
-		return (value - min) / (max - min)
-	}
+    // Turn a number into its closest multiple of our step prop.
+    const toStep = React.useCallback(
+        (value: number) => Math.round(value / step) * step,
+        [step]
+    )
 
-	const dragX = useMotionValue(toProgress(toStep(initialValue)) * railWidth)
+    // Turn a number into a normal value, using our min and max.
+    const toProgress = React.useCallback(
+        (value: number) => (value - min) / (max - min),
+        [min, max]
+    )
 
-	const knobX = useTransform(dragX, (v) =>
-		toProgress(toStep(min + (v / railWidth) * (max - min)) * railWidth)
-	)
+    /* ---------------------------------- State --------------------------------- */
 
-	/* ---------------------------------- State --------------------------------- */
+    // If the slider's value prop is a motion value, then
+    // set up a listener to update the slider's value
+    // when that MotionValue changes its value.
+    React.useEffect(() => {
+        if (hasMotionValue) {
+            const cancel = (initialValue as MotionValue<number>).onChange(
+                handleChange
+            )
+            return cancel // unsubscribe on unmount
+        }
+    }, [])
 
-	const initialValid = React.useRef(
-		validation(initialValue, toProgress(initialValue))
-	)
+    // If the slider's value prop is a regular number, then
+    // update the slider's value when that prop changes.
+    React.useEffect(() => {
+        if (!hasMotionValue) {
+            handleChange(initialValue)
+        }
+    }, [initialValue])
 
-	const isValid = React.useRef(initialValid.current)
-	const prevValue = React.useRef(initialValue)
+    // Create a ref to hold our currentValue.
+    const currentValue = React.useRef(toStep(localInitialValue))
 
-	const [state, setState] = React.useState({
-		valid: initialValid.current,
-		valueTitle: prevValue.current.toFixed(places),
-	})
+    // Create our state, holding: value, progress and valid
+    const [state, setState] = React.useState({
+        value: toStep(localInitialValue),
+        progress: toProgress(toStep(localInitialValue)),
+        valid: validation(
+            toStep(localInitialValue),
+            toProgress(toStep(localInitialValue))
+        ),
+    })
 
-	// When the hook receives new props values, overwrite the state
-	React.useEffect(() => {
-		dragX.set(toProgress(toStep(initialValue)) * railWidth)
-	}, [initialValue, min, max, validation])
+    // Get interaction state and props (event handlers)
+    const [interactionState, interactionProps] = useInteractionState({
+        disabled,
+        style,
+    })
 
-	const [interactionState, interactionProps] = useInteractionState({
-		disabled,
-		style,
-	})
-	/* ----------------------------- Event Handlers ----------------------------- */
+    /* ----------------------------- Event Handlers ----------------------------- */
 
-	knobX.onChange((v) => {
-		const value = toStep(min + (v / railWidth) * (max - min))
-		const progress = toProgress(value)
-		const valid = validation(value, progress)
+    // When we get a new value, check whether it is the same
+    // as the value that we already have. This prevents
+    // render loops and updating between steps.
+    const handleChange = React.useCallback(value => {
+        if (value !== currentValue.current) {
+            handleValueChange(value)
+        }
+    }, [])
 
-		// Motion Values change a lot, so we really really don't
-		// want to update state unless we absolutely have to
+    // When we receive a new incoming value (either from a
+    // new value prop or from a MotionValue change event),
+    // turn it into a stepped value and check against our
+    // current value. If it's different, update state, run
+    // our onValueChange callback, and update our motion
+    // value (if we have one).
+    const handleValueChange = React.useCallback(value => {
+        const steppedValue = toStep(value)
+        const steppedProgress = toProgress(steppedValue)
+        const steppedValid = validation(steppedValue, steppedProgress)
 
-		let validChange, valueChange
+        if (currentValue.current !== steppedValue) {
+            currentValue.current = steppedValue
 
-		// Check if valid has changed
-		if (valid !== isValid.current) {
-			isValid.current = valid
-			validChange = true
-		}
+            if (hasMotionValue) {
+                ;(initialValue as MotionValue<number>).set(steppedValue)
+            }
 
-		// If titles are on, check if value has changed
-		if (value !== prevValue.current) {
-			prevValue.current = value
-			valueChange = true
+            onValueChange(steppedValue, steppedProgress, steppedValid)
 
-			// Call onValueChanged, too
-			if (!props.disabled) {
-				onValueChange(value, progress, valid)
-			}
-		}
+            setState(state => ({
+                value: steppedValue,
+                progress: steppedProgress,
+                valid: steppedValid,
+            }))
+        }
+    }, [])
 
-		// Update state if valid has changed, or if titles are on and value has changed
-		if (validChange || (titles && valueChange)) {
-			setState({
-				valid: isValid.current,
-				valueTitle: prevValue.current.toFixed(places),
-			})
-		}
-	})
+    // As the user drags the knob, attempt to update state.
+    const handleDrag = React.useCallback((event, info) => {
+        onDrag && onDrag(event, info)
+        const progress = info.point.x / railWidth
+        const value = progress * (max - min)
 
-	/* ------------------------------ Presentation ------------------------------ */
+        handleChange(value)
+    }, [])
 
-	const variants = {
-		initial: {
-			border: `1px solid ${colors.Neutral}`,
-		},
-		hovered: {
-			border: `1px solid ${colors.Border}`,
-		},
-		active: {
-			border: `1px solid ${colors.Active}`,
-		},
-		warn: {
-			border: `1px solid ${colors.Warn}`,
-		},
-	}
+    /* ------------------------------ Presentation ------------------------------ */
 
-	return (
-		<Frame
-			// Constants
-			{...rest}
-			{...interactionProps}
-			height={40}
-			background="none"
-		>
-			<Frame
-				height={railHeight}
-				borderRadius={railHeight / 2}
-				center="y"
-				width={railWidth}
-				left={knobSize / 2}
-				background={colors.Neutral}
-				border={`${state.valid ? 0 : 1}px solid ${colors.Warn}`}
-			/>
-			<Frame
-				height={railHeight}
-				borderRadius={4}
-				background={colors.Primary}
-				center="y"
-				width={knobX}
-				left={knobSize / 2}
-			/>
-			{titles && (
-				<>
-					<Text
-						text={min.toString()}
-						width={knobSize}
-						y={16}
-						height="100%"
-						type={'caption'}
-						textAlign="center"
-						verticalAlign="bottom"
-					/>
-					<Text
-						text={max.toString()}
-						width={knobSize}
-						y={16}
-						x={railWidth}
-						height="100%"
-						type={'caption'}
-						textAlign="center"
-						verticalAlign="bottom"
-					/>
-				</>
-			)}
-			<Frame size={knobSize} x={knobX} center="y" background="none">
-				<Frame
-					background={colors.Light}
-					height={knobSize - 4}
-					width={knobSize - 4}
-					borderRadius="100%"
-					shadow={`0px 2px 5px ${colors.Shadow}`}
-					center
-					{...variants[state.valid ? interactionState : 'warn']}
-				/>
-				{titles && (
-					<Text
-						text={state.valueTitle}
-						y={-16}
-						center="x"
-						type={'caption'}
-						height={12}
-						textAlign="center"
-						verticalAlign="bottom"
-					/>
-				)}
-			</Frame>
-			<Frame
-				size={knobSize}
-				center="y"
-				background="none"
-				x={dragX}
-				drag={props.disabled ? false : 'x'}
-				dragMomentum={false}
-				dragElastic={false}
-				dragConstraints={{
-					left: 0,
-					right: props.width - knobSize,
-				}}
-				onDrag={onDrag}
-				onDragStart={onDragStart}
-				onDragEnd={onDragEnd}
-			/>
-		</Frame>
-	)
+    const variants = React.useMemo(
+        () => ({
+            initial: {
+                border: `1px solid ${colors.Neutral}`,
+            },
+            hovered: {
+                border: `1px solid ${colors.Border}`,
+            },
+            active: {
+                border: `1px solid ${colors.Active}`,
+            },
+            warn: {
+                border: `1px solid ${colors.Warn}`,
+            },
+        }),
+        []
+    )
+
+    const minText = React.useMemo(() => min.toString(), [min])
+
+    const maxText = React.useMemo(() => max.toString(), [max])
+
+    return (
+        <Frame
+            // Constants
+            {...rest}
+            {...interactionProps}
+            height={40}
+            background="none"
+        >
+            <Frame
+                height={railHeight}
+                borderRadius={railHeight / 2}
+                center="y"
+                width={railWidth}
+                left={knobSize / 2}
+                background={colors.Neutral}
+                border={`${state.valid ? 0 : 1}px solid ${colors.Warn}`}
+            />
+            <Frame
+                height={railHeight}
+                borderRadius={4}
+                background={colors.Primary}
+                center="y"
+                width={state.progress * railWidth}
+                left={knobSize / 2}
+            />
+            {titles && (
+                <>
+                    <Text
+                        text={minText}
+                        width={knobSize}
+                        y={16}
+                        height="100%"
+                        type={"caption"}
+                        textAlign="center"
+                        verticalAlign="bottom"
+                    />
+                    <Text
+                        text={maxText}
+                        width={knobSize}
+                        y={16}
+                        x={railWidth}
+                        height="100%"
+                        type={"caption"}
+                        textAlign="center"
+                        verticalAlign="bottom"
+                    />
+                </>
+            )}
+            <Frame
+                size={knobSize}
+                x={state.progress * railWidth}
+                center="y"
+                background="none"
+            >
+                <Frame
+                    background={colors.Light}
+                    height={knobSize - 4}
+                    width={knobSize - 4}
+                    borderRadius="100%"
+                    shadow={`0px 2px 5px ${colors.Shadow}`}
+                    center
+                    {...variants[state.valid ? interactionState : "warn"]}
+                />
+                {titles && (
+                    <Text
+                        text={state.value.toFixed(places)}
+                        y={-16}
+                        center="x"
+                        type={"caption"}
+                        height={12}
+                        textAlign="center"
+                        verticalAlign="bottom"
+                    />
+                )}
+            </Frame>
+            <Frame
+                size={knobSize}
+                center="y"
+                background="none"
+                x={state.progress * railWidth}
+                drag={disabled ? false : "x"}
+                dragMomentum={false}
+                dragElastic={false}
+                dragConstraints={{
+                    left: 0,
+                    right: localWidth - knobSize,
+                }}
+                onDrag={handleDrag}
+                onDragStart={onDragStart}
+                onDragEnd={onDragEnd}
+            />
+        </Frame>
+    )
 }
 
 Slider.defaultProps = {
-	center: true,
-	height: 40,
-	width: 320,
-	step: 0.01,
-	value: 62,
-	min: 0,
-	max: 100,
-	titles: false,
-	validation: (v) => true,
-	onValueChange: () => null,
+    center: true,
+    height: 40,
+    width: 320,
+    step: 0.01,
+    value: 62,
+    min: 0,
+    max: 100,
+    titles: false,
+    places: 2,
+    railHeight: 8,
+    knobSize: 40,
+    validation: v => true,
+    onValueChange: () => null,
 }
 
 addPropertyControls(Slider, {
-	value: {
-		type: ControlType.Number,
-		min: 0,
-		max: 100,
-		defaultValue: 62,
-		title: 'Value',
-	},
-	min: {
-		type: ControlType.Number,
-		min: 0,
-		max: 100,
-		defaultValue: 0,
-		title: 'Min',
-	},
-	max: {
-		type: ControlType.Number,
-		min: 0,
-		max: 100,
-		defaultValue: 100,
-		title: 'Max',
-	},
-	step: {
-		type: ControlType.Number,
-		min: 0.001,
-		max: 100,
-		step: 0.001,
-		defaultValue: 0.01,
-		displayStepper: true,
-		title: 'Step',
-	},
-	titles: {
-		type: ControlType.Boolean,
-		defaultValue: false,
-		title: 'Titles',
-	},
-	disabled: {
-		type: ControlType.Boolean,
-		defaultValue: false,
-		title: 'Disabled',
-	},
+    value: {
+        type: ControlType.Number,
+        min: 0,
+        max: 100,
+        defaultValue: 62,
+        title: "Value",
+    },
+    min: {
+        type: ControlType.Number,
+        min: 0,
+        max: 100,
+        defaultValue: 0,
+        title: "Min",
+    },
+    max: {
+        type: ControlType.Number,
+        min: 0,
+        max: 100,
+        defaultValue: 100,
+        title: "Max",
+    },
+    step: {
+        type: ControlType.Number,
+        min: 0.001,
+        max: 100,
+        step: 0.001,
+        defaultValue: 0.01,
+        displayStepper: true,
+        title: "Step",
+    },
+    titles: {
+        type: ControlType.Boolean,
+        defaultValue: false,
+        title: "Titles",
+    },
+    disabled: {
+        type: ControlType.Boolean,
+        defaultValue: false,
+        title: "Disabled",
+    },
 })
-
-// helpers

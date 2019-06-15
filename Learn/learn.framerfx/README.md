@@ -24,6 +24,7 @@ This package also includes several helper utilities. Learn more and see examples
 
 # Changelog
 
+- Rewrites Slider
 - Adds link to new docs, adds TabIndex to TextInput, updates Props and exports.
 - Fixes text resize on canvas
 - Restores index, renames and adds Stack to blank Template
