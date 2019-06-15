@@ -1,0 +1,19 @@
+{
+	"main": "dist/index.js",
+	"license": "MIT",
+	"devDependencies": {
+		"@framer/framer.device-skin-apple-iphone-xs-spacegrey": "^1.0.0",
+		"@types/react": "^16.8"
+	},
+	"peerDependencies": {
+		"framer": "^1.0",
+		"react": "^16.8"
+	},
+	"framer": {
+		"id": "fedb2796-ece9-4904-a8bf-e1a658d0de1b"
+	},
+	"author": "Steve Ruiz",
+	"dependencies": {
+		"@framer/steveruizok.education": "^1.126.0"
+	}
+}

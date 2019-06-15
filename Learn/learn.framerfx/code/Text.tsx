@@ -75,7 +75,7 @@ export function Text(props: Partial<Props>) {
     React.useLayoutEffect(() => {
         mvWidth.set(size || width)
         mvHeight.set(size || height)
-    }, [text, type, resize, height, width, pc_resizeDirection])
+    }, [text, type, resize, size, height, width, pc_resizeDirection])
 
     React.useEffect(() => {
         if (!resizeRef.current) return
@@ -112,7 +112,7 @@ export function Text(props: Partial<Props>) {
         } else {
             mvHeight.set(ohC)
         }
-    }, [text, type, resize, height, width, pc_resizeDirection])
+    }, [text, type, resize, size, height, width, pc_resizeDirection])
 
     /* ------------------------------ Presentation ------------------------------ */
 

@@ -186,27 +186,20 @@ export function Slider(props: Partial<Props>) {
 
     /* ------------------------------ Presentation ------------------------------ */
 
-    const variants = React.useMemo(
-        () => ({
-            initial: {
-                border: `1px solid ${colors.Neutral}`,
-            },
-            hovered: {
-                border: `1px solid ${colors.Border}`,
-            },
-            active: {
-                border: `1px solid ${colors.Active}`,
-            },
-            warn: {
-                border: `1px solid ${colors.Warn}`,
-            },
-        }),
-        []
-    )
-
-    const minText = React.useMemo(() => min.toString(), [min])
-
-    const maxText = React.useMemo(() => max.toString(), [max])
+    const variants = {
+        initial: {
+            border: `1px solid ${colors.Neutral}`,
+        },
+        hovered: {
+            border: `1px solid ${colors.Border}`,
+        },
+        active: {
+            border: `1px solid ${colors.Active}`,
+        },
+        warn: {
+            border: `1px solid ${colors.Warn}`,
+        },
+    }
 
     return (
         <Frame
@@ -236,7 +229,7 @@ export function Slider(props: Partial<Props>) {
             {titles && (
                 <>
                     <Text
-                        text={minText}
+                        text={min.toString()}
                         width={knobSize}
                         y={16}
                         height="100%"
@@ -245,7 +238,7 @@ export function Slider(props: Partial<Props>) {
                         verticalAlign="bottom"
                     />
                     <Text
-                        text={maxText}
+                        text={max.toString()}
                         width={knobSize}
                         y={16}
                         x={railWidth}

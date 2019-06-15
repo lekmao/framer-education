@@ -68,9 +68,30 @@ export function RadioGroup(): Override {
         validation: v => v === "Red",
     }
 }
+
 export function Slider(): Override {
     return {
         validation: v => v > 20,
         // onValueChange: (a, b, c) => console.log(a, b, c),
+    }
+}
+
+export function ChipList(): Override {
+    return {
+        chips: [
+            {
+                text: "Item A",
+                type: "primary",
+            },
+            {
+                text: "Item B",
+                type: "secondary",
+            },
+            {
+                text: "Item C",
+                type: "accent",
+                clearable: true,
+            },
+        ],
     }
 }

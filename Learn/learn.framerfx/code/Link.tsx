@@ -85,13 +85,11 @@ export function Link(props: Partial<Props>) {
 Link.defaultProps = {
     height: 60,
     width: 200,
-    disabled: false,
+    type: "primary",
     text: "Get Started!",
     icon: "none",
-    type: "primary",
-    color: "red",
-    primary: true,
     background: "none",
+    disabled: false,
     resize: false,
     onTap: () => null,
     onResize: (width, height) => null,
@@ -99,11 +97,12 @@ Link.defaultProps = {
 
 addPropertyControls(Link, {
     text: {
-        type: ControlType.String,
         title: "Text",
+        type: ControlType.String,
         defaultValue: "Get Started!",
     },
     type: {
+        title: "Type",
         type: ControlType.Enum,
         options: ["primary", "secondary", "accent", "warn", "neutral", "ghost"],
         optionTitles: [
@@ -124,8 +123,8 @@ addPropertyControls(Link, {
         defaultValue: "none",
     },
     disabled: {
-        type: ControlType.Boolean,
         title: "Disabled",
+        type: ControlType.Boolean,
         defaultValue: false,
     },
 })
