@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Stack, addPropertyControls, ControlType, FrameProps } from "framer"
 import { iconNames, iconTitles } from "./Shared"
+import { url } from "framer/resource"
 //@ts-ignore
 import * as Icons from "./icons.json"
 import { colors } from "./canvas"
@@ -13,6 +14,21 @@ type Props = Partial<FrameProps> & {
 
 export function Icon(props: Props) {
     const { icon, color, size, ...rest } = props
+
+    // const [icons, setIcons] = React.useState({})
+
+    // React.useEffect(() => {
+    //     loadIcons()
+    // }, [])
+
+    // const loadIcons = async () => {
+    //     const response = await fetch(`${url()}/code/icons.json`)
+    //     const data = await response.json()
+
+    //     setIcons({
+    //         ...data,
+    //     })
+    // }
 
     /* ------------------------------ Presentation ------------------------------ */
 

@@ -24,6 +24,8 @@ This package also includes several helper utilities. Learn more and see examples
 
 # Changelog
 
+- Adds ItemList, CardList
+- Fixes clearable TextInput
 - Rewrites Slider
 - Adds link to new docs, adds TabIndex to TextInput, updates Props and exports.
 - Fixes text resize on canvas

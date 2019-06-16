@@ -129,9 +129,7 @@ export function TextInput(props: Partial<Props>) {
 
     // Clear input
     const handleClear = event => {
-        if (readOnly) return
-
-        setState({ ...state, value: undefined })
+        updateState("")
     }
 
     /* ------------------------------ Presentation ------------------------------ */
@@ -203,6 +201,7 @@ export function TextInput(props: Partial<Props>) {
                             width={40}
                             right={0}
                             top={0}
+                            onTap={handleClear}
                         >
                             <Frame
                                 center

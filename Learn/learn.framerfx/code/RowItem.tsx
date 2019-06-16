@@ -63,17 +63,31 @@ export function RowItem(props: Partial<Props>) {
                 : pc_boolean_value
             : overrideValue
 
-    const inputProps = { disabled, validation, onValueChange }
-
-    const stepperProps = { ...inputProps, clamp, min, max, step }
-
-    const components = {
-        icon: <Icon icon={icon} color={color} />,
-        switch: <Switch {...inputProps} value={computedValue as boolean} />,
-        checkbox: <Checkbox {...inputProps} value={computedValue as boolean} />,
-        radio: <Radio {...inputProps} value={computedValue as boolean} />,
-        stepper: <Stepper {...stepperProps} value={computedValue as number} />,
+    const inputProps = {
+        disabled,
+        validation,
+        onValueChange,
+        value: computedValue as boolean,
     }
+
+    const stepperProps = {
+        ...inputProps,
+        clamp,
+        min,
+        max,
+        step,
+        value: computedValue as number,
+    }
+
+    const components = React.useMemo(() => {
+        return {
+            icon: <Icon icon={icon} color={color} />,
+            switch: <Switch {...inputProps} />,
+            checkbox: <Checkbox {...inputProps} />,
+            radio: <Radio {...inputProps} />,
+            stepper: <Stepper {...stepperProps} />,
+        }
+    }, [stepperProps, inputProps, computedValue])
 
     return (
         <Frame
