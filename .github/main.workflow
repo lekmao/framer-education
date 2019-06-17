@@ -24,5 +24,5 @@ action "Publish" {
 
 action "Only Learn" {
   uses = "wcchristian/gh-pattern-filter-action@master"
-  args = ".*learn\.framerfx.*"
+  args = "^Learn/.*"
 }
