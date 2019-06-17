@@ -24,5 +24,5 @@ action "Publish" {
 
 action "Only Learn" {
   uses = "groupninemedia/filter-git-diff@master"
-  args = "regex ^config"
+  args = "regex ^Learn/learn.framerfx"
 }
