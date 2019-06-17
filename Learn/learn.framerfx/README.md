@@ -24,6 +24,7 @@ This package also includes several helper utilities. Learn more and see examples
 
 # Changelog
 
+- Adds Framer Bridge integration
 - Adds ItemList, CardList
 - Fixes clearable TextInput
 - Rewrites Slider
