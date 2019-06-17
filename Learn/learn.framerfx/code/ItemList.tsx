@@ -7,7 +7,7 @@ type Item = {
     onTap: (item) => void
     component: string
     icon: string
-    value: string | boolean
+    value: number | boolean
     onValueChange: (value) => void
 }
 

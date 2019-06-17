@@ -1,10 +1,15 @@
 import * as React from "react"
 import { Override, Data } from "framer"
-import { defaultBreeds } from "./Data"
+import { cachedBreeds } from "./CachedData"
 // @ts-ignore
 import { pull, colors } from "@framer/steveruizok.education/code/"
 
-type Breed = { breed: string; subBreeds?: Breed[]; images?: string[] }
+type Breed = {
+    breed: string
+    subBreed?: string
+    subBreeds?: Breed[]
+    images?: string[]
+}
 
 const toStartCase = (string: string) => {
     return string[0].toUpperCase() + string.slice(1)
@@ -16,6 +21,7 @@ export const appState = Data({
     tabTitle: "Browse",
     currentTab: 0,
     currentPage: 0,
+    backAction: null as any,
     breeds: [] as Breed[],
     subBreeds: [] as Breed[],
     breed: {
@@ -23,16 +29,17 @@ export const appState = Data({
         subBreeds: [],
         images: [],
     } as Breed,
-    favorites: [] as Breed[],
-    backAction: null as any,
     query: "",
+    favorites: [] as Breed[],
 })
 
 // data
 
-const USE_API = false // turn to true to load live breed list on each update
+// Whether to load data from API (or use pre-cached data)
+const USE_API = false
 
-const setBreeds = async () => {
+// Get surface data for all breeds
+const fetchBreeds = async () => {
     // Get data from API
     const response = await fetch("https://dog.ceo/api/breeds/list/all")
 
@@ -54,7 +61,8 @@ const setBreeds = async () => {
     appState.breeds = breeds
 }
 
-const setBreed = async breed => {
+// Get deep data on a specific breed
+const fetchBreed = async breed => {
     const url = breed.subBreed
         ? `https://dog.ceo/api/breed/${breed.breed}/${breed.subBreed}/images`
         : `https://dog.ceo/api/breed/${breed.breed}/images`
@@ -76,9 +84,9 @@ const setBreed = async breed => {
 }
 
 if (USE_API) {
-    setBreeds()
+    fetchBreeds()
 } else {
-    appState.breeds = defaultBreeds
+    appState.breeds = cachedBreeds
 }
 
 // navigation
@@ -163,7 +171,7 @@ export function BreedsList(): Override {
                         appState.subBreeds = breed.subBreeds
                         showSubBreedsList()
                     } else {
-                        setBreed(breed)
+                        fetchBreed(breed)
                     }
                 },
             }
@@ -180,11 +188,11 @@ export function SubBreedsList(): Override {
     const items = React.useMemo(() => {
         return appState.subBreeds.map(breed => {
             return {
-                text: toStartCase(breed.breed),
+                text: toStartCase(breed.subBreed),
                 component: "icon",
                 icon: "chevron-right",
                 onTap: item => {
-                    setBreed(breed)
+                    fetchBreed(breed)
                 },
             }
         })
@@ -197,20 +205,13 @@ export function SubBreedsList(): Override {
 
 // Info on the selected breed
 export function BreedInfoCard(): Override {
-    const breedInfo = React.useMemo(() => {
-        return {
-            title: toStartCase(appState.breed.breed),
-            image: appState.breed.images[0],
-        }
-    }, [appState.breed])
+    const { breed, subBreed, images } = appState.breed
 
     return {
-        title: breedInfo.title,
-        image: breedInfo.image,
+        title: toStartCase(subBreed ? `${subBreed} ${breed}` : breed),
+        image: images[0],
         color: colors.Darker,
-        isFavorite: appState.favorites.find(
-            f => f.breed === appState.breed.breed
-        ),
+        isFavorite: appState.favorites.find(f => f.breed === breed),
         favorite: true,
         onFavoriteChange: isFavorite => {
             if (isFavorite) {
@@ -258,7 +259,7 @@ export function SearchResults(): Override {
                 component: "icon",
                 icon: "chevron-right",
                 onTap: item => {
-                    setBreed(breed)
+                    fetchBreed(breed)
                 },
             }
         })
@@ -275,7 +276,11 @@ export function FavoritesList(): Override {
     const items = React.useMemo(() => {
         return appState.favorites.map(breed => {
             return {
-                title: toStartCase(breed.breed),
+                title: toStartCase(
+                    breed.subBreed
+                        ? `${breed.subBreed} ${breed.breed}`
+                        : breed.breed
+                ),
                 body: null,
                 image: breed.images[0],
                 color: colors.Darker,

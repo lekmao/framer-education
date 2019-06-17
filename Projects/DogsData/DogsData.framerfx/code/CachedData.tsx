@@ -1,4 +1,4 @@
-export const defaultBreeds = [
+export const cachedBreeds = [
     { breed: "affenpinscher", subBreeds: [] },
     { breed: "african", subBreeds: [] },
     { breed: "airedale", subBreeds: [] },
