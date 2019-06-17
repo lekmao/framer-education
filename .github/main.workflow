@@ -10,6 +10,7 @@ action "Publish Filter" {
 }
 
 action "Build" {
+  needs = ["Only Learn"]
   uses = "framer/bridge@master"
   args = ["build", "Learn/learn.framerfx"]
 }
@@ -19,4 +20,9 @@ action "Publish" {
   args = ["publish", "Learn/learn.framerfx", "--yes", "--public"]
   needs = ["Build", "Publish Filter"]
   secrets = ["FRAMER_TOKEN"]
+}
+
+action "Only Learn" {
+  uses = "groupninemedia/filter-git-diff@master"
+  args = "regex ^Learn/learn\.framerfx"
 }
