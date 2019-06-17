@@ -1,16 +1,23 @@
 import * as React from "react"
-import { Frame, ScrollProps, Stack, Scroll } from "framer"
+import {
+    Frame,
+    ScrollProps,
+    Stack,
+    Scroll,
+    addPropertyControls,
+    ControlType,
+} from "framer"
 import { Card } from "./Card"
 import { Text } from "./Text"
 
 type Item = {
     text: string
     height: number
-    onTap: (item) => void
     component: string
     icon: string
     value: string
     emptyText: string
+    onTap: (item) => void
     onValueChange: (value) => void
 }
 
@@ -39,7 +46,11 @@ export function CardList(props) {
                 {props.items.length > 0 ? (
                     props.items.map((item, index) => {
                         return (
-                            <Card key={`item_${index}`} width="1fr" {...item} />
+                            <Card
+                                key={`item_${index}_${item.text}`}
+                                width="1fr"
+                                {...item}
+                            />
                         )
                     })
                 ) : (
@@ -61,3 +72,10 @@ CardList.defaultProps = {
     items: [],
     emptyText: "Nothing to see here.",
 }
+
+addPropertyControls(CardList, {
+    emptyText: {
+        type: ControlType.String,
+        defaultValue: "Nothing to see here.",
+    },
+})
