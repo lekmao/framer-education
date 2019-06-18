@@ -1,6 +1,6 @@
 workflow "Build and Publish" {
-  on = "push"
   resolves = "Publish"
+  on = "push"
 }
 
 action "Publish Filter" {
@@ -24,5 +24,5 @@ action "Publish" {
 
 action "Only Learn" {
   uses = "wcchristian/gh-pattern-filter-action@master"
-  args = "^Learn/.*"
+  args = "^TEMPORARY_BLOCK/Learn/.*"
 }
