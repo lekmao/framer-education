@@ -23,9 +23,10 @@ type Item = {
 
 type Props = Partial<ScrollProps> & {
     items: Item[]
+    emptyText: string
 }
 
-export function CardList(props) {
+export function CardList(props: Props) {
     const { items, emptyText, ...rest } = props
 
     const contentHeight = props.items.reduce(
