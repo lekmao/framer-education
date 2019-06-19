@@ -59,12 +59,6 @@ export function Stepper(props: Partial<Props>) {
 
     return (
         <Stack
-            height={"100%"}
-            direction="horizontal"
-            alignment="center"
-            gap={1}
-            borderRadius={12}
-            overflow="hidden"
             border={`1px solid ${
                 valid
                     ? disabled
@@ -80,6 +74,11 @@ export function Stepper(props: Partial<Props>) {
                     : colors.Warn
             }
             {...rest}
+            direction="horizontal"
+            alignment="center"
+            gap={1}
+            borderRadius={`8px 8px 8px 8px`}
+            overflow="hidden"
         >
             <Link
                 type={"ghost"}
