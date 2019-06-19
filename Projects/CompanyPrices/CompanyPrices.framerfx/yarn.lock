@@ -101,20 +101,10 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.2.tgz#63985d3d8b02530e0869962f4da09142ee8e200e"
   integrity sha512-n/VQ4mbfr81aqkx/XmVicOLjviMuy02eenSdJY33SVA7S2J42EU0P1H0mOogfYedb3wXA0d/LVtBrgTSm04WEA==
 
-"@framer/framer.device-skin-apple-iphone-xr-spacegrey@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.framer.com/@framer/framer.device-skin-apple-iphone-xr-spacegrey/-/@framer/framer.device-skin-apple-iphone-xr-spacegrey-1.0.0.tgz#8e138f2b08d622a1ac590ebbe355cce6e99814e3"
-  integrity sha512-UbnsXG9zTup+MD5s/N3ZNgDeNMfBFKBECmeZHnIhmkqOuXHF1aBkVN8M+eEg10Ad1Eoyvgx7mlPqi6FCNXA8eQ==
-
-"@framer/framer.device-skin-apple-iphone-xs-spacegrey@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.framer.com/@framer/framer.device-skin-apple-iphone-xs-spacegrey/-/@framer/framer.device-skin-apple-iphone-xs-spacegrey-1.0.0.tgz#d9f524f5a6a4afe8cb413c00f3f16fe4d52ee09e"
-  integrity sha512-BWmGnCvnPmYel3ytJ1eiNxugHTj3e7eiih8L1b3RZtB4ZjgF6HiCMp+nsB0wAOJrMS2sA+fEYMDzxqybX9Dukg==
-
-"@framer/steveruizok.education@^1.140.0":
-  version "1.140.0"
-  resolved "https://registry.framer.com/@framer/steveruizok.education/-/@framer/steveruizok.education-1.140.0.tgz#9e571f917abf277e5f96be7cc6927d00e0e43fa5"
-  integrity sha512-5WUz4FxMlxmy/g5uJHm0lJvSOg6yXoBAjtHlZ4uCTkuitXBS8D2t+9c43CW7tO4naFctBh5R37XC68tl/3IXdg==
+"@framer/steveruizok.education@^1.150.0":
+  version "1.150.0"
+  resolved "https://registry.framer.com/@framer/steveruizok.education/-/@framer/steveruizok.education-1.150.0.tgz#ada389fe50341e81fb7be5be67978b12d6d092ed"
+  integrity sha512-EXnOWnq7JQB7h1VdcgMUXho9exRpa/USW7gtOsFEUTy6bFSc82eAiicHwJsiFK2aCvZemSnJPeWayi/VytRsSA==
   dependencies:
     markdown-to-jsx "^6.10.2"
     react-select "^3.0.3"
@@ -253,11 +243,6 @@ find-root@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/find-root/-/find-root-1.1.0.tgz#abcfc8ba76f708c42a97b3d685b7e9450bfb9ce4"
   integrity sha512-NKfW6bec6GfKc0SGx1e07QZY9PE99u0Bft/0rzSD5k3sO/vwkVUpDUKVm5Gpp5Ue3YfShPFTX2070tDs5kB9Ng==
-
-framer@1.0.10:
-  version "1.0.10"
-  resolved "https://registry.yarnpkg.com/framer/-/framer-1.0.10.tgz#93be13022b4bcd61cf02855e5a81a44fc1a7b712"
-  integrity sha512-19BO5deKz7q1G+5GBmsgJi19Uvp3WjFEFGNCKLLR/T6scEqtgXuedZbRhUWeksdQNuBBOdn+wz4TpfkscQzXNQ==
 
 import-fresh@^2.0.0:
   version "2.0.0"
@@ -413,9 +398,9 @@ resolve-from@^3.0.0:
   integrity sha1-six699nWiBvItuZTM17rywoYh0g=
 
 resolve@^1.10.0:
-  version "1.11.1"
-  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.11.1.tgz#ea10d8110376982fef578df8fc30b9ac30a07a3e"
-  integrity sha512-vIpgF6wfuJOZI7KKKSP+HmiKggadPQAdsp5HiC1mvqnfp0gF1vdwgBWZIdrVft9pgqoMFQN+R7BSWZiBxx+BBw==
+  version "1.11.0"
+  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.11.0.tgz#4014870ba296176b86343d50b60f3b50609ce232"
+  integrity sha512-WL2pBDjqT6pGUNSUzMw00o4T7If+z4H2x3Gz893WoUQ5KW8Vr9txp00ykiP16VBaZF5+j/OcXJHZ9+PCvdiDKw==
   dependencies:
     path-parse "^1.0.6"
 

@@ -43,18 +43,38 @@
             "fillLinearGradient" : {
               "__class" : "LinearGradient",
               "alpha" : 1,
-              "angle" : 0,
-              "end" : "rgba(0,0,0,0)",
-              "start" : "black"
+              "angle" : 180,
+              "stops" : [
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 0,
+                  "value" : "rgba(0,0,0,0)"
+                },
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 1,
+                  "value" : "black"
+                }
+              ]
             },
             "fillRadialGradient" : {
               "__class" : "RadialGradient",
               "alpha" : 1,
               "centerAnchorX" : 0.5,
               "centerAnchorY" : 0.5,
-              "end" : "black",
               "heightFactor" : 0.5,
-              "start" : "rgba(0,0,0,0)",
+              "stops" : [
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 0,
+                  "value" : "rgba(0,0,0,0)"
+                },
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 1,
+                  "value" : "black"
+                }
+              ],
               "widthFactor" : 0.5
             },
             "fillType" : "color",
@@ -101,18 +121,38 @@
         "fillLinearGradient" : {
           "__class" : "LinearGradient",
           "alpha" : 1,
-          "angle" : 0,
-          "end" : "rgba(0,0,0,0)",
-          "start" : "black"
+          "angle" : 180,
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ]
         },
         "fillRadialGradient" : {
           "__class" : "RadialGradient",
           "alpha" : 1,
           "centerAnchorX" : 0.5,
           "centerAnchorY" : 0.5,
-          "end" : "black",
           "heightFactor" : 0.5,
-          "start" : "rgba(0,0,0,0)",
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ],
           "widthFactor" : 0.5
         },
         "fillType" : "color",
@@ -198,18 +238,38 @@
             "fillLinearGradient" : {
               "__class" : "LinearGradient",
               "alpha" : 1,
-              "angle" : 0,
-              "end" : "rgba(0,0,0,0)",
-              "start" : "black"
+              "angle" : 180,
+              "stops" : [
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 0,
+                  "value" : "rgba(0,0,0,0)"
+                },
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 1,
+                  "value" : "black"
+                }
+              ]
             },
             "fillRadialGradient" : {
               "__class" : "RadialGradient",
               "alpha" : 1,
               "centerAnchorX" : 0.5,
               "centerAnchorY" : 0.5,
-              "end" : "black",
               "heightFactor" : 0.5,
-              "start" : "rgba(0,0,0,0)",
+              "stops" : [
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 0,
+                  "value" : "rgba(0,0,0,0)"
+                },
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 1,
+                  "value" : "black"
+                }
+              ],
               "widthFactor" : 0.5
             },
             "fillType" : "color",
@@ -271,18 +331,38 @@
             "fillLinearGradient" : {
               "__class" : "LinearGradient",
               "alpha" : 1,
-              "angle" : 0,
-              "end" : "rgba(0,0,0,0)",
-              "start" : "black"
+              "angle" : 180,
+              "stops" : [
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 0,
+                  "value" : "rgba(0,0,0,0)"
+                },
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 1,
+                  "value" : "black"
+                }
+              ]
             },
             "fillRadialGradient" : {
               "__class" : "RadialGradient",
               "alpha" : 1,
               "centerAnchorX" : 0.5,
               "centerAnchorY" : 0.5,
-              "end" : "black",
               "heightFactor" : 0.5,
-              "start" : "rgba(0,0,0,0)",
+              "stops" : [
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 0,
+                  "value" : "rgba(0,0,0,0)"
+                },
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 1,
+                  "value" : "black"
+                }
+              ],
               "widthFactor" : 0.5
             },
             "fillType" : "color",
@@ -329,18 +409,38 @@
         "fillLinearGradient" : {
           "__class" : "LinearGradient",
           "alpha" : 1,
-          "angle" : 0,
-          "end" : "rgba(0,0,0,0)",
-          "start" : "black"
+          "angle" : 180,
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ]
         },
         "fillRadialGradient" : {
           "__class" : "RadialGradient",
           "alpha" : 1,
           "centerAnchorX" : 0.5,
           "centerAnchorY" : 0.5,
-          "end" : "black",
           "heightFactor" : 0.5,
-          "start" : "rgba(0,0,0,0)",
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ],
           "widthFactor" : 0.5
         },
         "fillType" : "color",
@@ -437,18 +537,38 @@
             "fillLinearGradient" : {
               "__class" : "LinearGradient",
               "alpha" : 1,
-              "angle" : 0,
-              "end" : "rgba(0,0,0,0)",
-              "start" : "black"
+              "angle" : 180,
+              "stops" : [
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 0,
+                  "value" : "rgba(0,0,0,0)"
+                },
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 1,
+                  "value" : "black"
+                }
+              ]
             },
             "fillRadialGradient" : {
               "__class" : "RadialGradient",
               "alpha" : 1,
               "centerAnchorX" : 0.5,
               "centerAnchorY" : 0.5,
-              "end" : "black",
               "heightFactor" : 0.5,
-              "start" : "rgba(0,0,0,0)",
+              "stops" : [
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 0,
+                  "value" : "rgba(0,0,0,0)"
+                },
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 1,
+                  "value" : "black"
+                }
+              ],
               "widthFactor" : 0.5
             },
             "fillType" : "color",
@@ -517,18 +637,38 @@
             "fillLinearGradient" : {
               "__class" : "LinearGradient",
               "alpha" : 1,
-              "angle" : 0,
-              "end" : "rgba(0,0,0,0)",
-              "start" : "black"
+              "angle" : 180,
+              "stops" : [
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 0,
+                  "value" : "rgba(0,0,0,0)"
+                },
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 1,
+                  "value" : "black"
+                }
+              ]
             },
             "fillRadialGradient" : {
               "__class" : "RadialGradient",
               "alpha" : 1,
               "centerAnchorX" : 0.5,
               "centerAnchorY" : 0.5,
-              "end" : "black",
               "heightFactor" : 0.5,
-              "start" : "rgba(0,0,0,0)",
+              "stops" : [
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 0,
+                  "value" : "rgba(0,0,0,0)"
+                },
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 1,
+                  "value" : "black"
+                }
+              ],
               "widthFactor" : 0.5
             },
             "fillType" : "color",
@@ -598,18 +738,38 @@
                 "fillLinearGradient" : {
                   "__class" : "LinearGradient",
                   "alpha" : 1,
-                  "angle" : 0,
-                  "end" : "rgba(0,0,0,0)",
-                  "start" : "black"
+                  "angle" : 180,
+                  "stops" : [
+                    {
+                      "__class" : "GradientColorStop",
+                      "position" : 0,
+                      "value" : "rgba(0,0,0,0)"
+                    },
+                    {
+                      "__class" : "GradientColorStop",
+                      "position" : 1,
+                      "value" : "black"
+                    }
+                  ]
                 },
                 "fillRadialGradient" : {
                   "__class" : "RadialGradient",
                   "alpha" : 1,
                   "centerAnchorX" : 0.5,
                   "centerAnchorY" : 0.5,
-                  "end" : "black",
                   "heightFactor" : 0.5,
-                  "start" : "rgba(0,0,0,0)",
+                  "stops" : [
+                    {
+                      "__class" : "GradientColorStop",
+                      "position" : 0,
+                      "value" : "rgba(0,0,0,0)"
+                    },
+                    {
+                      "__class" : "GradientColorStop",
+                      "position" : 1,
+                      "value" : "black"
+                    }
+                  ],
                   "widthFactor" : 0.5
                 },
                 "fillType" : "color",
@@ -664,18 +824,38 @@
             "fillLinearGradient" : {
               "__class" : "LinearGradient",
               "alpha" : 1,
-              "angle" : 0,
-              "end" : "rgba(0,0,0,0)",
-              "start" : "black"
+              "angle" : 180,
+              "stops" : [
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 0,
+                  "value" : "rgba(0,0,0,0)"
+                },
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 1,
+                  "value" : "black"
+                }
+              ]
             },
             "fillRadialGradient" : {
               "__class" : "RadialGradient",
               "alpha" : 1,
               "centerAnchorX" : 0.5,
               "centerAnchorY" : 0.5,
-              "end" : "black",
               "heightFactor" : 0.5,
-              "start" : "rgba(0,0,0,0)",
+              "stops" : [
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 0,
+                  "value" : "rgba(0,0,0,0)"
+                },
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 1,
+                  "value" : "black"
+                }
+              ],
               "widthFactor" : 0.5
             },
             "fillType" : "color",
@@ -771,18 +951,38 @@
                         "fillLinearGradient" : {
                           "__class" : "LinearGradient",
                           "alpha" : 1,
-                          "angle" : 0,
-                          "end" : "rgba(0,0,0,0)",
-                          "start" : "black"
+                          "angle" : 180,
+                          "stops" : [
+                            {
+                              "__class" : "GradientColorStop",
+                              "position" : 0,
+                              "value" : "rgba(0,0,0,0)"
+                            },
+                            {
+                              "__class" : "GradientColorStop",
+                              "position" : 1,
+                              "value" : "black"
+                            }
+                          ]
                         },
                         "fillRadialGradient" : {
                           "__class" : "RadialGradient",
                           "alpha" : 1,
                           "centerAnchorX" : 0.5,
                           "centerAnchorY" : 0.5,
-                          "end" : "black",
                           "heightFactor" : 0.5,
-                          "start" : "rgba(0,0,0,0)",
+                          "stops" : [
+                            {
+                              "__class" : "GradientColorStop",
+                              "position" : 0,
+                              "value" : "rgba(0,0,0,0)"
+                            },
+                            {
+                              "__class" : "GradientColorStop",
+                              "position" : 1,
+                              "value" : "black"
+                            }
+                          ],
                           "widthFactor" : 0.5
                         },
                         "fillType" : "color",
@@ -842,18 +1042,38 @@
                             "fillLinearGradient" : {
                               "__class" : "LinearGradient",
                               "alpha" : 1,
-                              "angle" : 0,
-                              "end" : "rgba(0,0,0,0)",
-                              "start" : "black"
+                              "angle" : 180,
+                              "stops" : [
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 0,
+                                  "value" : "rgba(0,0,0,0)"
+                                },
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 1,
+                                  "value" : "black"
+                                }
+                              ]
                             },
                             "fillRadialGradient" : {
                               "__class" : "RadialGradient",
                               "alpha" : 1,
                               "centerAnchorX" : 0.5,
                               "centerAnchorY" : 0.5,
-                              "end" : "black",
                               "heightFactor" : 0.5,
-                              "start" : "rgba(0,0,0,0)",
+                              "stops" : [
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 0,
+                                  "value" : "rgba(0,0,0,0)"
+                                },
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 1,
+                                  "value" : "black"
+                                }
+                              ],
                               "widthFactor" : 0.5
                             },
                             "fillType" : "color",
@@ -935,18 +1155,38 @@
                         "fillLinearGradient" : {
                           "__class" : "LinearGradient",
                           "alpha" : 1,
-                          "angle" : 0,
-                          "end" : "rgba(0,0,0,0)",
-                          "start" : "black"
+                          "angle" : 180,
+                          "stops" : [
+                            {
+                              "__class" : "GradientColorStop",
+                              "position" : 0,
+                              "value" : "rgba(0,0,0,0)"
+                            },
+                            {
+                              "__class" : "GradientColorStop",
+                              "position" : 1,
+                              "value" : "black"
+                            }
+                          ]
                         },
                         "fillRadialGradient" : {
                           "__class" : "RadialGradient",
                           "alpha" : 1,
                           "centerAnchorX" : 0.5,
                           "centerAnchorY" : 0.5,
-                          "end" : "black",
                           "heightFactor" : 0.5,
-                          "start" : "rgba(0,0,0,0)",
+                          "stops" : [
+                            {
+                              "__class" : "GradientColorStop",
+                              "position" : 0,
+                              "value" : "rgba(0,0,0,0)"
+                            },
+                            {
+                              "__class" : "GradientColorStop",
+                              "position" : 1,
+                              "value" : "black"
+                            }
+                          ],
                           "widthFactor" : 0.5
                         },
                         "fillType" : "color",
@@ -1005,18 +1245,38 @@
                         "fillLinearGradient" : {
                           "__class" : "LinearGradient",
                           "alpha" : 1,
-                          "angle" : 0,
-                          "end" : "rgba(0,0,0,0)",
-                          "start" : "black"
+                          "angle" : 180,
+                          "stops" : [
+                            {
+                              "__class" : "GradientColorStop",
+                              "position" : 0,
+                              "value" : "rgba(0,0,0,0)"
+                            },
+                            {
+                              "__class" : "GradientColorStop",
+                              "position" : 1,
+                              "value" : "black"
+                            }
+                          ]
                         },
                         "fillRadialGradient" : {
                           "__class" : "RadialGradient",
                           "alpha" : 1,
                           "centerAnchorX" : 0.5,
                           "centerAnchorY" : 0.5,
-                          "end" : "black",
                           "heightFactor" : 0.5,
-                          "start" : "rgba(0,0,0,0)",
+                          "stops" : [
+                            {
+                              "__class" : "GradientColorStop",
+                              "position" : 0,
+                              "value" : "rgba(0,0,0,0)"
+                            },
+                            {
+                              "__class" : "GradientColorStop",
+                              "position" : 1,
+                              "value" : "black"
+                            }
+                          ],
                           "widthFactor" : 0.5
                         },
                         "fillType" : "color",
@@ -1071,18 +1331,38 @@
                     "fillLinearGradient" : {
                       "__class" : "LinearGradient",
                       "alpha" : 1,
-                      "angle" : 0,
-                      "end" : "rgba(0,0,0,0)",
-                      "start" : "black"
+                      "angle" : 180,
+                      "stops" : [
+                        {
+                          "__class" : "GradientColorStop",
+                          "position" : 0,
+                          "value" : "rgba(0,0,0,0)"
+                        },
+                        {
+                          "__class" : "GradientColorStop",
+                          "position" : 1,
+                          "value" : "black"
+                        }
+                      ]
                     },
                     "fillRadialGradient" : {
                       "__class" : "RadialGradient",
                       "alpha" : 1,
                       "centerAnchorX" : 0.5,
                       "centerAnchorY" : 0.5,
-                      "end" : "black",
                       "heightFactor" : 0.5,
-                      "start" : "rgba(0,0,0,0)",
+                      "stops" : [
+                        {
+                          "__class" : "GradientColorStop",
+                          "position" : 0,
+                          "value" : "rgba(0,0,0,0)"
+                        },
+                        {
+                          "__class" : "GradientColorStop",
+                          "position" : 1,
+                          "value" : "black"
+                        }
+                      ],
                       "widthFactor" : 0.5
                     },
                     "fillType" : "color",
@@ -1146,18 +1426,38 @@
                             "fillLinearGradient" : {
                               "__class" : "LinearGradient",
                               "alpha" : 1,
-                              "angle" : 0,
-                              "end" : "rgba(0,0,0,0)",
-                              "start" : "black"
+                              "angle" : 180,
+                              "stops" : [
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 0,
+                                  "value" : "rgba(0,0,0,0)"
+                                },
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 1,
+                                  "value" : "black"
+                                }
+                              ]
                             },
                             "fillRadialGradient" : {
                               "__class" : "RadialGradient",
                               "alpha" : 1,
                               "centerAnchorX" : 0.5,
                               "centerAnchorY" : 0.5,
-                              "end" : "black",
                               "heightFactor" : 0.5,
-                              "start" : "rgba(0,0,0,0)",
+                              "stops" : [
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 0,
+                                  "value" : "rgba(0,0,0,0)"
+                                },
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 1,
+                                  "value" : "black"
+                                }
+                              ],
                               "widthFactor" : 0.5
                             },
                             "fillType" : "color",
@@ -1326,18 +1626,38 @@
                             "fillLinearGradient" : {
                               "__class" : "LinearGradient",
                               "alpha" : 1,
-                              "angle" : 0,
-                              "end" : "rgba(0,0,0,0)",
-                              "start" : "black"
+                              "angle" : 180,
+                              "stops" : [
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 0,
+                                  "value" : "rgba(0,0,0,0)"
+                                },
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 1,
+                                  "value" : "black"
+                                }
+                              ]
                             },
                             "fillRadialGradient" : {
                               "__class" : "RadialGradient",
                               "alpha" : 1,
                               "centerAnchorX" : 0.5,
                               "centerAnchorY" : 0.5,
-                              "end" : "black",
                               "heightFactor" : 0.5,
-                              "start" : "rgba(0,0,0,0)",
+                              "stops" : [
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 0,
+                                  "value" : "rgba(0,0,0,0)"
+                                },
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 1,
+                                  "value" : "black"
+                                }
+                              ],
                               "widthFactor" : 0.5
                             },
                             "fillType" : "color",
@@ -1506,18 +1826,38 @@
                             "fillLinearGradient" : {
                               "__class" : "LinearGradient",
                               "alpha" : 1,
-                              "angle" : 0,
-                              "end" : "rgba(0,0,0,0)",
-                              "start" : "black"
+                              "angle" : 180,
+                              "stops" : [
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 0,
+                                  "value" : "rgba(0,0,0,0)"
+                                },
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 1,
+                                  "value" : "black"
+                                }
+                              ]
                             },
                             "fillRadialGradient" : {
                               "__class" : "RadialGradient",
                               "alpha" : 1,
                               "centerAnchorX" : 0.5,
                               "centerAnchorY" : 0.5,
-                              "end" : "black",
                               "heightFactor" : 0.5,
-                              "start" : "rgba(0,0,0,0)",
+                              "stops" : [
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 0,
+                                  "value" : "rgba(0,0,0,0)"
+                                },
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 1,
+                                  "value" : "black"
+                                }
+                              ],
                               "widthFactor" : 0.5
                             },
                             "fillType" : "color",
@@ -1651,18 +1991,38 @@
                         "fillLinearGradient" : {
                           "__class" : "LinearGradient",
                           "alpha" : 1,
-                          "angle" : 0,
-                          "end" : "rgba(0,0,0,0)",
-                          "start" : "black"
+                          "angle" : 180,
+                          "stops" : [
+                            {
+                              "__class" : "GradientColorStop",
+                              "position" : 0,
+                              "value" : "rgba(0,0,0,0)"
+                            },
+                            {
+                              "__class" : "GradientColorStop",
+                              "position" : 1,
+                              "value" : "black"
+                            }
+                          ]
                         },
                         "fillRadialGradient" : {
                           "__class" : "RadialGradient",
                           "alpha" : 1,
                           "centerAnchorX" : 0.5,
                           "centerAnchorY" : 0.5,
-                          "end" : "black",
                           "heightFactor" : 0.5,
-                          "start" : "rgba(0,0,0,0)",
+                          "stops" : [
+                            {
+                              "__class" : "GradientColorStop",
+                              "position" : 0,
+                              "value" : "rgba(0,0,0,0)"
+                            },
+                            {
+                              "__class" : "GradientColorStop",
+                              "position" : 1,
+                              "value" : "black"
+                            }
+                          ],
                           "widthFactor" : 0.5
                         },
                         "fillType" : "color",
@@ -1698,18 +2058,38 @@
                     "fillLinearGradient" : {
                       "__class" : "LinearGradient",
                       "alpha" : 1,
-                      "angle" : 0,
-                      "end" : "rgba(0,0,0,0)",
-                      "start" : "black"
+                      "angle" : 180,
+                      "stops" : [
+                        {
+                          "__class" : "GradientColorStop",
+                          "position" : 0,
+                          "value" : "rgba(0,0,0,0)"
+                        },
+                        {
+                          "__class" : "GradientColorStop",
+                          "position" : 1,
+                          "value" : "black"
+                        }
+                      ]
                     },
                     "fillRadialGradient" : {
                       "__class" : "RadialGradient",
                       "alpha" : 1,
                       "centerAnchorX" : 0.5,
                       "centerAnchorY" : 0.5,
-                      "end" : "black",
                       "heightFactor" : 0.5,
-                      "start" : "rgba(0,0,0,0)",
+                      "stops" : [
+                        {
+                          "__class" : "GradientColorStop",
+                          "position" : 0,
+                          "value" : "rgba(0,0,0,0)"
+                        },
+                        {
+                          "__class" : "GradientColorStop",
+                          "position" : 1,
+                          "value" : "black"
+                        }
+                      ],
                       "widthFactor" : 0.5
                     },
                     "fillType" : "color",
@@ -1767,18 +2147,38 @@
                             "fillLinearGradient" : {
                               "__class" : "LinearGradient",
                               "alpha" : 1,
-                              "angle" : 0,
-                              "end" : "rgba(0,0,0,0)",
-                              "start" : "black"
+                              "angle" : 180,
+                              "stops" : [
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 0,
+                                  "value" : "rgba(0,0,0,0)"
+                                },
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 1,
+                                  "value" : "black"
+                                }
+                              ]
                             },
                             "fillRadialGradient" : {
                               "__class" : "RadialGradient",
                               "alpha" : 1,
                               "centerAnchorX" : 0.5,
                               "centerAnchorY" : 0.5,
-                              "end" : "black",
                               "heightFactor" : 0.5,
-                              "start" : "rgba(0,0,0,0)",
+                              "stops" : [
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 0,
+                                  "value" : "rgba(0,0,0,0)"
+                                },
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 1,
+                                  "value" : "black"
+                                }
+                              ],
                               "widthFactor" : 0.5
                             },
                             "fillType" : "color",
@@ -1914,18 +2314,38 @@
                             "fillLinearGradient" : {
                               "__class" : "LinearGradient",
                               "alpha" : 1,
-                              "angle" : 0,
-                              "end" : "rgba(0,0,0,0)",
-                              "start" : "black"
+                              "angle" : 180,
+                              "stops" : [
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 0,
+                                  "value" : "rgba(0,0,0,0)"
+                                },
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 1,
+                                  "value" : "black"
+                                }
+                              ]
                             },
                             "fillRadialGradient" : {
                               "__class" : "RadialGradient",
                               "alpha" : 1,
                               "centerAnchorX" : 0.5,
                               "centerAnchorY" : 0.5,
-                              "end" : "black",
                               "heightFactor" : 0.5,
-                              "start" : "rgba(0,0,0,0)",
+                              "stops" : [
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 0,
+                                  "value" : "rgba(0,0,0,0)"
+                                },
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 1,
+                                  "value" : "black"
+                                }
+                              ],
                               "widthFactor" : 0.5
                             },
                             "fillType" : "color",
@@ -2050,18 +2470,38 @@
                             "fillLinearGradient" : {
                               "__class" : "LinearGradient",
                               "alpha" : 1,
-                              "angle" : 0,
-                              "end" : "rgba(0,0,0,0)",
-                              "start" : "black"
+                              "angle" : 180,
+                              "stops" : [
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 0,
+                                  "value" : "rgba(0,0,0,0)"
+                                },
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 1,
+                                  "value" : "black"
+                                }
+                              ]
                             },
                             "fillRadialGradient" : {
                               "__class" : "RadialGradient",
                               "alpha" : 1,
                               "centerAnchorX" : 0.5,
                               "centerAnchorY" : 0.5,
-                              "end" : "black",
                               "heightFactor" : 0.5,
-                              "start" : "rgba(0,0,0,0)",
+                              "stops" : [
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 0,
+                                  "value" : "rgba(0,0,0,0)"
+                                },
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 1,
+                                  "value" : "black"
+                                }
+                              ],
                               "widthFactor" : 0.5
                             },
                             "fillType" : "color",
@@ -2186,18 +2626,38 @@
                             "fillLinearGradient" : {
                               "__class" : "LinearGradient",
                               "alpha" : 1,
-                              "angle" : 0,
-                              "end" : "rgba(0,0,0,0)",
-                              "start" : "black"
+                              "angle" : 180,
+                              "stops" : [
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 0,
+                                  "value" : "rgba(0,0,0,0)"
+                                },
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 1,
+                                  "value" : "black"
+                                }
+                              ]
                             },
                             "fillRadialGradient" : {
                               "__class" : "RadialGradient",
                               "alpha" : 1,
                               "centerAnchorX" : 0.5,
                               "centerAnchorY" : 0.5,
-                              "end" : "black",
                               "heightFactor" : 0.5,
-                              "start" : "rgba(0,0,0,0)",
+                              "stops" : [
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 0,
+                                  "value" : "rgba(0,0,0,0)"
+                                },
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 1,
+                                  "value" : "black"
+                                }
+                              ],
                               "widthFactor" : 0.5
                             },
                             "fillType" : "color",
@@ -2331,18 +2791,38 @@
                         "fillLinearGradient" : {
                           "__class" : "LinearGradient",
                           "alpha" : 1,
-                          "angle" : 0,
-                          "end" : "rgba(0,0,0,0)",
-                          "start" : "black"
+                          "angle" : 180,
+                          "stops" : [
+                            {
+                              "__class" : "GradientColorStop",
+                              "position" : 0,
+                              "value" : "rgba(0,0,0,0)"
+                            },
+                            {
+                              "__class" : "GradientColorStop",
+                              "position" : 1,
+                              "value" : "black"
+                            }
+                          ]
                         },
                         "fillRadialGradient" : {
                           "__class" : "RadialGradient",
                           "alpha" : 1,
                           "centerAnchorX" : 0.5,
                           "centerAnchorY" : 0.5,
-                          "end" : "black",
                           "heightFactor" : 0.5,
-                          "start" : "rgba(0,0,0,0)",
+                          "stops" : [
+                            {
+                              "__class" : "GradientColorStop",
+                              "position" : 0,
+                              "value" : "rgba(0,0,0,0)"
+                            },
+                            {
+                              "__class" : "GradientColorStop",
+                              "position" : 1,
+                              "value" : "black"
+                            }
+                          ],
                           "widthFactor" : 0.5
                         },
                         "fillType" : "color",
@@ -2378,18 +2858,38 @@
                     "fillLinearGradient" : {
                       "__class" : "LinearGradient",
                       "alpha" : 1,
-                      "angle" : 0,
-                      "end" : "rgba(0,0,0,0)",
-                      "start" : "black"
+                      "angle" : 180,
+                      "stops" : [
+                        {
+                          "__class" : "GradientColorStop",
+                          "position" : 0,
+                          "value" : "rgba(0,0,0,0)"
+                        },
+                        {
+                          "__class" : "GradientColorStop",
+                          "position" : 1,
+                          "value" : "black"
+                        }
+                      ]
                     },
                     "fillRadialGradient" : {
                       "__class" : "RadialGradient",
                       "alpha" : 1,
                       "centerAnchorX" : 0.5,
                       "centerAnchorY" : 0.5,
-                      "end" : "black",
                       "heightFactor" : 0.5,
-                      "start" : "rgba(0,0,0,0)",
+                      "stops" : [
+                        {
+                          "__class" : "GradientColorStop",
+                          "position" : 0,
+                          "value" : "rgba(0,0,0,0)"
+                        },
+                        {
+                          "__class" : "GradientColorStop",
+                          "position" : 1,
+                          "value" : "black"
+                        }
+                      ],
                       "widthFactor" : 0.5
                     },
                     "fillType" : "color",
@@ -2438,18 +2938,38 @@
                 "fillLinearGradient" : {
                   "__class" : "LinearGradient",
                   "alpha" : 1,
-                  "angle" : 0,
-                  "end" : "rgba(0,0,0,0)",
-                  "start" : "black"
+                  "angle" : 180,
+                  "stops" : [
+                    {
+                      "__class" : "GradientColorStop",
+                      "position" : 0,
+                      "value" : "rgba(0,0,0,0)"
+                    },
+                    {
+                      "__class" : "GradientColorStop",
+                      "position" : 1,
+                      "value" : "black"
+                    }
+                  ]
                 },
                 "fillRadialGradient" : {
                   "__class" : "RadialGradient",
                   "alpha" : 1,
                   "centerAnchorX" : 0.5,
                   "centerAnchorY" : 0.5,
-                  "end" : "black",
                   "heightFactor" : 0.5,
-                  "start" : "rgba(0,0,0,0)",
+                  "stops" : [
+                    {
+                      "__class" : "GradientColorStop",
+                      "position" : 0,
+                      "value" : "rgba(0,0,0,0)"
+                    },
+                    {
+                      "__class" : "GradientColorStop",
+                      "position" : 1,
+                      "value" : "black"
+                    }
+                  ],
                   "widthFactor" : 0.5
                 },
                 "fillType" : "color",
@@ -2604,18 +3124,38 @@
                 "fillLinearGradient" : {
                   "__class" : "LinearGradient",
                   "alpha" : 1,
-                  "angle" : 0,
-                  "end" : "rgba(0,0,0,0)",
-                  "start" : "black"
+                  "angle" : 180,
+                  "stops" : [
+                    {
+                      "__class" : "GradientColorStop",
+                      "position" : 0,
+                      "value" : "rgba(0,0,0,0)"
+                    },
+                    {
+                      "__class" : "GradientColorStop",
+                      "position" : 1,
+                      "value" : "black"
+                    }
+                  ]
                 },
                 "fillRadialGradient" : {
                   "__class" : "RadialGradient",
                   "alpha" : 1,
                   "centerAnchorX" : 0.5,
                   "centerAnchorY" : 0.5,
-                  "end" : "black",
                   "heightFactor" : 0.5,
-                  "start" : "rgba(0,0,0,0)",
+                  "stops" : [
+                    {
+                      "__class" : "GradientColorStop",
+                      "position" : 0,
+                      "value" : "rgba(0,0,0,0)"
+                    },
+                    {
+                      "__class" : "GradientColorStop",
+                      "position" : 1,
+                      "value" : "black"
+                    }
+                  ],
                   "widthFactor" : 0.5
                 },
                 "fillType" : "color",
@@ -2670,18 +3210,38 @@
             "fillLinearGradient" : {
               "__class" : "LinearGradient",
               "alpha" : 1,
-              "angle" : 0,
-              "end" : "rgba(0,0,0,0)",
-              "start" : "black"
+              "angle" : 180,
+              "stops" : [
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 0,
+                  "value" : "rgba(0,0,0,0)"
+                },
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 1,
+                  "value" : "black"
+                }
+              ]
             },
             "fillRadialGradient" : {
               "__class" : "RadialGradient",
               "alpha" : 1,
               "centerAnchorX" : 0.5,
               "centerAnchorY" : 0.5,
-              "end" : "black",
               "heightFactor" : 0.5,
-              "start" : "rgba(0,0,0,0)",
+              "stops" : [
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 0,
+                  "value" : "rgba(0,0,0,0)"
+                },
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 1,
+                  "value" : "black"
+                }
+              ],
               "widthFactor" : 0.5
             },
             "fillType" : "color",
@@ -2779,18 +3339,38 @@
             "fillLinearGradient" : {
               "__class" : "LinearGradient",
               "alpha" : 1,
-              "angle" : 0,
-              "end" : "rgba(0,0,0,0)",
-              "start" : "black"
+              "angle" : 180,
+              "stops" : [
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 0,
+                  "value" : "rgba(0,0,0,0)"
+                },
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 1,
+                  "value" : "black"
+                }
+              ]
             },
             "fillRadialGradient" : {
               "__class" : "RadialGradient",
               "alpha" : 1,
               "centerAnchorX" : 0.5,
               "centerAnchorY" : 0.5,
-              "end" : "black",
               "heightFactor" : 0.5,
-              "start" : "rgba(0,0,0,0)",
+              "stops" : [
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 0,
+                  "value" : "rgba(0,0,0,0)"
+                },
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 1,
+                  "value" : "black"
+                }
+              ],
               "widthFactor" : 0.5
             },
             "fillType" : "color",
@@ -2837,18 +3417,38 @@
         "fillLinearGradient" : {
           "__class" : "LinearGradient",
           "alpha" : 1,
-          "angle" : 0,
-          "end" : "rgba(0,0,0,0)",
-          "start" : "black"
+          "angle" : 180,
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ]
         },
         "fillRadialGradient" : {
           "__class" : "RadialGradient",
           "alpha" : 1,
           "centerAnchorX" : 0.5,
           "centerAnchorY" : 0.5,
-          "end" : "black",
           "heightFactor" : 0.5,
-          "start" : "rgba(0,0,0,0)",
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ],
           "widthFactor" : 0.5
         },
         "fillType" : "color",
@@ -2943,18 +3543,38 @@
             "fillLinearGradient" : {
               "__class" : "LinearGradient",
               "alpha" : 1,
-              "angle" : 0,
-              "end" : "rgba(0,0,0,0)",
-              "start" : "black"
+              "angle" : 180,
+              "stops" : [
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 0,
+                  "value" : "rgba(0,0,0,0)"
+                },
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 1,
+                  "value" : "black"
+                }
+              ]
             },
             "fillRadialGradient" : {
               "__class" : "RadialGradient",
               "alpha" : 1,
               "centerAnchorX" : 0.5,
               "centerAnchorY" : 0.5,
-              "end" : "black",
               "heightFactor" : 0.5,
-              "start" : "rgba(0,0,0,0)",
+              "stops" : [
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 0,
+                  "value" : "rgba(0,0,0,0)"
+                },
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 1,
+                  "value" : "black"
+                }
+              ],
               "widthFactor" : 0.5
             },
             "fillType" : "color",
@@ -3001,18 +3621,38 @@
         "fillLinearGradient" : {
           "__class" : "LinearGradient",
           "alpha" : 1,
-          "angle" : 0,
-          "end" : "rgba(0,0,0,0)",
-          "start" : "black"
+          "angle" : 180,
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ]
         },
         "fillRadialGradient" : {
           "__class" : "RadialGradient",
           "alpha" : 1,
           "centerAnchorX" : 0.5,
           "centerAnchorY" : 0.5,
-          "end" : "black",
           "heightFactor" : 0.5,
-          "start" : "rgba(0,0,0,0)",
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ],
           "widthFactor" : 0.5
         },
         "fillType" : "color",
@@ -3091,18 +3731,38 @@
             "fillLinearGradient" : {
               "__class" : "LinearGradient",
               "alpha" : 1,
-              "angle" : 0,
-              "end" : "rgba(0,0,0,0)",
-              "start" : "black"
+              "angle" : 180,
+              "stops" : [
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 0,
+                  "value" : "rgba(0,0,0,0)"
+                },
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 1,
+                  "value" : "black"
+                }
+              ]
             },
             "fillRadialGradient" : {
               "__class" : "RadialGradient",
               "alpha" : 1,
               "centerAnchorX" : 0.5,
               "centerAnchorY" : 0.5,
-              "end" : "black",
               "heightFactor" : 0.5,
-              "start" : "rgba(0,0,0,0)",
+              "stops" : [
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 0,
+                  "value" : "rgba(0,0,0,0)"
+                },
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 1,
+                  "value" : "black"
+                }
+              ],
               "widthFactor" : 0.5
             },
             "fillType" : "color",
@@ -3149,18 +3809,38 @@
         "fillLinearGradient" : {
           "__class" : "LinearGradient",
           "alpha" : 1,
-          "angle" : 0,
-          "end" : "rgba(0,0,0,0)",
-          "start" : "black"
+          "angle" : 180,
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ]
         },
         "fillRadialGradient" : {
           "__class" : "RadialGradient",
           "alpha" : 1,
           "centerAnchorX" : 0.5,
           "centerAnchorY" : 0.5,
-          "end" : "black",
           "heightFactor" : 0.5,
-          "start" : "rgba(0,0,0,0)",
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ],
           "widthFactor" : 0.5
         },
         "fillType" : "color",
@@ -3258,18 +3938,38 @@
         "fillLinearGradient" : {
           "__class" : "LinearGradient",
           "alpha" : 1,
-          "angle" : 0,
-          "end" : "rgba(0,0,0,0)",
-          "start" : "black"
+          "angle" : 180,
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ]
         },
         "fillRadialGradient" : {
           "__class" : "RadialGradient",
           "alpha" : 1,
           "centerAnchorX" : 0.5,
           "centerAnchorY" : 0.5,
-          "end" : "black",
           "heightFactor" : 0.5,
-          "start" : "rgba(0,0,0,0)",
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ],
           "widthFactor" : 0.5
         },
         "fillType" : "color",
@@ -3354,18 +4054,38 @@
         "fillLinearGradient" : {
           "__class" : "LinearGradient",
           "alpha" : 1,
-          "angle" : 0,
-          "end" : "rgba(0,0,0,0)",
-          "start" : "black"
+          "angle" : 180,
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ]
         },
         "fillRadialGradient" : {
           "__class" : "RadialGradient",
           "alpha" : 1,
           "centerAnchorX" : 0.5,
           "centerAnchorY" : 0.5,
-          "end" : "black",
           "heightFactor" : 0.5,
-          "start" : "rgba(0,0,0,0)",
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ],
           "widthFactor" : 0.5
         },
         "fillType" : "color",
@@ -3416,7 +4136,7 @@
             "clip" : true,
             "codeComponentIdentifier" : "@framer\/steveruizok.education\/.\/CardList.tsx_CardList",
             "codeComponentProps" : {
-
+              "emptyText" : "Nothing to see here."
             },
             "codeOverrideEnabled" : true,
             "codeOverrideFile" : ".\/App1.tsx",
@@ -3436,18 +4156,38 @@
             "fillLinearGradient" : {
               "__class" : "LinearGradient",
               "alpha" : 1,
-              "angle" : 0,
-              "end" : "rgba(0,0,0,0)",
-              "start" : "black"
+              "angle" : 180,
+              "stops" : [
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 0,
+                  "value" : "rgba(0,0,0,0)"
+                },
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 1,
+                  "value" : "black"
+                }
+              ]
             },
             "fillRadialGradient" : {
               "__class" : "RadialGradient",
               "alpha" : 1,
               "centerAnchorX" : 0.5,
               "centerAnchorY" : 0.5,
-              "end" : "black",
               "heightFactor" : 0.5,
-              "start" : "rgba(0,0,0,0)",
+              "stops" : [
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 0,
+                  "value" : "rgba(0,0,0,0)"
+                },
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 1,
+                  "value" : "black"
+                }
+              ],
               "widthFactor" : 0.5
             },
             "fillType" : "color",
@@ -3494,18 +4234,38 @@
         "fillLinearGradient" : {
           "__class" : "LinearGradient",
           "alpha" : 1,
-          "angle" : 0,
-          "end" : "rgba(0,0,0,0)",
-          "start" : "black"
+          "angle" : 180,
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ]
         },
         "fillRadialGradient" : {
           "__class" : "RadialGradient",
           "alpha" : 1,
           "centerAnchorX" : 0.5,
           "centerAnchorY" : 0.5,
-          "end" : "black",
           "heightFactor" : 0.5,
-          "start" : "rgba(0,0,0,0)",
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ],
           "widthFactor" : 0.5
         },
         "fillType" : "color",
@@ -3580,18 +4340,38 @@
         "fillLinearGradient" : {
           "__class" : "LinearGradient",
           "alpha" : 1,
-          "angle" : 0,
-          "end" : "rgba(0,0,0,0)",
-          "start" : "black"
+          "angle" : 180,
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ]
         },
         "fillRadialGradient" : {
           "__class" : "RadialGradient",
           "alpha" : 1,
           "centerAnchorX" : 0.5,
           "centerAnchorY" : 0.5,
-          "end" : "black",
           "heightFactor" : 0.5,
-          "start" : "rgba(0,0,0,0)",
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ],
           "widthFactor" : 0.5
         },
         "fillType" : "color",
@@ -3658,18 +4438,38 @@
         "fillLinearGradient" : {
           "__class" : "LinearGradient",
           "alpha" : 1,
-          "angle" : 0,
-          "end" : "rgba(0,0,0,0)",
-          "start" : "black"
+          "angle" : 180,
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ]
         },
         "fillRadialGradient" : {
           "__class" : "RadialGradient",
           "alpha" : 1,
           "centerAnchorX" : 0.5,
           "centerAnchorY" : 0.5,
-          "end" : "black",
           "heightFactor" : 0.5,
-          "start" : "rgba(0,0,0,0)",
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ],
           "widthFactor" : 0.5
         },
         "fillType" : "color",
@@ -3736,18 +4536,38 @@
         "fillLinearGradient" : {
           "__class" : "LinearGradient",
           "alpha" : 1,
-          "angle" : 0,
-          "end" : "rgba(0,0,0,0)",
-          "start" : "black"
+          "angle" : 180,
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ]
         },
         "fillRadialGradient" : {
           "__class" : "RadialGradient",
           "alpha" : 1,
           "centerAnchorX" : 0.5,
           "centerAnchorY" : 0.5,
-          "end" : "black",
           "heightFactor" : 0.5,
-          "start" : "rgba(0,0,0,0)",
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ],
           "widthFactor" : 0.5
         },
         "fillType" : "color",
@@ -3814,18 +4634,38 @@
         "fillLinearGradient" : {
           "__class" : "LinearGradient",
           "alpha" : 1,
-          "angle" : 0,
-          "end" : "rgba(0,0,0,0)",
-          "start" : "black"
+          "angle" : 180,
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ]
         },
         "fillRadialGradient" : {
           "__class" : "RadialGradient",
           "alpha" : 1,
           "centerAnchorX" : 0.5,
           "centerAnchorY" : 0.5,
-          "end" : "black",
           "heightFactor" : 0.5,
-          "start" : "rgba(0,0,0,0)",
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ],
           "widthFactor" : 0.5
         },
         "fillType" : "color",
@@ -3892,18 +4732,38 @@
         "fillLinearGradient" : {
           "__class" : "LinearGradient",
           "alpha" : 1,
-          "angle" : 0,
-          "end" : "rgba(0,0,0,0)",
-          "start" : "black"
+          "angle" : 180,
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ]
         },
         "fillRadialGradient" : {
           "__class" : "RadialGradient",
           "alpha" : 1,
           "centerAnchorX" : 0.5,
           "centerAnchorY" : 0.5,
-          "end" : "black",
           "heightFactor" : 0.5,
-          "start" : "rgba(0,0,0,0)",
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ],
           "widthFactor" : 0.5
         },
         "fillType" : "color",
@@ -3970,18 +4830,38 @@
         "fillLinearGradient" : {
           "__class" : "LinearGradient",
           "alpha" : 1,
-          "angle" : 0,
-          "end" : "rgba(0,0,0,0)",
-          "start" : "black"
+          "angle" : 180,
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ]
         },
         "fillRadialGradient" : {
           "__class" : "RadialGradient",
           "alpha" : 1,
           "centerAnchorX" : 0.5,
           "centerAnchorY" : 0.5,
-          "end" : "black",
           "heightFactor" : 0.5,
-          "start" : "rgba(0,0,0,0)",
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ],
           "widthFactor" : 0.5
         },
         "fillType" : "color",
@@ -4048,18 +4928,38 @@
         "fillLinearGradient" : {
           "__class" : "LinearGradient",
           "alpha" : 1,
-          "angle" : 0,
-          "end" : "rgba(0,0,0,0)",
-          "start" : "black"
+          "angle" : 180,
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ]
         },
         "fillRadialGradient" : {
           "__class" : "RadialGradient",
           "alpha" : 1,
           "centerAnchorX" : 0.5,
           "centerAnchorY" : 0.5,
-          "end" : "black",
           "heightFactor" : 0.5,
-          "start" : "rgba(0,0,0,0)",
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ],
           "widthFactor" : 0.5
         },
         "fillType" : "color",
@@ -4126,18 +5026,38 @@
         "fillLinearGradient" : {
           "__class" : "LinearGradient",
           "alpha" : 1,
-          "angle" : 0,
-          "end" : "rgba(0,0,0,0)",
-          "start" : "black"
+          "angle" : 180,
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ]
         },
         "fillRadialGradient" : {
           "__class" : "RadialGradient",
           "alpha" : 1,
           "centerAnchorX" : 0.5,
           "centerAnchorY" : 0.5,
-          "end" : "black",
           "heightFactor" : 0.5,
-          "start" : "rgba(0,0,0,0)",
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ],
           "widthFactor" : 0.5
         },
         "fillType" : "color",
@@ -4223,18 +5143,38 @@
             "fillLinearGradient" : {
               "__class" : "LinearGradient",
               "alpha" : 1,
-              "angle" : 0,
-              "end" : "rgba(0,0,0,0)",
-              "start" : "black"
+              "angle" : 180,
+              "stops" : [
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 0,
+                  "value" : "rgba(0,0,0,0)"
+                },
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 1,
+                  "value" : "black"
+                }
+              ]
             },
             "fillRadialGradient" : {
               "__class" : "RadialGradient",
               "alpha" : 1,
               "centerAnchorX" : 0.5,
               "centerAnchorY" : 0.5,
-              "end" : "black",
               "heightFactor" : 0.5,
-              "start" : "rgba(0,0,0,0)",
+              "stops" : [
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 0,
+                  "value" : "rgba(0,0,0,0)"
+                },
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 1,
+                  "value" : "black"
+                }
+              ],
               "widthFactor" : 0.5
             },
             "fillType" : "color",
@@ -4277,7 +5217,7 @@
             "codeComponentIdentifier" : "@framer\/steveruizok.education\/.\/NavigationBar.tsx_NavigationBar",
             "codeComponentProps" : {
               "large" : false,
-              "leftIcon" : "chevron_left",
+              "leftIcon" : "chevron-left",
               "leftLink" : "Back",
               "rightIcon" : "none",
               "rightLink" : "",
@@ -4299,18 +5239,38 @@
             "fillLinearGradient" : {
               "__class" : "LinearGradient",
               "alpha" : 1,
-              "angle" : 0,
-              "end" : "rgba(0,0,0,0)",
-              "start" : "black"
+              "angle" : 180,
+              "stops" : [
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 0,
+                  "value" : "rgba(0,0,0,0)"
+                },
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 1,
+                  "value" : "black"
+                }
+              ]
             },
             "fillRadialGradient" : {
               "__class" : "RadialGradient",
               "alpha" : 1,
               "centerAnchorX" : 0.5,
               "centerAnchorY" : 0.5,
-              "end" : "black",
               "heightFactor" : 0.5,
-              "start" : "rgba(0,0,0,0)",
+              "stops" : [
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 0,
+                  "value" : "rgba(0,0,0,0)"
+                },
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 1,
+                  "value" : "black"
+                }
+              ],
               "widthFactor" : 0.5
             },
             "fillType" : "color",
@@ -4379,18 +5339,38 @@
                 "fillLinearGradient" : {
                   "__class" : "LinearGradient",
                   "alpha" : 1,
-                  "angle" : 0,
-                  "end" : "rgba(0,0,0,0)",
-                  "start" : "black"
+                  "angle" : 180,
+                  "stops" : [
+                    {
+                      "__class" : "GradientColorStop",
+                      "position" : 0,
+                      "value" : "rgba(0,0,0,0)"
+                    },
+                    {
+                      "__class" : "GradientColorStop",
+                      "position" : 1,
+                      "value" : "black"
+                    }
+                  ]
                 },
                 "fillRadialGradient" : {
                   "__class" : "RadialGradient",
                   "alpha" : 1,
                   "centerAnchorX" : 0.5,
                   "centerAnchorY" : 0.5,
-                  "end" : "black",
                   "heightFactor" : 0.5,
-                  "start" : "rgba(0,0,0,0)",
+                  "stops" : [
+                    {
+                      "__class" : "GradientColorStop",
+                      "position" : 0,
+                      "value" : "rgba(0,0,0,0)"
+                    },
+                    {
+                      "__class" : "GradientColorStop",
+                      "position" : 1,
+                      "value" : "black"
+                    }
+                  ],
                   "widthFactor" : 0.5
                 },
                 "fillType" : "color",
@@ -4445,18 +5425,38 @@
             "fillLinearGradient" : {
               "__class" : "LinearGradient",
               "alpha" : 1,
-              "angle" : 0,
-              "end" : "rgba(0,0,0,0)",
-              "start" : "black"
+              "angle" : 180,
+              "stops" : [
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 0,
+                  "value" : "rgba(0,0,0,0)"
+                },
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 1,
+                  "value" : "black"
+                }
+              ]
             },
             "fillRadialGradient" : {
               "__class" : "RadialGradient",
               "alpha" : 1,
               "centerAnchorX" : 0.5,
               "centerAnchorY" : 0.5,
-              "end" : "black",
               "heightFactor" : 0.5,
-              "start" : "rgba(0,0,0,0)",
+              "stops" : [
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 0,
+                  "value" : "rgba(0,0,0,0)"
+                },
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 1,
+                  "value" : "black"
+                }
+              ],
               "widthFactor" : 0.5
             },
             "fillType" : "color",
@@ -4552,18 +5552,38 @@
                         "fillLinearGradient" : {
                           "__class" : "LinearGradient",
                           "alpha" : 1,
-                          "angle" : 0,
-                          "end" : "rgba(0,0,0,0)",
-                          "start" : "black"
+                          "angle" : 180,
+                          "stops" : [
+                            {
+                              "__class" : "GradientColorStop",
+                              "position" : 0,
+                              "value" : "rgba(0,0,0,0)"
+                            },
+                            {
+                              "__class" : "GradientColorStop",
+                              "position" : 1,
+                              "value" : "black"
+                            }
+                          ]
                         },
                         "fillRadialGradient" : {
                           "__class" : "RadialGradient",
                           "alpha" : 1,
                           "centerAnchorX" : 0.5,
                           "centerAnchorY" : 0.5,
-                          "end" : "black",
                           "heightFactor" : 0.5,
-                          "start" : "rgba(0,0,0,0)",
+                          "stops" : [
+                            {
+                              "__class" : "GradientColorStop",
+                              "position" : 0,
+                              "value" : "rgba(0,0,0,0)"
+                            },
+                            {
+                              "__class" : "GradientColorStop",
+                              "position" : 1,
+                              "value" : "black"
+                            }
+                          ],
                           "widthFactor" : 0.5
                         },
                         "fillType" : "color",
@@ -4623,18 +5643,38 @@
                             "fillLinearGradient" : {
                               "__class" : "LinearGradient",
                               "alpha" : 1,
-                              "angle" : 0,
-                              "end" : "rgba(0,0,0,0)",
-                              "start" : "black"
+                              "angle" : 180,
+                              "stops" : [
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 0,
+                                  "value" : "rgba(0,0,0,0)"
+                                },
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 1,
+                                  "value" : "black"
+                                }
+                              ]
                             },
                             "fillRadialGradient" : {
                               "__class" : "RadialGradient",
                               "alpha" : 1,
                               "centerAnchorX" : 0.5,
                               "centerAnchorY" : 0.5,
-                              "end" : "black",
                               "heightFactor" : 0.5,
-                              "start" : "rgba(0,0,0,0)",
+                              "stops" : [
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 0,
+                                  "value" : "rgba(0,0,0,0)"
+                                },
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 1,
+                                  "value" : "black"
+                                }
+                              ],
                               "widthFactor" : 0.5
                             },
                             "fillType" : "color",
@@ -4716,18 +5756,38 @@
                         "fillLinearGradient" : {
                           "__class" : "LinearGradient",
                           "alpha" : 1,
-                          "angle" : 0,
-                          "end" : "rgba(0,0,0,0)",
-                          "start" : "black"
+                          "angle" : 180,
+                          "stops" : [
+                            {
+                              "__class" : "GradientColorStop",
+                              "position" : 0,
+                              "value" : "rgba(0,0,0,0)"
+                            },
+                            {
+                              "__class" : "GradientColorStop",
+                              "position" : 1,
+                              "value" : "black"
+                            }
+                          ]
                         },
                         "fillRadialGradient" : {
                           "__class" : "RadialGradient",
                           "alpha" : 1,
                           "centerAnchorX" : 0.5,
                           "centerAnchorY" : 0.5,
-                          "end" : "black",
                           "heightFactor" : 0.5,
-                          "start" : "rgba(0,0,0,0)",
+                          "stops" : [
+                            {
+                              "__class" : "GradientColorStop",
+                              "position" : 0,
+                              "value" : "rgba(0,0,0,0)"
+                            },
+                            {
+                              "__class" : "GradientColorStop",
+                              "position" : 1,
+                              "value" : "black"
+                            }
+                          ],
                           "widthFactor" : 0.5
                         },
                         "fillType" : "color",
@@ -4786,18 +5846,38 @@
                         "fillLinearGradient" : {
                           "__class" : "LinearGradient",
                           "alpha" : 1,
-                          "angle" : 0,
-                          "end" : "rgba(0,0,0,0)",
-                          "start" : "black"
+                          "angle" : 180,
+                          "stops" : [
+                            {
+                              "__class" : "GradientColorStop",
+                              "position" : 0,
+                              "value" : "rgba(0,0,0,0)"
+                            },
+                            {
+                              "__class" : "GradientColorStop",
+                              "position" : 1,
+                              "value" : "black"
+                            }
+                          ]
                         },
                         "fillRadialGradient" : {
                           "__class" : "RadialGradient",
                           "alpha" : 1,
                           "centerAnchorX" : 0.5,
                           "centerAnchorY" : 0.5,
-                          "end" : "black",
                           "heightFactor" : 0.5,
-                          "start" : "rgba(0,0,0,0)",
+                          "stops" : [
+                            {
+                              "__class" : "GradientColorStop",
+                              "position" : 0,
+                              "value" : "rgba(0,0,0,0)"
+                            },
+                            {
+                              "__class" : "GradientColorStop",
+                              "position" : 1,
+                              "value" : "black"
+                            }
+                          ],
                           "widthFactor" : 0.5
                         },
                         "fillType" : "color",
@@ -4852,18 +5932,38 @@
                     "fillLinearGradient" : {
                       "__class" : "LinearGradient",
                       "alpha" : 1,
-                      "angle" : 0,
-                      "end" : "rgba(0,0,0,0)",
-                      "start" : "black"
+                      "angle" : 180,
+                      "stops" : [
+                        {
+                          "__class" : "GradientColorStop",
+                          "position" : 0,
+                          "value" : "rgba(0,0,0,0)"
+                        },
+                        {
+                          "__class" : "GradientColorStop",
+                          "position" : 1,
+                          "value" : "black"
+                        }
+                      ]
                     },
                     "fillRadialGradient" : {
                       "__class" : "RadialGradient",
                       "alpha" : 1,
                       "centerAnchorX" : 0.5,
                       "centerAnchorY" : 0.5,
-                      "end" : "black",
                       "heightFactor" : 0.5,
-                      "start" : "rgba(0,0,0,0)",
+                      "stops" : [
+                        {
+                          "__class" : "GradientColorStop",
+                          "position" : 0,
+                          "value" : "rgba(0,0,0,0)"
+                        },
+                        {
+                          "__class" : "GradientColorStop",
+                          "position" : 1,
+                          "value" : "black"
+                        }
+                      ],
                       "widthFactor" : 0.5
                     },
                     "fillType" : "color",
@@ -4927,18 +6027,38 @@
                             "fillLinearGradient" : {
                               "__class" : "LinearGradient",
                               "alpha" : 1,
-                              "angle" : 0,
-                              "end" : "rgba(0,0,0,0)",
-                              "start" : "black"
+                              "angle" : 180,
+                              "stops" : [
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 0,
+                                  "value" : "rgba(0,0,0,0)"
+                                },
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 1,
+                                  "value" : "black"
+                                }
+                              ]
                             },
                             "fillRadialGradient" : {
                               "__class" : "RadialGradient",
                               "alpha" : 1,
                               "centerAnchorX" : 0.5,
                               "centerAnchorY" : 0.5,
-                              "end" : "black",
                               "heightFactor" : 0.5,
-                              "start" : "rgba(0,0,0,0)",
+                              "stops" : [
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 0,
+                                  "value" : "rgba(0,0,0,0)"
+                                },
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 1,
+                                  "value" : "black"
+                                }
+                              ],
                               "widthFactor" : 0.5
                             },
                             "fillType" : "color",
@@ -5089,8 +6209,8 @@
                             "strokeEnabled" : 0,
                             "visible" : true,
                             "width" : 15.333299999999999,
-                            "x" : 9.2674602678032047e-17,
-                            "y" : -0.021105366641330003
+                            "x" : 9.26754298586446e-17,
+                            "y" : -0.021105366641330059
                           },
                           {
                             "__class" : "PathNode",
@@ -5107,18 +6227,38 @@
                             "fillLinearGradient" : {
                               "__class" : "LinearGradient",
                               "alpha" : 1,
-                              "angle" : 0,
-                              "end" : "rgba(0,0,0,0)",
-                              "start" : "black"
+                              "angle" : 180,
+                              "stops" : [
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 0,
+                                  "value" : "rgba(0,0,0,0)"
+                                },
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 1,
+                                  "value" : "black"
+                                }
+                              ]
                             },
                             "fillRadialGradient" : {
                               "__class" : "RadialGradient",
                               "alpha" : 1,
                               "centerAnchorX" : 0.5,
                               "centerAnchorY" : 0.5,
-                              "end" : "black",
                               "heightFactor" : 0.5,
-                              "start" : "rgba(0,0,0,0)",
+                              "stops" : [
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 0,
+                                  "value" : "rgba(0,0,0,0)"
+                                },
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 1,
+                                  "value" : "black"
+                                }
+                              ],
                               "widthFactor" : 0.5
                             },
                             "fillType" : "color",
@@ -5287,18 +6427,38 @@
                             "fillLinearGradient" : {
                               "__class" : "LinearGradient",
                               "alpha" : 1,
-                              "angle" : 0,
-                              "end" : "rgba(0,0,0,0)",
-                              "start" : "black"
+                              "angle" : 180,
+                              "stops" : [
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 0,
+                                  "value" : "rgba(0,0,0,0)"
+                                },
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 1,
+                                  "value" : "black"
+                                }
+                              ]
                             },
                             "fillRadialGradient" : {
                               "__class" : "RadialGradient",
                               "alpha" : 1,
                               "centerAnchorX" : 0.5,
                               "centerAnchorY" : 0.5,
-                              "end" : "black",
                               "heightFactor" : 0.5,
-                              "start" : "rgba(0,0,0,0)",
+                              "stops" : [
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 0,
+                                  "value" : "rgba(0,0,0,0)"
+                                },
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 1,
+                                  "value" : "black"
+                                }
+                              ],
                               "widthFactor" : 0.5
                             },
                             "fillType" : "color",
@@ -5432,18 +6592,38 @@
                         "fillLinearGradient" : {
                           "__class" : "LinearGradient",
                           "alpha" : 1,
-                          "angle" : 0,
-                          "end" : "rgba(0,0,0,0)",
-                          "start" : "black"
+                          "angle" : 180,
+                          "stops" : [
+                            {
+                              "__class" : "GradientColorStop",
+                              "position" : 0,
+                              "value" : "rgba(0,0,0,0)"
+                            },
+                            {
+                              "__class" : "GradientColorStop",
+                              "position" : 1,
+                              "value" : "black"
+                            }
+                          ]
                         },
                         "fillRadialGradient" : {
                           "__class" : "RadialGradient",
                           "alpha" : 1,
                           "centerAnchorX" : 0.5,
                           "centerAnchorY" : 0.5,
-                          "end" : "black",
                           "heightFactor" : 0.5,
-                          "start" : "rgba(0,0,0,0)",
+                          "stops" : [
+                            {
+                              "__class" : "GradientColorStop",
+                              "position" : 0,
+                              "value" : "rgba(0,0,0,0)"
+                            },
+                            {
+                              "__class" : "GradientColorStop",
+                              "position" : 1,
+                              "value" : "black"
+                            }
+                          ],
                           "widthFactor" : 0.5
                         },
                         "fillType" : "color",
@@ -5460,8 +6640,8 @@
                         "strokeEnabled" : 0,
                         "visible" : true,
                         "width" : 15.333299999999998,
-                        "x" : 6.217235888299533e-15,
-                        "y" : 0.35177807067383582
+                        "x" : 6.2172342339383079e-15,
+                        "y" : 0.35177807067383593
                       }
                     ],
                     "constraintsLocked" : true,
@@ -5479,18 +6659,38 @@
                     "fillLinearGradient" : {
                       "__class" : "LinearGradient",
                       "alpha" : 1,
-                      "angle" : 0,
-                      "end" : "rgba(0,0,0,0)",
-                      "start" : "black"
+                      "angle" : 180,
+                      "stops" : [
+                        {
+                          "__class" : "GradientColorStop",
+                          "position" : 0,
+                          "value" : "rgba(0,0,0,0)"
+                        },
+                        {
+                          "__class" : "GradientColorStop",
+                          "position" : 1,
+                          "value" : "black"
+                        }
+                      ]
                     },
                     "fillRadialGradient" : {
                       "__class" : "RadialGradient",
                       "alpha" : 1,
                       "centerAnchorX" : 0.5,
                       "centerAnchorY" : 0.5,
-                      "end" : "black",
                       "heightFactor" : 0.5,
-                      "start" : "rgba(0,0,0,0)",
+                      "stops" : [
+                        {
+                          "__class" : "GradientColorStop",
+                          "position" : 0,
+                          "value" : "rgba(0,0,0,0)"
+                        },
+                        {
+                          "__class" : "GradientColorStop",
+                          "position" : 1,
+                          "value" : "black"
+                        }
+                      ],
                       "widthFactor" : 0.5
                     },
                     "fillType" : "color",
@@ -5548,18 +6748,38 @@
                             "fillLinearGradient" : {
                               "__class" : "LinearGradient",
                               "alpha" : 1,
-                              "angle" : 0,
-                              "end" : "rgba(0,0,0,0)",
-                              "start" : "black"
+                              "angle" : 180,
+                              "stops" : [
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 0,
+                                  "value" : "rgba(0,0,0,0)"
+                                },
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 1,
+                                  "value" : "black"
+                                }
+                              ]
                             },
                             "fillRadialGradient" : {
                               "__class" : "RadialGradient",
                               "alpha" : 1,
                               "centerAnchorX" : 0.5,
                               "centerAnchorY" : 0.5,
-                              "end" : "black",
                               "heightFactor" : 0.5,
-                              "start" : "rgba(0,0,0,0)",
+                              "stops" : [
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 0,
+                                  "value" : "rgba(0,0,0,0)"
+                                },
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 1,
+                                  "value" : "black"
+                                }
+                              ],
                               "widthFactor" : 0.5
                             },
                             "fillType" : "color",
@@ -5695,18 +6915,38 @@
                             "fillLinearGradient" : {
                               "__class" : "LinearGradient",
                               "alpha" : 1,
-                              "angle" : 0,
-                              "end" : "rgba(0,0,0,0)",
-                              "start" : "black"
+                              "angle" : 180,
+                              "stops" : [
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 0,
+                                  "value" : "rgba(0,0,0,0)"
+                                },
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 1,
+                                  "value" : "black"
+                                }
+                              ]
                             },
                             "fillRadialGradient" : {
                               "__class" : "RadialGradient",
                               "alpha" : 1,
                               "centerAnchorX" : 0.5,
                               "centerAnchorY" : 0.5,
-                              "end" : "black",
                               "heightFactor" : 0.5,
-                              "start" : "rgba(0,0,0,0)",
+                              "stops" : [
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 0,
+                                  "value" : "rgba(0,0,0,0)"
+                                },
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 1,
+                                  "value" : "black"
+                                }
+                              ],
                               "widthFactor" : 0.5
                             },
                             "fillType" : "color",
@@ -5831,18 +7071,38 @@
                             "fillLinearGradient" : {
                               "__class" : "LinearGradient",
                               "alpha" : 1,
-                              "angle" : 0,
-                              "end" : "rgba(0,0,0,0)",
-                              "start" : "black"
+                              "angle" : 180,
+                              "stops" : [
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 0,
+                                  "value" : "rgba(0,0,0,0)"
+                                },
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 1,
+                                  "value" : "black"
+                                }
+                              ]
                             },
                             "fillRadialGradient" : {
                               "__class" : "RadialGradient",
                               "alpha" : 1,
                               "centerAnchorX" : 0.5,
                               "centerAnchorY" : 0.5,
-                              "end" : "black",
                               "heightFactor" : 0.5,
-                              "start" : "rgba(0,0,0,0)",
+                              "stops" : [
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 0,
+                                  "value" : "rgba(0,0,0,0)"
+                                },
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 1,
+                                  "value" : "black"
+                                }
+                              ],
                               "widthFactor" : 0.5
                             },
                             "fillType" : "color",
@@ -5967,18 +7227,38 @@
                             "fillLinearGradient" : {
                               "__class" : "LinearGradient",
                               "alpha" : 1,
-                              "angle" : 0,
-                              "end" : "rgba(0,0,0,0)",
-                              "start" : "black"
+                              "angle" : 180,
+                              "stops" : [
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 0,
+                                  "value" : "rgba(0,0,0,0)"
+                                },
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 1,
+                                  "value" : "black"
+                                }
+                              ]
                             },
                             "fillRadialGradient" : {
                               "__class" : "RadialGradient",
                               "alpha" : 1,
                               "centerAnchorX" : 0.5,
                               "centerAnchorY" : 0.5,
-                              "end" : "black",
                               "heightFactor" : 0.5,
-                              "start" : "rgba(0,0,0,0)",
+                              "stops" : [
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 0,
+                                  "value" : "rgba(0,0,0,0)"
+                                },
+                                {
+                                  "__class" : "GradientColorStop",
+                                  "position" : 1,
+                                  "value" : "black"
+                                }
+                              ],
                               "widthFactor" : 0.5
                             },
                             "fillType" : "color",
@@ -6112,18 +7392,38 @@
                         "fillLinearGradient" : {
                           "__class" : "LinearGradient",
                           "alpha" : 1,
-                          "angle" : 0,
-                          "end" : "rgba(0,0,0,0)",
-                          "start" : "black"
+                          "angle" : 180,
+                          "stops" : [
+                            {
+                              "__class" : "GradientColorStop",
+                              "position" : 0,
+                              "value" : "rgba(0,0,0,0)"
+                            },
+                            {
+                              "__class" : "GradientColorStop",
+                              "position" : 1,
+                              "value" : "black"
+                            }
+                          ]
                         },
                         "fillRadialGradient" : {
                           "__class" : "RadialGradient",
                           "alpha" : 1,
                           "centerAnchorX" : 0.5,
                           "centerAnchorY" : 0.5,
-                          "end" : "black",
                           "heightFactor" : 0.5,
-                          "start" : "rgba(0,0,0,0)",
+                          "stops" : [
+                            {
+                              "__class" : "GradientColorStop",
+                              "position" : 0,
+                              "value" : "rgba(0,0,0,0)"
+                            },
+                            {
+                              "__class" : "GradientColorStop",
+                              "position" : 1,
+                              "value" : "black"
+                            }
+                          ],
                           "widthFactor" : 0.5
                         },
                         "fillType" : "color",
@@ -6159,18 +7459,38 @@
                     "fillLinearGradient" : {
                       "__class" : "LinearGradient",
                       "alpha" : 1,
-                      "angle" : 0,
-                      "end" : "rgba(0,0,0,0)",
-                      "start" : "black"
+                      "angle" : 180,
+                      "stops" : [
+                        {
+                          "__class" : "GradientColorStop",
+                          "position" : 0,
+                          "value" : "rgba(0,0,0,0)"
+                        },
+                        {
+                          "__class" : "GradientColorStop",
+                          "position" : 1,
+                          "value" : "black"
+                        }
+                      ]
                     },
                     "fillRadialGradient" : {
                       "__class" : "RadialGradient",
                       "alpha" : 1,
                       "centerAnchorX" : 0.5,
                       "centerAnchorY" : 0.5,
-                      "end" : "black",
                       "heightFactor" : 0.5,
-                      "start" : "rgba(0,0,0,0)",
+                      "stops" : [
+                        {
+                          "__class" : "GradientColorStop",
+                          "position" : 0,
+                          "value" : "rgba(0,0,0,0)"
+                        },
+                        {
+                          "__class" : "GradientColorStop",
+                          "position" : 1,
+                          "value" : "black"
+                        }
+                      ],
                       "widthFactor" : 0.5
                     },
                     "fillType" : "color",
@@ -6219,18 +7539,38 @@
                 "fillLinearGradient" : {
                   "__class" : "LinearGradient",
                   "alpha" : 1,
-                  "angle" : 0,
-                  "end" : "rgba(0,0,0,0)",
-                  "start" : "black"
+                  "angle" : 180,
+                  "stops" : [
+                    {
+                      "__class" : "GradientColorStop",
+                      "position" : 0,
+                      "value" : "rgba(0,0,0,0)"
+                    },
+                    {
+                      "__class" : "GradientColorStop",
+                      "position" : 1,
+                      "value" : "black"
+                    }
+                  ]
                 },
                 "fillRadialGradient" : {
                   "__class" : "RadialGradient",
                   "alpha" : 1,
                   "centerAnchorX" : 0.5,
                   "centerAnchorY" : 0.5,
-                  "end" : "black",
                   "heightFactor" : 0.5,
-                  "start" : "rgba(0,0,0,0)",
+                  "stops" : [
+                    {
+                      "__class" : "GradientColorStop",
+                      "position" : 0,
+                      "value" : "rgba(0,0,0,0)"
+                    },
+                    {
+                      "__class" : "GradientColorStop",
+                      "position" : 1,
+                      "value" : "black"
+                    }
+                  ],
                   "widthFactor" : 0.5
                 },
                 "fillType" : "color",
@@ -6385,18 +7725,38 @@
                 "fillLinearGradient" : {
                   "__class" : "LinearGradient",
                   "alpha" : 1,
-                  "angle" : 0,
-                  "end" : "rgba(0,0,0,0)",
-                  "start" : "black"
+                  "angle" : 180,
+                  "stops" : [
+                    {
+                      "__class" : "GradientColorStop",
+                      "position" : 0,
+                      "value" : "rgba(0,0,0,0)"
+                    },
+                    {
+                      "__class" : "GradientColorStop",
+                      "position" : 1,
+                      "value" : "black"
+                    }
+                  ]
                 },
                 "fillRadialGradient" : {
                   "__class" : "RadialGradient",
                   "alpha" : 1,
                   "centerAnchorX" : 0.5,
                   "centerAnchorY" : 0.5,
-                  "end" : "black",
                   "heightFactor" : 0.5,
-                  "start" : "rgba(0,0,0,0)",
+                  "stops" : [
+                    {
+                      "__class" : "GradientColorStop",
+                      "position" : 0,
+                      "value" : "rgba(0,0,0,0)"
+                    },
+                    {
+                      "__class" : "GradientColorStop",
+                      "position" : 1,
+                      "value" : "black"
+                    }
+                  ],
                   "widthFactor" : 0.5
                 },
                 "fillType" : "color",
@@ -6451,18 +7811,38 @@
             "fillLinearGradient" : {
               "__class" : "LinearGradient",
               "alpha" : 1,
-              "angle" : 0,
-              "end" : "rgba(0,0,0,0)",
-              "start" : "black"
+              "angle" : 180,
+              "stops" : [
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 0,
+                  "value" : "rgba(0,0,0,0)"
+                },
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 1,
+                  "value" : "black"
+                }
+              ]
             },
             "fillRadialGradient" : {
               "__class" : "RadialGradient",
               "alpha" : 1,
               "centerAnchorX" : 0.5,
               "centerAnchorY" : 0.5,
-              "end" : "black",
               "heightFactor" : 0.5,
-              "start" : "rgba(0,0,0,0)",
+              "stops" : [
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 0,
+                  "value" : "rgba(0,0,0,0)"
+                },
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 1,
+                  "value" : "black"
+                }
+              ],
               "widthFactor" : 0.5
             },
             "fillType" : "color",
@@ -6538,18 +7918,38 @@
             "fillLinearGradient" : {
               "__class" : "LinearGradient",
               "alpha" : 1,
-              "angle" : 0,
-              "end" : "rgba(0,0,0,0)",
-              "start" : "black"
+              "angle" : 180,
+              "stops" : [
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 0,
+                  "value" : "rgba(0,0,0,0)"
+                },
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 1,
+                  "value" : "black"
+                }
+              ]
             },
             "fillRadialGradient" : {
               "__class" : "RadialGradient",
               "alpha" : 1,
               "centerAnchorX" : 0.5,
               "centerAnchorY" : 0.5,
-              "end" : "black",
               "heightFactor" : 0.5,
-              "start" : "rgba(0,0,0,0)",
+              "stops" : [
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 0,
+                  "value" : "rgba(0,0,0,0)"
+                },
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 1,
+                  "value" : "black"
+                }
+              ],
               "widthFactor" : 0.5
             },
             "fillType" : "color",
@@ -6596,18 +7996,38 @@
         "fillLinearGradient" : {
           "__class" : "LinearGradient",
           "alpha" : 1,
-          "angle" : 0,
-          "end" : "rgba(0,0,0,0)",
-          "start" : "black"
+          "angle" : 180,
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ]
         },
         "fillRadialGradient" : {
           "__class" : "RadialGradient",
           "alpha" : 1,
           "centerAnchorX" : 0.5,
           "centerAnchorY" : 0.5,
-          "end" : "black",
           "heightFactor" : 0.5,
-          "start" : "rgba(0,0,0,0)",
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ],
           "widthFactor" : 0.5
         },
         "fillType" : "color",
@@ -6658,5 +8078,5 @@
     ],
     "visible" : false
   },
-  "version" : 51
+  "version" : 52
 }

@@ -19,17 +19,13 @@ export function ItemList(props: Props) {
     const { items, ...rest } = props
 
     const contentHeight = props.items.length * 50
+
     return (
-        <Scroll {...props} contentHeight={contentHeight}>
+        <Scroll {...rest} contentHeight={contentHeight}>
             <Stack width="100%" height={contentHeight} direction="vertical">
                 {props.items.map((item, index) => {
                     return (
-                        <RowItem
-                            key={`item_${index}`}
-                            width="1fr"
-                            paddingLeft={16}
-                            {...item}
-                        />
+                        <RowItem key={`item_${index}`} width="1fr" {...item} />
                     )
                 })}
             </Stack>

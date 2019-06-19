@@ -35,7 +35,7 @@ export function CardList(props: Props) {
     )
 
     return (
-        <Scroll {...props} contentHeight={contentHeight}>
+        <Scroll {...rest} contentHeight={contentHeight}>
             <Stack
                 width="100%"
                 height={contentHeight}

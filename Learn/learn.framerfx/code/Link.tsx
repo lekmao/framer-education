@@ -18,7 +18,7 @@ type Props = Partial<FrameProps> & {
 }
 
 export function Link(props: Partial<Props>) {
-    const { text, icon, type, resize, style, onTap, ...rest } = props
+    const { text, icon, type, resize, onResize, style, onTap, ...rest } = props
     const { width, disabled } = props
 
     /* ---------------------------------- State --------------------------------- */
@@ -66,7 +66,7 @@ export function Link(props: Partial<Props>) {
             type="link"
             color={theme[type].foreground}
             resize={resize}
-            onResize={props.onResize}
+            onResize={onResize}
             text={text}
             onTap={!disabled && handleTap}
         />

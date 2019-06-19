@@ -208,9 +208,10 @@ export function BreedInfoCard(): Override {
     const { breed, subBreed, images } = appState.breed
 
     return {
+        header: " ",
         title: toStartCase(subBreed ? `${subBreed} ${breed}` : breed),
         image: images[0],
-        color: colors.Darker,
+        color: colors.Primary,
         isFavorite: appState.favorites.find(f => f.breed === breed),
         favorite: true,
         onFavoriteChange: isFavorite => {
