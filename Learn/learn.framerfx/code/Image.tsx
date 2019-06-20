@@ -25,6 +25,8 @@ export function Image(props: Partial<Props>) {
 
     /* ------------------------------ Presentation ------------------------------ */
 
+    // Hello R/GA
+
     return (
         <Frame {...rest} background="#FFFFFF">
             <Frame

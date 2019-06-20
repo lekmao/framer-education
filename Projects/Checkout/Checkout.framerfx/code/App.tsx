@@ -1,71 +1,58 @@
 import { Override, Data } from "framer"
-import * as React from "react"
 
-const state = Data({
+// Override Docs: https://framer.com/docs/overrides
+
+const appState = Data({
+    total: 0,
     items: [
         {
-            id: 0,
-            name: "Apples",
-            amount: 1,
-            price: 0.5,
+            name: "Candy Bar",
+            price: 1,
+            quantity: 1,
         },
         {
-            id: 1,
             name: "Soda",
-            amount: 2,
-            price: 5.0,
+            price: 1.5,
+            quantity: 2,
         },
         {
-            id: 3,
-            name: "Bread",
-            amount: 1,
-            price: 2.5,
+            name: "Latte",
+            price: 4.25,
+            quantity: 3,
+        },
+        {
+            name: "Coffee",
+            price: 1.75,
+            quantity: 1,
         },
     ],
 })
 
-export function Item1(): Override {
-    const item = state.items[0]
+export function ItemList(): Override {
     return {
-        text: `${item.name} ($${item.price.toFixed(2)})`,
-        value: item.amount,
-        onValueChange: value => {
-            const { items } = state
-            items[0].amount = value
-            state.items = items
-        },
-    }
-}
+        items: appState.items.map((item, index) => {
+            return {
+                text: item.name,
+                message: `$${item.price.toFixed(2)}`,
+                value: item.quantity,
+                min: 1,
+                max: 10,
+                component: "stepper",
+                onValueChange: quanity => {
+                    const localItems = [...appState.items]
+                    localItems[index].quantity = quanity
 
-export function Item2(): Override {
-    const item = state.items[1]
-    return {
-        text: `${item.name} ($${item.price.toFixed(2)})`,
-        value: item.amount,
-        onValueChange: value => {
-            const { items } = state
-            items[1].amount = value
-            state.items = items
-        },
-    }
-}
-
-export function Item3(): Override {
-    const item = state.items[2]
-    return {
-        text: `${item.name} ($${item.price.toFixed(2)})`,
-        value: item.amount,
-        onValueChange: value => {
-            const { items } = state
-            items[2].amount = value
-            state.items = items
-        },
+                    appState.items = localItems
+                },
+            }
+        }),
     }
 }
 
 export function Total(): Override {
-    const total = state.items.reduce((runningTotal, item) => {
-        return runningTotal + item.amount * item.price
+    const total = appState.items.reduce((runningTotal, item) => {
+        runningTotal += item.price * item.quantity
+        return runningTotal
     }, 0)
 
     return {

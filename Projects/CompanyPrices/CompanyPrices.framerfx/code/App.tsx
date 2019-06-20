@@ -33,13 +33,13 @@ const fetchCompanyData = async (name: string) => {
     const json = await response.json()
 
     // Update state
-    appState.loaded = true
     appState.data = json
+    appState.loaded = true
 }
 
 // Set USE_API to false to prevent hitting this api too many times
 if (USE_API) {
-    fetchCompanyData("AAPL")
+    fetchCompanyData("Apple")
 }
 
 // Overrides --------------------------------------------
@@ -60,6 +60,7 @@ export function Symbol(): Override {
 }
 
 export function Change(): Override {
+    if (!appState.loaded) return {}
     const { changesPercentage } = appState.data.profile
     return {
         text: changesPercentage,
@@ -68,6 +69,7 @@ export function Change(): Override {
 }
 
 export function Price(): Override {
+    if (!appState.loaded) return {}
     const { price } = appState.data.profile
     return {
         text: "$" + price,
@@ -75,6 +77,7 @@ export function Price(): Override {
 }
 
 export function Image(): Override {
+    if (!appState.loaded) return {}
     const { image } = appState.data.profile
     return {
         image: image,
@@ -82,6 +85,7 @@ export function Image(): Override {
 }
 
 export function Card(): Override {
+    if (!appState.loaded) return {}
     const { companyName, description } = appState.data.profile
     return {
         title: companyName,
@@ -90,6 +94,7 @@ export function Card(): Override {
 }
 
 export function Exchange(): Override {
+    if (!appState.loaded) return {}
     const { exchange } = appState.data.profile
     return {
         color: colors.Darker,
@@ -99,6 +104,7 @@ export function Exchange(): Override {
 }
 
 export function Industry(): Override {
+    if (!appState.loaded) return {}
     const { industry } = appState.data.profile
     return {
         color: colors.Darker,
@@ -108,6 +114,7 @@ export function Industry(): Override {
 }
 
 export function Website(): Override {
+    if (!appState.loaded) return {}
     const { website } = appState.data.profile
     return {
         color: colors.Darker,

@@ -111,10 +111,10 @@
   resolved "https://registry.framer.com/@framer/framer.device-skin-apple-iphone-xs-spacegrey/-/@framer/framer.device-skin-apple-iphone-xs-spacegrey-1.0.0.tgz#d9f524f5a6a4afe8cb413c00f3f16fe4d52ee09e"
   integrity sha512-BWmGnCvnPmYel3ytJ1eiNxugHTj3e7eiih8L1b3RZtB4ZjgF6HiCMp+nsB0wAOJrMS2sA+fEYMDzxqybX9Dukg==
 
-"@framer/steveruizok.education@^1.151.0":
-  version "1.151.0"
-  resolved "https://registry.framer.com/@framer/steveruizok.education/-/@framer/steveruizok.education-1.151.0.tgz#17521bc778b04007862c80b24b91b229054fa865"
-  integrity sha512-DC7QGCY80oKlGkDnZdy3+bWC1g4LZGyxPb/ppM8B1abRhYNWeJYu1+DD3sjh6l3IZtToBfz46EDWxpDAJqYOuQ==
+"@framer/steveruizok.education@^1.156.0":
+  version "1.156.0"
+  resolved "https://registry.framer.com/@framer/steveruizok.education/-/@framer/steveruizok.education-1.156.0.tgz#1234ec485fec78c3fd099e5fd030099e07298922"
+  integrity sha512-HgPWY0IXUtvmVWsxHIvqrBcDXoh3bL/IzVQGTVMTgcmXNWu+Kv7Aam2Jl+UQVMwHe5b1Z4kVY6V1b5azbQWNiA==
   dependencies:
     markdown-to-jsx "^6.10.2"
     react-select "^3.0.3"

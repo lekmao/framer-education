@@ -15,21 +15,6 @@ type Props = Partial<FrameProps> & {
 export function Icon(props: Props) {
     const { icon, color, size, ...rest } = props
 
-    // const [icons, setIcons] = React.useState({})
-
-    // React.useEffect(() => {
-    //     loadIcons()
-    // }, [])
-
-    // const loadIcons = async () => {
-    //     const response = await fetch(`${url()}/code/icons.json`)
-    //     const data = await response.json()
-
-    //     setIcons({
-    //         ...data,
-    //     })
-    // }
-
     /* ------------------------------ Presentation ------------------------------ */
 
     return (

@@ -1,0 +1,15 @@
+{
+	"framer": {
+		"id": "66a3e55e-d7ed-4630-b1bc-d27796e5b992"
+	},
+	"author": "Steve Ruiz",
+	"peerDependencies": {
+		"framer": "^1"
+	},
+	"dependencies": {
+		"@framer/steveruizok.education": "^1.160.0"
+	},
+	"devDependencies": {
+		"@framer/framer.device-skin-apple-iphone-xs-spacegrey": "^1.0.0"
+	}
+}

@@ -21,6 +21,7 @@ type Props = Partial<FrameProps> & {
     autosize: boolean
     favorite: boolean
     isFavorite: boolean
+    onTap: () => void
     onFavoriteChange: (favorite: boolean) => void
 }
 
@@ -40,6 +41,7 @@ export function Card(props: Partial<Props>) {
         favorite,
         isFavorite,
         onFavoriteChange,
+        onTap,
     } = props
 
     /* ---------------------------------- State --------------------------------- */
@@ -98,6 +100,7 @@ export function Card(props: Partial<Props>) {
         <Stack
             height={size || height}
             width={size || width}
+            onTap={onTap}
             overflow="hidden"
             direction="vertical"
             background={colors.Light}
@@ -119,7 +122,6 @@ export function Card(props: Partial<Props>) {
                     }}
                 >
                     <Text
-                        resize="width"
                         height={48}
                         verticalAlign="center"
                         textAlign="left"

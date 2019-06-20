@@ -162,6 +162,7 @@ export function BreedsList(): Override {
             return {
                 text: toStartCase(breed.breed),
                 component: "icon",
+                paddingLeft: 16,
                 icon:
                     breed.subBreeds.length > 0
                         ? "chevron-double-right"
@@ -191,6 +192,7 @@ export function SubBreedsList(): Override {
                 text: toStartCase(breed.subBreed),
                 component: "icon",
                 icon: "chevron-right",
+                paddingLeft: 16,
                 onTap: item => {
                     fetchBreed(breed)
                 },
