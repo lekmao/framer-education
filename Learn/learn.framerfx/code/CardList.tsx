@@ -17,7 +17,7 @@ type Item = {
     icon: string
     value: string
     emptyText: string
-    onTap: (item) => void
+    onTap: () => void
     onValueChange: (value) => void
 }
 

@@ -16,6 +16,10 @@
 	},
 	"author": "Steve Ruiz",
 	"dependencies": {
+		"@mapbox/geo-viewport": "^0.4.0",
+		"copy-to-clipboard": "^3.2.0",
+		"geojson-extent": "^0.3.2",
+		"mapbox-gl": "^1.0.0",
 		"markdown-to-jsx": "^6.10.2",
 		"react-select": "^3.0.3"
 	},
