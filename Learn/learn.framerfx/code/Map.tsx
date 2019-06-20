@@ -661,33 +661,52 @@ bearing: ${state.brn}
 
 const DefaultContainer = () => {
     return (
-        <div
-            style={{
-                width: "100%",
-                height: "100%",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                flexDirection: "column",
-                fontSize: 16,
-                fontWeight: 500,
-                padding: 32,
-                color: "#bb88ff",
-                border: "1px solid #8855ff",
-                backgroundColor: "#2f2546",
-                textAlign: "center",
-            }}
-        >
-            <p>Add your Mapbox access token.</p>
+        <ComponentInstructions>
+            <h1>Mapbox Map</h1>
             <p>
-                👉{" "}
+                Add your{" "}
                 <a
                     style={{ color: "#bb88ff" }}
                     href="https://account.mapbox.com/"
                 >
-                    Get yours here.
+                    Mapbox access token
                 </a>
+                .
             </p>
+        </ComponentInstructions>
+    )
+}
+
+// Re-usable container for default instructions
+const ComponentInstructions = ({ children }) => {
+    return (
+        <div
+            style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                width: "100%",
+                height: "100%",
+                fontSize: 16,
+                fontWeight: 500,
+                textAlign: "left",
+                color: "#bb88ff",
+                backgroundColor: "#2f2546",
+                border: "1px solid #8855ff",
+                padding: 32,
+                overflow: "hidden",
+            }}
+        >
+            <div
+                style={{
+                    minHeight: 300,
+                    minWidth: 220,
+                }}
+            >
+                {children}
+            </div>
         </div>
     )
 }
+
+// Helpers

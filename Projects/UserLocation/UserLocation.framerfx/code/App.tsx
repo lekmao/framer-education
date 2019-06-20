@@ -17,14 +17,13 @@ const state = Data({
 const findUserLocation = () => {
     // [1]
     if (!navigator || navigator.userAgent.includes("FramerX")) {
-        if (
-            window.prompt(
-                "Can't do this in Framer X. Open this project in browser?",
-                url()
-            )
-        ) {
+        const message =
+            "Can't do this in Framer X. Open this project in browser?"
+
+        if (window.prompt(message, url())) {
             window.open(url())
         }
+
         return
     }
 

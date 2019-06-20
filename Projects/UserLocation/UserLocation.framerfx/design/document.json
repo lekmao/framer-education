@@ -15,13 +15,13 @@
             "__class" : "CodeComponentNode",
             "aspectRatio" : null,
             "bottom" : 0,
-            "centerAnchorX" : 0.50266666666666671,
+            "centerAnchorX" : 0.5013333333333333,
             "centerAnchorY" : 0.5,
             "children" : [
 
             ],
             "clip" : true,
-            "codeComponentIdentifier" : "@framer\/steveruizok.mapbox-experiment\/.\/Map.tsx_Map",
+            "codeComponentIdentifier" : "@framer\/steveruizok.education\/.\/Map.tsx_Map",
             "codeComponentProps" : {
               "accessToken" : "pk.eyJ1Ijoic3RldmVydWl6b2siLCJhIjoiY2l2cnFnMmt4MDAxdDJvbDQwamdydXdqZiJ9.kb2YzDTVL3576Zed2ii0ow",
               "bearing" : 0,
@@ -91,7 +91,7 @@
             "fillType" : "color",
             "height" : 812,
             "heightType" : 0,
-            "id" : "z9Oay5CEK",
+            "id" : "It7w1ti9b",
             "intrinsicHeight" : 200,
             "intrinsicWidth" : 200,
             "left" : 0,
@@ -108,11 +108,11 @@
             "radiusPerCorner" : false,
             "radiusTopLeft" : 0,
             "radiusTopRight" : 0,
-            "right" : 0,
+            "right" : -1,
             "rotation" : 0,
             "top" : 0,
             "visible" : true,
-            "width" : 375,
+            "width" : 376,
             "widthType" : 0
           },
           {

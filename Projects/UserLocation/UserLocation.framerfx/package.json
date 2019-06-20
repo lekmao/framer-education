@@ -14,7 +14,6 @@
 	},
 	"author": "Steve Ruiz",
 	"dependencies": {
-		"@framer/steveruizok.education": "^1.160.0",
-		"@framer/steveruizok.mapbox-experiment": "^1.14.0"
+		"@framer/steveruizok.education": "^1.161.0"
 	}
 }

@@ -106,24 +106,17 @@
   resolved "https://registry.framer.com/@framer/framer.device-skin-apple-iphone-xs-spacegrey/-/@framer/framer.device-skin-apple-iphone-xs-spacegrey-1.0.0.tgz#d9f524f5a6a4afe8cb413c00f3f16fe4d52ee09e"
   integrity sha512-BWmGnCvnPmYel3ytJ1eiNxugHTj3e7eiih8L1b3RZtB4ZjgF6HiCMp+nsB0wAOJrMS2sA+fEYMDzxqybX9Dukg==
 
-"@framer/steveruizok.education@^1.160.0":
-  version "1.160.0"
-  resolved "https://registry.framer.com/@framer/steveruizok.education/-/@framer/steveruizok.education-1.160.0.tgz#82d099df8d9638ddf85f4f989fbcda8398037beb"
-  integrity sha512-79IfGUXXv7GxKmE3LFUPjWF4b8eFCR0M/z5nsBXeur9+qKGzQ/uCH9n+J3RiPWn6xltfphljk33rYpYUnJx9wQ==
-  dependencies:
-    markdown-to-jsx "^6.10.2"
-    react-select "^3.0.3"
-
-"@framer/steveruizok.mapbox-experiment@^1.14.0":
-  version "1.14.0"
-  resolved "https://registry.framer.com/@framer/steveruizok.mapbox-experiment/-/@framer/steveruizok.mapbox-experiment-1.14.0.tgz#0284187483d997907fa90fda128ca80344ce1064"
-  integrity sha512-42UFOIFczlVMHY5KU149flFmkpzpKrIOR5RfERido2QVsveBuwB8+DZtzVgDW97SQuWWVRIhKxfXllVat0nobA==
+"@framer/steveruizok.education@^1.161.0":
+  version "1.161.0"
+  resolved "https://registry.framer.com/@framer/steveruizok.education/-/@framer/steveruizok.education-1.161.0.tgz#2b93db73aefe4db30b710d8cf82d6bf3c4267c24"
+  integrity sha512-oK0phtD4AZaHFZRVrOZKcNqRLRYJFR67gKWNKE2qDwccJwHLT/EkXdH33V7RAhGTj9jgvKyTw0RAuqqrQlGjWA==
   dependencies:
     "@mapbox/geo-viewport" "^0.4.0"
-    "@types/mapbox-gl" "^0.51.4"
     copy-to-clipboard "^3.2.0"
     geojson-extent "^0.3.2"
-    mapbox-gl "^0.53.1"
+    mapbox-gl "^1.0.0"
+    markdown-to-jsx "^6.10.2"
+    react-select "^3.0.3"
 
 "@mapbox/geo-viewport@^0.4.0":
   version "0.4.0"
@@ -195,18 +188,6 @@
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@mapbox/whoots-js/-/whoots-js-3.1.0.tgz#497c67a1cef50d1a2459ba60f315e448d2ad87fe"
   integrity sha512-Es6WcD0nO5l+2BOQS4uLfNPYQaNDfbot3X1XUoloz+x0mPDS3eeORZJl06HXjwBG1fOGwCRnzK88LMdxKRrd6Q==
-
-"@types/geojson@*":
-  version "7946.0.7"
-  resolved "https://registry.yarnpkg.com/@types/geojson/-/geojson-7946.0.7.tgz#c8fa532b60a0042219cdf173ca21a975ef0666ad"
-  integrity sha512-wE2v81i4C4Ol09RtsWFAqg3BUitWbHSpSlIo+bNdsCJijO9sjme+zm+73ZMCa/qMC8UEERxzGbvmr1cffo2SiQ==
-
-"@types/mapbox-gl@^0.51.4":
-  version "0.51.7"
-  resolved "https://registry.yarnpkg.com/@types/mapbox-gl/-/mapbox-gl-0.51.7.tgz#01249e155523c1c047b82012e42e343095f89e2f"
-  integrity sha512-HtyBAaq/bXvy42SizlXLifHZJIscLW4hapYcreUpXDvvce1JzWsA78BOx4BSchClLONhNBq1oe+01YjKpNXtDg==
-  dependencies:
-    "@types/geojson" "*"
 
 "@types/prop-types@*":
   version "15.7.0"
@@ -398,10 +379,10 @@ escape-string-regexp@^1.0.5:
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
   integrity sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
 
-esm@^3.0.84:
-  version "3.2.25"
-  resolved "https://registry.yarnpkg.com/esm/-/esm-3.2.25.tgz#342c18c29d56157688ba5ce31f8431fbb795cc10"
-  integrity sha512-U1suiZ2oDVWv4zPO56S0NcR5QriEahGtdN2OR6FiOG4WJvcjBVFB0qI4+eKoWFH483PKGuLuu6V8Z4T5g63UVA==
+esm@~3.0.84:
+  version "3.0.84"
+  resolved "https://registry.yarnpkg.com/esm/-/esm-3.0.84.tgz#bb108989f4673b32d4f62406869c28eed3815a63"
+  integrity sha512-SzSGoZc17S7P+12R9cg21Bdb7eybX25RnIeRZ80xZs+VZ3kdQKzqTp2k4hZJjR7p9l0186TTXSgrxzlMDBktlw==
 
 esprima@^4.0.0:
   version "4.0.1"
@@ -543,10 +524,10 @@ loose-envify@^1.4.0:
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
 
-mapbox-gl@^0.53.1:
-  version "0.53.1"
-  resolved "https://registry.yarnpkg.com/mapbox-gl/-/mapbox-gl-0.53.1.tgz#08a956d8da54b04bc7f29ab1319bddb9c97ddedf"
-  integrity sha512-dTtW/qlkUowKGlqOhE8fqII2Tj4lcokvlZwUDLnkjy4uQ9zMFnVBULGeSzzTVkj9HtQZ3Zbey10/jmoVPV9t5w==
+mapbox-gl@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/mapbox-gl/-/mapbox-gl-1.0.0.tgz#646df3e1812899f4331ab8ea695b182f4a4ea7d9"
+  integrity sha512-+sfg6e3Ud6G9PNcdA56r6U0j2SJEQrnTTx/V8xt0xedIN9hrGIceKIukWz+tAgrw0KS5GKi6ThkWXPuwcGi36g==
   dependencies:
     "@mapbox/geojson-rewind" "^0.4.0"
     "@mapbox/geojson-types" "^1.0.2"
@@ -559,7 +540,7 @@ mapbox-gl@^0.53.1:
     "@mapbox/whoots-js" "^3.1.0"
     csscolorparser "~1.0.2"
     earcut "^2.1.5"
-    esm "^3.0.84"
+    esm "~3.0.84"
     geojson-vt "^3.2.1"
     gl-matrix "^3.0.0"
     grid-index "^1.1.0"
