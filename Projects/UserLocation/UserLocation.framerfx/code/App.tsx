@@ -12,7 +12,6 @@ const state = Data({
 })
 
 // Event Handlers -----------------------------------
-// So, now that I'm updating the project this way, does the file refresh?
 
 const findUserLocation = () => {
     // [1]

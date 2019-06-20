@@ -472,8 +472,8 @@ addPropertyControls(Map, {
     longitude: {
         title: "Longitude",
         type: ControlType.Number,
-        min: -90,
-        max: 90,
+        min: -180,
+        max: 180,
         defaultValue: 83.0769,
         step: 0.001,
     },
