@@ -7,7 +7,7 @@
 		"framer": "^1"
 	},
 	"dependencies": {
-		"@framer/steveruizok.education": "^1.160.0"
+		"@framer/steveruizok.education": "^1.163.0"
 	},
 	"devDependencies": {
 		"@framer/framer.device-skin-apple-iphone-xs-spacegrey": "^1.0.0"

@@ -14,6 +14,6 @@
 	},
 	"author": "Steve Ruiz",
 	"dependencies": {
-		"@framer/steveruizok.education": "^1.160.0"
+		"@framer/steveruizok.education": "^1.163.0"
 	}
 }

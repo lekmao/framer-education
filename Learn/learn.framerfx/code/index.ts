@@ -26,7 +26,12 @@ export { TabBar } from './TabBar'
 export { Tabs } from './Tabs'
 export { Text } from './Text'
 export { TextInput } from './TextInput'
+export { ItemList } from './ItemList'
+export { CardList } from './CardList'
+export { Chip } from './Chip'
+export { ChipList } from './ChipList'
 
+export { useInteractionState } from './Hooks'
 export { iconNames, iconTitles } from './Shared'
 export { colors } from './canvas'
 
