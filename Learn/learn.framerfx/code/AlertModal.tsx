@@ -14,17 +14,18 @@ import { Button } from "./Button"
 import { Modal } from "./Modal"
 import { colors } from "./canvas"
 
-type Props = FrameProps & {
-    title: string
-    body: string
-    open: boolean
-    cancel: string
-    confirm: string
-    onCancel: () => void
-    onConfirm: () => void
-}
+type Props = FrameProps &
+    Partial<{
+        title: string
+        body: string
+        open: boolean
+        cancel: string
+        confirm: string
+        onCancel: () => void
+        onConfirm: () => void
+    }>
 
-export function AlertModal(props) {
+export function AlertModal(props: Props) {
     const {
         open,
         title,
