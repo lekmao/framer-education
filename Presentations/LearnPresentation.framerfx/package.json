@@ -13,6 +13,8 @@
 	},
 	"author": "Steve Ruiz",
 	"dependencies": {
-		"@framer/steveruizok.education": "^1.94.0"
+		"@framer/janvanwtf.youtube": "^1.4.0",
+		"@framer/steveruizok.education": "^1.163.0",
+		"@framer/steveruizok.flow": "^1.22.0"
 	}
 }
