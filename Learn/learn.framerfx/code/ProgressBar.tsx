@@ -32,9 +32,9 @@ export function ProgressBar(props: Partial<Props>) {
 
 	/* ----------------------------- Event Handlers ----------------------------- */
 
-	const handleAnimationEnd = () => {
+	const handleAnimationEnd = React.useCallback(() => {
 		onAnimationComplete()
-	}
+	}, [onAnimationComplete])
 
 	/* ------------------------------ Presentation ------------------------------ */
 

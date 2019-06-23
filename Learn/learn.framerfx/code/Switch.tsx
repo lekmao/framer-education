@@ -49,7 +49,7 @@ export function Switch(props: Partial<Props>) {
 	/* ----------------------------- Event Handlers ----------------------------- */
 
 	// When the user taps on the switch, run onValueChange and flip the isOn state
-	const handleTap = () => {
+	const handleTap = React.useCallback(() => {
 		setState((state) => {
 			const value = !state.value
 
@@ -63,7 +63,7 @@ export function Switch(props: Partial<Props>) {
 				valid,
 			}
 		})
-	}
+	}, [state.value, validation, onValueChange])
 
 	/* ------------------------------ Presentation ------------------------------ */
 

@@ -17,6 +17,8 @@ export function Icon(props: Props) {
 
     /* ------------------------------ Presentation ------------------------------ */
 
+    const path = React.useMemo(() => Icons[icon], [icon])
+
     return (
         <Stack
             {...rest}
@@ -35,7 +37,7 @@ export function Icon(props: Props) {
                 height={size}
                 width={size}
             >
-                <path d={Icons[icon]} fill={color} />
+                <path d={path} fill={color} />
             </svg>
         </Stack>
     )

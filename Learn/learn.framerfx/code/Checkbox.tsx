@@ -46,7 +46,7 @@ export function Checkbox(props: Partial<Props>) {
 	/* ----------------------------- Event Handlers ----------------------------- */
 
 	// When the user taps on the switch, run onValueChange and flip the isOn state
-	const handleTap = () => {
+	const handleTap = React.useCallback(() => {
 		setState((state) => {
 			const value = !state.value
 
@@ -60,7 +60,7 @@ export function Checkbox(props: Partial<Props>) {
 				valid,
 			}
 		})
-	}
+	}, [validation])
 
 	/* ------------------------------ Presentation ------------------------------ */
 

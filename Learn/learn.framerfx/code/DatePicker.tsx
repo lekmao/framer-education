@@ -109,83 +109,97 @@ export function DatePicker(props: Partial<Props>) {
 	/* ----------------------------- Event Handlers ----------------------------- */
 
 	// Update state with change in month
-	const handleMonthChange = (delta: number) => {
+	const handleMonthChange = React.useCallback((delta: number) => {
 		const next = new Date(state.display.year, state.display.month + delta, 1)
 
-		setState({
-			...state,
-			display: {
-				month: next.getMonth(),
-				year: next.getFullYear(),
-			},
+		setState((state) => {
+			const next = new Date(state.display.year, state.display.month + delta, 1)
+
+			return {
+				...state,
+				display: {
+					month: next.getMonth(),
+					year: next.getFullYear(),
+				},
+			}
 		})
-	}
+	}, [])
 
 	// Change to the next earlier month
-	const decrementMonth = () => handleMonthChange(-1)
+	const decrementMonth = React.useCallback(() => handleMonthChange(-1), [])
 
 	// Change to the next later month
-	const incrementMonth = () => handleMonthChange(1)
+	const incrementMonth = React.useCallback(() => handleMonthChange(1), [])
 
 	// Make a change to the start or end of the range
-	const handleChangeRange = (next, nextSetting, changes) => {
-		setState({
-			...state,
-			setting: nextSetting,
-			...changes,
+	const handleChangeRange = React.useCallback((next, nextSetting, changes) => {
+		setState((state) => {
+			return {
+				...state,
+				setting: nextSetting,
+				...changes,
+			}
 		})
-	}
+	}, [])
 
 	// Make a change to the selected date
-	const handleChangeSelected = (next, changes) => {
-		setState({
-			...state,
-			...changes,
+	const handleChangeSelected = React.useCallback((next, changes) => {
+		setState((state) => {
+			return {
+				...state,
+				...changes,
+			}
 		})
-	}
+	}, [])
 
 	// Update state when the user selects a new date
-	const handleChangeDate = (item) => {
-		const next = item.itemDate
+	const handleChangeDate = React.useCallback(
+		(item) => {
+			const next = item.itemDate
 
-		const date = next.getDate()
-		const month = next.getMonth()
-		const year = next.getFullYear()
+			const date = next.getDate()
+			const month = next.getMonth()
+			const year = next.getFullYear()
 
-		const changes = { date, month, year }
+			const changes = { date, month, year }
 
-		if (useRange) {
-			// Set start and end
+			if (useRange) {
+				// Set start and end
 
-			// Get whether the next setting should be end or start
-			const time = next.getTime()
-			const nextSetting =
-				endDate.getTime() - time < time - startDate.getTime() ? 'end' : 'start'
+				// Get whether the next setting should be end or start
+				const time = next.getTime()
 
-			if (next < startDate) {
-				// If below start, set start
-				onChangeRange(next, endDate)
-				handleChangeRange(next, state.setting, { start: changes })
-			} else if (next > endDate) {
-				// If after end, set end
-				onChangeRange(startDate, next)
-				handleChangeRange(next, state.setting, { end: changes })
-			} else {
-				// Set either start or end, depending on setting
-				if (state.setting === 'start') {
+				const nextSetting =
+					endDate.getTime() - time < time - startDate.getTime()
+						? 'end'
+						: 'start'
+
+				if (next < startDate) {
+					// If below start, set start
 					onChangeRange(next, endDate)
-					handleChangeRange(next, 'end', { start: changes })
-				} else {
+					handleChangeRange(next, state.setting, { start: changes })
+				} else if (next > endDate) {
+					// If after end, set end
 					onChangeRange(startDate, next)
-					handleChangeRange(next, 'start', { end: changes })
+					handleChangeRange(next, state.setting, { end: changes })
+				} else {
+					// Set either start or end, depending on setting
+					if (state.setting === 'start') {
+						onChangeRange(next, endDate)
+						handleChangeRange(next, 'end', { start: changes })
+					} else {
+						onChangeRange(startDate, next)
+						handleChangeRange(next, 'start', { end: changes })
+					}
 				}
+			} else {
+				// Set selected
+				onChangeDate(next)
+				handleChangeSelected(next, { selected: changes })
 			}
-		} else {
-			// Set selected
-			onChangeDate(next)
-			handleChangeSelected(next, { selected: changes })
-		}
-	}
+		},
+		[useRange, state.setting]
+	)
 
 	/* ------------------------------ Presentation ------------------------------ */
 

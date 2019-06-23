@@ -6,20 +6,18 @@ import { iconNames, iconTitles } from './Shared'
 import { useInteractionState } from './Hooks'
 import { colors } from './canvas'
 
-type Props = Partial<FrameProps> & {
-	text: string
-	icon: string
-	type: string
-	toggle: boolean
-	toggled: boolean
-	disabled: boolean
-}
+type Props = Partial<FrameProps> &
+	Partial<{
+		text: string
+		icon: string
+		type: string
+		toggle: boolean
+		toggled: boolean
+		disabled: boolean
+		onTap?: (toggled: boolean | null) => void
+	}>
 
-export function Button(
-	props: Partial<Props> & {
-		onTap?: (event, info, toggled: boolean | null) => void
-	}
-) {
+export function Button(props: Props) {
 	const {
 		type,
 		text,
@@ -31,8 +29,6 @@ export function Button(
 		style,
 		...rest
 	} = props
-
-	const { height, width } = props
 
 	/* ---------------------------------- State --------------------------------- */
 
@@ -59,17 +55,15 @@ export function Button(
 
 	// When the user taps on the button, run onTap and update toggled
 	const handleTap = (event, info) => {
-		const next = !state.toggled
-
-		// Call onTap with the toggled state
-		onTap(event, info, next)
-
-		// If this button should toggle, flip the toggle state
 		if (toggle) {
+			const toggled = !state.toggled
+			onTap(toggled)
 			setState({
 				...state,
-				toggled: next,
+				toggled,
 			})
+		} else {
+			onTap(null)
 		}
 	}
 
@@ -107,25 +101,21 @@ export function Button(
 			style: {
 				filter: `brightness(1)`,
 			},
-			border: `0px solid ${colors.Shadow}`,
 		},
 		hovered: {
 			style: {
 				filter: `brightness(1.055)`,
 			},
-			border: `1px solid ${colors.Shadow}`,
 		},
 		toggled: {
 			style: {
 				filter: `brightness(.8)`,
 			},
-			border: `1px solid ${colors.Shadow}`,
 		},
 		active: {
 			style: {
 				filter: `brightness(.95)`,
 			},
-			border: `1px solid ${colors.Active}`,
 		},
 	}
 
@@ -142,7 +132,7 @@ export function Button(
 			borderRadius={8}
 			background={theme[type].background}
 			{...variant}
-			style={{ ...variant.style, ...interactiveProps.style }}
+			style={{ ...variant.style, ...interactiveProps.style, ...style }}
 		>
 			{icon === 'none' ? (
 				<Text
@@ -168,7 +158,7 @@ Button.defaultProps = {
 	icon: 'none',
 	type: 'primary',
 	primary: true,
-	toggle: true,
+	toggle: false,
 	onTap: () => null,
 }
 
