@@ -86,7 +86,7 @@ export function Stepper(props: Partial<Props>) {
                 icon="minus"
                 height={"100%"}
                 width={48}
-                disabled={disabled}
+                disabled={disabled || state.value <= min}
                 borderRadius={`8px 0px 0px 8px`}
                 onTap={() => handleValueChange(-1)}
                 text=""
@@ -105,7 +105,7 @@ export function Stepper(props: Partial<Props>) {
                 icon="plus"
                 height={"100%"}
                 width={48}
-                disabled={disabled}
+                disabled={disabled || state.value >= max}
                 borderRadius={`0px 8px 8px 0px`}
                 onTap={() => handleValueChange(1)}
                 text=""

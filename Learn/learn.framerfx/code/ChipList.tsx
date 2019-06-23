@@ -16,6 +16,7 @@ type ChipItem = {
     type?: string
     clearable?: boolean
     onTap?: () => void
+    onClear?: () => void
 }
 
 // Define a type for our props
@@ -23,72 +24,74 @@ type Props = FrameProps & {
     chips: Array<string | ChipItem>
     type: string
     clearable: boolean
-    onTapChip: (item: ChipItem) => void
-    onValueChange: (items: ChipItem[]) => void
+    onTapChip: (item: ChipItem, index: number) => void
+    onClearChip: (item: ChipItem, index: number, items: ChipItem[]) => void
 }
 
 export function ChipList(props: Partial<Props>) {
     const {
         id,
-        chips,
+        chips: chipItems,
         type,
         clearable,
         onTapChip,
-        onValueChange,
+        onClearChip,
         ...rest
     } = props
 
     const { width, height } = props
 
-    const items: ChipItem[] = chips.map((v, i) =>
-        typeof v === "string"
-            ? {
-                  text: v as string,
-                  type,
-                  clearable,
-                  onTap: () => handleTapChip(i),
-              }
-            : {
-                  text: v.text,
-                  type,
-                  clearable,
-                  onTap: () => handleTapChip(i),
-                  ...v,
-              }
+    const chips: ChipItem[] = React.useMemo(
+        () =>
+            chipItems.map((v, i) =>
+                typeof v === "string"
+                    ? {
+                          text: v as string,
+                          type,
+                          clearable,
+                          onTap: () => handleTapChip(i),
+                          onClear: () => null,
+                      }
+                    : {
+                          text: v.text,
+                          type,
+                          clearable,
+                          onTap: () => handleTapChip(i),
+                          ...v,
+                      }
+            ),
+        [chipItems]
     )
 
     /* ---------------------------------- State --------------------------------- */
 
     // Set initial sizes
     const [state, setState] = React.useState({
-        items,
+        chips,
     })
 
     // Reset sizes (to trigger Text's auto-size)
     React.useEffect(() => {
         setState({
-            items,
+            chips,
         })
     }, [chips])
 
     /* ----------------------------- Event Handlers ----------------------------- */
 
-    // When the user taps the component
-    const handleValueChange = () => {
-        null
-    }
-
     const handleTapChip = index => {
-        props.onTapChip(state.items[index])
+        onTapChip(state.chips[index], index)
     }
 
-    const handleClearChip = value => {
-        const nextItems = pull(state.items, value)
+    const handleClearChip = (index, chip) => {
+        chip.onClear()
 
-        onValueChange(nextItems)
+        const next = pull(state.chips, chip)
+
+        onClearChip(chip, index, next)
 
         setState({
-            items: nextItems,
+            chips: next,
         })
     }
 
@@ -104,14 +107,11 @@ export function ChipList(props: Partial<Props>) {
             height={height}
             {...rest} //
         >
-            {state.items.map(item => (
+            {state.chips.map((chip, index) => (
                 <Chip
-                    key={`${id}_item_${item.text}`}
-                    text={item.text}
-                    type={item.type}
-                    clearable={item.clearable}
-                    onTap={item.onTap}
-                    onClear={() => handleClearChip(item)}
+                    key={`${id}_chip_${index}`}
+                    {...chip}
+                    onClear={() => handleClearChip(chip, index)}
                 />
             ))}
         </Stack>
@@ -125,8 +125,8 @@ ChipList.defaultProps = {
     type: "primary",
     overflow: "hidden" as any,
     clearable: true,
-    onTapChip: (item: ChipItem) => null,
-    onValueChange: (items: ChipItem[]) => null,
+    onTapChip: (item: ChipItem, index: number) => null,
+    onClearChip: (item: ChipItem, index: number, items: ChipItem[]) => null,
 }
 
 addPropertyControls(ChipList, {

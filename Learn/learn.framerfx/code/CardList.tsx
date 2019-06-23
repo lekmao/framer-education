@@ -10,7 +10,7 @@ import {
 import { Card } from "./Card"
 import { Text } from "./Text"
 
-type Item = {
+type ListItem = {
     text: string
     height: number
     component: string
@@ -22,14 +22,14 @@ type Item = {
 }
 
 type Props = Partial<ScrollProps> & {
-    items: Item[]
-    emptyText: string
+    cards: ListItem[]
+    emptyText?: string
 }
 
 export function CardList(props: Props) {
-    const { items, emptyText, ...rest } = props
+    const { cards, emptyText, ...rest } = props
 
-    const contentHeight = props.items.reduce(
+    const contentHeight = cards.reduce(
         (acc, cur) => acc + (cur.height || 320) + 16,
         16 + 16 + 8
     )
@@ -44,14 +44,10 @@ export function CardList(props: Props) {
                 padding={16}
                 background="none"
             >
-                {props.items.length > 0 ? (
-                    props.items.map((item, index) => {
+                {cards.length > 0 ? (
+                    cards.map((card, index) => {
                         return (
-                            <Card
-                                key={`item_${index}_${item.text}`}
-                                width="1fr"
-                                {...item}
-                            />
+                            <Card key={`card_${index}`} width="1fr" {...card} />
                         )
                     })
                 ) : (
@@ -70,12 +66,13 @@ export function CardList(props: Props) {
 CardList.defaultProps = {
     width: 320,
     height: 520,
-    items: [],
+    cards: [],
     emptyText: "Nothing to see here.",
 }
 
 addPropertyControls(CardList, {
     emptyText: {
+        title: "Empty Text",
         type: ControlType.String,
         defaultValue: "Nothing to see here.",
     },

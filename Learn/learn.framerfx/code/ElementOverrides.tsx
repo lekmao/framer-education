@@ -95,3 +95,44 @@ export function ChipList(): Override {
         ],
     }
 }
+
+export function ItemList(): Override {
+    return {
+        items: [
+            {
+                text: "Item A",
+            },
+            {
+                text: "Item B",
+                component: "stepper",
+                value: 4,
+                min: 2,
+                max: 8,
+                step: 2,
+            },
+            {
+                text: "Item C",
+                component: "switch",
+                value: true,
+            },
+        ],
+    }
+}
+
+export function CardList(): Override {
+    return {
+        cards: [
+            {
+                title: "Card A",
+            },
+            {
+                title: "Card B",
+                footer: "Footer...",
+            },
+            {
+                title: "Card C",
+                body: "Body...",
+            },
+        ],
+    }
+}

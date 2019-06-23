@@ -24,6 +24,7 @@ This package also includes several helper utilities. Learn more and see examples
 
 # Changelog
 
+- Updates colors, adds disabled state to stepper buttons (at min / max values), changes props for CardList from `items` to `cards`, adds `emptyText` prop to ItemList.
 - Adds Map
 - Adds Framer Bridge integration
 - Adds ItemList, CardList

@@ -22,20 +22,20 @@ export const colors = Object.freeze({
     "Warn": "var(--token-99f5b091-583d-4c54-9ed1-c13fe2b565b5, rgb(255, 67, 102))",
     /** #FFFFFF */
     "Light": "var(--token-c4108478-04be-43e8-b06c-e5db6cfe4ed9, rgb(255, 255, 255))",
-    /** #D9D9ED */
-    "Neutral": "var(--token-457a7788-6819-4913-8914-5f2a6307a39b, rgb(217, 217, 237))",
-    /** #3B3B68 */
-    "Dark": "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(59, 59, 104))",
+    /** #E1E1EF */
+    "Neutral": "var(--token-457a7788-6819-4913-8914-5f2a6307a39b, rgb(225, 225, 239))",
+    /** #23232F */
+    "Dark": "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47))",
     /** #131316 */
     "Darker": "var(--token-30f9a7fa-de7c-4aee-a7b8-79cdd74c6221, rgb(19, 19, 22))",
-    /** #CBCBDC */
-    "Border": "var(--token-23bce3fd-e7be-45a5-a2c3-53cfc3c53db9, rgb(203, 203, 220))",
+    /** #C9C9D9 */
+    "Border": "var(--token-23bce3fd-e7be-45a5-a2c3-53cfc3c53db9, rgb(201, 201, 217))",
     /** rgba(255, 255, 255, 0.68) */
     "Glow": "var(--token-dd5568c7-f380-405b-bbfc-805caca247f3, rgba(255, 255, 255, 0.68))",
     /** rgba(37, 37, 45, 0.09) */
     "Shadow": "var(--token-0b9e3e19-2ca6-4163-8b23-40217b78ddb8, rgba(37, 37, 45, 0.09))",
-    /** rgba(23, 23, 39, 0.2) */
-    "Active": "var(--token-385efacc-ef57-4c97-b6f0-c789a417631f, rgba(23, 23, 39, 0.2))",
-    /** #F5F9FF */
-    "Bg": "var(--token-570013b9-ccd1-4a4b-8a44-e7ded788d7f2, rgb(245, 249, 255))",
+    /** #BDBDD0 */
+    "Active": "var(--token-385efacc-ef57-4c97-b6f0-c789a417631f, rgb(189, 189, 208))",
+    /** #FDFDFD */
+    "Bg": "var(--token-570013b9-ccd1-4a4b-8a44-e7ded788d7f2, rgb(253, 253, 253))",
 })

@@ -213,7 +213,7 @@ export function BreedInfoCard(): Override {
         header: " ",
         title: toStartCase(subBreed ? `${subBreed} ${breed}` : breed),
         image: images[0],
-        color: colors.Primary,
+        overlay: false,
         isFavorite: appState.favorites.find(f => f.breed === breed),
         favorite: true,
         onFavoriteChange: isFavorite => {
@@ -261,6 +261,7 @@ export function SearchResults(): Override {
                 text: toStartCase(breed.breed),
                 component: "icon",
                 icon: "chevron-right",
+                paddingLeft: 16,
                 onTap: item => {
                     fetchBreed(breed)
                 },
@@ -276,7 +277,7 @@ export function SearchResults(): Override {
 // Favorites
 
 export function FavoritesList(): Override {
-    const items = React.useMemo(() => {
+    const cards = React.useMemo(() => {
         return appState.favorites.map(breed => {
             return {
                 title: toStartCase(
@@ -284,9 +285,10 @@ export function FavoritesList(): Override {
                         ? `${breed.subBreed} ${breed.breed}`
                         : breed.breed
                 ),
+                header: " ",
                 body: null,
                 image: breed.images[0],
-                color: colors.Darker,
+                overlay: false,
                 isFavorite: appState.favorites.find(
                     f => f.breed === breed.breed
                 ),
@@ -305,6 +307,6 @@ export function FavoritesList(): Override {
     }, [appState.favorites])
 
     return {
-        items,
+        cards,
     }
 }
