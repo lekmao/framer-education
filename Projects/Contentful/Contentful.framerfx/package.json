@@ -1,15 +1,20 @@
 {
+	"main": "dist/index.js",
+	"license": "MIT",
+	"devDependencies": {
+		"@framer/framer.device-skin-apple-iphone-xs-spacegrey": "^1.0.0",
+		"@types/react": "^16.8"
+	},
+	"peerDependencies": {
+		"framer": "^1.0",
+		"react": "^16.8"
+	},
 	"framer": {
-		"id": "66a3e55e-d7ed-4630-b1bc-d27796e5b992"
+		"id": "d1a036e2-a671-4041-8248-08fbcce622fb"
 	},
 	"author": "Steve Ruiz",
-	"peerDependencies": {
-		"framer": "^1"
-	},
 	"dependencies": {
-		"@framer/steveruizok.education": "^1.163.0"
-	},
-	"devDependencies": {
-		"@framer/framer.device-skin-apple-iphone-xs-spacegrey": "^1.0.0"
+		"@framer/steveruizok.education": "^1.167.0",
+		"contentful": "^7.8.0"
 	}
 }
