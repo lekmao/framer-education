@@ -9,9 +9,11 @@ export const appState = Data({
         fields: {},
     } as any,
     currentPage: 0,
-    backAction: null as any,
     pageTitle: "Posts",
+    backAction: null as any,
 })
+
+connectToContentful()
 
 const toStartCase = (string: string) => {
     return string[0].toUpperCase() + string.slice(1)
@@ -32,9 +34,6 @@ const showPost = itemEntry => {
 
 // Top navigation for current tab / back
 export function Header(): Override {
-    React.useEffect(() => {
-        connectToContentful()
-    }, [])
     return {
         title: appState.pageTitle,
         leftLink: appState.backAction ? "Back" : "",

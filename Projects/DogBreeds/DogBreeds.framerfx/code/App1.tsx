@@ -157,27 +157,25 @@ export function BrowsePage(): Override {
 
 // List of breeds
 export function BreedsList(): Override {
-    const items = React.useMemo(() => {
-        return appState.breeds.map(breed => {
-            return {
-                text: toStartCase(breed.breed),
-                component: "icon",
-                paddingLeft: 16,
-                icon:
-                    breed.subBreeds.length > 0
-                        ? "chevron-double-right"
-                        : "chevron-right",
-                onTap: item => {
-                    if (breed.subBreeds.length > 0) {
-                        appState.subBreeds = breed.subBreeds
-                        showSubBreedsList()
-                    } else {
-                        fetchBreed(breed)
-                    }
-                },
-            }
-        })
-    }, [appState.breeds])
+    const items = appState.breeds.map(breed => {
+        return {
+            text: toStartCase(breed.breed),
+            component: "icon",
+            paddingLeft: 16,
+            icon:
+                breed.subBreeds.length > 0
+                    ? "chevron-double-right"
+                    : "chevron-right",
+            onTap: item => {
+                if (breed.subBreeds.length > 0) {
+                    appState.subBreeds = breed.subBreeds
+                    showSubBreedsList()
+                } else {
+                    fetchBreed(breed)
+                }
+            },
+        }
+    })
 
     return {
         items,

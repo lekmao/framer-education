@@ -10,10 +10,13 @@
 		"react": "^16.8"
 	},
 	"framer": {
-		"id": "fedb2796-ece9-4904-a8bf-e1a658d0de1b"
+		"id": "77223c3e-fc31-46d2-99fa-28abc729130a"
 	},
 	"author": "Steve Ruiz",
 	"dependencies": {
-		"@framer/steveruizok.education": "^1.167.0"
+		"@framer/steveruizok.education": "^1.167.0",
+		"gist-client": "^1.1.0",
+		"nanogist": "^1.0.0",
+		"netlify-auth-providers": "^1.0.0-alpha5"
 	}
 }

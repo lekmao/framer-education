@@ -57,11 +57,9 @@ function fetchEntriesForContentType(contentType) {
 }
 
 export const connectToContentful = async () => {
-    console.log("getting data")
     const contentTypes = await fetchContentTypes()
     const entries = await fetchEntriesForContentType(contentTypes[0])
     if (entries) {
-        console.log("entries", entries)
         appState.blogPosts = entries
     }
 }
