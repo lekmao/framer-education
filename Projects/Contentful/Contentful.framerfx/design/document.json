@@ -3057,7 +3057,7 @@
         "isTarget" : false,
         "left" : 22,
         "locked" : false,
-        "name" : "Templates\/Navigation+TabBar",
+        "name" : "Export",
         "navigationTarget" : null,
         "navigationTransition" : "push",
         "navigationTransitionBackdropColor" : "rgba(4,4,15,.4)",
