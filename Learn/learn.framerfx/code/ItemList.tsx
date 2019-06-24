@@ -27,11 +27,16 @@ type Props = Partial<ScrollProps> & {
 export function ItemList(props: Props) {
     const { items, emptyText, ...rest } = props
 
-    const contentHeight = items.length * 50
+    const contentHeight = items.length * 58
 
     return (
         <Scroll {...rest} contentHeight={contentHeight}>
-            <Stack width="100%" height={contentHeight} direction="vertical">
+            <Stack
+                width="100%"
+                height={contentHeight}
+                direction="vertical"
+                gap={8}
+            >
                 {items.length > 0 ? (
                     items.map((item, index) => {
                         return (

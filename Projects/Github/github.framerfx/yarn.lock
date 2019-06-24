@@ -106,10 +106,10 @@
   resolved "https://registry.framer.com/@framer/framer.device-skin-apple-iphone-xs-spacegrey/-/@framer/framer.device-skin-apple-iphone-xs-spacegrey-1.0.0.tgz#d9f524f5a6a4afe8cb413c00f3f16fe4d52ee09e"
   integrity sha512-BWmGnCvnPmYel3ytJ1eiNxugHTj3e7eiih8L1b3RZtB4ZjgF6HiCMp+nsB0wAOJrMS2sA+fEYMDzxqybX9Dukg==
 
-"@framer/steveruizok.education@^1.167.0":
-  version "1.167.0"
-  resolved "https://registry.framer.com/@framer/steveruizok.education/-/@framer/steveruizok.education-1.167.0.tgz#df3e21af239256689148e7532a054594418b62ca"
-  integrity sha512-SKcjcc2OOoZ0Y/ZVyQso0F+qh+ErtfHS4FeYVFBddGVT9RwJtR3iPcnfaDjKXjEIjmSMwf8W32ztcx0W73uAfw==
+"@framer/steveruizok.education@^1.169.0":
+  version "1.169.0"
+  resolved "https://registry.framer.com/@framer/steveruizok.education/-/@framer/steveruizok.education-1.169.0.tgz#c8e072a651ebaac5c2dd7ae136936fafc5116a4d"
+  integrity sha512-5OSx/Hvn+M5Mbc8TOrUevgZxyYOEr/5oqHATJELIvsfT8ppC1POySxymQRXNDIO7Q63J1+81k5kGwD7nj7G5aA==
   dependencies:
     "@mapbox/geo-viewport" "^0.4.0"
     copy-to-clipboard "^3.2.0"

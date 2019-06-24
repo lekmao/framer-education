@@ -7,15 +7,13 @@ import { default as Authenticator } from "netlify-auth-providers"
 // @ts-ignore
 import { data as MOCK_DATA } from "./MockData.json"
 
-const EXAMPLE_TOKEN = "eaa8fbe4e81f5f2193afbeb43a3943ff17ac2d68"
-
 let gistClient
 let authToken
 
 // state
 
 const appState = Data({
-    gist: null,
+    gist: MOCK_DATA[0],
     gists: MOCK_DATA,
     currentPage: 0,
     pageTitle: "Posts",
@@ -26,21 +24,26 @@ const appState = Data({
 
 const authenticate = async () => {
     if (navigator.userAgent.includes("FramerX")) {
-        authToken = EXAMPLE_TOKEN
-        gistClient = GistClient(authToken)
-        const gists = MOCK_DATA
-        loadGists(gists)
-    } else {
-        const authenticator = new Authenticator({}).authenticate(
-            { provider: "github", scope: "user" },
-            async (err, data) => {
-                authToken = data.token
-                gistClient = GistClient(authToken)
-                const gists = await gistClient.all()
-                loadGists(gists)
-            }
-        )
+        console.log("skipping auth")
+        skipAuth()
+        return
     }
+
+    const authenticator = new Authenticator({}).authenticate(
+        { provider: "github", scope: "user" },
+        async (err, data) => {
+            authToken = data.token
+            gistClient = GistClient(authToken)
+            const gists = await gistClient.all()
+            loadGists(gists)
+        }
+    )
+}
+
+const skipAuth = async () => {
+    gistClient = GistClient(undefined)
+    const gists = await gistClient.all()
+    loadGists(gists)
 }
 
 const loadGists = async data => {
@@ -48,27 +51,32 @@ const loadGists = async data => {
     appState.currentPage = 1
 
     if (data[0]) {
-        appState.pageTitle = "Gists for " + data[0].owner.login
+        appState.pageTitle = "All Gists"
     }
 }
 
 const loadGist = async gist => {
-    const data = await gistClient.get(gist.id)
-
-    appState.gist = data
+    appState.gist = await gistClient.get(gist.id)
     appState.currentPage = 2
-    appState.pageTitle = "Gist for " + data.owner.login
+    appState.pageTitle = "Gist for " + appState.gist.owner.login
     appState.backAction = () => {
-        appState.pageTitle = "Gists for " + data.owner.login
+        appState.pageTitle = "All gists"
         appState.currentPage = 1
+        appState.backAction = null
     }
 }
 
 // authenticate
 
-export const Button: Override = () => {
+export const AuthenticateButton: Override = () => {
     return {
         onTap: authenticate,
+    }
+}
+
+export const SkipAuthButton: Override = () => {
+    return {
+        onTap: skipAuth,
     }
 }
 
@@ -156,7 +164,7 @@ export const GistFiles: Override = () => {
     return {
         cards: files.map(file => ({
             title: file.filename,
-            body: "` " + file.content + " `",
+            body: file.content,
             height: 480,
         })),
     }

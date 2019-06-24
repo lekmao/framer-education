@@ -14,9 +14,9 @@
           {
             "__class" : "CodeComponentNode",
             "aspectRatio" : null,
-            "bottom" : 246,
+            "bottom" : 303,
             "centerAnchorX" : 0.49866666666666665,
-            "centerAnchorY" : 0.61878453038674031,
+            "centerAnchorY" : 0.54005524861878451,
             "children" : [
 
             ],
@@ -28,12 +28,12 @@
               "text" : "Github",
               "toggle" : false,
               "toggled" : false,
-              "type" : "neutral"
+              "type" : "primary"
             },
             "codeOverrideEnabled" : true,
             "codeOverrideFile" : ".\/App.tsx",
-            "codeOverrideIdentifier" : ".\/App.tsx_Button",
-            "codeOverrideName" : "Button",
+            "codeOverrideIdentifier" : ".\/App.tsx_AuthenticateButton",
+            "codeOverrideName" : "AuthenticateButton",
             "constraintsLocked" : false,
             "deviceType" : null,
             "exportOptions" : [
@@ -112,9 +112,107 @@
           {
             "__class" : "CodeComponentNode",
             "aspectRatio" : null,
+            "bottom" : 219,
+            "centerAnchorX" : 0.49866666666666665,
+            "centerAnchorY" : 0.65607734806629836,
+            "children" : [
+
+            ],
+            "clip" : true,
+            "codeComponentIdentifier" : "@framer\/steveruizok.education\/.\/Button.tsx_Button",
+            "codeComponentProps" : {
+              "disabled" : false,
+              "icon" : "none",
+              "text" : "Skip",
+              "toggle" : false,
+              "toggled" : false,
+              "type" : "neutral"
+            },
+            "codeOverrideEnabled" : true,
+            "codeOverrideFile" : ".\/App.tsx",
+            "codeOverrideIdentifier" : ".\/App.tsx_SkipAuthButton",
+            "codeOverrideName" : "SkipAuthButton",
+            "constraintsLocked" : false,
+            "deviceType" : null,
+            "exportOptions" : [
+
+            ],
+            "fillColor" : "rgba(255,255,255,1)",
+            "fillEnabled" : false,
+            "fillImage" : null,
+            "fillImagePixelHeight" : null,
+            "fillImagePixelWidth" : null,
+            "fillImageResize" : "fill",
+            "fillLinearGradient" : {
+              "__class" : "LinearGradient",
+              "alpha" : 1,
+              "angle" : 180,
+              "stops" : [
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 0,
+                  "value" : "rgba(0,0,0,0)"
+                },
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 1,
+                  "value" : "black"
+                }
+              ]
+            },
+            "fillRadialGradient" : {
+              "__class" : "RadialGradient",
+              "alpha" : 1,
+              "centerAnchorX" : 0.5,
+              "centerAnchorY" : 0.5,
+              "heightFactor" : 0.5,
+              "stops" : [
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 0,
+                  "value" : "rgba(0,0,0,0)"
+                },
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 1,
+                  "value" : "black"
+                }
+              ],
+              "widthFactor" : 0.5
+            },
+            "fillType" : "color",
+            "height" : 60,
+            "heightType" : 0,
+            "id" : "fvKnTm8aP",
+            "intrinsicHeight" : 60,
+            "intrinsicWidth" : 320,
+            "left" : 27,
+            "locked" : false,
+            "name" : null,
+            "opacity" : 1,
+            "originalid" : null,
+            "parentid" : "TyBnhJGWY",
+            "previewSettings" : null,
+            "radius" : 0,
+            "radiusBottomLeft" : 0,
+            "radiusBottomRight" : 0,
+            "radiusIsRelative" : false,
+            "radiusPerCorner" : false,
+            "radiusTopLeft" : 0,
+            "radiusTopRight" : 0,
+            "right" : 28,
+            "rotation" : 0,
+            "top" : null,
+            "visible" : true,
+            "width" : 320,
+            "widthType" : 0
+          },
+          {
+            "__class" : "CodeComponentNode",
+            "aspectRatio" : null,
             "bottom" : null,
             "centerAnchorX" : 0.49866666666666665,
-            "centerAnchorY" : 0.37776243093922651,
+            "centerAnchorY" : 0.29903314917127072,
             "children" : [
 
             ],
@@ -202,7 +300,7 @@
             "radiusTopRight" : 0,
             "right" : 28,
             "rotation" : 0,
-            "top" : 156,
+            "top" : 99,
             "visible" : true,
             "width" : 320,
             "widthType" : 0
@@ -224,7 +322,7 @@
               "paddingPerSide" : false,
               "pc_resizeDirection" : "xaxis",
               "resize" : false,
-              "text" : "USING EXAMPLE",
+              "text" : "AUTH DISABLED IN FRAMER PREVIEW",
               "textAlign" : "center",
               "type" : "link",
               "verticalAlign" : "top"
@@ -421,7 +519,7 @@
               "rightIcon" : "none",
               "rightLink" : "",
               "subtitle" : "",
-              "title" : "Log in"
+              "title" : "Github Gists"
             },
             "codeOverrideEnabled" : true,
             "codeOverrideFile" : ".\/App.tsx",
@@ -521,11 +619,6 @@
                   "enabled" : true,
                   "type" : "componentinstance",
                   "value" : "TyBnhJGWY"
-                },
-                {
-                  "enabled" : true,
-                  "type" : "componentinstance",
-                  "value" : "Cd4_rMaqC"
                 },
                 {
                   "enabled" : true,
@@ -3912,7 +4005,7 @@
               "resize" : false,
               "text" : "Hello world",
               "textAlign" : "left",
-              "type" : "h2",
+              "type" : "h3",
               "verticalAlign" : "center"
             },
             "codeOverrideEnabled" : true,

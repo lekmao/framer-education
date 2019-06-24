@@ -1,4 +1,3 @@
-yarn-error.log
 node_modules/framer/resource.d.ts
 node_modules/framer/package.json
 node_modules/framer/node_modules/react/package.json
@@ -88,4 +87,5 @@ build/standalone.js
 build/react.development.js
 build/react-dom.development.js
 build/Draft.css
+_project.framerxproj
 build/framer.js
