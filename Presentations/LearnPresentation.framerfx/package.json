@@ -14,7 +14,7 @@
 	"author": "Steve Ruiz",
 	"dependencies": {
 		"@framer/janvanwtf.youtube": "^1.4.0",
-		"@framer/steveruizok.education": "^1.163.0",
-		"@framer/steveruizok.flow": "^1.22.0"
+		"@framer/steveruizok.education": "^1.172.0",
+		"@framer/steveruizok.flow": "^1.27.0"
 	}
 }

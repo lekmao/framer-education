@@ -2,6 +2,12 @@ import { Override, Data } from "framer"
 
 // Override Docs: https://framer.com/docs/overrides
 
+export function Capture(): Override {
+    return {
+        onClick: () => console.log("tapped"),
+    }
+}
+
 export function Scale(): Override {
     return {
         scale: 0.55,

@@ -13,8 +13,8 @@ let authToken
 // state
 
 const appState = Data({
-    gist: MOCK_DATA[0],
-    gists: MOCK_DATA,
+    gist: null,
+    gists: [],
     currentPage: 0,
     pageTitle: "Posts",
     backAction: null as any,
@@ -23,11 +23,11 @@ const appState = Data({
 // Events
 
 const authenticate = async () => {
-    if (navigator.userAgent.includes("FramerX")) {
-        console.log("skipping auth")
-        skipAuth()
-        return
-    }
+    // if (navigator.userAgent.includes("FramerX")) {
+    //     console.log("skipping auth")
+    //     skipAuth()
+    //     return
+    // }
 
     const authenticator = new Authenticator({}).authenticate(
         { provider: "github", scope: "user" },

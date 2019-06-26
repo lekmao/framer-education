@@ -54,7 +54,8 @@ export function Tax(): Override {
 export function Item1(): Override {
     const item = state.items[0]
     return {
-        text: `${item.name} ($${item.price.toFixed(2)} each)`,
+        text: item.name,
+        message: "$" + item.price.toFixed(2) + " each",
         value: item.amount,
         onValueChange: value => {
             const { items } = state
@@ -67,8 +68,8 @@ export function Item1(): Override {
 export function Item2(): Override {
     const item = state.items[1]
     return {
-        text: `${item.name} ($${item.price.toFixed(2)} each)`,
-        value: item.amount,
+        text: item.name,
+        message: "$" + item.price.toFixed(2) + " each",
         onValueChange: value => {
             const { items } = state
             items[1].amount = value
@@ -80,8 +81,8 @@ export function Item2(): Override {
 export function Item3(): Override {
     const item = state.items[2]
     return {
-        text: `${item.name} ($${item.price.toFixed(2)} each)`,
-        value: item.amount,
+        text: item.name,
+        message: "$" + item.price.toFixed(2) + " each",
         onValueChange: value => {
             const { items } = state
             items[2].amount = value

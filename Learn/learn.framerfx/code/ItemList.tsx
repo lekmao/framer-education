@@ -7,7 +7,7 @@ import {
     addPropertyControls,
     ControlType,
 } from "framer"
-import { Text } from "./Text"
+import { List } from "./List"
 import { RowItem } from "./RowItem"
 
 type ListItem = {
@@ -21,42 +21,26 @@ type ListItem = {
 
 type Props = Partial<ScrollProps> & {
     items: ListItem[]
+    gap: number
     emptyText?: string
+    padding: number
+    paddingTop: number
+    paddingLeft: number
+    paddingRight: number
+    paddingBottom: number
+    paddingPerSide: boolean
 }
 
 export function ItemList(props: Props) {
-    const { items, emptyText, ...rest } = props
-
-    const contentHeight = items.length * 58
+    const { items, ...rest } = props
 
     return (
-        <Scroll {...rest} contentHeight={contentHeight}>
-            <Stack
-                width="100%"
-                height={contentHeight}
-                direction="vertical"
-                gap={8}
-            >
-                {items.length > 0 ? (
-                    items.map((item, index) => {
-                        return (
-                            <RowItem
-                                key={`item_${index}`}
-                                width="1fr"
-                                {...item}
-                            />
-                        )
-                    })
-                ) : (
-                    <Text
-                        height={128}
-                        width="1fr"
-                        type="body"
-                        text={emptyText}
-                    />
-                )}
-            </Stack>
-        </Scroll>
+        <List
+            {...rest}
+            content={items.map((item, index) => {
+                return <RowItem key={`item_${index}`} width="1fr" {...item} />
+            })}
+        />
     )
 }
 
@@ -72,5 +56,25 @@ addPropertyControls(ItemList, {
         title: "Empty Text",
         type: ControlType.String,
         defaultValue: "Nothing to see here.",
+    },
+    gap: {
+        title: "Gap",
+        type: ControlType.Number,
+        displayStepper: true,
+        defaultValue: 8,
+    },
+    padding: {
+        title: "Padding",
+        type: ControlType.FusedNumber,
+        toggleKey: "paddingPerSide",
+        toggleTitles: ["All Sides", "Per Side"],
+        valueKeys: [
+            "paddingTop",
+            "paddingRight",
+            "paddingBottom",
+            "paddingLeft",
+        ],
+        valueLabels: ["T", "R", "B", "L"],
+        min: 0,
     },
 })

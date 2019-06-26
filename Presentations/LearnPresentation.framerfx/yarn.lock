@@ -106,10 +106,10 @@
   resolved "https://registry.framer.com/@framer/janvanwtf.youtube/-/@framer/janvanwtf.youtube-1.4.0.tgz#861c1c0632d54cc5ed3717ede8ef0b9e83bdf8f4"
   integrity sha512-k2g8mjVbiDRg+QO/OSZx6nGJTHXD9NJOuG1OGW9izIVPymoyR59We3jeQn6XFQd4a+dRwhVFIGie3OzJa5sUeA==
 
-"@framer/steveruizok.education@^1.163.0":
-  version "1.163.0"
-  resolved "https://registry.framer.com/@framer/steveruizok.education/-/@framer/steveruizok.education-1.163.0.tgz#aa0edca34cd91dc226d82ac13bdb6dd9aa15fbb4"
-  integrity sha512-7GpJxcDc5mb3P6fPbsuiao25pSZAF9YztxDqiwLJSv1J6lnb1hHkoXPD9upksrGWevabSWJHI66uSGbvAQ+sIw==
+"@framer/steveruizok.education@^1.172.0":
+  version "1.172.0"
+  resolved "https://registry.framer.com/@framer/steveruizok.education/-/@framer/steveruizok.education-1.172.0.tgz#713e932ee3efc2b6c7c3f4e9814351d5e1162bcf"
+  integrity sha512-CrlTzFVwnRcAGx6hGdY3r5MRFTTZ3HKqh7gc0cSasrXRdTbwDtrBRUR8QzXPuB96mIQnA3/9cDz7TrNi4i5Gdg==
   dependencies:
     "@mapbox/geo-viewport" "^0.4.0"
     copy-to-clipboard "^3.2.0"
@@ -118,10 +118,10 @@
     markdown-to-jsx "^6.10.2"
     react-select "^3.0.3"
 
-"@framer/steveruizok.flow@^1.22.0":
-  version "1.22.0"
-  resolved "https://registry.framer.com/@framer/steveruizok.flow/-/@framer/steveruizok.flow-1.22.0.tgz#3bc5ebd094bcfa1f604dc1c72da906ed2364a00f"
-  integrity sha512-yRUhmu31956O3aS4GpDA0lhXi0XeItfOzcMNPAH5N+bPXdEYF+D2Z4DxoiKQppJW5zMCIclFqksc/KlVn43G7w==
+"@framer/steveruizok.flow@^1.27.0":
+  version "1.27.0"
+  resolved "https://registry.framer.com/@framer/steveruizok.flow/-/@framer/steveruizok.flow-1.27.0.tgz#9b05ac3e5e033eb6d80d3ef15a7cf4d7e69a34b7"
+  integrity sha512-iNPQGbN42HAc3qM8lzlxGgZp1+NJyop6pyNnpZiEfkGTWJ16xDErqz6ssDjrzywxtJpPjJL3ASbMUoVHGKQ8qg==
   dependencies:
     mobx "^5.10.1"
     mobx-react "^6.0.3"
