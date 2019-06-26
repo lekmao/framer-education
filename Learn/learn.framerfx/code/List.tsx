@@ -55,13 +55,9 @@ export function List(props: Props) {
               padding,
           }
 
-    React.useEffect(() => {
-        // @ts-ignore
-    })
-
     return (
-        <Scroll {...rest} {...paddings}>
-            <Stack width="100%" direction="vertical" gap={gap}>
+        <Scroll {...rest}>
+            <Stack width="100%" direction="vertical" gap={gap} {...paddings}>
                 {content.length > 0 ? (
                     content.map((item, index) =>
                         React.cloneElement(item, { key: index })
