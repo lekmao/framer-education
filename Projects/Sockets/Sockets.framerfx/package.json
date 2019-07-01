@@ -1,0 +1,21 @@
+{
+	"main": "dist/index.js",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/react": "^16.8"
+	},
+	"peerDependencies": {
+		"framer": "^1.0",
+		"react": "^16.8"
+	},
+	"framer": {
+		"id": "8860ec90-e952-4d04-8842-0c87ea29f5a0"
+	},
+	"author": "Steve Ruiz",
+	"dependencies": {
+		"@framer/steveruizok.education": "^1.179.0",
+		"express": "^4.17.1",
+		"socket.io": "^2.2.0",
+		"socket.io-client": "^2.2.0"
+	}
+}
