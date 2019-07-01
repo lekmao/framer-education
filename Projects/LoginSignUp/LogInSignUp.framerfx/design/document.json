@@ -15,7 +15,7 @@
             "__class" : "CodeComponentNode",
             "aspectRatio" : null,
             "bottom" : 0,
-            "centerAnchorX" : 0.5013333333333333,
+            "centerAnchorX" : 0.5,
             "centerAnchorY" : 0.5178571428571429,
             "children" : [
 
@@ -111,7 +111,7 @@
             "id" : "jMk_mT2JM",
             "intrinsicHeight" : null,
             "intrinsicWidth" : null,
-            "left" : 1,
+            "left" : 0,
             "locked" : false,
             "name" : "Flow",
             "opacity" : 1,
@@ -129,7 +129,7 @@
             "rotation" : 0,
             "top" : 29,
             "visible" : true,
-            "width" : 374,
+            "width" : 375,
             "widthType" : 0
           },
           {
@@ -4782,6 +4782,496 @@
         "widthType" : 0
       },
       {
+        "__class" : "CodeComponentNode",
+        "aspectRatio" : null,
+        "bottom" : null,
+        "centerAnchorX" : 0,
+        "centerAnchorY" : 0,
+        "children" : [
+
+        ],
+        "clip" : true,
+        "codeComponentIdentifier" : "@framer\/steveruizok.education\/.\/Text.tsx_Text",
+        "codeComponentProps" : {
+          "background" : "none",
+          "color" : "var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 86, 254)) \/* {\"name\":\"Primary\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+          "paddingPerSide" : false,
+          "pc_resizeDirection" : "xaxis",
+          "resize" : false,
+          "text" : "Navigation",
+          "textAlign" : "left",
+          "type" : "display",
+          "verticalAlign" : "center"
+        },
+        "codeOverrideEnabled" : false,
+        "constraintsLocked" : false,
+        "deviceType" : null,
+        "exportOptions" : [
+
+        ],
+        "fillColor" : "rgba(255,255,255,1)",
+        "fillEnabled" : false,
+        "fillImage" : null,
+        "fillImagePixelHeight" : null,
+        "fillImagePixelWidth" : null,
+        "fillImageResize" : "fill",
+        "fillLinearGradient" : {
+          "__class" : "LinearGradient",
+          "alpha" : 1,
+          "angle" : 180,
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ]
+        },
+        "fillRadialGradient" : {
+          "__class" : "RadialGradient",
+          "alpha" : 1,
+          "centerAnchorX" : 0.5,
+          "centerAnchorY" : 0.5,
+          "heightFactor" : 0.5,
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ],
+          "widthFactor" : 0.5
+        },
+        "fillType" : "color",
+        "height" : 80,
+        "heightType" : 0,
+        "id" : "HzCfp5WED",
+        "intrinsicHeight" : 50,
+        "intrinsicWidth" : 200,
+        "left" : 823,
+        "locked" : false,
+        "name" : null,
+        "opacity" : 1,
+        "originalid" : null,
+        "parentid" : "wnE2snFvS",
+        "previewSettings" : null,
+        "radius" : 0,
+        "radiusBottomLeft" : 0,
+        "radiusBottomRight" : 0,
+        "radiusIsRelative" : false,
+        "radiusPerCorner" : false,
+        "radiusTopLeft" : 0,
+        "radiusTopRight" : 0,
+        "right" : null,
+        "rotation" : 0,
+        "top" : 1280,
+        "visible" : true,
+        "width" : 427,
+        "widthType" : 0
+      },
+      {
+        "__class" : "CodeComponentNode",
+        "aspectRatio" : null,
+        "bottom" : null,
+        "centerAnchorX" : 0,
+        "centerAnchorY" : 0,
+        "children" : [
+
+        ],
+        "clip" : true,
+        "codeComponentIdentifier" : "@framer\/steveruizok.education\/.\/Text.tsx_Text",
+        "codeComponentProps" : {
+          "background" : "none",
+          "color" : "var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 86, 254)) \/* {\"name\":\"Primary\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+          "paddingPerSide" : false,
+          "pc_resizeDirection" : "xaxis",
+          "resize" : false,
+          "text" : "Sign In \/ Sign Up",
+          "textAlign" : "left",
+          "type" : "display",
+          "verticalAlign" : "center"
+        },
+        "codeOverrideEnabled" : false,
+        "constraintsLocked" : false,
+        "deviceType" : null,
+        "exportOptions" : [
+
+        ],
+        "fillColor" : "rgba(255,255,255,1)",
+        "fillEnabled" : false,
+        "fillImage" : null,
+        "fillImagePixelHeight" : null,
+        "fillImagePixelWidth" : null,
+        "fillImageResize" : "fill",
+        "fillLinearGradient" : {
+          "__class" : "LinearGradient",
+          "alpha" : 1,
+          "angle" : 180,
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ]
+        },
+        "fillRadialGradient" : {
+          "__class" : "RadialGradient",
+          "alpha" : 1,
+          "centerAnchorX" : 0.5,
+          "centerAnchorY" : 0.5,
+          "heightFactor" : 0.5,
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ],
+          "widthFactor" : 0.5
+        },
+        "fillType" : "color",
+        "height" : 80,
+        "heightType" : 0,
+        "id" : "gCsxZ9fvW",
+        "intrinsicHeight" : 50,
+        "intrinsicWidth" : 200,
+        "left" : 823,
+        "locked" : false,
+        "name" : null,
+        "opacity" : 1,
+        "originalid" : null,
+        "parentid" : "wnE2snFvS",
+        "previewSettings" : null,
+        "radius" : 0,
+        "radiusBottomLeft" : 0,
+        "radiusBottomRight" : 0,
+        "radiusIsRelative" : false,
+        "radiusPerCorner" : false,
+        "radiusTopLeft" : 0,
+        "radiusTopRight" : 0,
+        "right" : null,
+        "rotation" : 0,
+        "top" : 1104,
+        "visible" : true,
+        "width" : 501,
+        "widthType" : 0
+      },
+      {
+        "__class" : "CodeComponentNode",
+        "aspectRatio" : null,
+        "bottom" : null,
+        "centerAnchorX" : 0,
+        "centerAnchorY" : 0,
+        "children" : [
+
+        ],
+        "clip" : true,
+        "codeComponentIdentifier" : "@framer\/steveruizok.education\/.\/Text.tsx_Text",
+        "codeComponentProps" : {
+          "background" : "none",
+          "color" : "var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 86, 254)) \/* {\"name\":\"Primary\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+          "paddingPerSide" : false,
+          "pc_resizeDirection" : "xaxis",
+          "resize" : false,
+          "text" : "Sign in",
+          "textAlign" : "left",
+          "type" : "h1",
+          "verticalAlign" : "center"
+        },
+        "codeOverrideEnabled" : false,
+        "constraintsLocked" : false,
+        "deviceType" : null,
+        "exportOptions" : [
+
+        ],
+        "fillColor" : "rgba(255,255,255,1)",
+        "fillEnabled" : false,
+        "fillImage" : null,
+        "fillImagePixelHeight" : null,
+        "fillImagePixelWidth" : null,
+        "fillImageResize" : "fill",
+        "fillLinearGradient" : {
+          "__class" : "LinearGradient",
+          "alpha" : 1,
+          "angle" : 180,
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ]
+        },
+        "fillRadialGradient" : {
+          "__class" : "RadialGradient",
+          "alpha" : 1,
+          "centerAnchorX" : 0.5,
+          "centerAnchorY" : 0.5,
+          "heightFactor" : 0.5,
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ],
+          "widthFactor" : 0.5
+        },
+        "fillType" : "color",
+        "height" : 80,
+        "heightType" : 0,
+        "id" : "doVCdJ8go",
+        "intrinsicHeight" : 50,
+        "intrinsicWidth" : 200,
+        "left" : 1343,
+        "locked" : false,
+        "name" : null,
+        "opacity" : 1,
+        "originalid" : null,
+        "parentid" : "wnE2snFvS",
+        "previewSettings" : null,
+        "radius" : 0,
+        "radiusBottomLeft" : 0,
+        "radiusBottomRight" : 0,
+        "radiusIsRelative" : false,
+        "radiusPerCorner" : false,
+        "radiusTopLeft" : 0,
+        "radiusTopRight" : 0,
+        "right" : null,
+        "rotation" : 0,
+        "top" : 1280,
+        "visible" : true,
+        "width" : 427,
+        "widthType" : 0
+      },
+      {
+        "__class" : "CodeComponentNode",
+        "aspectRatio" : null,
+        "bottom" : null,
+        "centerAnchorX" : 0,
+        "centerAnchorY" : 0,
+        "children" : [
+
+        ],
+        "clip" : true,
+        "codeComponentIdentifier" : "@framer\/steveruizok.education\/.\/Text.tsx_Text",
+        "codeComponentProps" : {
+          "background" : "none",
+          "color" : "var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 86, 254)) \/* {\"name\":\"Primary\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+          "paddingPerSide" : false,
+          "pc_resizeDirection" : "xaxis",
+          "resize" : false,
+          "text" : "Sign up",
+          "textAlign" : "left",
+          "type" : "h1",
+          "verticalAlign" : "center"
+        },
+        "codeOverrideEnabled" : false,
+        "constraintsLocked" : false,
+        "deviceType" : null,
+        "exportOptions" : [
+
+        ],
+        "fillColor" : "rgba(255,255,255,1)",
+        "fillEnabled" : false,
+        "fillImage" : null,
+        "fillImagePixelHeight" : null,
+        "fillImagePixelWidth" : null,
+        "fillImageResize" : "fill",
+        "fillLinearGradient" : {
+          "__class" : "LinearGradient",
+          "alpha" : 1,
+          "angle" : 180,
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ]
+        },
+        "fillRadialGradient" : {
+          "__class" : "RadialGradient",
+          "alpha" : 1,
+          "centerAnchorX" : 0.5,
+          "centerAnchorY" : 0.5,
+          "heightFactor" : 0.5,
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ],
+          "widthFactor" : 0.5
+        },
+        "fillType" : "color",
+        "height" : 80,
+        "heightType" : 0,
+        "id" : "msZNi5VlX",
+        "intrinsicHeight" : 50,
+        "intrinsicWidth" : 200,
+        "left" : 1800,
+        "locked" : false,
+        "name" : null,
+        "opacity" : 1,
+        "originalid" : null,
+        "parentid" : "wnE2snFvS",
+        "previewSettings" : null,
+        "radius" : 0,
+        "radiusBottomLeft" : 0,
+        "radiusBottomRight" : 0,
+        "radiusIsRelative" : false,
+        "radiusPerCorner" : false,
+        "radiusTopLeft" : 0,
+        "radiusTopRight" : 0,
+        "right" : null,
+        "rotation" : 0,
+        "top" : 1280,
+        "visible" : true,
+        "width" : 427,
+        "widthType" : 0
+      },
+      {
+        "__class" : "CodeComponentNode",
+        "aspectRatio" : null,
+        "bottom" : null,
+        "centerAnchorX" : 0,
+        "centerAnchorY" : 0,
+        "children" : [
+
+        ],
+        "clip" : true,
+        "codeComponentIdentifier" : "@framer\/steveruizok.education\/.\/Text.tsx_Text",
+        "codeComponentProps" : {
+          "background" : "none",
+          "color" : "var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 86, 254)) \/* {\"name\":\"Primary\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+          "paddingPerSide" : false,
+          "pc_resizeDirection" : "xaxis",
+          "resize" : false,
+          "text" : "Signed in",
+          "textAlign" : "left",
+          "type" : "h1",
+          "verticalAlign" : "center"
+        },
+        "codeOverrideEnabled" : false,
+        "constraintsLocked" : false,
+        "deviceType" : null,
+        "exportOptions" : [
+
+        ],
+        "fillColor" : "rgba(255,255,255,1)",
+        "fillEnabled" : false,
+        "fillImage" : null,
+        "fillImagePixelHeight" : null,
+        "fillImagePixelWidth" : null,
+        "fillImageResize" : "fill",
+        "fillLinearGradient" : {
+          "__class" : "LinearGradient",
+          "alpha" : 1,
+          "angle" : 180,
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ]
+        },
+        "fillRadialGradient" : {
+          "__class" : "RadialGradient",
+          "alpha" : 1,
+          "centerAnchorX" : 0.5,
+          "centerAnchorY" : 0.5,
+          "heightFactor" : 0.5,
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ],
+          "widthFactor" : 0.5
+        },
+        "fillType" : "color",
+        "height" : 80,
+        "heightType" : 0,
+        "id" : "z0Nu9Yv89",
+        "intrinsicHeight" : 50,
+        "intrinsicWidth" : 200,
+        "left" : 2266,
+        "locked" : false,
+        "name" : null,
+        "opacity" : 1,
+        "originalid" : null,
+        "parentid" : "wnE2snFvS",
+        "previewSettings" : null,
+        "radius" : 0,
+        "radiusBottomLeft" : 0,
+        "radiusBottomRight" : 0,
+        "radiusIsRelative" : false,
+        "radiusPerCorner" : false,
+        "radiusTopLeft" : 0,
+        "radiusTopRight" : 0,
+        "right" : null,
+        "rotation" : 0,
+        "top" : 1280,
+        "visible" : true,
+        "width" : 427,
+        "widthType" : 0
+      },
+      {
         "__class" : "FrameNode",
         "aspectRatio" : null,
         "blendingEnabled" : 0,
@@ -4896,7 +5386,7 @@
             "blendingMode" : "normal",
             "bottom" : null,
             "centerAnchorX" : 0.5,
-            "centerAnchorY" : 0.018472906403940888,
+            "centerAnchorY" : 0.023399014778325122,
             "children" : [
               {
                 "__class" : "FrameNode",
@@ -6998,7 +7488,7 @@
                 "replicaInfo" : null,
                 "right" : 14,
                 "rotation" : 0,
-                "top" : null,
+                "top" : 14,
                 "visible" : true,
                 "width" : 67,
                 "widthType" : 0
@@ -7184,7 +7674,7 @@
                 "replicaInfo" : null,
                 "right" : null,
                 "rotation" : 0,
-                "top" : null,
+                "top" : 11,
                 "visible" : true,
                 "width" : 54,
                 "widthType" : 0
@@ -7241,7 +7731,7 @@
               "widthFactor" : 0.5
             },
             "fillType" : "color",
-            "height" : 30,
+            "height" : 38,
             "heightType" : 0,
             "id" : "@framer\/steveruizok.education-XREstntDl-PPIpguwXL",
             "intrinsicHeight" : null,
@@ -7963,13 +8453,112 @@
             "widthType" : 0
           },
           {
+            "__class" : "CodeComponentNode",
+            "aspectRatio" : null,
+            "bottom" : 84,
+            "centerAnchorX" : 0.5,
+            "centerAnchorY" : 0.50246305418719217,
+            "children" : [
+
+            ],
+            "clip" : false,
+            "codeComponentIdentifier" : "framer\/Stack",
+            "codeComponentProps" : {
+              "alignment" : "center",
+              "direction" : "vertical",
+              "distribution" : "start",
+              "gap" : 16,
+              "padding" : 16,
+              "paddingBottom" : 16,
+              "paddingLeft" : 16,
+              "paddingPerSide" : false,
+              "paddingRight" : 16,
+              "paddingTop" : 16
+            },
+            "codeOverrideEnabled" : false,
+            "constraintsLocked" : false,
+            "deviceType" : null,
+            "exportOptions" : [
+
+            ],
+            "fillColor" : "rgba(255,255,255,1)",
+            "fillEnabled" : false,
+            "fillImage" : null,
+            "fillImagePixelHeight" : null,
+            "fillImagePixelWidth" : null,
+            "fillImageResize" : "fill",
+            "fillLinearGradient" : {
+              "__class" : "LinearGradient",
+              "alpha" : 1,
+              "angle" : 180,
+              "stops" : [
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 0,
+                  "value" : "rgba(0,0,0,0)"
+                },
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 1,
+                  "value" : "black"
+                }
+              ]
+            },
+            "fillRadialGradient" : {
+              "__class" : "RadialGradient",
+              "alpha" : 1,
+              "centerAnchorX" : 0.5,
+              "centerAnchorY" : 0.5,
+              "heightFactor" : 0.5,
+              "stops" : [
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 0,
+                  "value" : "rgba(0,0,0,0)"
+                },
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 1,
+                  "value" : "black"
+                }
+              ],
+              "widthFactor" : 0.5
+            },
+            "fillType" : "color",
+            "height" : 640,
+            "heightType" : 0,
+            "id" : "@framer\/steveruizok.education-hMCzrRmLr-gDQwW4QxT",
+            "intrinsicHeight" : null,
+            "intrinsicWidth" : null,
+            "left" : 0,
+            "locked" : false,
+            "name" : "Content",
+            "opacity" : 1,
+            "originalid" : null,
+            "parentid" : "@framer\/steveruizok.education-hMCzrRmLr",
+            "previewSettings" : null,
+            "radius" : 0,
+            "radiusBottomLeft" : 0,
+            "radiusBottomRight" : 0,
+            "radiusIsRelative" : false,
+            "radiusPerCorner" : false,
+            "radiusTopLeft" : 0,
+            "radiusTopRight" : 0,
+            "right" : 0,
+            "rotation" : 0,
+            "top" : 88,
+            "visible" : true,
+            "width" : 375,
+            "widthType" : 0
+          },
+          {
             "__class" : "FrameNode",
             "aspectRatio" : null,
             "blendingEnabled" : 0,
             "blendingMode" : "normal",
             "bottom" : null,
             "centerAnchorX" : 0.5,
-            "centerAnchorY" : 0.018472906403940888,
+            "centerAnchorY" : 0.023399014778325122,
             "children" : [
               {
                 "__class" : "FrameNode",
@@ -8057,7 +8646,7 @@
                         "fillType" : "color",
                         "height" : 11.33333333333333,
                         "heightType" : 0,
-                        "id" : "@framer\/steveruizok.education-hMCzrRmLr-hMCzrRmLrPPIpguwXLWj4Bh4om5",
+                        "id" : "@framer\/steveruizok.education-hMCzrRmLr-CRt7wfDCj",
                         "intrinsicHeight" : null,
                         "intrinsicWidth" : null,
                         "isExternalMaster" : null,
@@ -8072,7 +8661,7 @@
                         "navigationTransitionDirection" : "left",
                         "opacity" : 0.34999999999999998,
                         "originalid" : null,
-                        "parentid" : "@framer\/steveruizok.education-hMCzrRmLr-hMCzrRmLrPPIpguwXLAEoFijeX9",
+                        "parentid" : "@framer\/steveruizok.education-hMCzrRmLr-cWeCNlzLx",
                         "previewSettings" : null,
                         "radius" : 2.6666667461395259,
                         "radiusBottomLeft" : 0,
@@ -8147,12 +8736,12 @@
                             },
                             "fillType" : "color",
                             "height" : 4,
-                            "id" : "@framer\/steveruizok.education-hMCzrRmLr-hMCzrRmLrPPIpguwXLTwGGGsLFw",
+                            "id" : "@framer\/steveruizok.education-hMCzrRmLr-desPPz0uN",
                             "locked" : false,
                             "name" : "Cap",
                             "opacity" : 0.40000000000000002,
                             "originalid" : null,
-                            "parentid" : "@framer\/steveruizok.education-hMCzrRmLr-hMCzrRmLrPPIpguwXLbbVKKavnT",
+                            "parentid" : "@framer\/steveruizok.education-hMCzrRmLr-j0URR35DU",
                             "pathClosed" : false,
                             "pathSegments" : [
                               {
@@ -8261,7 +8850,7 @@
                         "fillType" : "color",
                         "height" : 4,
                         "heightType" : 0,
-                        "id" : "@framer\/steveruizok.education-hMCzrRmLr-hMCzrRmLrPPIpguwXLbbVKKavnT",
+                        "id" : "@framer\/steveruizok.education-hMCzrRmLr-j0URR35DU",
                         "left" : null,
                         "locked" : false,
                         "name" : null,
@@ -8271,7 +8860,7 @@
                         "navigationTransitionDirection" : "left",
                         "opacity" : 1,
                         "originalid" : null,
-                        "parentid" : "@framer\/steveruizok.education-hMCzrRmLr-hMCzrRmLrPPIpguwXLAEoFijeX9",
+                        "parentid" : "@framer\/steveruizok.education-hMCzrRmLr-cWeCNlzLx",
                         "previewSettings" : null,
                         "radius" : 0,
                         "radiusBottomLeft" : 0,
@@ -8351,7 +8940,7 @@
                         "fillType" : "color",
                         "height" : 7.3333333333333321,
                         "heightType" : 0,
-                        "id" : "@framer\/steveruizok.education-hMCzrRmLr-hMCzrRmLrPPIpguwXLL46xfUiU1",
+                        "id" : "@framer\/steveruizok.education-hMCzrRmLr-viw14wWH_",
                         "intrinsicHeight" : null,
                         "intrinsicWidth" : null,
                         "isExternalMaster" : null,
@@ -8366,7 +8955,7 @@
                         "navigationTransitionDirection" : "left",
                         "opacity" : 1,
                         "originalid" : null,
-                        "parentid" : "@framer\/steveruizok.education-hMCzrRmLr-hMCzrRmLrPPIpguwXLAEoFijeX9",
+                        "parentid" : "@framer\/steveruizok.education-hMCzrRmLr-cWeCNlzLx",
                         "previewSettings" : null,
                         "radius" : 1.333333373069763,
                         "radiusBottomLeft" : 0,
@@ -8437,7 +9026,7 @@
                     "fillType" : "color",
                     "height" : 12,
                     "heightType" : 0,
-                    "id" : "@framer\/steveruizok.education-hMCzrRmLr-hMCzrRmLrPPIpguwXLAEoFijeX9",
+                    "id" : "@framer\/steveruizok.education-hMCzrRmLr-cWeCNlzLx",
                     "intrinsicHeight" : null,
                     "intrinsicWidth" : null,
                     "isExternalMaster" : null,
@@ -8452,7 +9041,7 @@
                     "navigationTransitionDirection" : "left",
                     "opacity" : 1,
                     "originalid" : null,
-                    "parentid" : "@framer\/steveruizok.education-hMCzrRmLr-hMCzrRmLrPPIpguwXLEkWU64Z9X",
+                    "parentid" : "@framer\/steveruizok.education-hMCzrRmLr-cc2eNI2aC",
                     "previewSettings" : null,
                     "radius" : 0,
                     "radiusBottomLeft" : 0,
@@ -8531,12 +9120,12 @@
                             },
                             "fillType" : "color",
                             "height" : 4.7581296486773308,
-                            "id" : "@framer\/steveruizok.education-hMCzrRmLr-hMCzrRmLrPPIpguwXLvgV5eGzWd",
+                            "id" : "@framer\/steveruizok.education-hMCzrRmLr-xqtyd85AB",
                             "locked" : false,
                             "name" : "Wifi-path",
                             "opacity" : 1,
                             "originalid" : null,
-                            "parentid" : "@framer\/steveruizok.education-hMCzrRmLr-hMCzrRmLrPPIpguwXLJpwDT22xJ",
+                            "parentid" : "@framer\/steveruizok.education-hMCzrRmLr-hO7o5iFgB",
                             "pathClosed" : true,
                             "pathSegments" : [
                               {
@@ -8731,12 +9320,12 @@
                             },
                             "fillType" : "color",
                             "height" : 3.6453904791632561,
-                            "id" : "@framer\/steveruizok.education-hMCzrRmLr-hMCzrRmLrPPIpguwXLzLGh_ZabX",
+                            "id" : "@framer\/steveruizok.education-hMCzrRmLr-n4jz8BTxy",
                             "locked" : false,
                             "name" : "Wifi-path",
                             "opacity" : 1,
                             "originalid" : null,
-                            "parentid" : "@framer\/steveruizok.education-hMCzrRmLr-hMCzrRmLrPPIpguwXLJpwDT22xJ",
+                            "parentid" : "@framer\/steveruizok.education-hMCzrRmLr-hO7o5iFgB",
                             "pathClosed" : true,
                             "pathSegments" : [
                               {
@@ -8931,12 +9520,12 @@
                             },
                             "fillType" : "color",
                             "height" : 3.3850017582976251,
-                            "id" : "@framer\/steveruizok.education-hMCzrRmLr-hMCzrRmLrPPIpguwXLcGDAvMucm",
+                            "id" : "@framer\/steveruizok.education-hMCzrRmLr-BKiVsyjPb",
                             "locked" : false,
                             "name" : "Wifi-path",
                             "opacity" : 1,
                             "originalid" : null,
-                            "parentid" : "@framer\/steveruizok.education-hMCzrRmLr-hMCzrRmLrPPIpguwXLJpwDT22xJ",
+                            "parentid" : "@framer\/steveruizok.education-hMCzrRmLr-hO7o5iFgB",
                             "pathClosed" : true,
                             "pathSegments" : [
                               {
@@ -9096,12 +9685,12 @@
                         },
                         "fillType" : "color",
                         "height" : 10.978894633358674,
-                        "id" : "@framer\/steveruizok.education-hMCzrRmLr-hMCzrRmLrPPIpguwXLJpwDT22xJ",
+                        "id" : "@framer\/steveruizok.education-hMCzrRmLr-hO7o5iFgB",
                         "locked" : false,
                         "name" : "Wifi",
                         "opacity" : 1,
                         "originalid" : null,
-                        "parentid" : "@framer\/steveruizok.education-hMCzrRmLr-hMCzrRmLrPPIpguwXLt_mol6GJN",
+                        "parentid" : "@framer\/steveruizok.education-hMCzrRmLr-bDl5T_bB7",
                         "pathBoolean" : 4,
                         "replicaInfo" : null,
                         "rotation" : 0,
@@ -9164,7 +9753,7 @@
                     "fillType" : "color",
                     "height" : 12,
                     "heightType" : 0,
-                    "id" : "@framer\/steveruizok.education-hMCzrRmLr-hMCzrRmLrPPIpguwXLt_mol6GJN",
+                    "id" : "@framer\/steveruizok.education-hMCzrRmLr-bDl5T_bB7",
                     "left" : null,
                     "locked" : false,
                     "name" : null,
@@ -9174,7 +9763,7 @@
                     "navigationTransitionDirection" : "left",
                     "opacity" : 1,
                     "originalid" : null,
-                    "parentid" : "@framer\/steveruizok.education-hMCzrRmLr-hMCzrRmLrPPIpguwXLEkWU64Z9X",
+                    "parentid" : "@framer\/steveruizok.education-hMCzrRmLr-cc2eNI2aC",
                     "previewSettings" : null,
                     "radius" : 0,
                     "radiusBottomLeft" : 0,
@@ -9252,12 +9841,12 @@
                             },
                             "fillType" : "color",
                             "height" : 4.0000000000000018,
-                            "id" : "@framer\/steveruizok.education-hMCzrRmLr-hMCzrRmLrPPIpguwXLjyMuPI9pk",
+                            "id" : "@framer\/steveruizok.education-hMCzrRmLr-STVYZYnS9",
                             "locked" : false,
                             "name" : "Cellular-Connection-path",
                             "opacity" : 1,
                             "originalid" : null,
-                            "parentid" : "@framer\/steveruizok.education-hMCzrRmLr-hMCzrRmLrPPIpguwXLlnAeKLUmk",
+                            "parentid" : "@framer\/steveruizok.education-hMCzrRmLr-GmSNGH5f5",
                             "pathClosed" : true,
                             "pathSegments" : [
                               {
@@ -9419,12 +10008,12 @@
                             },
                             "fillType" : "color",
                             "height" : 6.0000000000000018,
-                            "id" : "@framer\/steveruizok.education-hMCzrRmLr-hMCzrRmLrPPIpguwXLScVmdyJtm",
+                            "id" : "@framer\/steveruizok.education-hMCzrRmLr-JOlsAKkaI",
                             "locked" : false,
                             "name" : "Cellular-Connection-path",
                             "opacity" : 1,
                             "originalid" : null,
-                            "parentid" : "@framer\/steveruizok.education-hMCzrRmLr-hMCzrRmLrPPIpguwXLlnAeKLUmk",
+                            "parentid" : "@framer\/steveruizok.education-hMCzrRmLr-GmSNGH5f5",
                             "pathClosed" : true,
                             "pathSegments" : [
                               {
@@ -9575,12 +10164,12 @@
                             },
                             "fillType" : "color",
                             "height" : 8.3333333333333321,
-                            "id" : "@framer\/steveruizok.education-hMCzrRmLr-hMCzrRmLrPPIpguwXLriSf7Nj19",
+                            "id" : "@framer\/steveruizok.education-hMCzrRmLr-uMMQEdLOi",
                             "locked" : false,
                             "name" : "Cellular-Connection-path",
                             "opacity" : 1,
                             "originalid" : null,
-                            "parentid" : "@framer\/steveruizok.education-hMCzrRmLr-hMCzrRmLrPPIpguwXLlnAeKLUmk",
+                            "parentid" : "@framer\/steveruizok.education-hMCzrRmLr-GmSNGH5f5",
                             "pathClosed" : true,
                             "pathSegments" : [
                               {
@@ -9731,12 +10320,12 @@
                             },
                             "fillType" : "color",
                             "height" : 10.66666666666667,
-                            "id" : "@framer\/steveruizok.education-hMCzrRmLr-hMCzrRmLrPPIpguwXLbhxVfoqvB",
+                            "id" : "@framer\/steveruizok.education-hMCzrRmLr-LBYrAYntM",
                             "locked" : false,
                             "name" : "Cellular-Connection-path",
                             "opacity" : 1,
                             "originalid" : null,
-                            "parentid" : "@framer\/steveruizok.education-hMCzrRmLr-hMCzrRmLrPPIpguwXLlnAeKLUmk",
+                            "parentid" : "@framer\/steveruizok.education-hMCzrRmLr-GmSNGH5f5",
                             "pathClosed" : true,
                             "pathSegments" : [
                               {
@@ -9896,12 +10485,12 @@
                         },
                         "fillType" : "color",
                         "height" : 10.666666666666671,
-                        "id" : "@framer\/steveruizok.education-hMCzrRmLr-hMCzrRmLrPPIpguwXLlnAeKLUmk",
+                        "id" : "@framer\/steveruizok.education-hMCzrRmLr-GmSNGH5f5",
                         "locked" : false,
                         "name" : "Cellular Connection",
                         "opacity" : 1,
                         "originalid" : null,
-                        "parentid" : "@framer\/steveruizok.education-hMCzrRmLr-hMCzrRmLrPPIpguwXLiceLOAa8e",
+                        "parentid" : "@framer\/steveruizok.education-hMCzrRmLr-FoFY0sbOm",
                         "pathBoolean" : 4,
                         "replicaInfo" : null,
                         "rotation" : 0,
@@ -9964,17 +10553,17 @@
                     "fillType" : "color",
                     "height" : 12,
                     "heightType" : 0,
-                    "id" : "@framer\/steveruizok.education-hMCzrRmLr-hMCzrRmLrPPIpguwXLiceLOAa8e",
+                    "id" : "@framer\/steveruizok.education-hMCzrRmLr-FoFY0sbOm",
                     "left" : null,
                     "locked" : false,
-                    "name" : null,
+                    "name" : "Graphic",
                     "navigationTarget" : null,
                     "navigationTransition" : "push",
                     "navigationTransitionBackdropColor" : "rgba(4,4,15,.4)",
                     "navigationTransitionDirection" : "left",
                     "opacity" : 1,
                     "originalid" : null,
-                    "parentid" : "@framer\/steveruizok.education-hMCzrRmLr-hMCzrRmLrPPIpguwXLEkWU64Z9X",
+                    "parentid" : "@framer\/steveruizok.education-hMCzrRmLr-cc2eNI2aC",
                     "previewSettings" : null,
                     "radius" : 0,
                     "radiusBottomLeft" : 0,
@@ -10044,7 +10633,7 @@
                 "fillType" : "color",
                 "height" : 12,
                 "heightType" : 0,
-                "id" : "@framer\/steveruizok.education-hMCzrRmLr-hMCzrRmLrPPIpguwXLEkWU64Z9X",
+                "id" : "@framer\/steveruizok.education-hMCzrRmLr-cc2eNI2aC",
                 "intrinsicHeight" : null,
                 "intrinsicWidth" : null,
                 "isExternalMaster" : null,
@@ -10059,7 +10648,7 @@
                 "navigationTransitionDirection" : "left",
                 "opacity" : 1,
                 "originalid" : null,
-                "parentid" : "@framer\/steveruizok.education-hMCzrRmLr-hMCzrRmLrPPIpguwXL",
+                "parentid" : "@framer\/steveruizok.education-hMCzrRmLr-bZj4A9FpM",
                 "previewSettings" : null,
                 "radius" : 0,
                 "radiusBottomLeft" : 0,
@@ -10071,7 +10660,7 @@
                 "replicaInfo" : null,
                 "right" : 14,
                 "rotation" : 0,
-                "top" : null,
+                "top" : 14,
                 "visible" : true,
                 "width" : 67,
                 "widthType" : 0
@@ -10098,14 +10687,14 @@
                     ],
                     "height" : 18,
                     "heightType" : 0,
-                    "id" : "@framer\/steveruizok.education-hMCzrRmLr-hMCzrRmLrPPIpguwXLb_jq10weH",
+                    "id" : "@framer\/steveruizok.education-hMCzrRmLr-JntH_SzVe",
                     "isTarget" : false,
                     "left" : 0,
                     "locked" : false,
                     "name" : "Time",
                     "opacity" : 1,
                     "originalid" : null,
-                    "parentid" : "@framer\/steveruizok.education-hMCzrRmLr-hMCzrRmLrPPIpguwXLY7MB6cxoK",
+                    "parentid" : "@framer\/steveruizok.education-hMCzrRmLr-yj_9SPJlC",
                     "replicaInfo" : null,
                     "right" : null,
                     "rotation" : 0,
@@ -10230,7 +10819,7 @@
                 "fillType" : "color",
                 "height" : 19,
                 "heightType" : 0,
-                "id" : "@framer\/steveruizok.education-hMCzrRmLr-hMCzrRmLrPPIpguwXLY7MB6cxoK",
+                "id" : "@framer\/steveruizok.education-hMCzrRmLr-yj_9SPJlC",
                 "intrinsicHeight" : null,
                 "intrinsicWidth" : null,
                 "isExternalMaster" : null,
@@ -10245,7 +10834,7 @@
                 "navigationTransitionDirection" : "left",
                 "opacity" : 1,
                 "originalid" : null,
-                "parentid" : "@framer\/steveruizok.education-hMCzrRmLr-hMCzrRmLrPPIpguwXL",
+                "parentid" : "@framer\/steveruizok.education-hMCzrRmLr-bZj4A9FpM",
                 "previewSettings" : null,
                 "radius" : 0,
                 "radiusBottomLeft" : 0,
@@ -10257,7 +10846,7 @@
                 "replicaInfo" : null,
                 "right" : null,
                 "rotation" : 0,
-                "top" : null,
+                "top" : 11,
                 "visible" : true,
                 "width" : 54,
                 "widthType" : 0
@@ -10314,9 +10903,9 @@
               "widthFactor" : 0.5
             },
             "fillType" : "color",
-            "height" : 30,
+            "height" : 38,
             "heightType" : 0,
-            "id" : "@framer\/steveruizok.education-hMCzrRmLr-hMCzrRmLrPPIpguwXL",
+            "id" : "@framer\/steveruizok.education-hMCzrRmLr-bZj4A9FpM",
             "intrinsicHeight" : null,
             "intrinsicWidth" : null,
             "isExternalMaster" : null,
@@ -10344,105 +10933,6 @@
             "right" : 0,
             "rotation" : 0,
             "top" : 0,
-            "visible" : true,
-            "width" : 375,
-            "widthType" : 0
-          },
-          {
-            "__class" : "CodeComponentNode",
-            "aspectRatio" : null,
-            "bottom" : 84,
-            "centerAnchorX" : 0.5,
-            "centerAnchorY" : 0.50246305418719217,
-            "children" : [
-
-            ],
-            "clip" : false,
-            "codeComponentIdentifier" : "framer\/Stack",
-            "codeComponentProps" : {
-              "alignment" : "center",
-              "direction" : "vertical",
-              "distribution" : "start",
-              "gap" : 16,
-              "padding" : 16,
-              "paddingBottom" : 16,
-              "paddingLeft" : 16,
-              "paddingPerSide" : false,
-              "paddingRight" : 16,
-              "paddingTop" : 16
-            },
-            "codeOverrideEnabled" : false,
-            "constraintsLocked" : false,
-            "deviceType" : null,
-            "exportOptions" : [
-
-            ],
-            "fillColor" : "rgba(255,255,255,1)",
-            "fillEnabled" : false,
-            "fillImage" : null,
-            "fillImagePixelHeight" : null,
-            "fillImagePixelWidth" : null,
-            "fillImageResize" : "fill",
-            "fillLinearGradient" : {
-              "__class" : "LinearGradient",
-              "alpha" : 1,
-              "angle" : 180,
-              "stops" : [
-                {
-                  "__class" : "GradientColorStop",
-                  "position" : 0,
-                  "value" : "rgba(0,0,0,0)"
-                },
-                {
-                  "__class" : "GradientColorStop",
-                  "position" : 1,
-                  "value" : "black"
-                }
-              ]
-            },
-            "fillRadialGradient" : {
-              "__class" : "RadialGradient",
-              "alpha" : 1,
-              "centerAnchorX" : 0.5,
-              "centerAnchorY" : 0.5,
-              "heightFactor" : 0.5,
-              "stops" : [
-                {
-                  "__class" : "GradientColorStop",
-                  "position" : 0,
-                  "value" : "rgba(0,0,0,0)"
-                },
-                {
-                  "__class" : "GradientColorStop",
-                  "position" : 1,
-                  "value" : "black"
-                }
-              ],
-              "widthFactor" : 0.5
-            },
-            "fillType" : "color",
-            "height" : 640,
-            "heightType" : 0,
-            "id" : "@framer\/steveruizok.education-hMCzrRmLr-gDQwW4QxT",
-            "intrinsicHeight" : null,
-            "intrinsicWidth" : null,
-            "left" : 0,
-            "locked" : false,
-            "name" : "Content",
-            "opacity" : 1,
-            "originalid" : null,
-            "parentid" : "@framer\/steveruizok.education-hMCzrRmLr",
-            "previewSettings" : null,
-            "radius" : 0,
-            "radiusBottomLeft" : 0,
-            "radiusBottomRight" : 0,
-            "radiusIsRelative" : false,
-            "radiusPerCorner" : false,
-            "radiusTopLeft" : 0,
-            "radiusTopRight" : 0,
-            "right" : 0,
-            "rotation" : 0,
-            "top" : 88,
             "visible" : true,
             "width" : 375,
             "widthType" : 0
@@ -10531,496 +11021,6 @@
         "top" : 0,
         "visible" : true,
         "width" : 375,
-        "widthType" : 0
-      },
-      {
-        "__class" : "CodeComponentNode",
-        "aspectRatio" : null,
-        "bottom" : null,
-        "centerAnchorX" : 0,
-        "centerAnchorY" : 0,
-        "children" : [
-
-        ],
-        "clip" : true,
-        "codeComponentIdentifier" : "@framer\/steveruizok.education\/.\/Text.tsx_Text",
-        "codeComponentProps" : {
-          "background" : "none",
-          "color" : "var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 86, 254)) \/* {\"name\":\"Primary\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
-          "paddingPerSide" : false,
-          "pc_resizeDirection" : "xaxis",
-          "resize" : false,
-          "text" : "Navigation",
-          "textAlign" : "left",
-          "type" : "display",
-          "verticalAlign" : "center"
-        },
-        "codeOverrideEnabled" : false,
-        "constraintsLocked" : false,
-        "deviceType" : null,
-        "exportOptions" : [
-
-        ],
-        "fillColor" : "rgba(255,255,255,1)",
-        "fillEnabled" : false,
-        "fillImage" : null,
-        "fillImagePixelHeight" : null,
-        "fillImagePixelWidth" : null,
-        "fillImageResize" : "fill",
-        "fillLinearGradient" : {
-          "__class" : "LinearGradient",
-          "alpha" : 1,
-          "angle" : 180,
-          "stops" : [
-            {
-              "__class" : "GradientColorStop",
-              "position" : 0,
-              "value" : "rgba(0,0,0,0)"
-            },
-            {
-              "__class" : "GradientColorStop",
-              "position" : 1,
-              "value" : "black"
-            }
-          ]
-        },
-        "fillRadialGradient" : {
-          "__class" : "RadialGradient",
-          "alpha" : 1,
-          "centerAnchorX" : 0.5,
-          "centerAnchorY" : 0.5,
-          "heightFactor" : 0.5,
-          "stops" : [
-            {
-              "__class" : "GradientColorStop",
-              "position" : 0,
-              "value" : "rgba(0,0,0,0)"
-            },
-            {
-              "__class" : "GradientColorStop",
-              "position" : 1,
-              "value" : "black"
-            }
-          ],
-          "widthFactor" : 0.5
-        },
-        "fillType" : "color",
-        "height" : 80,
-        "heightType" : 0,
-        "id" : "HzCfp5WED",
-        "intrinsicHeight" : 50,
-        "intrinsicWidth" : 200,
-        "left" : 823,
-        "locked" : false,
-        "name" : null,
-        "opacity" : 1,
-        "originalid" : null,
-        "parentid" : "wnE2snFvS",
-        "previewSettings" : null,
-        "radius" : 0,
-        "radiusBottomLeft" : 0,
-        "radiusBottomRight" : 0,
-        "radiusIsRelative" : false,
-        "radiusPerCorner" : false,
-        "radiusTopLeft" : 0,
-        "radiusTopRight" : 0,
-        "right" : null,
-        "rotation" : 0,
-        "top" : 1280,
-        "visible" : true,
-        "width" : 427,
-        "widthType" : 0
-      },
-      {
-        "__class" : "CodeComponentNode",
-        "aspectRatio" : null,
-        "bottom" : null,
-        "centerAnchorX" : 0,
-        "centerAnchorY" : 0,
-        "children" : [
-
-        ],
-        "clip" : true,
-        "codeComponentIdentifier" : "@framer\/steveruizok.education\/.\/Text.tsx_Text",
-        "codeComponentProps" : {
-          "background" : "none",
-          "color" : "var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 86, 254)) \/* {\"name\":\"Primary\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
-          "paddingPerSide" : false,
-          "pc_resizeDirection" : "xaxis",
-          "resize" : false,
-          "text" : "Sign In \/ Sign Up",
-          "textAlign" : "left",
-          "type" : "display",
-          "verticalAlign" : "center"
-        },
-        "codeOverrideEnabled" : false,
-        "constraintsLocked" : false,
-        "deviceType" : null,
-        "exportOptions" : [
-
-        ],
-        "fillColor" : "rgba(255,255,255,1)",
-        "fillEnabled" : false,
-        "fillImage" : null,
-        "fillImagePixelHeight" : null,
-        "fillImagePixelWidth" : null,
-        "fillImageResize" : "fill",
-        "fillLinearGradient" : {
-          "__class" : "LinearGradient",
-          "alpha" : 1,
-          "angle" : 180,
-          "stops" : [
-            {
-              "__class" : "GradientColorStop",
-              "position" : 0,
-              "value" : "rgba(0,0,0,0)"
-            },
-            {
-              "__class" : "GradientColorStop",
-              "position" : 1,
-              "value" : "black"
-            }
-          ]
-        },
-        "fillRadialGradient" : {
-          "__class" : "RadialGradient",
-          "alpha" : 1,
-          "centerAnchorX" : 0.5,
-          "centerAnchorY" : 0.5,
-          "heightFactor" : 0.5,
-          "stops" : [
-            {
-              "__class" : "GradientColorStop",
-              "position" : 0,
-              "value" : "rgba(0,0,0,0)"
-            },
-            {
-              "__class" : "GradientColorStop",
-              "position" : 1,
-              "value" : "black"
-            }
-          ],
-          "widthFactor" : 0.5
-        },
-        "fillType" : "color",
-        "height" : 80,
-        "heightType" : 0,
-        "id" : "gCsxZ9fvW",
-        "intrinsicHeight" : 50,
-        "intrinsicWidth" : 200,
-        "left" : 823,
-        "locked" : false,
-        "name" : null,
-        "opacity" : 1,
-        "originalid" : null,
-        "parentid" : "wnE2snFvS",
-        "previewSettings" : null,
-        "radius" : 0,
-        "radiusBottomLeft" : 0,
-        "radiusBottomRight" : 0,
-        "radiusIsRelative" : false,
-        "radiusPerCorner" : false,
-        "radiusTopLeft" : 0,
-        "radiusTopRight" : 0,
-        "right" : null,
-        "rotation" : 0,
-        "top" : 1104,
-        "visible" : true,
-        "width" : 501,
-        "widthType" : 0
-      },
-      {
-        "__class" : "CodeComponentNode",
-        "aspectRatio" : null,
-        "bottom" : null,
-        "centerAnchorX" : 0,
-        "centerAnchorY" : 0,
-        "children" : [
-
-        ],
-        "clip" : true,
-        "codeComponentIdentifier" : "@framer\/steveruizok.education\/.\/Text.tsx_Text",
-        "codeComponentProps" : {
-          "background" : "none",
-          "color" : "var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 86, 254)) \/* {\"name\":\"Primary\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
-          "paddingPerSide" : false,
-          "pc_resizeDirection" : "xaxis",
-          "resize" : false,
-          "text" : "Sign in",
-          "textAlign" : "left",
-          "type" : "h1",
-          "verticalAlign" : "center"
-        },
-        "codeOverrideEnabled" : false,
-        "constraintsLocked" : false,
-        "deviceType" : null,
-        "exportOptions" : [
-
-        ],
-        "fillColor" : "rgba(255,255,255,1)",
-        "fillEnabled" : false,
-        "fillImage" : null,
-        "fillImagePixelHeight" : null,
-        "fillImagePixelWidth" : null,
-        "fillImageResize" : "fill",
-        "fillLinearGradient" : {
-          "__class" : "LinearGradient",
-          "alpha" : 1,
-          "angle" : 180,
-          "stops" : [
-            {
-              "__class" : "GradientColorStop",
-              "position" : 0,
-              "value" : "rgba(0,0,0,0)"
-            },
-            {
-              "__class" : "GradientColorStop",
-              "position" : 1,
-              "value" : "black"
-            }
-          ]
-        },
-        "fillRadialGradient" : {
-          "__class" : "RadialGradient",
-          "alpha" : 1,
-          "centerAnchorX" : 0.5,
-          "centerAnchorY" : 0.5,
-          "heightFactor" : 0.5,
-          "stops" : [
-            {
-              "__class" : "GradientColorStop",
-              "position" : 0,
-              "value" : "rgba(0,0,0,0)"
-            },
-            {
-              "__class" : "GradientColorStop",
-              "position" : 1,
-              "value" : "black"
-            }
-          ],
-          "widthFactor" : 0.5
-        },
-        "fillType" : "color",
-        "height" : 80,
-        "heightType" : 0,
-        "id" : "doVCdJ8go",
-        "intrinsicHeight" : 50,
-        "intrinsicWidth" : 200,
-        "left" : 1343,
-        "locked" : false,
-        "name" : null,
-        "opacity" : 1,
-        "originalid" : null,
-        "parentid" : "wnE2snFvS",
-        "previewSettings" : null,
-        "radius" : 0,
-        "radiusBottomLeft" : 0,
-        "radiusBottomRight" : 0,
-        "radiusIsRelative" : false,
-        "radiusPerCorner" : false,
-        "radiusTopLeft" : 0,
-        "radiusTopRight" : 0,
-        "right" : null,
-        "rotation" : 0,
-        "top" : 1280,
-        "visible" : true,
-        "width" : 427,
-        "widthType" : 0
-      },
-      {
-        "__class" : "CodeComponentNode",
-        "aspectRatio" : null,
-        "bottom" : null,
-        "centerAnchorX" : 0,
-        "centerAnchorY" : 0,
-        "children" : [
-
-        ],
-        "clip" : true,
-        "codeComponentIdentifier" : "@framer\/steveruizok.education\/.\/Text.tsx_Text",
-        "codeComponentProps" : {
-          "background" : "none",
-          "color" : "var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 86, 254)) \/* {\"name\":\"Primary\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
-          "paddingPerSide" : false,
-          "pc_resizeDirection" : "xaxis",
-          "resize" : false,
-          "text" : "Sign up",
-          "textAlign" : "left",
-          "type" : "h1",
-          "verticalAlign" : "center"
-        },
-        "codeOverrideEnabled" : false,
-        "constraintsLocked" : false,
-        "deviceType" : null,
-        "exportOptions" : [
-
-        ],
-        "fillColor" : "rgba(255,255,255,1)",
-        "fillEnabled" : false,
-        "fillImage" : null,
-        "fillImagePixelHeight" : null,
-        "fillImagePixelWidth" : null,
-        "fillImageResize" : "fill",
-        "fillLinearGradient" : {
-          "__class" : "LinearGradient",
-          "alpha" : 1,
-          "angle" : 180,
-          "stops" : [
-            {
-              "__class" : "GradientColorStop",
-              "position" : 0,
-              "value" : "rgba(0,0,0,0)"
-            },
-            {
-              "__class" : "GradientColorStop",
-              "position" : 1,
-              "value" : "black"
-            }
-          ]
-        },
-        "fillRadialGradient" : {
-          "__class" : "RadialGradient",
-          "alpha" : 1,
-          "centerAnchorX" : 0.5,
-          "centerAnchorY" : 0.5,
-          "heightFactor" : 0.5,
-          "stops" : [
-            {
-              "__class" : "GradientColorStop",
-              "position" : 0,
-              "value" : "rgba(0,0,0,0)"
-            },
-            {
-              "__class" : "GradientColorStop",
-              "position" : 1,
-              "value" : "black"
-            }
-          ],
-          "widthFactor" : 0.5
-        },
-        "fillType" : "color",
-        "height" : 80,
-        "heightType" : 0,
-        "id" : "msZNi5VlX",
-        "intrinsicHeight" : 50,
-        "intrinsicWidth" : 200,
-        "left" : 1800,
-        "locked" : false,
-        "name" : null,
-        "opacity" : 1,
-        "originalid" : null,
-        "parentid" : "wnE2snFvS",
-        "previewSettings" : null,
-        "radius" : 0,
-        "radiusBottomLeft" : 0,
-        "radiusBottomRight" : 0,
-        "radiusIsRelative" : false,
-        "radiusPerCorner" : false,
-        "radiusTopLeft" : 0,
-        "radiusTopRight" : 0,
-        "right" : null,
-        "rotation" : 0,
-        "top" : 1280,
-        "visible" : true,
-        "width" : 427,
-        "widthType" : 0
-      },
-      {
-        "__class" : "CodeComponentNode",
-        "aspectRatio" : null,
-        "bottom" : null,
-        "centerAnchorX" : 0,
-        "centerAnchorY" : 0,
-        "children" : [
-
-        ],
-        "clip" : true,
-        "codeComponentIdentifier" : "@framer\/steveruizok.education\/.\/Text.tsx_Text",
-        "codeComponentProps" : {
-          "background" : "none",
-          "color" : "var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 86, 254)) \/* {\"name\":\"Primary\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
-          "paddingPerSide" : false,
-          "pc_resizeDirection" : "xaxis",
-          "resize" : false,
-          "text" : "Signed in",
-          "textAlign" : "left",
-          "type" : "h1",
-          "verticalAlign" : "center"
-        },
-        "codeOverrideEnabled" : false,
-        "constraintsLocked" : false,
-        "deviceType" : null,
-        "exportOptions" : [
-
-        ],
-        "fillColor" : "rgba(255,255,255,1)",
-        "fillEnabled" : false,
-        "fillImage" : null,
-        "fillImagePixelHeight" : null,
-        "fillImagePixelWidth" : null,
-        "fillImageResize" : "fill",
-        "fillLinearGradient" : {
-          "__class" : "LinearGradient",
-          "alpha" : 1,
-          "angle" : 180,
-          "stops" : [
-            {
-              "__class" : "GradientColorStop",
-              "position" : 0,
-              "value" : "rgba(0,0,0,0)"
-            },
-            {
-              "__class" : "GradientColorStop",
-              "position" : 1,
-              "value" : "black"
-            }
-          ]
-        },
-        "fillRadialGradient" : {
-          "__class" : "RadialGradient",
-          "alpha" : 1,
-          "centerAnchorX" : 0.5,
-          "centerAnchorY" : 0.5,
-          "heightFactor" : 0.5,
-          "stops" : [
-            {
-              "__class" : "GradientColorStop",
-              "position" : 0,
-              "value" : "rgba(0,0,0,0)"
-            },
-            {
-              "__class" : "GradientColorStop",
-              "position" : 1,
-              "value" : "black"
-            }
-          ],
-          "widthFactor" : 0.5
-        },
-        "fillType" : "color",
-        "height" : 80,
-        "heightType" : 0,
-        "id" : "z0Nu9Yv89",
-        "intrinsicHeight" : 50,
-        "intrinsicWidth" : 200,
-        "left" : 2266,
-        "locked" : false,
-        "name" : null,
-        "opacity" : 1,
-        "originalid" : null,
-        "parentid" : "wnE2snFvS",
-        "previewSettings" : null,
-        "radius" : 0,
-        "radiusBottomLeft" : 0,
-        "radiusBottomRight" : 0,
-        "radiusIsRelative" : false,
-        "radiusPerCorner" : false,
-        "radiusTopLeft" : 0,
-        "radiusTopRight" : 0,
-        "right" : null,
-        "rotation" : 0,
-        "top" : 1280,
-        "visible" : true,
-        "width" : 427,
         "widthType" : 0
       }
     ],

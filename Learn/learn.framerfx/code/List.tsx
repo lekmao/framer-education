@@ -59,10 +59,11 @@ export function List(props: Props) {
         <Scroll {...rest}>
             <Stack width="100%" direction="vertical" gap={gap} {...paddings}>
                 {content.length > 0 ? (
-                    content.map((item, index) =>
-                        React.cloneElement(item, { key: index })
-                    )
+                    content
                 ) : (
+                    // content.map((item, index) =>
+                    //     React.cloneElement(item, { key: index })
+                    // )
                     <Text
                         height={128}
                         width="1fr"

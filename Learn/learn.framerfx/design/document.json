@@ -10492,7 +10492,7 @@
                 "heightType" : 0,
                 "id" : "QiMxwzA35",
                 "isTarget" : false,
-                "left" : null,
+                "left" : 0,
                 "locked" : false,
                 "name" : null,
                 "opacity" : 1,
@@ -10563,7 +10563,7 @@
 
                   }
                 },
-                "top" : null,
+                "top" : 0,
                 "visible" : true,
                 "width" : 73,
                 "widthType" : 0
@@ -11042,7 +11042,7 @@
             "clip" : true,
             "codeComponentIdentifier" : "framer\/Stack",
             "codeComponentProps" : {
-              "alignment" : "center",
+              "alignment" : "start",
               "direction" : "vertical",
               "distribution" : "start",
               "gap" : 20,
