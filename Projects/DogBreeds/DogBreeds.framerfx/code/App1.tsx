@@ -18,7 +18,7 @@ const toStartCase = (string: string) => {
 // app state
 
 export const appState = Data({
-    tabTitle: "Browse",
+    currentTitle: "Browse",
     currentTab: 0,
     currentPage: 0,
     backAction: null as any,
@@ -30,7 +30,7 @@ export const appState = Data({
         images: [],
     } as Breed,
     query: "",
-    favorites: [] as Breed[],
+    favorites: [] as string[],
 })
 
 // data
@@ -76,11 +76,12 @@ const fetchBreed = async breed => {
     // Update state with data
     appState.breed = {
         ...breed,
-        images: data.message,
+        images: data.message.slice(0, 20),
     }
 
-    appState.currentPage = 2
-    appState.backAction = breed.subBreed ? showSubBreedsList : showBreedsList
+    // Show page 3 (Breed detail)
+    appState.currentTitle = toStartCase(breed.breed)
+    showBreedDetail(breed.subBreed ? showSubBreedsList : showBreedsList)
 }
 
 if (USE_API) {
@@ -92,6 +93,7 @@ if (USE_API) {
 // navigation
 
 const showBreedsList = () => {
+    appState.currentTitle = "Breeds"
     appState.currentPage = 0
     appState.backAction = null
 }
@@ -101,10 +103,15 @@ const showSubBreedsList = () => {
     appState.backAction = showBreedsList
 }
 
+const showBreedDetail = backTarget => {
+    appState.currentPage = 2
+    appState.backAction = backTarget
+}
+
 // Top navigation for current tab / back
 export function Header(): Override {
     return {
-        title: appState.tabTitle,
+        title: appState.currentTitle,
         leftLink: appState.backAction ? "Back" : "",
         leftIcon: appState.backAction ? "chevron-left" : "none",
         onLeftTap: () => appState.backAction && appState.backAction(),
@@ -139,7 +146,7 @@ export function TabBar(): Override {
         onChangeTab: (index, tab) => {
             if (appState.currentTab !== index) {
                 appState.backAction = null
-                appState.tabTitle = tab
+                appState.currentTitle = tab
                 appState.currentTab = index
                 appState.currentPage = 0
             }
@@ -161,13 +168,13 @@ export function BreedsList(): Override {
         return {
             text: toStartCase(breed.breed),
             component: "icon",
-            paddingLeft: 16,
             icon:
                 breed.subBreeds.length > 0
                     ? "chevron-double-right"
                     : "chevron-right",
             onTap: item => {
                 if (breed.subBreeds.length > 0) {
+                    appState.currentTitle = toStartCase(breed.breed)
                     appState.subBreeds = breed.subBreeds
                     showSubBreedsList()
                 } else {
@@ -190,10 +197,7 @@ export function SubBreedsList(): Override {
                 text: toStartCase(breed.subBreed),
                 component: "icon",
                 icon: "chevron-right",
-                paddingLeft: 16,
-                onTap: item => {
-                    fetchBreed(breed)
-                },
+                onTap: item => fetchBreed(breed),
             }
         })
     }, [appState.subBreeds])
@@ -204,23 +208,26 @@ export function SubBreedsList(): Override {
 }
 
 // Info on the selected breed
-export function BreedInfoCard(): Override {
+export function BreedImagesList(): Override {
+    const { favorites } = appState
     const { breed, subBreed, images } = appState.breed
 
     return {
-        header: " ",
-        title: toStartCase(subBreed ? `${subBreed} ${breed}` : breed),
-        image: images[0],
-        overlay: false,
-        isFavorite: appState.favorites.find(f => f.breed === breed),
-        favorite: true,
-        onFavoriteChange: isFavorite => {
-            if (isFavorite) {
-                appState.favorites = [...appState.favorites, appState.breed]
-            } else {
-                appState.favorites = pull(appState.favorites, appState.breed)
+        cards: images.map(image => {
+            return {
+                image: image,
+                overlay: false,
+                isFavorite: favorites.find(img => img === image),
+                favorite: true,
+                onFavoriteChange: isFavorite => {
+                    if (isFavorite) {
+                        appState.favorites = [...favorites, image]
+                    } else {
+                        appState.favorites = pull(favorites, image)
+                    }
+                },
             }
-        },
+        }),
     }
 }
 
@@ -259,10 +266,7 @@ export function SearchResults(): Override {
                 text: toStartCase(breed.breed),
                 component: "icon",
                 icon: "chevron-right",
-                paddingLeft: 16,
-                onTap: item => {
-                    fetchBreed(breed)
-                },
+                onTap: item => fetchBreed(breed),
             }
         })
     }, [appState.query])
@@ -276,28 +280,19 @@ export function SearchResults(): Override {
 
 export function FavoritesList(): Override {
     const cards = React.useMemo(() => {
-        return appState.favorites.map(breed => {
+        return appState.favorites.map(image => {
             return {
-                title: toStartCase(
-                    breed.subBreed
-                        ? `${breed.subBreed} ${breed.breed}`
-                        : breed.breed
-                ),
-                header: " ",
-                body: null,
-                image: breed.images[0],
+                image,
                 overlay: false,
-                isFavorite: appState.favorites.find(
-                    f => f.breed === breed.breed
-                ),
+                isFavorite: appState.favorites.find(img => img === image),
                 favorite: true,
                 height: 520,
                 autosize: true,
                 onFavoriteChange: isFavorite => {
                     if (isFavorite) {
-                        appState.favorites = [...appState.favorites, breed]
+                        appState.favorites = [...appState.favorites, image]
                     } else {
-                        appState.favorites = pull(appState.favorites, breed)
+                        appState.favorites = pull(appState.favorites, image)
                     }
                 },
             }

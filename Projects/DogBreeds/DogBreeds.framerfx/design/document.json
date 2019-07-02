@@ -23,7 +23,14 @@
             "clip" : true,
             "codeComponentIdentifier" : "@framer\/steveruizok.education\/.\/ItemList.tsx_ItemList",
             "codeComponentProps" : {
-              "emptyText" : "Nothing to see here."
+              "emptyText" : "Nothing to see here.",
+              "gap" : 8,
+              "padding" : 16,
+              "paddingBottom" : 32,
+              "paddingLeft" : 16,
+              "paddingPerSide" : false,
+              "paddingRight" : 0,
+              "paddingTop" : 16
             },
             "codeOverrideEnabled" : true,
             "codeOverrideFile" : ".\/App1.tsx",
@@ -211,7 +218,10 @@
             "clip" : true,
             "codeComponentIdentifier" : "@framer\/steveruizok.education\/.\/ItemList.tsx_ItemList",
             "codeComponentProps" : {
-              "emptyText" : "Search for a dog breed."
+              "emptyText" : "Search for a dog breed.",
+              "gap" : 16,
+              "padding" : 16,
+              "paddingPerSide" : false
             },
             "codeOverrideEnabled" : true,
             "codeOverrideFile" : ".\/App1.tsx",
@@ -3602,28 +3612,24 @@
           {
             "__class" : "CodeComponentNode",
             "aspectRatio" : null,
-            "bottom" : 16,
-            "centerAnchorX" : 0.52133333333333332,
+            "bottom" : 0,
+            "centerAnchorX" : 0.5,
             "centerAnchorY" : 0.5,
             "children" : [
 
             ],
             "clip" : true,
-            "codeComponentIdentifier" : "@framer\/steveruizok.education\/.\/Card.tsx_Card",
+            "codeComponentIdentifier" : "@framer\/steveruizok.education\/.\/CardList.tsx_CardList",
             "codeComponentProps" : {
-              "autosize" : true,
-              "body" : "",
-              "color" : "var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 86, 254))",
-              "favorite" : true,
-              "footer" : "",
-              "isFavorite" : false,
-              "overlay" : true,
-              "title" : "Title"
+              "emptyText" : "Nothing to see here.",
+              "gap" : 16,
+              "padding" : 16,
+              "paddingPerSide" : false
             },
             "codeOverrideEnabled" : true,
             "codeOverrideFile" : ".\/App1.tsx",
-            "codeOverrideIdentifier" : ".\/App1.tsx_BreedInfoCard",
-            "codeOverrideName" : "BreedInfoCard",
+            "codeOverrideIdentifier" : ".\/App1.tsx_BreedImagesList",
+            "codeOverrideName" : "BreedImagesList",
             "constraintsLocked" : false,
             "deviceType" : null,
             "exportOptions" : [
@@ -3635,50 +3641,13 @@
             "fillImagePixelHeight" : null,
             "fillImagePixelWidth" : null,
             "fillImageResize" : "fill",
-            "fillLinearGradient" : {
-              "__class" : "LinearGradient",
-              "alpha" : 1,
-              "angle" : 180,
-              "stops" : [
-                {
-                  "__class" : "GradientColorStop",
-                  "position" : 0,
-                  "value" : "rgba(0,0,0,0)"
-                },
-                {
-                  "__class" : "GradientColorStop",
-                  "position" : 1,
-                  "value" : "black"
-                }
-              ]
-            },
-            "fillRadialGradient" : {
-              "__class" : "RadialGradient",
-              "alpha" : 1,
-              "centerAnchorX" : 0.5,
-              "centerAnchorY" : 0.5,
-              "heightFactor" : 0.5,
-              "stops" : [
-                {
-                  "__class" : "GradientColorStop",
-                  "position" : 0,
-                  "value" : "rgba(0,0,0,0)"
-                },
-                {
-                  "__class" : "GradientColorStop",
-                  "position" : 1,
-                  "value" : "black"
-                }
-              ],
-              "widthFactor" : 0.5
-            },
             "fillType" : "color",
-            "height" : 608,
+            "height" : 640,
             "heightType" : 0,
-            "id" : "isHg6fySv",
-            "intrinsicHeight" : 320,
+            "id" : "WwVQP32Yp",
+            "intrinsicHeight" : 520,
             "intrinsicWidth" : 320,
-            "left" : 16,
+            "left" : 0,
             "locked" : false,
             "name" : null,
             "opacity" : 1,
@@ -3692,11 +3661,11 @@
             "radiusPerCorner" : false,
             "radiusTopLeft" : 0,
             "radiusTopRight" : 0,
-            "right" : 16,
+            "right" : 0,
             "rotation" : 0,
-            "top" : 16,
+            "top" : 0,
             "visible" : true,
-            "width" : 343,
+            "width" : 375,
             "widthType" : 0
           }
         ],
@@ -3806,7 +3775,10 @@
             "clip" : true,
             "codeComponentIdentifier" : "@framer\/steveruizok.education\/.\/ItemList.tsx_ItemList",
             "codeComponentProps" : {
-              "emptyText" : "Nothing to see here."
+              "emptyText" : "Nothing to see here.",
+              "gap" : 8,
+              "padding" : 16,
+              "paddingPerSide" : false
             },
             "codeOverrideEnabled" : true,
             "codeOverrideFile" : ".\/App1.tsx",
@@ -4231,7 +4203,10 @@
             "clip" : true,
             "codeComponentIdentifier" : "@framer\/steveruizok.education\/.\/CardList.tsx_CardList",
             "codeComponentProps" : {
-              "emptyText" : "Nothing to see here."
+              "emptyText" : "Nothing to see here.",
+              "gap" : 16,
+              "padding" : 16,
+              "paddingPerSide" : false
             },
             "codeOverrideEnabled" : true,
             "codeOverrideFile" : ".\/App1.tsx",
