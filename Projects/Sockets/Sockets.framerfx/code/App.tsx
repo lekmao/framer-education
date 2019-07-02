@@ -20,7 +20,9 @@ const CLIENT_ID = "FramerPrototype"
 
 // [3]
 const responses = {
-    FLIP_SWITCH: data => (appState.nightMode = data.value),
+    FLIP_SWITCH: data => {
+        appState.nightMode = data.value
+    },
 }
 
 // [4]
@@ -34,7 +36,10 @@ const socket = io(SERVER_URL, {
 
 socket.on("connect", () => (appState.connected = true))
 
-socket.on("action", data => responses[data.type] && responses[data.type]())
+socket.on(
+    "action",
+    ({ type, ...data }) => responses[type] && responses[type](data)
+)
 
 socket.on("disconnect", () => (appState.connected = false))
 
