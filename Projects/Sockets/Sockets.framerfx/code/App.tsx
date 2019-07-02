@@ -16,7 +16,7 @@ const appState = Data({
 const SERVER_URL = "http://localhost:3000"
 
 // [2]
-const CLIENT_ID = "FramerPrototype"
+const CLIENT_ID = "FramerPrototype_A"
 
 // [3]
 const responses = {
