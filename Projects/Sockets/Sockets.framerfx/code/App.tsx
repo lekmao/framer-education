@@ -1,5 +1,14 @@
 import { Override, Data } from "framer"
 import * as io from "socket.io-client"
+// @ts-ignore
+import { colors } from "@framer/steveruizok.education/code"
+
+// State
+
+const appState = Data({
+    connected: false,
+    nightMode: false,
+})
 
 // Socket
 
@@ -12,27 +21,24 @@ const socket = io(SOCKET_URL, {
 })
 
 socket.on("connect", () => {
-    console.log("Connected")
+    appState.connected = true
 })
 
 socket.on("action", data => {
     switch (data.type) {
         case "FLIPSWITCH":
             appState.nightMode = data.value
+            break
         default:
             return
     }
 })
 
 socket.on("disconnect", function() {
-    console.log("Disconnected")
+    appState.connected = false
 })
 
 // Overrides
-
-const appState = Data({
-    nightMode: false,
-})
 
 export const Switch: Override = () => {
     return {
@@ -43,6 +49,13 @@ export const Switch: Override = () => {
                 value,
             })
         },
+    }
+}
+
+export const ConnectedLabel: Override = () => {
+    return {
+        text: appState.connected ? "Connected" : "Disconnected",
+        color: appState.connected ? colors.Secondary : colors.Border,
     }
 }
 

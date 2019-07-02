@@ -1,6 +1,7 @@
+var http = require('http')
 var app = require('express')()
-var http = require('http').createServer(app)
-var io = require('socket.io')(http)
+var server = http.createServer(app)
+var io = require('socket.io')(server)
 
 /*
 In this example, each client would subscribe with a unique
@@ -28,11 +29,13 @@ const subscribe = (id, socket) => {
 
 	subscribers[id] = socket
 	sockets.add(socket)
+	console.log(`Connected to ${id}.`)
 }
 
 const unsubscribe = (id) => {
 	subscribers[id].disconnect()
 	sockets.delete(subscribers[id])
+	console.log(`Disconnected from ${id}.`)
 }
 
 const updateSubscribers = (data) => {
@@ -70,6 +73,4 @@ io.on('disconnection', (socket) => {
 
 // Start the server at http://localhost:3000
 
-http.listen(3000, function() {
-	console.log('Listening at http://localhost:3000')
-})
+server.listen(3000, () => console.log('Listening at http://localhost:3000'))
