@@ -41,14 +41,15 @@ type Props = Partial<ScrollProps> & {
 export function CardList(props: Props) {
     const { cards, ...rest } = props
 
-    return (
-        <List
-            {...rest}
-            content={cards.map((card, index) => {
+    const content = React.useMemo(
+        () =>
+            cards.map((card, index) => {
                 return <Card key={`card_${index}`} width="1fr" {...card} />
-            })}
-        />
+            }),
+        [cards]
     )
+
+    return <List {...rest} content={content} />
 }
 
 CardList.defaultProps = {

@@ -4586,7 +4586,7 @@
           "paddingPerSide" : false,
           "pc_resizeDirection" : "xaxis",
           "resize" : false,
-          "text" : "Navigation",
+          "text" : "DogBreeds",
           "textAlign" : "left",
           "type" : "display",
           "verticalAlign" : "top"

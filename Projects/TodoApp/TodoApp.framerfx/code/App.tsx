@@ -104,11 +104,21 @@ export function TodoList(): Override {
         })
     }
 
+    const todos = state.todos.filter(todo => !todo.complete)
+
     return {
-        readOnly: false,
-        todos: state.todos.filter(todo => !todo.complete),
-        onComplete: completeTodo,
-        onEdit: updateTodo,
+        scroll: false, // remove when scroll / input bug fixed
+        content: todos.map(todo => (
+            // Return a TodoItem for each of our todo items
+            <TodoItem
+                {...todo}
+                complete={false}
+                key={todo.id}
+                width="1fr"
+                onEdit={value => updateTodo({ ...todo, value })}
+                onComplete={() => completeTodo(todo)}
+            />
+        )),
     }
 }
 
@@ -123,18 +133,10 @@ export function CompleteList(): Override {
         const index = todos.indexOf(original)
         todos.splice(index, 1)
 
-        setState({
+        setState(state => ({
             ...state,
             todos,
-        })
-    }
-
-    const updateTodo = todo => {
-        const todos = getUpdatedTodos(state.todos, todo)
-        setState({
-            ...state,
-            todos,
-        })
+        }))
     }
 
     const restoreTodo = todo => {
@@ -149,11 +151,20 @@ export function CompleteList(): Override {
         })
     }
 
+    const todos = state.todos.filter(todo => todo.complete)
+
     return {
-        completed: true,
-        todos: state.todos.filter(todo => todo.complete),
-        onRemove: removeTodo,
-        onRestore: restoreTodo,
+        scroll: false, // remove when scroll / input bug fixed
+        content: todos.map(todo => (
+            <TodoItem
+                {...todo}
+                complete={true}
+                key={todo.id}
+                width="1fr"
+                onRemove={() => removeTodo(todo)}
+                onRestore={() => restoreTodo(todo)}
+            />
+        )),
     }
 }
 
@@ -215,7 +226,6 @@ export function NewTodoButton(): Override {
     }
 
     return {
-        type: canSubmit ? "primary" : "secondary",
         disabled: !canSubmit,
         onTap: submitTodo,
     }

@@ -9,22 +9,28 @@ import {
 } from "framer"
 import { Text } from "./Text"
 
-type Props = Partial<ScrollProps> & {
-    content: any[]
-    gap: number
-    emptyText?: string
-    padding: number
-    paddingTop: number
-    paddingLeft: number
-    paddingRight: number
-    paddingBottom: number
-    paddingPerSide: boolean
-}
+type Props = Partial<ScrollProps> &
+    Partial<{
+        pc_content: any[]
+        gap: number
+        scroll: boolean
+        emptyText: string
+        padding: number
+        paddingTop: number
+        paddingLeft: number
+        paddingRight: number
+        paddingBottom: number
+        paddingPerSide: boolean
+    }> & {
+        content: any[]
+    }
 
 export function List(props: Props) {
     const {
         content,
+        pc_content,
         gap,
+        scroll,
         emptyText,
         paddingPerSide,
         padding,
@@ -55,15 +61,21 @@ export function List(props: Props) {
               padding,
           }
 
+    // Clone attached Frames
+    const pcContent = React.useMemo(() => {
+        return pc_content.map((item, index) =>
+            React.cloneElement(item, { key: index })
+        )
+    }, [pc_content])
+
+    const combinedContent = [...pcContent, ...content]
+
     return (
-        <Scroll {...rest}>
+        <Scroll {...rest} dragEnabled={scroll}>
             <Stack width="100%" direction="vertical" gap={gap} {...paddings}>
-                {content.length > 0 ? (
-                    content
+                {combinedContent.length > 0 ? (
+                    combinedContent
                 ) : (
-                    // content.map((item, index) =>
-                    //     React.cloneElement(item, { key: index })
-                    // )
                     <Text
                         height={128}
                         width="1fr"
@@ -80,7 +92,9 @@ List.defaultProps = {
     width: 320,
     height: 520,
     content: [],
+    pc_content: [],
     gap: 8,
+    scroll: true,
     emptyText: "Nothing to see here.",
     padding: 0,
 }
@@ -111,7 +125,7 @@ addPropertyControls(List, {
         valueLabels: ["T", "R", "B", "L"],
         min: 0,
     },
-    content: {
+    pc_content: {
         title: "Content",
         type: ControlType.Array,
         propertyControl: {

@@ -1,6 +1,8 @@
 import * as React from "react"
 import { Override, Data } from "framer"
 import { connectToContentful } from "./ContentfulData"
+// @ts-ignore
+import { Card, Text } from "@framer/steveruizok.education/code"
 
 export const appState = Data({
     contentTypes: [] as any[],
@@ -69,6 +71,7 @@ export function BlogPostsCardList(): Override {
                 image: "https:" + heroImage.fields.file.url + "?w=400",
                 body: description,
                 favorite: false,
+                overlay: false,
                 footer: tags.map(t => toStartCase(t)).join(", "),
                 onTap: item => {
                     showPost(itemEntry)
@@ -97,11 +100,42 @@ export function BlogPost(): Override {
 
     if (!title) return {}
 
+    const { name } = author.fields
+
     return {
-        title,
-        image: "https:" + heroImage.fields.file.url,
-        body: body.slice(0, 400) + "...",
-        favorite: false,
-        overlay: false,
+        content: [
+            <Card
+                width="150%"
+                height={400}
+                overlay={false}
+                image={"https:" + heroImage.fields.file.url}
+            />,
+            <Text
+                type="h1"
+                width="1fr"
+                text={title}
+                textAlign="left"
+                verticalAlign="top"
+                resize="height"
+                padding={0}
+            />,
+            <Text
+                type="h2"
+                width="1fr"
+                text={name}
+                textAlign="left"
+                verticalAlign="top"
+                resize="height"
+            />,
+            <Text
+                type="body"
+                width="1fr"
+                text={body}
+                textAlign="left"
+                verticalAlign="top"
+                resize="height"
+                paddingBottom={48}
+            />,
+        ],
     }
 }

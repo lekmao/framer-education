@@ -3,6 +3,8 @@ import { Override, Data } from "framer"
 import * as nanogist from "nanogist"
 import { GistClient } from "./GistClient"
 import { default as Authenticator } from "netlify-auth-providers"
+// @ts-ignore
+import { Text, Card, Divider } from "@framer/steveruizok.education/code"
 
 // @ts-ignore
 import { data as MOCK_DATA } from "./MockData.json"
@@ -23,11 +25,11 @@ const appState = Data({
 // Events
 
 const authenticate = async () => {
-    // if (navigator.userAgent.includes("FramerX")) {
-    //     console.log("skipping auth")
-    //     skipAuth()
-    //     return
-    // }
+    if (navigator.userAgent.includes("FramerX")) {
+        console.log("skipping auth")
+        skipAuth()
+        return
+    }
 
     const authenticator = new Authenticator({}).authenticate(
         { provider: "github", scope: "user" },
@@ -55,10 +57,16 @@ const loadGists = async data => {
     }
 }
 
-const loadGist = async gist => {
-    appState.gist = await gistClient.get(gist.id)
+const loadGist = async gistInfo => {
+    const gist = await gistClient.get(gistInfo.id)
+
+    if (!gist) {
+        return
+    }
+
+    appState.gist = gist
     appState.currentPage = 2
-    appState.pageTitle = "Gist for " + appState.gist.owner.login
+    appState.pageTitle = "Gist for " + gist.owner.login
     appState.backAction = () => {
         appState.pageTitle = "All gists"
         appState.currentPage = 1
@@ -120,20 +128,10 @@ export const Gists: Override = () => {
     }
 }
 
-export const GistTitle: Override = () => {
+export const Gist: Override = () => {
     const { gist } = appState
 
-    if (!gist) {
-        return {}
-    }
-
-    return {
-        text: gist.description,
-    }
-}
-
-export const GistDate: Override = () => {
-    const { gist } = appState
+    console.log(gist)
 
     if (!gist) {
         return {}
@@ -148,24 +146,84 @@ export const GistDate: Override = () => {
         {}
     )
 
-    return {
-        text: "Created: " + createdDate + " | Updated: " + updatedDate,
-    }
-}
-
-export const GistFiles: Override = () => {
-    const { gist } = appState
-    if (!gist) {
-        return {}
-    }
-
     const files = Object.keys(gist.files).map(key => gist.files[key])
 
+    const cards = files.reduce((acc, file) => {
+        return [
+            ...acc,
+            <Text
+                width="1fr"
+                type="h1"
+                textAlign="left"
+                verticalAlign="top"
+                resize="height"
+                text={file.filename}
+            />,
+            <Text
+                width="1fr"
+                type="body"
+                textAlign="left"
+                verticalAlign="top"
+                text={file.content}
+                resize="height"
+            />,
+            <Divider />,
+        ]
+    }, [])
+
+    console.log(files.length)
+
     return {
-        cards: files.map(file => ({
-            title: file.filename,
-            body: file.content,
-            height: 480,
-        })),
+        content: [...cards],
     }
 }
+
+// export const GistTitle: Override = () => {
+//     const { gist } = appState
+
+//     if (!gist) {
+//         return {}
+//     }
+
+//     return {
+//         text: gist.description,
+//     }
+// }
+
+// export const GistDate: Override = () => {
+//     const { gist } = appState
+
+//     if (!gist) {
+//         return {}
+//     }
+
+//     const createdDate = new Date(gist.created_at).toLocaleDateString(
+//         "en-gb",
+//         {}
+//     )
+//     const updatedDate = new Date(gist.updated_at).toLocaleDateString(
+//         "en-gb",
+//         {}
+//     )
+
+//     return {
+//         text: "Created: " + createdDate + " | Updated: " + updatedDate,
+//     }
+// }
+
+// export const GistFiles: Override = () => {
+//     const { gist } = appState
+//     if (!gist) {
+//         return {}
+//     }
+
+//     const files = Object.keys(gist.files).map(key => gist.files[key])
+
+//     return {
+//         cards: files.map(file => ({
+//             title: file.filename,
+//             body: file.content,
+//             height: 480,
+//         })),
+//     }
+// }

@@ -70,7 +70,7 @@ export function GalleryImage(props): Override {
 
 export function Title(props): Override {
     return {
-        text: state.frontImage,
+        text: state.frontImage || "",
         opacity: 0,
         animate: {
             opacity: state.zoomedImage ? 1 : 0,

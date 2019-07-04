@@ -178,7 +178,9 @@ export function TextInput(props: Partial<Props>) {
                             position: "absolute",
                             top: 0,
                             left: 0,
-                            padding: "0px 12px",
+                            padding: clearable
+                                ? "0px 40px 0px 12px"
+                                : "0px 12px",
                             fontSize: 14,
                             fontWeight: 600,
                             width: "100%",

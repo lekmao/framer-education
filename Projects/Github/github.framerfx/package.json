@@ -14,7 +14,7 @@
 	},
 	"author": "Steve Ruiz",
 	"dependencies": {
-		"@framer/steveruizok.education": "^1.169.0",
+		"@framer/steveruizok.education": "^1.180.0",
 		"gist-client": "^1.1.0",
 		"nanogist": "^1.0.0",
 		"netlify-auth-providers": "^1.0.0-alpha5"

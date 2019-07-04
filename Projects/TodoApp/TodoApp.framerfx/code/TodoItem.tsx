@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Frame, Stack, Page } from "framer"
+// @ts-ignore
 import { TextInput, Button } from "@framer/steveruizok.education/code"
 
 export function TodoItem(props) {
@@ -144,7 +145,7 @@ export function TodoItem(props) {
                     right={0}
                     height={50}
                     width={50}
-                    icon={complete ? "refresh" : "edit"}
+                    icon={complete ? "refresh" : "pencil"}
                     type="primary"
                     disabled={!complete && state.value === state.savedValue}
                     onTap={complete ? onRestore : handleEdit}

@@ -35,7 +35,7 @@ export { Message } from "./Message"
 
 export { useInteractionState, useResize } from "./Hooks"
 export { iconNames, iconTitles } from "./Shared"
-export { colors } from "./canvas"
+export { colors, Divider } from "./canvas"
 
 export {
     range,

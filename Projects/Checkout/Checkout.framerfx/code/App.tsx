@@ -38,9 +38,9 @@ export function ItemList(): Override {
                 min: 1,
                 max: 10,
                 component: "stepper",
-                onValueChange: quanity => {
+                onValueChange: quantity => {
                     const localItems = [...appState.items]
-                    localItems[index].quantity = quanity
+                    localItems[index].quantity = quantity
 
                     appState.items = localItems
                 },

@@ -129,7 +129,9 @@
                 "clip" : true,
                 "codeComponentIdentifier" : "@framer\/steveruizok.education\/.\/ItemList.tsx_ItemList",
                 "codeComponentProps" : {
-
+                  "emptyText" : "Nothing to see here.",
+                  "gap" : 8,
+                  "paddingPerSide" : false
                 },
                 "codeOverrideEnabled" : true,
                 "codeOverrideFile" : ".\/App.tsx",
@@ -3274,6 +3276,107 @@
         "widthType" : 0
       },
       {
+        "__class" : "CodeComponentNode",
+        "aspectRatio" : null,
+        "bottom" : null,
+        "centerAnchorX" : 0.68266666666666664,
+        "centerAnchorY" : 0.11268472906403941,
+        "children" : [
+
+        ],
+        "clip" : true,
+        "codeComponentIdentifier" : "@framer\/steveruizok.education\/.\/Text.tsx_Text",
+        "codeComponentProps" : {
+          "background" : "none",
+          "color" : "var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 86, 254)) \/* {\"name\":\"Primary\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+          "paddingPerSide" : false,
+          "pc_resizeDirection" : "xaxis",
+          "resize" : false,
+          "text" : "Checkout",
+          "textAlign" : "left",
+          "type" : "display",
+          "verticalAlign" : "top"
+        },
+        "codeOverrideEnabled" : true,
+        "codeOverrideFile" : ".\/App.tsx",
+        "codeOverrideIdentifier" : ".\/App.tsx_Symbol",
+        "codeOverrideName" : "Symbol",
+        "constraintsLocked" : false,
+        "deviceType" : null,
+        "exportOptions" : [
+
+        ],
+        "fillColor" : "rgba(255,255,255,1)",
+        "fillEnabled" : false,
+        "fillImage" : null,
+        "fillImagePixelHeight" : null,
+        "fillImagePixelWidth" : null,
+        "fillImageResize" : "fill",
+        "fillLinearGradient" : {
+          "__class" : "LinearGradient",
+          "alpha" : 1,
+          "angle" : 180,
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ]
+        },
+        "fillRadialGradient" : {
+          "__class" : "RadialGradient",
+          "alpha" : 1,
+          "centerAnchorX" : 0.5,
+          "centerAnchorY" : 0.5,
+          "heightFactor" : 0.5,
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ],
+          "widthFactor" : 0.5
+        },
+        "fillType" : "color",
+        "height" : 67,
+        "heightType" : 0,
+        "id" : "Qmqq40Tgy",
+        "intrinsicHeight" : 50,
+        "intrinsicWidth" : 200,
+        "left" : 513,
+        "locked" : false,
+        "name" : null,
+        "opacity" : 1,
+        "originalid" : null,
+        "parentid" : "TZ6k8qSKt",
+        "previewSettings" : null,
+        "radius" : 0,
+        "radiusBottomLeft" : 0,
+        "radiusBottomRight" : 0,
+        "radiusIsRelative" : false,
+        "radiusPerCorner" : false,
+        "radiusTopLeft" : 0,
+        "radiusTopRight" : 0,
+        "right" : null,
+        "rotation" : 0,
+        "top" : -291,
+        "visible" : true,
+        "width" : 446,
+        "widthType" : 0
+      },
+      {
         "__class" : "FrameNode",
         "aspectRatio" : null,
         "blendingEnabled" : 0,
@@ -3388,7 +3491,7 @@
             "blendingMode" : "normal",
             "bottom" : null,
             "centerAnchorX" : 0.5,
-            "centerAnchorY" : 0.018472906403940888,
+            "centerAnchorY" : 0.023399014778325122,
             "children" : [
               {
                 "__class" : "FrameNode",
@@ -5490,7 +5593,7 @@
                 "replicaInfo" : null,
                 "right" : 14,
                 "rotation" : 0,
-                "top" : null,
+                "top" : 14,
                 "visible" : true,
                 "width" : 67,
                 "widthType" : 0
@@ -5676,7 +5779,7 @@
                 "replicaInfo" : null,
                 "right" : null,
                 "rotation" : 0,
-                "top" : null,
+                "top" : 11,
                 "visible" : true,
                 "width" : 54,
                 "widthType" : 0
@@ -5733,7 +5836,7 @@
               "widthFactor" : 0.5
             },
             "fillType" : "color",
-            "height" : 30,
+            "height" : 38,
             "heightType" : 0,
             "id" : "@framer\/steveruizok.education-XREstntDl-PPIpguwXL",
             "intrinsicHeight" : null,
@@ -6045,107 +6148,6 @@
         "top" : 0,
         "visible" : true,
         "width" : 375,
-        "widthType" : 0
-      },
-      {
-        "__class" : "CodeComponentNode",
-        "aspectRatio" : null,
-        "bottom" : null,
-        "centerAnchorX" : 0.68266666666666664,
-        "centerAnchorY" : 0.11268472906403941,
-        "children" : [
-
-        ],
-        "clip" : true,
-        "codeComponentIdentifier" : "@framer\/steveruizok.education\/.\/Text.tsx_Text",
-        "codeComponentProps" : {
-          "background" : "none",
-          "color" : "var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 86, 254)) \/* {\"name\":\"Primary\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
-          "paddingPerSide" : false,
-          "pc_resizeDirection" : "xaxis",
-          "resize" : false,
-          "text" : "Checkout",
-          "textAlign" : "left",
-          "type" : "display",
-          "verticalAlign" : "top"
-        },
-        "codeOverrideEnabled" : true,
-        "codeOverrideFile" : ".\/App.tsx",
-        "codeOverrideIdentifier" : ".\/App.tsx_Symbol",
-        "codeOverrideName" : "Symbol",
-        "constraintsLocked" : false,
-        "deviceType" : null,
-        "exportOptions" : [
-
-        ],
-        "fillColor" : "rgba(255,255,255,1)",
-        "fillEnabled" : false,
-        "fillImage" : null,
-        "fillImagePixelHeight" : null,
-        "fillImagePixelWidth" : null,
-        "fillImageResize" : "fill",
-        "fillLinearGradient" : {
-          "__class" : "LinearGradient",
-          "alpha" : 1,
-          "angle" : 180,
-          "stops" : [
-            {
-              "__class" : "GradientColorStop",
-              "position" : 0,
-              "value" : "rgba(0,0,0,0)"
-            },
-            {
-              "__class" : "GradientColorStop",
-              "position" : 1,
-              "value" : "black"
-            }
-          ]
-        },
-        "fillRadialGradient" : {
-          "__class" : "RadialGradient",
-          "alpha" : 1,
-          "centerAnchorX" : 0.5,
-          "centerAnchorY" : 0.5,
-          "heightFactor" : 0.5,
-          "stops" : [
-            {
-              "__class" : "GradientColorStop",
-              "position" : 0,
-              "value" : "rgba(0,0,0,0)"
-            },
-            {
-              "__class" : "GradientColorStop",
-              "position" : 1,
-              "value" : "black"
-            }
-          ],
-          "widthFactor" : 0.5
-        },
-        "fillType" : "color",
-        "height" : 67,
-        "heightType" : 0,
-        "id" : "Qmqq40Tgy",
-        "intrinsicHeight" : 50,
-        "intrinsicWidth" : 200,
-        "left" : 513,
-        "locked" : false,
-        "name" : null,
-        "opacity" : 1,
-        "originalid" : null,
-        "parentid" : "TZ6k8qSKt",
-        "previewSettings" : null,
-        "radius" : 0,
-        "radiusBottomLeft" : 0,
-        "radiusBottomRight" : 0,
-        "radiusIsRelative" : false,
-        "radiusPerCorner" : false,
-        "radiusTopLeft" : 0,
-        "radiusTopRight" : 0,
-        "right" : null,
-        "rotation" : 0,
-        "top" : -291,
-        "visible" : true,
-        "width" : 446,
         "widthType" : 0
       }
     ],

@@ -23,7 +23,14 @@
             "clip" : true,
             "codeComponentIdentifier" : "@framer\/steveruizok.education\/.\/CardList.tsx_CardList",
             "codeComponentProps" : {
-              "emptyText" : "Nothing to see here."
+              "emptyText" : "Nothing to see here.",
+              "gap" : 32,
+              "padding" : 16,
+              "paddingBottom" : 100,
+              "paddingLeft" : 16,
+              "paddingPerSide" : false,
+              "paddingRight" : 16,
+              "paddingTop" : 16
             },
             "codeOverrideEnabled" : true,
             "codeOverrideFile" : ".\/App.tsx",
@@ -78,7 +85,7 @@
               "widthFactor" : 0.5
             },
             "fillType" : "color",
-            "height" : 640,
+            "height" : 724,
             "heightType" : 0,
             "id" : "KrPAQTBuR",
             "intrinsicHeight" : 520,
@@ -3102,23 +3109,26 @@
           {
             "__class" : "CodeComponentNode",
             "aspectRatio" : null,
-            "bottom" : 16,
-            "centerAnchorX" : 0.52133333333333332,
+            "bottom" : 0,
+            "centerAnchorX" : 0.5,
             "centerAnchorY" : 0.5,
             "children" : [
 
             ],
             "clip" : true,
-            "codeComponentIdentifier" : "@framer\/steveruizok.education\/.\/Card.tsx_Card",
+            "codeComponentIdentifier" : "@framer\/steveruizok.education\/.\/List.tsx_List",
             "codeComponentProps" : {
-              "autosize" : true,
-              "body" : "",
-              "color" : "var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 86, 254))",
-              "favorite" : true,
-              "footer" : "",
-              "isFavorite" : false,
-              "overlay" : true,
-              "title" : "Title"
+              "content" : [
+
+              ],
+              "emptyText" : "Nothing to see here.",
+              "gap" : 24,
+              "padding" : 16,
+              "paddingBottom" : 16,
+              "paddingLeft" : 16,
+              "paddingPerSide" : true,
+              "paddingRight" : 16,
+              "paddingTop" : 0
             },
             "codeOverrideEnabled" : true,
             "codeOverrideFile" : ".\/App.tsx",
@@ -3135,50 +3145,13 @@
             "fillImagePixelHeight" : null,
             "fillImagePixelWidth" : null,
             "fillImageResize" : "fill",
-            "fillLinearGradient" : {
-              "__class" : "LinearGradient",
-              "alpha" : 1,
-              "angle" : 180,
-              "stops" : [
-                {
-                  "__class" : "GradientColorStop",
-                  "position" : 0,
-                  "value" : "rgba(0,0,0,0)"
-                },
-                {
-                  "__class" : "GradientColorStop",
-                  "position" : 1,
-                  "value" : "black"
-                }
-              ]
-            },
-            "fillRadialGradient" : {
-              "__class" : "RadialGradient",
-              "alpha" : 1,
-              "centerAnchorX" : 0.5,
-              "centerAnchorY" : 0.5,
-              "heightFactor" : 0.5,
-              "stops" : [
-                {
-                  "__class" : "GradientColorStop",
-                  "position" : 0,
-                  "value" : "rgba(0,0,0,0)"
-                },
-                {
-                  "__class" : "GradientColorStop",
-                  "position" : 1,
-                  "value" : "black"
-                }
-              ],
-              "widthFactor" : 0.5
-            },
             "fillType" : "color",
-            "height" : 608,
+            "height" : 724,
             "heightType" : 0,
-            "id" : "isHg6fySv",
-            "intrinsicHeight" : 320,
+            "id" : "vyc5VaKMx",
+            "intrinsicHeight" : 520,
             "intrinsicWidth" : 320,
-            "left" : 16,
+            "left" : 0,
             "locked" : false,
             "name" : null,
             "opacity" : 1,
@@ -3192,11 +3165,11 @@
             "radiusPerCorner" : false,
             "radiusTopLeft" : 0,
             "radiusTopRight" : 0,
-            "right" : 16,
+            "right" : 0,
             "rotation" : 0,
-            "top" : 16,
+            "top" : 0,
             "visible" : true,
-            "width" : 343,
+            "width" : 375,
             "widthType" : 0
           }
         ],
@@ -3302,7 +3275,7 @@
           "paddingPerSide" : false,
           "pc_resizeDirection" : "xaxis",
           "resize" : false,
-          "text" : "Navigation",
+          "text" : "Contentful",
           "textAlign" : "left",
           "type" : "display",
           "verticalAlign" : "top"
