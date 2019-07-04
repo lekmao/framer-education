@@ -403,9 +403,9 @@
               {
                 "__class" : "CodeComponentNode",
                 "aspectRatio" : null,
-                "bottom" : 199,
+                "bottom" : 237,
                 "centerAnchorX" : 0.5,
-                "centerAnchorY" : 0.68927648578811374,
+                "centerAnchorY" : 0.66666666666666663,
                 "children" : [
 
                 ],
@@ -417,7 +417,7 @@
                   "paddingPerSide" : false,
                   "pc_resizeDirection" : "xaxis",
                   "resize" : false,
-                  "text" : "To start, open this project's Project Folder, then open a terminal in the server folder. From the terminal, run `node index` and preview this Frame.",
+                  "text" : "To start, set up an Arduino as shown here: http:\/\/johnny-five.io\/examples\/button\/. ",
                   "textAlign" : "left",
                   "type" : "body",
                   "verticalAlign" : "top"
@@ -435,7 +435,68 @@
                 "fillImagePixelWidth" : null,
                 "fillImageResize" : "fill",
                 "fillType" : "color",
-                "height" : 83,
+                "height" : 42,
+                "heightType" : 0,
+                "id" : "f8LpLViE7",
+                "intrinsicHeight" : 50,
+                "intrinsicWidth" : 200,
+                "left" : null,
+                "locked" : false,
+                "name" : null,
+                "opacity" : 1,
+                "originalid" : null,
+                "parentid" : "fWh5LgjK6@framer\/steveruizok.education-XREstntDl-IMoJuI2JM",
+                "previewSettings" : null,
+                "radius" : 0,
+                "radiusBottomLeft" : 0,
+                "radiusBottomRight" : 0,
+                "radiusIsRelative" : false,
+                "radiusPerCorner" : false,
+                "radiusTopLeft" : 0,
+                "radiusTopRight" : 0,
+                "right" : null,
+                "rotation" : 0,
+                "top" : null,
+                "visible" : true,
+                "width" : 1,
+                "widthType" : 3
+              },
+              {
+                "__class" : "CodeComponentNode",
+                "aspectRatio" : null,
+                "bottom" : 159,
+                "centerAnchorX" : 0.5,
+                "centerAnchorY" : 0.77906976744186052,
+                "children" : [
+
+                ],
+                "clip" : true,
+                "codeComponentIdentifier" : "@framer\/steveruizok.education\/.\/Text.tsx_Text",
+                "codeComponentProps" : {
+                  "background" : "none",
+                  "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47))",
+                  "paddingPerSide" : false,
+                  "pc_resizeDirection" : "xaxis",
+                  "resize" : false,
+                  "text" : "Next, open this project's Project Folder. ",
+                  "textAlign" : "left",
+                  "type" : "body",
+                  "verticalAlign" : "top"
+                },
+                "codeOverrideEnabled" : false,
+                "constraintsLocked" : false,
+                "deviceType" : null,
+                "exportOptions" : [
+
+                ],
+                "fillColor" : "rgba(255,255,255,1)",
+                "fillEnabled" : false,
+                "fillImage" : null,
+                "fillImagePixelHeight" : null,
+                "fillImagePixelWidth" : null,
+                "fillImageResize" : "fill",
+                "fillType" : "color",
+                "height" : 24,
                 "heightType" : 0,
                 "id" : "lc7tiVQBJ",
                 "intrinsicHeight" : 50,
@@ -464,9 +525,9 @@
               {
                 "__class" : "CodeComponentNode",
                 "aspectRatio" : null,
-                "bottom" : 37,
+                "bottom" : 139,
                 "centerAnchorX" : 0.5,
-                "centerAnchorY" : 0.88049095607235139,
+                "centerAnchorY" : 0.80555555555555558,
                 "children" : [
 
                 ],
@@ -478,7 +539,7 @@
                   "paddingPerSide" : false,
                   "pc_resizeDirection" : "xaxis",
                   "resize" : false,
-                  "text" : "On the attached Arduino, connect a circuit as shown here: http:\/\/johnny-five.io\/examples\/button\/. When running, pushing the button on the Arduino will change the color of the indicator.",
+                  "text" : "Open a terminal in the server folder. ",
                   "textAlign" : "left",
                   "type" : "body",
                   "verticalAlign" : "top"
@@ -496,9 +557,131 @@
                 "fillImagePixelWidth" : null,
                 "fillImageResize" : "fill",
                 "fillType" : "color",
-                "height" : 111,
+                "height" : 23,
                 "heightType" : 0,
-                "id" : "f8LpLViE7",
+                "id" : "HplEvVlVm",
+                "intrinsicHeight" : 50,
+                "intrinsicWidth" : 200,
+                "left" : null,
+                "locked" : false,
+                "name" : null,
+                "opacity" : 1,
+                "originalid" : null,
+                "parentid" : "fWh5LgjK6@framer\/steveruizok.education-XREstntDl-IMoJuI2JM",
+                "previewSettings" : null,
+                "radius" : 0,
+                "radiusBottomLeft" : 0,
+                "radiusBottomRight" : 0,
+                "radiusIsRelative" : false,
+                "radiusPerCorner" : false,
+                "radiusTopLeft" : 0,
+                "radiusTopRight" : 0,
+                "right" : null,
+                "rotation" : 0,
+                "top" : null,
+                "visible" : true,
+                "width" : 1,
+                "widthType" : 3
+              },
+              {
+                "__class" : "CodeComponentNode",
+                "aspectRatio" : null,
+                "bottom" : 99,
+                "centerAnchorX" : 0.5,
+                "centerAnchorY" : 0.84366925064599485,
+                "children" : [
+
+                ],
+                "clip" : true,
+                "codeComponentIdentifier" : "@framer\/steveruizok.education\/.\/Text.tsx_Text",
+                "codeComponentProps" : {
+                  "background" : "none",
+                  "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47))",
+                  "paddingPerSide" : false,
+                  "pc_resizeDirection" : "xaxis",
+                  "resize" : false,
+                  "text" : "From the terminal, run `node index` and preview this Frame \/ refresh the Preview.",
+                  "textAlign" : "left",
+                  "type" : "body",
+                  "verticalAlign" : "top"
+                },
+                "codeOverrideEnabled" : false,
+                "constraintsLocked" : false,
+                "deviceType" : null,
+                "exportOptions" : [
+
+                ],
+                "fillColor" : "rgba(255,255,255,1)",
+                "fillEnabled" : false,
+                "fillImage" : null,
+                "fillImagePixelHeight" : null,
+                "fillImagePixelWidth" : null,
+                "fillImageResize" : "fill",
+                "fillType" : "color",
+                "height" : 44,
+                "heightType" : 0,
+                "id" : "d_TcK7hds",
+                "intrinsicHeight" : 50,
+                "intrinsicWidth" : 200,
+                "left" : null,
+                "locked" : false,
+                "name" : null,
+                "opacity" : 1,
+                "originalid" : null,
+                "parentid" : "fWh5LgjK6@framer\/steveruizok.education-XREstntDl-IMoJuI2JM",
+                "previewSettings" : null,
+                "radius" : 0,
+                "radiusBottomLeft" : 0,
+                "radiusBottomRight" : 0,
+                "radiusIsRelative" : false,
+                "radiusPerCorner" : false,
+                "radiusTopLeft" : 0,
+                "radiusTopRight" : 0,
+                "right" : null,
+                "rotation" : 0,
+                "top" : null,
+                "visible" : true,
+                "width" : 1,
+                "widthType" : 3
+              },
+              {
+                "__class" : "CodeComponentNode",
+                "aspectRatio" : null,
+                "bottom" : 16,
+                "centerAnchorX" : 0.5,
+                "centerAnchorY" : 0.92958656330749356,
+                "children" : [
+
+                ],
+                "clip" : true,
+                "codeComponentIdentifier" : "@framer\/steveruizok.education\/.\/Text.tsx_Text",
+                "codeComponentProps" : {
+                  "background" : "none",
+                  "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47))",
+                  "paddingPerSide" : false,
+                  "pc_resizeDirection" : "xaxis",
+                  "resize" : false,
+                  "text" : "When running, pushing the button on the Arduino will change the color of the indicator.",
+                  "textAlign" : "left",
+                  "type" : "body",
+                  "verticalAlign" : "top"
+                },
+                "codeOverrideEnabled" : false,
+                "constraintsLocked" : false,
+                "deviceType" : null,
+                "exportOptions" : [
+
+                ],
+                "fillColor" : "rgba(255,255,255,1)",
+                "fillEnabled" : false,
+                "fillImage" : null,
+                "fillImagePixelHeight" : null,
+                "fillImagePixelWidth" : null,
+                "fillImageResize" : "fill",
+                "fillType" : "color",
+                "height" : 77,
+                "heightType" : 0,
+                "id" : "MZ_6AQ_88",
                 "intrinsicHeight" : 50,
                 "intrinsicWidth" : 200,
                 "left" : null,
@@ -3285,111 +3468,6 @@
         "aspectRatio" : null,
         "blendingEnabled" : 0,
         "blendingMode" : "normal",
-        "borderBottom" : 1,
-        "borderColor" : "var(--token-23bce3fd-e7be-45a5-a2c3-53cfc3c53db9, rgba(37, 37, 45, 0.3)) \/* {\"name\":\"Border\"} *\/",
-        "borderEnabled" : 1,
-        "borderLeft" : 0,
-        "borderPerSide" : true,
-        "borderRight" : 0,
-        "borderStyle" : "solid",
-        "borderTop" : 0,
-        "borderWidth" : 1,
-        "bottom" : null,
-        "centerAnchorX" : 0.46533333333333332,
-        "centerAnchorY" : 0.54064039408866993,
-        "children" : [
-
-        ],
-        "clip" : false,
-        "codeOverrideEnabled" : false,
-        "constraintsLocked" : false,
-        "deviceType" : null,
-        "exportOptions" : [
-
-        ],
-        "fillColor" : "hsla(0, 0%, 100%, 0.5)",
-        "fillEnabled" : false,
-        "fillImage" : null,
-        "fillImagePixelHeight" : null,
-        "fillImagePixelWidth" : null,
-        "fillImageResize" : "fill",
-        "fillLinearGradient" : {
-          "__class" : "LinearGradient",
-          "alpha" : 1,
-          "angle" : 180,
-          "stops" : [
-            {
-              "__class" : "GradientColorStop",
-              "position" : 0,
-              "value" : "rgba(0,0,0,0)"
-            },
-            {
-              "__class" : "GradientColorStop",
-              "position" : 1,
-              "value" : "black"
-            }
-          ]
-        },
-        "fillRadialGradient" : {
-          "__class" : "RadialGradient",
-          "alpha" : 1,
-          "centerAnchorX" : 0.5,
-          "centerAnchorY" : 0.5,
-          "heightFactor" : 0.5,
-          "stops" : [
-            {
-              "__class" : "GradientColorStop",
-              "position" : 0,
-              "value" : "rgba(0,0,0,0)"
-            },
-            {
-              "__class" : "GradientColorStop",
-              "position" : 1,
-              "value" : "black"
-            }
-          ],
-          "widthFactor" : 0.5
-        },
-        "fillType" : "color",
-        "height" : 48,
-        "heightType" : 0,
-        "id" : "@framer\/steveruizok.education-bqsC9adwp",
-        "intrinsicHeight" : null,
-        "intrinsicWidth" : null,
-        "isExternalMaster" : "@framer\/steveruizok.education",
-        "isMaster" : true,
-        "isTarget" : false,
-        "left" : 0,
-        "locked" : false,
-        "name" : "Divider",
-        "navigationTarget" : null,
-        "navigationTransition" : "push",
-        "navigationTransitionBackdropColor" : "rgba(4,4,15,.4)",
-        "navigationTransitionDirection" : "left",
-        "opacity" : 1,
-        "originalid" : null,
-        "parentid" : "DxIVvMw5f",
-        "previewSettings" : null,
-        "radius" : 0,
-        "radiusBottomLeft" : 0,
-        "radiusBottomRight" : 0,
-        "radiusIsRelative" : false,
-        "radiusPerCorner" : false,
-        "radiusTopLeft" : 0,
-        "radiusTopRight" : 0,
-        "replicaInfo" : null,
-        "right" : null,
-        "rotation" : 0,
-        "top" : 0,
-        "visible" : true,
-        "width" : 375,
-        "widthType" : 0
-      },
-      {
-        "__class" : "FrameNode",
-        "aspectRatio" : null,
-        "blendingEnabled" : 0,
-        "blendingMode" : "normal",
         "bottom" : null,
         "centerAnchorX" : 0.46289424860853434,
         "centerAnchorY" : 0.48448687350835323,
@@ -6157,6 +6235,261 @@
         "top" : 0,
         "visible" : true,
         "width" : 375,
+        "widthType" : 0
+      },
+      {
+        "__class" : "FrameNode",
+        "aspectRatio" : null,
+        "blendingEnabled" : 0,
+        "blendingMode" : "normal",
+        "borderBottom" : 1,
+        "borderColor" : "var(--token-23bce3fd-e7be-45a5-a2c3-53cfc3c53db9, rgba(37, 37, 45, 0.3)) \/* {\"name\":\"Border\"} *\/",
+        "borderEnabled" : 1,
+        "borderLeft" : 0,
+        "borderPerSide" : true,
+        "borderRight" : 0,
+        "borderStyle" : "solid",
+        "borderTop" : 0,
+        "borderWidth" : 1,
+        "bottom" : null,
+        "centerAnchorX" : 0.46533333333333332,
+        "centerAnchorY" : 0.54064039408866993,
+        "children" : [
+
+        ],
+        "clip" : false,
+        "codeOverrideEnabled" : false,
+        "constraintsLocked" : false,
+        "deviceType" : null,
+        "exportOptions" : [
+
+        ],
+        "fillColor" : "hsla(0, 0%, 100%, 0.5)",
+        "fillEnabled" : false,
+        "fillImage" : null,
+        "fillImagePixelHeight" : null,
+        "fillImagePixelWidth" : null,
+        "fillImageResize" : "fill",
+        "fillLinearGradient" : {
+          "__class" : "LinearGradient",
+          "alpha" : 1,
+          "angle" : 180,
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ]
+        },
+        "fillRadialGradient" : {
+          "__class" : "RadialGradient",
+          "alpha" : 1,
+          "centerAnchorX" : 0.5,
+          "centerAnchorY" : 0.5,
+          "heightFactor" : 0.5,
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ],
+          "widthFactor" : 0.5
+        },
+        "fillType" : "color",
+        "height" : 48,
+        "heightType" : 0,
+        "id" : "@framer\/steveruizok.education-bqsC9adwp",
+        "intrinsicHeight" : null,
+        "intrinsicWidth" : null,
+        "isExternalMaster" : "@framer\/steveruizok.education",
+        "isMaster" : true,
+        "isTarget" : false,
+        "left" : 0,
+        "locked" : false,
+        "name" : "Divider",
+        "navigationTarget" : null,
+        "navigationTransition" : "push",
+        "navigationTransitionBackdropColor" : "rgba(4,4,15,.4)",
+        "navigationTransitionDirection" : "left",
+        "opacity" : 1,
+        "originalid" : null,
+        "parentid" : "DxIVvMw5f",
+        "previewSettings" : null,
+        "radius" : 0,
+        "radiusBottomLeft" : 0,
+        "radiusBottomRight" : 0,
+        "radiusIsRelative" : false,
+        "radiusPerCorner" : false,
+        "radiusTopLeft" : 0,
+        "radiusTopRight" : 0,
+        "replicaInfo" : null,
+        "right" : null,
+        "rotation" : 0,
+        "top" : 0,
+        "visible" : true,
+        "width" : 375,
+        "widthType" : 0
+      },
+      {
+        "__class" : "FrameNode",
+        "aspectRatio" : 1.75,
+        "blendingEnabled" : 0,
+        "blendingMode" : "normal",
+        "bottom" : null,
+        "centerAnchorX" : 0.37866666666666665,
+        "centerAnchorY" : 0.58128078817733986,
+        "children" : [
+
+        ],
+        "clip" : false,
+        "codeOverrideEnabled" : false,
+        "constraintsLocked" : false,
+        "deviceType" : null,
+        "exportOptions" : [
+
+        ],
+        "fillColor" : "rgba(255,255,255,1)",
+        "fillEnabled" : true,
+        "fillImage" : "bv3exTrPzspqiBm3VvXsXdHYO8.png",
+        "fillImagePixelHeight" : 864,
+        "fillImagePixelWidth" : 1512,
+        "fillImageResize" : "fill",
+        "fillType" : "image",
+        "height" : 432,
+        "heightType" : 0,
+        "id" : "m6EapJFbo",
+        "intrinsicHeight" : 432,
+        "intrinsicWidth" : 756,
+        "isExternalMaster" : null,
+        "isMaster" : false,
+        "isTarget" : false,
+        "left" : 803,
+        "locked" : false,
+        "name" : null,
+        "navigationTarget" : null,
+        "navigationTransition" : "push",
+        "navigationTransitionBackdropColor" : "rgba(4,4,15,.4)",
+        "navigationTransitionDirection" : "left",
+        "opacity" : 1,
+        "originalFilename" : "",
+        "originalid" : null,
+        "parentid" : "DxIVvMw5f",
+        "previewSettings" : null,
+        "radius" : 0,
+        "radiusBottomLeft" : 0,
+        "radiusBottomRight" : 0,
+        "radiusIsRelative" : false,
+        "radiusPerCorner" : false,
+        "radiusTopLeft" : 0,
+        "radiusTopRight" : 0,
+        "replicaInfo" : null,
+        "right" : null,
+        "rotation" : 0,
+        "top" : 202,
+        "visible" : true,
+        "width" : 756,
+        "widthType" : 0
+      },
+      {
+        "__class" : "TextNode",
+        "autoSize" : true,
+        "bottom" : null,
+        "centerAnchorX" : 0.85466666666666669,
+        "centerAnchorY" : 0.57204433497536944,
+        "codeOverrideEnabled" : false,
+        "constraintsLocked" : false,
+        "exportOptions" : [
+
+        ],
+        "height" : 115,
+        "heightType" : 0,
+        "id" : "Qm8mvW0xt",
+        "isTarget" : false,
+        "left" : 803,
+        "locked" : false,
+        "name" : null,
+        "opacity" : 1,
+        "originalid" : null,
+        "parentid" : "DxIVvMw5f",
+        "right" : null,
+        "rotation" : 0,
+        "styledText" : {
+          "__class" : "StyledTextDraft",
+          "blocks" : [
+            {
+              "data" : {
+                "emptyStyle" : [
+                  "LETTERSPACING:0",
+                  "LINEHEIGHT:1.2",
+                  "COLOR:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {\"name\":\"Primary\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+                  "FONT:HelveticaNeue-Bold",
+                  "SIZE:96"
+                ]
+              },
+              "depth" : 0,
+              "entityRanges" : [
+
+              ],
+              "inlineStyleRanges" : [
+                {
+                  "length" : 15,
+                  "offset" : 0,
+                  "style" : "LETTERSPACING:0"
+                },
+                {
+                  "length" : 15,
+                  "offset" : 0,
+                  "style" : "LINEHEIGHT:1.2"
+                },
+                {
+                  "length" : 15,
+                  "offset" : 0,
+                  "style" : "COLOR:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {\"name\":\"Primary\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/"
+                },
+                {
+                  "length" : 15,
+                  "offset" : 0,
+                  "style" : "FONT:HelveticaNeue-Bold"
+                },
+                {
+                  "length" : 15,
+                  "offset" : 0,
+                  "style" : "SIZE:96"
+                }
+              ],
+              "key" : "559t0",
+              "text" : "Arduino Circuit",
+              "type" : "unstyled"
+            }
+          ],
+          "cached" : {
+            "html" : "<div data-offset-key=\"559t0-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"559t0-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Bold&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {&quot;name&quot;:&quot;Primary&quot;,&quot;packageIdentifier&quot;:&quot;@framer\/steveruizok.education&quot;} *\/;font-size:96px;letter-spacing:0px;line-height:1.2;font-weight:700\"><span data-text=\"true\">Arduino Circuit<\/span><\/span><\/div>",
+            "os" : "10_14",
+            "size" : {
+              "height" : 115,
+              "width" : 688
+            },
+            "width" : 0
+          },
+          "entityMap" : {
+
+          }
+        },
+        "top" : 15,
+        "visible" : true,
+        "width" : 688,
         "widthType" : 0
       }
     ],
