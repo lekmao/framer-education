@@ -20,46 +20,165 @@
             "children" : [
               {
                 "__class" : "CodeComponentNode",
-                "aspectRatio" : 1,
+                "aspectRatio" : null,
                 "bottom" : null,
-                "boxShadows" : [
-                  {
-                    "__class" : "BoxShadow",
-                    "blur" : 12,
-                    "color" : "rgba(0, 0, 0, 0.12)",
-                    "enabled" : true,
-                    "inset" : false,
-                    "spread" : 0,
-                    "x" : 0,
-                    "y" : 2
-                  }
-                ],
-                "centerAnchorX" : 0.40933333333333333,
-                "centerAnchorY" : 0.25904392764857881,
+                "centerAnchorX" : 0.5013333333333333,
+                "centerAnchorY" : 0.43087855297157623,
                 "children" : [
                   {
-                    "__class" : "FrameNode",
-                    "aspectRatio" : 1,
-                    "blendingEnabled" : 0,
-                    "blendingMode" : "normal",
-                    "bottom" : 29,
-                    "centerAnchorX" : 0.51372549019607838,
-                    "centerAnchorY" : 0.4823529411764706,
+                    "__class" : "CodeComponentNode",
+                    "aspectRatio" : null,
+                    "bottom" : null,
+                    "centerAnchorX" : 0.5,
+                    "centerAnchorY" : 0.095785440613026823,
                     "children" : [
 
                     ],
-                    "clip" : false,
-                    "codeOverrideEnabled" : true,
-                    "codeOverrideFile" : ".\/App.tsx",
-                    "codeOverrideIdentifier" : ".\/App.tsx_Indicator",
-                    "codeOverrideName" : "Indicator",
+                    "clip" : true,
+                    "codeComponentIdentifier" : "@framer\/steveruizok.education\/.\/Text.tsx_Text",
+                    "codeComponentProps" : {
+                      "background" : "none",
+                      "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47))",
+                      "paddingPerSide" : false,
+                      "pc_resizeDirection" : "xaxis",
+                      "resize" : false,
+                      "text" : "Button Pushed",
+                      "textAlign" : "center",
+                      "type" : "link",
+                      "verticalAlign" : "center"
+                    },
+                    "codeOverrideEnabled" : false,
                     "constraintsLocked" : false,
                     "deviceType" : null,
                     "exportOptions" : [
 
                     ],
-                    "fillColor" : "var(--token-b16a7a8a-e2ab-4afa-a205-534e354689de, rgb(255, 171, 87)) \/* {\"name\":\"Accent\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
-                    "fillEnabled" : true,
+                    "fillColor" : "rgba(255,255,255,1)",
+                    "fillEnabled" : false,
+                    "fillImage" : null,
+                    "fillImagePixelHeight" : null,
+                    "fillImagePixelWidth" : null,
+                    "fillImageResize" : "fill",
+                    "fillType" : "color",
+                    "height" : 50,
+                    "heightType" : 0,
+                    "id" : "PoM8pfQ2T",
+                    "intrinsicHeight" : 50,
+                    "intrinsicWidth" : 200,
+                    "left" : 3,
+                    "locked" : false,
+                    "name" : null,
+                    "opacity" : 1,
+                    "originalid" : null,
+                    "parentid" : "P01sshQsA",
+                    "previewSettings" : null,
+                    "radius" : 0,
+                    "radiusBottomLeft" : 0,
+                    "radiusBottomRight" : 0,
+                    "radiusIsRelative" : false,
+                    "radiusPerCorner" : false,
+                    "radiusTopLeft" : 0,
+                    "radiusTopRight" : 0,
+                    "right" : 3,
+                    "rotation" : 0,
+                    "top" : 0,
+                    "visible" : true,
+                    "width" : 200,
+                    "widthType" : 0
+                  },
+                  {
+                    "__class" : "FrameNode",
+                    "aspectRatio" : null,
+                    "blendingEnabled" : 0,
+                    "blendingMode" : "normal",
+                    "bottom" : null,
+                    "boxShadows" : [
+                      {
+                        "__class" : "BoxShadow",
+                        "blur" : 5,
+                        "color" : "rgba(0,0,0,0.25)",
+                        "enabled" : true,
+                        "inset" : false,
+                        "spread" : 0,
+                        "x" : 0,
+                        "y" : 2
+                      }
+                    ],
+                    "centerAnchorX" : 0.5,
+                    "centerAnchorY" : 0.65319865319865322,
+                    "children" : [
+                      {
+                        "__class" : "FrameNode",
+                        "aspectRatio" : 1,
+                        "blendingEnabled" : 0,
+                        "blendingMode" : "normal",
+                        "bottom" : null,
+                        "centerAnchorX" : 0.49757281553398058,
+                        "centerAnchorY" : 0.49757281553398058,
+                        "children" : [
+
+                        ],
+                        "clip" : false,
+                        "codeOverrideEnabled" : true,
+                        "codeOverrideFile" : ".\/Example1.tsx",
+                        "codeOverrideIdentifier" : ".\/Example1.tsx_Indicator",
+                        "codeOverrideName" : "Indicator",
+                        "constraintsLocked" : false,
+                        "deviceType" : null,
+                        "exportOptions" : [
+
+                        ],
+                        "fillColor" : "var(--token-b16a7a8a-e2ab-4afa-a205-534e354689de, rgb(255, 171, 87)) \/* {\"name\":\"Accent\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+                        "fillEnabled" : true,
+                        "fillImage" : null,
+                        "fillImagePixelHeight" : null,
+                        "fillImagePixelWidth" : null,
+                        "fillImageResize" : "fill",
+                        "fillType" : "color",
+                        "height" : 165,
+                        "heightType" : 0,
+                        "id" : "OqCtwY5OZ",
+                        "intrinsicHeight" : null,
+                        "intrinsicWidth" : null,
+                        "isExternalMaster" : null,
+                        "isMaster" : false,
+                        "isTarget" : false,
+                        "left" : 20,
+                        "locked" : false,
+                        "name" : null,
+                        "navigationTarget" : null,
+                        "navigationTransition" : "push",
+                        "navigationTransitionBackdropColor" : "rgba(4,4,15,.4)",
+                        "navigationTransitionDirection" : "left",
+                        "opacity" : 1,
+                        "originalid" : null,
+                        "parentid" : "McGP9WD1o",
+                        "previewSettings" : null,
+                        "radius" : 100,
+                        "radiusBottomLeft" : 100,
+                        "radiusBottomRight" : 100,
+                        "radiusIsRelative" : true,
+                        "radiusPerCorner" : false,
+                        "radiusTopLeft" : 100,
+                        "radiusTopRight" : 100,
+                        "replicaInfo" : null,
+                        "right" : 21,
+                        "rotation" : 0,
+                        "top" : 20,
+                        "visible" : true,
+                        "width" : 165,
+                        "widthType" : 0
+                      }
+                    ],
+                    "clip" : false,
+                    "codeOverrideEnabled" : false,
+                    "constraintsLocked" : false,
+                    "deviceType" : null,
+                    "exportOptions" : [
+
+                    ],
+                    "fillColor" : "rgba(255,255,255,1)",
+                    "fillEnabled" : false,
                     "fillImage" : null,
                     "fillImagePixelHeight" : null,
                     "fillImagePixelWidth" : null,
@@ -67,13 +186,13 @@
                     "fillType" : "color",
                     "height" : 206,
                     "heightType" : 0,
-                    "id" : "OqCtwY5OZ",
+                    "id" : "McGP9WD1o",
                     "intrinsicHeight" : null,
                     "intrinsicWidth" : null,
                     "isExternalMaster" : null,
                     "isMaster" : false,
                     "isTarget" : false,
-                    "left" : 28,
+                    "left" : null,
                     "locked" : false,
                     "name" : null,
                     "navigationTarget" : null,
@@ -82,7 +201,7 @@
                     "navigationTransitionDirection" : "left",
                     "opacity" : 1,
                     "originalid" : null,
-                    "parentid" : "loYbZO2vQ",
+                    "parentid" : "P01sshQsA",
                     "previewSettings" : null,
                     "radius" : 100,
                     "radiusBottomLeft" : 100,
@@ -92,20 +211,20 @@
                     "radiusTopLeft" : 100,
                     "radiusTopRight" : 100,
                     "replicaInfo" : null,
-                    "right" : 21,
+                    "right" : null,
                     "rotation" : 0,
-                    "top" : 20,
+                    "top" : null,
                     "visible" : true,
                     "width" : 206,
                     "widthType" : 0
                   }
                 ],
-                "clip" : true,
+                "clip" : false,
                 "codeComponentIdentifier" : "framer\/Stack",
                 "codeComponentProps" : {
                   "alignment" : "center",
                   "direction" : "vertical",
-                  "distribution" : "center",
+                  "distribution" : "space-between",
                   "gap" : 10,
                   "padding" : 0,
                   "paddingBottom" : 0,
@@ -114,46 +233,109 @@
                   "paddingRight" : 0,
                   "paddingTop" : 0
                 },
-                "codeOverrideEnabled" : true,
-                "codeOverrideFile" : ".\/App.tsx",
-                "codeOverrideIdentifier" : ".\/App.tsx_Background",
-                "codeOverrideName" : "Background",
+                "codeOverrideEnabled" : false,
                 "constraintsLocked" : false,
                 "deviceType" : null,
                 "exportOptions" : [
 
                 ],
-                "fillColor" : "hsl(0, 0%, 100%)",
-                "fillEnabled" : true,
+                "fillColor" : "rgba(255,255,255,1)",
+                "fillEnabled" : false,
                 "fillImage" : null,
                 "fillImagePixelHeight" : null,
                 "fillImagePixelWidth" : null,
                 "fillImageResize" : "fill",
                 "fillType" : "color",
-                "height" : 255,
+                "height" : 261,
                 "heightType" : 0,
-                "id" : "loYbZO2vQ",
+                "id" : "P01sshQsA",
                 "intrinsicHeight" : null,
                 "intrinsicWidth" : null,
-                "left" : 26,
+                "left" : null,
                 "locked" : false,
                 "name" : null,
                 "opacity" : 1,
                 "originalid" : null,
                 "parentid" : "fWh5LgjK6@framer\/steveruizok.education-XREstntDl-IMoJuI2JM",
                 "previewSettings" : null,
-                "radius" : 100,
-                "radiusBottomLeft" : 100,
-                "radiusBottomRight" : 100,
-                "radiusIsRelative" : true,
+                "radius" : 0,
+                "radiusBottomLeft" : 0,
+                "radiusBottomRight" : 0,
+                "radiusIsRelative" : false,
                 "radiusPerCorner" : false,
-                "radiusTopLeft" : 100,
-                "radiusTopRight" : 100,
+                "radiusTopLeft" : 0,
+                "radiusTopRight" : 0,
                 "right" : null,
                 "rotation" : 0,
-                "top" : 73,
+                "top" : null,
                 "visible" : true,
-                "width" : 255,
+                "width" : 206,
+                "widthType" : 0
+              },
+              {
+                "__class" : "CodeComponentNode",
+                "aspectRatio" : null,
+                "bottom" : 241,
+                "centerAnchorX" : 0.56533333333333335,
+                "centerAnchorY" : 0.65633074935400515,
+                "children" : [
+
+                ],
+                "clip" : true,
+                "codeComponentIdentifier" : "@framer\/steveruizok.education\/.\/RowItem.tsx_RowItem",
+                "codeComponentProps" : {
+                  "clamp" : false,
+                  "color" : "var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 86, 254))",
+                  "component" : "switch",
+                  "icon" : "chevron-right",
+                  "max" : 10,
+                  "message" : "",
+                  "min" : 0,
+                  "pc_boolean_value" : false,
+                  "pc_number_value" : 0,
+                  "step" : 1,
+                  "text" : "LED"
+                },
+                "codeOverrideEnabled" : true,
+                "codeOverrideFile" : ".\/Example1.tsx",
+                "codeOverrideIdentifier" : ".\/Example1.tsx_LEDIndicator",
+                "codeOverrideName" : "LEDIndicator",
+                "constraintsLocked" : false,
+                "deviceType" : null,
+                "exportOptions" : [
+
+                ],
+                "fillColor" : "rgba(255,255,255,1)",
+                "fillEnabled" : false,
+                "fillImage" : null,
+                "fillImagePixelHeight" : null,
+                "fillImagePixelWidth" : null,
+                "fillImageResize" : "fill",
+                "fillType" : "color",
+                "height" : 50,
+                "heightType" : 0,
+                "id" : "tAWFXiuxF",
+                "intrinsicHeight" : 50,
+                "intrinsicWidth" : 250,
+                "left" : null,
+                "locked" : false,
+                "name" : null,
+                "opacity" : 1,
+                "originalid" : null,
+                "parentid" : "fWh5LgjK6@framer\/steveruizok.education-XREstntDl-IMoJuI2JM",
+                "previewSettings" : null,
+                "radius" : 0,
+                "radiusBottomLeft" : 0,
+                "radiusBottomRight" : 0,
+                "radiusIsRelative" : false,
+                "radiusPerCorner" : false,
+                "radiusTopLeft" : 0,
+                "radiusTopRight" : 0,
+                "right" : 87,
+                "rotation" : 0,
+                "top" : null,
+                "visible" : true,
+                "width" : 180,
                 "widthType" : 0
               },
               {
@@ -161,7 +343,7 @@
                 "aspectRatio" : null,
                 "bottom" : null,
                 "centerAnchorX" : 0.5013333333333333,
-                "centerAnchorY" : 0.29780361757105944,
+                "centerAnchorY" : 0.93992248062015504,
                 "children" : [
 
                 ],
@@ -179,8 +361,8 @@
                   "verticalAlign" : "top"
                 },
                 "codeOverrideEnabled" : true,
-                "codeOverrideFile" : ".\/App.tsx",
-                "codeOverrideIdentifier" : ".\/App.tsx_ConnectedLabel",
+                "codeOverrideFile" : ".\/Example1.tsx",
+                "codeOverrideIdentifier" : ".\/Example1.tsx_ConnectedLabel",
                 "codeOverrideName" : "ConnectedLabel",
                 "constraintsLocked" : false,
                 "deviceType" : null,
@@ -199,7 +381,7 @@
                 "id" : "YUr0QHNxf",
                 "intrinsicHeight" : 50,
                 "intrinsicWidth" : 200,
-                "left" : 0,
+                "left" : null,
                 "locked" : false,
                 "name" : null,
                 "opacity" : 1,
@@ -215,495 +397,10 @@
                 "radiusTopRight" : 0,
                 "right" : null,
                 "rotation" : 0,
-                "top" : 0,
+                "top" : null,
                 "visible" : true,
                 "width" : 200,
                 "widthType" : 0
-              },
-              {
-                "__class" : "FrameNode",
-                "aspectRatio" : null,
-                "blendingEnabled" : 0,
-                "blendingMode" : "normal",
-                "borderBottom" : 1,
-                "borderColor" : "var(--token-23bce3fd-e7be-45a5-a2c3-53cfc3c53db9, rgba(37, 37, 45, 0.3)) \/* {\"name\":\"Border\"} *\/",
-                "borderEnabled" : 1,
-                "borderLeft" : 0,
-                "borderPerSide" : true,
-                "borderRight" : 0,
-                "borderStyle" : "solid",
-                "borderTop" : 0,
-                "borderWidth" : 1,
-                "bottom" : null,
-                "centerAnchorX" : 0.42533333333333334,
-                "centerAnchorY" : 0.46551724137931033,
-                "children" : [
-
-                ],
-                "clip" : false,
-                "codeOverrideEnabled" : false,
-                "constraintsLocked" : false,
-                "deviceType" : null,
-                "exportOptions" : [
-
-                ],
-                "fillColor" : "hsla(0, 0%, 100%, 0.5)",
-                "fillEnabled" : false,
-                "fillImage" : null,
-                "fillImagePixelHeight" : null,
-                "fillImagePixelWidth" : null,
-                "fillImageResize" : "fill",
-                "fillLinearGradient" : {
-                  "__class" : "LinearGradient",
-                  "alpha" : 1,
-                  "angle" : 180,
-                  "stops" : [
-                    {
-                      "__class" : "GradientColorStop",
-                      "position" : 0,
-                      "value" : "rgba(0,0,0,0)"
-                    },
-                    {
-                      "__class" : "GradientColorStop",
-                      "position" : 1,
-                      "value" : "black"
-                    }
-                  ]
-                },
-                "fillRadialGradient" : {
-                  "__class" : "RadialGradient",
-                  "alpha" : 1,
-                  "centerAnchorX" : 0.5,
-                  "centerAnchorY" : 0.5,
-                  "heightFactor" : 0.5,
-                  "stops" : [
-                    {
-                      "__class" : "GradientColorStop",
-                      "position" : 0,
-                      "value" : "rgba(0,0,0,0)"
-                    },
-                    {
-                      "__class" : "GradientColorStop",
-                      "position" : 1,
-                      "value" : "black"
-                    }
-                  ],
-                  "widthFactor" : 0.5
-                },
-                "fillType" : "color",
-                "height" : 48,
-                "heightType" : 0,
-                "id" : "qaU_Zj79T",
-                "intrinsicHeight" : null,
-                "intrinsicWidth" : null,
-                "isExternalMaster" : null,
-                "isMaster" : false,
-                "isTarget" : false,
-                "left" : 0,
-                "locked" : false,
-                "name" : "Divider",
-                "navigationTarget" : null,
-                "navigationTransition" : "push",
-                "navigationTransitionBackdropColor" : "rgba(4,4,15,.4)",
-                "navigationTransitionDirection" : "left",
-                "opacity" : 1,
-                "originalid" : "@framer\/steveruizok.education-bqsC9adwp",
-                "parentid" : "fWh5LgjK6@framer\/steveruizok.education-XREstntDl-IMoJuI2JM",
-                "previewSettings" : null,
-                "radius" : 0,
-                "radiusBottomLeft" : 0,
-                "radiusBottomRight" : 0,
-                "radiusIsRelative" : false,
-                "radiusPerCorner" : false,
-                "radiusTopLeft" : 0,
-                "radiusTopRight" : 0,
-                "replicaInfo" : {
-                  "master" : "@framer\/steveruizok.education-bqsC9adwp",
-                  "overrides" : {
-                    "@framer\/steveruizok.education-bqsC9adwp" : {
-                      "bottom" : null,
-                      "centerAnchorX" : 0.42533333333333334,
-                      "centerAnchorY" : 0.46551724137931033,
-                      "left" : 0,
-                      "right" : null,
-                      "top" : 0,
-                      "width" : 1,
-                      "widthType" : 3
-                    }
-                  }
-                },
-                "right" : null,
-                "rotation" : 0,
-                "top" : 0,
-                "visible" : true,
-                "width" : 1,
-                "widthType" : 3
-              },
-              {
-                "__class" : "CodeComponentNode",
-                "aspectRatio" : null,
-                "bottom" : null,
-                "centerAnchorX" : 0.5013333333333333,
-                "centerAnchorY" : 0.46705426356589147,
-                "children" : [
-
-                ],
-                "clip" : true,
-                "codeComponentIdentifier" : "@framer\/steveruizok.education\/.\/Text.tsx_Text",
-                "codeComponentProps" : {
-                  "background" : "none",
-                  "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47))",
-                  "paddingPerSide" : false,
-                  "pc_resizeDirection" : "xaxis",
-                  "resize" : false,
-                  "text" : "Usage",
-                  "textAlign" : "left",
-                  "type" : "h1",
-                  "verticalAlign" : "top"
-                },
-                "codeOverrideEnabled" : false,
-                "constraintsLocked" : false,
-                "deviceType" : null,
-                "exportOptions" : [
-
-                ],
-                "fillColor" : "rgba(255,255,255,1)",
-                "fillEnabled" : false,
-                "fillImage" : null,
-                "fillImagePixelHeight" : null,
-                "fillImagePixelWidth" : null,
-                "fillImageResize" : "fill",
-                "fillType" : "color",
-                "height" : 51,
-                "heightType" : 0,
-                "id" : "HvsKqLsBn",
-                "intrinsicHeight" : 50,
-                "intrinsicWidth" : 200,
-                "left" : null,
-                "locked" : false,
-                "name" : null,
-                "opacity" : 1,
-                "originalid" : null,
-                "parentid" : "fWh5LgjK6@framer\/steveruizok.education-XREstntDl-IMoJuI2JM",
-                "previewSettings" : null,
-                "radius" : 0,
-                "radiusBottomLeft" : 0,
-                "radiusBottomRight" : 0,
-                "radiusIsRelative" : false,
-                "radiusPerCorner" : false,
-                "radiusTopLeft" : 0,
-                "radiusTopRight" : 0,
-                "right" : null,
-                "rotation" : 0,
-                "top" : 336,
-                "visible" : true,
-                "width" : 1,
-                "widthType" : 3
-              },
-              {
-                "__class" : "CodeComponentNode",
-                "aspectRatio" : null,
-                "bottom" : 237,
-                "centerAnchorX" : 0.5,
-                "centerAnchorY" : 0.66666666666666663,
-                "children" : [
-
-                ],
-                "clip" : true,
-                "codeComponentIdentifier" : "@framer\/steveruizok.education\/.\/Text.tsx_Text",
-                "codeComponentProps" : {
-                  "background" : "none",
-                  "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47))",
-                  "paddingPerSide" : false,
-                  "pc_resizeDirection" : "xaxis",
-                  "resize" : false,
-                  "text" : "To start, set up an Arduino as shown here: http:\/\/johnny-five.io\/examples\/button\/. ",
-                  "textAlign" : "left",
-                  "type" : "body",
-                  "verticalAlign" : "top"
-                },
-                "codeOverrideEnabled" : false,
-                "constraintsLocked" : false,
-                "deviceType" : null,
-                "exportOptions" : [
-
-                ],
-                "fillColor" : "rgba(255,255,255,1)",
-                "fillEnabled" : false,
-                "fillImage" : null,
-                "fillImagePixelHeight" : null,
-                "fillImagePixelWidth" : null,
-                "fillImageResize" : "fill",
-                "fillType" : "color",
-                "height" : 42,
-                "heightType" : 0,
-                "id" : "f8LpLViE7",
-                "intrinsicHeight" : 50,
-                "intrinsicWidth" : 200,
-                "left" : null,
-                "locked" : false,
-                "name" : null,
-                "opacity" : 1,
-                "originalid" : null,
-                "parentid" : "fWh5LgjK6@framer\/steveruizok.education-XREstntDl-IMoJuI2JM",
-                "previewSettings" : null,
-                "radius" : 0,
-                "radiusBottomLeft" : 0,
-                "radiusBottomRight" : 0,
-                "radiusIsRelative" : false,
-                "radiusPerCorner" : false,
-                "radiusTopLeft" : 0,
-                "radiusTopRight" : 0,
-                "right" : null,
-                "rotation" : 0,
-                "top" : null,
-                "visible" : true,
-                "width" : 1,
-                "widthType" : 3
-              },
-              {
-                "__class" : "CodeComponentNode",
-                "aspectRatio" : null,
-                "bottom" : 159,
-                "centerAnchorX" : 0.5,
-                "centerAnchorY" : 0.77906976744186052,
-                "children" : [
-
-                ],
-                "clip" : true,
-                "codeComponentIdentifier" : "@framer\/steveruizok.education\/.\/Text.tsx_Text",
-                "codeComponentProps" : {
-                  "background" : "none",
-                  "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47))",
-                  "paddingPerSide" : false,
-                  "pc_resizeDirection" : "xaxis",
-                  "resize" : false,
-                  "text" : "Next, open this project's Project Folder. ",
-                  "textAlign" : "left",
-                  "type" : "body",
-                  "verticalAlign" : "top"
-                },
-                "codeOverrideEnabled" : false,
-                "constraintsLocked" : false,
-                "deviceType" : null,
-                "exportOptions" : [
-
-                ],
-                "fillColor" : "rgba(255,255,255,1)",
-                "fillEnabled" : false,
-                "fillImage" : null,
-                "fillImagePixelHeight" : null,
-                "fillImagePixelWidth" : null,
-                "fillImageResize" : "fill",
-                "fillType" : "color",
-                "height" : 24,
-                "heightType" : 0,
-                "id" : "lc7tiVQBJ",
-                "intrinsicHeight" : 50,
-                "intrinsicWidth" : 200,
-                "left" : null,
-                "locked" : false,
-                "name" : null,
-                "opacity" : 1,
-                "originalid" : null,
-                "parentid" : "fWh5LgjK6@framer\/steveruizok.education-XREstntDl-IMoJuI2JM",
-                "previewSettings" : null,
-                "radius" : 0,
-                "radiusBottomLeft" : 0,
-                "radiusBottomRight" : 0,
-                "radiusIsRelative" : false,
-                "radiusPerCorner" : false,
-                "radiusTopLeft" : 0,
-                "radiusTopRight" : 0,
-                "right" : null,
-                "rotation" : 0,
-                "top" : null,
-                "visible" : true,
-                "width" : 1,
-                "widthType" : 3
-              },
-              {
-                "__class" : "CodeComponentNode",
-                "aspectRatio" : null,
-                "bottom" : 139,
-                "centerAnchorX" : 0.5,
-                "centerAnchorY" : 0.80555555555555558,
-                "children" : [
-
-                ],
-                "clip" : true,
-                "codeComponentIdentifier" : "@framer\/steveruizok.education\/.\/Text.tsx_Text",
-                "codeComponentProps" : {
-                  "background" : "none",
-                  "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47))",
-                  "paddingPerSide" : false,
-                  "pc_resizeDirection" : "xaxis",
-                  "resize" : false,
-                  "text" : "Open a terminal in the server folder. ",
-                  "textAlign" : "left",
-                  "type" : "body",
-                  "verticalAlign" : "top"
-                },
-                "codeOverrideEnabled" : false,
-                "constraintsLocked" : false,
-                "deviceType" : null,
-                "exportOptions" : [
-
-                ],
-                "fillColor" : "rgba(255,255,255,1)",
-                "fillEnabled" : false,
-                "fillImage" : null,
-                "fillImagePixelHeight" : null,
-                "fillImagePixelWidth" : null,
-                "fillImageResize" : "fill",
-                "fillType" : "color",
-                "height" : 23,
-                "heightType" : 0,
-                "id" : "HplEvVlVm",
-                "intrinsicHeight" : 50,
-                "intrinsicWidth" : 200,
-                "left" : null,
-                "locked" : false,
-                "name" : null,
-                "opacity" : 1,
-                "originalid" : null,
-                "parentid" : "fWh5LgjK6@framer\/steveruizok.education-XREstntDl-IMoJuI2JM",
-                "previewSettings" : null,
-                "radius" : 0,
-                "radiusBottomLeft" : 0,
-                "radiusBottomRight" : 0,
-                "radiusIsRelative" : false,
-                "radiusPerCorner" : false,
-                "radiusTopLeft" : 0,
-                "radiusTopRight" : 0,
-                "right" : null,
-                "rotation" : 0,
-                "top" : null,
-                "visible" : true,
-                "width" : 1,
-                "widthType" : 3
-              },
-              {
-                "__class" : "CodeComponentNode",
-                "aspectRatio" : null,
-                "bottom" : 99,
-                "centerAnchorX" : 0.5,
-                "centerAnchorY" : 0.84366925064599485,
-                "children" : [
-
-                ],
-                "clip" : true,
-                "codeComponentIdentifier" : "@framer\/steveruizok.education\/.\/Text.tsx_Text",
-                "codeComponentProps" : {
-                  "background" : "none",
-                  "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47))",
-                  "paddingPerSide" : false,
-                  "pc_resizeDirection" : "xaxis",
-                  "resize" : false,
-                  "text" : "From the terminal, run `node index` and preview this Frame \/ refresh the Preview.",
-                  "textAlign" : "left",
-                  "type" : "body",
-                  "verticalAlign" : "top"
-                },
-                "codeOverrideEnabled" : false,
-                "constraintsLocked" : false,
-                "deviceType" : null,
-                "exportOptions" : [
-
-                ],
-                "fillColor" : "rgba(255,255,255,1)",
-                "fillEnabled" : false,
-                "fillImage" : null,
-                "fillImagePixelHeight" : null,
-                "fillImagePixelWidth" : null,
-                "fillImageResize" : "fill",
-                "fillType" : "color",
-                "height" : 44,
-                "heightType" : 0,
-                "id" : "d_TcK7hds",
-                "intrinsicHeight" : 50,
-                "intrinsicWidth" : 200,
-                "left" : null,
-                "locked" : false,
-                "name" : null,
-                "opacity" : 1,
-                "originalid" : null,
-                "parentid" : "fWh5LgjK6@framer\/steveruizok.education-XREstntDl-IMoJuI2JM",
-                "previewSettings" : null,
-                "radius" : 0,
-                "radiusBottomLeft" : 0,
-                "radiusBottomRight" : 0,
-                "radiusIsRelative" : false,
-                "radiusPerCorner" : false,
-                "radiusTopLeft" : 0,
-                "radiusTopRight" : 0,
-                "right" : null,
-                "rotation" : 0,
-                "top" : null,
-                "visible" : true,
-                "width" : 1,
-                "widthType" : 3
-              },
-              {
-                "__class" : "CodeComponentNode",
-                "aspectRatio" : null,
-                "bottom" : 16,
-                "centerAnchorX" : 0.5,
-                "centerAnchorY" : 0.92958656330749356,
-                "children" : [
-
-                ],
-                "clip" : true,
-                "codeComponentIdentifier" : "@framer\/steveruizok.education\/.\/Text.tsx_Text",
-                "codeComponentProps" : {
-                  "background" : "none",
-                  "color" : "var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47))",
-                  "paddingPerSide" : false,
-                  "pc_resizeDirection" : "xaxis",
-                  "resize" : false,
-                  "text" : "When running, pushing the button on the Arduino will change the color of the indicator.",
-                  "textAlign" : "left",
-                  "type" : "body",
-                  "verticalAlign" : "top"
-                },
-                "codeOverrideEnabled" : false,
-                "constraintsLocked" : false,
-                "deviceType" : null,
-                "exportOptions" : [
-
-                ],
-                "fillColor" : "rgba(255,255,255,1)",
-                "fillEnabled" : false,
-                "fillImage" : null,
-                "fillImagePixelHeight" : null,
-                "fillImagePixelWidth" : null,
-                "fillImageResize" : "fill",
-                "fillType" : "color",
-                "height" : 77,
-                "heightType" : 0,
-                "id" : "MZ_6AQ_88",
-                "intrinsicHeight" : 50,
-                "intrinsicWidth" : 200,
-                "left" : null,
-                "locked" : false,
-                "name" : null,
-                "opacity" : 1,
-                "originalid" : null,
-                "parentid" : "fWh5LgjK6@framer\/steveruizok.education-XREstntDl-IMoJuI2JM",
-                "previewSettings" : null,
-                "radius" : 0,
-                "radiusBottomLeft" : 0,
-                "radiusBottomRight" : 0,
-                "radiusIsRelative" : false,
-                "radiusPerCorner" : false,
-                "radiusTopLeft" : 0,
-                "radiusTopRight" : 0,
-                "right" : null,
-                "rotation" : 0,
-                "top" : null,
-                "visible" : true,
-                "width" : 1,
-                "widthType" : 3
               }
             ],
             "clip" : false,
@@ -3439,7 +3136,7 @@
         "isTarget" : false,
         "left" : 317,
         "locked" : false,
-        "name" : "Template",
+        "name" : "Start",
         "navigationTarget" : null,
         "navigationTransition" : "push",
         "navigationTransitionBackdropColor" : "rgba(4,4,15,.4)",
@@ -3461,6 +3158,2108 @@
         "top" : -178,
         "visible" : true,
         "width" : 375,
+        "widthType" : 0
+      },
+      {
+        "__class" : "FrameNode",
+        "aspectRatio" : null,
+        "blendingEnabled" : 0,
+        "blendingMode" : "normal",
+        "bottom" : null,
+        "centerAnchorX" : 0,
+        "centerAnchorY" : 0,
+        "children" : [
+          {
+            "__class" : "CodeComponentNode",
+            "aspectRatio" : null,
+            "bottom" : 24,
+            "centerAnchorX" : 0.5013333333333333,
+            "centerAnchorY" : 0.53087044534412953,
+            "children" : [
+              {
+                "__class" : "TextNode",
+                "autoSize" : false,
+                "bottom" : null,
+                "centerAnchorX" : 0.5,
+                "centerAnchorY" : 0.5,
+                "codeOverrideEnabled" : false,
+                "constraintsLocked" : false,
+                "exportOptions" : [
+
+                ],
+                "height" : 1,
+                "heightType" : 3,
+                "id" : "FGk1Y3W1d",
+                "isTarget" : false,
+                "left" : null,
+                "locked" : false,
+                "name" : null,
+                "opacity" : 1,
+                "originalid" : null,
+                "parentid" : "x16wp9FfY",
+                "right" : null,
+                "rotation" : 0,
+                "styledText" : {
+                  "__class" : "StyledTextDraft",
+                  "blocks" : [
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2",
+                          "SIZE:16",
+                          "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+                          "FONT:HelveticaNeue"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+                        {
+                          "length" : 3,
+                          "offset" : 0,
+                          "style" : "LETTERSPACING:0"
+                        },
+                        {
+                          "length" : 3,
+                          "offset" : 0,
+                          "style" : "LINEHEIGHT:1.2"
+                        },
+                        {
+                          "length" : 3,
+                          "offset" : 0,
+                          "style" : "SIZE:16"
+                        },
+                        {
+                          "length" : 3,
+                          "offset" : 0,
+                          "style" : "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/"
+                        },
+                        {
+                          "length" : 3,
+                          "offset" : 0,
+                          "style" : "FONT:HelveticaNeue"
+                        }
+                      ],
+                      "key" : "ejp61",
+                      "text" : "1. ",
+                      "type" : "unstyled"
+                    },
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2",
+                          "SIZE:16",
+                          "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+                          "FONT:HelveticaNeue"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+                        {
+                          "length" : 37,
+                          "offset" : 0,
+                          "style" : "LETTERSPACING:0"
+                        },
+                        {
+                          "length" : 37,
+                          "offset" : 0,
+                          "style" : "LINEHEIGHT:1.2"
+                        },
+                        {
+                          "length" : 37,
+                          "offset" : 0,
+                          "style" : "SIZE:16"
+                        },
+                        {
+                          "length" : 37,
+                          "offset" : 0,
+                          "style" : "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/"
+                        },
+                        {
+                          "length" : 37,
+                          "offset" : 0,
+                          "style" : "FONT:HelveticaNeue"
+                        }
+                      ],
+                      "key" : "5gqbq",
+                      "text" : "Set up your Arduino circuit as shown.",
+                      "type" : "unstyled"
+                    },
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2",
+                          "SIZE:16",
+                          "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+                          "FONT:HelveticaNeue"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+
+                      ],
+                      "key" : "49osf",
+                      "text" : "",
+                      "type" : "unstyled"
+                    },
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2",
+                          "SIZE:16",
+                          "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+                          "FONT:HelveticaNeue"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+                        {
+                          "length" : 3,
+                          "offset" : 0,
+                          "style" : "LETTERSPACING:0"
+                        },
+                        {
+                          "length" : 3,
+                          "offset" : 0,
+                          "style" : "LINEHEIGHT:1.2"
+                        },
+                        {
+                          "length" : 3,
+                          "offset" : 0,
+                          "style" : "SIZE:16"
+                        },
+                        {
+                          "length" : 3,
+                          "offset" : 0,
+                          "style" : "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/"
+                        },
+                        {
+                          "length" : 3,
+                          "offset" : 0,
+                          "style" : "FONT:HelveticaNeue"
+                        }
+                      ],
+                      "key" : "5k6ad",
+                      "text" : "2. ",
+                      "type" : "unstyled"
+                    },
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2",
+                          "SIZE:16",
+                          "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+                          "FONT:HelveticaNeue"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+                        {
+                          "length" : 37,
+                          "offset" : 0,
+                          "style" : "LETTERSPACING:0"
+                        },
+                        {
+                          "length" : 37,
+                          "offset" : 0,
+                          "style" : "LINEHEIGHT:1.2"
+                        },
+                        {
+                          "length" : 37,
+                          "offset" : 0,
+                          "style" : "SIZE:16"
+                        },
+                        {
+                          "length" : 37,
+                          "offset" : 0,
+                          "style" : "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/"
+                        },
+                        {
+                          "length" : 37,
+                          "offset" : 0,
+                          "style" : "FONT:HelveticaNeue"
+                        }
+                      ],
+                      "key" : "79imd",
+                      "text" : "Connect the Arduino to your computer.",
+                      "type" : "unstyled"
+                    },
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2",
+                          "SIZE:16",
+                          "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+                          "FONT:HelveticaNeue"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+
+                      ],
+                      "key" : "eh42d",
+                      "text" : "",
+                      "type" : "unstyled"
+                    },
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2",
+                          "SIZE:16",
+                          "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+                          "FONT:HelveticaNeue"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+                        {
+                          "length" : 2,
+                          "offset" : 0,
+                          "style" : "LETTERSPACING:0"
+                        },
+                        {
+                          "length" : 2,
+                          "offset" : 0,
+                          "style" : "LINEHEIGHT:1.2"
+                        },
+                        {
+                          "length" : 2,
+                          "offset" : 0,
+                          "style" : "SIZE:16"
+                        },
+                        {
+                          "length" : 2,
+                          "offset" : 0,
+                          "style" : "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/"
+                        },
+                        {
+                          "length" : 2,
+                          "offset" : 0,
+                          "style" : "FONT:HelveticaNeue"
+                        }
+                      ],
+                      "key" : "4290s",
+                      "text" : "3.",
+                      "type" : "unstyled"
+                    },
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2",
+                          "SIZE:16",
+                          "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+                          "FONT:HelveticaNeue"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+                        {
+                          "length" : 147,
+                          "offset" : 0,
+                          "style" : "LETTERSPACING:0"
+                        },
+                        {
+                          "length" : 147,
+                          "offset" : 0,
+                          "style" : "LINEHEIGHT:1.2"
+                        },
+                        {
+                          "length" : 147,
+                          "offset" : 0,
+                          "style" : "SIZE:16"
+                        },
+                        {
+                          "length" : 147,
+                          "offset" : 0,
+                          "style" : "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/"
+                        },
+                        {
+                          "length" : 147,
+                          "offset" : 0,
+                          "style" : "FONT:HelveticaNeue"
+                        }
+                      ],
+                      "key" : "c41kn",
+                      "text" : "From the Arduino app, upload the StandardFirmata software to your Arduino. (From the Arduino app menu: File > Examples > Firmata > StandardFirmata)",
+                      "type" : "unstyled"
+                    },
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2",
+                          "SIZE:16",
+                          "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+                          "FONT:HelveticaNeue"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+
+                      ],
+                      "key" : "ejrve",
+                      "text" : "",
+                      "type" : "unstyled"
+                    },
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2",
+                          "SIZE:16",
+                          "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+                          "FONT:HelveticaNeue"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+                        {
+                          "length" : 3,
+                          "offset" : 0,
+                          "style" : "LETTERSPACING:0"
+                        },
+                        {
+                          "length" : 3,
+                          "offset" : 0,
+                          "style" : "LINEHEIGHT:1.2"
+                        },
+                        {
+                          "length" : 3,
+                          "offset" : 0,
+                          "style" : "SIZE:16"
+                        },
+                        {
+                          "length" : 3,
+                          "offset" : 0,
+                          "style" : "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/"
+                        },
+                        {
+                          "length" : 3,
+                          "offset" : 0,
+                          "style" : "FONT:HelveticaNeue"
+                        }
+                      ],
+                      "key" : "2qfjt",
+                      "text" : "4. ",
+                      "type" : "unstyled"
+                    },
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2",
+                          "SIZE:16",
+                          "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+                          "FONT:HelveticaNeue"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+                        {
+                          "length" : 89,
+                          "offset" : 0,
+                          "style" : "LETTERSPACING:0"
+                        },
+                        {
+                          "length" : 89,
+                          "offset" : 0,
+                          "style" : "LINEHEIGHT:1.2"
+                        },
+                        {
+                          "length" : 89,
+                          "offset" : 0,
+                          "style" : "SIZE:16"
+                        },
+                        {
+                          "length" : 89,
+                          "offset" : 0,
+                          "style" : "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/"
+                        },
+                        {
+                          "length" : 89,
+                          "offset" : 0,
+                          "style" : "FONT:HelveticaNeue"
+                        }
+                      ],
+                      "key" : "1i23o",
+                      "text" : "Open this project’s Project Folder (From  the Framer X menu: File > Show Project Folder).",
+                      "type" : "unstyled"
+                    },
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2",
+                          "SIZE:16",
+                          "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+                          "FONT:HelveticaNeue"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+
+                      ],
+                      "key" : "6k1j4",
+                      "text" : "",
+                      "type" : "unstyled"
+                    },
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2",
+                          "SIZE:16",
+                          "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+                          "FONT:HelveticaNeue"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+                        {
+                          "length" : 3,
+                          "offset" : 0,
+                          "style" : "LETTERSPACING:0"
+                        },
+                        {
+                          "length" : 3,
+                          "offset" : 0,
+                          "style" : "LINEHEIGHT:1.2"
+                        },
+                        {
+                          "length" : 3,
+                          "offset" : 0,
+                          "style" : "SIZE:16"
+                        },
+                        {
+                          "length" : 3,
+                          "offset" : 0,
+                          "style" : "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/"
+                        },
+                        {
+                          "length" : 3,
+                          "offset" : 0,
+                          "style" : "FONT:HelveticaNeue"
+                        }
+                      ],
+                      "key" : "68sl",
+                      "text" : "5. ",
+                      "type" : "unstyled"
+                    },
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2",
+                          "SIZE:16",
+                          "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+                          "FONT:HelveticaNeue"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+                        {
+                          "length" : 118,
+                          "offset" : 0,
+                          "style" : "LETTERSPACING:0"
+                        },
+                        {
+                          "length" : 118,
+                          "offset" : 0,
+                          "style" : "LINEHEIGHT:1.2"
+                        },
+                        {
+                          "length" : 118,
+                          "offset" : 0,
+                          "style" : "SIZE:16"
+                        },
+                        {
+                          "length" : 118,
+                          "offset" : 0,
+                          "style" : "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/"
+                        },
+                        {
+                          "length" : 118,
+                          "offset" : 0,
+                          "style" : "FONT:HelveticaNeue"
+                        },
+                        {
+                          "length" : 6,
+                          "offset" : 9,
+                          "style" : "BOLD"
+                        }
+                      ],
+                      "key" : "atn9v",
+                      "text" : "Open the server folder in Visual Studio Code. (Open the Visual Studio Code app and drag the folder onto the app icon).",
+                      "type" : "unstyled"
+                    },
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2",
+                          "SIZE:16",
+                          "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+                          "FONT:HelveticaNeue"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+
+                      ],
+                      "key" : "4qie6",
+                      "text" : "",
+                      "type" : "unstyled"
+                    },
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2",
+                          "SIZE:16",
+                          "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+                          "FONT:HelveticaNeue"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+                        {
+                          "length" : 3,
+                          "offset" : 0,
+                          "style" : "LETTERSPACING:0"
+                        },
+                        {
+                          "length" : 3,
+                          "offset" : 0,
+                          "style" : "LINEHEIGHT:1.2"
+                        },
+                        {
+                          "length" : 3,
+                          "offset" : 0,
+                          "style" : "SIZE:16"
+                        },
+                        {
+                          "length" : 3,
+                          "offset" : 0,
+                          "style" : "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/"
+                        },
+                        {
+                          "length" : 3,
+                          "offset" : 0,
+                          "style" : "FONT:HelveticaNeue"
+                        }
+                      ],
+                      "key" : "3ddta",
+                      "text" : "6. ",
+                      "type" : "unstyled"
+                    },
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2",
+                          "SIZE:16",
+                          "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+                          "FONT:HelveticaNeue"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+                        {
+                          "length" : 93,
+                          "offset" : 0,
+                          "style" : "LETTERSPACING:0"
+                        },
+                        {
+                          "length" : 93,
+                          "offset" : 0,
+                          "style" : "LINEHEIGHT:1.2"
+                        },
+                        {
+                          "length" : 93,
+                          "offset" : 0,
+                          "style" : "SIZE:16"
+                        },
+                        {
+                          "length" : 93,
+                          "offset" : 0,
+                          "style" : "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/"
+                        },
+                        {
+                          "length" : 93,
+                          "offset" : 0,
+                          "style" : "FONT:HelveticaNeue"
+                        }
+                      ],
+                      "key" : "1v12t",
+                      "text" : "Open the terminal in Visual Studio Code. (From the Visual Studio Code menu: View > Terminal).",
+                      "type" : "unstyled"
+                    },
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2",
+                          "SIZE:16",
+                          "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+                          "FONT:HelveticaNeue"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+
+                      ],
+                      "key" : "1vevc",
+                      "text" : "",
+                      "type" : "unstyled"
+                    },
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2",
+                          "SIZE:16",
+                          "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+                          "FONT:HelveticaNeue"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+                        {
+                          "length" : 2,
+                          "offset" : 0,
+                          "style" : "LETTERSPACING:0"
+                        },
+                        {
+                          "length" : 2,
+                          "offset" : 0,
+                          "style" : "LINEHEIGHT:1.2"
+                        },
+                        {
+                          "length" : 2,
+                          "offset" : 0,
+                          "style" : "SIZE:16"
+                        },
+                        {
+                          "length" : 2,
+                          "offset" : 0,
+                          "style" : "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/"
+                        },
+                        {
+                          "length" : 2,
+                          "offset" : 0,
+                          "style" : "FONT:HelveticaNeue"
+                        }
+                      ],
+                      "key" : "7dlbh",
+                      "text" : "7.",
+                      "type" : "unstyled"
+                    },
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2",
+                          "SIZE:16",
+                          "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+                          "FONT:HelveticaNeue"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+                        {
+                          "length" : 76,
+                          "offset" : 0,
+                          "style" : "LETTERSPACING:0"
+                        },
+                        {
+                          "length" : 76,
+                          "offset" : 0,
+                          "style" : "LINEHEIGHT:1.2"
+                        },
+                        {
+                          "length" : 76,
+                          "offset" : 0,
+                          "style" : "SIZE:16"
+                        },
+                        {
+                          "length" : 76,
+                          "offset" : 0,
+                          "style" : "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/"
+                        },
+                        {
+                          "length" : 76,
+                          "offset" : 0,
+                          "style" : "FONT:HelveticaNeue"
+                        },
+                        {
+                          "length" : 4,
+                          "offset" : 22,
+                          "style" : "BOLD"
+                        }
+                      ],
+                      "key" : "5fc1s",
+                      "text" : "In the terminal, type yarn and press Enter to install the required packages.",
+                      "type" : "unstyled"
+                    },
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2",
+                          "SIZE:16",
+                          "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+                          "FONT:HelveticaNeue"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+
+                      ],
+                      "key" : "414ul",
+                      "text" : "",
+                      "type" : "unstyled"
+                    },
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2",
+                          "SIZE:16",
+                          "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+                          "FONT:HelveticaNeue"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+                        {
+                          "length" : 3,
+                          "offset" : 0,
+                          "style" : "LETTERSPACING:0"
+                        },
+                        {
+                          "length" : 3,
+                          "offset" : 0,
+                          "style" : "LINEHEIGHT:1.2"
+                        },
+                        {
+                          "length" : 3,
+                          "offset" : 0,
+                          "style" : "SIZE:16"
+                        },
+                        {
+                          "length" : 3,
+                          "offset" : 0,
+                          "style" : "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/"
+                        },
+                        {
+                          "length" : 3,
+                          "offset" : 0,
+                          "style" : "FONT:HelveticaNeue"
+                        }
+                      ],
+                      "key" : "1jlt3",
+                      "text" : "8. ",
+                      "type" : "unstyled"
+                    },
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2",
+                          "SIZE:16",
+                          "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+                          "FONT:HelveticaNeue"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+                        {
+                          "length" : 79,
+                          "offset" : 0,
+                          "style" : "LETTERSPACING:0"
+                        },
+                        {
+                          "length" : 79,
+                          "offset" : 0,
+                          "style" : "LINEHEIGHT:1.2"
+                        },
+                        {
+                          "length" : 79,
+                          "offset" : 0,
+                          "style" : "SIZE:16"
+                        },
+                        {
+                          "length" : 79,
+                          "offset" : 0,
+                          "style" : "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/"
+                        },
+                        {
+                          "length" : 79,
+                          "offset" : 0,
+                          "style" : "FONT:HelveticaNeue"
+                        },
+                        {
+                          "length" : 10,
+                          "offset" : 5,
+                          "style" : "BOLD"
+                        }
+                      ],
+                      "key" : "e2idi",
+                      "text" : "Type yarn start and press Enter to start the server and connect to the Arduino.",
+                      "type" : "unstyled"
+                    },
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2",
+                          "SIZE:16",
+                          "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+                          "FONT:HelveticaNeue"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+
+                      ],
+                      "key" : "e8pt3",
+                      "text" : "",
+                      "type" : "unstyled"
+                    },
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2",
+                          "SIZE:16",
+                          "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+                          "FONT:HelveticaNeue"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+                        {
+                          "length" : 2,
+                          "offset" : 0,
+                          "style" : "LETTERSPACING:0"
+                        },
+                        {
+                          "length" : 2,
+                          "offset" : 0,
+                          "style" : "LINEHEIGHT:1.2"
+                        },
+                        {
+                          "length" : 2,
+                          "offset" : 0,
+                          "style" : "SIZE:16"
+                        },
+                        {
+                          "length" : 2,
+                          "offset" : 0,
+                          "style" : "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/"
+                        },
+                        {
+                          "length" : 2,
+                          "offset" : 0,
+                          "style" : "FONT:HelveticaNeue"
+                        }
+                      ],
+                      "key" : "eh47e",
+                      "text" : "7.",
+                      "type" : "unstyled"
+                    },
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2",
+                          "SIZE:16",
+                          "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+                          "FONT:HelveticaNeue"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+                        {
+                          "length" : 97,
+                          "offset" : 0,
+                          "style" : "LETTERSPACING:0"
+                        },
+                        {
+                          "length" : 97,
+                          "offset" : 0,
+                          "style" : "LINEHEIGHT:1.2"
+                        },
+                        {
+                          "length" : 97,
+                          "offset" : 0,
+                          "style" : "SIZE:16"
+                        },
+                        {
+                          "length" : 97,
+                          "offset" : 0,
+                          "style" : "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/"
+                        },
+                        {
+                          "length" : 97,
+                          "offset" : 0,
+                          "style" : "FONT:HelveticaNeue"
+                        },
+                        {
+                          "length" : 11,
+                          "offset" : 85,
+                          "style" : "BOLD"
+                        }
+                      ],
+                      "key" : "47ect",
+                      "text" : "Back in Framer X, select the Frame named Start Here and open the Preview by pressing Command + P.",
+                      "type" : "unstyled"
+                    },
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2",
+                          "SIZE:16",
+                          "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+                          "FONT:HelveticaNeue"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+
+                      ],
+                      "key" : "3l4sr",
+                      "text" : "",
+                      "type" : "unstyled"
+                    },
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2",
+                          "SIZE:16",
+                          "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+                          "FONT:HelveticaNeue"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+                        {
+                          "length" : 2,
+                          "offset" : 0,
+                          "style" : "LETTERSPACING:0"
+                        },
+                        {
+                          "length" : 2,
+                          "offset" : 0,
+                          "style" : "LINEHEIGHT:1.2"
+                        },
+                        {
+                          "length" : 2,
+                          "offset" : 0,
+                          "style" : "SIZE:16"
+                        },
+                        {
+                          "length" : 2,
+                          "offset" : 0,
+                          "style" : "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/"
+                        },
+                        {
+                          "length" : 2,
+                          "offset" : 0,
+                          "style" : "FONT:HelveticaNeue"
+                        }
+                      ],
+                      "key" : "88hid",
+                      "text" : "8.",
+                      "type" : "unstyled"
+                    },
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2",
+                          "SIZE:16",
+                          "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+                          "FONT:HelveticaNeue"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+                        {
+                          "length" : 55,
+                          "offset" : 0,
+                          "style" : "LETTERSPACING:0"
+                        },
+                        {
+                          "length" : 55,
+                          "offset" : 0,
+                          "style" : "LINEHEIGHT:1.2"
+                        },
+                        {
+                          "length" : 55,
+                          "offset" : 0,
+                          "style" : "SIZE:16"
+                        },
+                        {
+                          "length" : 55,
+                          "offset" : 0,
+                          "style" : "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/"
+                        },
+                        {
+                          "length" : 55,
+                          "offset" : 0,
+                          "style" : "FONT:HelveticaNeue"
+                        },
+                        {
+                          "length" : 11,
+                          "offset" : 43,
+                          "style" : "BOLD"
+                        }
+                      ],
+                      "key" : "1lgvo",
+                      "text" : "If needed, refresh the Preview by pressing Command + R.",
+                      "type" : "unstyled"
+                    }
+                  ],
+                  "entityMap" : {
+
+                  }
+                },
+                "top" : null,
+                "visible" : true,
+                "width" : 1,
+                "widthType" : 3
+              }
+            ],
+            "clip" : true,
+            "codeComponentIdentifier" : "framer\/Stack",
+            "codeComponentProps" : {
+              "alignment" : "start",
+              "direction" : "vertical",
+              "distribution" : "start",
+              "gap" : 24,
+              "padding" : 16,
+              "paddingBottom" : 16,
+              "paddingLeft" : 16,
+              "paddingPerSide" : false,
+              "paddingRight" : 16,
+              "paddingTop" : 16
+            },
+            "codeOverrideEnabled" : false,
+            "constraintsLocked" : true,
+            "deviceType" : null,
+            "exportOptions" : [
+
+            ],
+            "fillColor" : "rgba(255,255,255,1)",
+            "fillEnabled" : false,
+            "fillImage" : null,
+            "fillImagePixelHeight" : null,
+            "fillImagePixelWidth" : null,
+            "fillImageResize" : "fill",
+            "fillType" : "color",
+            "height" : 879,
+            "heightType" : 0,
+            "id" : "x16wp9FfY",
+            "intrinsicHeight" : null,
+            "intrinsicWidth" : null,
+            "left" : 22,
+            "locked" : false,
+            "name" : null,
+            "opacity" : 1,
+            "originalid" : null,
+            "parentid" : "u1A2LzYr_",
+            "previewSettings" : null,
+            "radius" : 0,
+            "radiusBottomLeft" : 0,
+            "radiusBottomRight" : 0,
+            "radiusIsRelative" : false,
+            "radiusPerCorner" : false,
+            "radiusTopLeft" : 0,
+            "radiusTopRight" : 0,
+            "right" : null,
+            "rotation" : 0,
+            "top" : 85,
+            "visible" : true,
+            "width" : 332,
+            "widthType" : 0
+          },
+          {
+            "__class" : "TextNode",
+            "autoSize" : true,
+            "bottom" : null,
+            "centerAnchorX" : 0.5013333333333333,
+            "centerAnchorY" : 0.051619433198380568,
+            "codeOverrideEnabled" : false,
+            "constraintsLocked" : false,
+            "exportOptions" : [
+
+            ],
+            "height" : 44,
+            "heightType" : 0,
+            "id" : "AQcdWf8Dw",
+            "isTarget" : false,
+            "left" : null,
+            "locked" : false,
+            "name" : null,
+            "opacity" : 1,
+            "originalid" : null,
+            "parentid" : "u1A2LzYr_",
+            "right" : null,
+            "rotation" : 0,
+            "styledText" : {
+              "__class" : "StyledTextDraft",
+              "blocks" : [
+                {
+                  "data" : {
+                    "emptyStyle" : [
+                      "FONT:HelveticaNeue-Bold",
+                      "LETTERSPACING:0",
+                      "LINEHEIGHT:1.2",
+                      "SIZE:37",
+                      "COLOR:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 86, 254)) \/* {\"name\":\"Primary\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/"
+                    ]
+                  },
+                  "depth" : 0,
+                  "entityRanges" : [
+
+                  ],
+                  "inlineStyleRanges" : [
+                    {
+                      "length" : 12,
+                      "offset" : 0,
+                      "style" : "FONT:HelveticaNeue-Bold"
+                    },
+                    {
+                      "length" : 12,
+                      "offset" : 0,
+                      "style" : "LETTERSPACING:0"
+                    },
+                    {
+                      "length" : 12,
+                      "offset" : 0,
+                      "style" : "LINEHEIGHT:1.2"
+                    },
+                    {
+                      "length" : 12,
+                      "offset" : 0,
+                      "style" : "SIZE:37"
+                    },
+                    {
+                      "length" : 12,
+                      "offset" : 0,
+                      "style" : "COLOR:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 86, 254)) \/* {\"name\":\"Primary\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/"
+                    }
+                  ],
+                  "key" : "c19hc",
+                  "text" : "Instructions",
+                  "type" : "unstyled"
+                }
+              ],
+              "cached" : {
+                "html" : "<div data-offset-key=\"c19hc-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"c19hc-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Bold&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 86, 254)) \/* {&quot;name&quot;:&quot;Primary&quot;,&quot;packageIdentifier&quot;:&quot;@framer\/steveruizok.education&quot;} *\/;font-size:37px;letter-spacing:0px;line-height:1.2;font-weight:700\"><span data-text=\"true\">Instructions<\/span><\/span><\/div>",
+                "os" : "10_14",
+                "size" : {
+                  "height" : 44,
+                  "width" : 212
+                },
+                "width" : 0
+              },
+              "entityMap" : {
+
+              }
+            },
+            "top" : 29,
+            "visible" : true,
+            "width" : 212,
+            "widthType" : 0
+          }
+        ],
+        "clip" : true,
+        "codeOverrideEnabled" : false,
+        "constraintsLocked" : false,
+        "deviceType" : null,
+        "exportOptions" : [
+
+        ],
+        "fillColor" : "rgba(255,255,255,1)",
+        "fillEnabled" : true,
+        "fillImage" : null,
+        "fillImagePixelHeight" : null,
+        "fillImagePixelWidth" : null,
+        "fillImageResize" : "fill",
+        "fillType" : "color",
+        "height" : 988,
+        "heightType" : 0,
+        "id" : "u1A2LzYr_",
+        "intrinsicHeight" : null,
+        "intrinsicWidth" : null,
+        "isExternalMaster" : null,
+        "isMaster" : false,
+        "isTarget" : false,
+        "left" : 317,
+        "locked" : false,
+        "name" : null,
+        "navigationTarget" : null,
+        "navigationTransition" : "push",
+        "navigationTransitionBackdropColor" : "rgba(4,4,15,.4)",
+        "navigationTransitionDirection" : "left",
+        "opacity" : 1,
+        "originalid" : null,
+        "parentid" : "DxIVvMw5f",
+        "previewSettings" : null,
+        "radius" : 0,
+        "radiusBottomLeft" : 0,
+        "radiusBottomRight" : 0,
+        "radiusIsRelative" : false,
+        "radiusPerCorner" : false,
+        "radiusTopLeft" : 0,
+        "radiusTopRight" : 0,
+        "replicaInfo" : null,
+        "right" : null,
+        "rotation" : 0,
+        "top" : -1325,
+        "visible" : true,
+        "width" : 375,
+        "widthType" : 0
+      },
+      {
+        "__class" : "FrameNode",
+        "aspectRatio" : null,
+        "blendingEnabled" : 0,
+        "blendingMode" : "normal",
+        "borderBottom" : 1,
+        "borderColor" : "var(--token-23bce3fd-e7be-45a5-a2c3-53cfc3c53db9, rgba(37, 37, 45, 0.3)) \/* {\"name\":\"Border\"} *\/",
+        "borderEnabled" : 1,
+        "borderLeft" : 0,
+        "borderPerSide" : true,
+        "borderRight" : 0,
+        "borderStyle" : "solid",
+        "borderTop" : 0,
+        "borderWidth" : 1,
+        "bottom" : null,
+        "centerAnchorX" : 0.46533333333333332,
+        "centerAnchorY" : 0.54064039408866993,
+        "children" : [
+
+        ],
+        "clip" : false,
+        "codeOverrideEnabled" : false,
+        "constraintsLocked" : false,
+        "deviceType" : null,
+        "exportOptions" : [
+
+        ],
+        "fillColor" : "hsla(0, 0%, 100%, 0.5)",
+        "fillEnabled" : false,
+        "fillImage" : null,
+        "fillImagePixelHeight" : null,
+        "fillImagePixelWidth" : null,
+        "fillImageResize" : "fill",
+        "fillLinearGradient" : {
+          "__class" : "LinearGradient",
+          "alpha" : 1,
+          "angle" : 180,
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ]
+        },
+        "fillRadialGradient" : {
+          "__class" : "RadialGradient",
+          "alpha" : 1,
+          "centerAnchorX" : 0.5,
+          "centerAnchorY" : 0.5,
+          "heightFactor" : 0.5,
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ],
+          "widthFactor" : 0.5
+        },
+        "fillType" : "color",
+        "height" : 48,
+        "heightType" : 0,
+        "id" : "@framer\/steveruizok.education-bqsC9adwp",
+        "intrinsicHeight" : null,
+        "intrinsicWidth" : null,
+        "isExternalMaster" : "@framer\/steveruizok.education",
+        "isMaster" : true,
+        "isTarget" : false,
+        "left" : 0,
+        "locked" : false,
+        "name" : "Divider",
+        "navigationTarget" : null,
+        "navigationTransition" : "push",
+        "navigationTransitionBackdropColor" : "rgba(4,4,15,.4)",
+        "navigationTransitionDirection" : "left",
+        "opacity" : 1,
+        "originalid" : null,
+        "parentid" : "DxIVvMw5f",
+        "previewSettings" : null,
+        "radius" : 0,
+        "radiusBottomLeft" : 0,
+        "radiusBottomRight" : 0,
+        "radiusIsRelative" : false,
+        "radiusPerCorner" : false,
+        "radiusTopLeft" : 0,
+        "radiusTopRight" : 0,
+        "replicaInfo" : null,
+        "right" : null,
+        "rotation" : 0,
+        "top" : 0,
+        "visible" : true,
+        "width" : 375,
+        "widthType" : 0
+      },
+      {
+        "__class" : "FrameNode",
+        "aspectRatio" : null,
+        "blendingEnabled" : 0,
+        "blendingMode" : "normal",
+        "bottom" : null,
+        "centerAnchorX" : 0,
+        "centerAnchorY" : 0,
+        "children" : [
+          {
+            "__class" : "FrameNode",
+            "aspectRatio" : null,
+            "blendingEnabled" : 0,
+            "blendingMode" : "normal",
+            "bottom" : null,
+            "centerAnchorX" : 0.49944506104328523,
+            "centerAnchorY" : 0.35083713850837139,
+            "children" : [
+
+            ],
+            "clip" : false,
+            "codeOverrideEnabled" : false,
+            "constraintsLocked" : false,
+            "deviceType" : null,
+            "exportOptions" : [
+
+            ],
+            "fillColor" : "rgba(255,255,255,1)",
+            "fillEnabled" : true,
+            "fillImage" : "5OygI3449bTNirQbWR8OJEZFnc.png",
+            "fillImagePixelHeight" : 903,
+            "fillImagePixelWidth" : 1836,
+            "fillImageResize" : "fill",
+            "fillType" : "image",
+            "height" : 357,
+            "heightType" : 0,
+            "id" : "IAYmnRRdp",
+            "intrinsicHeight" : 451.5,
+            "intrinsicWidth" : 918,
+            "isExternalMaster" : null,
+            "isMaster" : false,
+            "isTarget" : false,
+            "left" : 87,
+            "locked" : false,
+            "name" : null,
+            "navigationTarget" : null,
+            "navigationTransition" : "push",
+            "navigationTransitionBackdropColor" : "rgba(4,4,15,.4)",
+            "navigationTransitionDirection" : "left",
+            "opacity" : 1,
+            "originalFilename" : "circuit",
+            "originalid" : null,
+            "parentid" : "kNAfvaMUo",
+            "previewSettings" : null,
+            "radius" : 0,
+            "radiusBottomLeft" : 0,
+            "radiusBottomRight" : 0,
+            "radiusIsRelative" : false,
+            "radiusPerCorner" : false,
+            "radiusTopLeft" : 0,
+            "radiusTopRight" : 0,
+            "replicaInfo" : null,
+            "right" : 88,
+            "rotation" : 0,
+            "top" : 52,
+            "visible" : true,
+            "width" : 726,
+            "widthType" : 0
+          },
+          {
+            "__class" : "CodeComponentNode",
+            "aspectRatio" : null,
+            "bottom" : 0,
+            "centerAnchorX" : 0.19422863485016648,
+            "centerAnchorY" : 0.82800608828006084,
+            "children" : [
+              {
+                "__class" : "TextNode",
+                "autoSize" : false,
+                "bottom" : null,
+                "centerAnchorX" : 0.5,
+                "centerAnchorY" : 0.5,
+                "codeOverrideEnabled" : false,
+                "constraintsLocked" : false,
+                "exportOptions" : [
+
+                ],
+                "height" : 1,
+                "heightType" : 3,
+                "id" : "rqe0yt0Wg",
+                "isTarget" : false,
+                "left" : null,
+                "locked" : false,
+                "name" : null,
+                "opacity" : 1,
+                "originalid" : null,
+                "parentid" : "IPTdgqIvS",
+                "right" : null,
+                "rotation" : 0,
+                "styledText" : {
+                  "__class" : "StyledTextDraft",
+                  "blocks" : [
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2",
+                          "SIZE:16",
+                          "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+                          "FONT:HelveticaNeue"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+                        {
+                          "length" : 13,
+                          "offset" : 0,
+                          "style" : "LETTERSPACING:0"
+                        },
+                        {
+                          "length" : 13,
+                          "offset" : 0,
+                          "style" : "LINEHEIGHT:1.2"
+                        },
+                        {
+                          "length" : 13,
+                          "offset" : 0,
+                          "style" : "SIZE:16"
+                        },
+                        {
+                          "length" : 13,
+                          "offset" : 0,
+                          "style" : "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/"
+                        },
+                        {
+                          "length" : 13,
+                          "offset" : 0,
+                          "style" : "FONT:HelveticaNeue"
+                        }
+                      ],
+                      "key" : "ejp61",
+                      "text" : "Parts Needed:",
+                      "type" : "unstyled"
+                    },
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2",
+                          "SIZE:16",
+                          "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+                          "FONT:HelveticaNeue"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+
+                      ],
+                      "key" : "3kp0f",
+                      "text" : "",
+                      "type" : "unstyled"
+                    },
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2",
+                          "SIZE:16",
+                          "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+                          "FONT:HelveticaNeue"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+                        {
+                          "length" : 14,
+                          "offset" : 0,
+                          "style" : "LETTERSPACING:0"
+                        },
+                        {
+                          "length" : 14,
+                          "offset" : 0,
+                          "style" : "LINEHEIGHT:1.2"
+                        },
+                        {
+                          "length" : 14,
+                          "offset" : 0,
+                          "style" : "SIZE:16"
+                        },
+                        {
+                          "length" : 14,
+                          "offset" : 0,
+                          "style" : "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/"
+                        },
+                        {
+                          "length" : 14,
+                          "offset" : 0,
+                          "style" : "FONT:HelveticaNeue"
+                        }
+                      ],
+                      "key" : "4035a",
+                      "text" : "1. Arduino Uno",
+                      "type" : "unstyled"
+                    },
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2",
+                          "SIZE:16",
+                          "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+                          "FONT:HelveticaNeue"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+                        {
+                          "length" : 19,
+                          "offset" : 0,
+                          "style" : "LETTERSPACING:0"
+                        },
+                        {
+                          "length" : 19,
+                          "offset" : 0,
+                          "style" : "LINEHEIGHT:1.2"
+                        },
+                        {
+                          "length" : 19,
+                          "offset" : 0,
+                          "style" : "SIZE:16"
+                        },
+                        {
+                          "length" : 19,
+                          "offset" : 0,
+                          "style" : "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/"
+                        },
+                        {
+                          "length" : 19,
+                          "offset" : 0,
+                          "style" : "FONT:HelveticaNeue"
+                        }
+                      ],
+                      "key" : "mpqs",
+                      "text" : "2. USB 2.0 Type A\/B",
+                      "type" : "unstyled"
+                    },
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2",
+                          "SIZE:16",
+                          "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+                          "FONT:HelveticaNeue"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+                        {
+                          "length" : 13,
+                          "offset" : 0,
+                          "style" : "LETTERSPACING:0"
+                        },
+                        {
+                          "length" : 13,
+                          "offset" : 0,
+                          "style" : "LINEHEIGHT:1.2"
+                        },
+                        {
+                          "length" : 13,
+                          "offset" : 0,
+                          "style" : "SIZE:16"
+                        },
+                        {
+                          "length" : 13,
+                          "offset" : 0,
+                          "style" : "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/"
+                        },
+                        {
+                          "length" : 13,
+                          "offset" : 0,
+                          "style" : "FONT:HelveticaNeue"
+                        }
+                      ],
+                      "key" : "1e56p",
+                      "text" : "3. Breadboard",
+                      "type" : "unstyled"
+                    },
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2",
+                          "SIZE:16",
+                          "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+                          "FONT:HelveticaNeue"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+                        {
+                          "length" : 15,
+                          "offset" : 0,
+                          "style" : "LETTERSPACING:0"
+                        },
+                        {
+                          "length" : 15,
+                          "offset" : 0,
+                          "style" : "LINEHEIGHT:1.2"
+                        },
+                        {
+                          "length" : 15,
+                          "offset" : 0,
+                          "style" : "SIZE:16"
+                        },
+                        {
+                          "length" : 15,
+                          "offset" : 0,
+                          "style" : "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/"
+                        },
+                        {
+                          "length" : 15,
+                          "offset" : 0,
+                          "style" : "FONT:HelveticaNeue"
+                        }
+                      ],
+                      "key" : "7hit",
+                      "text" : "4. Jumper wires",
+                      "type" : "unstyled"
+                    },
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2",
+                          "SIZE:16",
+                          "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+                          "FONT:HelveticaNeue"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+                        {
+                          "length" : 20,
+                          "offset" : 0,
+                          "style" : "LETTERSPACING:0"
+                        },
+                        {
+                          "length" : 20,
+                          "offset" : 0,
+                          "style" : "LINEHEIGHT:1.2"
+                        },
+                        {
+                          "length" : 20,
+                          "offset" : 0,
+                          "style" : "SIZE:16"
+                        },
+                        {
+                          "length" : 20,
+                          "offset" : 0,
+                          "style" : "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/"
+                        },
+                        {
+                          "length" : 20,
+                          "offset" : 0,
+                          "style" : "FONT:HelveticaNeue"
+                        }
+                      ],
+                      "key" : "eur72",
+                      "text" : "5. 10k Ohm resisitor",
+                      "type" : "unstyled"
+                    },
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2",
+                          "SIZE:16",
+                          "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+                          "FONT:HelveticaNeue"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+                        {
+                          "length" : 9,
+                          "offset" : 0,
+                          "style" : "LETTERSPACING:0"
+                        },
+                        {
+                          "length" : 9,
+                          "offset" : 0,
+                          "style" : "LINEHEIGHT:1.2"
+                        },
+                        {
+                          "length" : 9,
+                          "offset" : 0,
+                          "style" : "SIZE:16"
+                        },
+                        {
+                          "length" : 9,
+                          "offset" : 0,
+                          "style" : "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/"
+                        },
+                        {
+                          "length" : 9,
+                          "offset" : 0,
+                          "style" : "FONT:HelveticaNeue"
+                        }
+                      ],
+                      "key" : "bc6eg",
+                      "text" : "6. Button",
+                      "type" : "unstyled"
+                    },
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2",
+                          "SIZE:16",
+                          "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+                          "FONT:HelveticaNeue"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+                        {
+                          "length" : 6,
+                          "offset" : 0,
+                          "style" : "LETTERSPACING:0"
+                        },
+                        {
+                          "length" : 6,
+                          "offset" : 0,
+                          "style" : "LINEHEIGHT:1.2"
+                        },
+                        {
+                          "length" : 6,
+                          "offset" : 0,
+                          "style" : "SIZE:16"
+                        },
+                        {
+                          "length" : 6,
+                          "offset" : 0,
+                          "style" : "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/"
+                        },
+                        {
+                          "length" : 6,
+                          "offset" : 0,
+                          "style" : "FONT:HelveticaNeue"
+                        }
+                      ],
+                      "key" : "2lhap",
+                      "text" : "7. LED",
+                      "type" : "unstyled"
+                    },
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2",
+                          "SIZE:16",
+                          "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+                          "FONT:HelveticaNeue"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+
+                      ],
+                      "key" : "379pe",
+                      "text" : "",
+                      "type" : "unstyled"
+                    },
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2",
+                          "SIZE:16",
+                          "COLOR:var(--token-655be689-744d-4b94-af37-d052b01faead, rgb(35, 35, 47)) \/* {\"name\":\"Dark\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
+                          "FONT:HelveticaNeue"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+
+                      ],
+                      "key" : "2up0m",
+                      "text" : "",
+                      "type" : "unstyled"
+                    }
+                  ],
+                  "entityMap" : {
+
+                  }
+                },
+                "top" : null,
+                "visible" : true,
+                "width" : 1,
+                "widthType" : 3
+              }
+            ],
+            "clip" : true,
+            "codeComponentIdentifier" : "framer\/Stack",
+            "codeComponentProps" : {
+              "alignment" : "start",
+              "direction" : "vertical",
+              "distribution" : "start",
+              "gap" : 24,
+              "padding" : 16,
+              "paddingBottom" : 16,
+              "paddingLeft" : 16,
+              "paddingPerSide" : false,
+              "paddingRight" : 16,
+              "paddingTop" : 16
+            },
+            "codeOverrideEnabled" : false,
+            "constraintsLocked" : true,
+            "deviceType" : null,
+            "exportOptions" : [
+
+            ],
+            "fillColor" : "rgba(255,255,255,1)",
+            "fillEnabled" : false,
+            "fillImage" : null,
+            "fillImagePixelHeight" : null,
+            "fillImagePixelWidth" : null,
+            "fillImageResize" : "fill",
+            "fillType" : "color",
+            "height" : 226,
+            "heightType" : 0,
+            "id" : "IPTdgqIvS",
+            "intrinsicHeight" : null,
+            "intrinsicWidth" : null,
+            "left" : 9,
+            "locked" : false,
+            "name" : null,
+            "opacity" : 1,
+            "originalid" : null,
+            "parentid" : "kNAfvaMUo",
+            "previewSettings" : null,
+            "radius" : 0,
+            "radiusBottomLeft" : 0,
+            "radiusBottomRight" : 0,
+            "radiusIsRelative" : false,
+            "radiusPerCorner" : false,
+            "radiusTopLeft" : 0,
+            "radiusTopRight" : 0,
+            "right" : null,
+            "rotation" : 0,
+            "top" : 431,
+            "visible" : true,
+            "width" : 332,
+            "widthType" : 0
+          }
+        ],
+        "clip" : true,
+        "codeOverrideEnabled" : false,
+        "constraintsLocked" : false,
+        "deviceType" : null,
+        "exportOptions" : [
+
+        ],
+        "fillColor" : "rgba(255,255,255,1)",
+        "fillEnabled" : true,
+        "fillImage" : null,
+        "fillImagePixelHeight" : null,
+        "fillImagePixelWidth" : null,
+        "fillImageResize" : "fill",
+        "fillType" : "color",
+        "height" : 657,
+        "heightType" : 0,
+        "id" : "kNAfvaMUo",
+        "intrinsicHeight" : null,
+        "intrinsicWidth" : null,
+        "isExternalMaster" : null,
+        "isMaster" : false,
+        "isTarget" : false,
+        "left" : 815,
+        "locked" : false,
+        "name" : null,
+        "navigationTarget" : null,
+        "navigationTransition" : "push",
+        "navigationTransitionBackdropColor" : "rgba(4,4,15,.4)",
+        "navigationTransitionDirection" : "left",
+        "opacity" : 1,
+        "originalid" : null,
+        "parentid" : "DxIVvMw5f",
+        "previewSettings" : null,
+        "radius" : 0,
+        "radiusBottomLeft" : 0,
+        "radiusBottomRight" : 0,
+        "radiusIsRelative" : false,
+        "radiusPerCorner" : false,
+        "radiusTopLeft" : 0,
+        "radiusTopRight" : 0,
+        "replicaInfo" : null,
+        "right" : null,
+        "rotation" : 0,
+        "top" : -158,
+        "visible" : true,
+        "width" : 901,
         "widthType" : 0
       },
       {
@@ -6235,261 +8034,6 @@
         "top" : 0,
         "visible" : true,
         "width" : 375,
-        "widthType" : 0
-      },
-      {
-        "__class" : "FrameNode",
-        "aspectRatio" : null,
-        "blendingEnabled" : 0,
-        "blendingMode" : "normal",
-        "borderBottom" : 1,
-        "borderColor" : "var(--token-23bce3fd-e7be-45a5-a2c3-53cfc3c53db9, rgba(37, 37, 45, 0.3)) \/* {\"name\":\"Border\"} *\/",
-        "borderEnabled" : 1,
-        "borderLeft" : 0,
-        "borderPerSide" : true,
-        "borderRight" : 0,
-        "borderStyle" : "solid",
-        "borderTop" : 0,
-        "borderWidth" : 1,
-        "bottom" : null,
-        "centerAnchorX" : 0.46533333333333332,
-        "centerAnchorY" : 0.54064039408866993,
-        "children" : [
-
-        ],
-        "clip" : false,
-        "codeOverrideEnabled" : false,
-        "constraintsLocked" : false,
-        "deviceType" : null,
-        "exportOptions" : [
-
-        ],
-        "fillColor" : "hsla(0, 0%, 100%, 0.5)",
-        "fillEnabled" : false,
-        "fillImage" : null,
-        "fillImagePixelHeight" : null,
-        "fillImagePixelWidth" : null,
-        "fillImageResize" : "fill",
-        "fillLinearGradient" : {
-          "__class" : "LinearGradient",
-          "alpha" : 1,
-          "angle" : 180,
-          "stops" : [
-            {
-              "__class" : "GradientColorStop",
-              "position" : 0,
-              "value" : "rgba(0,0,0,0)"
-            },
-            {
-              "__class" : "GradientColorStop",
-              "position" : 1,
-              "value" : "black"
-            }
-          ]
-        },
-        "fillRadialGradient" : {
-          "__class" : "RadialGradient",
-          "alpha" : 1,
-          "centerAnchorX" : 0.5,
-          "centerAnchorY" : 0.5,
-          "heightFactor" : 0.5,
-          "stops" : [
-            {
-              "__class" : "GradientColorStop",
-              "position" : 0,
-              "value" : "rgba(0,0,0,0)"
-            },
-            {
-              "__class" : "GradientColorStop",
-              "position" : 1,
-              "value" : "black"
-            }
-          ],
-          "widthFactor" : 0.5
-        },
-        "fillType" : "color",
-        "height" : 48,
-        "heightType" : 0,
-        "id" : "@framer\/steveruizok.education-bqsC9adwp",
-        "intrinsicHeight" : null,
-        "intrinsicWidth" : null,
-        "isExternalMaster" : "@framer\/steveruizok.education",
-        "isMaster" : true,
-        "isTarget" : false,
-        "left" : 0,
-        "locked" : false,
-        "name" : "Divider",
-        "navigationTarget" : null,
-        "navigationTransition" : "push",
-        "navigationTransitionBackdropColor" : "rgba(4,4,15,.4)",
-        "navigationTransitionDirection" : "left",
-        "opacity" : 1,
-        "originalid" : null,
-        "parentid" : "DxIVvMw5f",
-        "previewSettings" : null,
-        "radius" : 0,
-        "radiusBottomLeft" : 0,
-        "radiusBottomRight" : 0,
-        "radiusIsRelative" : false,
-        "radiusPerCorner" : false,
-        "radiusTopLeft" : 0,
-        "radiusTopRight" : 0,
-        "replicaInfo" : null,
-        "right" : null,
-        "rotation" : 0,
-        "top" : 0,
-        "visible" : true,
-        "width" : 375,
-        "widthType" : 0
-      },
-      {
-        "__class" : "FrameNode",
-        "aspectRatio" : 1.75,
-        "blendingEnabled" : 0,
-        "blendingMode" : "normal",
-        "bottom" : null,
-        "centerAnchorX" : 0.37866666666666665,
-        "centerAnchorY" : 0.58128078817733986,
-        "children" : [
-
-        ],
-        "clip" : false,
-        "codeOverrideEnabled" : false,
-        "constraintsLocked" : false,
-        "deviceType" : null,
-        "exportOptions" : [
-
-        ],
-        "fillColor" : "rgba(255,255,255,1)",
-        "fillEnabled" : true,
-        "fillImage" : "bv3exTrPzspqiBm3VvXsXdHYO8.png",
-        "fillImagePixelHeight" : 864,
-        "fillImagePixelWidth" : 1512,
-        "fillImageResize" : "fill",
-        "fillType" : "image",
-        "height" : 432,
-        "heightType" : 0,
-        "id" : "m6EapJFbo",
-        "intrinsicHeight" : 432,
-        "intrinsicWidth" : 756,
-        "isExternalMaster" : null,
-        "isMaster" : false,
-        "isTarget" : false,
-        "left" : 803,
-        "locked" : false,
-        "name" : null,
-        "navigationTarget" : null,
-        "navigationTransition" : "push",
-        "navigationTransitionBackdropColor" : "rgba(4,4,15,.4)",
-        "navigationTransitionDirection" : "left",
-        "opacity" : 1,
-        "originalFilename" : "",
-        "originalid" : null,
-        "parentid" : "DxIVvMw5f",
-        "previewSettings" : null,
-        "radius" : 0,
-        "radiusBottomLeft" : 0,
-        "radiusBottomRight" : 0,
-        "radiusIsRelative" : false,
-        "radiusPerCorner" : false,
-        "radiusTopLeft" : 0,
-        "radiusTopRight" : 0,
-        "replicaInfo" : null,
-        "right" : null,
-        "rotation" : 0,
-        "top" : 202,
-        "visible" : true,
-        "width" : 756,
-        "widthType" : 0
-      },
-      {
-        "__class" : "TextNode",
-        "autoSize" : true,
-        "bottom" : null,
-        "centerAnchorX" : 0.85466666666666669,
-        "centerAnchorY" : 0.57204433497536944,
-        "codeOverrideEnabled" : false,
-        "constraintsLocked" : false,
-        "exportOptions" : [
-
-        ],
-        "height" : 115,
-        "heightType" : 0,
-        "id" : "Qm8mvW0xt",
-        "isTarget" : false,
-        "left" : 803,
-        "locked" : false,
-        "name" : null,
-        "opacity" : 1,
-        "originalid" : null,
-        "parentid" : "DxIVvMw5f",
-        "right" : null,
-        "rotation" : 0,
-        "styledText" : {
-          "__class" : "StyledTextDraft",
-          "blocks" : [
-            {
-              "data" : {
-                "emptyStyle" : [
-                  "LETTERSPACING:0",
-                  "LINEHEIGHT:1.2",
-                  "COLOR:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {\"name\":\"Primary\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
-                  "FONT:HelveticaNeue-Bold",
-                  "SIZE:96"
-                ]
-              },
-              "depth" : 0,
-              "entityRanges" : [
-
-              ],
-              "inlineStyleRanges" : [
-                {
-                  "length" : 15,
-                  "offset" : 0,
-                  "style" : "LETTERSPACING:0"
-                },
-                {
-                  "length" : 15,
-                  "offset" : 0,
-                  "style" : "LINEHEIGHT:1.2"
-                },
-                {
-                  "length" : 15,
-                  "offset" : 0,
-                  "style" : "COLOR:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {\"name\":\"Primary\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/"
-                },
-                {
-                  "length" : 15,
-                  "offset" : 0,
-                  "style" : "FONT:HelveticaNeue-Bold"
-                },
-                {
-                  "length" : 15,
-                  "offset" : 0,
-                  "style" : "SIZE:96"
-                }
-              ],
-              "key" : "559t0",
-              "text" : "Arduino Circuit",
-              "type" : "unstyled"
-            }
-          ],
-          "cached" : {
-            "html" : "<div data-offset-key=\"559t0-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"559t0-0-0\" style=\"tab-size:4;font-family:&quot;HelveticaNeue-Bold&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 92, 254)) \/* {&quot;name&quot;:&quot;Primary&quot;,&quot;packageIdentifier&quot;:&quot;@framer\/steveruizok.education&quot;} *\/;font-size:96px;letter-spacing:0px;line-height:1.2;font-weight:700\"><span data-text=\"true\">Arduino Circuit<\/span><\/span><\/div>",
-            "os" : "10_14",
-            "size" : {
-              "height" : 115,
-              "width" : 688
-            },
-            "width" : 0
-          },
-          "entityMap" : {
-
-          }
-        },
-        "top" : 15,
-        "visible" : true,
-        "width" : 688,
         "widthType" : 0
       }
     ],

@@ -11,6 +11,9 @@ const subscribers = new Map()
 
 const subscribe = (id, socket) => {
 	if (subscribers.has(id)) {
+		console.log(
+			`Client with ID ${id} already connected. Disconnecting older client.`
+		)
 		unsubscribe(id)
 	}
 
@@ -46,4 +49,10 @@ io.on('connection', (socket) => {
 })
 
 // 3. Start the server
-server.listen(3000, () => console.log('Listening at http://localhost:3000'))
+const startServer = (port = 3000) => {
+	server.listen(port, () =>
+		console.log(`Listening at http://localhost:${port}`)
+	)
+}
+
+module.exports = { startServer }
