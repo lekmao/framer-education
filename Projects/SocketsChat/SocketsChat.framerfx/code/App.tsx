@@ -16,13 +16,13 @@ const appState = Data({
 
 let dispatch: any
 
-// If can't connect, visit https://6y5s7.sse.codesandbox.io/ to restart server
+// If can't connect, visit https://6y5s7.sse.codesandbox.io/
+// to restart server
 
 // Socket -------------------------------------------------
 
 const SERVER_URL = "https://6y5s7.sse.codesandbox.io/"
 
-// [3]
 const RESPONSES = {
     CONNECT: data => {
         if (data.id === appState.userName) {
@@ -41,7 +41,8 @@ const RESPONSES = {
     },
 }
 
-//
+// Overrides ---------------------------------------------
+
 // Navigation
 
 export function PageNavigation(): Override {
@@ -76,6 +77,7 @@ export function UsernameButton(): Override {
     return {
         disabled: appState.userName === "",
         onTap: () => {
+            // Connect to the socket
             dispatch = connectToSocket(SERVER_URL, appState.userName, RESPONSES)
             Object.assign(appState, { title: "Chat", currentPage: 1 })
         },
