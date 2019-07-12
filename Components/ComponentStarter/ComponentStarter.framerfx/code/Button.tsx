@@ -5,10 +5,7 @@ import { Frame, FrameProps, addPropertyControls, ControlType } from "framer"
 Writing Code Components
 by @steveruizok
 
-In this file, I've written a code component to demonstrate tips, tricks and 
-best practices. Throughout the code, you'll find numbers like this [1] that 
-correspond to notes at the bottom of this file. You'll also find a skeleton
-component in the Starter.tsx file to use for your own components. 
+In this file, I've written a code component to demonstrate tips, tricks and best practices. Throughout the code, you'll find numbers like this [1] that correspond to notes at the bottom of this file. You'll also find a skeleton component in the Starter.tsx file to use for your own components. 
 
 Good luck!
 */
