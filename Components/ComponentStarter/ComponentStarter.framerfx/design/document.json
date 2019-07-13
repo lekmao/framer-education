@@ -23,8 +23,9 @@
             "clip" : true,
             "codeComponentIdentifier" : ".\/Button.tsx_Button",
             "codeComponentProps" : {
-              "backgroundColor" : "#0099ff",
+              "background" : "#0099ff",
               "color" : "#ffffff",
+              "disabled" : false,
               "text" : "Get Started"
             },
             "codeOverrideEnabled" : false,
