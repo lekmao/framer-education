@@ -24,6 +24,7 @@ This package also includes several helper utilities. Learn more and see examples
 
 # Changelog
 
+- Adds TextArea
 - Adds scroll prop to List
 - Tweaks TextInput padding for clearable
 - Cleans up content for lists

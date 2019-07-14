@@ -1,40 +1,64 @@
 import * as React from 'react'
-import { Frame, addPropertyControls, ControlType, FrameProps } from 'framer'
+import {
+	Stack,
+	Frame,
+	addPropertyControls,
+	ControlType,
+	StackProperties,
+} from 'framer'
 import { Interactive } from './Interactive'
-import { Icon } from './Icon'
 import { colors } from './canvas'
+import { Text } from './Text'
 
-type Props = Partial<FrameProps> & {
+type Props = Partial<StackProperties> & {
 	value: string
 	disabled: boolean
 	required: boolean
-	onValueChange: (value: string, valid: boolean) => any
 	validation: (value: string) => boolean
-} & {
-	placeholder: string
-	readOnly: boolean
-	password: boolean
 	message: string | ((value: string, valid: boolean) => string)
 	delay: number // in seconds
-	clearable: boolean
+	onValueChange: (value: string, valid: boolean) => any
 	onBlur: (value: string, valid: boolean) => void
 	onFocus: (value: string, valid: boolean) => void
 	onInputStart: () => any
+	// component-specific
+	autocapitalize: 'none' | 'sentences' | 'words' | 'characters' | string
+	autocomplete: boolean
+	autofocus: boolean
+	cols: number
+	form: string
+	maxLength: number
+	minLength: number
+	placeholder: number
+	readOnly: boolean
+	spellcheck: boolean
+	wrap: boolean
+	tabIndex: number
 }
 
-export function TextInput(props: Partial<Props>) {
+export function TextArea(props: Partial<Props>) {
 	const {
 		value: initialValue,
-		placeholder,
-		readOnly,
-		password,
+		disabled,
+		required,
 		validation,
-		onInputStart,
-		onValueChange,
 		message,
 		delay,
-		clearable,
-		required,
+		onValueChange,
+		onBlur,
+		onFocus,
+		onInputStart,
+		autocapitalize,
+		autocomplete,
+		autofocus,
+		cols,
+		form,
+		maxLength,
+		minLength,
+		placeholder,
+		readOnly,
+		spellcheck,
+		wrap,
 		tabIndex,
 		...rest
 	} = props
@@ -42,7 +66,7 @@ export function TextInput(props: Partial<Props>) {
 	/* ---------------------------------- State --------------------------------- */
 
 	// Store the input's last value in a ref
-	const input = React.useRef<HTMLInputElement>()
+	const input = React.useRef<HTMLTextAreaElement>()
 	const inputValue = React.useRef(initialValue)
 
 	// Initialize state with props values
@@ -51,6 +75,8 @@ export function TextInput(props: Partial<Props>) {
 		valid: validation(initialValue),
 		typing: false,
 		focused: false,
+		textHeight: 50,
+		messageHeight: 0,
 	})
 
 	// When the hook receives new props values, overwrite the state
@@ -58,19 +84,19 @@ export function TextInput(props: Partial<Props>) {
 		// Sync inputValue ref with initialValue
 		inputValue.current = initialValue
 
-		setState({
+		setState((state) => ({
 			...state,
 			value: initialValue,
 			valid: validate(state.value),
-		})
+		}))
 	}, [initialValue])
 
 	// Re-validate when required or validation changes
 	React.useEffect(() => {
-		setState({
+		setState((state) => ({
 			...state,
 			valid: validate(state.value),
-		})
+		}))
 	}, [validation, required])
 
 	/* ----------------------------- Event Handlers ----------------------------- */
@@ -103,7 +129,7 @@ export function TextInput(props: Partial<Props>) {
 		}
 
 		// Set value and typing states
-		setState({ ...state, value, typing: true })
+		setState((state) => ({ ...state, value, typing: true }))
 
 		// Check whether inputValue is still the same
 		delay > 0
@@ -121,13 +147,17 @@ export function TextInput(props: Partial<Props>) {
 		if (value === inputValue.current) {
 			const valid = value ? validate(value) : !required
 			onValueChange(value, valid)
-			setState({ ...state, typing: false, value, valid })
+			setState((state) => ({ ...state, typing: false, value, valid }))
 		}
 	}
 
 	// Clear input
-	const handleClear = (event) => {
-		updateState('')
+	const setMessageHeight = (width, height) => {
+		console.log(width, height)
+		setState((state) => ({
+			...state,
+			messageHeight: height + 8,
+		}))
 	}
 
 	/* ------------------------------ Presentation ------------------------------ */
@@ -152,20 +182,29 @@ export function TextInput(props: Partial<Props>) {
 		},
 	}
 
+	console.log(!!message ? `calc(100% - ${state.messageHeight}px)` : '100%')
+
 	return (
 		<Interactive {...rest} active={false} overflow={'hidden'}>
 			{(current) => (
-				<>
+				<Stack
+					width="100%"
+					height="100%"
+					direction="vertical"
+					background={colors.Light}
+					borderRadius={8}
+				>
 					<Frame
 						width="100%"
-						height={50}
+						height={
+							!!message ? `calc(100% - ${state.messageHeight}px)` : '100%'
+						}
 						background={colors.Light}
 						borderRadius={8}
 						{...variants[valid ? (focused ? 'focused' : current) : 'warn']}
 					/>
-					<input
+					<textarea
 						ref={input}
-						type={password ? 'password' : 'text'}
 						value={value || ''}
 						placeholder={placeholder || ''}
 						disabled={props.disabled}
@@ -174,15 +213,18 @@ export function TextInput(props: Partial<Props>) {
 							position: 'absolute',
 							top: 0,
 							left: 0,
-							padding: clearable ? '0px 40px 0px 12px' : '0px 12px',
+							padding: '12px',
 							fontSize: 14,
 							fontWeight: 600,
 							width: '100%',
-							height: 50,
+							height: !!message
+								? `calc(100% - ${state.messageHeight}px)`
+								: '100%',
 							background: 'none',
 							borderRadius: 4,
 							outline: 'none',
 							border: 'none',
+							resize: 'none',
 							color: valid ? colors.Dark : colors.Warn,
 						}}
 						tabIndex={tabIndex}
@@ -190,80 +232,57 @@ export function TextInput(props: Partial<Props>) {
 						onBlur={() => setFocus(false)}
 						onChange={handleInput}
 					/>
-					{clearable && value && !readOnly && !props.disabled && (
-						<Frame
-							background="none"
-							height={50}
-							width={40}
-							right={0}
-							top={0}
-							onTap={handleClear}
-						>
-							<Frame
-								center
-								height={16}
-								width={16}
-								background={colors.Neutral}
-								borderRadius="100%"
-							>
-								<Icon
-									icon={'close'}
-									center
-									y={1}
-									height={13}
-									width={13}
-									size={13}
-									color={colors.Light}
-								/>
-							</Frame>
-						</Frame>
-					)}
 					{!!message && (
-						<div
-							style={{
-								width: '100%',
-								position: 'absolute',
-								top: 50,
-								left: 0,
-								padding: 8,
-								fontFamily: 'Helvetica Neue',
-								color: valid ? colors.Dark : colors.Warn,
-								fontSize: 12,
-							}}
-						>
-							{message
-								? typeof message === 'function'
-									? message(state.value, state.valid)
-									: message
-								: ''}
-						</div>
+						<Text
+							type="caption"
+							resize="height"
+							textAlign="left"
+							verticalAlign="top"
+							width="100%"
+							onResize={setMessageHeight}
+							text={
+								message
+									? typeof message === 'function'
+										? message(state.value, state.valid)
+										: message
+									: ''
+							}
+						/>
 					)}
-				</>
+				</Stack>
 			)}
 		</Interactive>
 	)
 }
 
-TextInput.defaultProps = {
+TextArea.defaultProps = {
 	value: undefined,
-	placeholder: undefined,
+	autocapitalize: 'none',
+	autocomplete: false,
+	autofocus: false,
+	cols: undefined,
 	disabled: false,
+	form: undefined,
+	maxLength: undefined,
+	minLength: undefined,
+	placeholder: undefined,
 	required: false,
 	readOnly: false,
-	tabIndex: -1,
+	spellcheck: false,
+	wrap: undefined,
+	tabIndex: 0,
 	message: null,
-	clearable: true,
 	onFocus: () => null,
 	onBlur: () => null,
 	validation: (v) => true,
 	onInputStart: () => null,
 	onValueChange: () => null,
 	delay: 0.25,
-	height: 50,
+	height: 200,
 	width: 320,
 }
 
-addPropertyControls(TextInput, {
+addPropertyControls(TextArea, {
 	value: {
 		type: ControlType.String,
 		defaultValue: '',
@@ -279,20 +298,10 @@ addPropertyControls(TextInput, {
 		defaultValue: '',
 		title: 'Message',
 	},
-	password: {
-		type: ControlType.Boolean,
-		defaultValue: false,
-		title: 'Password',
-	},
 	readOnly: {
 		type: ControlType.Boolean,
 		defaultValue: false,
 		title: 'Read Only',
-	},
-	clearable: {
-		type: ControlType.Boolean,
-		defaultValue: true,
-		title: 'Clearable',
 	},
 	required: {
 		type: ControlType.Boolean,
