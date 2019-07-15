@@ -32,7 +32,7 @@ type Props = Partial<StackProperties> & {
 	placeholder: number
 	readOnly: boolean
 	spellcheck: boolean
-	wrap: boolean
+	wrap: 'hard' | 'soft' | 'off'
 	tabIndex: number
 }
 
@@ -58,8 +58,8 @@ export function TextArea(props: Partial<Props>) {
 		placeholder,
 		readOnly,
 		spellcheck,
-		wrap,
 		tabIndex,
+		wrap,
 		...rest
 	} = props
 
@@ -209,6 +209,19 @@ export function TextArea(props: Partial<Props>) {
 						placeholder={placeholder || ''}
 						disabled={props.disabled}
 						readOnly={readOnly}
+						{...{
+							autocapitalize,
+							autocomplete,
+							autofocus,
+							cols,
+							form,
+							maxLength,
+							minLength,
+							readOnly,
+							spellcheck,
+							tabIndex,
+							wrap,
+						}}
 						style={{
 							position: 'absolute',
 							top: 0,
@@ -227,7 +240,6 @@ export function TextArea(props: Partial<Props>) {
 							resize: 'none',
 							color: valid ? colors.Dark : colors.Warn,
 						}}
-						tabIndex={tabIndex}
 						onFocus={() => setFocus(true)}
 						onBlur={() => setFocus(false)}
 						onChange={handleInput}
