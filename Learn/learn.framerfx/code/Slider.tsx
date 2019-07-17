@@ -28,6 +28,7 @@ type Props = FrameProps & {
     step: number
     titles: boolean
     places: number
+    color: string
     onDrag: any
     onDragStart: any
     onDragEnd: any
@@ -46,6 +47,7 @@ export function Slider(props: Partial<Props>) {
         onValueChange,
         titles,
         places,
+        color,
         onDrag,
         onDragStart,
         onDragEnd,
@@ -221,7 +223,7 @@ export function Slider(props: Partial<Props>) {
             <Frame
                 height={railHeight}
                 borderRadius={4}
-                background={colors.Primary}
+                background={color}
                 center="y"
                 width={state.progress * railWidth}
                 left={knobSize / 2}
@@ -308,6 +310,7 @@ Slider.defaultProps = {
     places: 2,
     railHeight: 8,
     knobSize: 40,
+    color: colors.Primary,
     validation: v => true,
     onValueChange: () => null,
 }
@@ -347,6 +350,11 @@ addPropertyControls(Slider, {
         type: ControlType.Boolean,
         defaultValue: false,
         title: "Titles",
+    },
+    color: {
+        title: "Color",
+        type: ControlType.Color,
+        defaultValue: colors.Primary,
     },
     disabled: {
         type: ControlType.Boolean,
