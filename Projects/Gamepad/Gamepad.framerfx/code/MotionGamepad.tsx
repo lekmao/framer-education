@@ -2,7 +2,7 @@ import { motionValue, MotionValue } from "framer"
 
 export class MotionGamepad {
     index = 0
-    looping = false
+    id: string
     gamepad: Gamepad
     layout = "dualshock"
     deadZone = 0.1
@@ -22,7 +22,7 @@ export class MotionGamepad {
         axes: {
             [key: string]: MotionValue<number>
         }
-        sticks: {
+        sticks: Partial<{
             [key: string]: {
                 x: MotionValue<number>
                 y: MotionValue<number>
@@ -30,15 +30,15 @@ export class MotionGamepad {
                     x: MotionValue<number>
                     y: MotionValue<number>
                 }
-                speed?: number
-                bounds?: {
+                speed: number
+                bounds: {
                     top: number
                     right: number
                     bottom: number
                     left: number
                 }
             }
-        }
+        }>
     }
 
     constructor(index = 0, options: Partial<Options> = {}) {
@@ -80,48 +80,37 @@ export class MotionGamepad {
             }, {}),
             sticks: layouts[layout].sticks.reduce((acc, cur) => {
                 acc[cur] = {
+                    x: motionValue(0),
+                    y: motionValue(0),
                     point: {
                         x: motionValue(0),
                         y: motionValue(0),
                     },
-                    speed: options.sticks[cur] && options.sticks[cur].speed,
-                    bounds: options.sticks[cur] && options.sticks[cur].bounds,
+                    ...(options.sticks &&
+                        options.sticks[cur] && {
+                            speed: options.sticks[cur].speed,
+                            bounds: options.sticks[cur].bounds,
+                        }),
                 }
                 return acc
             }, {}),
         }
 
-        window.addEventListener("gamepadconnected", this.addGamepad, false)
-        window.addEventListener(
-            "gamepaddisconnected",
-            this.removeGamepad,
-            false
-        )
+        this.id = Math.random().toString()
+        window["enableGamepadLoop"] = this.id
+        this.updateGamepad()
     }
 
     // Gamepads
 
-    addGamepad = (event: GamepadEvent) => {
-        const { gamepad: pad } = event
-
-        if (pad.index === this.index) {
-            this.gamepad = event.gamepad
-            this.onConnect && this.onConnect(pad)
-
-            // Start the update loop
-            requestAnimationFrame(this.updateGamepad)
-        }
-    }
-
     removeGamepad = (event: GamepadEvent) => {
-        const { gamepad: pad } = event
+        const { gamepad } = event
 
-        if (pad.index === this.index) {
+        if (gamepad.index === this.index) {
             this.gamepad = undefined
-            this.onDisconnect && this.onDisconnect(pad)
+            this.onDisconnect && this.onDisconnect(gamepad)
 
             // Stop the update loop
-            this.looping = false
         }
     }
 
@@ -129,9 +118,9 @@ export class MotionGamepad {
 
     updateGamepad = () => {
         const {
-            gamepad,
+            id,
+            index,
             state,
-            looping,
             layout,
             deadZone,
             stickSpeed,
@@ -142,9 +131,13 @@ export class MotionGamepad {
             onAxisChange,
         } = this
 
+        const gamepads = navigator.getGamepads()
+        const gamepad = gamepads[index]
+
         // If we've stopped looping (because a gamepad was
         // disconnected), we break the loop.
-        if (!looping) {
+        if (window["enableGamepadLoop"] !== id) {
+            this.onDisconnect && this.onDisconnect(gamepad)
             return
         }
 
@@ -152,7 +145,13 @@ export class MotionGamepad {
         // something terrible happened and we need to
         // break the loop.
         if (!gamepad) {
+            requestAnimationFrame(this.updateGamepad)
             return
+        }
+
+        if (!this.gamepad) {
+            this.gamepad = gamepad
+            this.onConnect && this.onConnect(gamepad)
         }
 
         // Update our gamepad's buttons
@@ -191,6 +190,9 @@ export class MotionGamepad {
             // Difference between the two
             const delta = value - previous
 
+            const stickName = layouts[layout].sticks[Math.floor(i / 2)]
+            const stick = state.sticks[stickName]
+
             // If the axis' value is below the dead zone, set it to
             // zero (if it's not zero already).
             if (Math.abs(value) < deadZone) {
@@ -208,7 +210,6 @@ export class MotionGamepad {
                 }
 
                 // Get the stick for this axis
-                const stick = state.sticks[Math.floor(i / 2)]
 
                 // If a stick exists...
                 if (stick) {
@@ -268,66 +269,54 @@ export class MotionGamepad {
     get inputs() {
         return this.state
     }
+
+    get sticks() {
+        const sticks = layouts[this.layout].sticks
+
+        return sticks.reduce((acc, cur) => {
+            const { x, y, point } = this.state.sticks[cur]
+            acc[cur] = {
+                x: x.get(),
+                y: y.get(),
+                point: {
+                    x: point.x.get(),
+                    y: point.y.get(),
+                },
+            }
+
+            return acc
+        }, {})
+    }
+
+    get buttons() {
+        const buttons = layouts[this.layout].buttons
+
+        return buttons.reduce((acc, cur) => {
+            acc[cur] = this.state.buttons[cur].get()
+            return acc
+        }, {})
+    }
+
+    get axes() {
+        const axes = layouts[this.layout].axes
+
+        return axes.reduce((acc, cur) => {
+            acc[cur] = this.state.axes[cur].get()
+            return acc
+        }, {})
+    }
 }
 
 type Options = {
+    index: number
     layout: string
     deadZone: number
-    stickSpeed: number
     axisThreshold: number
-    buttons: {
-        square: MotionValue<boolean>
-        x: MotionValue<boolean>
-        circle: MotionValue<boolean>
-        triangle: MotionValue<boolean>
-        leftTrigger1: MotionValue<boolean>
-        rightTrigger1: MotionValue<boolean>
-        leftTrigger2: MotionValue<boolean>
-        rightTrigger2: MotionValue<boolean>
-        share: MotionValue<boolean>
-        options: MotionValue<boolean>
-        leftStick: MotionValue<boolean>
-        rightStick: MotionValue<boolean>
-        playstation: MotionValue<boolean>
-        touchPad: MotionValue<boolean>
-        dPadUp: MotionValue<boolean>
-        dPadDown: MotionValue<boolean>
-        dPadLeft: MotionValue<boolean>
-        dPadRight: MotionValue<boolean>
-    }
-    axes: {
-        leftStickX: MotionValue<number>
-        leftStickY: MotionValue<number>
-        rightStickX: MotionValue<number>
-        rightStickY: MotionValue<number>
-        leftTrigger: MotionValue<number>
-        rightTrigger: MotionValue<number>
-    }
-    sticks: {
-        left: {
-            x: MotionValue<number>
-            y: MotionValue<number>
-            point: {
-                x: MotionValue<number>
-                y: MotionValue<number>
-            }
-            speed: 10
-            bounds: {
-                top: number
-                left: number
-                right: number
-                bottom: number
-            }
-        }
-        right: {
-            x: MotionValue<number>
-            y: MotionValue<number>
-            point: {
-                x: MotionValue<number>
-                y: MotionValue<number>
-            }
-            speed: 10
-            bounds: {
+    stickSpeed: number
+    sticks?: {
+        [key: string]: {
+            speed?: number
+            bounds?: {
                 top: number
                 left: number
                 right: number

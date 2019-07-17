@@ -15,50 +15,41 @@ const appState = Data({
 })
 
 // [2]
-const gamepad = new MotionGamepad(0, {})
-const { inputs } = gamepad
+const gamepad = new MotionGamepad(0, {
+    sticks: {
+        left: {
+            // [6]
+            speed: 10,
+            bounds: {
+                top: -260,
+                left: -140,
+                right: 140,
+                bottom: 260,
+            },
+        },
+        right: {
+            speed: 10,
+            bounds: {
+                top: -260,
+                left: -140,
+                right: 140,
+                bottom: 260,
+            },
+        },
+    },
+    onButtonDown: button => {
+        if (button === "x") {
+            // gamepad.sticks returns the current values
+            const { x, y } = gamepad.sticks.left.point
+            appState.dots = [...appState.dots, { x, y, color: "#00bbff" }]
+        } else if (button === "circle") {
+            const { x, y } = gamepad.sticks.right.point
+            appState.dots = [...appState.dots, { x, y, color: "#ba66cd" }]
+        }
+    },
+})
 
-// [3]
-export function Pad(): Override {
-    return {
-        // [4]
-        ...inputs,
-        // [5]
-        sticks: {
-            left: {
-                // [6]
-                speed: 10,
-                bounds: {
-                    top: -260,
-                    left: -140,
-                    right: 140,
-                    bottom: 260,
-                },
-            },
-            right: {
-                speed: 10,
-                bounds: {
-                    top: -260,
-                    left: -140,
-                    right: 140,
-                    bottom: 260,
-                },
-            },
-        },
-        // [7]
-        onButtonDown: button => {
-            if (button === "x") {
-                const x = inputs.sticks.left.point.x.get()
-                const y = inputs.sticks.left.point.y.get()
-                appState.dots = [...appState.dots, { x, y, color: "#00bbff" }]
-            } else if (button === "o") {
-                const x = inputs.sticks.right.point.x.get()
-                const y = inputs.sticks.right.point.x.get()
-                appState.dots = [...appState.dots, { x, y, color: "#ba66cd" }]
-            }
-        },
-    }
-}
+const { inputs } = gamepad
 
 // [8]
 export function LeftStickCursor(): Override {
@@ -75,8 +66,8 @@ export function RightStickCursor(): Override {
 
 // [9]
 export function LeftStick(): Override {
-    const x = useTransform(inputs.sticks.left.x, v => v.value * 10)
-    const y = useTransform(inputs.sticks.left.y, v => v.value * 10)
+    const x = useTransform(inputs.sticks.left.x, v => v * 10)
+    const y = useTransform(inputs.sticks.left.y, v => v * 10)
     const scale = useTransform(inputs.buttons.leftStick, v => (v ? 0.9 : 1))
 
     return {
@@ -87,8 +78,8 @@ export function LeftStick(): Override {
 }
 
 export function RightStick(): Override {
-    const x = useTransform(inputs.rightStickX, v => v.value * 10)
-    const y = useTransform(inputs.rightStickY, v => v.value * 10)
+    const x = useTransform(inputs.sticks.right.x, v => v * 10)
+    const y = useTransform(inputs.sticks.right.y, v => v * 10)
     const scale = useTransform(inputs.buttons.rightStick, v => (v ? 0.9 : 1))
 
     return {

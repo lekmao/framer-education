@@ -8635,6 +8635,7 @@
                 "clip" : true,
                 "codeComponentIdentifier" : ".\/Slider.tsx_Slider",
                 "codeComponentProps" : {
+                  "color" : "var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 86, 254)) \/* {\"name\":\"Primary\"} *\/",
                   "disabled" : false,
                   "max" : 100,
                   "min" : 0,
@@ -8730,6 +8731,7 @@
                 "clip" : true,
                 "codeComponentIdentifier" : ".\/Slider.tsx_Slider",
                 "codeComponentProps" : {
+                  "color" : "var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 86, 254))",
                   "disabled" : false,
                   "max" : 100,
                   "min" : 0,
@@ -8825,6 +8827,7 @@
                 "clip" : true,
                 "codeComponentIdentifier" : ".\/Slider.tsx_Slider",
                 "codeComponentProps" : {
+                  "color" : "var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 86, 254))",
                   "disabled" : false,
                   "max" : 100,
                   "min" : 0,
@@ -8920,6 +8923,7 @@
                 "clip" : true,
                 "codeComponentIdentifier" : ".\/Slider.tsx_Slider",
                 "codeComponentProps" : {
+                  "color" : "var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 86, 254))",
                   "disabled" : true,
                   "max" : 100,
                   "min" : 0,
@@ -9015,6 +9019,7 @@
                 "clip" : true,
                 "codeComponentIdentifier" : ".\/Slider.tsx_Slider",
                 "codeComponentProps" : {
+                  "color" : "var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 86, 254))",
                   "disabled" : false,
                   "max" : 100,
                   "min" : 0,
@@ -9078,6 +9083,102 @@
                 "height" : 50,
                 "heightType" : 0,
                 "id" : "zCtEEGCMq",
+                "intrinsicHeight" : 50,
+                "intrinsicWidth" : 200,
+                "left" : 0,
+                "locked" : false,
+                "name" : null,
+                "opacity" : 1,
+                "originalid" : null,
+                "parentid" : "sjUjzc1XI",
+                "previewSettings" : null,
+                "radius" : 0,
+                "radiusBottomLeft" : 0,
+                "radiusBottomRight" : 0,
+                "radiusIsRelative" : false,
+                "radiusPerCorner" : false,
+                "radiusTopLeft" : 0,
+                "radiusTopRight" : 0,
+                "right" : null,
+                "rotation" : 0,
+                "top" : 0,
+                "visible" : true,
+                "width" : 1,
+                "widthType" : 3
+              },
+              {
+                "__class" : "CodeComponentNode",
+                "aspectRatio" : null,
+                "bottom" : null,
+                "centerAnchorX" : 0.5,
+                "centerAnchorY" : 0.1145320197044335,
+                "children" : [
+
+                ],
+                "clip" : true,
+                "codeComponentIdentifier" : ".\/Slider.tsx_Slider",
+                "codeComponentProps" : {
+                  "color" : "var(--token-b16a7a8a-e2ab-4afa-a205-534e354689de, rgb(255, 171, 87)) \/* {\"name\":\"Accent\"} *\/",
+                  "disabled" : false,
+                  "max" : 100,
+                  "min" : 0,
+                  "step" : 0.01,
+                  "titles" : false,
+                  "value" : 44
+                },
+                "codeOverrideEnabled" : false,
+                "constraintsLocked" : false,
+                "deviceType" : null,
+                "exportOptions" : [
+
+                ],
+                "fillColor" : "rgba(255,255,255,1)",
+                "fillEnabled" : false,
+                "fillImage" : null,
+                "fillImagePixelHeight" : null,
+                "fillImagePixelWidth" : null,
+                "fillImageResize" : "fill",
+                "fillLinearGradient" : {
+                  "__class" : "LinearGradient",
+                  "alpha" : 1,
+                  "angle" : 180,
+                  "stops" : [
+                    {
+                      "__class" : "GradientColorStop",
+                      "position" : 0,
+                      "value" : "rgba(0,0,0,0)"
+                    },
+                    {
+                      "__class" : "GradientColorStop",
+                      "position" : 1,
+                      "value" : "black"
+                    }
+                  ]
+                },
+                "fillRadialGradient" : {
+                  "__class" : "RadialGradient",
+                  "alpha" : 1,
+                  "centerAnchorX" : 0.5,
+                  "centerAnchorY" : 0.5,
+                  "heightFactor" : 0.5,
+                  "stops" : [
+                    {
+                      "__class" : "GradientColorStop",
+                      "position" : 0,
+                      "value" : "rgba(0,0,0,0)"
+                    },
+                    {
+                      "__class" : "GradientColorStop",
+                      "position" : 1,
+                      "value" : "black"
+                    }
+                  ],
+                  "widthFactor" : 0.5
+                },
+                "fillType" : "color",
+                "height" : 50,
+                "heightType" : 0,
+                "id" : "KHI9z_GTo",
                 "intrinsicHeight" : 50,
                 "intrinsicWidth" : 200,
                 "left" : 0,
