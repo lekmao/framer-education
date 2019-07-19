@@ -5,17 +5,7 @@ import * as React from "react"
 
 const navState = Data({
     currentPage: 0,
-})
-
-// Change the navigation's current page
-export function setCurrentPage(index) {
-    if (navState.currentPage !== index) {
-        navState.currentPage = index
-    }
-}
-
-export function NavigationHeader(): Override {
-    const pageHeaders = [
+    pageHeaders: [
         {
             title: "Page One",
             leftIcon: null,
@@ -34,10 +24,37 @@ export function NavigationHeader(): Override {
             leftIcon: "chevron-left",
             onLeftTap: () => (navState.currentPage = 1),
         },
-    ]
+    ],
+})
+
+// Functions ---
+
+// Change the navigation's current page
+export function setCurrentPage(index) {
+    const { currentPage } = navState
+
+    if (currentPage !== index) {
+        navState.currentPage = index
+    }
+}
+
+// Set or update the navigation header props for a given page
+export function setPageHeader(page: number, props = {}) {
+    const { pageHeaders } = navState
+
+    pageHeaders[page] = { ...pageHeaders[page], ...props }
+
+    navState.pageHeaders = pageHeaders
+}
+
+// Overrides ---
+
+export function NavigationHeader(): Override {
+    const { pageHeaders, currentPage } = navState
+    console.log(pageHeaders)
 
     return {
-        ...pageHeaders[navState.currentPage],
+        ...pageHeaders[currentPage],
     }
 }
 
