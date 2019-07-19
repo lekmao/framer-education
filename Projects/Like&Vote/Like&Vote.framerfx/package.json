@@ -13,6 +13,6 @@
 	},
 	"author": "Addison Schultz",
 	"dependencies": {
-		"@framer/steveruizok.education": "^1.191.0"
+		"@framer/steveruizok.education": "^1.192.0"
 	}
 }
