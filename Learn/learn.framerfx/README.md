@@ -24,6 +24,7 @@ This package also includes several helper utilities. Learn more and see examples
 
 # Changelog
 
+- Adds Favorite to row item
 - Adds colors to sliders
 - Adds TextArea
 - Adds scroll prop to List
