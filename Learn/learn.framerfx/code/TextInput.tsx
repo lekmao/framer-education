@@ -39,8 +39,6 @@ export function TextInput(props: Partial<Props>) {
         ...rest
     } = props
 
-    console.log(colors)
-
     /* ---------------------------------- State --------------------------------- */
 
     // Store the input's last value in a ref
