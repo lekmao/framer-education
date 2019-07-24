@@ -102,10 +102,10 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.3.tgz#dfa0c92efe44a1d1a7974fb49ffeb40ef2da5a27"
   integrity sha512-zVgvPwGK7c1aVdUVc9Qv7SqepOGRDrqCw7KZPSZziWGxSlbII3gmvGLPzLX4d0n0BMbamBacUrN22zOMyFFEkQ==
 
-"@framer/steveruizok.education@^1.190.0":
-  version "1.190.0"
-  resolved "https://registry.framer.com/@framer/steveruizok.education/-/@framer/steveruizok.education-1.190.0.tgz#4fd41d2161ff8bc91e907f47109a4207469fdd77"
-  integrity sha512-/UHHyIj2O2e58al7AwmWKwS43D6B/oVmaAAr53xAlkPs4KghpTfuAxEbssYHbU5V3WllRXw6MZHyZTULlWCUMQ==
+"@framer/steveruizok.education@^1.193.0":
+  version "1.193.0"
+  resolved "https://registry.framer.com/@framer/steveruizok.education/-/@framer/steveruizok.education-1.193.0.tgz#0166ceda262be4afa3a39bac8c6f1e4285331f9d"
+  integrity sha512-Xhlk+m7HU42LftA/t6BHHo02ai8FxKL0kCzQSFipI2aFMAIAjdgrqJYea01yWmNhl47MAINoeVejXDC1I3KHdw==
   dependencies:
     "@mapbox/geo-viewport" "^0.4.0"
     copy-to-clipboard "^3.2.0"

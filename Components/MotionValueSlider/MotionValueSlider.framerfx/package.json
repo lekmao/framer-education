@@ -9,10 +9,7 @@
 		"react": "^16.8"
 	},
 	"framer": {
-		"id": "f4800645-1e1b-4d15-83cf-1d77df1b023e"
+		"id": "36222d7b-8253-473b-9c42-01d281782de8"
 	},
-	"author": "Steve Ruiz",
-	"dependencies": {
-		"@framer/steveruizok.education": "^1.193.0"
-	}
+	"author": "Steve Ruiz"
 }
