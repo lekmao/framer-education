@@ -1,4 +1,15 @@
 import { motionValue, MotionValue } from "framer"
+// @ts-ignore
+import { layouts } from "./layouts"
+
+import {
+    MotionGamepadOptions,
+    MotionGamepadState,
+    MotionGamepadConnectEvent,
+    MotionGamepadButtonEvent,
+    MotionGamepadAxisEvent,
+    MotionGamepadStick,
+} from "./types"
 
 export class MotionGamepad {
     index = 0
@@ -8,41 +19,17 @@ export class MotionGamepad {
     deadZone = 0.1
     axisThreshold = 0.03
     stickSpeed = 10
-    onConnect: (gamepad: Gamepad) => void
-    onDisconnect: (gamepad: Gamepad) => void
-    onButtonDown: (button: string, pressed: boolean, value: number) => void
-    onButtonChange: (button: string, pressed: boolean, value: number) => void
-    onButtonUp: (button: string, pressed: boolean, value: number) => void
-    onAxisChange: (axis: string, value: number, delta: number) => void
+    onConnect: MotionGamepadConnectEvent
+    onDisconnect: MotionGamepadConnectEvent
+    onButtonDown: MotionGamepadButtonEvent
+    onButtonChange: MotionGamepadButtonEvent
+    onButtonUp: MotionGamepadButtonEvent
+    onAxisChange: MotionGamepadAxisEvent
+    state: MotionGamepadState
 
-    state: {
-        buttons: {
-            [key: string]: MotionValue<boolean>
-        }
-        axes: {
-            [key: string]: MotionValue<number>
-        }
-        sticks: Partial<{
-            [key: string]: {
-                x: MotionValue<number>
-                y: MotionValue<number>
-                point: {
-                    x: MotionValue<number>
-                    y: MotionValue<number>
-                }
-                speed: number
-                bounds: {
-                    top: number
-                    right: number
-                    bottom: number
-                    left: number
-                }
-            }
-        }>
-    }
-
-    constructor(index = 0, options: Partial<Options> = {}) {
+    constructor(index = 0, options: Partial<MotionGamepadOptions> = {}) {
         const {
+            id = "gamepad",
             layout = "dualshock",
             deadZone = 0.1,
             axisThreshold = 0.03,
@@ -51,14 +38,16 @@ export class MotionGamepad {
             onButtonUp,
             onButtonChange,
             onAxisChange,
-            onConnect = () => console.log("connected"),
-            onDisconnect = () => console.log("disconnected "),
+            sticks,
+            onConnect = () => console.log("Connected"),
+            onDisconnect = () => console.log("Disconnected"),
         } = options
 
         // Input Motion Values
 
         this.index = index
 
+        this.id = id
         this.deadZone = deadZone
         this.axisThreshold = axisThreshold
         this.stickSpeed = stickSpeed
@@ -69,6 +58,7 @@ export class MotionGamepad {
         this.onConnect = onConnect
         this.onDisconnect = onDisconnect
 
+        // Map layout into motion values
         this.state = {
             buttons: layouts[layout].buttons.reduce((acc, cur) => {
                 acc[cur] = motionValue(false)
@@ -86,36 +76,33 @@ export class MotionGamepad {
                         x: motionValue(0),
                         y: motionValue(0),
                     },
-                    ...(options.sticks &&
-                        options.sticks[cur] && {
-                            speed: options.sticks[cur].speed,
-                            bounds: options.sticks[cur].bounds,
+                    ...(sticks &&
+                        sticks[cur] && {
+                            speed: sticks[cur].speed,
+                            bounds: sticks[cur].bounds,
                         }),
                 }
                 return acc
             }, {}),
         }
 
-        this.id = Math.random().toString()
-        window["enableGamepadLoop"] = this.id
+        // Kind of a sloppy solution, but store a reference to
+        // the gamepad under this id; if it's already there,
+        // we've hot reloaded so give the old one a moment to break
+        if (window["gamepads"] && window["gamepads"][this.id]) {
+            window["gamepads"][this.id] = false
+            setTimeout(() => {
+                window["gamepads"][this.id] = true
+            }, 500)
+        } else {
+            window["gamepads"] = {}
+            window["gamepads"][this.id] = true
+        }
+
         this.updateGamepad()
     }
 
-    // Gamepads
-
-    removeGamepad = (event: GamepadEvent) => {
-        const { gamepad } = event
-
-        if (gamepad.index === this.index) {
-            this.gamepad = undefined
-            this.onDisconnect && this.onDisconnect(gamepad)
-
-            // Stop the update loop
-        }
-    }
-
     // Update gamepad on each frame
-
     updateGamepad = () => {
         const {
             id,
@@ -136,7 +123,7 @@ export class MotionGamepad {
 
         // If we've stopped looping (because a gamepad was
         // disconnected), we break the loop.
-        if (window["enableGamepadLoop"] !== id) {
+        if (!(window["gamepads"] && !window["gamepads"][this.id])) {
             this.onDisconnect && this.onDisconnect(gamepad)
             return
         }
@@ -261,17 +248,23 @@ export class MotionGamepad {
         requestAnimationFrame(this.updateGamepad)
     }
 
-    remove = () => {
-        window.removeEventListener("gamepadconnected", this.addGamepad)
-        window.removeEventListener("gamepaddisconnected", this.removeGamepad)
-    }
-
+    // Get motion values
     get inputs() {
         return this.state
     }
 
-    get sticks() {
-        const sticks = layouts[this.layout].sticks
+    // Get values from sticks
+    get sticks(): {
+        [key: string]: {
+            x: number
+            y: number
+            point: {
+                x: number
+                y: number
+            }
+        }
+    } {
+        const sticks: string[] = layouts[this.layout].sticks
 
         return sticks.reduce((acc, cur) => {
             const { x, y, point } = this.state.sticks[cur]
@@ -288,6 +281,7 @@ export class MotionGamepad {
         }, {})
     }
 
+    // Get values from buttons
     get buttons() {
         const buttons = layouts[this.layout].buttons
 
@@ -297,6 +291,7 @@ export class MotionGamepad {
         }, {})
     }
 
+    // Get values from axes
     get axes() {
         const axes = layouts[this.layout].axes
 
@@ -305,65 +300,6 @@ export class MotionGamepad {
             return acc
         }, {})
     }
-}
-
-type Options = {
-    index: number
-    layout: string
-    deadZone: number
-    axisThreshold: number
-    stickSpeed: number
-    sticks?: {
-        [key: string]: {
-            speed?: number
-            bounds?: {
-                top: number
-                left: number
-                right: number
-                bottom: number
-            }
-        }
-    }
-    onConnect: (gamepad: Gamepad) => void
-    onDisconnect: (gamepad: Gamepad) => void
-    onButtonDown: (button: string, pressed: boolean, value: number) => void
-    onButtonChange: (button: string, pressed: boolean, value: number) => void
-    onButtonUp: (button: string, pressed: boolean, value: number) => void
-    onAxisChange: (axis: string, value: number, delta: number) => void
-}
-
-const layouts = {
-    dualshock: {
-        buttons: [
-            "square",
-            "x",
-            "circle",
-            "triangle",
-            "leftTrigger1",
-            "rightTrigger1",
-            "leftTrigger2",
-            "rightTrigger2",
-            "share",
-            "options",
-            "leftStick",
-            "rightStick",
-            "playstation",
-            "touchPad",
-            "dPadUp",
-            "dPadDown",
-            "dPadLeft",
-            "dPadRight",
-        ],
-        axes: [
-            "leftStickX",
-            "leftStickY",
-            "rightStickX",
-            "rightStickY",
-            "leftTrigger",
-            "rightTrigger",
-        ],
-        sticks: ["left", "right"],
-    },
 }
 
 export function clamp(value: number, min: number, max: number) {
