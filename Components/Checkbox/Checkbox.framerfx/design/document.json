@@ -384,7 +384,7 @@
             "__class" : "CodeComponentNode",
             "aspectRatio" : null,
             "bottom" : null,
-            "centerAnchorX" : 0.56666666666666665,
+            "centerAnchorX" : 0.55066666666666664,
             "centerAnchorY" : 0.22660098522167488,
             "children" : [
 
@@ -417,7 +417,7 @@
             "id" : "SMxDGlCsn",
             "intrinsicHeight" : 44,
             "intrinsicWidth" : 320,
-            "left" : null,
+            "left" : 65,
             "locked" : false,
             "name" : "right",
             "opacity" : 1,
@@ -435,14 +435,14 @@
             "rotation" : 0,
             "top" : 162,
             "visible" : true,
-            "width" : 271,
+            "width" : 283,
             "widthType" : 0
           },
           {
             "__class" : "CodeComponentNode",
             "aspectRatio" : null,
             "bottom" : null,
-            "centerAnchorX" : 0.56666666666666665,
+            "centerAnchorX" : 0.55066666666666664,
             "centerAnchorY" : 0.28817733990147781,
             "children" : [
 
@@ -475,7 +475,7 @@
             "id" : "pDrXxkLkC",
             "intrinsicHeight" : 44,
             "intrinsicWidth" : 320,
-            "left" : null,
+            "left" : 65,
             "locked" : false,
             "name" : "bottom",
             "opacity" : 1,
@@ -493,14 +493,14 @@
             "rotation" : 0,
             "top" : 212,
             "visible" : true,
-            "width" : 271,
+            "width" : 283,
             "widthType" : 0
           },
           {
             "__class" : "CodeComponentNode",
             "aspectRatio" : null,
             "bottom" : null,
-            "centerAnchorX" : 0.56666666666666665,
+            "centerAnchorX" : 0.55066666666666664,
             "centerAnchorY" : 0.34975369458128081,
             "children" : [
 
@@ -533,7 +533,7 @@
             "id" : "D0Z75ZeiJ",
             "intrinsicHeight" : 44,
             "intrinsicWidth" : 320,
-            "left" : null,
+            "left" : 65,
             "locked" : false,
             "name" : "left",
             "opacity" : 1,
@@ -551,14 +551,14 @@
             "rotation" : 0,
             "top" : 262,
             "visible" : true,
-            "width" : 271,
+            "width" : 283,
             "widthType" : 0
           },
           {
             "__class" : "CodeComponentNode",
             "aspectRatio" : null,
             "bottom" : null,
-            "centerAnchorX" : 0.56666666666666665,
+            "centerAnchorX" : 0.55066666666666664,
             "centerAnchorY" : 0.16502463054187191,
             "children" : [
 
@@ -591,7 +591,7 @@
             "id" : "oOLi42FcG",
             "intrinsicHeight" : 44,
             "intrinsicWidth" : 320,
-            "left" : null,
+            "left" : 65,
             "locked" : false,
             "name" : "top",
             "opacity" : 1,
@@ -609,7 +609,7 @@
             "rotation" : 0,
             "top" : 112,
             "visible" : true,
-            "width" : 271,
+            "width" : 283,
             "widthType" : 0
           },
           {
@@ -684,9 +684,9 @@
             "borderStyle" : "solid",
             "borderTop" : 1,
             "borderWidth" : 1,
-            "bottom" : 328,
-            "centerAnchorX" : 0.56666666666666665,
-            "centerAnchorY" : 0.52032019704433496,
+            "bottom" : 166,
+            "centerAnchorX" : 0.5,
+            "centerAnchorY" : 0.60652709359605916,
             "children" : [
 
             ],
@@ -707,7 +707,7 @@
             "fillImagePixelWidth" : null,
             "fillImageResize" : "fill",
             "fillType" : "color",
-            "height" : 123,
+            "height" : 307,
             "heightType" : 0,
             "id" : "oIrOmXIz6",
             "intrinsicHeight" : null,
@@ -715,7 +715,7 @@
             "isExternalMaster" : null,
             "isMaster" : false,
             "isTarget" : false,
-            "left" : null,
+            "left" : 34,
             "locked" : false,
             "name" : null,
             "navigationTarget" : null,
@@ -734,11 +734,11 @@
             "radiusTopLeft" : 100,
             "radiusTopRight" : 100,
             "replicaInfo" : null,
-            "right" : 101,
+            "right" : 34,
             "rotation" : 0,
             "top" : null,
             "visible" : true,
-            "width" : 123,
+            "width" : 307,
             "widthType" : 0
           },
           {
@@ -747,7 +747,7 @@
             "blendingEnabled" : 0,
             "blendingMode" : "normal",
             "bottom" : null,
-            "centerAnchorX" : 0.15066666666666667,
+            "centerAnchorX" : 0.13200000000000001,
             "centerAnchorY" : 0.28817733990147781,
             "children" : [
 
@@ -774,7 +774,7 @@
             "isExternalMaster" : null,
             "isMaster" : false,
             "isTarget" : false,
-            "left" : 41,
+            "left" : 34,
             "locked" : false,
             "name" : "Icons\/Elbow",
             "navigationTarget" : null,
@@ -797,10 +797,10 @@
               "overrides" : {
                 "nXwkRXFVu" : {
                   "bottom" : null,
-                  "centerAnchorX" : 0.15066666666666667,
+                  "centerAnchorX" : 0.13200000000000001,
                   "centerAnchorY" : 0.28817733990147781,
                   "height" : 44,
-                  "left" : 41,
+                  "left" : 34,
                   "right" : null,
                   "top" : 212
                 },
@@ -822,7 +822,7 @@
             "blendingEnabled" : 0,
             "blendingMode" : "normal",
             "bottom" : null,
-            "centerAnchorX" : 0.15066666666666667,
+            "centerAnchorX" : 0.13200000000000001,
             "centerAnchorY" : 0.34975369458128081,
             "children" : [
 
@@ -849,7 +849,7 @@
             "isExternalMaster" : null,
             "isMaster" : false,
             "isTarget" : false,
-            "left" : 41,
+            "left" : 34,
             "locked" : false,
             "name" : "Icons\/Elbow",
             "navigationTarget" : null,
@@ -872,10 +872,10 @@
               "overrides" : {
                 "nXwkRXFVu" : {
                   "bottom" : null,
-                  "centerAnchorX" : 0.15066666666666667,
+                  "centerAnchorX" : 0.13200000000000001,
                   "centerAnchorY" : 0.34975369458128081,
                   "height" : 44,
-                  "left" : 41,
+                  "left" : 34,
                   "right" : null,
                   "top" : 262
                 },
@@ -897,7 +897,7 @@
             "blendingEnabled" : 0,
             "blendingMode" : "normal",
             "bottom" : null,
-            "centerAnchorX" : 0.15066666666666667,
+            "centerAnchorX" : 0.13200000000000001,
             "centerAnchorY" : 0.22660098522167488,
             "children" : [
 
@@ -924,7 +924,7 @@
             "isExternalMaster" : null,
             "isMaster" : false,
             "isTarget" : false,
-            "left" : 41,
+            "left" : 34,
             "locked" : false,
             "name" : "Icons\/Elbow",
             "navigationTarget" : null,
@@ -947,10 +947,10 @@
               "overrides" : {
                 "nXwkRXFVu" : {
                   "bottom" : null,
-                  "centerAnchorX" : 0.15066666666666667,
+                  "centerAnchorX" : 0.13200000000000001,
                   "centerAnchorY" : 0.22660098522167488,
                   "height" : 44,
-                  "left" : 41,
+                  "left" : 34,
                   "right" : null,
                   "top" : 162
                 },
@@ -972,7 +972,7 @@
             "blendingEnabled" : 0,
             "blendingMode" : "normal",
             "bottom" : null,
-            "centerAnchorX" : 0.15066666666666667,
+            "centerAnchorX" : 0.13200000000000001,
             "centerAnchorY" : 0.16502463054187191,
             "children" : [
 
@@ -999,7 +999,7 @@
             "isExternalMaster" : null,
             "isMaster" : false,
             "isTarget" : false,
-            "left" : 41,
+            "left" : 34,
             "locked" : false,
             "name" : "Icons\/Elbow",
             "navigationTarget" : null,
@@ -1022,10 +1022,10 @@
               "overrides" : {
                 "nXwkRXFVu" : {
                   "bottom" : null,
-                  "centerAnchorX" : 0.15066666666666667,
+                  "centerAnchorX" : 0.13200000000000001,
                   "centerAnchorY" : 0.16502463054187191,
                   "height" : 44,
-                  "left" : 41,
+                  "left" : 34,
                   "right" : null,
                   "top" : 112
                 },
@@ -1276,6 +1276,115 @@
         "top" : 14,
         "visible" : true,
         "width" : 31,
+        "widthType" : 0
+      },
+      {
+        "__class" : "CodeComponentNode",
+        "aspectRatio" : null,
+        "bottom" : null,
+        "centerAnchorX" : 0,
+        "centerAnchorY" : 0,
+        "children" : [
+
+        ],
+        "clip" : true,
+        "codeComponentIdentifier" : ".\/Checkbox.tsx_Checkbox",
+        "codeComponentProps" : {
+          "checked" : false,
+          "indeterminate" : false
+        },
+        "codeOverrideEnabled" : false,
+        "constraintsLocked" : false,
+        "deviceType" : null,
+        "exportOptions" : [
+
+        ],
+        "fillColor" : "rgba(255,255,255,1)",
+        "fillEnabled" : false,
+        "fillImage" : null,
+        "fillImagePixelHeight" : null,
+        "fillImagePixelWidth" : null,
+        "fillImageResize" : "fill",
+        "fillType" : "color",
+        "height" : 44,
+        "heightType" : 0,
+        "id" : "glVlkCTCL",
+        "intrinsicHeight" : 44,
+        "intrinsicWidth" : 44,
+        "left" : 654,
+        "locked" : false,
+        "name" : null,
+        "opacity" : 1,
+        "originalid" : null,
+        "parentid" : "bjd6my9IV",
+        "previewSettings" : null,
+        "radius" : 0,
+        "radiusBottomLeft" : 0,
+        "radiusBottomRight" : 0,
+        "radiusIsRelative" : false,
+        "radiusPerCorner" : false,
+        "radiusTopLeft" : 0,
+        "radiusTopRight" : 0,
+        "right" : null,
+        "rotation" : 0,
+        "top" : 84,
+        "visible" : true,
+        "width" : 44,
+        "widthType" : 0
+      },
+      {
+        "__class" : "CodeComponentNode",
+        "aspectRatio" : null,
+        "bottom" : null,
+        "centerAnchorX" : 0,
+        "centerAnchorY" : 0,
+        "children" : [
+
+        ],
+        "clip" : true,
+        "codeComponentIdentifier" : ".\/CheckboxRow.tsx_CheckboxRow",
+        "codeComponentProps" : {
+          "checked" : false,
+          "indeterminate" : false,
+          "text" : "Hello Framer"
+        },
+        "codeOverrideEnabled" : false,
+        "constraintsLocked" : false,
+        "deviceType" : null,
+        "exportOptions" : [
+
+        ],
+        "fillColor" : "rgba(255,255,255,1)",
+        "fillEnabled" : false,
+        "fillImage" : null,
+        "fillImagePixelHeight" : null,
+        "fillImagePixelWidth" : null,
+        "fillImageResize" : "fill",
+        "fillType" : "color",
+        "height" : 44,
+        "heightType" : 0,
+        "id" : "CYXEV7x9c",
+        "intrinsicHeight" : 44,
+        "intrinsicWidth" : 320,
+        "left" : 654,
+        "locked" : false,
+        "name" : null,
+        "opacity" : 1,
+        "originalid" : null,
+        "parentid" : "bjd6my9IV",
+        "previewSettings" : null,
+        "radius" : 0,
+        "radiusBottomLeft" : 0,
+        "radiusBottomRight" : 0,
+        "radiusIsRelative" : false,
+        "radiusPerCorner" : false,
+        "radiusTopLeft" : 0,
+        "radiusTopRight" : 0,
+        "right" : null,
+        "rotation" : 0,
+        "top" : 160,
+        "visible" : true,
+        "width" : 320,
         "widthType" : 0
       }
     ],
