@@ -231,7 +231,6 @@
                 "fillType" : "color",
                 "height" : 1,
                 "id" : "YKcJ8Nn5MiecDIjUkD",
-                "isMaster" : false,
                 "lineCap" : "round",
                 "lineJoin" : "round",
                 "locked" : false,
@@ -295,8 +294,6 @@
             "height" : 23,
             "heightType" : 0,
             "id" : "YKcJ8Nn5Mzdh7Exnc9",
-            "isExternalMaster" : null,
-            "isMaster" : false,
             "left" : null,
             "locked" : false,
             "name" : "Graphic",
@@ -1186,7 +1183,7 @@
                 "visible" : true,
                 "width" : 12,
                 "x" : 10,
-                "y" : 12
+                "y" : 8
               }
             ],
             "constraintsLocked" : false,
