@@ -129,6 +129,7 @@ export function TextInput(props: Partial<Props>) {
 
     // Clear input
     const handleClear = event => {
+        inputValue.current = ""
         updateState("")
     }
 
