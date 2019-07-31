@@ -63,7 +63,7 @@ export function NavigationBar(props: Partial<Props>) {
                         alignment="center"
                         distribution="start"
                         direction="horizontal"
-                        gap={0}
+                        gap={-4}
                         onTap={onLeftTap}
                         paddingLeft={leftIcon && leftIcon !== "none" ? 0 : 16}
                     >
@@ -113,7 +113,7 @@ export function NavigationBar(props: Partial<Props>) {
                         alignment="center"
                         distribution="end"
                         direction="horizontal"
-                        gap={-8}
+                        gap={0}
                         onTap={onRightTap}
                         paddingRight={
                             rightIcon && rightIcon !== "none" ? 0 : 16
