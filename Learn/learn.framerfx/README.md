@@ -29,7 +29,6 @@ Learn more and see examples [in the docs](https://framer-learn-docs.netlify.com/
 
 The package’s Lists are helpers for creating scrolling stacks of content. They are designed to be used with overrides. [Learn more](https://framer-learn-docs.netlify.com/content/ItemList/)
 
-
 ## Colors
 
 The package also includes shared colors. You can use the same import to pull the shared colors from the original package. [Learn more](https://framer-learn-docs.netlify.com/content/Colors/).
@@ -40,6 +39,9 @@ This package also includes several [helper utilities](https://framer-learn-docs.
 
 # Changelog
 
+- Adds Icon to Button 🔹
+- Adds resizable Text Input 🔹
+- Fixes spacing on Navigation Bar 🔹
 - Fixes clear on Text Input
 - Adds Favorite to row item
 - Adds colors to sliders

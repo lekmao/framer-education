@@ -1432,8 +1432,10 @@
                     "clip" : true,
                     "codeComponentIdentifier" : ".\/Button.tsx_Button",
                     "codeComponentProps" : {
+                      "alignIcon" : "right",
+                      "contentType" : "both",
                       "disabled" : false,
-                      "icon" : "none",
+                      "icon" : "check",
                       "text" : "Get Started!",
                       "toggle" : false,
                       "toggled" : false,
@@ -1527,6 +1529,8 @@
                     "clip" : true,
                     "codeComponentIdentifier" : ".\/Button.tsx_Button",
                     "codeComponentProps" : {
+                      "alignIcon" : "left",
+                      "contentType" : "text",
                       "disabled" : false,
                       "icon" : "none",
                       "text" : "Get Started!",
@@ -1622,6 +1626,8 @@
                     "clip" : true,
                     "codeComponentIdentifier" : ".\/Button.tsx_Button",
                     "codeComponentProps" : {
+                      "alignIcon" : "left",
+                      "contentType" : "text",
                       "disabled" : false,
                       "icon" : "none",
                       "text" : "Get Started!",
@@ -1717,6 +1723,8 @@
                     "clip" : true,
                     "codeComponentIdentifier" : ".\/Button.tsx_Button",
                     "codeComponentProps" : {
+                      "alignIcon" : "left",
+                      "contentType" : "text",
                       "disabled" : false,
                       "icon" : "none",
                       "text" : "Get Started!",
@@ -1812,6 +1820,8 @@
                     "clip" : true,
                     "codeComponentIdentifier" : ".\/Button.tsx_Button",
                     "codeComponentProps" : {
+                      "alignIcon" : "left",
+                      "contentType" : "text",
                       "disabled" : false,
                       "icon" : "none",
                       "text" : "Get Started!",
@@ -1907,6 +1917,8 @@
                     "clip" : true,
                     "codeComponentIdentifier" : ".\/Button.tsx_Button",
                     "codeComponentProps" : {
+                      "alignIcon" : "left",
+                      "contentType" : "text",
                       "disabled" : false,
                       "icon" : "none",
                       "text" : "Get Started!",
@@ -2002,6 +2014,8 @@
                     "clip" : true,
                     "codeComponentIdentifier" : ".\/Button.tsx_Button",
                     "codeComponentProps" : {
+                      "alignIcon" : "left",
+                      "contentType" : "text",
                       "disabled" : false,
                       "icon" : "none",
                       "text" : "Get Started!",
@@ -2097,6 +2111,8 @@
                     "clip" : true,
                     "codeComponentIdentifier" : ".\/Button.tsx_Button",
                     "codeComponentProps" : {
+                      "alignIcon" : "left",
+                      "contentType" : "text",
                       "disabled" : true,
                       "icon" : "none",
                       "text" : "Get Started!",
@@ -2192,6 +2208,8 @@
                     "clip" : true,
                     "codeComponentIdentifier" : ".\/Button.tsx_Button",
                     "codeComponentProps" : {
+                      "alignIcon" : "left",
+                      "contentType" : "icon",
                       "disabled" : false,
                       "icon" : "camera",
                       "text" : "Get Started!",
