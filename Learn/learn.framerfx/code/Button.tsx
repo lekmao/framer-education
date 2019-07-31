@@ -1,5 +1,11 @@
 import * as React from 'react'
-import { Frame, addPropertyControls, ControlType, FrameProps } from 'framer'
+import {
+	Frame,
+	addPropertyControls,
+	ControlType,
+	FrameProps,
+	Stack,
+} from 'framer'
 import { Icon } from './Icon'
 import { Text } from './Text'
 import { iconNames, iconTitles } from './Shared'
@@ -10,6 +16,8 @@ type Props = Partial<FrameProps> &
 	Partial<{
 		text: string
 		icon: string
+		contentType: string
+		alignIcon: string
 		type: string
 		toggle: boolean
 		toggled: boolean
@@ -21,7 +29,9 @@ export function Button(props: Props) {
 	const {
 		type,
 		text,
+		contentType,
 		icon,
+		alignIcon,
 		onTap,
 		disabled,
 		toggle,
@@ -124,6 +134,8 @@ export function Button(props: Props) {
 			? { border: `1px solid ${colors.Primary}` }
 			: variants[interactiveState]
 
+	const iconComponent = <Icon icon={icon} color={theme[type].foreground} />
+
 	return (
 		<Frame
 			{...rest}
@@ -134,17 +146,32 @@ export function Button(props: Props) {
 			{...variant}
 			style={{ ...variant.style, ...interactiveProps.style, ...style }}
 		>
-			{icon === 'none' ? (
-				<Text
-					// Constant props
-					center
-					type="link"
-					color={theme[type].foreground}
-					text={text}
-				/>
-			) : (
-				<Icon center icon={icon} color={theme[type].foreground} />
-			)}
+			<Stack
+				width="100%"
+				height="100%"
+				alignment="center"
+				distribution="center"
+				direction="horizontal"
+				gap={-4}
+			>
+				{contentType === 'both' &&
+					alignIcon === 'left' &&
+					iconComponent}
+				{contentType === 'icon' ? (
+					iconComponent
+				) : (
+					<Text
+						resize
+						// Constant props
+						type="link"
+						color={theme[type].foreground}
+						text={text}
+					/>
+				)}
+				{contentType === 'both' &&
+					alignIcon === 'right' &&
+					iconComponent}
+			</Stack>
 		</Frame>
 	)
 }
@@ -155,7 +182,7 @@ Button.defaultProps = {
 	borderRadius: 8,
 	disabled: false,
 	text: 'Get Started!',
-	icon: 'none',
+	icon: 'check',
 	type: 'primary',
 	primary: true,
 	toggle: false,
@@ -169,6 +196,7 @@ addPropertyControls(Button, {
 		defaultValue: 'Get Started!',
 	},
 	type: {
+		title: 'Type',
 		type: ControlType.Enum,
 		options: ['primary', 'secondary', 'accent', 'warn', 'neutral', 'ghost'],
 		optionTitles: [
@@ -181,12 +209,28 @@ addPropertyControls(Button, {
 		],
 		defaultValue: 'primary',
 	},
+	contentType: {
+		title: 'Show',
+		type: ControlType.SegmentedEnum,
+		options: ['text', 'icon', 'both'],
+		optionTitles: ['Text', 'Icon', 'Both'],
+		defaultValue: 'text',
+	},
+	alignIcon: {
+		title: 'Align icon',
+		type: ControlType.SegmentedEnum,
+		options: ['left', 'right'],
+		optionTitles: ['<', '>'],
+		defaultValue: 'left',
+		hidden: ({ contentType }) => contentType === 'text',
+	},
 	icon: {
 		title: 'Icon',
 		type: ControlType.Enum,
-		options: ['none', ...iconNames],
-		optionTitles: ['None', ...iconTitles],
-		defaultValue: 'none',
+		options: iconNames,
+		optionTitles: iconTitles,
+		defaultValue: 'check',
+		hidden: ({ contentType }) => contentType === 'text',
 	},
 	toggle: {
 		type: ControlType.Boolean,
