@@ -102,10 +102,10 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.3.tgz#dfa0c92efe44a1d1a7974fb49ffeb40ef2da5a27"
   integrity sha512-zVgvPwGK7c1aVdUVc9Qv7SqepOGRDrqCw7KZPSZziWGxSlbII3gmvGLPzLX4d0n0BMbamBacUrN22zOMyFFEkQ==
 
-"@framer/steveruizok.education@^1.194.0":
-  version "1.194.0"
-  resolved "https://registry.framer.com/@framer/steveruizok.education/-/@framer/steveruizok.education-1.194.0.tgz#8eb1862c9fa37873ee3dc66ecb20064b4e213466"
-  integrity sha512-tpDmoVqdx32i5uUHK7t58jV6bNDRGE5kH7gQGPrX+hNCvm1l2BlkQD7wRJsNLmqud0bnH23k51A+VSU/Pzg+xA==
+"@framer/steveruizok.education@^1.198.0":
+  version "1.198.0"
+  resolved "https://registry.framer.com/@framer/steveruizok.education/-/@framer/steveruizok.education-1.198.0.tgz#a185edf4afe9c6c747e33e4b50cc333d0ced9704"
+  integrity sha512-W1lgJ8pgBPymls9L8XjEdxK/c3Wzs8lsCfSsYuj8tPWZIElL6nl5edEfGK/qv1HBv1lmjJeEPJgZcWgno5Upaw==
   dependencies:
     "@mapbox/geo-viewport" "^0.4.0"
     copy-to-clipboard "^3.2.0"
@@ -521,9 +521,9 @@ loose-envify@^1.4.0:
     js-tokens "^3.0.0 || ^4.0.0"
 
 mapbox-gl@^1.0.0:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/mapbox-gl/-/mapbox-gl-1.1.1.tgz#b8e8e1dfa34edd92a7b834887831dbd1761550b8"
-  integrity sha512-i57kASg8J/U/lJzBePyqTP2ImKUcx8FkHyCjb3ssWYaBBXHUeZ4STGXXfU9u1AQU9170PjDIJLubUUB1vLLSBQ==
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/mapbox-gl/-/mapbox-gl-1.2.0.tgz#2bb281dfe20cf8fcf66486d46fb6a8607355633a"
+  integrity sha512-RDo0kMuo9gs6HFX2Maj+tYO5bUT6WFTQkFbJoKdfe2pK8SY/RgyG3SNJRgZypdBR8loxGCG9geeOwc+JJqblHQ==
   dependencies:
     "@mapbox/geojson-rewind" "^0.4.0"
     "@mapbox/geojson-types" "^1.0.2"

@@ -72,7 +72,13 @@ export function List(props: Props) {
 
     return (
         <Scroll {...rest} dragEnabled={scroll}>
-            <Stack width="100%" direction="vertical" gap={gap} {...paddings}>
+            <Stack
+                width="100%"
+                direction="vertical"
+                height="auto"
+                gap={gap}
+                {...paddings}
+            >
                 {combinedContent.length > 0 ? (
                     combinedContent
                 ) : (
