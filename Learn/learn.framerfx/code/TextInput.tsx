@@ -36,6 +36,7 @@ export function TextInput(props: Partial<Props>) {
         clearable,
         required,
         tabIndex,
+        height,
         ...rest
     } = props
 
@@ -161,7 +162,7 @@ export function TextInput(props: Partial<Props>) {
                 <>
                     <Frame
                         width="100%"
-                        height={50}
+                        height={height}
                         background={colors.Light}
                         borderRadius={8}
                         {...variants[
@@ -185,7 +186,7 @@ export function TextInput(props: Partial<Props>) {
                             fontSize: 14,
                             fontWeight: 600,
                             width: "100%",
-                            height: 50,
+                            height: height as string | number,
                             background: "none",
                             borderRadius: 4,
                             outline: "none",
@@ -200,7 +201,7 @@ export function TextInput(props: Partial<Props>) {
                     {clearable && value && !readOnly && !props.disabled && (
                         <Frame
                             background="none"
-                            height={50}
+                            height={height}
                             width={40}
                             right={0}
                             top={0}
