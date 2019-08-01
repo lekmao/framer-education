@@ -63,11 +63,7 @@ typings/
 
 # next.js build output
 .next
-exampleComponents/.DS_Store
-
-.DS_Store
-exampleComponents/.DS_Store
-.DS_Store
 
 .npmrc
-.DS_Store
+*.DS_Store
+*node_modules
