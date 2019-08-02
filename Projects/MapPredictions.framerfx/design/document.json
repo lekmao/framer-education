@@ -171,6 +171,12 @@
                           "widthFactor" : 0.5
                         },
                         "fillType" : "color",
+                        "guidesX" : [
+
+                        ],
+                        "guidesY" : [
+
+                        ],
                         "height" : 11.33333333333333,
                         "heightType" : 0,
                         "id" : "WWP1PKIzY@framer\/steveruizok.education-XREstntDl-PPIpguwXLWj4Bh4om5",
@@ -465,6 +471,12 @@
                           "widthFactor" : 0.5
                         },
                         "fillType" : "color",
+                        "guidesX" : [
+
+                        ],
+                        "guidesY" : [
+
+                        ],
                         "height" : 7.3333333333333321,
                         "heightType" : 0,
                         "id" : "WWP1PKIzY@framer\/steveruizok.education-XREstntDl-PPIpguwXLL46xfUiU1",
@@ -551,6 +563,12 @@
                       "widthFactor" : 0.5
                     },
                     "fillType" : "color",
+                    "guidesX" : [
+
+                    ],
+                    "guidesY" : [
+
+                    ],
                     "height" : 12,
                     "heightType" : 0,
                     "id" : "WWP1PKIzY@framer\/steveruizok.education-XREstntDl-PPIpguwXLAEoFijeX9",
@@ -793,8 +811,8 @@
                             "strokeEnabled" : 0,
                             "visible" : true,
                             "width" : 15.333299999999999,
-                            "x" : 9.26754298586446e-17,
-                            "y" : -0.021105366641330059
+                            "x" : 9.2677084219869706e-17,
+                            "y" : -0.02110536664133017
                           },
                           {
                             "__class" : "PathNode",
@@ -1224,8 +1242,8 @@
                         "strokeEnabled" : 0,
                         "visible" : true,
                         "width" : 15.333299999999998,
-                        "x" : 6.2172342339383079e-15,
-                        "y" : 0.35177807067383593
+                        "x" : 6.2172309252158577e-15,
+                        "y" : 0.35177807067383615
                       }
                     ],
                     "constraintsLocked" : true,
@@ -2158,6 +2176,12 @@
                   "widthFactor" : 0.5
                 },
                 "fillType" : "color",
+                "guidesX" : [
+
+                ],
+                "guidesY" : [
+
+                ],
                 "height" : 12,
                 "heightType" : 0,
                 "id" : "WWP1PKIzY@framer\/steveruizok.education-XREstntDl-PPIpguwXLEkWU64Z9X",
@@ -2344,6 +2368,12 @@
                   "widthFactor" : 0.5
                 },
                 "fillType" : "color",
+                "guidesX" : [
+
+                ],
+                "guidesY" : [
+
+                ],
                 "height" : 19,
                 "heightType" : 0,
                 "id" : "WWP1PKIzY@framer\/steveruizok.education-XREstntDl-PPIpguwXLY7MB6cxoK",
@@ -2430,6 +2460,12 @@
               "widthFactor" : 0.5
             },
             "fillType" : "color",
+            "guidesX" : [
+
+            ],
+            "guidesY" : [
+
+            ],
             "height" : 38,
             "heightType" : 0,
             "id" : "WWP1PKIzY@framer\/steveruizok.education-XREstntDl-PPIpguwXL",
@@ -2538,6 +2574,12 @@
                   "widthFactor" : 0.5
                 },
                 "fillType" : "color",
+                "guidesX" : [
+
+                ],
+                "guidesY" : [
+
+                ],
                 "height" : 5,
                 "heightType" : 0,
                 "id" : "WWP1PKIzY@framer\/steveruizok.education-XREstntDl-AIQpZRKUqVTPlGW6Ng",
@@ -2624,6 +2666,12 @@
               "widthFactor" : 0.5
             },
             "fillType" : "color",
+            "guidesX" : [
+
+            ],
+            "guidesY" : [
+
+            ],
             "height" : 13,
             "heightType" : 0,
             "id" : "WWP1PKIzY@framer\/steveruizok.education-XREstntDl-AIQpZRKUq",
@@ -2810,6 +2858,12 @@
             "fillImagePixelWidth" : null,
             "fillImageResize" : "fill",
             "fillType" : "color",
+            "guidesX" : [
+
+            ],
+            "guidesY" : [
+
+            ],
             "height" : 342,
             "heightType" : 0,
             "id" : "BAVg_CTyG",
@@ -2848,7 +2902,7 @@
             "__class" : "CodeComponentNode",
             "aspectRatio" : null,
             "bottom" : 31,
-            "centerAnchorX" : 0.8746666666666667,
+            "centerAnchorX" : 0.88266666666666671,
             "centerAnchorY" : 0.92487684729064035,
             "children" : [
 
@@ -2856,6 +2910,8 @@
             "clip" : true,
             "codeComponentIdentifier" : "@framer\/steveruizok.education\/.\/Button.tsx_Button",
             "codeComponentProps" : {
+              "alignIcon" : "left",
+              "contentType" : "icon",
               "disabled" : false,
               "icon" : "navigation",
               "text" : "Find My Location",
@@ -2898,7 +2954,7 @@
             "radiusPerCorner" : false,
             "radiusTopLeft" : 0,
             "radiusTopRight" : 0,
-            "right" : 17,
+            "right" : 14,
             "rotation" : 0,
             "top" : null,
             "visible" : true,
@@ -2917,6 +2973,8 @@
             "clip" : true,
             "codeComponentIdentifier" : "@framer\/steveruizok.education\/.\/Button.tsx_Button",
             "codeComponentProps" : {
+              "alignIcon" : "left",
+              "contentType" : "icon",
               "disabled" : false,
               "icon" : "map-marker-radius",
               "text" : "Find My Location",
@@ -3083,6 +3141,12 @@
           "widthFactor" : 0.5
         },
         "fillType" : "color",
+        "guidesX" : [
+
+        ],
+        "guidesY" : [
+
+        ],
         "height" : 812,
         "heightType" : 0,
         "id" : "WWP1PKIzY",
@@ -3091,7 +3155,7 @@
         "isExternalMaster" : null,
         "isMaster" : false,
         "isTarget" : false,
-        "left" : 535,
+        "left" : 129,
         "locked" : false,
         "name" : "Template",
         "navigationTarget" : null,
@@ -3100,7 +3164,7 @@
         "navigationTransitionDirection" : "left",
         "opacity" : 1,
         "originalid" : null,
-        "parentid" : "Bx26K0jdi",
+        "parentid" : "oiVgUQohW",
         "previewSettings" : {
           "__class" : "PreviewSettings",
           "bezel" : false,
@@ -3120,112 +3184,7 @@
         "replicaInfo" : null,
         "right" : null,
         "rotation" : 0,
-        "top" : -72,
-        "visible" : true,
-        "width" : 375,
-        "widthType" : 0
-      },
-      {
-        "__class" : "FrameNode",
-        "aspectRatio" : null,
-        "blendingEnabled" : 0,
-        "blendingMode" : "normal",
-        "borderBottom" : 1,
-        "borderColor" : "var(--token-23bce3fd-e7be-45a5-a2c3-53cfc3c53db9, rgba(37, 37, 45, 0.3)) \/* {\"name\":\"Border\"} *\/",
-        "borderEnabled" : 1,
-        "borderLeft" : 0,
-        "borderPerSide" : true,
-        "borderRight" : 0,
-        "borderStyle" : "solid",
-        "borderTop" : 0,
-        "borderWidth" : 1,
-        "bottom" : null,
-        "centerAnchorX" : 0.46533333333333332,
-        "centerAnchorY" : 0.54064039408866993,
-        "children" : [
-
-        ],
-        "clip" : false,
-        "codeOverrideEnabled" : false,
-        "constraintsLocked" : false,
-        "deviceType" : null,
-        "exportOptions" : [
-
-        ],
-        "fillColor" : "hsla(0, 0%, 100%, 0.5)",
-        "fillEnabled" : false,
-        "fillImage" : null,
-        "fillImagePixelHeight" : null,
-        "fillImagePixelWidth" : null,
-        "fillImageResize" : "fill",
-        "fillLinearGradient" : {
-          "__class" : "LinearGradient",
-          "alpha" : 1,
-          "angle" : 180,
-          "stops" : [
-            {
-              "__class" : "GradientColorStop",
-              "position" : 0,
-              "value" : "rgba(0,0,0,0)"
-            },
-            {
-              "__class" : "GradientColorStop",
-              "position" : 1,
-              "value" : "black"
-            }
-          ]
-        },
-        "fillRadialGradient" : {
-          "__class" : "RadialGradient",
-          "alpha" : 1,
-          "centerAnchorX" : 0.5,
-          "centerAnchorY" : 0.5,
-          "heightFactor" : 0.5,
-          "stops" : [
-            {
-              "__class" : "GradientColorStop",
-              "position" : 0,
-              "value" : "rgba(0,0,0,0)"
-            },
-            {
-              "__class" : "GradientColorStop",
-              "position" : 1,
-              "value" : "black"
-            }
-          ],
-          "widthFactor" : 0.5
-        },
-        "fillType" : "color",
-        "height" : 48,
-        "heightType" : 0,
-        "id" : "@framer\/steveruizok.education-bqsC9adwp",
-        "intrinsicHeight" : null,
-        "intrinsicWidth" : null,
-        "isExternalMaster" : "@framer\/steveruizok.education",
-        "isMaster" : true,
-        "isTarget" : false,
-        "left" : 0,
-        "locked" : false,
-        "name" : "Divider",
-        "navigationTarget" : null,
-        "navigationTransition" : "push",
-        "navigationTransitionBackdropColor" : "rgba(4,4,15,.4)",
-        "navigationTransitionDirection" : "left",
-        "opacity" : 1,
-        "originalid" : null,
-        "parentid" : "Bx26K0jdi",
-        "previewSettings" : null,
-        "radius" : 0,
-        "radiusBottomLeft" : 0,
-        "radiusBottomRight" : 0,
-        "radiusIsRelative" : false,
-        "radiusPerCorner" : false,
-        "radiusTopLeft" : 0,
-        "radiusTopRight" : 0,
-        "replicaInfo" : null,
-        "right" : null,
-        "rotation" : 0,
-        "top" : 0,
+        "top" : -275,
         "visible" : true,
         "width" : 375,
         "widthType" : 0
@@ -3237,7 +3196,7 @@
     "guidesY" : [
 
     ],
-    "id" : "Bx26K0jdi",
+    "id" : "oiVgUQohW",
     "name" : null,
     "originalid" : null,
     "parentid" : null,
@@ -3249,5 +3208,5 @@
     ],
     "visible" : false
   },
-  "version" : 53
+  "version" : 54
 }
