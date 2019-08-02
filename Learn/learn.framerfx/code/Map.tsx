@@ -359,7 +359,7 @@ const MemoMap = React.memo((props: Partial<Props>) => {
     }, [pitch, bearing, zoom, latitude, longitude, fitBounds])
 
     return (
-        <Frame {...rest}>
+        <Frame {...rest} onWheel={e => e.stopPropagation()}>
             {accessToken === "" ? (
                 <DefaultContainer />
             ) : (
