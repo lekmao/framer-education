@@ -2,16 +2,17 @@ import * as React from "react"
 import { Override, Data } from "framer"
 // @ts-ignore
 import * as contentful from "contentful"
+
 import { appState } from "./App"
+import { SPACE_ID, ACCESS_TOKEN } from "./access"
 
-const SPACE_ID = "meswj2oqtioh"
-const ACCESS_TOKEN = "6p31my5V_Qbz0yWxQEI7qD0_5WKqn5ScxkxQXY7bsxM"
-
+// Create the contentful client
 const client = contentful.createClient({
     space: SPACE_ID,
     accessToken: ACCESS_TOKEN,
 })
 
+// Fetch entries and add them to state
 function displayEntries(contentTypes) {
     const itemEntries = []
 
@@ -56,6 +57,7 @@ function fetchEntriesForContentType(contentType) {
         })
 }
 
+// Connect and get entries
 export const connectToContentful = async () => {
     const contentTypes = await fetchContentTypes()
     const entries = await fetchEntriesForContentType(contentTypes[0])

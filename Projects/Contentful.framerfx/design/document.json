@@ -163,6 +163,12 @@
           "widthFactor" : 0.5
         },
         "fillType" : "color",
+        "guidesX" : [
+
+        ],
+        "guidesY" : [
+
+        ],
         "height" : 724,
         "heightType" : 0,
         "id" : "TyBnhJGWY",
@@ -341,7 +347,8 @@
               "gap" : 10,
               "momentum" : false,
               "padding" : 0,
-              "paddingPerSide" : false
+              "paddingPerSide" : false,
+              "wheelEnabled" : false
             },
             "codeOverrideEnabled" : true,
             "codeOverrideFile" : ".\/App.tsx",
@@ -496,6 +503,12 @@
                   "widthFactor" : 0.5
                 },
                 "fillType" : "color",
+                "guidesX" : [
+
+                ],
+                "guidesY" : [
+
+                ],
                 "height" : 5,
                 "heightType" : 0,
                 "id" : "STvR4qqkx",
@@ -582,6 +595,12 @@
               "widthFactor" : 0.5
             },
             "fillType" : "color",
+            "guidesX" : [
+
+            ],
+            "guidesY" : [
+
+            ],
             "height" : 13,
             "heightType" : 0,
             "id" : "tAzXAh3o6",
@@ -709,6 +728,12 @@
                           "widthFactor" : 0.5
                         },
                         "fillType" : "color",
+                        "guidesX" : [
+
+                        ],
+                        "guidesY" : [
+
+                        ],
                         "height" : 11.33333333333333,
                         "heightType" : 0,
                         "id" : "gUdmsmVJo",
@@ -1003,6 +1028,12 @@
                           "widthFactor" : 0.5
                         },
                         "fillType" : "color",
+                        "guidesX" : [
+
+                        ],
+                        "guidesY" : [
+
+                        ],
                         "height" : 7.3333333333333321,
                         "heightType" : 0,
                         "id" : "llWprEDd6",
@@ -1089,6 +1120,12 @@
                       "widthFactor" : 0.5
                     },
                     "fillType" : "color",
+                    "guidesX" : [
+
+                    ],
+                    "guidesY" : [
+
+                    ],
                     "height" : 12,
                     "heightType" : 0,
                     "id" : "K1Jx92rAt",
@@ -2696,6 +2733,12 @@
                   "widthFactor" : 0.5
                 },
                 "fillType" : "color",
+                "guidesX" : [
+
+                ],
+                "guidesY" : [
+
+                ],
                 "height" : 12,
                 "heightType" : 0,
                 "id" : "kaVQfdcBg",
@@ -2882,6 +2925,12 @@
                   "widthFactor" : 0.5
                 },
                 "fillType" : "color",
+                "guidesX" : [
+
+                ],
+                "guidesY" : [
+
+                ],
                 "height" : 19,
                 "heightType" : 0,
                 "id" : "fHIYEFju8",
@@ -2968,6 +3017,12 @@
               "widthFactor" : 0.5
             },
             "fillType" : "color",
+            "guidesX" : [
+
+            ],
+            "guidesY" : [
+
+            ],
             "height" : 30,
             "heightType" : 0,
             "id" : "WXk7D7GIS",
@@ -3054,6 +3109,12 @@
           "widthFactor" : 0.5
         },
         "fillType" : "color",
+        "guidesX" : [
+
+        ],
+        "guidesY" : [
+
+        ],
         "height" : 812,
         "heightType" : 0,
         "id" : "iRQdYTPBj",
@@ -3118,9 +3179,6 @@
             "clip" : true,
             "codeComponentIdentifier" : "@framer\/steveruizok.education\/.\/List.tsx_List",
             "codeComponentProps" : {
-              "content" : [
-
-              ],
               "emptyText" : "Nothing to see here.",
               "gap" : 24,
               "padding" : 16,
@@ -3128,7 +3186,10 @@
               "paddingLeft" : 16,
               "paddingPerSide" : true,
               "paddingRight" : 16,
-              "paddingTop" : 0
+              "paddingTop" : 0,
+              "pc_content" : [
+
+              ]
             },
             "codeOverrideEnabled" : true,
             "codeOverrideFile" : ".\/App.tsx",
@@ -3224,6 +3285,12 @@
           "widthFactor" : 0.5
         },
         "fillType" : "color",
+        "guidesX" : [
+
+        ],
+        "guidesY" : [
+
+        ],
         "height" : 724,
         "heightType" : 0,
         "id" : "Cd4_rMaqC",
@@ -3355,203 +3422,13 @@
         "visible" : true,
         "width" : 375,
         "widthType" : 0
-      },
-      {
-        "__class" : "CodeComponentNode",
-        "aspectRatio" : null,
-        "bottom" : null,
-        "centerAnchorX" : 0.67733333333333334,
-        "centerAnchorY" : 0.059374999999999997,
-        "children" : [
-
-        ],
-        "clip" : true,
-        "codeComponentIdentifier" : "@framer\/steveruizok.education\/.\/Text.tsx_Text",
-        "codeComponentProps" : {
-          "background" : "none",
-          "color" : "var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 86, 254)) \/* {\"name\":\"Primary\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
-          "paddingPerSide" : false,
-          "pc_resizeDirection" : "xaxis",
-          "resize" : false,
-          "text" : "Blog Posts",
-          "textAlign" : "left",
-          "type" : "h2",
-          "verticalAlign" : "bottom"
-        },
-        "codeOverrideEnabled" : false,
-        "constraintsLocked" : false,
-        "deviceType" : null,
-        "exportOptions" : [
-
-        ],
-        "fillColor" : "rgba(255,255,255,1)",
-        "fillEnabled" : false,
-        "fillImage" : null,
-        "fillImagePixelHeight" : null,
-        "fillImagePixelWidth" : null,
-        "fillImageResize" : "fill",
-        "fillLinearGradient" : {
-          "__class" : "LinearGradient",
-          "alpha" : 1,
-          "angle" : 180,
-          "stops" : [
-            {
-              "__class" : "GradientColorStop",
-              "position" : 0,
-              "value" : "rgba(0,0,0,0)"
-            },
-            {
-              "__class" : "GradientColorStop",
-              "position" : 1,
-              "value" : "black"
-            }
-          ]
-        },
-        "fillRadialGradient" : {
-          "__class" : "RadialGradient",
-          "alpha" : 1,
-          "centerAnchorX" : 0.5,
-          "centerAnchorY" : 0.5,
-          "heightFactor" : 0.5,
-          "stops" : [
-            {
-              "__class" : "GradientColorStop",
-              "position" : 0,
-              "value" : "rgba(0,0,0,0)"
-            },
-            {
-              "__class" : "GradientColorStop",
-              "position" : 1,
-              "value" : "black"
-            }
-          ],
-          "widthFactor" : 0.5
-        },
-        "fillType" : "color",
-        "height" : 72,
-        "heightType" : 0,
-        "id" : "rd4w9aUVQ",
-        "intrinsicHeight" : 50,
-        "intrinsicWidth" : 200,
-        "left" : 542,
-        "locked" : false,
-        "name" : null,
-        "opacity" : 1,
-        "originalid" : null,
-        "parentid" : "KeyOdS00i",
-        "previewSettings" : null,
-        "radius" : 0,
-        "radiusBottomLeft" : 0,
-        "radiusBottomRight" : 0,
-        "radiusIsRelative" : false,
-        "radiusPerCorner" : false,
-        "radiusTopLeft" : 0,
-        "radiusTopRight" : 0,
-        "right" : null,
-        "rotation" : 0,
-        "top" : -140,
-        "visible" : true,
-        "width" : 375,
-        "widthType" : 0
-      },
-      {
-        "__class" : "CodeComponentNode",
-        "aspectRatio" : null,
-        "bottom" : null,
-        "centerAnchorX" : 0.67733333333333334,
-        "centerAnchorY" : 0.059374999999999997,
-        "children" : [
-
-        ],
-        "clip" : true,
-        "codeComponentIdentifier" : "@framer\/steveruizok.education\/.\/Text.tsx_Text",
-        "codeComponentProps" : {
-          "background" : "none",
-          "color" : "var(--token-f69732ff-3858-4d7e-a918-e92879e5d6bf, rgb(0, 86, 254)) \/* {\"name\":\"Primary\",\"packageIdentifier\":\"@framer\/steveruizok.education\"} *\/",
-          "paddingPerSide" : false,
-          "pc_resizeDirection" : "xaxis",
-          "resize" : false,
-          "text" : "Blog Post",
-          "textAlign" : "left",
-          "type" : "h2",
-          "verticalAlign" : "bottom"
-        },
-        "codeOverrideEnabled" : false,
-        "constraintsLocked" : false,
-        "deviceType" : null,
-        "exportOptions" : [
-
-        ],
-        "fillColor" : "rgba(255,255,255,1)",
-        "fillEnabled" : false,
-        "fillImage" : null,
-        "fillImagePixelHeight" : null,
-        "fillImagePixelWidth" : null,
-        "fillImageResize" : "fill",
-        "fillLinearGradient" : {
-          "__class" : "LinearGradient",
-          "alpha" : 1,
-          "angle" : 180,
-          "stops" : [
-            {
-              "__class" : "GradientColorStop",
-              "position" : 0,
-              "value" : "rgba(0,0,0,0)"
-            },
-            {
-              "__class" : "GradientColorStop",
-              "position" : 1,
-              "value" : "black"
-            }
-          ]
-        },
-        "fillRadialGradient" : {
-          "__class" : "RadialGradient",
-          "alpha" : 1,
-          "centerAnchorX" : 0.5,
-          "centerAnchorY" : 0.5,
-          "heightFactor" : 0.5,
-          "stops" : [
-            {
-              "__class" : "GradientColorStop",
-              "position" : 0,
-              "value" : "rgba(0,0,0,0)"
-            },
-            {
-              "__class" : "GradientColorStop",
-              "position" : 1,
-              "value" : "black"
-            }
-          ],
-          "widthFactor" : 0.5
-        },
-        "fillType" : "color",
-        "height" : 72,
-        "heightType" : 0,
-        "id" : "deX1oyTvV",
-        "intrinsicHeight" : 50,
-        "intrinsicWidth" : 200,
-        "left" : 1004,
-        "locked" : false,
-        "name" : null,
-        "opacity" : 1,
-        "originalid" : null,
-        "parentid" : "KeyOdS00i",
-        "previewSettings" : null,
-        "radius" : 0,
-        "radiusBottomLeft" : 0,
-        "radiusBottomRight" : 0,
-        "radiusIsRelative" : false,
-        "radiusPerCorner" : false,
-        "radiusTopLeft" : 0,
-        "radiusTopRight" : 0,
-        "right" : null,
-        "rotation" : 0,
-        "top" : -140,
-        "visible" : true,
-        "width" : 375,
-        "widthType" : 0
       }
+    ],
+    "guidesX" : [
+
+    ],
+    "guidesY" : [
+
     ],
     "id" : "KeyOdS00i",
     "name" : null,
@@ -3565,5 +3442,5 @@
     ],
     "visible" : false
   },
-  "version" : 52
+  "version" : 54
 }

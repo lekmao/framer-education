@@ -1,8 +1,10 @@
 import * as React from "react"
 import { Override, Data } from "framer"
-import { connectToContentful } from "./ContentfulData"
 // @ts-ignore
 import { Card, Text } from "@framer/steveruizok.education/code"
+import { connectToContentful } from "./ContentfulData"
+
+// State ______________________
 
 export const appState = Data({
     contentTypes: [] as any[],
@@ -15,13 +17,28 @@ export const appState = Data({
     backAction: null as any,
 })
 
-connectToContentful()
+// Navigation _________________
 
-const toStartCase = (string: string) => {
-    return string[0].toUpperCase() + string.slice(1)
+// NavigationHeader
+
+export function Header(): Override {
+    return {
+        title: appState.pageTitle,
+        leftLink: appState.backAction ? "Back" : "",
+        leftIcon: appState.backAction ? "chevron-left" : "none",
+        onLeftTap: () => appState.backAction && appState.backAction(),
+    }
 }
 
-// navigation
+// Page Component
+
+export function BrowsePage(): Override {
+    return {
+        currentPage: appState.currentPage,
+    }
+}
+
+// Helpers
 
 const showPosts = () => {
     appState.currentPage = 0
@@ -34,35 +51,14 @@ const showPost = itemEntry => {
     appState.backAction = showPosts
 }
 
-// Top navigation for current tab / back
-export function Header(): Override {
-    return {
-        title: appState.pageTitle,
-        leftLink: appState.backAction ? "Back" : "",
-        leftIcon: appState.backAction ? "chevron-left" : "none",
-        onLeftTap: () => appState.backAction && appState.backAction(),
-    }
-}
+// Pages ___________________
 
-export function BrowsePage(): Override {
-    return {
-        currentPage: appState.currentPage,
-    }
-}
+// CardList (Blog Posts)
 
 export function BlogPostsCardList(): Override {
     const cards = React.useMemo(() => {
         return appState.blogPosts.map(itemEntry => {
-            const {
-                title,
-                slug,
-                heroImage,
-                description,
-                body,
-                author,
-                publishedDate,
-                tags,
-            } = itemEntry.fields
+            const { title, heroImage, description, tags } = itemEntry.fields
 
             if (!title) return {}
 
@@ -85,17 +81,18 @@ export function BlogPostsCardList(): Override {
     }
 }
 
-// BlogPost
+// List (Blog Post)
+
 export function BlogPost(): Override {
     const {
         title,
-        slug,
         heroImage,
-        description,
         body,
         author,
-        publishedDate,
-        tags,
+        // slug,
+        // description,
+        // publishedDate,
+        // tags,
     } = appState.blogPost.fields
 
     if (!title) return {}
@@ -138,4 +135,14 @@ export function BlogPost(): Override {
             />,
         ],
     }
+}
+
+// Kickoff _________________
+
+connectToContentful()
+
+// Helpers _________________
+
+const toStartCase = (string: string) => {
+    return string[0].toUpperCase() + string.slice(1)
 }

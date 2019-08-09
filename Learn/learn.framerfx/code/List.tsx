@@ -64,11 +64,17 @@ export function List(props: Props) {
     // Clone attached Frames
     const pcContent = React.useMemo(() => {
         return pc_content.map((item, index) =>
-            React.cloneElement(item, { key: index })
+            React.cloneElement(item, { key: "pcContent_" + index })
         )
     }, [pc_content])
 
-    const combinedContent = [...pcContent, ...content]
+    const ccContent = React.useMemo(() => {
+        return content.map((item, index) =>
+            React.cloneElement(item, { key: "content_" + index })
+        )
+    }, [content])
+
+    const combinedContent = [...pcContent, ...ccContent]
 
     return (
         <Scroll {...rest} dragEnabled={scroll}>
