@@ -1,11 +1,4 @@
-export const ACCESS_TOKEN = [
-    "YzDTVL3576Zed2ii0ow",
-    "AxdDJvbDQwamdydXdqZiJ9.kb2",
-    "2siLCJhIjoiY2l2cnFnMmt4MD",
-    "pk.eyJ1Ijoic3RldmVydWl6b",
-]
-    .reverse()
-    .join("")
+import { ACCESS_TOKEN } from "./access"
 
 export const getPredictions = async (query: string) => {
     const url = [
@@ -91,7 +84,7 @@ export const updateRoute = async state => {
         // Show a straight line instead
         const [lon1, lat1] = location
         const [lon2, lat2] = userLocation
-        state.distance = distanceInKilometers(lat1, lon1, lat2, lon2)
+        state.distance = distanceInKilometers([lat1, lon1], [lat2, lon2])
         map.getSource("location-line").setData({
             type: "FeatureCollection",
             features: [
@@ -108,7 +101,9 @@ export const updateRoute = async state => {
 }
 
 // Calculate distance in kilometers
-function distanceInKilometers(lat1, lon1, lat2, lon2) {
+export function distanceInKilometers(a, b) {
+    const [lat1, lon1] = a
+    const [lat2, lon2] = b
     if (lat1 == lat2 && lon1 == lon2) {
         return 0
     } else {

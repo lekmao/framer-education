@@ -2,7 +2,7 @@ import { Override, Data } from "framer"
 import * as React from "react"
 // @ts-ignore
 import { Message } from "@framer/steveruizok.education/code"
-
+import { SERVER_URL } from "./access"
 import { connectToSocket } from "./client"
 
 const appState = Data({
@@ -16,12 +16,7 @@ const appState = Data({
 
 let dispatch: any
 
-// If can't connect, visit https://6y5s7.sse.codesandbox.io/
-// to restart server
-
 // Socket -------------------------------------------------
-
-const SERVER_URL = "https://6y5s7.sse.codesandbox.io/"
 
 const RESPONSES = {
     CONNECT: data => {

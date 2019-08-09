@@ -146,7 +146,8 @@
               "gap" : 10,
               "momentum" : false,
               "padding" : 0,
-              "paddingPerSide" : false
+              "paddingPerSide" : false,
+              "wheelEnabled" : false
             },
             "codeOverrideEnabled" : true,
             "codeOverrideFile" : ".\/App.tsx",
@@ -264,6 +265,12 @@
                   "widthFactor" : 0.5
                 },
                 "fillType" : "color",
+                "guidesX" : [
+
+                ],
+                "guidesY" : [
+
+                ],
                 "height" : 5,
                 "heightType" : 0,
                 "id" : "GWaoG4Szz",
@@ -350,6 +357,12 @@
               "widthFactor" : 0.5
             },
             "fillType" : "color",
+            "guidesX" : [
+
+            ],
+            "guidesY" : [
+
+            ],
             "height" : 13,
             "heightType" : 0,
             "id" : "W6fBH8y_t",
@@ -477,6 +490,12 @@
                           "widthFactor" : 0.5
                         },
                         "fillType" : "color",
+                        "guidesX" : [
+
+                        ],
+                        "guidesY" : [
+
+                        ],
                         "height" : 11.33333333333333,
                         "heightType" : 0,
                         "id" : "p0dHbsAWd",
@@ -771,6 +790,12 @@
                           "widthFactor" : 0.5
                         },
                         "fillType" : "color",
+                        "guidesX" : [
+
+                        ],
+                        "guidesY" : [
+
+                        ],
                         "height" : 7.3333333333333321,
                         "heightType" : 0,
                         "id" : "Y64OMrz0n",
@@ -857,6 +882,12 @@
                       "widthFactor" : 0.5
                     },
                     "fillType" : "color",
+                    "guidesX" : [
+
+                    ],
+                    "guidesY" : [
+
+                    ],
                     "height" : 12,
                     "heightType" : 0,
                     "id" : "zG5u8B1ui",
@@ -2464,6 +2495,12 @@
                   "widthFactor" : 0.5
                 },
                 "fillType" : "color",
+                "guidesX" : [
+
+                ],
+                "guidesY" : [
+
+                ],
                 "height" : 12,
                 "heightType" : 0,
                 "id" : "RCgw0RaN0",
@@ -2650,6 +2687,12 @@
                   "widthFactor" : 0.5
                 },
                 "fillType" : "color",
+                "guidesX" : [
+
+                ],
+                "guidesY" : [
+
+                ],
                 "height" : 19,
                 "heightType" : 0,
                 "id" : "kYjLQlFYd",
@@ -2736,6 +2779,12 @@
               "widthFactor" : 0.5
             },
             "fillType" : "color",
+            "guidesX" : [
+
+            ],
+            "guidesY" : [
+
+            ],
             "height" : 38,
             "heightType" : 0,
             "id" : "jOTG944cc",
@@ -2822,6 +2871,12 @@
           "widthFactor" : 0.5
         },
         "fillType" : "color",
+        "guidesX" : [
+
+        ],
+        "guidesY" : [
+
+        ],
         "height" : 812,
         "heightType" : 0,
         "id" : "vGhJEej_p",
@@ -2832,7 +2887,7 @@
         "isTarget" : false,
         "left" : 84,
         "locked" : false,
-        "name" : "Chat",
+        "name" : "Export",
         "navigationTarget" : null,
         "navigationTransition" : "push",
         "navigationTransitionBackdropColor" : "rgba(4,4,15,.4)",
@@ -3017,6 +3072,8 @@
                 "clip" : true,
                 "codeComponentIdentifier" : "@framer\/steveruizok.education\/.\/Button.tsx_Button",
                 "codeComponentProps" : {
+                  "alignIcon" : "left",
+                  "contentType" : "text",
                   "disabled" : false,
                   "icon" : "none",
                   "text" : "Join the Chat",
@@ -3135,6 +3192,12 @@
         "fillImagePixelWidth" : null,
         "fillImageResize" : "fill",
         "fillType" : "color",
+        "guidesX" : [
+
+        ],
+        "guidesY" : [
+
+        ],
         "height" : 672,
         "heightType" : 0,
         "id" : "apiDbSGN4",
@@ -3166,7 +3229,7 @@
         "rotation" : 0,
         "top" : 68,
         "visible" : true,
-        "width" : 376,
+        "width" : 375,
         "widthType" : 0
       },
       {
@@ -3271,6 +3334,12 @@
                 "fillImagePixelWidth" : null,
                 "fillImageResize" : "fill",
                 "fillType" : "color",
+                "guidesX" : [
+
+                ],
+                "guidesY" : [
+
+                ],
                 "height" : 474,
                 "heightType" : 0,
                 "id" : "Ct74FwdDL",
@@ -3389,6 +3458,8 @@
                     "clip" : true,
                     "codeComponentIdentifier" : "@framer\/steveruizok.education\/.\/Button.tsx_Button",
                     "codeComponentProps" : {
+                      "alignIcon" : "left",
+                      "contentType" : "icon",
                       "disabled" : false,
                       "icon" : "send",
                       "text" : "Get Started!",
@@ -3453,6 +3524,12 @@
                 "fillImagePixelWidth" : null,
                 "fillImageResize" : "fill",
                 "fillType" : "color",
+                "guidesX" : [
+
+                ],
+                "guidesY" : [
+
+                ],
                 "height" : 50,
                 "heightType" : 0,
                 "id" : "Pin0jfu31",
@@ -3556,6 +3633,12 @@
         "fillImagePixelWidth" : null,
         "fillImageResize" : "fill",
         "fillType" : "color",
+        "guidesX" : [
+
+        ],
+        "guidesY" : [
+
+        ],
         "height" : 672,
         "heightType" : 0,
         "id" : "uVW8VmUKo",
@@ -3587,9 +3670,15 @@
         "rotation" : 0,
         "top" : 68,
         "visible" : true,
-        "width" : 376,
+        "width" : 375,
         "widthType" : 0
       }
+    ],
+    "guidesX" : [
+
+    ],
+    "guidesY" : [
+
     ],
     "id" : "MuXWySu3z",
     "name" : null,
@@ -3603,5 +3692,5 @@
     ],
     "visible" : false
   },
-  "version" : 52
+  "version" : 54
 }

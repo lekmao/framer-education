@@ -14,7 +14,7 @@
 	},
 	"author": "Steve Ruiz",
 	"dependencies": {
-		"@framer/steveruizok.education": "^1.184.0",
+		"@framer/steveruizok.education": "^1.201.0",
 		"socket.io-client": "^2.2.0"
 	}
 }

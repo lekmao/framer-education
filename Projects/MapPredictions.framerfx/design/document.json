@@ -3157,7 +3157,7 @@
         "isTarget" : false,
         "left" : 535,
         "locked" : false,
-        "name" : "Template",
+        "name" : "Export",
         "navigationTarget" : null,
         "navigationTransition" : "push",
         "navigationTransitionBackdropColor" : "rgba(4,4,15,.4)",

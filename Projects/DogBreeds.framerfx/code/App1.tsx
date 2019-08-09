@@ -1,8 +1,14 @@
 import * as React from "react"
 import { Override, Data } from "framer"
-import { cachedBreeds } from "./CachedData"
+// @ts-ignore
+import * as cachedData from "./response.json"
 // @ts-ignore
 import { pull, colors } from "@framer/steveruizok.education/code/"
+
+// Get new breeds data from the server?
+const USE_API = true
+
+// app state
 
 type Breed = {
     breed: string
@@ -10,12 +16,6 @@ type Breed = {
     subBreeds?: Breed[]
     images?: string[]
 }
-
-const toStartCase = (string: string) => {
-    return string[0].toUpperCase() + string.slice(1)
-}
-
-// app state
 
 export const appState = Data({
     currentTitle: "Browse",
@@ -35,16 +35,15 @@ export const appState = Data({
 
 // data
 
-// Whether to load data from API (or use pre-cached data)
-const USE_API = false
-
 // Get surface data for all breeds
 const fetchBreeds = async () => {
-    // Get data from API
-    const response = await fetch("https://dog.ceo/api/breeds/list/all")
+    let data = cachedData
 
-    // Turn data into JSON
-    const data = await response.json()
+    if (USE_API) {
+        // Get data from API
+        const response = await fetch("https://dog.ceo/api/breeds/list/all")
+        data = await response.json()
+    }
 
     // Turn JSON object into array
     const breeds = Object.keys(data.message).map(key => {
@@ -60,6 +59,8 @@ const fetchBreeds = async () => {
     // Update state with data
     appState.breeds = breeds
 }
+
+fetchBreeds()
 
 // Get deep data on a specific breed
 const fetchBreed = async breed => {
@@ -82,12 +83,6 @@ const fetchBreed = async breed => {
     // Show page 3 (Breed detail)
     appState.currentTitle = toStartCase(breed.breed)
     showBreedDetail(breed.subBreed ? showSubBreedsList : showBreedsList)
-}
-
-if (USE_API) {
-    fetchBreeds()
-} else {
-    appState.breeds = cachedBreeds
 }
 
 // navigation
@@ -213,7 +208,7 @@ export function BreedImagesList(): Override {
     const { breed, subBreed, images } = appState.breed
 
     return {
-        cards: images.map(image => {
+        cards: images.slice(0, 20).map(image => {
             return {
                 image: image,
                 overlay: false,
@@ -302,4 +297,10 @@ export function FavoritesList(): Override {
     return {
         cards,
     }
+}
+
+// Helpers
+
+const toStartCase = (string: string) => {
+    return string[0].toUpperCase() + string.slice(1)
 }

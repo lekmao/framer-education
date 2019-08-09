@@ -3,12 +3,13 @@ import { Override, Data } from "framer"
 import { url } from "framer/resource"
 // @ts-ignore
 import { Text } from "@framer/steveruizok.education/code"
+import { ACCESS_TOKEN } from "./access"
 import {
     addLine,
     getPredictions,
     updateRoute,
-    ACCESS_TOKEN,
-} from "./MapEffects"
+    distanceInKilometers,
+} from "./map-actions"
 
 // State --------------------------------
 
@@ -58,7 +59,6 @@ const getUserLocation = () => {
 const showUserLocation = async () => {
     const position = await getUserLocation()
     const { longitude, latitude } = position.coords
-    appState.userLocation = [longitude, latitude]
     appState.location = appState.userLocation
     updateRoute(appState)
 }
@@ -96,6 +96,8 @@ const handleFocus = () => {
 }
 
 const handleQuery = async query => {
+    if (!ACCESS_TOKEN) return
+
     if (appState.predictionsOpen && query.length > 3) {
         appState.query = query
         appState.predictions = await getPredictions(query)
@@ -106,6 +108,11 @@ const showPrediction = prediction => {
     const { center } = prediction
     appState.location = center
     clearPredictions()
+
+    if (distanceInKilometers(appState.location, appState.userLocation) > 100) {
+        appState.userLocation = appState.location
+    }
+    updateRoute(appState)
 }
 
 const clearPredictions = () => {
