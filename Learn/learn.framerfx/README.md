@@ -39,6 +39,7 @@ This package also includes several [helper utilities](https://framer-learn-docs.
 
 # Changelog
 
+- Filter falsey entries from List content
 - Fixes scroll bug on Map
 - Adds Icon to Button 🔹
 - Adds resizable Text Input 🔹

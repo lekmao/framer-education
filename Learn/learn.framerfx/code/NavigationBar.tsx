@@ -9,11 +9,13 @@ import { iconNames, iconTitles } from "./Shared"
 type Props = Partial<FrameProps> & {
     title: string
     subtitle: string
+    showLeft: boolean
     leftLink: string
     leftIcon: string
+    onLeftTap: () => void
+    showRight: boolean
     rightLink: string
     rightIcon: string
-    onLeftTap: () => void
     onRightTap: () => void
     large: boolean
 }
@@ -24,8 +26,10 @@ export function NavigationBar(props: Partial<Props>) {
         width,
         title,
         subtitle,
+        showLeft,
         leftLink,
         leftIcon,
+        showRight,
         rightLink,
         rightIcon,
         onLeftTap,
@@ -57,29 +61,33 @@ export function NavigationBar(props: Partial<Props>) {
                 }}
             >
                 <Interactive width="1fr" height={44}>
-                    <Stack
-                        width="100%"
-                        height="100%"
-                        alignment="center"
-                        distribution="start"
-                        direction="horizontal"
-                        gap={-4}
-                        onTap={onLeftTap}
-                        paddingLeft={leftIcon && leftIcon !== "none" ? 0 : 16}
-                    >
-                        {leftIcon && leftIcon !== "none" && (
-                            <Icon y={2} icon={leftIcon} width={32} />
-                        )}
-                        {leftLink && leftLink.length > 1 && (
-                            <Text
-                                width={75}
-                                verticalAlign="center"
-                                textAlign="left"
-                                color={colors.Primary}
-                                text={leftLink || null}
-                            />
-                        )}
-                    </Stack>
+                    {showLeft && (
+                        <Stack
+                            width="100%"
+                            height="100%"
+                            alignment="center"
+                            distribution="start"
+                            direction="horizontal"
+                            gap={-4}
+                            onTap={onLeftTap}
+                            paddingLeft={
+                                leftIcon && leftIcon !== "none" ? 0 : 16
+                            }
+                        >
+                            {leftIcon && leftIcon !== "none" && (
+                                <Icon y={2} icon={leftIcon} width={32} />
+                            )}
+                            {leftLink && leftLink.length > 1 && (
+                                <Text
+                                    width={75}
+                                    verticalAlign="center"
+                                    textAlign="left"
+                                    color={colors.Primary}
+                                    text={leftLink || null}
+                                />
+                            )}
+                        </Stack>
+                    )}
                 </Interactive>
                 {large || (
                     <Stack
@@ -107,31 +115,33 @@ export function NavigationBar(props: Partial<Props>) {
                     </Stack>
                 )}
                 <Interactive width="1fr" height={44}>
-                    <Stack
-                        width="100%"
-                        height="100%"
-                        alignment="center"
-                        distribution="end"
-                        direction="horizontal"
-                        gap={0}
-                        onTap={onRightTap}
-                        paddingRight={
-                            rightIcon && rightIcon !== "none" ? 0 : 16
-                        }
-                    >
-                        {rightLink && rightLink.length > 0 && (
-                            <Text
-                                width={75}
-                                verticalAlign="center"
-                                textAlign="right"
-                                color={colors.Primary}
-                                text={rightLink}
-                            />
-                        )}
-                        {rightIcon && rightIcon !== "none" && (
-                            <Icon y={2} icon={rightIcon} width={32} />
-                        )}
-                    </Stack>
+                    {showRight && (
+                        <Stack
+                            width="100%"
+                            height="100%"
+                            alignment="center"
+                            distribution="end"
+                            direction="horizontal"
+                            gap={0}
+                            onTap={onRightTap}
+                            paddingRight={
+                                rightIcon && rightIcon !== "none" ? 0 : 16
+                            }
+                        >
+                            {rightLink && rightLink.length > 0 && (
+                                <Text
+                                    width={75}
+                                    verticalAlign="center"
+                                    textAlign="right"
+                                    color={colors.Primary}
+                                    text={rightLink}
+                                />
+                            )}
+                            {rightIcon && rightIcon !== "none" && (
+                                <Icon y={2} icon={rightIcon} width={32} />
+                            )}
+                        </Stack>
+                    )}
                 </Interactive>
             </Stack>
             {large && (
@@ -157,8 +167,10 @@ NavigationBar.defaultProps = {
     width: 320,
     title: "Home",
     subtitle: null,
+    showLeft: true,
     leftLink: "Back",
     leftIcon: "chevron-left",
+    showRight: true,
     rightLink: null,
     rightIcon: "none",
     onLeftTap: () => null,

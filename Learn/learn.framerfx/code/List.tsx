@@ -63,15 +63,22 @@ export function List(props: Props) {
 
     // Clone attached Frames
     const pcContent = React.useMemo(() => {
-        return pc_content.map((item, index) =>
-            React.cloneElement(item, { key: "pcContent_" + index })
-        )
+        return pc_content
+            .filter(i => !!i)
+            .map((item, index) =>
+                React.cloneElement(item, { key: "pcContent_" + index })
+            )
     }, [pc_content])
 
+    // Clone provided content prop (just to be sure)
     const ccContent = React.useMemo(() => {
-        return content.map((item, index) =>
-            React.cloneElement(item, { key: "content_" + index })
-        )
+        return content
+            .filter(i => !!i)
+            .map((item, index) =>
+                React.cloneElement(item, {
+                    key: item.props.key || "ccContent_" + index,
+                })
+            )
     }, [content])
 
     const combinedContent = [...pcContent, ...ccContent]
