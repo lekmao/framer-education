@@ -15,12 +15,10 @@ type Props = FrameProps & {
     placeholder: string
     readOnly: boolean
     password: boolean
-    required: boolean
     disabled: boolean
-    validation: (value: string) => boolean
     onFocus: (value: string) => void
     onBlur: (value: string) => void
-    onValueChange: (value: string, valid: boolean) => void
+    onValueChange: (value: string) => void
 }
 
 export function StringInput(props: Partial<Props>) {
@@ -29,8 +27,6 @@ export function StringInput(props: Partial<Props>) {
         placeholder,
         readOnly,
         password,
-        validation,
-        required,
         disabled,
         onValueChange,
         onFocus,
@@ -38,42 +34,19 @@ export function StringInput(props: Partial<Props>) {
         ...rest
     } = props
 
-    // --------------------- Validation -------------------------
-
-    const validate = (value: Props["value"]) => {
-        if (
-            required &&
-            (value.length === 0 || value === undefined || value === null)
-        ) {
-            return false
-        } else {
-            return validation(value)
-        }
-    }
-
     // ------------------------ State --------------------------
 
     // Set an initial state
     const [state, setState] = React.useState({
         value,
-        valid: validate(value),
     })
 
     // Update state when component receives new value prop
     React.useEffect(() => {
         setState({
             value,
-            valid: validate(value),
         })
     }, [value])
-
-    // Update state when component receives new validation prop
-    React.useEffect(() => {
-        setState({
-            ...state,
-            valid: validate(state.value),
-        })
-    }, [validation, required])
 
     // ------------------- Event Handlers ----------------------
 
@@ -82,13 +55,10 @@ export function StringInput(props: Partial<Props>) {
             return
         }
 
-        const valid = validate(value)
-
-        onValueChange(value, valid)
+        onValueChange(value)
 
         setState({
             value,
-            valid,
         })
     }
 
@@ -99,21 +69,13 @@ export function StringInput(props: Partial<Props>) {
             opacity: 1,
             border: `1px solid #777`,
         },
-        warn: {
-            opacity: 1,
-            border: `1px solid #ff8866`,
-        },
         disabled: {
             opacity: 0.3,
             border: `1px solid #777`,
         },
     }
 
-    const currentVariant = disabled
-        ? "disabled"
-        : state.valid
-        ? "initial"
-        : "warn"
+    const currentVariant = disabled ? "disabled" : "initial"
 
     return (
         <Stack
@@ -145,12 +107,10 @@ StringInput.defaultProps = {
     placeholder: "",
     password: false,
     readOnly: false,
-    required: false,
     disabled: false,
-    validation: value => true,
-    onFocus: value => null,
-    onBlur: value => null,
-    onValueChange: (value, valid) => null,
+    onFocus: value => {},
+    onBlur: value => {},
+    onValueChange: value => {},
 }
 
 addPropertyControls(StringInput, {
@@ -171,11 +131,6 @@ addPropertyControls(StringInput, {
     },
     readOnly: {
         title: "ReadOnly",
-        type: ControlType.Boolean,
-        defaultValue: false,
-    },
-    required: {
-        title: "Required",
         type: ControlType.Boolean,
         defaultValue: false,
     },

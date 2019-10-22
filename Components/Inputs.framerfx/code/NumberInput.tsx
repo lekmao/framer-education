@@ -12,64 +12,29 @@ import {
 
 type Props = FrameProps & {
     value: number
-    required: boolean
     disabled: boolean
-    validation: (value: number) => boolean
-    onValueChange: (value: number, valid: boolean) => void
+    onValueChange: (value: number) => void
     min: number
     max: number
     step: number
 }
 
 export function NumberInput(props: Partial<Props>) {
-    const {
-        value,
-        validation,
-        required,
-        disabled,
-        onValueChange,
-        min,
-        max,
-        step,
-        ...rest
-    } = props
-
-    // --------------------- Validation -------------------------
-
-    const validate = (value: Props["value"]) => {
-        if (
-            required &&
-            (value === NaN || value === undefined || value === null)
-        ) {
-            return false
-        } else {
-            return validation(value)
-        }
-    }
+    const { value, disabled, onValueChange, min, max, step, ...rest } = props
 
     // ------------------------ State --------------------------
 
     // Set an initial state
     const [state, setState] = React.useState({
         value,
-        valid: validate(value),
     })
 
     // Update state when component receives new value prop
     React.useEffect(() => {
         setState({
             value,
-            valid: validate(value),
         })
     }, [value])
-
-    // Update state when component receives new validation prop
-    React.useEffect(() => {
-        setState({
-            ...state,
-            valid: validate(state.value),
-        })
-    }, [validation, required])
 
     // ------------------- Event Handlers ----------------------
 
@@ -80,13 +45,10 @@ export function NumberInput(props: Partial<Props>) {
             return
         }
 
-        const valid = validate(clampedValue)
-
-        onValueChange(clampedValue, valid)
+        onValueChange(clampedValue)
 
         setState({
             value: clampedValue,
-            valid,
         })
     }
 
@@ -101,21 +63,13 @@ export function NumberInput(props: Partial<Props>) {
             opacity: 1,
             border: `1px solid #777`,
         },
-        warn: {
-            opacity: 1,
-            border: `1px solid #ff8866`,
-        },
         disabled: {
             opacity: 0.3,
             border: `1px solid #777`,
         },
     }
 
-    const currentVariant = disabled
-        ? "disabled"
-        : state.valid
-        ? "initial"
-        : "warn"
+    const currentVariant = disabled ? "disabled" : "initial"
 
     return (
         <Stack
@@ -152,10 +106,8 @@ export function NumberInput(props: Partial<Props>) {
 
 NumberInput.defaultProps = {
     value: 0,
-    required: false,
     disabled: false,
-    validation: (value: number) => true,
-    onValueChange: (value: number, valid: boolean) => null,
+    onValueChange: (value: number) => {},
     min: 0,
     max: Infinity,
     step: 1,
@@ -188,11 +140,6 @@ addPropertyControls(NumberInput, {
         defaultValue: 1,
         step: 0.1,
         displayStepper: true,
-    },
-    required: {
-        title: "Required",
-        type: ControlType.Boolean,
-        defaultValue: false,
     },
     disabled: {
         title: "Disabled",

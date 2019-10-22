@@ -6,55 +6,26 @@ import { Frame, FrameProps, addPropertyControls, ControlType } from "framer"
 
 type Props = FrameProps & {
     value: boolean
-    required: boolean
     disabled: boolean
-    validation: (value: boolean) => boolean
-    onValueChange: (value: boolean, valid: boolean) => void
+    onValueChange: (value: boolean) => void
 }
 
 export function BooleanInput(props: Partial<Props>) {
-    const {
-        value,
-        validation,
-        required,
-        disabled,
-        onValueChange,
-        ...rest
-    } = props
-
-    // --------------------- Validation -------------------------
-
-    const validate = (value: Props["value"]) => {
-        if (required && (value === undefined || value === null)) {
-            return false
-        } else {
-            return validation(value)
-        }
-    }
+    const { value, disabled, onValueChange, ...rest } = props
 
     // ------------------------ State --------------------------
 
     // Set an initial state
     const [state, setState] = React.useState({
         value,
-        valid: validate(value),
     })
 
     // Update state when component receives new value prop
     React.useEffect(() => {
         setState({
             value,
-            valid: validate(value),
         })
     }, [value])
-
-    // Update state when component receives new validation prop
-    React.useEffect(() => {
-        setState({
-            ...state,
-            valid: validate(state.value),
-        })
-    }, [validation, required])
 
     // ------------------- Event Handlers ----------------------
 
@@ -63,13 +34,10 @@ export function BooleanInput(props: Partial<Props>) {
             return
         }
 
-        const valid = validate(value)
-
-        onValueChange(value, valid)
+        onValueChange(value)
 
         setState({
             value,
-            valid,
         })
     }
 
@@ -84,21 +52,13 @@ export function BooleanInput(props: Partial<Props>) {
             opacity: 1,
             border: `1px solid #777`,
         },
-        warn: {
-            opacity: 1,
-            border: `1px solid #ff8866`,
-        },
         disabled: {
             opacity: 0.3,
             border: `1px solid #777`,
         },
     }
 
-    const currentVariant = disabled
-        ? "disabled"
-        : state.valid
-        ? "initial"
-        : "warn"
+    const currentVariant = disabled ? "disabled" : "initial"
 
     return (
         <Frame
@@ -119,20 +79,13 @@ export function BooleanInput(props: Partial<Props>) {
 
 BooleanInput.defaultProps = {
     value: false,
-    required: false,
     disabled: false,
-    validation: (value: boolean) => true,
-    onValueChange: (value: boolean, valid: boolean) => null,
+    onValueChange: (value: boolean) => {},
 }
 
 addPropertyControls(BooleanInput, {
     value: {
         title: "Value",
-        type: ControlType.Boolean,
-        defaultValue: false,
-    },
-    required: {
-        title: "Required",
         type: ControlType.Boolean,
         defaultValue: false,
     },

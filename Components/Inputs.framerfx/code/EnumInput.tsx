@@ -14,17 +14,13 @@ type Props = FrameProps & {
     value: string
     selectedIndex: number
     options: string[]
-    required: boolean
     disabled: boolean
-    validation: (value: string, index: number) => boolean
-    onValueChange: (value: string, index: number, valid: boolean) => void
+    onValueChange: (value: string, index: number) => void
 }
 
 export function EnumInput(props: Partial<Props>) {
     const {
         value,
-        validation,
-        required,
         disabled,
         onValueChange,
         options,
@@ -32,20 +28,7 @@ export function EnumInput(props: Partial<Props>) {
         ...rest
     } = props
 
-    // --------------------- Validation -------------------------
-
-    const validate = (value: Props["value"], selectedIndex: number) => {
-        if (
-            required &&
-            (selectedIndex < 0 ||
-                selectedIndex === undefined ||
-                selectedIndex === null)
-        ) {
-            return false
-        } else {
-            return validation(value, selectedIndex)
-        }
-    }
+    // ----------------------- Props ---------------------------
 
     const processProps = (
         value: string,
@@ -69,7 +52,6 @@ export function EnumInput(props: Partial<Props>) {
     const [state, setState] = React.useState({
         value: processed.value,
         selectedIndex: processed.selectedIndex,
-        valid: validate(processed.value, processed.selectedIndex),
     })
 
     // Update state when component receives new value prop
@@ -77,17 +59,8 @@ export function EnumInput(props: Partial<Props>) {
         setState({
             value: processed.value,
             selectedIndex: processed.selectedIndex,
-            valid: validate(processed.value, processed.selectedIndex),
         })
     }, [value, selectedIndex])
-
-    // Update state when component receives new validation prop
-    React.useEffect(() => {
-        setState({
-            ...state,
-            valid: validate(state.value, state.selectedIndex),
-        })
-    }, [validation, required])
 
     // ------------------- Event Handlers ----------------------
 
@@ -98,14 +71,11 @@ export function EnumInput(props: Partial<Props>) {
 
         const value = options[selectedIndex]
 
-        const valid = validate(value, selectedIndex)
-
-        onValueChange(value, selectedIndex, valid)
+        onValueChange(value, selectedIndex)
 
         setState({
             value: selectedIndex < 0 ? null : value,
             selectedIndex,
-            valid,
         })
     }
 
@@ -116,21 +86,13 @@ export function EnumInput(props: Partial<Props>) {
             opacity: 1,
             border: `1px solid #777`,
         },
-        warn: {
-            opacity: 1,
-            border: `1px solid #ff8866`,
-        },
         disabled: {
             opacity: 0.3,
             border: `1px solid #777`,
         },
     }
 
-    const currentVariant = disabled
-        ? "disabled"
-        : state.valid
-        ? "initial"
-        : "warn"
+    const currentVariant = disabled ? "disabled" : "initial"
 
     return (
         <Stack
@@ -162,10 +124,8 @@ export function EnumInput(props: Partial<Props>) {
 
 EnumInput.defaultProps = {
     value: "North",
-    required: false,
     disabled: false,
-    validation: (value: string, index: number) => true,
-    onValueChange: (value: string, index: number, valid: boolean) => null,
+    onValueChange: (value: string, index: number) => {},
     options: ["North", "East", "South", "West"],
 }
 
@@ -182,11 +142,6 @@ addPropertyControls(EnumInput, {
             type: ControlType.String,
         },
         defaultValue: ["North", "East", "South", "West"],
-    },
-    required: {
-        title: "Required",
-        type: ControlType.Boolean,
-        defaultValue: false,
     },
     disabled: {
         title: "Disabled",
