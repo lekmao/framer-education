@@ -11,7 +11,8 @@ import { Override, Data } from "framer"
  *******************************************************
  */
 
-const MAPBOX_ACCESS_TOKEN = ""
+const MAPBOX_ACCESS_TOKEN =
+    "pk.eyJ1Ijoic3RldmVydWl6b2siLCJhIjoiY2l2cnFnMmt4MDAxdDJvbDQwamdydXdqZiJ9.kb2YzDTVL3576Zed2ii0ow"
 
 /* -------------------------------------------------------------------------- */
 /*                                    State                                   */
@@ -62,6 +63,7 @@ export const SearchInput: Override = () => {
 }
 
 export const SearchPredictionList: Override = () => {
+    console.log(search.predictions)
     return {
         predicting: search.loading,
         predictions: search.predictions,

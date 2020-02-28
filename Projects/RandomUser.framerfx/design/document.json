@@ -25,6 +25,7 @@
         "fillColor" : "rgba(255,255,255,1)",
         "fillEnabled" : false,
         "fillImage" : null,
+        "fillImageOriginalName" : null,
         "fillImagePixelHeight" : null,
         "fillImagePixelWidth" : null,
         "fillImageResize" : "fill",
@@ -78,6 +79,7 @@
         "fillColor" : "rgba(255,255,255,1)",
         "fillEnabled" : false,
         "fillImage" : null,
+        "fillImageOriginalName" : null,
         "fillImagePixelHeight" : null,
         "fillImagePixelWidth" : null,
         "fillImageResize" : "fill",
@@ -127,5 +129,5 @@
     ],
     "visible" : false
   },
-  "version" : 54
+  "version" : 55
 }
