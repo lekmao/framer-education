@@ -4,6 +4,13 @@
     "children" : [
 
     ],
+    "guidesX" : [
+
+    ],
+    "guidesY" : [
+
+    ],
+    "homeNodeId" : null,
     "id" : "PPN4iU1bk",
     "name" : null,
     "originalid" : null,
@@ -16,5 +23,5 @@
     ],
     "visible" : false
   },
-  "version" : 52
+  "version" : 57
 }

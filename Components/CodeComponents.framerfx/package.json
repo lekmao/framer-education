@@ -11,5 +11,8 @@
 	"framer": {
 		"id": "4494a6b3-affc-4afe-93a4-d7d0d6b2f949"
 	},
-	"author": "Steve Ruiz"
+	"author": "Steve Ruiz",
+	"dependencies": {
+		"@framer/framer.default": "^1.45.0"
+	}
 }
